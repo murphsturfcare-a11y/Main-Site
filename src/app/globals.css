@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+:root {
+  --forest-green: #2D5016;
+  --sage: #7CB342;
+  --brown: #5D4037;
+  --cream: #FFF8E1;
+  --charcoal: #212121;
+}
