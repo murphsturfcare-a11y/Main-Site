@@ -1,18 +1,14 @@
 import type { ServiceType, ValidationErrors } from '@/types';
 
 /**
- * Valid service types offered by Murphy's Turf Care.
+ * Valid service types offered by Murphy's Turf.
  */
 export const SERVICE_TYPES: readonly ServiceType[] = [
-  'lawn-mowing',
-  'fertilization',
-  'weed-control',
-  'aeration',
-  'overseeding',
-  'leaf-removal',
-  'spring-cleanup',
-  'fall-cleanup',
-  'lawn-installation',
+  'pet-hair-debris',
+  'blooming-decompacting',
+  'disinfect-deodorize',
+  'poop-scooping',
+  'oxyturf',
   'other',
 ] as const;
 

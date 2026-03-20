@@ -19,15 +19,11 @@ export interface Lead {
 }
 
 export type ServiceType =
-  | 'lawn-mowing'
-  | 'fertilization'
-  | 'weed-control'
-  | 'aeration'
-  | 'overseeding'
-  | 'leaf-removal'
-  | 'spring-cleanup'
-  | 'fall-cleanup'
-  | 'lawn-installation'
+  | 'pet-hair-debris'
+  | 'blooming-decompacting'
+  | 'disinfect-deodorize'
+  | 'poop-scooping'
+  | 'oxyturf'
   | 'other';
 
 export type LeadStatus = 'new' | 'contacted' | 'quoted' | 'won' | 'lost';
@@ -97,8 +93,9 @@ export interface Service {
   fullDescription: string;
   benefits: string[];
   whatIncludes: string[];
-  startingPrice: number;
+  startingPrice: number | null;
   iconName: string;
+  image: string;
   metaTitle: string;
   metaDescription: string;
   faqs: ServiceFAQ[];
@@ -161,8 +158,14 @@ export interface CompanyStats {
 export interface SocialMedia {
   facebook: string;
   instagram: string;
-  google: string;
-  yelp: string;
+  youtube: string;
+}
+
+export interface TeamMember {
+  name: string;
+  role: string;
+  bio: string;
+  image?: string;
 }
 
 export interface Company {

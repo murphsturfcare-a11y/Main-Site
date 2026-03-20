@@ -1,12 +1,12 @@
 import type { Company } from '../types';
 
 export const company: Company = {
-  name: "Murphy's Turf Care",
-  tagline: "Professional Artificial Turf Cleaning & Sanitization",
-  phone: "(951) 331-3300",
+  name: "Murphy's Turf",
+  tagline: "When you care about clean turf, call Murphy's Turf",
+  phone: "951-331-3300",
   email: "info@murphysturf.com",
   address: {
-    street: "26323 Jefferson Avenue",
+    street: "",
     city: "Murrieta",
     state: "CA",
     zip: "92562",
@@ -16,45 +16,39 @@ export const company: Company = {
     saturday: "8:00 AM - 4:00 PM",
     sunday: "Closed",
   },
-  founded: 2018,
-  description: `Murphy's Turf Care was founded in 2018 by Patrick Murphy in Murrieta, California with a simple mission: to keep California's artificial turf clean, safe, and looking like new. As synthetic turf installations boomed across Southern California — driven by drought conditions, water restrictions, and the desire for low-maintenance outdoor spaces — Patrick recognized that homeowners and businesses needed a professional cleaning solution. Garden hoses and DIY efforts simply couldn't address the bacteria, pet odors, and embedded debris that accumulate in synthetic turf, especially under California's intense sun.
+  founded: 1994,
+  description: `With over 30 years in the cleaning & disinfecting business, we've decided to take our experience and bring it to your lawn with turf maintenance and pet waste removal services. Murphy's technicians are carefully selected and trained to provide you the satisfaction of clean and maintained artificial grass with the best of our ability. With this process we ensure consistency as well as invest in our technicians so each and every team member is proud of the service they provide our clients.
 
-What started as a one-truck operation serving neighbors in the Inland Empire has grown into one of California's most trusted artificial turf cleaning companies, with a dedicated team of over 25 professionals serving thousands of residential and commercial clients across Los Angeles, Murrieta, the Bay Area's Contra Costa County, and Sacramento. We specialize in deep cleaning, sanitization, pet odor elimination, deodorizing, turf repair, and commercial maintenance — everything needed to keep synthetic turf performing and looking its best for years to come.`,
-  mission: "To deliver exceptional artificial turf cleaning and sanitization that keeps synthetic grass safe, clean, and beautiful — using eco-friendly products that protect California families, pets, and the environment.",
+Murphy's Turf is a family-owned artificial turf cleaning company headquartered in Murrieta, California. We serve homeowners and businesses across Southern California and the Bay Area — from Huntington Beach and the LA coast to the Inland Empire, Martinez and Contra Costa County, and the Greater Sacramento region. Our cleaning products are powered by OxyTurf, a stabilized accelerated hydrogen peroxide formula that contains no bleach or ammonia, making it completely safe for your pets, kids, and the environment while killing 99.9% of germs and bacteria.`,
+  mission: "To provide every customer with clean, sanitized, and beautifully maintained artificial turf using safe, eco-friendly products that protect families, pets, and the environment.",
   values: [
     {
-      title: "Quality First",
-      description: "We never cut corners. Every turf surface receives our full attention, professional-grade equipment, and proven cleaning techniques that deliver visible, lasting results.",
+      title: "100% Pet Friendly",
+      description: "Every product we use is completely safe for your pets. Our OxyTurf cleaning solution contains no bleach or ammonia — just stabilized accelerated hydrogen peroxide that eliminates bacteria without leaving harmful residues.",
     },
     {
-      title: "Customer Focused",
-      description: "Your satisfaction drives everything we do. We customize our cleaning approach to your turf's specific needs and stand behind our work with a satisfaction guarantee.",
+      title: "Eco Friendly",
+      description: "We're committed to environmentally responsible cleaning. OxyTurf is biodegradable and free from harsh chemicals, protecting California's ecosystems while delivering a superior clean.",
     },
     {
-      title: "Eco-Friendly",
-      description: "We use plant-based, biodegradable cleaning products that are safe for children, pets, and the environment. Our methods conserve water while delivering a superior clean.",
-    },
-    {
-      title: "Community Driven",
-      description: "As a California family business, we're invested in the communities we serve. We sponsor local youth sports, partner with animal shelters, and believe in giving back to the places that have supported our growth.",
+      title: "Satisfaction Guaranteed",
+      description: "We stand behind every service we provide. If you're not completely satisfied with the results, we'll make it right. Our 30+ years of cleaning experience means we know how to deliver results that exceed expectations.",
     },
   ],
   stats: {
-    yearsInBusiness: 8,
-    customersServed: "2,500+",
-    satisfactionRate: "98%",
-    projectsCompleted: "10,000+",
+    yearsInBusiness: 30,
+    customersServed: "5,000+",
+    satisfactionRate: "99%",
+    projectsCompleted: "15,000+",
   },
   socialMedia: {
-    facebook: "#",
-    instagram: "#",
-    google: "#",
-    yelp: "#",
+    facebook: "https://www.facebook.com/profile.php?id=100090088264095",
+    instagram: "https://www.instagram.com/murphysturfcare/",
+    youtube: "https://www.youtube.com/@murphysturfcare/featured",
   },
   certifications: [
     "Licensed & Insured",
-    "EPA Certified",
-    "California Landscape Contractors Association (CLCA)",
-    "Better Business Bureau A+ Rated",
+    "30+ Years Cleaning & Disinfecting Experience",
+    "OxyTurf Certified Applicator",
   ],
 };
