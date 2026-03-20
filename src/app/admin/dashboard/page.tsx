@@ -116,7 +116,7 @@ export default function AdminDashboardPage() {
             Admin Dashboard
           </h1>
           <p className="mt-1 text-sm text-gray-500">
-            Welcome back. Here&#39;s what&#39;s happening with Murphy&#39;s Turf today.
+            Welcome back. Here&#39;s what&#39;s happening with Murphy&#39;s Turf Care today.
           </p>
         </div>
       </header>

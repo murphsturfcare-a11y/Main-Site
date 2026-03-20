@@ -14,48 +14,35 @@ interface Location {
 const initialLocations: Location[] = [
   {
     id: '1',
-    name: 'Denver',
-    phone: '(303) 555-0101',
+    name: 'Los Angeles',
+    phone: '(213) 555-0101',
     description:
-      'Serving the greater Denver metro area including Capitol Hill, Cherry Creek, and Washington Park',
+      'Serving the greater Los Angeles metro area including Hollywood, Santa Monica, and Pasadena',
     active: true,
   },
   {
     id: '2',
-    name: 'Colorado Springs',
-    phone: '(719) 555-0102',
+    name: 'Murrieta',
+    phone: '(951) 331-3300',
     description:
-      'Full service lawn care for Colorado Springs and surrounding communities',
+      'Headquarters location — full service lawn care for Murrieta, Temecula, and the Inland Empire',
     active: true,
   },
   {
     id: '3',
-    name: 'Aurora',
-    phone: '(303) 555-0103',
-    description: 'Comprehensive lawn services for Aurora residents',
+    name: 'Martinez / Bay Area',
+    phone: '(925) 555-0103',
+    description:
+      'Comprehensive lawn services for Martinez, Concord, Walnut Creek, and the greater Bay Area',
     active: true,
   },
   {
     id: '4',
-    name: 'Fort Collins',
-    phone: '(970) 555-0104',
-    description: "Northern Colorado's premier lawn care provider",
-    active: true,
-  },
-  {
-    id: '5',
-    name: 'Lakewood',
-    phone: '(303) 555-0105',
+    name: 'Sacramento',
+    phone: '(916) 555-0104',
     description:
-      'Quality lawn care for the Lakewood and Jefferson County area',
+      "Sacramento's trusted lawn care provider serving Elk Grove, Roseville, and Folsom",
     active: true,
-  },
-  {
-    id: '6',
-    name: 'Boulder',
-    phone: '(303) 555-0106',
-    description: 'Eco-friendly lawn care solutions for Boulder County',
-    active: false,
   },
 ];
 

@@ -18,9 +18,9 @@ const initialTestimonials: Testimonial[] = [
   {
     id: 1,
     customerName: "Mike Henderson",
-    location: "Castle Rock, CO",
+    location: "Murrieta, CA",
     rating: 5,
-    text: "Murphy's Turf completely transformed our backyard. The aeration and overseeding service they provided last fall has our lawn looking the best it ever has. Neighbors keep stopping by to ask who we use. Their team was punctual, professional, and clearly knows Colorado soil. Couldn't be happier with the results.",
+    text: "Murphy's Turf Care completely transformed our backyard. The aeration and overseeding service they provided last fall has our lawn looking the best it ever has. Neighbors keep stopping by to ask who we use. Their team was punctual, professional, and clearly knows California turf. Couldn't be happier with the results.",
     date: "2026-02-18",
     published: true,
     featured: true,
@@ -28,9 +28,9 @@ const initialTestimonials: Testimonial[] = [
   {
     id: 2,
     customerName: "Sarah Collins",
-    location: "Littleton, CO",
+    location: "Temecula, CA",
     rating: 5,
-    text: "We struggled with patchy brown spots for years until we called Murphy's Turf. They did a full soil analysis and put us on a custom fertilization program. Within two months the difference was night and day. Their knowledge of Front Range lawn care is second to none.",
+    text: "We struggled with patchy brown spots for years until we called Murphy's Turf Care. They did a full soil analysis and put us on a custom fertilization program. Within two months the difference was night and day. Their knowledge of Southern California lawn care is second to none.",
     date: "2026-02-05",
     published: true,
     featured: true,
@@ -38,9 +38,9 @@ const initialTestimonials: Testimonial[] = [
   {
     id: 3,
     customerName: "James Whitaker",
-    location: "Parker, CO",
+    location: "Los Angeles, CA",
     rating: 4,
-    text: "Great mowing and edging service. They keep our large property looking sharp every week. Only reason for four stars is scheduling can occasionally shift due to weather, but that's understandable in Colorado. Overall very reliable crew.",
+    text: "Great mowing and edging service. They keep our large property looking sharp every week. Only reason for four stars is scheduling can occasionally shift, but they always communicate. Overall very reliable crew.",
     date: "2026-01-22",
     published: true,
     featured: false,
@@ -48,7 +48,7 @@ const initialTestimonials: Testimonial[] = [
   {
     id: 4,
     customerName: "Linda Perez",
-    location: "Highlands Ranch, CO",
+    location: "Murrieta, CA",
     rating: 5,
     text: "Hired Murphy's Turf for a complete sprinkler system overhaul and seasonal lawn maintenance. They identified leaks we didn't even know about and optimized our watering zones to save water. Our water bill dropped noticeably and the lawn has never been greener. Highly recommend their irrigation expertise.",
     date: "2026-01-10",
@@ -58,7 +58,7 @@ const initialTestimonials: Testimonial[] = [
   {
     id: 5,
     customerName: "Tom Bradley",
-    location: "Aurora, CO",
+    location: "Sacramento, CA",
     rating: 4,
     text: "Solid weed control program. Our yard was overrun with dandelions and clover. After two treatments the weeds were gone and the grass filled in nicely. Fair pricing for the quality of work.",
     date: "2025-12-28",
@@ -68,7 +68,7 @@ const initialTestimonials: Testimonial[] = [
   {
     id: 6,
     customerName: "Rachel Nguyen",
-    location: "Centennial, CO",
+    location: "Martinez, CA",
     rating: 5,
     text: "We just moved into a new build with bare dirt for a yard. Murphy's Turf handled the entire sod installation from grading to laying the turf. They even set up a watering schedule for us to follow. Six months later and it looks like it's been established for years. Exceptional work from start to finish.",
     date: "2025-12-15",
@@ -78,7 +78,7 @@ const initialTestimonials: Testimonial[] = [
   {
     id: 7,
     customerName: "Dave Morrison",
-    location: "Lone Tree, CO",
+    location: "Walnut Creek, CA",
     rating: 3,
     text: "Decent leaf cleanup and fall prep service. They got the job done, though I felt the crew rushed through the final blowing. The spring aeration they did was much better. Will give them another shot this year.",
     date: "2025-11-30",
@@ -88,9 +88,9 @@ const initialTestimonials: Testimonial[] = [
   {
     id: 8,
     customerName: "Karen O'Brien",
-    location: "Englewood, CO",
+    location: "Los Angeles, CA",
     rating: 5,
-    text: "Five stars isn't enough! Murphy's Turf has been maintaining our commercial property for over a year now and the grounds always look immaculate. Their crew is courteous, they clean up after every visit, and the monthly reports they send are a nice touch. Best landscaping company we've worked with on the Front Range.",
+    text: "Five stars isn't enough! Murphy's Turf Care has been maintaining our commercial property for over a year now and the grounds always look immaculate. Their crew is courteous, they clean up after every visit, and the monthly reports they send are a nice touch. Best landscaping company we've worked with in California.",
     date: "2025-11-12",
     published: true,
     featured: true,
@@ -98,7 +98,7 @@ const initialTestimonials: Testimonial[] = [
   {
     id: 9,
     customerName: "Brian Kowalski",
-    location: "Lakewood, CO",
+    location: "Sacramento, CA",
     rating: 4,
     text: "Had them do a full spring cleanup — dethatching, aeration, and a first round of fertilizer. The yard bounced back from winter damage faster than any year prior. Good communication and reasonable rates.",
     date: "2025-10-20",
@@ -419,7 +419,7 @@ export default function TestimonialsPage() {
                     setFormData({ ...formData, location: e.target.value })
                   }
                   className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm text-gray-900 focus:border-[#2D5016] focus:outline-none focus:ring-1 focus:ring-[#2D5016]"
-                  placeholder="e.g. Denver, CO"
+                  placeholder="e.g. Murrieta, CA"
                 />
               </div>
 

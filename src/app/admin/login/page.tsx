@@ -33,7 +33,7 @@ export default function AdminLoginPage() {
               <Leaf className="w-7 h-7 text-[#2D5016]" />
             </div>
             <h1 className="text-2xl font-bold text-[#2D5016] tracking-tight">
-              Murphy&apos;s Turf
+              Murphy&apos;s Turf Care
             </h1>
             <p className="text-sm text-[#5D4037] mt-1">Admin Portal</p>
           </div>
