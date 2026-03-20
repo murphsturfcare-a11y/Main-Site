@@ -25,42 +25,42 @@ const services = [
   {
     name: 'Pet Hair & Debris Removal',
     slug: 'pet-hair-debris',
+    image: '/images/services/debris-removal.png',
     description:
       'We remove pet hair, waste, leaves, branches, and run a magnet for metal objects while de-weeding edges and seams to leave your turf spotless.',
     gradient: 'from-forest/60 via-sage/40 to-sage-light/30',
-    // Future image: /images/services/pet-hair-debris.jpg
   },
   {
     name: 'Blooming & De-Compacting',
     slug: 'blooming-decompacting',
+    image: '/images/services/blooming.png',
     description:
       'We bring matted, flattened turf back to life by fluffing blades upright so your artificial grass looks and feels like natural grass again.',
     gradient: 'from-sage/50 via-forest/40 to-forest-light/30',
-    // Future image: /images/services/blooming-decompacting.jpg
   },
   {
     name: 'Disinfect & Deodorize',
     slug: 'disinfect-deodorize',
+    image: '/images/services/oxyturf-spray.jpg',
     description:
       'Power-spraying OxyTurf kills 99.9% of germs and bacteria on your turf without hazardous chemicals, leaving your yard fresh and safe.',
     gradient: 'from-forest-dark/50 via-forest/40 to-sage/30',
-    // Future image: /images/services/disinfect-deodorize.jpg
   },
   {
     name: 'Poop Scooping & Removal',
     slug: 'poop-scooping',
+    image: '/images/services/poop-scooping.jpg',
     description:
       'Convenient pet waste removal plans designed to keep your yard fresh, clean, and ready for your family to enjoy every day.',
     gradient: 'from-brown/40 via-sage/30 to-forest/30',
-    // Future image: /images/services/poop-scooping.jpg
   },
   {
     name: 'Powered By OxyTurf',
     slug: 'oxyturf',
+    image: '/images/services/oxyturf-palms.jpg',
     description:
       'Our hydrogen peroxide-based cleaner-deodorizer contains no bleach or ammonia and is completely safe for pets and kids.',
     gradient: 'from-sage-light/50 via-sage/40 to-forest/30',
-    // Future image: /images/services/oxyturf.jpg
   },
 ];
 
@@ -341,13 +341,20 @@ export default function Home() {
     <>
       {/* ────────────────── 1. HERO SECTION ────────────────── */}
       <section className="relative overflow-hidden">
-        <Image src="/images/hero.jpg" alt="Clean artificial turf" fill className="object-cover z-0" priority />
-        {/* Gradient background */}
-        <div className="absolute inset-0 z-[1] bg-gradient-to-br from-forest-dark/95 via-forest/90 to-sage/80" />
+        {/* Hero background image */}
+        <Image
+          src="/images/hero.jpg"
+          alt="Murphy's Turf - Professional Artificial Turf Cleaning"
+          fill
+          className="object-cover"
+          priority
+        />
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-forest-dark/95 via-forest/90 to-sage/80" />
         {/* Subtle pattern overlay */}
-        <div className="absolute inset-0 z-[1] opacity-10 bg-[radial-gradient(circle_at_25%_25%,white_1px,transparent_1px)] bg-[length:40px_40px]" />
+        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_25%_25%,white_1px,transparent_1px)] bg-[length:40px_40px]" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 lg:py-40">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 lg:py-40">
           <div className="max-w-3xl">
             <span className="inline-block bg-sage/20 border border-sage/40 text-sage-light font-body font-semibold text-sm px-4 py-1.5 rounded-full mb-6">
               Professional Artificial Turf Cleaning
@@ -475,10 +482,10 @@ export default function Home() {
                 {/* Service image */}
                 <div className="aspect-[16/10] relative overflow-hidden">
                   <Image
-                    src={`/images/services/${service.slug}.jpg`}
+                    src={service.image}
                     alt={service.name}
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>
                 <div className="p-6 flex flex-col flex-1">
@@ -515,20 +522,23 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="max-w-5xl mx-auto">
+          {/* Before/After comparison */}
+          <div className="bg-cream rounded-3xl overflow-hidden shadow-lg border border-gray-100 max-w-5xl mx-auto">
             <Image
               src="/images/before-after.png"
-              alt="Before and after turf cleaning by Murphy's Turf"
-              width={1200}
-              height={600}
-              className="w-full h-auto rounded-2xl shadow-lg"
+              alt="Before and after artificial turf cleaning"
+              width={800}
+              height={400}
+              className="rounded-t-3xl w-full h-auto"
             />
-            <p className="mt-4 text-center font-heading font-semibold text-charcoal text-lg">
-              Complete Turf Restoration
-            </p>
-            <p className="mt-1 text-center font-body text-charcoal-light text-sm">
-              Pet hair removal, blooming, disinfect &amp; deodorize with OxyTurf
-            </p>
+            <div className="px-6 py-5 text-center bg-white">
+              <p className="font-heading font-semibold text-charcoal text-lg">
+                Complete Turf Restoration
+              </p>
+              <p className="mt-1 font-body text-charcoal-light text-sm">
+                Pet hair removal, blooming, disinfect &amp; deodorize with OxyTurf
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -575,11 +585,12 @@ export default function Home() {
                 </Link>
               </div>
             </div>
+            {/* OxyTurf product image */}
             <div className="relative">
-              <div className="aspect-[4/3] rounded-2xl shadow-xl overflow-hidden relative">
+              <div className="aspect-[4/3] relative rounded-2xl shadow-xl overflow-hidden">
                 <Image
-                  src="/images/services/oxyturf.jpg"
-                  alt="OxyTurf cleaning treatment on artificial turf"
+                  src="/images/oxyturf-logo.png"
+                  alt="OxyTurf - Pet-safe artificial turf cleaner and deodorizer"
                   fill
                   className="object-cover"
                 />
