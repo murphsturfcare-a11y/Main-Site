@@ -130,6 +130,7 @@ export interface FAQItem {
   answer: string;
   category: "general" | "pricing" | "services" | "scheduling" | "locations";
   serviceSlug?: string;
+  locationSlug?: string;
 }
 
 export interface CompanyAddress {
