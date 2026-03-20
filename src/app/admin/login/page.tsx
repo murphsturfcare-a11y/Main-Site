@@ -53,7 +53,7 @@ export default function AdminLoginPage() {
                 type="email"
                 required
                 autoComplete="email"
-                placeholder="admin@murphysturf.com"
+                placeholder="admin@murphysturfcare.com"
                 className="w-full rounded-lg border border-gray-300 px-3.5 py-2.5 text-[#212121] placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#7CB342] focus:border-transparent transition"
               />
             </div>

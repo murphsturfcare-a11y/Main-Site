@@ -1,7 +1,7 @@
 import type { ServiceType, ValidationErrors } from '@/types';
 
 /**
- * Valid service types offered by Murphy's Turf.
+ * Valid service types offered by Murphy's Turf Care.
  */
 export const SERVICE_TYPES: readonly ServiceType[] = [
   'lawn-mowing',

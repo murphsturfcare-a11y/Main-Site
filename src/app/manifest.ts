@@ -2,10 +2,10 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Murphy's Turf",
-    short_name: "Murphy's Turf",
+    name: "Murphy's Turf Care",
+    short_name: "Murphy's Turf Care",
     description:
-      "Professional turf cleaning and lawn care services across Colorado.",
+      "Professional turf cleaning and lawn care services across California.",
     start_url: "/",
     display: "standalone",
     background_color: "#ffffff",

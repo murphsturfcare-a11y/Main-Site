@@ -18,18 +18,16 @@ const servicesLinks = [
 ];
 
 const locationsLinks = [
-  { label: 'Denver', href: '/locations/denver' },
-  { label: 'Aurora', href: '/locations/aurora' },
-  { label: 'Lakewood', href: '/locations/lakewood' },
-  { label: 'Arvada', href: '/locations/arvada' },
-  { label: 'Westminster', href: '/locations/westminster' },
-  { label: 'Boulder', href: '/locations/boulder' },
+  { label: 'Los Angeles', href: '/locations/los-angeles' },
+  { label: 'Murrieta', href: '/locations/murrieta' },
+  { label: 'Martinez', href: '/locations/martinez' },
+  { label: 'Sacramento', href: '/locations/sacramento' },
 ];
 
 const contactInfo = [
-  { icon: Phone, text: '(303) 555-0147' },
-  { icon: Mail, text: 'info@murphysturf.com' },
-  { icon: MapPin, text: 'Denver, CO' },
+  { icon: Phone, text: '(951) 331-3300' },
+  { icon: Mail, text: 'info@murphysturfcare.com' },
+  { icon: MapPin, text: 'Murrieta, CA' },
   { icon: Clock, text: 'Mon-Sat: 7am - 7pm' },
 ];
 
@@ -68,16 +66,16 @@ export default function Footer() {
             <Link
               href="/"
               className="inline-flex items-center gap-2 text-white"
-              aria-label="Murphy's Turf — Home"
+              aria-label="Murphy's Turf Care — Home"
             >
               <Leaf className="h-7 w-7 text-sage" />
               <span className="font-heading text-xl font-bold">
-                Murphy&apos;s Turf
+                Murphy&apos;s Turf Care
               </span>
             </Link>
             <p className="mt-4 font-body text-sm leading-relaxed text-gray-400">
               Professional turf cleaning and lawn care services serving the
-              Colorado Front Range since 2018.
+              California communities since 2018.
             </p>
           </div>
 
@@ -145,7 +143,7 @@ export default function Footer() {
       <div className="border-t border-charcoal-light">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 py-6 sm:flex-row lg:px-8">
           <p className="font-body text-sm text-gray-400">
-            &copy; 2024 Murphy&apos;s Turf. All rights reserved.
+            &copy; 2024 Murphy&apos;s Turf Care. All rights reserved.
           </p>
           <div className="flex items-center gap-4">
             <Link

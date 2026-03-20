@@ -18,12 +18,10 @@ const servicesItems = [
 ];
 
 const locationsItems = [
-  { label: 'Denver', href: '/locations/denver' },
-  { label: 'Aurora', href: '/locations/aurora' },
-  { label: 'Lakewood', href: '/locations/lakewood' },
-  { label: 'Arvada', href: '/locations/arvada' },
-  { label: 'Westminster', href: '/locations/westminster' },
-  { label: 'Boulder', href: '/locations/boulder' },
+  { label: 'Los Angeles', href: '/locations/los-angeles' },
+  { label: 'Murrieta', href: '/locations/murrieta' },
+  { label: 'Martinez', href: '/locations/martinez' },
+  { label: 'Sacramento', href: '/locations/sacramento' },
 ];
 
 /* ------------------------------------------------------------------ */
@@ -212,11 +210,11 @@ export default function Header() {
           className={`flex items-center gap-2 transition-colors duration-300 ${
             scrolled ? 'text-forest' : 'text-white'
           }`}
-          aria-label="Murphy's Turf — Home"
+          aria-label="Murphy's Turf Care — Home"
         >
           <Leaf className="h-7 w-7" />
           <span className="font-heading text-xl font-bold">
-            Murphy&apos;s Turf
+            Murphy&apos;s Turf Care
           </span>
         </Link>
 
@@ -313,11 +311,11 @@ export default function Header() {
             href="/"
             onClick={closeDrawer}
             className="flex items-center gap-2 text-forest"
-            aria-label="Murphy's Turf — Home"
+            aria-label="Murphy's Turf Care — Home"
           >
             <Leaf className="h-6 w-6" />
             <span className="font-heading text-lg font-bold">
-              Murphy&apos;s Turf
+              Murphy&apos;s Turf Care
             </span>
           </Link>
 

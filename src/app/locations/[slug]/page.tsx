@@ -77,7 +77,7 @@ const services: ServiceItem[] = [
     slug: 'seeding',
     icon: 'sprout',
     shortDescription:
-      'Overseeding and new lawn establishment with premium grass varieties suited for Colorado.',
+      'Overseeding and new lawn establishment with premium grass varieties suited for California climates.',
   },
   {
     name: 'Fertilization',
@@ -98,7 +98,7 @@ const services: ServiceItem[] = [
     slug: 'seasonal-maintenance',
     icon: 'calendar',
     shortDescription:
-      'Spring cleanup, fall winterization, and year-round maintenance plans to keep lawns pristine.',
+      'Year-round maintenance plans including spring revitalization, summer heat protection, and fall preparation.',
   },
 ];
 
@@ -107,318 +107,218 @@ const services: ServiceItem[] = [
 // ---------------------------------------------------------------------------
 
 const locationData: Record<string, LocationData> = {
-  denver: {
-    city: 'Denver',
-    slug: 'denver',
-    state: 'CO',
-    phone: '(720) 555-1234',
-    email: 'denver@murphysturf.com',
+  'los-angeles': {
+    city: 'Los Angeles',
+    slug: 'los-angeles',
+    state: 'CA',
+    phone: '(213) 555-7890',
+    email: 'la@murphysturfcare.com',
     heroSubtitle:
-      'Professional lawn care and turf cleaning for the Mile High City. Our main office and largest service team are right here in Denver, ready to transform your yard.',
+      "Professional lawn care for LA's diverse neighborhoods and Mediterranean climate. From coastal Santa Monica to inland Pasadena, our team delivers water-smart turf solutions tailored to Southern California's unique growing conditions.",
     description: [
-      "Denver's semi-arid climate presents a unique set of challenges for homeowners who want a lush, healthy lawn. With over 300 days of sunshine, intense summer heat, and cold, dry winters, the Mile High City demands a lawn care approach that accounts for rapid moisture loss, heavy clay soils, and dramatic temperature swings. At Murphy's Turf, our Denver headquarters has been serving neighborhoods across the metro area since 2018, and we understand exactly what it takes to keep your grass thriving at 5,280 feet above sea level.",
-      "From the historic tree-lined streets of Capitol Hill and the manicured lawns of Washington Park to the modern developments in Central Park (formerly Stapleton) and the creative community of RiNo, every Denver neighborhood has its own character and its own turf care needs. Cherry Creek properties often feature high-end landscape designs that demand meticulous maintenance, while Park Hill's mature lots benefit from deep-root aeration and overseeding to rejuvenate aging lawns. In Baker and Highlands, smaller urban yards need targeted fertilization programs that maximize every square foot of green space.",
-      "Our Denver team performs comprehensive soil testing to understand your yard's specific pH and nutrient profile, then builds a custom treatment plan around those results. We use cool-season grass blends like Kentucky bluegrass and tall fescue that are proven performers along the Front Range. Whether you need spring cleanup after a tough Colorado winter, grub control to protect your investment during summer, or a full fall aeration and overseeding program, Murphy's Turf has the local expertise and professional-grade equipment to deliver results you can see and feel underfoot.",
+      "Los Angeles presents one of the most complex lawn care environments in the country. The city's sprawling geography — stretching from the Pacific coast through the basin and up into foothill communities — creates a patchwork of microclimates that can vary dramatically within just a few miles. Coastal neighborhoods like Santa Monica and Mar Vista enjoy cooler temperatures moderated by ocean breezes and marine layer, while inland areas like Pasadena and Burbank experience significantly hotter summers and wider temperature swings. At Murphy's Turf Care, our LA team understands these distinctions at a granular level. We build custom treatment plans for each property based on its specific microclimate, sun exposure, soil composition, and irrigation setup. Whether your lawn sits in the shade of Silver Lake's hillsides or bakes in the full sun of the San Fernando Valley, we have the expertise to keep it thriving.",
+      "Water conservation is the defining challenge of lawn care in Los Angeles. LADWP watering restrictions limit outdoor irrigation to specific days and durations, and drought conditions have made Angelenos more conscious than ever about every gallon they use. Murphy's Turf Care embraces this reality by designing lawn care programs that maximize turf health while minimizing water consumption. We use warm-season grass varieties like Bermuda and St. Augustine that require less water than traditional cool-season lawns, and our aeration services improve soil permeability so that every drop of irrigation water reaches the root zone instead of running off into the gutter. Our fertilization programs use slow-release formulations that feed steadily over weeks rather than creating flush growth that demands extra watering. For customers exploring alternatives, we also consult on drought-tolerant turf varieties and hybrid approaches that blend natural grass with water-efficient landscaping.",
+      "The Santa Ana winds add another layer of complexity to LA lawn care. These hot, dry offshore winds can arrive without warning between October and March, desiccating lawns and stressing turf grasses already dealing with limited irrigation. Our seasonal maintenance programs prepare lawns for Santa Ana events with deep watering schedules, anti-desiccant treatments, and root-zone moisture management. Year-round, our LA team monitors weather patterns and adjusts treatment timing to work with the city's roughly 284 sunny days and 35 days of measurable rain. From the celebrity estates of Beverly Hills to the bungalow lawns of Echo Park, Murphy's Turf Care delivers consistent, professional results that keep Los Angeles green, healthy, and water-responsible.",
     ],
     neighborhoods: [
-      'Capitol Hill',
-      'Cherry Creek',
-      'Highlands',
-      'Park Hill',
-      'Central Park (Stapleton)',
-      'Washington Park',
-      'Congress Park',
-      'City Park',
-      'Baker',
-      'RiNo',
+      'Hollywood',
+      'Santa Monica',
+      'Beverly Hills',
+      'Pasadena',
+      'Long Beach',
+      'Burbank',
+      'Glendale',
+      'West Hollywood',
+      'Silver Lake',
+      'Echo Park',
+      'Mar Vista',
+      'Culver City',
     ],
     testimonials: [
       {
-        name: 'Sarah Mitchell',
-        neighborhood: 'Washington Park',
+        name: 'Jessica Moreno',
+        neighborhood: 'Pasadena',
         rating: 5,
-        text: "We moved to Wash Park three years ago and our lawn was in rough shape. Murphy's Turf did a full aeration and overseeding in the fall, followed by their fertilization program. By the next summer our neighbors were asking who we hired. Couldn't be happier with the results.",
+        text: "Our Pasadena lawn was turning brown every summer no matter how much we watered. Murphy's Turf Care did a soil analysis, switched us to a warm-season blend, and set up an aeration schedule. Our water bill went down and our lawn has never looked better. They really understand how to work with LA's climate, not against it.",
       },
       {
-        name: 'James Ortega',
-        neighborhood: 'Central Park',
+        name: 'Derek Lawson',
+        neighborhood: 'Santa Monica',
         rating: 5,
-        text: "As a new build in Central Park, our builder-grade sod was struggling. Murphy's team identified our soil compaction issues, set up a treatment schedule, and now our lawn is the greenest on the block. Their communication is top-notch too.",
+        text: "Living near the coast, our lawn dealt with salt air and the marine layer constantly. Murphy's team recommended specific grass varieties that handle coastal conditions and built a fertilization program around the cooler microclimate here. Two seasons in and our neighbors keep asking who takes care of our yard. Highly recommend.",
       },
       {
-        name: 'Linda Chen',
-        neighborhood: 'Cherry Creek',
+        name: 'Nina Patel',
+        neighborhood: 'Silver Lake',
         rating: 5,
-        text: "I've tried three different lawn care companies over the years, and Murphy's Turf is the first one that actually explained what they were doing and why. The difference in our Cherry Creek lawn after just one season was remarkable. They genuinely care about the work.",
+        text: "We have a steep hillside lawn in Silver Lake that other companies refused to even quote. Murphy's Turf Care not only took it on but designed a maintenance program that prevents erosion and keeps the grass lush. Their crew is professional, punctual, and genuinely knowledgeable about Southern California turf. Outstanding service from start to finish.",
       },
     ],
-    metaTitle: 'Lawn Care & Turf Cleaning in Denver, CO',
+    metaTitle: "Lawn Care & Turf Cleaning in Los Angeles, CA | Murphy's Turf Care",
     metaDescription:
-      "Denver's trusted lawn care professionals. Murphy's Turf offers aeration, seeding, fertilization, pest control, and seasonal maintenance across Capitol Hill, Cherry Creek, Highlands, Park Hill, and more.",
+      "LA's trusted lawn care professionals. Murphy's Turf Care offers aeration, seeding, fertilization, pest control, and seasonal maintenance across Hollywood, Santa Monica, Pasadena, Beverly Hills, and more.",
     climateNote:
-      'Denver receives about 17 inches of precipitation annually with intense UV at altitude. Clay-heavy soils require regular aeration, and cool-season grasses need consistent watering schedules during the hot, dry summers.',
+      'Los Angeles features a Mediterranean climate with approximately 284 sunny days and only 35 days of measurable rain per year. Microclimates vary widely from the cool coast to the hot inland valleys. LADWP watering restrictions and Santa Ana wind events are key factors in lawn care planning.',
     serviceAreaDescription:
-      'Our Denver service area covers the entire city and county, from the Highlands and Berkeley in the northwest to Park Hill and Montclair in the east, and from the Wash Park and University neighborhoods in the south to the new developments along the I-70 corridor.',
+      'Our Los Angeles service area covers the greater LA metro from Santa Monica and Mar Vista on the Westside through Hollywood, Silver Lake, and Echo Park in the center, up to Pasadena, Burbank, and Glendale in the foothills, and south to Culver City and Long Beach.',
   },
 
-  'colorado-springs': {
-    city: 'Colorado Springs',
-    slug: 'colorado-springs',
-    state: 'CO',
-    phone: '(719) 555-5678',
-    email: 'cosprings@murphysturf.com',
+  murrieta: {
+    city: 'Murrieta',
+    slug: 'murrieta',
+    state: 'CA',
+    phone: '(951) 331-3300',
+    email: 'info@murphysturfcare.com',
     heroSubtitle:
-      'High-altitude lawn care expertise for the Pikes Peak region. Our Colorado Springs team specializes in treatments designed for the unique elevation and soil conditions south of Denver.',
+      'Our Headquarters — Serving the Inland Empire & Temecula Valley. Murphy\'s Turf Care was founded right here in Murrieta, and our deepest roots are in the communities of Southwest Riverside County.',
     description: [
-      "Colorado Springs sits at over 6,000 feet in elevation, and that altitude makes all the difference when it comes to lawn care. The UV exposure here is significantly more intense than at lower elevations, which means turf grasses face more stress, faster moisture evaporation, and a shorter effective growing season. The soil along the Front Range south of Denver tends to be a challenging mix of rocky substrate, clay, and alkaline deposits from the ancient seabed. Murphy's Turf has spent years developing treatment protocols specifically for these conditions, and our Colorado Springs crew delivers results that generic national lawn care chains simply cannot match.",
-      "Whether you live in the prestigious Broadmoor neighborhood, the family-friendly streets of Briargate and Cordera, or the eclectic charm of Old Colorado City near Manitou Springs, our team knows your area. Rockrimmon and Mountain Shadows properties face unique microclimates created by their proximity to the foothills, often requiring customized watering and fertilization schedules. The newer master-planned communities of Flying Horse and Northgate feature modern irrigation systems that we can optimize alongside our treatment programs. Even the Manitou Springs area, with its distinctive mineral-rich soil, receives tailored care from our specialists.",
-      "Our Colorado Springs services include deep-core aeration to break through compacted clay and rocky layers, overseeding with drought-tolerant grass varieties that handle altitude stress, and a multi-step fertilization program that feeds your lawn through the short but intense growing season. We also offer targeted grub and pest control to address the Japanese beetle larvae and sod webworms that are increasingly common in El Paso County. Every treatment starts with a thorough property assessment so we can build a plan that works for your specific lot, soil, and sun exposure.",
+      "Murrieta is home to Murphy's Turf Care, and no other lawn care company knows this region as intimately as we do. Located in the heart of Southwest Riverside County, Murrieta and the surrounding Temecula Valley present a distinctive set of challenges for homeowners who want beautiful, healthy lawns. Summer temperatures regularly exceed 100 degrees Fahrenheit, the Santa Ana winds sweep through the Temecula Gap with punishing force, and the region's heavy clay soil resists water absorption while baking into near-concrete hardness during the dry months. Our team lives and works in these neighborhoods — from the master-planned community of Greer Ranch to the established streets of California Oaks — and we have spent years perfecting treatment protocols that deliver green, resilient lawns despite these demanding conditions.",
+      "Water management is central to every lawn care program we design in Murrieta. The Eastern Municipal Water District (EMWD) sets irrigation guidelines that Murrieta homeowners must follow, and our treatment plans are built to maximize the effectiveness of every allowed watering session. Our core aeration services break through the compacted clay that is ubiquitous across the Inland Empire, allowing water to penetrate deep into the root zone rather than pooling on the surface or running off. We pair aeration with slow-release fertilization programs that promote deep root growth, which makes turf more drought-tolerant and better able to survive the intense heat of July, August, and September. For newer communities like Warm Springs and Bear Creek, where builder-grade landscapes often struggle within the first year, we offer establishment programs that get young lawns rooted and thriving before their first full Murrieta summer.",
+      "Beyond the heat and clay soil, Murrieta lawns contend with the Santa Ana winds that funnel through the Temecula Gap, sometimes gusting above 60 miles per hour. These events strip moisture from turf, deposit dust and debris, and can flatten or damage grass blades. Our seasonal maintenance programs include post-Santa Ana recovery treatments, deep cleaning services to remove wind-blown debris, and anti-stress applications that help lawns bounce back quickly. Whether you live in the hillside homes of Los Alamos Hills with panoramic views, the family-friendly streets of French Valley, or the resort-style community of The Oaks, Murphy's Turf Care has the local knowledge and professional equipment to keep your Murrieta lawn looking its best year-round. As our headquarters city, Murrieta customers also benefit from the fastest response times and most flexible scheduling in our entire service network.",
     ],
     neighborhoods: [
-      'Broadmoor',
-      'Briargate',
-      'Old Colorado City',
-      'Manitou Springs Area',
-      'Rockrimmon',
-      'Northgate',
-      'Flying Horse',
-      'Cordera',
-      'Mountain Shadows',
-    ],
-    testimonials: [
-      {
-        name: 'Michael Brandt',
-        neighborhood: 'Briargate',
-        rating: 5,
-        text: "Living in Briargate, our clay soil was a nightmare. Murphy's Turf did a double-pass aeration and then started us on their seasonal fertilization plan. Two seasons in and our lawn has never looked this good. They really understand Springs soil.",
-      },
-      {
-        name: 'Patricia Vasquez',
-        neighborhood: 'Broadmoor',
-        rating: 5,
-        text: "We needed a company that could match the quality of our Broadmoor property. Murphy's Turf exceeded our expectations. Their attention to detail is impeccable and they always show up when they say they will. Highly recommend for anyone who takes their lawn seriously.",
-      },
-      {
-        name: 'Robert Kim',
-        neighborhood: 'Flying Horse',
-        rating: 5,
-        text: "Just built in Flying Horse and wanted to get our lawn established right from the start. Murphy's team guided us through the whole process, from soil prep to seeding to the first full fertilization cycle. Our lawn looks years ahead of our neighbors' brand new sod.",
-      },
-    ],
-    metaTitle: 'Lawn Care & Turf Cleaning in Colorado Springs, CO',
-    metaDescription:
-      "Professional lawn care for Colorado Springs. Murphy's Turf specializes in high-altitude turf management with aeration, seeding, fertilization, and pest control for Broadmoor, Briargate, Flying Horse, and beyond.",
-    climateNote:
-      'Colorado Springs experiences higher UV intensity than Denver due to its elevation. Rocky, alkaline soils need amendments, and the shorter growing season demands efficient fertilization timing. Afternoon thunderstorms in summer provide some moisture but also risk hail damage to lawns.',
-    serviceAreaDescription:
-      'We serve the greater Colorado Springs metropolitan area including El Paso County communities from Monument and Black Forest in the north to Security-Widefield in the south, and from Manitou Springs at the base of Pikes Peak to the eastern plains developments.',
-  },
-
-  aurora: {
-    city: 'Aurora',
-    slug: 'aurora',
-    state: 'CO',
-    phone: '(720) 555-2345',
-    email: 'aurora@murphysturf.com',
-    heroSubtitle:
-      'Comprehensive lawn care for one of Colorado\'s fastest-growing cities. From established neighborhoods to brand new developments, we keep Aurora lawns green and healthy.',
-    description: [
-      "Aurora is Colorado's third-largest city and one of the most diverse communities along the Front Range. Stretching from the edge of Denver east toward the plains, Aurora encompasses a remarkable range of property types, from the mature lots near Cherry Creek State Park and the Quincy Reservoir area to the sparkling new master-planned communities of Painted Prairie and Blackstone. Each of these areas presents distinct lawn care challenges, and Murphy's Turf has the experience and local knowledge to handle them all.",
-      "Established neighborhoods like Saddle Rock and Tallyn's Reach feature properties with 15- to 20-year-old lawns that are entering the phase where they need serious rejuvenation. Compacted soil, thinning grass, and accumulated thatch are common issues we address with our comprehensive cleanup and aeration services. Murphy Creek, the community built around the popular golf course, tends to have homeowners who expect impeccable turf quality, and our fertilization and pest control programs deliver that country-club look. Meanwhile, the newer developments in Painted Prairie and Blackstone often come with builder-grade sod over poorly prepared subsoil, and our team specializes in getting those young lawns established with deep root growth and proper nutrient balance.",
-      "Aurora's position on the eastern plains means it receives more wind exposure and slightly less precipitation than neighborhoods closer to the foothills. Our treatment plans account for this with drought-smart watering recommendations and grass seed blends that tolerate wind stress and temperature extremes. We also see a higher incidence of prairie-adapted weeds in Aurora, so our integrated weed management approach targets bindweed, thistle, and spurge before they take over. From a simple seasonal maintenance plan to a full lawn transformation, Murphy's Turf brings the same professional-grade service to every Aurora property we touch.",
-    ],
-    neighborhoods: [
-      'Southlands',
-      'Quincy Reservoir Area',
-      'Cherry Creek State Park Area',
-      'Saddle Rock',
-      "Tallyn's Reach",
-      'Murphy Creek',
-      'Painted Prairie',
-      'Blackstone',
-    ],
-    testimonials: [
-      {
-        name: 'David Nakamura',
-        neighborhood: 'Saddle Rock',
-        rating: 5,
-        text: "Our Saddle Rock lawn was showing its age after 15 years. Murphy's Turf came out, did their soil testing, and recommended a full aeration, overseeding, and fertilization program. The turnaround has been incredible. It looks better now than when we first moved in.",
-      },
-      {
-        name: 'Angela Torres',
-        neighborhood: 'Painted Prairie',
-        rating: 5,
-        text: "New construction lawn problems are real! Our builder sod was turning brown within months. Murphy's Turf diagnosed poor soil preparation underneath and built a recovery plan. Six months later our lawn is thick, green, and actually growing roots. Life savers.",
-      },
-      {
-        name: 'Kevin O\'Brien',
-        neighborhood: 'Murphy Creek',
-        rating: 5,
-        text: "Living next to a golf course means you want your lawn to look the part. Murphy's Turf keeps our property looking sharp with their seasonal maintenance program. Consistent, reliable, and the results speak for themselves every time I walk outside.",
-      },
-    ],
-    metaTitle: 'Lawn Care & Turf Cleaning in Aurora, CO',
-    metaDescription:
-      "Aurora's trusted lawn care provider. Murphy's Turf serves Saddle Rock, Tallyn's Reach, Painted Prairie, Murphy Creek, and more with aeration, seeding, fertilization, and seasonal maintenance.",
-    climateNote:
-      'Aurora sits on the eastern edge of the metro area where wind exposure is higher and precipitation slightly lower. Soils range from heavy clay in western Aurora to sandy clay loam near the plains. Drought-tolerant grass blends and proper irrigation management are essential.',
-    serviceAreaDescription:
-      "Our Aurora service area spans from the western border with Denver near Cherry Creek State Park all the way east to the E-470 corridor and beyond. We cover the full city from Fitzsimons and the Anschutz campus area in the north to Tallyn's Reach and Southlands in the south.",
-  },
-
-  lakewood: {
-    city: 'Lakewood',
-    slug: 'lakewood',
-    state: 'CO',
-    phone: '(720) 555-3456',
-    email: 'lakewood@murphysturf.com',
-    heroSubtitle:
-      'Expert lawn care at the edge of the Rockies. Our Lakewood team understands foothill microclimates and delivers tailored solutions for every elevation and exposure.',
-    description: [
-      "Lakewood's unique position along the foothills west of Denver creates some of the most variable growing conditions along the Front Range. Elevation changes of several hundred feet between neighborhoods mean that one block might face different sun exposure, wind patterns, and frost timing than a property just a mile away. At Murphy's Turf, we thrive on this complexity. Our Lakewood team members live and work in these communities, and they bring intimate knowledge of how Green Mountain's shadow affects afternoon temperatures, how Bear Creek's moisture patterns influence soil composition, and how foothill winds impact watering schedules.",
-      "The established neighborhoods of Applewood and Eiber feature mature trees and well-developed landscapes that require a careful approach. Too much fertilizer can burn shallow root systems competing with tree roots, while too little leaves grass thin and vulnerable. Our soil testing and custom treatment plans are designed to find that perfect balance. Belmar and the surrounding area have seen significant redevelopment, blending older residential lots with newer townhome communities, and our team is experienced in managing both legacy lawns and recently installed sod. Up the hill, Morse Park and the Green Mountain neighborhoods present elevation-related challenges including faster soil drying, stronger UV exposure, and earlier fall frost dates.",
-      "Lakewood residents also benefit from our proximity to the foothills for pest management. The deer and wildlife that make foothill living special can wreak havoc on lawns, and our integrated approach includes deterrent strategies alongside traditional pest and grub control. We use cool-season grass blends that establish deep roots to withstand the freeze-thaw cycles common at Lakewood's elevation, and our aeration services are timed to coincide with the narrow windows of optimal soil moisture. Whether your property is nestled in the Bear Creek corridor or perched on the Green Mountain ridgeline, Murphy's Turf has a plan that fits.",
-    ],
-    neighborhoods: [
-      'Green Mountain',
-      'Belmar',
+      'French Valley',
+      'Greer Ranch',
+      'The Oaks',
+      'Los Alamos Hills',
+      'California Oaks',
+      'Copper Canyon',
+      'Warm Springs',
       'Bear Creek',
-      'Applewood',
-      'Foothills',
-      'Eiber',
-      'Morse Park',
     ],
     testimonials: [
       {
-        name: 'Catherine Reeves',
-        neighborhood: 'Green Mountain',
+        name: 'Brian Callahan',
+        neighborhood: 'Greer Ranch',
         rating: 5,
-        text: "Up on Green Mountain, our lawn dries out so fast in summer. Murphy's Turf set us up with a deep aeration program and adjusted our watering schedule. The difference has been night and day. Our grass stays green well into September now instead of browning out by July.",
+        text: "We moved to Greer Ranch from the coast and had no idea how different lawn care would be out here. The clay soil was rock-hard and our grass was dying by mid-July. Murphy's Turf Care did a deep aeration, amended the soil, and put us on their seasonal program. Three summers in and our lawn stays green even in August. These guys are the real deal.",
       },
       {
-        name: 'Tom Andersen',
-        neighborhood: 'Applewood',
+        name: 'Maria Sandoval',
+        neighborhood: 'California Oaks',
         rating: 5,
-        text: "We have a big lot in Applewood with mature trees everywhere. Murphy's Turf figured out a fertilization approach that feeds the lawn without overloading the soil around our trees. Smart, knowledgeable team that actually explains the science behind what they do.",
+        text: "After trying two other lawn care companies that gave us generic treatments, we switched to Murphy's Turf Care. The difference was immediate — they actually tested our soil, explained the clay issues, and built a plan around the EMWD watering schedule. Our California Oaks lawn is the best it's ever looked and we're using less water. Can't recommend them enough.",
       },
       {
-        name: 'Maria Gonzalez',
-        neighborhood: 'Bear Creek',
+        name: 'Tyler Richardson',
+        neighborhood: 'French Valley',
         rating: 5,
-        text: "The wildlife near Bear Creek was tearing up our lawn every spring. Murphy's Turf not only repaired the damage with overseeding but set up a year-round maintenance plan that keeps our yard looking great despite the deer and elk that wander through. True professionals.",
+        text: "Our new construction lawn in French Valley was struggling badly after the first Santa Ana season. Murphy's Turf Care came out, assessed the damage, and set up a recovery program that included aeration, overseeding with heat-tolerant varieties, and their fertilization plan. Within a few months our lawn went from embarrassing to the best on the block. Being local really makes a difference.",
       },
     ],
-    metaTitle: 'Lawn Care & Turf Cleaning in Lakewood, CO',
+    metaTitle: "Lawn Care & Turf Cleaning in Murrieta, CA | Murphy's Turf Care HQ",
     metaDescription:
-      "Lakewood lawn care experts. Murphy's Turf provides aeration, seeding, fertilization, and pest control for Green Mountain, Applewood, Bear Creek, Belmar, and all Lakewood neighborhoods.",
+      "Murrieta's hometown lawn care provider. Murphy's Turf Care headquarters serves the Inland Empire and Temecula Valley with aeration, seeding, fertilization, pest control, and seasonal maintenance.",
     climateNote:
-      'Lakewood spans significant elevation changes along the foothills, creating variable microclimates. Western neighborhoods experience earlier frosts, higher winds, and faster soil drying. Clay soils are common throughout, and foothill runoff can create localized drainage challenges.',
+      'Murrieta features a hot semi-arid climate with summer temperatures regularly exceeding 100°F, mild winters in the 40s-60s, and minimal rainfall. Heavy clay soil, Santa Ana winds through the Temecula Gap, and EMWD water conservation guidelines are primary considerations for lawn care.',
     serviceAreaDescription:
-      'We serve the entire city of Lakewood from the Applewood and Wheat Ridge border in the north, through the Belmar and Eiber neighborhoods, up to the Green Mountain and Foothills communities in the west, and along the Bear Creek corridor to the south.',
+      'Our Murrieta service area covers all of Murrieta from French Valley and Warm Springs in the north through Greer Ranch, The Oaks, and California Oaks in the center, down to Bear Creek and the Temecula border in the south, and east to Los Alamos Hills and Copper Canyon.',
   },
 
-  boulder: {
-    city: 'Boulder',
-    slug: 'boulder',
-    state: 'CO',
-    phone: '(303) 555-4567',
-    email: 'boulder@murphysturf.com',
+  martinez: {
+    city: 'Martinez',
+    slug: 'martinez',
+    state: 'CA',
+    phone: '(925) 555-3456',
+    email: 'bayarea@murphysturfcare.com',
     heroSubtitle:
-      'Eco-conscious lawn care for a community that values sustainability. Our Boulder team offers organic and low-impact options alongside proven professional treatments.',
+      'Serving Martinez & the Greater Bay Area. Our Contra Costa County team delivers expert lawn care calibrated for the fog, marine layer, and unique microclimates of the East Bay.',
     description: [
-      "Boulder is a community that values environmental stewardship, and Murphy's Turf is proud to offer lawn care services that align with those values. Our Boulder team provides a full range of organic and low-impact treatment options alongside our conventional programs, giving homeowners the flexibility to choose an approach that fits their environmental philosophy without sacrificing lawn quality. From the iconic Chautauqua neighborhood at the base of the Flatirons to the suburban streets of Gunbarrel and the family-friendly blocks of Martin Acres, we deliver Boulder-caliber results with a sustainability-first mindset.",
-      "Boulder's proximity to the mountains creates unique growing conditions. The Flatirons and surrounding peaks channel afternoon winds, create rain shadows, and influence temperature inversions that can vary dramatically from neighborhood to neighborhood. Table Mesa and Chautauqua properties face rocky, thin soils with excellent drainage but poor nutrient retention, while North Boulder and Newlands tend toward the heavy clay soils common across the Front Range. Mapleton Hill's historic properties feature mature landscapes that demand a delicate touch, and University Hill's compact lots near CU require efficient, high-impact treatments that maximize limited space. Our team takes all of these factors into account when building each customer's care plan.",
-      "We partner with local soil labs to provide the most detailed nutrient analysis available, and our organic fertilization options use compost-based formulas and natural slow-release nutrients that build long-term soil health rather than creating chemical dependency. For customers who prefer conventional treatments, we use EPA-approved products applied by certified technicians at the minimum effective rates. Our Boulder pest control program emphasizes integrated pest management, using biological controls and targeted applications rather than blanket spraying. And our aeration and overseeding services use grass varieties selected for drought tolerance, because in Boulder, water conservation is not just good practice, it is a community responsibility.",
+      "Martinez sits at the edge of the Carquinez Strait where the Sacramento River Delta meets San Francisco Bay, and this geography creates one of the most fascinating microclimate environments in all of California. Morning fog and marine layer regularly roll through the strait, keeping coastal-facing neighborhoods cooler and more humid than communities just a few ridgelines inland. The delta breezes that flow through Martinez and into the East Bay valleys moderate afternoon temperatures but also create uneven drying patterns across lawns. Murphy's Turf Care has built our Bay Area operation around these nuances. Our Martinez team understands that a lawn in the Alhambra Valley faces different conditions than a property in downtown Martinez, and that a yard in nearby Walnut Creek has different needs than one in Benicia just across the water. Every treatment plan we design starts with a thorough assessment of your property's specific exposure to fog, wind, sun, and soil type.",
+      "Soil composition in the Martinez area presents both challenges and opportunities. Much of Contra Costa County sits on heavy clay soil that retains moisture during the wet season but becomes compacted and nearly impermeable during the dry months. This clay base means that without proper aeration, irrigation water and rainfall sit on the surface rather than reaching root zones, leading to shallow root development and turf that struggles as soon as the dry season arrives. Murphy's Turf Care addresses this with our core aeration program, strategically timed to coincide with the transition from wet to dry seasons. We also recommend and apply soil amendments that improve clay structure over time, gradually creating a more balanced growing medium. For properties near the delta and along the Pacheco Creek corridor, we see more varied soil profiles including alluvial deposits that drain quickly — these lawns benefit from our targeted fertilization programs that prevent nutrient leaching and maintain steady growth through the long, dry California summer.",
+      "Water conservation is a central concern for Bay Area homeowners, and EBMUD (East Bay Municipal Utility District) guidelines shape how our customers irrigate their lawns. Murphy's Turf Care designs every treatment plan with water efficiency as a core principle. Our aeration services ensure maximum water penetration, our fertilization programs promote deep root growth that reduces watering frequency, and we consult on irrigation scheduling that works within EBMUD allowances. The Bay Area's mild year-round temperatures — rarely freezing and seldom exceeding 95 degrees in Martinez — allow for a long growing season that responds well to consistent, science-based care. Whether you are maintaining a sprawling estate in the Alhambra Valley, a craftsman bungalow lot in downtown Martinez, or a suburban property in Pleasant Hill or Concord, Murphy's Turf Care brings professional-grade Bay Area lawn care to your doorstep.",
     ],
     neighborhoods: [
-      'Chautauqua',
-      'Table Mesa',
-      'North Boulder',
-      'Gunbarrel',
-      'Martin Acres',
-      'Newlands',
-      'Mapleton Hill',
-      'University Hill',
+      'Downtown Martinez',
+      'Alhambra Valley',
+      'Pleasant Hill',
+      'Concord',
+      'Walnut Creek',
+      'Benicia',
+      'Pacheco',
+      'Lafayette',
     ],
     testimonials: [
       {
-        name: 'Dr. Emily Sato',
-        neighborhood: 'Mapleton Hill',
+        name: 'Richard Yamamoto',
+        neighborhood: 'Walnut Creek',
         rating: 5,
-        text: "As someone who cares deeply about what goes on our soil, I was thrilled to find Murphy's Turf and their organic program. Our Mapleton Hill lawn has never looked better, and I feel good knowing the products are safe for our kids, pets, and the creek down the street.",
+        text: "Our Walnut Creek property sits in a hot microclimate that dries out the lawn by June every year. Murphy's Turf Care built a program around deep aeration and slow-release fertilization that has completely transformed our yard. They understand the Bay Area microclimates better than any company we've worked with. Our lawn stays green well into October now.",
       },
       {
-        name: 'Ryan Kowalski',
-        neighborhood: 'Gunbarrel',
+        name: 'Colleen O\'Malley',
+        neighborhood: 'Downtown Martinez',
         rating: 5,
-        text: "We switched to Murphy's Turf after our previous company kept pushing products we didn't need. Murphy's did a soil test first, identified exactly what our Gunbarrel lawn was lacking, and built a targeted plan. Better results, less product, lower cost. Smart approach.",
+        text: "We have an older home in Martinez with heavy clay soil that nothing seemed to grow well in. Murphy's team tested the soil, explained exactly what amendments were needed, and started us on a comprehensive treatment plan. Within two seasons our lawn went from patchy and struggling to thick and healthy. They really know this area's soil challenges.",
       },
       {
-        name: 'Jennifer Walsh',
-        neighborhood: 'Table Mesa',
+        name: 'Arjun Mehta',
+        neighborhood: 'Pleasant Hill',
         rating: 5,
-        text: "Table Mesa's rocky soil is tough on grass, but Murphy's Turf figured it out. Their aeration and organic fertilization program has transformed our yard from patchy brown to thick green. They even helped us choose water-efficient grass varieties. Outstanding service.",
+        text: "After years of trying to manage our Pleasant Hill lawn ourselves, we finally called Murphy's Turf Care. Best decision we made. They identified that our irrigation was inefficient, our soil was severely compacted, and we were using the wrong fertilizer schedule for our microclimate. The turnaround has been remarkable — lush, even, and green. Worth every penny.",
       },
     ],
-    metaTitle: 'Lawn Care & Turf Cleaning in Boulder, CO',
+    metaTitle: "Lawn Care & Turf Cleaning in Martinez & Bay Area, CA | Murphy's Turf Care",
     metaDescription:
-      "Boulder's eco-friendly lawn care provider. Murphy's Turf offers organic and conventional lawn care including aeration, seeding, fertilization, and pest control in Chautauqua, Table Mesa, North Boulder, and more.",
+      "Bay Area lawn care experts. Murphy's Turf Care serves Martinez, Walnut Creek, Pleasant Hill, Concord, and Contra Costa County with aeration, seeding, fertilization, pest control, and seasonal maintenance.",
     climateNote:
-      'Boulder receives more precipitation than Denver but also experiences strong Chinook winds, rapid temperature changes, and intense UV exposure. Mountain proximity creates microclimates, and water conservation is a key community priority. Organic and low-water-use approaches are especially popular here.',
+      'Martinez features a Mediterranean climate strongly influenced by fog, marine layer, and delta breezes from the Carquinez Strait. Temperatures are mild year-round, rarely freezing or exceeding 95°F. Heavy clay soil is prevalent, and EBMUD water conservation guidelines shape irrigation practices throughout the region.',
     serviceAreaDescription:
-      'Our Boulder service area covers the city of Boulder from Chautauqua and the Flatirons foothills in the west, through the central neighborhoods of Mapleton Hill, Newlands, and University Hill, out to Gunbarrel and the Diagonal Highway corridor in the east.',
+      'Our Martinez service area covers Contra Costa County from Benicia and the Carquinez Strait in the north through downtown Martinez and Pacheco, south to Pleasant Hill and Walnut Creek, and west to Lafayette. We also serve the Alhambra Valley and Concord communities.',
   },
 
-  'fort-collins': {
-    city: 'Fort Collins',
-    slug: 'fort-collins',
-    state: 'CO',
-    phone: '(970) 555-6789',
-    email: 'fortcollins@murphysturf.com',
+  sacramento: {
+    city: 'Sacramento',
+    slug: 'sacramento',
+    state: 'CA',
+    phone: '(916) 555-7890',
+    email: 'sacramento@murphysturfcare.com',
     heroSubtitle:
-      'Northern Colorado lawn care informed by the latest turf science. Our Fort Collins team brings research-backed treatments to your front door.',
+      "Professional Lawn Care for Sacramento & the Central Valley. Our Sacramento team specializes in heat-resilient turf management for the capital region's extreme summers and unique river delta soil conditions.",
     description: [
-      "Fort Collins anchors the northern end of Colorado's Front Range, and its lawn care needs differ meaningfully from the communities farther south. Northern Colorado receives more annual precipitation than Denver, the growing season starts a bit later and ends a bit earlier, and the soil profiles shift from the heavy clay of the metro area toward more varied compositions that include loamy soils, especially near the Cache la Poudre River corridor. Murphy's Turf has built our Fort Collins program around these regional distinctions, and our team stays current with the turf management research coming out of Colorado State University, which is right here in our backyard.",
-      "The heart of Fort Collins is Old Town, where historic properties feature established landscapes that benefit from our gentle, preservation-focused maintenance approach. Moving south along the Harmony corridor, the newer communities of Rigden Farm, Bucking Horse, and Jessup Farm represent the latest in planned development, with modern irrigation infrastructure and young lawns that need proper establishment care. Fossil Creek properties sit along the natural drainage corridor and sometimes face seasonal moisture challenges that require adjusted treatment timing. Out toward Timnath and the Windsor border, larger lots and agricultural-adjacent properties benefit from our full-service programs that address the unique weed pressures and soil types found at the rural-suburban interface.",
-      "Fort Collins homeowners appreciate our science-forward approach. We use soil testing protocols aligned with CSU Extension recommendations, select grass seed varieties from the university's turf trials, and time our applications around the northern Colorado frost calendar rather than generic regional schedules. Our fertilization programs account for Fort Collins' longer spring moisture period, which allows for more effective nutrient uptake in the early season. We also address the snow mold issues that are more common in northern Colorado due to heavier, longer-lasting snow cover. From Old Town charm to new construction precision, Murphy's Turf brings Fort Collins lawns the professional care they deserve.",
+      "Sacramento's Central Valley location creates a climate that is as rewarding as it is demanding for lawn care. The capital city enjoys abundant sunshine and a long growing season that can produce truly spectacular lawns, but the flip side is summer heat that routinely pushes past 105 degrees Fahrenheit, sometimes for weeks at a stretch. These extreme temperatures stress turf grasses to their limits, accelerating moisture loss and pushing root systems deeper in search of water. Murphy's Turf Care has developed our Sacramento program specifically for these conditions. Our team uses warm-season grass varieties and heat-adapted blends that are proven performers in the Central Valley, and our fertilization schedules are calibrated to feed lawns during the cooler shoulder seasons when nutrient uptake is most efficient, rather than pushing growth during the brutal summer months when grass is simply trying to survive.",
+      "The Sacramento region's soil tells the story of its two great rivers. Properties near the Sacramento and American River confluences sit on rich alluvial deposits — sandy loam that drains well but can leach nutrients quickly without proper management. Move away from the river corridors into neighborhoods like Natomas, Arden-Arcade, and Citrus Heights, and the soil transitions to heavier clay compositions that compact under the summer heat and resist water absorption. Murphy's Turf Care conducts soil testing for every Sacramento customer because the difference between a river-influenced property in East Sacramento and a clay-heavy lot in Elk Grove can dictate entirely different treatment approaches. Our aeration services are especially critical in the clay-soil areas, where breaking through compaction layers is essential for water penetration and root development. In the sandy-loam zones, we focus on nutrient retention strategies and organic matter amendments that build the soil's ability to hold both moisture and fertilizer.",
+      "Winter brings its own set of challenges to Sacramento lawns. The Central Valley's infamous tule fog settles in from November through February, creating cold, damp conditions that can promote fungal diseases like brown patch and dollar spot in vulnerable turf. These dense fog events, combined with dramatic temperature swings from freezing overnight lows to mild afternoon highs, create a stress cycle that weakens lawns heading into spring. Murphy's Turf Care addresses this with our winter maintenance program, which includes fungicide treatments for at-risk lawns, careful mowing height management to prevent moisture trapping, and early spring recovery applications that help turf bounce back as the fog lifts and temperatures begin to climb. From the tree-lined avenues of Land Park and the charming streets of Midtown to the growing communities of Folsom, Rancho Cordova, and Roseville, our Sacramento team delivers year-round professional lawn care that keeps your property looking its best through every season the Central Valley throws at it.",
     ],
     neighborhoods: [
-      'Old Town',
-      'Harmony Area',
-      'Timnath',
-      'Windsor Border',
-      'Fossil Creek',
-      'Rigden Farm',
-      'Bucking Horse',
-      'Jessup Farm',
+      'East Sacramento',
+      'Land Park',
+      'Midtown',
+      'Natomas',
+      'Elk Grove',
+      'Folsom',
+      'Rancho Cordova',
+      'Arden-Arcade',
+      'Citrus Heights',
+      'Roseville',
     ],
     testimonials: [
       {
-        name: 'Mark Stevens',
-        neighborhood: 'Old Town',
+        name: 'Greg Thomsen',
+        neighborhood: 'East Sacramento',
         rating: 5,
-        text: "Our Old Town property has a 100-year-old lawn and mature trees. Murphy's Turf treated it with the care it deserves. They understood that we needed a gentle approach and their organic fertilization program has brought our grass back to life without harming our heritage trees.",
+        text: "East Sac has beautiful old homes but the mature trees and river-influenced soil make lawn care tricky. Murphy's Turf Care figured out our unique soil profile and built a treatment plan that accounts for the shade, the sandy loam, and the nutrient leaching issues. Our lawn has never been this consistently green, even in August. They genuinely know Sacramento.",
       },
       {
-        name: 'Ashley Nguyen',
-        neighborhood: 'Rigden Farm',
+        name: 'Priya Venkatesh',
+        neighborhood: 'Elk Grove',
         rating: 5,
-        text: "We built in Rigden Farm and our lawn was struggling after the first winter. Murphy's Turf diagnosed snow mold and set up a treatment plan that included aeration, overseeding, and their seasonal maintenance program. By mid-summer, you'd never know there was a problem. Excellent work.",
+        text: "The clay soil in Elk Grove had defeated us for years. We'd water and water but the lawn still browned out every summer. Murphy's Turf Care did a deep double-pass aeration, amended the soil, and started us on their seasonal fertilization program. The difference was visible within weeks. Our grass stays green through the heat now and we're actually using less water. Phenomenal service.",
       },
       {
-        name: 'Chris Bauer',
-        neighborhood: 'Timnath',
+        name: 'Danielle Foster',
+        neighborhood: 'Folsom',
         rating: 5,
-        text: "Out in Timnath we get every weed the prairie can throw at us. Murphy's Turf set up an integrated weed management plan alongside their fertilization program and the difference is dramatic. Our lawn is thick enough now that weeds can't get a foothold. Worth every penny.",
+        text: "We were dealing with tule fog damage and brown patch every winter in our Folsom lawn. Murphy's Turf Care diagnosed the problem, set up a preventive fungicide program for the fog season, and adjusted our fall maintenance schedule. This past winter was the first time in five years we didn't lose patches of grass to disease. Their knowledge of Sacramento-specific lawn issues is impressive.",
       },
     ],
-    metaTitle: 'Lawn Care & Turf Cleaning in Fort Collins, CO',
+    metaTitle: "Lawn Care & Turf Cleaning in Sacramento, CA | Murphy's Turf Care",
     metaDescription:
-      "Fort Collins lawn care backed by turf science. Murphy's Turf provides aeration, seeding, fertilization, pest control, and seasonal maintenance in Old Town, Timnath, Rigden Farm, and all of northern Colorado.",
+      "Sacramento's professional lawn care provider. Murphy's Turf Care serves East Sacramento, Land Park, Elk Grove, Folsom, Rancho Cordova, and the greater capital region with aeration, seeding, fertilization, and seasonal maintenance.",
     climateNote:
-      'Fort Collins receives more precipitation than Denver, experiences a shorter growing season, and faces snow mold risk from heavier winter snowpack. Soils vary from clay to loam depending on proximity to the Poudre River. CSU turf research informs best practices for the region.',
+      'Sacramento features a hot-summer Mediterranean climate with extreme heat often exceeding 105°F in summer and mild winters characterized by dense tule fog from November through February. Soil varies from sandy river-delta loam near the Sacramento and American Rivers to heavy clay in outlying neighborhoods. Dramatic daily temperature swings and winter fungal pressure are key lawn care considerations.',
     serviceAreaDescription:
-      'We serve the greater Fort Collins area from Old Town and the CSU campus through the Harmony and Timberline corridors, east to Timnath and the Windsor border, and south to the Fossil Creek and Loveland transition areas.',
+      'Our Sacramento service area covers the greater capital region from Roseville and Citrus Heights in the north through Arden-Arcade and East Sacramento in the center, down to Elk Grove in the south, and east to Folsom and Rancho Cordova along the American River corridor. We also serve the Natomas, Land Park, and Midtown neighborhoods.',
   },
 };
 
@@ -452,12 +352,10 @@ function ServiceIcon({ icon, className }: { icon: string; className?: string }) 
 
 export function generateStaticParams() {
   return [
-    { slug: 'denver' },
-    { slug: 'colorado-springs' },
-    { slug: 'aurora' },
-    { slug: 'lakewood' },
-    { slug: 'boulder' },
-    { slug: 'fort-collins' },
+    { slug: 'los-angeles' },
+    { slug: 'murrieta' },
+    { slug: 'martinez' },
+    { slug: 'sacramento' },
   ];
 }
 
@@ -522,13 +420,13 @@ export default async function LocationPage({
           <div className="max-w-4xl">
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white/90 text-sm font-body px-4 py-2 rounded-full mb-6">
               <MapPin className="w-4 h-4" />
-              {location.city}, Colorado
+              {location.city}, California
             </div>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white font-heading mb-6 leading-tight">
               Turf Cleaning & Lawn Care
               <br />
               <span className="text-cream">
-                in {location.city}, CO
+                in {location.city}, CA
               </span>
             </h1>
             <p className="text-lg text-white/80 font-body leading-relaxed max-w-3xl">
@@ -624,7 +522,7 @@ export default async function LocationPage({
             </h2>
             <p className="text-lg text-charcoal-light font-body max-w-2xl mx-auto">
               Every service is tailored to {location.city}&apos;s specific soil, climate,
-              and elevation conditions.
+              and growing conditions.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -884,7 +782,7 @@ export default async function LocationPage({
                     type="tel"
                     id="phone"
                     name="phone"
-                    placeholder="(720) 555-0000"
+                    placeholder="(951) 331-3300"
                     className="w-full px-4 py-3 border border-gray-200 rounded-lg font-body text-charcoal placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-sage/50 focus:border-sage transition-colors"
                   />
                 </div>
@@ -947,7 +845,7 @@ export default async function LocationPage({
           <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
             <div>
               <h3 className="text-xl font-bold text-white font-heading mb-1">
-                We Also Serve Other Front Range Communities
+                We Also Serve Other California Communities
               </h3>
               <p className="text-white/70 font-body text-sm">
                 See all locations or contact us if you don&apos;t see your area listed.

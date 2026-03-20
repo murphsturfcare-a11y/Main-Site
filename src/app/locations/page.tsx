@@ -3,53 +3,39 @@ import Link from 'next/link';
 import { MapPin, ArrowRight, Map, Phone, Sparkles } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Service Locations | Colorado Front Range Lawn Care',
+  title: 'Service Locations | California Lawn Care & Turf Cleaning',
   description:
-    "Murphy's Turf provides professional lawn care and turf cleaning services across Colorado's Front Range. Serving Denver, Colorado Springs, Aurora, Lakewood, Boulder, and Fort Collins.",
+    "Murphy's Turf Care provides professional lawn care and turf cleaning services across California. Serving Los Angeles, Murrieta, Martinez, and Sacramento.",
 };
 
 const locations = [
   {
-    city: 'Denver',
-    slug: 'denver',
+    city: 'Los Angeles',
+    slug: 'los-angeles',
     description:
-      'Our home base and main office. Full-service turf cleaning, aeration, seeding, fertilization, pest control, and seasonal maintenance across the Mile High City.',
-    highlight: 'Main Office',
+      'Expert lawn care across the LA metro area — from Hollywood and Santa Monica to Beverly Hills, Pasadena, and Long Beach. Drought-smart treatments tailored for Southern California\'s Mediterranean climate.',
+    highlight: 'LA Metro Area',
   },
   {
-    city: 'Colorado Springs',
-    slug: 'colorado-springs',
+    city: 'Murrieta',
+    slug: 'murrieta',
     description:
-      'Expert lawn care tailored to the unique high-altitude growing conditions of the Pikes Peak region. Specialized treatments for rocky, alkaline soils.',
-    highlight: 'High Altitude Experts',
+      'Our headquarters in the heart of the Inland Empire. Full-service turf cleaning, aeration, fertilization, and water-smart lawn care for Murrieta, Temecula Valley, and surrounding communities.',
+    highlight: 'Headquarters',
   },
   {
-    city: 'Aurora',
-    slug: 'aurora',
+    city: 'Martinez',
+    slug: 'martinez',
     description:
-      'Serving both established neighborhoods and new developments with comprehensive lawn care programs designed for the eastern Front Range climate.',
-    highlight: 'Fast Growing Area',
+      'Serving the Bay Area from Contra Costa County. Specialized treatments for fog-influenced microclimates, heavy clay soil, and marine layer conditions across the East Bay.',
+    highlight: 'Bay Area',
   },
   {
-    city: 'Lakewood',
-    slug: 'lakewood',
+    city: 'Sacramento',
+    slug: 'sacramento',
     description:
-      'Customized lawn care for the diverse microclimates along the foothills. From Green Mountain to Bear Creek, we know Lakewood lawns inside and out.',
-    highlight: 'Foothill Specialists',
-  },
-  {
-    city: 'Boulder',
-    slug: 'boulder',
-    description:
-      'Eco-friendly and organic lawn care options for Boulder\'s environmentally conscious community. Sustainable practices that deliver stunning results.',
-    highlight: 'Eco-Friendly Options',
-  },
-  {
-    city: 'Fort Collins',
-    slug: 'fort-collins',
-    description:
-      'Northern Colorado lawn care backed by the latest turf science. We bring professional-grade treatments to Fort Collins and surrounding communities.',
-    highlight: 'Northern CO Coverage',
+      'Professional lawn care for the Central Valley capital region. Heat-resilient treatments for Elk Grove, Folsom, Rancho Cordova, and neighborhoods throughout the Sacramento metro.',
+    highlight: 'Central Valley',
   },
 ];
 
@@ -64,17 +50,17 @@ export default function LocationsPage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white/90 text-sm font-body px-4 py-2 rounded-full mb-6">
             <MapPin className="w-4 h-4" />
-            Proudly Serving 6 Colorado Communities
+            Proudly Serving 4 California Regions
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white font-heading mb-6 leading-tight">
-            Serving the Colorado
+            Serving California
             <br />
-            <span className="text-cream">Front Range</span>
+            <span className="text-cream">Communities</span>
           </h1>
           <p className="text-lg sm:text-xl text-white/80 font-body max-w-3xl mx-auto leading-relaxed">
-            From Denver to Fort Collins, Murphy&apos;s Turf delivers professional lawn care
-            and turf cleaning services to communities across the Front Range. Our local teams
-            understand the unique soil, climate, and elevation challenges of each area we serve.
+            From Los Angeles to Sacramento, Murphy&apos;s Turf Care delivers professional lawn care
+            and turf cleaning services to communities across California. Our local teams
+            understand the unique soil, climate, and water conservation challenges of each region we serve.
           </p>
         </div>
       </section>
@@ -92,7 +78,7 @@ export default function LocationsPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8">
             {locations.map((location) => (
               <Link
                 key={location.slug}
@@ -136,8 +122,8 @@ export default function LocationsPage() {
               Our Coverage Area
             </h2>
             <p className="text-lg text-charcoal-light font-body max-w-2xl mx-auto">
-              We service a wide area along the Colorado Front Range, from Fort Collins in the
-              north to Colorado Springs in the south.
+              We service communities across California, from the greater Los Angeles metro
+              in the south to Sacramento in the north, with our headquarters in Murrieta.
             </p>
           </div>
           <div className="relative w-full h-[400px] sm:h-[500px] bg-gray-100 rounded-2xl border-2 border-dashed border-gray-300 flex flex-col items-center justify-center overflow-hidden">
@@ -150,8 +136,8 @@ export default function LocationsPage() {
                 Interactive Service Area Map
               </h3>
               <p className="text-charcoal-light font-body max-w-md">
-                Explore our full coverage area across the Colorado Front Range. From the
-                foothills to the eastern plains, we&apos;ve got your lawn covered.
+                Explore our full coverage area across California. From the coast to the
+                Central Valley, we&apos;ve got your lawn covered.
               </p>
               <div className="flex flex-wrap justify-center gap-3 mt-2">
                 {locations.map((loc) => (
@@ -174,8 +160,8 @@ export default function LocationsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
             {[
-              { stat: '6', label: 'Cities Served' },
-              { stat: '50+', label: 'Neighborhoods' },
+              { stat: '4', label: 'Regions Served' },
+              { stat: '40+', label: 'Neighborhoods' },
               { stat: '2,500+', label: 'Happy Customers' },
               { stat: '7+', label: 'Years Experience' },
             ].map((item) => (
@@ -203,7 +189,7 @@ export default function LocationsPage() {
               Don&apos;t See Your Area?
             </h2>
             <p className="text-lg text-charcoal-light font-body mb-8 max-w-2xl mx-auto">
-              We&apos;re constantly expanding our service area across the Front Range. If you
+              We&apos;re constantly expanding our service area across California. If you
               don&apos;t see your community listed, reach out anyway! We may already serve your
               neighborhood or be planning to soon.
             </p>
@@ -216,11 +202,11 @@ export default function LocationsPage() {
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <a
-                href="tel:+17205551234"
+                href="tel:+19513313300"
                 className="inline-flex items-center gap-2 bg-forest hover:bg-forest-light text-white font-semibold px-8 py-3.5 rounded-lg transition-colors font-body shadow-sm hover:shadow-md"
               >
                 <Phone className="w-4 h-4" />
-                (720) 555-1234
+                (951) 331-3300
               </a>
             </div>
           </div>

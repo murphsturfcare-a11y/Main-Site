@@ -138,7 +138,7 @@ export default function AdminLayout({
             </button>
             <h1 className="text-lg font-semibold text-gray-800">Admin Panel</h1>
           </div>
-          <span className="text-sm text-gray-500">admin@murphysturf.com</span>
+          <span className="text-sm text-gray-500">admin@murphysturfcare.com</span>
         </header>
 
         {/* Main content */}

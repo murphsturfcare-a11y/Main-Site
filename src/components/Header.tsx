@@ -26,7 +26,7 @@ export default function Header() {
             </div>
             <div>
               <span className="text-xl font-bold text-forest font-heading tracking-tight">
-                Murphy&apos;s Turf
+                Murphy&apos;s Turf Care
               </span>
               <span className="hidden sm:block text-xs text-charcoal-light font-body -mt-1">
                 Professional Lawn Care
@@ -50,11 +50,11 @@ export default function Header() {
           {/* CTA + Phone */}
           <div className="hidden lg:flex items-center gap-4">
             <a
-              href="tel:+17205551234"
+              href="tel:+19513313300"
               className="flex items-center gap-2 text-forest font-semibold font-body hover:text-forest-light transition-colors"
             >
               <Phone className="w-4 h-4" />
-              (720) 555-1234
+              (951) 331-3300
             </a>
             <Link
               href="/contact"
@@ -91,11 +91,11 @@ export default function Header() {
             ))}
             <div className="pt-4 border-t border-gray-100 space-y-3">
               <a
-                href="tel:+17205551234"
+                href="tel:+19513313300"
                 className="flex items-center gap-2 px-4 py-2 text-forest font-semibold font-body"
               >
                 <Phone className="w-4 h-4" />
-                (720) 555-1234
+                (951) 331-3300
               </a>
               <Link
                 href="/contact"

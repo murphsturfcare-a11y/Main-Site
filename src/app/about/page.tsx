@@ -18,11 +18,11 @@ import {
 export const metadata: Metadata = {
   title: 'About Us',
   description:
-    "Learn about Murphy's Turf — Colorado's trusted lawn care partner since 2018. Family-owned, community-driven, and committed to delivering exceptional lawn care across the Front Range.",
+    "Learn about Murphy's Turf Care — California's trusted lawn care partner since 2018. Family-owned, community-driven, and committed to delivering exceptional lawn care across California.",
   openGraph: {
-    title: "About Murphy's Turf | Colorado's Trusted Lawn Care Partner",
+    title: "About Murphy's Turf Care | California's Trusted Lawn Care Partner",
     description:
-      "Founded in 2018 by Sean Murphy, Murphy's Turf has grown from a one-truck operation to a team of 25+ trained professionals serving Colorado's Front Range.",
+      "Founded in 2018 by Patrick Murphy, Murphy's Turf Care has grown from a one-truck operation to a team of 25+ trained professionals serving California communities.",
   },
 };
 
@@ -37,7 +37,7 @@ const values = [
     icon: Leaf,
     title: 'Eco-Conscious',
     description:
-      'We use environmentally responsible products and sustainable practices that protect your family, pets, and the Colorado landscape we all share.',
+      'We use environmentally responsible products and sustainable practices that protect your family, pets, and the California landscape we all share.',
   },
   {
     icon: Heart,
@@ -49,7 +49,7 @@ const values = [
     icon: Handshake,
     title: 'Community Roots',
     description:
-      'Proud to serve and give back to the Colorado communities that made us who we are. We sponsor local youth sports and participate in neighborhood beautification.',
+      'Proud to serve and give back to the California communities that made us who we are. We sponsor local youth sports and participate in neighborhood beautification.',
   },
 ];
 
@@ -59,14 +59,14 @@ const stats = [
   { value: '2,500+', label: 'Happy Customers' },
   { value: '10,000+', label: 'Projects Completed' },
   { value: '98%', label: 'Customer Satisfaction' },
-  { value: '6', label: 'Service Areas' },
+  { value: '4', label: 'Service Areas' },
 ];
 
 const certifications = [
   {
     icon: Shield,
-    name: 'Colorado Department of Agriculture Licensed',
-    description: 'Fully licensed for commercial and residential lawn care applications across the state of Colorado.',
+    name: 'California Department of Pesticide Regulation Licensed',
+    description: 'Fully licensed for commercial and residential lawn care applications across the state of California.',
   },
   {
     icon: Users,
@@ -76,7 +76,7 @@ const certifications = [
   {
     icon: Sprout,
     name: 'EPA WaterSense Partner',
-    description: 'Recognized for water-efficient landscaping practices that conserve Colorado\'s precious water resources.',
+    description: 'Recognized for water-efficient landscaping practices that conserve California\'s precious water resources.',
   },
   {
     icon: Star,
@@ -85,8 +85,8 @@ const certifications = [
   },
   {
     icon: CheckCircle,
-    name: 'Colorado Green Industries Certified',
-    description: 'Certified by CGI for excellence in sustainable landscape management and environmental stewardship.',
+    name: 'California Landscape Contractors Association Member',
+    description: 'Member of CLCA for excellence in sustainable landscape management and environmental stewardship.',
   },
 ];
 
@@ -101,11 +101,11 @@ export default function AboutPage() {
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-heading text-white mb-6 tracking-tight">
-            About Murphy&apos;s Turf
+            About Murphy&apos;s Turf Care
           </h1>
           <p className="text-lg sm:text-xl text-white/90 font-body max-w-3xl mx-auto leading-relaxed">
-            Colorado&apos;s trusted lawn care partner since 2018. Family-owned, community-driven,
-            and committed to making every yard in the Front Range the best it can be.
+            California&apos;s trusted lawn care partner since 2018. Family-owned, community-driven,
+            and committed to making every yard in California the best it can be.
           </p>
         </div>
       </section>
@@ -121,36 +121,35 @@ export default function AboutPage() {
               </span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-bold font-heading text-charcoal mb-10">
-              From One Truck to Colorado&apos;s Front Range
+              From One Truck to Serving California
             </h2>
 
             <div className="space-y-6 text-charcoal-light font-body text-lg leading-relaxed">
               <p>
-                Murphy&apos;s Turf was born in 2018 out of a simple belief: that every homeowner
-                deserves a lawn care partner who genuinely cares about the work. Founder Sean Murphy
-                grew up in Littleton, Colorado, spending summers alongside his grandfather and father
+                Murphy&apos;s Turf Care was born in 2018 out of a simple belief: that every homeowner
+                deserves a lawn care partner who genuinely cares about the work. Founder Patrick Murphy
+                grew up in Murrieta, California, spending summers alongside his grandfather and father
                 — both professional landscapers who taught him that a well-kept lawn is more than
                 just grass. It&apos;s the place where families gather for barbecues, kids play catch
-                after school, and neighbors come together. Sean started with a single truck, a
+                after school, and neighbors come together. Patrick started with a single truck, a
                 commercial mower, and a determination to bring that third-generation craftsmanship to
                 every property he touched. Word spread quickly. Within the first year, referrals alone
-                had him booked solid across three neighborhoods in south Denver.
+                had him booked solid across three neighborhoods in the Inland Empire.
               </p>
               <p>
                 What began as a solo operation has grown into a team of over 25 trained professionals
-                who share Sean&apos;s passion for doing things the right way. We invested early in
-                training and certification because we know that Colorado&apos;s unique climate —
-                the dry summers, late spring freezes, and alkaline soils — demands more than a
+                who share Patrick&apos;s passion for doing things the right way. We invested early in
+                training and certification because we know that California&apos;s unique climate —
+                the hot summers, water conservation demands, and varied soil conditions — demands more than a
                 one-size-fits-all approach. Every technician on our crew understands the science
                 behind healthy turf and receives ongoing education in sustainable lawn care practices.
                 That investment shows up in the results: lawns that stay greener longer, root systems
                 that withstand drought, and customers who stay with us season after season. Today, we
-                proudly serve six communities across the Front Range, from Fort Collins down to
-                Colorado Springs.
+                proudly serve four communities across California, from Los Angeles to Sacramento.
               </p>
               <p>
                 Even as we&apos;ve grown, we&apos;ve never lost the values that got us here.
-                Murphy&apos;s Turf is still family-owned and operated, and Sean is still out on
+                Murphy&apos;s Turf Care is still family-owned and operated, and Patrick is still out on
                 properties every week, checking on jobs and talking with customers. We treat every
                 lawn as if it were our own — because at the end of the day, our reputation is built
                 one yard at a time. We are not a franchise and we are not backed by a national
@@ -177,7 +176,7 @@ export default function AboutPage() {
               </h2>
               <p className="text-lg sm:text-xl text-white/90 font-body leading-relaxed max-w-3xl mx-auto">
                 To deliver exceptional lawn care services that enhance the beauty and health of
-                Colorado&apos;s outdoor spaces, using sustainable practices and building lasting
+                California&apos;s outdoor spaces, using sustainable practices and building lasting
                 relationships with our community.
               </p>
             </div>
@@ -297,11 +296,11 @@ export default function AboutPage() {
       <section className="py-20 sm:py-24 bg-cream-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold font-heading text-charcoal mb-6">
-            Ready to Experience the Murphy&apos;s Turf Difference?
+            Ready to Experience the Murphy&apos;s Turf Care Difference?
           </h2>
           <p className="text-charcoal-light font-body text-lg max-w-2xl mx-auto mb-10">
-            Join over 2,500 happy homeowners across the Front Range. Get your free, no-obligation
-            quote today and see why Colorado trusts Murphy&apos;s Turf.
+            Join over 2,500 happy homeowners across California. Get your free, no-obligation
+            quote today and see why California trusts Murphy&apos;s Turf Care.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
@@ -311,11 +310,11 @@ export default function AboutPage() {
               Get Your Free Quote
             </Link>
             <a
-              href="tel:+17205551234"
+              href="tel:+19513313300"
               className="inline-flex items-center justify-center gap-2 bg-forest hover:bg-forest-light text-white font-semibold px-8 py-4 rounded-lg transition-colors font-body shadow-md hover:shadow-lg text-lg"
             >
               <Phone className="w-5 h-5" />
-              (720) 555-1234
+              (951) 331-3300
             </a>
           </div>
           <p className="mt-6 text-charcoal-light font-body text-sm flex items-center justify-center gap-2">
@@ -323,7 +322,7 @@ export default function AboutPage() {
             Mon&ndash;Fri 7 AM&ndash;6 PM &middot; Sat 8 AM&ndash;4 PM
             <span className="mx-1">&middot;</span>
             <MapPin className="w-4 h-4" />
-            Serving 6 Front Range Communities
+            Serving 4 California Communities
           </p>
         </div>
       </section>

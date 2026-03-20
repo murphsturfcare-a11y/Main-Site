@@ -203,7 +203,7 @@ export default function QuoteForm() {
             value={propertyAddress}
             onChange={(e) => setPropertyAddress(e.target.value)}
             className={inputClasses}
-            placeholder="123 Main St, Denver, CO"
+            placeholder="123 Main St, Murrieta, CA"
           />
         </div>
 
