@@ -21,27 +21,27 @@ const openSans = Open_Sans({
 
 export const metadata: Metadata = {
   title: {
-    default: "Murphy's Turf Care | Professional Lawn Care & Turf Cleaning in California",
-    template: "%s | Murphy's Turf Care",
+    default: "Murphy's Turf | Professional Artificial Turf Cleaning in California",
+    template: "%s | Murphy's Turf",
   },
   description:
-    "California's premier turf cleaning and lawn care company. Professional aeration, seeding, fertilization, pest control, and seasonal maintenance across California. Get a free quote today!",
+    "California's premier artificial turf cleaning company with 30+ years of experience. Professional pet hair removal, turf blooming, disinfecting, and deodorizing services across California. Get a free quote today!",
   keywords: [
-    'lawn care California',
-    'turf cleaning Los Angeles',
-    'aeration Murrieta',
-    'lawn maintenance Martinez',
-    'fertilization Sacramento',
-    'pest control Inland Empire',
-    'seasonal lawn care Southern California',
+    'artificial turf cleaning California',
+    'turf cleaning Huntington Beach',
+    'pet turf cleaning Murrieta',
+    'artificial grass cleaning Martinez',
+    'turf maintenance Sacramento',
+    'artificial turf deodorizing',
+    'pet friendly turf cleaning Southern California',
   ],
   openGraph: {
-    title: "Murphy's Turf Care | Professional Lawn Care & Turf Cleaning in California",
+    title: "Murphy's Turf | Professional Artificial Turf Cleaning in California",
     description:
-      "California's premier turf cleaning and lawn care company serving communities statewide since 2018.",
+      "California's premier artificial turf cleaning company with 30+ years of experience serving communities statewide.",
     type: 'website',
     locale: 'en_US',
-    siteName: "Murphy's Turf Care",
+    siteName: "Murphy's Turf",
   },
 };
 

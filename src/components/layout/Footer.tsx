@@ -1,7 +1,8 @@
 'use client';
 
 import Link from 'next/link';
-import { Leaf, Phone, Mail, MapPin, Clock } from 'lucide-react';
+import Image from 'next/image';
+import { Phone, Mail, MapPin, Clock, Instagram, Facebook, Youtube } from 'lucide-react';
 import NewsletterForm from '@/components/forms/NewsletterForm';
 
 /* ------------------------------------------------------------------ */
@@ -9,26 +10,31 @@ import NewsletterForm from '@/components/forms/NewsletterForm';
 /* ------------------------------------------------------------------ */
 
 const servicesLinks = [
-  { label: 'Lawn Cleaning', href: '/services/lawn-cleaning' },
-  { label: 'Aeration', href: '/services/aeration' },
-  { label: 'Seeding', href: '/services/seeding' },
-  { label: 'Fertilization', href: '/services/fertilization' },
-  { label: 'Pest Control', href: '/services/pest-control' },
-  { label: 'Seasonal Maintenance', href: '/services/seasonal-maintenance' },
+  { label: 'Pet Hair & Debris Removal', href: '/services/pet-hair-debris' },
+  { label: 'Blooming & De-Compacting', href: '/services/blooming-decompacting' },
+  { label: 'Disinfect & Deodorize', href: '/services/disinfect-deodorize' },
+  { label: 'Poop Scooping & Removal', href: '/services/poop-scooping' },
+  { label: 'Powered By OxyTurf', href: '/services/oxyturf' },
 ];
 
 const locationsLinks = [
-  { label: 'Los Angeles', href: '/locations/los-angeles' },
-  { label: 'Murrieta', href: '/locations/murrieta' },
-  { label: 'Martinez', href: '/locations/martinez' },
-  { label: 'Sacramento', href: '/locations/sacramento' },
+  { label: 'Huntington Beach / LA Area', href: '/locations/huntington-beach' },
+  { label: 'Murrieta / Inland Empire', href: '/locations/murrieta' },
+  { label: 'Martinez / Bay Area', href: '/locations/martinez' },
+  { label: 'Greater Sacramento', href: '/locations/sacramento' },
 ];
 
 const contactInfo = [
   { icon: Phone, text: '(951) 331-3300' },
-  { icon: Mail, text: 'info@murphysturfcare.com' },
+  { icon: Mail, text: 'info@murphysturf.com' },
   { icon: MapPin, text: 'Murrieta, CA' },
   { icon: Clock, text: 'Mon-Sat: 7am - 7pm' },
+];
+
+const socialLinks = [
+  { name: 'Instagram', href: 'https://www.instagram.com/murphysturfcare/', icon: Instagram },
+  { name: 'Facebook', href: 'https://www.facebook.com/profile.php?id=100090088264095', icon: Facebook },
+  { name: 'YouTube', href: 'https://www.youtube.com/@murphysturfcare/featured', icon: Youtube },
 ];
 
 /* ------------------------------------------------------------------ */
@@ -44,7 +50,7 @@ export default function Footer() {
           <div className="flex flex-col items-center gap-6 md:flex-row md:justify-between">
             <div className="text-center md:text-left">
               <h3 className="font-heading text-xl font-bold text-white">
-                Stay Updated with Lawn Care Tips
+                Stay Updated with Turf Care Tips
               </h3>
               <p className="mt-1 font-body text-sm text-gray-400">
                 Get seasonal advice and exclusive offers delivered to your
@@ -66,17 +72,41 @@ export default function Footer() {
             <Link
               href="/"
               className="inline-flex items-center gap-2 text-white"
-              aria-label="Murphy's Turf Care — Home"
+              aria-label="Murphy's Turf — Home"
             >
-              <Leaf className="h-7 w-7 text-sage" />
+              <Image
+                src="/images/logo.png"
+                alt="Murphy's Turf"
+                width={40}
+                height={40}
+                className="w-10 h-10 object-contain"
+              />
               <span className="font-heading text-xl font-bold">
-                Murphy&apos;s Turf Care
+                Murphy&apos;s Turf
               </span>
             </Link>
             <p className="mt-4 font-body text-sm leading-relaxed text-gray-400">
-              Professional turf cleaning and lawn care services serving the
-              California communities since 2018.
+              California&apos;s trusted artificial turf cleaning experts. Specializing in pet hair
+              removal, turf deodorizing, and maintenance. Serving California since 1994.
             </p>
+            {/* Social Media Links */}
+            <div className="mt-6 flex items-center gap-4">
+              {socialLinks.map((social) => {
+                const Icon = social.icon;
+                return (
+                  <a
+                    key={social.name}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={social.name}
+                    className="text-gray-400 transition-colors hover:text-sage"
+                  >
+                    <Icon className="h-5 w-5" />
+                  </a>
+                );
+              })}
+            </div>
           </div>
 
           {/* Column 2 — Services */}
@@ -143,25 +173,11 @@ export default function Footer() {
       <div className="border-t border-charcoal-light">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 py-6 sm:flex-row lg:px-8">
           <p className="font-body text-sm text-gray-400">
-            &copy; 2024 Murphy&apos;s Turf Care. All rights reserved.
+            &copy; {new Date().getFullYear()} Murphy&apos;s Turf. All rights reserved.
           </p>
-          <div className="flex items-center gap-4">
-            <Link
-              href="/privacy"
-              className="font-body text-sm text-gray-400 transition-colors hover:text-sage"
-            >
-              Privacy Policy
-            </Link>
-            <span className="text-charcoal-light" aria-hidden="true">
-              |
-            </span>
-            <Link
-              href="/terms"
-              className="font-body text-sm text-gray-400 transition-colors hover:text-sage"
-            >
-              Terms of Service
-            </Link>
-          </div>
+          <p className="font-body text-sm text-gray-400">
+            100% Pet Friendly | Eco Friendly | Satisfaction Guaranteed
+          </p>
         </div>
       </div>
     </footer>

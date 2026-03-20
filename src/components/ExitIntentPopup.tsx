@@ -37,10 +37,10 @@ export default function ExitIntentPopup() {
             <Gift className="w-8 h-8 text-sage" />
           </div>
           <h3 className="text-2xl font-bold text-forest font-heading mb-2">
-            Wait! Don&apos;t Leave Yet
+            Wait! Get 10% Off Your First Turf Cleaning
           </h3>
           <p className="text-charcoal-light font-body mb-6">
-            Get <span className="font-bold text-sage">10% off</span> your first lawn care service
+            Get <span className="font-bold text-sage">10% off</span> your first artificial turf cleaning service
             when you request a free quote today!
           </p>
           <a
@@ -54,7 +54,7 @@ export default function ExitIntentPopup() {
             onClick={() => setIsVisible(false)}
             className="text-sm text-gray-400 hover:text-charcoal transition-colors font-body"
           >
-            No thanks, I&apos;ll pay full price
+            No thanks, I&apos;ll pass
           </button>
         </div>
       </div>

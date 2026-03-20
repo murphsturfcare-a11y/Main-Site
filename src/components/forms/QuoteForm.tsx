@@ -6,12 +6,11 @@ import { Loader2 } from 'lucide-react';
 type FormStatus = 'idle' | 'submitting' | 'success' | 'error';
 
 const SERVICE_OPTIONS = [
-  'Lawn Cleaning',
-  'Aeration',
-  'Seeding',
-  'Fertilization',
-  'Pest Control',
-  'Seasonal Maintenance',
+  'Pet Hair & Debris Removal',
+  'Blooming & De-Compacting',
+  'Disinfect & Deodorize',
+  'Poop Scooping & Removal',
+  'Powered By OxyTurf',
 ] as const;
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -218,7 +217,7 @@ export default function QuoteForm() {
             onChange={(e) => setMessage(e.target.value)}
             rows={4}
             className={inputClasses + ' resize-y'}
-            placeholder="Tell us about your lawn care needs..."
+            placeholder="Tell us about your artificial turf cleaning needs..."
           />
         </div>
 

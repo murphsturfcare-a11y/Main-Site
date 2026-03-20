@@ -1,4 +1,4 @@
-import { Shield, Award, FileText, Leaf } from 'lucide-react';
+import { PawPrint, Leaf, ShieldCheck } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 
 interface Benefit {
@@ -9,28 +9,22 @@ interface Benefit {
 
 const benefits: Benefit[] = [
   {
-    icon: Shield,
-    title: 'Licensed & Insured',
+    icon: PawPrint,
+    title: '100% Pet Friendly',
     description:
-      'Fully licensed and insured for your peace of mind. We carry comprehensive liability coverage.',
-  },
-  {
-    icon: Award,
-    title: 'Satisfaction Guaranteed',
-    description:
-      "Not happy with our work? We'll come back and make it right, guaranteed.",
-  },
-  {
-    icon: FileText,
-    title: 'Free Estimates',
-    description:
-      'Get a detailed, no-obligation estimate for your property. No hidden fees, no surprises.',
+      'All our products and methods are completely safe for your furry friends. Your pets can enjoy the turf right after service.',
   },
   {
     icon: Leaf,
-    title: 'Eco-Friendly Products',
+    title: 'Eco Friendly',
     description:
-      'We use environmentally responsible products that are safe for your family and pets.',
+      'We use environmentally responsible, biodegradable products that are safe for your family, pets, and the planet.',
+  },
+  {
+    icon: ShieldCheck,
+    title: 'Satisfaction Guaranteed',
+    description:
+      'Not happy with our work? We\'ll come back and make it right. Your satisfaction is our top priority, guaranteed.',
   },
 ];
 
@@ -42,7 +36,7 @@ export default function WhyChooseUs() {
           Why Choose Murphy&apos;s Turf
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 mt-12">
           {benefits.map((benefit) => {
             const Icon = benefit.icon;
             return (

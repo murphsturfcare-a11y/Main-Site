@@ -2,26 +2,17 @@
 
 import { useState, useEffect, useRef, useCallback } from 'react';
 import Link from 'next/link';
-import { Leaf, Menu, X, ChevronDown } from 'lucide-react';
+import Image from 'next/image';
+import { Menu, X, ChevronDown } from 'lucide-react';
 
 /* ------------------------------------------------------------------ */
 /*  Data                                                               */
 /* ------------------------------------------------------------------ */
 
-const servicesItems = [
-  { label: 'Lawn Cleaning', href: '/services/lawn-cleaning' },
-  { label: 'Aeration', href: '/services/aeration' },
-  { label: 'Seeding', href: '/services/seeding' },
-  { label: 'Fertilization', href: '/services/fertilization' },
-  { label: 'Pest Control', href: '/services/pest-control' },
-  { label: 'Seasonal Maintenance', href: '/services/seasonal-maintenance' },
-];
-
-const locationsItems = [
-  { label: 'Los Angeles', href: '/locations/los-angeles' },
-  { label: 'Murrieta', href: '/locations/murrieta' },
-  { label: 'Martinez', href: '/locations/martinez' },
-  { label: 'Sacramento', href: '/locations/sacramento' },
+const learnMoreItems = [
+  { label: 'Turf Maintenance', href: '/learn-more/turf-maintenance' },
+  { label: 'Turf Deodorizing', href: '/learn-more/turf-deodorizing' },
+  { label: 'Turf Cleaning', href: '/learn-more/turf-cleaning' },
 ];
 
 /* ------------------------------------------------------------------ */
@@ -194,6 +185,10 @@ export default function Header() {
 
   const closeDrawer = useCallback(() => setDrawerOpen(false), []);
 
+  const linkClass = `font-body text-sm font-medium transition-colors duration-300 hover:text-sage ${
+    scrolled ? 'text-charcoal' : 'text-white'
+  }`;
+
   return (
     <header
       className={`fixed top-0 left-0 z-50 w-full transition-all duration-300 ${
@@ -207,56 +202,55 @@ export default function Header() {
         {/* ---- Logo ---- */}
         <Link
           href="/"
-          className={`flex items-center gap-2 transition-colors duration-300 ${
-            scrolled ? 'text-forest' : 'text-white'
-          }`}
-          aria-label="Murphy's Turf Care — Home"
+          className="flex items-center gap-2 transition-colors duration-300"
+          aria-label="Murphy's Turf — Home"
         >
-          <Leaf className="h-7 w-7" />
-          <span className="font-heading text-xl font-bold">
-            Murphy&apos;s Turf Care
+          <Image
+            src="/images/logo.png"
+            alt="Murphy's Turf"
+            width={48}
+            height={48}
+            className="w-12 h-12 object-contain"
+          />
+          <span
+            className={`font-heading text-xl font-bold transition-colors duration-300 ${
+              scrolled ? 'text-forest' : 'text-white'
+            }`}
+          >
+            Murphy&apos;s Turf
           </span>
         </Link>
 
         {/* ---- Desktop nav ---- */}
         <div className="hidden lg:flex lg:items-center lg:gap-8">
-          <Link
-            href="/"
-            className={`font-body text-sm font-medium transition-colors duration-300 hover:text-sage ${
-              scrolled ? 'text-charcoal' : 'text-white'
-            }`}
-          >
+          <Link href="/" className={linkClass}>
             Home
           </Link>
 
           <DesktopDropdown
-            label="Services"
-            items={servicesItems}
+            label="Learn More"
+            items={learnMoreItems}
             scrolled={scrolled}
           />
 
-          <DesktopDropdown
-            label="Locations"
-            items={locationsItems}
-            scrolled={scrolled}
-          />
-
-          <Link
-            href="/about"
-            className={`font-body text-sm font-medium transition-colors duration-300 hover:text-sage ${
-              scrolled ? 'text-charcoal' : 'text-white'
-            }`}
-          >
+          <Link href="/about" className={linkClass}>
             About
           </Link>
 
-          <Link
-            href="/contact"
-            className={`font-body text-sm font-medium transition-colors duration-300 hover:text-sage ${
-              scrolled ? 'text-charcoal' : 'text-white'
-            }`}
-          >
+          <Link href="/services" className={linkClass}>
+            Services
+          </Link>
+
+          <Link href="/contact" className={linkClass}>
+            Pricing
+          </Link>
+
+          <Link href="/contact" className={linkClass}>
             Contact
+          </Link>
+
+          <Link href="/blog" className={linkClass}>
+            Blog
           </Link>
         </div>
 
@@ -311,11 +305,17 @@ export default function Header() {
             href="/"
             onClick={closeDrawer}
             className="flex items-center gap-2 text-forest"
-            aria-label="Murphy's Turf Care — Home"
+            aria-label="Murphy's Turf — Home"
           >
-            <Leaf className="h-6 w-6" />
+            <Image
+              src="/images/logo.png"
+              alt="Murphy's Turf"
+              width={48}
+              height={48}
+              className="w-10 h-10 object-contain"
+            />
             <span className="font-heading text-lg font-bold">
-              Murphy&apos;s Turf Care
+              Murphy&apos;s Turf
             </span>
           </Link>
 
@@ -340,14 +340,8 @@ export default function Header() {
           </Link>
 
           <MobileCollapsible
-            label="Services"
-            items={servicesItems}
-            onNavigate={closeDrawer}
-          />
-
-          <MobileCollapsible
-            label="Locations"
-            items={locationsItems}
+            label="Learn More"
+            items={learnMoreItems}
             onNavigate={closeDrawer}
           />
 
@@ -360,11 +354,35 @@ export default function Header() {
           </Link>
 
           <Link
+            href="/services"
+            onClick={closeDrawer}
+            className="block py-3 font-body text-base font-medium text-charcoal transition-colors hover:text-forest"
+          >
+            Services
+          </Link>
+
+          <Link
+            href="/contact"
+            onClick={closeDrawer}
+            className="block py-3 font-body text-base font-medium text-charcoal transition-colors hover:text-forest"
+          >
+            Pricing
+          </Link>
+
+          <Link
             href="/contact"
             onClick={closeDrawer}
             className="block py-3 font-body text-base font-medium text-charcoal transition-colors hover:text-forest"
           >
             Contact
+          </Link>
+
+          <Link
+            href="/blog"
+            onClick={closeDrawer}
+            className="block py-3 font-body text-base font-medium text-charcoal transition-colors hover:text-forest"
+          >
+            Blog
           </Link>
 
           {/* CTA */}

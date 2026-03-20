@@ -171,10 +171,10 @@ export default function ExitIntentPopup() {
               id="exit-popup-heading"
               className="font-heading text-2xl font-bold text-charcoal text-center mb-2"
             >
-              Wait! Get 10% Off Your First Service
+              Wait! Get 10% Off Your First Turf Cleaning
             </h2>
             <p className="text-charcoal-light font-body text-center mb-6">
-              Enter your email to claim your exclusive discount.
+              Enter your email to claim your exclusive artificial turf cleaning discount.
             </p>
 
             <form onSubmit={handleSubmit} noValidate className="space-y-4">

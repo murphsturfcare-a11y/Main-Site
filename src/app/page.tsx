@@ -2,139 +2,116 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import {
-  Shield,
-  Star,
-  ThumbsUp,
+  PawPrint,
+  ShieldCheck,
   Leaf,
-  Scissors,
-  Wind,
-  Sprout,
-  Droplets,
-  Bug,
-  Calendar,
-  Users,
-  DollarSign,
-  Award,
+  Dog,
+  Flower2,
+  SprayCan,
+  Trash2,
+  Sparkles,
+  Star,
   ChevronDown,
   Phone,
   MapPin,
   ArrowRight,
   Clock,
   CheckCircle2,
+  DollarSign,
 } from 'lucide-react';
 
 /* --------------------------- DATA --------------------------- */
 
 const stats = [
-  { label: 'Years Experience', value: '8+' },
+  { label: 'Years Experience', value: '30+' },
   { label: 'Happy Customers', value: '2,500+' },
-  { label: 'Satisfaction Rate', value: '98%' },
+  { label: 'Satisfaction Rate', value: '100%' },
   { label: 'Projects Completed', value: '10,000+' },
 ];
 
 const trustBadges = [
-  { icon: Shield, label: 'Licensed & Insured' },
-  { icon: Star, label: '5-Star Rated' },
-  { icon: ThumbsUp, label: 'Satisfaction Guaranteed' },
-  { icon: Leaf, label: 'Eco-Friendly' },
+  { icon: PawPrint, label: '100% Pet Friendly' },
+  { icon: Leaf, label: 'Eco Friendly' },
+  { icon: ShieldCheck, label: 'Satisfaction Guaranteed' },
 ];
 
 const services = [
   {
-    icon: Scissors,
-    name: 'Lawn Cleaning',
-    slug: 'lawn-cleaning',
+    icon: Dog,
+    name: 'Pet Hair & Debris Removal',
+    slug: 'pet-hair-debris',
     description:
-      'Professional turf cleaning, debris removal, and lawn dethatching to restore your yard to its natural beauty.',
+      'Thorough removal of pet hair, fur, and debris from your artificial turf to keep it clean and safe for your family and pets.',
   },
   {
-    icon: Wind,
-    name: 'Aeration',
-    slug: 'aeration',
+    icon: Flower2,
+    name: 'Blooming & De-Compacting',
+    slug: 'blooming-decompacting',
     description:
-      'Core aeration that breaks up compacted soil, promoting healthier root growth and better nutrient absorption.',
+      "Restore your turf's natural look and feel with our professional blooming and de-compacting service that revives flattened fibers.",
   },
   {
-    icon: Sprout,
-    name: 'Seeding',
-    slug: 'seeding',
+    icon: SprayCan,
+    name: 'Disinfect & Deodorize',
+    slug: 'disinfect-deodorize',
     description:
-      'Expert overseeding and new lawn establishment using premium seed blends suited to California\'s climate.',
+      'Eliminate bacteria, odors, and harmful pathogens with our eco-friendly disinfecting and deodorizing treatment.',
   },
   {
-    icon: Droplets,
-    name: 'Fertilization',
-    slug: 'fertilization',
+    icon: Trash2,
+    name: 'Poop Scooping & Removal',
+    slug: 'poop-scooping',
     description:
-      'Custom fertilization programs designed to deliver lush, vibrant lawns throughout every season.',
+      'Regular pet waste cleanup and removal to maintain a hygienic outdoor space for your family.',
   },
   {
-    icon: Bug,
-    name: 'Pest Control',
-    slug: 'pest-control',
+    icon: Sparkles,
+    name: 'Powered By OxyTurf',
+    slug: 'oxyturf',
     description:
-      'Eco-friendly pest and weed management that keeps your lawn healthy without harming the environment.',
-  },
-  {
-    icon: Calendar,
-    name: 'Seasonal Maintenance',
-    slug: 'seasonal-maintenance',
-    description:
-      'Comprehensive year-round lawn care programs tailored to California\'s unique seasonal demands.',
+      'Our premium OxyTurf-powered deep cleaning system delivers the most thorough turf cleaning available.',
   },
 ];
 
 const benefits = [
   {
-    icon: Users,
-    title: 'Experienced Team',
+    icon: PawPrint,
+    title: '100% Pet Friendly',
     description:
-      'Our crew brings over 8 years of hands-on expertise caring for California lawns. We know California turf inside and out.',
+      "All our products and methods are completely safe for your furry friends. Your pets can enjoy the turf right after service.",
   },
   {
     icon: Leaf,
-    title: 'Eco-Friendly Products',
+    title: 'Eco Friendly',
     description:
-      'We use environmentally responsible products that are safe for your family, pets, and the local ecosystem.',
+      'We use environmentally responsible, biodegradable products that are safe for your family, pets, and the planet.',
   },
   {
-    icon: Award,
-    title: 'Satisfaction Guarantee',
+    icon: ShieldCheck,
+    title: 'Satisfaction Guaranteed',
     description:
-      'Not happy with the results? We\'ll come back and make it right at no extra cost. Your satisfaction is our top priority.',
+      "Not happy with our work? We'll come back and make it right. Your satisfaction is our top priority, guaranteed.",
   },
-  {
-    icon: DollarSign,
-    title: 'Competitive Pricing',
-    description:
-      'Premium lawn care doesn\'t have to break the bank. We offer transparent pricing with no hidden fees or surprise charges.',
-  },
-];
-
-const galleryPairs = [
-  { id: 1, label: 'Residential Front Yard' },
-  { id: 2, label: 'Backyard Renovation' },
-  { id: 3, label: 'Commercial Property' },
-  { id: 4, label: 'Seasonal Recovery' },
 ];
 
 const testimonials = [
   {
     quote:
-      "Murphy's Turf Care transformed our backyard from a patchy mess into a lush green paradise. The team was professional, punctual, and the results speak for themselves. Best lawn service in Murrieta!",
+      "Murphy's Turf transformed our backyard turf from matted and smelly to looking and feeling like brand new. The team was professional, punctual, and the results speak for themselves. Best turf cleaning service in Murrieta!",
     name: 'Sarah M.',
     location: 'Murrieta, CA',
   },
   {
     quote:
-      "After trying three other companies, we finally found Murphy's Turf Care. Their aeration and overseeding program brought our lawn back to life in just one season. Highly recommend to anyone in California.",
+      "After trying other companies, we finally found Murphy's Turf. Their OxyTurf deep cleaning treatment brought our artificial grass back to life. The pet odor is completely gone. Highly recommend!",
     name: 'James & Linda R.',
-    location: 'Los Angeles, CA',
+    location: 'Huntington Beach, CA',
   },
   {
     quote:
-      "As a property manager, I need reliable service. Murphy's Turf Care has maintained all six of our properties for two years now. Consistent quality, fair pricing, and they always go the extra mile.",
+      "As a property manager, I need reliable service. Murphy's Turf has maintained all six of our properties for two years now. Consistent quality, fair pricing, and they always go the extra mile.",
     name: 'Michael T.',
     location: 'Sacramento, CA',
   },
@@ -142,67 +119,57 @@ const testimonials = [
 
 const locations = [
   {
-    name: 'Los Angeles',
-    slug: 'los-angeles',
-    tagline: 'Expert lawn care for the heart of Southern California.',
+    name: 'Huntington Beach / LA Area',
+    slug: 'huntington-beach',
+    tagline: 'Professional turf cleaning for the Southern California coast.',
   },
   {
-    name: 'Murrieta',
+    name: 'Murrieta / Inland Empire',
     slug: 'murrieta',
-    tagline: 'Headquarters and home base for premium turf care.',
+    tagline: 'Our home base for premium artificial turf care.',
   },
   {
-    name: 'Martinez',
+    name: 'Martinez / Bay Area',
     slug: 'martinez',
-    tagline: 'Trusted turf care for Martinez families and businesses.',
+    tagline: 'Trusted turf cleaning for Bay Area families and businesses.',
   },
   {
-    name: 'Sacramento',
+    name: 'Greater Sacramento',
     slug: 'sacramento',
-    tagline: 'Professional lawn services across Sacramento neighborhoods.',
+    tagline: 'Professional turf cleaning across the Sacramento region.',
   },
 ];
 
 const faqs = [
   {
-    question: 'How much does lawn care cost?',
+    question: 'How much does turf cleaning cost?',
     answer:
-      'Our lawn care services typically range from $50 to $250 per visit depending on your lawn size, condition, and the services required. We offer free on-site estimates so you know exactly what to expect with no hidden fees. Many customers save money by choosing one of our bundled seasonal maintenance packages.',
+      'Our artificial turf cleaning services are competitively priced based on the size of your turf area and services needed. We offer free on-site estimates so you know exactly what to expect. Contact us at (951) 331-3300 for a personalized quote.',
   },
   {
-    question: 'How often should I aerate my lawn?',
+    question: 'How often should I have my artificial turf cleaned?',
     answer:
-      'For most California lawns, we recommend aerating once or twice a year. The best times are in early spring (March-April) and fall (September-October) when grasses are actively growing. Lawns with heavy clay soil or high foot traffic may benefit from bi-annual aeration.',
+      "We recommend professional cleaning every 3-6 months for residential properties. Homes with pets may benefit from more frequent service, especially for deodorizing and pet hair removal. We'll create a custom schedule based on your needs.",
   },
   {
-    question: "What's included in seasonal maintenance?",
+    question: 'Is the cleaning process safe for pets and children?',
     answer:
-      'Our seasonal maintenance program covers everything your lawn needs year-round: spring cleanup and pre-emergent treatment, summer mowing and fertilization, fall aeration and overseeding, and winter prep including final fertilization and debris removal. Each program is customized to your lawn\'s specific needs.',
+      'Absolutely! All of our products are 100% pet-friendly and child-safe. Our eco-friendly cleaning solutions are biodegradable and non-toxic. Your family and pets can enjoy the turf shortly after service.',
+  },
+  {
+    question: 'What is OxyTurf?',
+    answer:
+      'OxyTurf is our premium deep-cleaning system that uses oxygen-based cleaning technology to thoroughly sanitize and refresh your artificial turf. It eliminates bacteria, odors, and buildup at the deepest level for the most comprehensive clean available.',
   },
   {
     question: 'Do you offer free estimates?',
     answer:
-      'Absolutely! We provide free, no-obligation estimates for all of our services. Simply fill out the quote form on this page or give us a call at (951) 331-3300. One of our lawn care specialists will assess your property and provide a detailed estimate within 24 hours.',
-  },
-  {
-    question: 'Are your products pet-safe?',
-    answer:
-      'Yes. We prioritize using pet-friendly and eco-conscious products across all our services. After application, we recommend keeping pets off treated areas for 24 hours as a precaution. We\'re happy to discuss our product choices and provide safety data sheets upon request.',
-  },
-  {
-    question: 'How do I prepare for your visit?',
-    answer:
-      'Preparing is simple: clear any toys, furniture, or debris from the lawn area, make sure gates are unlocked for backyard access, and mark any sprinkler heads or shallow irrigation lines. If you have pets, please keep them indoors during the service. We\'ll handle everything else.',
+      'Yes! We provide free, no-obligation estimates for all of our services. Simply fill out the quote form on this page or give us a call at (951) 331-3300. We\'ll assess your property and provide a detailed estimate.',
   },
   {
     question: 'What areas do you serve?',
     answer:
-      'We proudly serve communities across California including Los Angeles, Murrieta, Martinez, Sacramento, and surrounding areas. If you\'re unsure whether we service your area, just give us a call and we\'ll let you know.',
-  },
-  {
-    question: 'Do you offer organic lawn care?',
-    answer:
-      'Yes, we offer fully organic lawn care programs for customers who prefer an all-natural approach. Our organic options include compost-based fertilizers, natural pest deterrents, and biological soil amendments. These programs are especially popular across all of our California service areas.',
+      "We serve communities across California including Huntington Beach, the greater LA area, Murrieta, the Inland Empire, Martinez, the Bay Area, and Greater Sacramento. If you're unsure whether we service your area, just give us a call.",
   },
 ];
 
@@ -378,7 +345,7 @@ function QuoteForm() {
             id="message"
             name="message"
             rows={4}
-            placeholder="Tell us about your lawn, any specific concerns, or questions you have..."
+            placeholder="Tell us about your turf, any specific concerns, or questions you have..."
             className="w-full rounded-lg border border-gray-300 px-4 py-3 font-body text-charcoal placeholder:text-gray-400 focus:border-sage focus:ring-2 focus:ring-sage/30 outline-none transition resize-y"
           />
         </div>
@@ -394,13 +361,21 @@ function QuoteForm() {
   );
 }
 
-/* ═══════════════════════ MAIN PAGE ═══════════════════════ */
+/* ======================= MAIN PAGE ======================= */
 
 export default function Home() {
   return (
     <>
       {/* ----------------- 1. HERO ----------------- */}
       <section className="relative overflow-hidden">
+        {/* Hero background image */}
+        <Image
+          src="/images/hero.jpg"
+          alt="Clean artificial turf"
+          fill
+          className="object-cover"
+          priority
+        />
         {/* Gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-forest-dark/95 via-forest/90 to-forest-light/85" />
         {/* Subtle pattern overlay */}
@@ -409,16 +384,16 @@ export default function Home() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 lg:py-40">
           <div className="max-w-3xl">
             <span className="inline-block bg-sage/20 border border-sage/40 text-sage-light font-body font-semibold text-sm px-4 py-1.5 rounded-full mb-6">
-              California&apos;s Trusted Lawn Care Professionals
+              California&apos;s Trusted Turf Cleaning Professionals
             </span>
             <h1 className="font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-white leading-tight tracking-tight">
-              Transform Your Lawn Into a{' '}
-              <span className="text-sage-light">Masterpiece</span>
+              When You Care About Clean Turf, Call{' '}
+              <span className="text-sage-light">Murphy&apos;s Turf</span>
             </h1>
             <p className="mt-6 text-lg sm:text-xl text-gray-200 font-body leading-relaxed max-w-2xl">
-              From turf cleaning to complete lawn renovation, Murphy&apos;s Turf Care delivers
-              expert care that keeps your California property looking its
-              absolute best — season after season.
+              Worried about your pets ruining your turf? Count on Murphy&apos;s to help
+              bring your artificial grass back to life with a variety of services
+              ranging from reblooming to debris removal &amp; deodorizing.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <Link
@@ -460,7 +435,7 @@ export default function Home() {
       {/* ----------------- 2. TRUST BADGES ----------------- */}
       <section className="bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             {trustBadges.map((badge) => {
               const Icon = badge.icon;
               return (
@@ -489,11 +464,11 @@ export default function Home() {
               What We Offer
             </span>
             <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-charcoal">
-              Our Professional Services
+              Our Turf Cleaning Services
             </h2>
             <p className="mt-4 font-body text-charcoal-light text-lg leading-relaxed">
-              Comprehensive lawn care solutions tailored to California&apos;s unique
-              climate. Every service backed by our satisfaction guarantee.
+              Comprehensive artificial turf care solutions to keep your outdoor
+              space clean, fresh, and beautiful
             </p>
           </div>
 
@@ -534,15 +509,15 @@ export default function Home() {
               The Murphy&apos;s Difference
             </span>
             <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-charcoal">
-              Why Choose Murphy&apos;s Turf Care
+              Why Choose Murphy&apos;s Turf
             </h2>
             <p className="mt-4 font-body text-charcoal-light text-lg leading-relaxed">
-              We combine years of local expertise with a genuine commitment to quality
-              that sets us apart from the rest.
+              We combine 30+ years of expertise with a genuine commitment to quality
+              that sets us apart.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
             {benefits.map((benefit) => {
               const Icon = benefit.icon;
               return (
@@ -568,7 +543,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ----------------- 5. BEFORE / AFTER GALLERY ----------------- */}
+      {/* ----------------- 5. BEFORE / AFTER ----------------- */}
       <section className="bg-cream py-20 sm:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-14">
@@ -579,44 +554,17 @@ export default function Home() {
               See the Difference
             </h2>
             <p className="mt-4 font-body text-charcoal-light text-lg leading-relaxed">
-              Transformations from real Murphy&apos;s Turf Care projects across
-              California. These results speak for themselves.
+              Real results from real Murphy&apos;s Turf projects across California.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {galleryPairs.map((pair) => (
-              <div key={pair.id} className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
-                <div className="flex">
-                  {/* Before */}
-                  <div className="relative w-1/2">
-                    <div className="aspect-[4/3] bg-gradient-to-br from-brown/70 via-brown-light/50 to-amber-800/40 flex items-center justify-center">
-                      <div className="absolute inset-0 opacity-20 bg-[radial-gradient(ellipse_at_60%_40%,rgba(121,85,72,0.5)_0%,transparent_70%)]" />
-                      <div className="absolute inset-0 opacity-30 bg-[linear-gradient(135deg,transparent_40%,rgba(93,64,55,0.3)_60%,transparent_80%)]" />
-                    </div>
-                    <span className="absolute top-3 left-3 bg-brown/80 backdrop-blur-sm text-white text-xs font-heading font-bold px-3 py-1 rounded-full uppercase tracking-wide">
-                      Before
-                    </span>
-                  </div>
-                  {/* After */}
-                  <div className="relative w-1/2">
-                    <div className="aspect-[4/3] bg-gradient-to-br from-forest/60 via-sage/50 to-sage-light/40 flex items-center justify-center">
-                      <div className="absolute inset-0 opacity-20 bg-[radial-gradient(ellipse_at_40%_60%,rgba(124,179,66,0.5)_0%,transparent_70%)]" />
-                      <div className="absolute inset-0 opacity-30 bg-[linear-gradient(135deg,transparent_40%,rgba(45,80,22,0.2)_60%,transparent_80%)]" />
-                    </div>
-                    <span className="absolute top-3 right-3 bg-sage/80 backdrop-blur-sm text-white text-xs font-heading font-bold px-3 py-1 rounded-full uppercase tracking-wide">
-                      After
-                    </span>
-                  </div>
-                </div>
-                <div className="px-5 py-4">
-                  <p className="font-heading font-semibold text-charcoal text-sm">
-                    {pair.label}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
+          <Image
+            src="/images/before-after.png"
+            alt="Before and after turf cleaning"
+            width={1200}
+            height={600}
+            className="w-full h-auto rounded-2xl shadow-lg"
+          />
         </div>
       </section>
 
@@ -682,11 +630,11 @@ export default function Home() {
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-24 text-center">
           <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white">
-            Ready to Transform Your Lawn?
+            Ready for Clean, Fresh Turf?
           </h2>
           <p className="mt-4 font-body text-lg sm:text-xl text-gray-200 max-w-2xl mx-auto leading-relaxed">
-            Join over 2,500 happy customers across California. Get a
-            personalized quote today and see why Murphy&apos;s Turf Care is the name
+            Join thousands of happy customers across California. Get a
+            personalized quote today and see why Murphy&apos;s Turf is the name
             California trusts.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -719,8 +667,7 @@ export default function Home() {
               Serving California Communities
             </h2>
             <p className="mt-4 font-body text-charcoal-light text-lg leading-relaxed">
-              From Los Angeles to Sacramento, our team is ready to deliver outstanding
-              lawn care right to your doorstep.
+              Professional artificial turf cleaning in your neighborhood
             </p>
           </div>
 
@@ -792,7 +739,7 @@ export default function Home() {
               Request Your Free Quote
             </h2>
             <p className="mt-4 font-body text-charcoal-light text-lg leading-relaxed max-w-2xl mx-auto">
-              Fill out the form below and one of our lawn care specialists will get
+              Fill out the form below and one of our turf care specialists will get
               back to you within 24 hours with a personalized quote.
             </p>
             <div className="flex items-center justify-center gap-6 mt-5 text-sm font-body text-charcoal-light">

@@ -1,9 +1,4 @@
-const galleryItems = [
-  { caption: 'Front Lawn Restoration' },
-  { caption: 'Backyard Transformation' },
-  { caption: 'Commercial Property Cleanup' },
-  { caption: 'Garden Bed Renovation' },
-];
+import Image from 'next/image';
 
 export default function BeforeAfterGallery() {
   return (
@@ -16,29 +11,17 @@ export default function BeforeAfterGallery() {
           Real results from real customers
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
-          {galleryItems.map((item) => (
-            <div
-              key={item.caption}
-              className="bg-white rounded-xl overflow-hidden shadow"
-            >
-              <div className="grid grid-cols-1 sm:grid-cols-2">
-                <div className="bg-earth/30 h-48 flex items-center justify-center relative">
-                  <span className="bg-black/50 text-white text-sm font-semibold px-3 py-1 rounded">
-                    Before
-                  </span>
-                </div>
-                <div className="bg-sage/30 h-48 flex items-center justify-center relative">
-                  <span className="bg-black/50 text-white text-sm font-semibold px-3 py-1 rounded">
-                    After
-                  </span>
-                </div>
-              </div>
-              <p className="text-sm text-charcoal-light p-4 text-center font-body">
-                {item.caption}
-              </p>
-            </div>
-          ))}
+        <div className="mt-12 flex flex-col items-center">
+          <Image
+            src="/images/before-after.png"
+            alt="Before and after turf cleaning by Murphy's Turf"
+            width={1200}
+            height={600}
+            className="w-full h-auto rounded-xl shadow-lg"
+          />
+          <p className="text-sm text-charcoal-light mt-4 text-center font-body">
+            Professional artificial turf cleaning — 30+ years of experience delivering results you can see.
+          </p>
         </div>
       </div>
     </section>

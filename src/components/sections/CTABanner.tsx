@@ -10,10 +10,11 @@ export default function CTABanner() {
     >
       <div className="max-w-4xl mx-auto px-4">
         <h2 className="font-heading text-3xl md:text-4xl font-bold">
-          Ready to Transform Your Lawn?
+          Ready for Clean, Fresh Turf?
         </h2>
         <p className="text-white/90 text-lg mt-4 max-w-2xl mx-auto font-body">
-          Get a free quote today and see the difference professional care makes.
+          Get a free quote today and see the difference professional turf
+          cleaning makes. Call us at (951) 331-3300 or request a quote online.
         </p>
         <Link
           href="/contact"

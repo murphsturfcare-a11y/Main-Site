@@ -3,27 +3,27 @@ import LocationCard from '@/components/cards/LocationCard';
 
 const locations = [
   {
-    city: 'Los Angeles',
+    city: 'Huntington Beach / LA Area',
     description:
-      "Comprehensive lawn care services for Los Angeles's diverse neighborhoods and properties.",
-    slug: 'los-angeles',
+      'Professional artificial turf cleaning serving Huntington Beach, Los Angeles, and the surrounding Southern California coast.',
+    slug: 'huntington-beach',
   },
   {
-    city: 'Murrieta',
+    city: 'Murrieta / Inland Empire',
     description:
-      "Headquarters and home base for premium turf care in the Inland Empire.",
+      'Our home base — expert turf maintenance and cleaning for the Inland Empire region.',
     slug: 'murrieta',
   },
   {
-    city: 'Martinez',
+    city: 'Martinez / Bay Area',
     description:
-      "Trusted lawn care professionals serving Martinez and the surrounding Bay Area.",
+      'Trusted turf care for Martinez and Bay Area families and businesses.',
     slug: 'martinez',
   },
   {
-    city: 'Sacramento',
+    city: 'Greater Sacramento',
     description:
-      "Professional lawn care and turf services for Sacramento residents and businesses.",
+      'Professional turf cleaning services for Sacramento and surrounding communities.',
     slug: 'sacramento',
   },
 ];
@@ -36,7 +36,7 @@ export default function LocationsPreview() {
           Serving California Communities
         </h2>
         <p className="text-charcoal-light text-center mt-4 font-body">
-          Professional lawn care services in your neighborhood
+          Professional artificial turf cleaning in your neighborhood
         </p>
 
         <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-8">

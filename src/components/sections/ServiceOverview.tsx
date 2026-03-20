@@ -1,4 +1,4 @@
-import { Scissors, Wind, Sprout, Droplets, Bug, Calendar } from 'lucide-react';
+import { Dog, Flower2, SprayCan, Trash2, Sparkles } from 'lucide-react';
 import ServiceCard from '@/components/cards/ServiceCard';
 import type { LucideIcon } from 'lucide-react';
 
@@ -11,46 +11,39 @@ interface ServiceData {
 
 const services: ServiceData[] = [
   {
-    icon: Scissors,
-    name: 'Lawn Cleaning',
-    slug: 'lawn-cleaning',
+    icon: Dog,
+    name: 'Pet Hair & Debris Removal',
+    slug: 'pet-hair-debris',
     description:
-      'Complete lawn cleaning and debris removal to keep your yard pristine and healthy.',
+      'Thorough removal of pet hair, fur, and debris from your artificial turf to keep it clean and safe for your family and pets.',
   },
   {
-    icon: Wind,
-    name: 'Aeration',
-    slug: 'aeration',
+    icon: Flower2,
+    name: 'Blooming & De-Compacting',
+    slug: 'blooming-decompacting',
     description:
-      'Core aeration to improve soil drainage, reduce compaction, and promote root growth.',
+      'Restore your turf\'s natural look and feel with our professional blooming and de-compacting service that revives flattened fibers.',
   },
   {
-    icon: Sprout,
-    name: 'Seeding',
-    slug: 'seeding',
+    icon: SprayCan,
+    name: 'Disinfect & Deodorize',
+    slug: 'disinfect-deodorize',
     description:
-      'Expert overseeding and new lawn establishment for a thick, lush lawn.',
+      'Eliminate bacteria, odors, and harmful pathogens with our eco-friendly disinfecting and deodorizing treatment.',
   },
   {
-    icon: Droplets,
-    name: 'Fertilization',
-    slug: 'fertilization',
+    icon: Trash2,
+    name: 'Poop Scooping & Removal',
+    slug: 'poop-scooping',
     description:
-      'Custom fertilization programs to nourish your lawn throughout the seasons.',
+      'Regular pet waste cleanup and removal to maintain a hygienic outdoor space for your family.',
   },
   {
-    icon: Bug,
-    name: 'Pest Control',
-    slug: 'pest-control',
+    icon: Sparkles,
+    name: 'Powered By OxyTurf',
+    slug: 'oxyturf',
     description:
-      'Targeted pest and weed control to protect your lawn from damage.',
-  },
-  {
-    icon: Calendar,
-    name: 'Seasonal Maintenance',
-    slug: 'seasonal-maintenance',
-    description:
-      'Year-round maintenance programs to keep your property looking its best.',
+      'Our premium OxyTurf-powered deep cleaning system delivers the most thorough turf cleaning available.',
   },
 ];
 
@@ -59,11 +52,11 @@ export default function ServiceOverview() {
     <section className="py-16 lg:py-24 bg-cream">
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-center font-heading text-3xl md:text-4xl font-bold text-charcoal">
-          Our Professional Services
+          Our Turf Cleaning Services
         </h2>
         <p className="text-center text-charcoal-light mt-4 font-body">
-          Comprehensive lawn care solutions tailored to your property&apos;s
-          needs
+          Comprehensive artificial turf care solutions to keep your outdoor
+          space clean, fresh, and beautiful
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
