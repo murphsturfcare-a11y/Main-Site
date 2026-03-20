@@ -129,7 +129,7 @@ export default function ContactPage() {
                           id="phone"
                           name="phone"
                           autoComplete="tel"
-                          placeholder="(720) 555-1234"
+                          placeholder="(951) 331-3300"
                           className="w-full px-4 py-3 border border-gray-300 rounded-lg font-body text-charcoal placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-sage focus:border-transparent transition-shadow"
                         />
                       </div>
@@ -251,7 +251,7 @@ export default function ContactPage() {
             <div className="lg:col-span-2 space-y-6">
               {/* Phone Card */}
               <a
-                href="tel:+17205551234"
+                href="tel:+19513313300"
                 className="block bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl hover:-translate-y-0.5 transition-all group"
               >
                 <div className="flex items-start gap-4">
@@ -263,7 +263,7 @@ export default function ContactPage() {
                       Phone
                     </h3>
                     <p className="text-lg font-bold text-forest font-heading group-hover:text-sage-dark transition-colors">
-                      (720) 555-1234
+                      (951) 331-3300
                     </p>
                     <p className="text-sm text-charcoal-light font-body mt-0.5">
                       Tap to call us directly
@@ -274,7 +274,7 @@ export default function ContactPage() {
 
               {/* Email Card */}
               <a
-                href="mailto:info@murphysturf.com"
+                href="mailto:info@murphysturfcare.com"
                 className="block bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl hover:-translate-y-0.5 transition-all group"
               >
                 <div className="flex items-start gap-4">
@@ -286,7 +286,7 @@ export default function ContactPage() {
                       Email
                     </h3>
                     <p className="text-lg font-bold text-forest font-heading group-hover:text-sage-dark transition-colors">
-                      info@murphysturf.com
+                      info@murphysturfcare.com
                     </p>
                     <p className="text-sm text-charcoal-light font-body mt-0.5">
                       We reply within 24 hours
@@ -306,9 +306,9 @@ export default function ContactPage() {
                       Address
                     </h3>
                     <p className="text-lg font-bold text-forest font-heading">
-                      1234 Green Valley Rd
+                      26323 Jefferson Avenue
                     </p>
-                    <p className="text-charcoal-light font-body">Denver, CO 80202</p>
+                    <p className="text-charcoal-light font-body">Murrieta, CA 92562</p>
                   </div>
                 </div>
               </div>
@@ -371,7 +371,7 @@ export default function ContactPage() {
           <div className="relative w-full h-80 sm:h-96 bg-gradient-to-br from-sage/10 via-forest/5 to-sage/10 rounded-2xl border-2 border-dashed border-sage/30 flex flex-col items-center justify-center overflow-hidden shadow-inner">
             <MapPin className="w-12 h-12 text-sage/50 mb-4" />
             <p className="text-lg font-semibold text-forest/70 font-heading">
-              1234 Green Valley Rd, Denver, CO 80202
+              26323 Jefferson Avenue, Murrieta, CA 92562
             </p>
             <p className="text-sm text-charcoal-light/60 font-body mt-1">
               Interactive map coming soon

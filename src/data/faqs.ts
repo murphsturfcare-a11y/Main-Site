@@ -1,17 +1,17 @@
 import type { FAQItem } from '../types';
 
 export const faqs: FAQItem[] = [
-  // ─── General ───────────────────────────────────────────────────────────────
+  // --- General ---------------------------------------------------------------
   {
-    question: "What areas does Murphy's Turf serve?",
+    question: "What areas does Murphy's Turf Care serve?",
     answer:
-      "Murphy's Turf proudly serves the entire Colorado Front Range, including Denver, Aurora, Lakewood, Boulder, Fort Collins, and Colorado Springs. Whether you're in the heart of Denver or the foothills near Boulder, our crews are ready to keep your lawn looking its best year-round.",
+      "Murphy's Turf Care proudly serves communities across California, including Los Angeles, Murrieta, Martinez, and Sacramento. Whether you're in the heart of LA or the Inland Empire near our Murrieta headquarters, our crews are ready to keep your lawn looking its best year-round.",
     category: "general",
   },
   {
-    question: "Is Murphy's Turf licensed and insured?",
+    question: "Is Murphy's Turf Care licensed and insured?",
     answer:
-      "Yes, Murphy's Turf is fully licensed and insured for lawn care and turf management services in the state of Colorado. We are EPA certified for all chemical applications, and we maintain a BBB A+ rating. You can trust that your property is in safe, professional hands.",
+      "Yes, Murphy's Turf Care is fully licensed and insured for lawn care and turf management services in the state of California. We are EPA certified for all chemical applications, a member of the California Landscape Contractors Association, and we maintain a BBB A+ rating. You can trust that your property is in safe, professional hands.",
     category: "general",
   },
   {
@@ -21,9 +21,9 @@ export const faqs: FAQItem[] = [
     category: "general",
   },
   {
-    question: "How long has Murphy's Turf been in business?",
+    question: "How long has Murphy's Turf Care been in business?",
     answer:
-      "Murphy's Turf was founded in 2018 by Patrick Murphy and has been family-owned and operated ever since. What started as a small neighborhood lawn care operation has grown into one of the most trusted turf management companies along the Colorado Front Range.",
+      "Murphy's Turf Care was founded in 2018 by Patrick Murphy in Murrieta, CA and has been family-owned and operated ever since. What started as a small neighborhood lawn care operation has grown into one of the most trusted turf management companies in California.",
     category: "general",
   },
   {
@@ -34,9 +34,9 @@ export const faqs: FAQItem[] = [
   },
   {
     question:
-      "What makes Murphy's Turf different from other lawn care companies?",
+      "What makes Murphy's Turf Care different from other lawn care companies?",
     answer:
-      "As a family-owned business, we bring a personal touch that larger franchises simply can't match. We specialize in Colorado-specific turf challenges like alkaline soils, drought stress, and high-altitude sun exposure. Every customer receives a custom lawn care program backed by our satisfaction guarantee.",
+      "As a family-owned business, we bring a personal touch that larger franchises simply can't match. We specialize in California-specific turf challenges like varied soil types, drought stress, and intense sun exposure. Every customer receives a custom lawn care program backed by our satisfaction guarantee.",
     category: "general",
   },
   {
@@ -52,7 +52,7 @@ export const faqs: FAQItem[] = [
     category: "general",
   },
 
-  // ─── Pricing ───────────────────────────────────────────────────────────────
+  // --- Pricing ---------------------------------------------------------------
   {
     question: "How much does lawn care cost?",
     answer:
@@ -62,7 +62,7 @@ export const faqs: FAQItem[] = [
   {
     question: "Do you offer package discounts?",
     answer:
-      "Yes, we offer seasonal packages and annual lawn care programs that can save you 15–20% compared to booking individual services. Our annual programs bundle fertilization, weed control, aeration, and overseeding into one convenient plan with predictable monthly pricing.",
+      "Yes, we offer seasonal packages and annual lawn care programs that can save you 15-20% compared to booking individual services. Our annual programs bundle fertilization, weed control, aeration, and overseeding into one convenient plan with predictable monthly pricing.",
     category: "pricing",
   },
   {
@@ -74,7 +74,7 @@ export const faqs: FAQItem[] = [
   {
     question: "Are there any hidden fees?",
     answer:
-      "Never. We believe in transparent, upfront pricing. The quote you receive includes all labor, materials, and cleanup—there are no surprise charges after the work is done. If anything changes during the job, we'll discuss it with you and get approval before proceeding.",
+      "Never. We believe in transparent, upfront pricing. The quote you receive includes all labor, materials, and cleanup — there are no surprise charges after the work is done. If anything changes during the job, we'll discuss it with you and get approval before proceeding.",
     category: "pricing",
   },
   {
@@ -84,32 +84,32 @@ export const faqs: FAQItem[] = [
     category: "pricing",
   },
 
-  // ─── Services ──────────────────────────────────────────────────────────────
+  // --- Services --------------------------------------------------------------
   {
-    question: "When is the best time to aerate in Colorado?",
+    question: "When is the best time to aerate in California?",
     answer:
-      "The ideal times for core aeration along the Front Range are spring (April through May) and fall (September through October). Fall aeration is especially effective because it relieves summer compaction and allows your lawn to absorb nutrients before winter dormancy, setting the stage for a strong spring green-up.",
+      "The ideal times for core aeration in California are spring (March through April) and fall (September through October). Fall aeration is especially effective because it relieves summer compaction and allows your lawn to absorb nutrients before the cooler months, setting the stage for a strong spring green-up.",
     category: "services",
     serviceSlug: "aeration",
   },
   {
     question: "What type of grass seed do you use?",
     answer:
-      "We use Colorado-adapted grass varieties chosen for our climate and soil conditions. Kentucky bluegrass is our top pick for lush, self-repairing lawns; tall fescue offers excellent drought tolerance and shade performance; and buffalo grass is ideal for low-water landscapes. We'll recommend the best blend for your property's sun exposure and water availability.",
+      "We use California-adapted grass varieties chosen for our climate and soil conditions. Tall fescue is our top pick for drought-tolerant, deep-rooted lawns; Kentucky bluegrass offers lush color and self-repairing ability; and Bermuda grass is ideal for warm inland areas. We'll recommend the best blend for your property's sun exposure and water availability.",
     category: "services",
     serviceSlug: "overseeding",
   },
   {
-    question: "How often should I fertilize my lawn in Colorado?",
+    question: "How often should I fertilize my lawn in California?",
     answer:
-      "We recommend four to five fertilizer applications per year for Front Range lawns. A typical schedule includes an early spring feeding in March, a late spring application in May, a summer boost in July, a fall strengthener in September, and a winterizer in late October or November. This schedule keeps your turf healthy through Colorado's dramatic temperature swings.",
+      "We recommend four to five fertilizer applications per year for California lawns. A typical schedule includes an early spring feeding in March, a late spring application in May, a summer boost in July, a fall strengthener in September, and a winterizer in late October or November. This schedule keeps your turf healthy through California's warm summers and mild winters.",
     category: "services",
     serviceSlug: "fertilization",
   },
   {
     question: "What's included in your seasonal maintenance package?",
     answer:
-      "Our spring package includes core aeration, overseeding, a pre-emergent weed treatment, and a balanced fertilizer application to jumpstart growth. The fall package covers aeration, overseeding, a winterizer fertilizer, and leaf removal. Both packages are designed to address the specific needs of Colorado lawns during their most critical growth periods.",
+      "Our spring package includes core aeration, overseeding, a pre-emergent weed treatment, and a balanced fertilizer application to jumpstart growth. The fall package covers aeration, overseeding, a winterizer fertilizer, and leaf removal. Both packages are designed to address the specific needs of California lawns during their most critical growth periods.",
     category: "services",
     serviceSlug: "seasonal-maintenance",
   },
@@ -123,12 +123,12 @@ export const faqs: FAQItem[] = [
   {
     question: "Do you provide irrigation system maintenance?",
     answer:
-      "Yes, we offer sprinkler system start-ups in the spring, mid-season inspections and adjustments, and winterization blow-outs in the fall. Proper irrigation is critical for Colorado lawns, and we'll ensure your system is running efficiently so your turf gets the right amount of water without waste.",
+      "Yes, we offer sprinkler system inspections in the spring, mid-season adjustments for water conservation compliance, and winterization services in the fall. Proper irrigation is critical for California lawns, and we'll ensure your system is running efficiently so your turf gets the right amount of water without waste.",
     category: "services",
     serviceSlug: "irrigation",
   },
 
-  // ─── Scheduling ────────────────────────────────────────────────────────────
+  // --- Scheduling ------------------------------------------------------------
   {
     question: "How far in advance should I book?",
     answer:
@@ -154,23 +154,23 @@ export const faqs: FAQItem[] = [
     category: "scheduling",
   },
 
-  // ─── Locations ─────────────────────────────────────────────────────────────
+  // --- Locations -------------------------------------------------------------
   {
-    question: "Do you serve the entire Denver metro area?",
+    question: "Do you serve the entire Los Angeles metro area?",
     answer:
-      "Yes, we provide full-service lawn care throughout the Denver metro area, including Denver, Aurora, Lakewood, Littleton, Centennial, and Englewood. Our crews are based locally and know the unique soil and climate conditions of each neighborhood, from the clay-heavy soils of south Denver to the sandy loams near the Platte River.",
+      "Yes, we provide full-service lawn care throughout the Los Angeles metro area, including Santa Monica, Beverly Hills, Pasadena, Glendale, Burbank, and the San Fernando Valley. Our crews are based locally and know the unique soil and climate conditions of each neighborhood, from the coastal communities to the inland valleys.",
     category: "locations",
   },
   {
-    question: "How far north do you service?",
+    question: "Do you serve the Inland Empire?",
     answer:
-      "Our service area extends north through Broomfield, Longmont, Loveland, and all the way up to Fort Collins and the surrounding communities near the Wyoming border. Northern Colorado's cooler temperatures and unique turf challenges are something our team handles daily.",
+      "Absolutely! Our headquarters is in Murrieta, right in the heart of the Inland Empire. We serve Murrieta, Temecula, Wildomar, and surrounding communities throughout the Temecula Valley. Our team knows the area's hot summers, varied soils, and water conservation requirements, and tailors every treatment accordingly.",
     category: "locations",
   },
   {
-    question: "Do you service Colorado Springs?",
+    question: "Do you service the Bay Area and Sacramento?",
     answer:
-      "Yes, we serve all of Colorado Springs and the surrounding communities including Manitou Springs, Monument, Fountain, and Security-Widefield. Our Colorado Springs crews understand the area's higher elevation, variable soils, and water restrictions, and tailor every treatment accordingly.",
+      "Yes, we serve the Martinez and greater East Bay area including Concord, Pleasant Hill, Walnut Creek, and Benicia. We also serve Sacramento and surrounding communities including Roseville, Folsom, Elk Grove, and Rancho Cordova. Our crews understand each region's unique microclimate and soil conditions.",
     category: "locations",
   },
 ];

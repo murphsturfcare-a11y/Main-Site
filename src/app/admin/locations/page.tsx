@@ -14,48 +14,33 @@ interface Location {
 const initialLocations: Location[] = [
   {
     id: '1',
-    name: 'Denver',
-    phone: '(303) 555-0101',
+    name: 'Los Angeles',
+    phone: '(951) 331-3300',
     description:
-      'Serving the greater Denver metro area including Capitol Hill, Cherry Creek, and Washington Park',
+      'Serving the greater Los Angeles metro area including Hollywood, Westwood, and Santa Monica',
     active: true,
   },
   {
     id: '2',
-    name: 'Colorado Springs',
-    phone: '(719) 555-0102',
+    name: 'Murrieta',
+    phone: '(951) 331-3300',
     description:
-      'Full service lawn care for Colorado Springs and surrounding communities',
+      'Headquarters location providing full service lawn care for Murrieta and surrounding communities',
     active: true,
   },
   {
     id: '3',
-    name: 'Aurora',
-    phone: '(303) 555-0103',
-    description: 'Comprehensive lawn services for Aurora residents',
+    name: 'Martinez',
+    phone: '(951) 331-3300',
+    description: 'Comprehensive lawn services for Martinez and Contra Costa County residents',
     active: true,
   },
   {
     id: '4',
-    name: 'Fort Collins',
-    phone: '(970) 555-0104',
-    description: "Northern Colorado's premier lawn care provider",
+    name: 'Sacramento',
+    phone: '(951) 331-3300',
+    description: "Sacramento and the greater Capital Region's premier lawn care provider",
     active: true,
-  },
-  {
-    id: '5',
-    name: 'Lakewood',
-    phone: '(303) 555-0105',
-    description:
-      'Quality lawn care for the Lakewood and Jefferson County area',
-    active: true,
-  },
-  {
-    id: '6',
-    name: 'Boulder',
-    phone: '(303) 555-0106',
-    description: 'Eco-friendly lawn care solutions for Boulder County',
-    active: false,
   },
 ];
 

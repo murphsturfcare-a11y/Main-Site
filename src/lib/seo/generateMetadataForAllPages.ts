@@ -5,32 +5,32 @@ import {
 } from "./metadata";
 
 export const homeMetadata = generatePageMetadata(
-  "Professional Lawn Care & Turf Cleaning in Colorado",
-  "Murphy's Turf provides expert lawn care, turf cleaning, aeration, seeding, and fertilization services across Colorado. Free estimates — call (720) 555-0147 today!",
+  "Professional Lawn Care & Turf Cleaning in California",
+  "Murphy's Turf Care provides expert lawn care, turf cleaning, aeration, seeding, and fertilization services across California. Free estimates — call (951) 331-3300 today!",
   "/"
 );
 
 export const aboutMetadata = generatePageMetadata(
   "About Us",
-  "Learn about Murphy's Turf — Colorado's trusted lawn care professionals. Family-owned, locally operated, and committed to keeping your turf healthy and beautiful.",
+  "Learn about Murphy's Turf Care — California's trusted lawn care professionals. Family-owned, locally operated, and committed to keeping your turf healthy and beautiful.",
   "/about"
 );
 
 export const contactMetadata = generatePageMetadata(
   "Contact Us",
-  "Get in touch with Murphy's Turf for a free lawn care quote. Serving Denver, Colorado Springs, Aurora, Boulder, and more. Call (720) 555-0147 or fill out our form.",
+  "Get in touch with Murphy's Turf Care for a free lawn care quote. Serving Los Angeles, Murrieta, Martinez, Sacramento, and more. Call (951) 331-3300 or fill out our form.",
   "/contact"
 );
 
 export const servicesMetadata = generatePageMetadata(
   "Our Lawn Care Services",
-  "Explore Murphy's Turf professional lawn care services: cleaning, aeration, seeding, fertilization, pest control, and seasonal maintenance throughout Colorado.",
+  "Explore Murphy's Turf Care professional lawn care services: cleaning, aeration, seeding, fertilization, pest control, and seasonal maintenance throughout California.",
   "/services"
 );
 
 export const locationsMetadata = generatePageMetadata(
-  "Service Locations in Colorado",
-  "Murphy's Turf serves Denver, Colorado Springs, Aurora, Lakewood, Boulder, Fort Collins, and surrounding areas. Find lawn care services near you.",
+  "Service Locations in California",
+  "Murphy's Turf Care serves Los Angeles, Murrieta, Martinez, Sacramento, and surrounding areas. Find lawn care services near you.",
   "/locations"
 );
 
@@ -51,13 +51,13 @@ const services = [
     name: "Seeding",
     slug: "seeding" as const,
     shortDescription:
-      "Overseeding and reseeding with premium grass varieties suited to Colorado's climate.",
+      "Overseeding and reseeding with premium grass varieties suited to California's climate.",
   },
   {
     name: "Fertilization",
     slug: "fertilization" as const,
     shortDescription:
-      "Custom fertilization programs to nourish your lawn through every season in Colorado.",
+      "Custom fertilization programs to nourish your lawn through every season in California.",
   },
   {
     name: "Pest Control",
@@ -80,40 +80,28 @@ for (const service of services) {
 
 const locations = [
   {
-    name: "Denver",
-    slug: "denver" as const,
+    name: "Los Angeles",
+    slug: "los-angeles" as const,
     description:
-      "Serving the Denver metro area with expert lawn care and turf maintenance services.",
+      "Serving the Los Angeles metro area with expert lawn care and turf maintenance services.",
   },
   {
-    name: "Colorado Springs",
-    slug: "colorado-springs" as const,
+    name: "Murrieta",
+    slug: "murrieta" as const,
     description:
-      "Professional turf cleaning and lawn care for Colorado Springs homeowners and businesses.",
+      "Murphy's Turf Care headquarters — professional turf cleaning and lawn care in the Inland Empire.",
   },
   {
-    name: "Aurora",
-    slug: "aurora" as const,
+    name: "Martinez",
+    slug: "martinez" as const,
     description:
-      "Reliable lawn care services in Aurora, CO — from aeration to seasonal maintenance.",
+      "Professional turf cleaning and lawn care for Martinez and East Bay homeowners and businesses.",
   },
   {
-    name: "Lakewood",
-    slug: "lakewood" as const,
+    name: "Sacramento",
+    slug: "sacramento" as const,
     description:
-      "Trusted lawn care professionals serving Lakewood and the western Denver suburbs.",
-  },
-  {
-    name: "Boulder",
-    slug: "boulder" as const,
-    description:
-      "Eco-friendly lawn care and turf services for Boulder residents and businesses.",
-  },
-  {
-    name: "Fort Collins",
-    slug: "fort-collins" as const,
-    description:
-      "Full-service lawn care in Fort Collins — keeping Northern Colorado lawns healthy year-round.",
+      "Full-service lawn care in Sacramento — keeping Central Valley lawns healthy year-round.",
   },
 ];
 

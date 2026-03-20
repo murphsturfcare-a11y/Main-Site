@@ -32,7 +32,7 @@ export function generateOrganizationSchema() {
     },
     areaServed: {
       "@type": "State",
-      name: "Colorado",
+      name: "California",
     },
     sameAs: [
       SOCIAL_LINKS.facebook,
@@ -63,8 +63,8 @@ export function generateLocalBusinessSchema() {
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: 39.7392,
-      longitude: -104.9903,
+      latitude: 33.5539,
+      longitude: -117.2139,
     },
     openingHoursSpecification: [
       {
@@ -109,7 +109,7 @@ export function generateServiceSchema(service: {
     },
     areaServed: {
       "@type": "State",
-      name: "Colorado",
+      name: "California",
     },
     offers: {
       "@type": "Offer",
@@ -135,7 +135,7 @@ export function generateLocationSchema(location: {
     address: {
       "@type": "PostalAddress",
       addressLocality: location.name,
-      addressRegion: "CO",
+      addressRegion: "CA",
       addressCountry: "US",
     },
     parentOrganization: {
@@ -148,7 +148,7 @@ export function generateLocationSchema(location: {
       name: location.name,
       containedInPlace: {
         "@type": "State",
-        name: "Colorado",
+        name: "California",
       },
     },
   };

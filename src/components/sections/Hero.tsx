@@ -20,8 +20,8 @@ export default function Hero() {
         </h1>
 
         <p className="text-lg md:text-xl text-white/90 mt-4 font-body">
-          Professional turf cleaning &amp; lawn care services across the Colorado
-          Front Range.
+          Professional turf cleaning &amp; lawn care services across
+          California.
         </p>
 
         <Link

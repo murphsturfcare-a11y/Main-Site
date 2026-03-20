@@ -3,40 +3,28 @@ import LocationCard from '@/components/cards/LocationCard';
 
 const locations = [
   {
-    city: 'Denver',
+    city: 'Los Angeles',
     description:
-      "Comprehensive lawn care services for Denver's diverse neighborhoods and properties.",
-    slug: 'denver',
+      "Comprehensive lawn care services for Los Angeles's diverse neighborhoods and properties.",
+    slug: 'los-angeles',
   },
   {
-    city: 'Aurora',
+    city: 'Murrieta',
     description:
-      "Expert turf maintenance and cleaning for Aurora's growing communities.",
-    slug: 'aurora',
+      "Headquarters and home base for premium turf care in the Inland Empire.",
+    slug: 'murrieta',
   },
   {
-    city: 'Lakewood',
+    city: 'Martinez',
     description:
-      "Professional lawn services tailored to Lakewood's unique landscape.",
-    slug: 'lakewood',
+      "Trusted lawn care professionals serving Martinez and the surrounding Bay Area.",
+    slug: 'martinez',
   },
   {
-    city: 'Arvada',
+    city: 'Sacramento',
     description:
-      'Quality lawn care for Arvada homeowners and businesses.',
-    slug: 'arvada',
-  },
-  {
-    city: 'Westminster',
-    description:
-      "Reliable turf services for Westminster's residential properties.",
-    slug: 'westminster',
-  },
-  {
-    city: 'Boulder',
-    description:
-      "Eco-friendly lawn care solutions for Boulder's environmentally conscious community.",
-    slug: 'boulder',
+      "Professional lawn care and turf services for Sacramento residents and businesses.",
+    slug: 'sacramento',
   },
 ];
 
@@ -45,7 +33,7 @@ export default function LocationsPreview() {
     <section className="py-16 lg:py-24 bg-cream">
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="font-heading text-3xl md:text-4xl font-bold text-charcoal text-center">
-          Serving the Colorado Front Range
+          Serving California Communities
         </h2>
         <p className="text-charcoal-light text-center mt-4 font-body">
           Professional lawn care services in your neighborhood

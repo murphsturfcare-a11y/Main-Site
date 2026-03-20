@@ -11,17 +11,16 @@ const serviceLinks = [
 ];
 
 const locationLinks = [
-  { name: 'Denver', href: '/locations/denver' },
-  { name: 'Colorado Springs', href: '/locations/colorado-springs' },
-  { name: 'Aurora', href: '/locations/aurora' },
-  { name: 'Lakewood', href: '/locations/lakewood' },
-  { name: 'Boulder', href: '/locations/boulder' },
-  { name: 'Fort Collins', href: '/locations/fort-collins' },
+  { name: 'Los Angeles', href: '/locations/los-angeles' },
+  { name: 'Murrieta', href: '/locations/murrieta' },
+  { name: 'Martinez', href: '/locations/martinez' },
+  { name: 'Sacramento', href: '/locations/sacramento' },
 ];
 
 const companyLinks = [
   { name: 'About Us', href: '/about' },
   { name: 'Contact', href: '/contact' },
+  { name: 'Blog', href: '/blog' },
   { name: 'Privacy Policy', href: '/privacy-policy' },
   { name: 'Terms of Service', href: '/terms-of-service' },
 ];
@@ -38,25 +37,25 @@ export default function Footer() {
                 <Leaf className="w-6 h-6 text-white" />
               </div>
               <span className="text-xl font-bold font-heading text-white">
-                Murphy&apos;s Turf
+                Murphy&apos;s Turf Care
               </span>
             </Link>
             <p className="text-gray-400 font-body text-sm leading-relaxed mb-6">
-              Colorado&apos;s trusted turf cleaning and lawn care experts. Family-owned since 2018,
-              serving the Front Range with pride and professionalism.
+              California&apos;s trusted turf cleaning and lawn care experts. Family-owned since 2018,
+              serving California communities with pride and professionalism.
             </p>
             <div className="space-y-3">
-              <a href="tel:+17205551234" className="flex items-center gap-2 text-gray-300 hover:text-sage transition-colors text-sm font-body">
+              <a href="tel:+19513313300" className="flex items-center gap-2 text-gray-300 hover:text-sage transition-colors text-sm font-body">
                 <Phone className="w-4 h-4" />
-                (720) 555-1234
+                (951) 331-3300
               </a>
-              <a href="mailto:info@murphysturf.com" className="flex items-center gap-2 text-gray-300 hover:text-sage transition-colors text-sm font-body">
+              <a href="mailto:info@murphysturfcare.com" className="flex items-center gap-2 text-gray-300 hover:text-sage transition-colors text-sm font-body">
                 <Mail className="w-4 h-4" />
-                info@murphysturf.com
+                info@murphysturfcare.com
               </a>
               <div className="flex items-center gap-2 text-gray-300 text-sm font-body">
                 <MapPin className="w-4 h-4 flex-shrink-0" />
-                1234 Green Valley Rd, Denver, CO 80202
+                26323 Jefferson Avenue, Murrieta, CA 92562
               </div>
             </div>
           </div>
@@ -125,10 +124,10 @@ export default function Footer() {
         <div className="mt-12 pt-8 border-t border-gray-700">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-gray-500 text-sm font-body">
-              &copy; {new Date().getFullYear()} Murphy&apos;s Turf. All rights reserved.
+              &copy; {new Date().getFullYear()} Murphy&apos;s Turf Care. All rights reserved.
             </p>
             <p className="text-gray-500 text-sm font-body">
-              Licensed & Insured | Serving Colorado&apos;s Front Range
+              Licensed & Insured | Serving California
             </p>
           </div>
         </div>

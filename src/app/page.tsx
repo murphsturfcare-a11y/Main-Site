@@ -60,7 +60,7 @@ const services = [
     name: 'Seeding',
     slug: 'seeding',
     description:
-      'Expert overseeding and new lawn establishment using premium seed blends suited to Colorado\'s climate.',
+      'Expert overseeding and new lawn establishment using premium seed blends suited to California\'s climate.',
   },
   {
     icon: Droplets,
@@ -81,7 +81,7 @@ const services = [
     name: 'Seasonal Maintenance',
     slug: 'seasonal-maintenance',
     description:
-      'Comprehensive year-round lawn care programs tailored to Colorado\'s unique seasonal demands.',
+      'Comprehensive year-round lawn care programs tailored to California\'s unique seasonal demands.',
   },
 ];
 
@@ -90,7 +90,7 @@ const benefits = [
     icon: Users,
     title: 'Experienced Team',
     description:
-      'Our crew brings over 8 years of hands-on expertise caring for Colorado lawns. We know Front Range turf inside and out.',
+      'Our crew brings over 8 years of hands-on expertise caring for California lawns. We know California turf inside and out.',
   },
   {
     icon: Leaf,
@@ -122,54 +122,44 @@ const galleryPairs = [
 const testimonials = [
   {
     quote:
-      "Murphy's Turf transformed our backyard from a patchy mess into a lush green paradise. The team was professional, punctual, and the results speak for themselves. Best lawn service in Denver!",
+      "Murphy's Turf Care transformed our backyard from a patchy mess into a lush green paradise. The team was professional, punctual, and the results speak for themselves. Best lawn service in Murrieta!",
     name: 'Sarah M.',
-    location: 'Denver, CO',
+    location: 'Murrieta, CA',
   },
   {
     quote:
-      "After trying three other companies, we finally found Murphy's Turf. Their aeration and overseeding program brought our lawn back to life in just one season. Highly recommend to anyone on the Front Range.",
+      "After trying three other companies, we finally found Murphy's Turf Care. Their aeration and overseeding program brought our lawn back to life in just one season. Highly recommend to anyone in California.",
     name: 'James & Linda R.',
-    location: 'Boulder, CO',
+    location: 'Los Angeles, CA',
   },
   {
     quote:
-      "As a property manager, I need reliable service. Murphy's Turf has maintained all six of our properties for two years now. Consistent quality, fair pricing, and they always go the extra mile.",
+      "As a property manager, I need reliable service. Murphy's Turf Care has maintained all six of our properties for two years now. Consistent quality, fair pricing, and they always go the extra mile.",
     name: 'Michael T.',
-    location: 'Colorado Springs, CO',
+    location: 'Sacramento, CA',
   },
 ];
 
 const locations = [
   {
-    name: 'Denver',
-    slug: 'denver',
-    tagline: 'Mile High lawn care for the heart of Colorado.',
+    name: 'Los Angeles',
+    slug: 'los-angeles',
+    tagline: 'Expert lawn care for the heart of Southern California.',
   },
   {
-    name: 'Colorado Springs',
-    slug: 'colorado-springs',
-    tagline: 'Keeping the Springs green and gorgeous year-round.',
+    name: 'Murrieta',
+    slug: 'murrieta',
+    tagline: 'Headquarters and home base for premium turf care.',
   },
   {
-    name: 'Aurora',
-    slug: 'aurora',
-    tagline: 'Trusted turf care for Aurora families and businesses.',
+    name: 'Martinez',
+    slug: 'martinez',
+    tagline: 'Trusted turf care for Martinez families and businesses.',
   },
   {
-    name: 'Lakewood',
-    slug: 'lakewood',
-    tagline: 'Professional lawn services across Lakewood neighborhoods.',
-  },
-  {
-    name: 'Boulder',
-    slug: 'boulder',
-    tagline: 'Eco-conscious lawn care for the Boulder community.',
-  },
-  {
-    name: 'Fort Collins',
-    slug: 'fort-collins',
-    tagline: 'Premium turf maintenance for northern Colorado.',
+    name: 'Sacramento',
+    slug: 'sacramento',
+    tagline: 'Professional lawn services across Sacramento neighborhoods.',
   },
 ];
 
@@ -182,7 +172,7 @@ const faqs = [
   {
     question: 'How often should I aerate my lawn?',
     answer:
-      'For most Colorado lawns, we recommend aerating once or twice a year. The best times are in early spring (March-April) and fall (September-October) when cool-season grasses are actively growing. Lawns with heavy clay soil or high foot traffic may benefit from bi-annual aeration.',
+      'For most California lawns, we recommend aerating once or twice a year. The best times are in early spring (March-April) and fall (September-October) when grasses are actively growing. Lawns with heavy clay soil or high foot traffic may benefit from bi-annual aeration.',
   },
   {
     question: "What's included in seasonal maintenance?",
@@ -192,7 +182,7 @@ const faqs = [
   {
     question: 'Do you offer free estimates?',
     answer:
-      'Absolutely! We provide free, no-obligation estimates for all of our services. Simply fill out the quote form on this page or give us a call at (720) 555-1234. One of our lawn care specialists will assess your property and provide a detailed estimate within 24 hours.',
+      'Absolutely! We provide free, no-obligation estimates for all of our services. Simply fill out the quote form on this page or give us a call at (951) 331-3300. One of our lawn care specialists will assess your property and provide a detailed estimate within 24 hours.',
   },
   {
     question: 'Are your products pet-safe?',
@@ -207,12 +197,12 @@ const faqs = [
   {
     question: 'What areas do you serve?',
     answer:
-      'We proudly serve the entire Colorado Front Range including Denver, Colorado Springs, Aurora, Lakewood, Boulder, Fort Collins, and surrounding communities. If you\'re unsure whether we service your area, just give us a call and we\'ll let you know.',
+      'We proudly serve communities across California including Los Angeles, Murrieta, Martinez, Sacramento, and surrounding areas. If you\'re unsure whether we service your area, just give us a call and we\'ll let you know.',
   },
   {
     question: 'Do you offer organic lawn care?',
     answer:
-      'Yes, we offer fully organic lawn care programs for customers who prefer an all-natural approach. Our organic options include compost-based fertilizers, natural pest deterrents, and biological soil amendments. These programs are especially popular in Boulder and Fort Collins.',
+      'Yes, we offer fully organic lawn care programs for customers who prefer an all-natural approach. Our organic options include compost-based fertilizers, natural pest deterrents, and biological soil amendments. These programs are especially popular across all of our California service areas.',
   },
 ];
 
@@ -269,8 +259,8 @@ function QuoteForm() {
         <p className="font-body text-charcoal-light max-w-md mx-auto">
           We&apos;ve received your request and will get back to you within 24 hours
           with a personalized quote. In the meantime, feel free to call us at{' '}
-          <a href="tel:+17205551234" className="text-forest font-semibold hover:underline">
-            (720) 555-1234
+          <a href="tel:+19513313300" className="text-forest font-semibold hover:underline">
+            (951) 331-3300
           </a>.
         </p>
       </div>
@@ -323,7 +313,7 @@ function QuoteForm() {
             name="phone"
             type="tel"
             required
-            placeholder="(720) 555-1234"
+            placeholder="(951) 331-3300"
             className="w-full rounded-lg border border-gray-300 px-4 py-3 font-body text-charcoal placeholder:text-gray-400 focus:border-sage focus:ring-2 focus:ring-sage/30 outline-none transition"
           />
         </div>
@@ -374,7 +364,7 @@ function QuoteForm() {
             name="address"
             type="text"
             required
-            placeholder="123 Main St, Denver, CO"
+            placeholder="123 Main St, Murrieta, CA"
             className="w-full rounded-lg border border-gray-300 px-4 py-3 font-body text-charcoal placeholder:text-gray-400 focus:border-sage focus:ring-2 focus:ring-sage/30 outline-none transition"
           />
         </div>
@@ -419,15 +409,15 @@ export default function Home() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 lg:py-40">
           <div className="max-w-3xl">
             <span className="inline-block bg-sage/20 border border-sage/40 text-sage-light font-body font-semibold text-sm px-4 py-1.5 rounded-full mb-6">
-              Colorado&apos;s Trusted Lawn Care Professionals
+              California&apos;s Trusted Lawn Care Professionals
             </span>
             <h1 className="font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-white leading-tight tracking-tight">
               Transform Your Lawn Into a{' '}
               <span className="text-sage-light">Masterpiece</span>
             </h1>
             <p className="mt-6 text-lg sm:text-xl text-gray-200 font-body leading-relaxed max-w-2xl">
-              From turf cleaning to complete lawn renovation, Murphy&apos;s Turf delivers
-              expert care that keeps your Colorado Front Range property looking its
+              From turf cleaning to complete lawn renovation, Murphy&apos;s Turf Care delivers
+              expert care that keeps your California property looking its
               absolute best — season after season.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
@@ -439,11 +429,11 @@ export default function Home() {
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <a
-                href="tel:+17205551234"
+                href="tel:+19513313300"
                 className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 text-white font-heading font-semibold text-lg px-8 py-4 rounded-xl transition-all duration-200"
               >
                 <Phone className="w-5 h-5" />
-                (720) 555-1234
+                (951) 331-3300
               </a>
             </div>
           </div>
@@ -502,7 +492,7 @@ export default function Home() {
               Our Professional Services
             </h2>
             <p className="mt-4 font-body text-charcoal-light text-lg leading-relaxed">
-              Comprehensive lawn care solutions tailored to Colorado&apos;s unique
+              Comprehensive lawn care solutions tailored to California&apos;s unique
               climate. Every service backed by our satisfaction guarantee.
             </p>
           </div>
@@ -544,7 +534,7 @@ export default function Home() {
               The Murphy&apos;s Difference
             </span>
             <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-charcoal">
-              Why Choose Murphy&apos;s Turf
+              Why Choose Murphy&apos;s Turf Care
             </h2>
             <p className="mt-4 font-body text-charcoal-light text-lg leading-relaxed">
               We combine years of local expertise with a genuine commitment to quality
@@ -589,8 +579,8 @@ export default function Home() {
               See the Difference
             </h2>
             <p className="mt-4 font-body text-charcoal-light text-lg leading-relaxed">
-              Transformations from real Murphy&apos;s Turf projects across the Colorado Front
-              Range. These results speak for themselves.
+              Transformations from real Murphy&apos;s Turf Care projects across
+              California. These results speak for themselves.
             </p>
           </div>
 
@@ -642,7 +632,7 @@ export default function Home() {
             </h2>
             <p className="mt-4 font-body text-charcoal-light text-lg leading-relaxed">
               Don&apos;t just take our word for it. Here&apos;s what homeowners and property
-              managers across Colorado have to say about working with us.
+              managers across California have to say about working with us.
             </p>
           </div>
 
@@ -695,9 +685,9 @@ export default function Home() {
             Ready to Transform Your Lawn?
           </h2>
           <p className="mt-4 font-body text-lg sm:text-xl text-gray-200 max-w-2xl mx-auto leading-relaxed">
-            Join over 2,500 happy customers across the Colorado Front Range. Get a
-            personalized quote today and see why Murphy&apos;s Turf is the name
-            Colorado trusts.
+            Join over 2,500 happy customers across California. Get a
+            personalized quote today and see why Murphy&apos;s Turf Care is the name
+            California trusts.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
@@ -708,11 +698,11 @@ export default function Home() {
               <ArrowRight className="w-5 h-5" />
             </Link>
             <a
-              href="tel:+17205551234"
+              href="tel:+19513313300"
               className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 text-white font-heading font-semibold text-lg px-10 py-4 rounded-xl transition-all duration-200"
             >
               <Phone className="w-5 h-5" />
-              Call (720) 555-1234
+              Call (951) 331-3300
             </a>
           </div>
         </div>
@@ -726,10 +716,10 @@ export default function Home() {
               Where We Work
             </span>
             <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-charcoal">
-              Proudly Serving Colorado&apos;s Front Range
+              Serving California Communities
             </h2>
             <p className="mt-4 font-body text-charcoal-light text-lg leading-relaxed">
-              From Denver to Fort Collins, our team is ready to deliver outstanding
+              From Los Angeles to Sacramento, our team is ready to deliver outstanding
               lawn care right to your doorstep.
             </p>
           </div>

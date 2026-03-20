@@ -15,7 +15,7 @@ import {
 export const metadata: Metadata = {
   title: 'Professional Lawn Care Services',
   description:
-    "Explore Murphy's Turf comprehensive lawn care services including lawn cleaning, aeration, seeding, fertilization, pest control, and seasonal maintenance across Colorado's Front Range.",
+    "Explore Murphy's Turf Care comprehensive lawn care services including lawn cleaning, aeration, seeding, fertilization, pest control, and seasonal maintenance across California.",
 };
 
 const services = [
@@ -25,7 +25,7 @@ const services = [
     icon: Trash2,
     price: 49,
     description:
-      'Professional debris removal, dethatching, and deep cleaning to restore your lawn after harsh Colorado winters. We tackle pine needles, cottonwood fluff, and built-up thatch so your turf can breathe and thrive again.',
+      'Professional debris removal, dethatching, and deep cleaning to restore your lawn. We tackle debris, leaves, and built-up thatch so your turf can breathe and thrive again.',
   },
   {
     name: 'Aeration',
@@ -33,7 +33,7 @@ const services = [
     icon: Wind,
     price: 89,
     description:
-      "Core aeration breaks through Colorado's notorious clay soil compaction, allowing water, oxygen, and nutrients to reach your lawn's root zone. Essential for maintaining a healthy, resilient lawn at altitude.",
+      "Core aeration breaks through compacted soil, allowing water, oxygen, and nutrients to reach your lawn's root zone. Essential for maintaining a healthy, resilient lawn in California's climate.",
   },
   {
     name: 'Seeding',
@@ -41,7 +41,7 @@ const services = [
     icon: Sprout,
     price: 129,
     description:
-      'Overseeding and new lawn establishment using drought-resistant, Colorado-adapted grass varieties like Kentucky bluegrass, tall fescue, and buffalo grass. Build a lush lawn engineered for our unique climate.',
+      'Overseeding and new lawn establishment using drought-resistant, California-adapted grass varieties like Bermuda grass, tall fescue, and St. Augustine. Build a lush lawn engineered for our unique climate.',
   },
   {
     name: 'Fertilization',
@@ -49,7 +49,7 @@ const services = [
     icon: Droplets,
     price: 59,
     description:
-      "Custom nutrient programs designed specifically for Colorado's alkaline soil and short growing season. Our slow-release formulas deliver sustained nutrition while protecting local waterways.",
+      "Custom nutrient programs designed specifically for California's varied soil conditions and extended growing season. Our slow-release formulas deliver sustained nutrition while protecting local waterways.",
   },
   {
     name: 'Pest Control',
@@ -57,7 +57,7 @@ const services = [
     icon: Bug,
     price: 79,
     description:
-      'Eco-friendly, integrated pest management for grubs, chinch bugs, sod webworms, and other common Colorado lawn pests. Targeted treatments that eliminate threats without harming beneficial insects.',
+      'Eco-friendly, integrated pest management for grubs, chinch bugs, sod webworms, and other common California lawn pests. Targeted treatments that eliminate threats without harming beneficial insects.',
   },
   {
     name: 'Seasonal Maintenance',
@@ -81,7 +81,7 @@ export default function ServicesPage() {
             Our Professional Services
           </h1>
           <p className="text-lg sm:text-xl text-white/90 font-body max-w-3xl mx-auto leading-relaxed">
-            Comprehensive lawn care solutions tailored for Colorado&apos;s unique climate.
+            Comprehensive lawn care solutions tailored for California&apos;s unique climate.
             From routine cleaning to full seasonal programs, we have the expertise and
             equipment to keep your turf looking its absolute best year-round.
           </p>
@@ -157,7 +157,7 @@ export default function ServicesPage() {
             <p className="text-lg text-white/85 font-body mb-8 max-w-2xl mx-auto leading-relaxed">
               Every lawn is different. Let our team assess your turf and recommend the
               perfect combination of services for your property. Free consultations
-              available for all Colorado Front Range homeowners.
+              available for all California homeowners.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
@@ -168,11 +168,11 @@ export default function ServicesPage() {
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <a
-                href="tel:+17205551234"
+                href="tel:+19513313300"
                 className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-3.5 rounded-lg transition-colors font-body backdrop-blur-sm"
               >
                 <Phone className="w-5 h-5" />
-                (720) 555-1234
+                (951) 331-3300
               </a>
             </div>
           </div>

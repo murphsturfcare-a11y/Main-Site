@@ -32,7 +32,7 @@ const defaultItems: FAQItem[] = [
   {
     question: 'What areas do you serve?',
     answer:
-      'We proudly serve the Colorado Front Range, including Denver, Aurora, Lakewood, Arvada, Westminster, Boulder, and surrounding communities.',
+      'We proudly serve communities across California, including Los Angeles, Murrieta, Martinez, Sacramento, and surrounding areas.',
   },
   {
     question: 'What if I\'m not satisfied with the service?',

@@ -82,14 +82,14 @@ const servicesData: Record<string, ServiceData> = {
     name: 'Lawn Cleaning',
     slug: 'lawn-cleaning',
     icon: Trash2,
-    tagline: 'A fresh start for your Colorado lawn',
+    tagline: 'A fresh start for your California lawn',
     price: 49,
     metaDescription:
-      "Professional lawn cleaning services in Colorado. Murphy's Turf removes debris, dethatches, and deep cleans your turf to restore health and curb appeal after harsh Front Range winters.",
+      "Professional lawn cleaning services in California. Murphy's Turf Care removes debris, dethatches, and deep cleans your turf to restore health and curb appeal throughout the year.",
     descriptionParagraphs: [
-      "Colorado lawns endure a lot. Between heavy winter snow, spring wind storms, cottonwood season, and the steady accumulation of pine needles from nearby evergreens, your turf can end up buried under layers of organic debris that choke out new growth. Murphy's Turf professional lawn cleaning service is designed to tackle all of it, restoring your yard to a clean, healthy canvas that is ready to flourish during the growing season.",
+      "California lawns endure a lot. Between dry summers, Santa Ana winds, fallen leaves, and the steady accumulation of debris, your turf can end up buried under layers of organic matter that choke out new growth. Murphy's Turf Care professional lawn cleaning service is designed to tackle all of it, restoring your yard to a clean, healthy canvas that is ready to flourish during the growing season.",
       "Our cleaning process goes far beyond raking leaves. We begin with a thorough surface debris removal, picking up branches, trash, animal waste, and anything else that has collected over the off-season. Next, we perform a power dethatching to strip away the dense mat of dead grass and roots sitting between the soil surface and the living blades. Thatch layers thicker than half an inch prevent water, oxygen, and fertilizer from reaching the root zone, so removing them is one of the single most impactful things you can do for your lawn.",
-      "Once the debris and thatch are cleared, we trim all lawn edges for a crisp, manicured look, inspect the surface grade for any low spots that could pool water, and apply a light mulching pass to return fine organic matter to the soil. Every job ends with a post-cleanup walk-through so you can see the results firsthand. Whether you are preparing for spring or recovering from a particularly rough storm, our lawn cleaning service sets the stage for everything else your turf needs to succeed at altitude.",
+      "Once the debris and thatch are cleared, we trim all lawn edges for a crisp, manicured look, inspect the surface grade for any low spots that could pool water, and apply a light mulching pass to return fine organic matter to the soil. Every job ends with a post-cleanup walk-through so you can see the results firsthand. Whether you are preparing for spring or recovering from a particularly rough season, our lawn cleaning service sets the stage for everything else your turf needs to succeed in California's climate.",
     ],
     included: [
       'Complete surface debris removal',
@@ -147,7 +147,7 @@ const servicesData: Record<string, ServiceData> = {
       {
         question: 'How often should I have my lawn professionally cleaned?',
         answer:
-          'For most Colorado properties, we recommend a thorough cleaning at least twice per year: once in early spring after snowmelt and again in late fall after the leaves have dropped. Properties surrounded by pine or cottonwood trees may benefit from an additional mid-summer cleaning.',
+          'For most California properties, we recommend a thorough cleaning at least twice per year: once in early spring and again in late fall after the leaves have dropped. Properties surrounded by trees may benefit from an additional mid-summer cleaning.',
       },
       {
         question: 'Is dethatching included in every lawn cleaning?',
@@ -179,10 +179,10 @@ const servicesData: Record<string, ServiceData> = {
     tagline: 'Break through compacted soil, unlock your lawn\'s potential',
     price: 89,
     metaDescription:
-      "Core aeration services for Colorado lawns. Murphy's Turf combats clay soil compaction along the Front Range so water, oxygen, and nutrients reach your lawn's root zone.",
+      "Core aeration services for California lawns. Murphy's Turf Care combats soil compaction so water, oxygen, and nutrients reach your lawn's root zone.",
     descriptionParagraphs: [
-      "If you have lived in Colorado for any amount of time, you already know the soil is tough. Heavy clay composition, foot traffic, and the natural settling that occurs over years of freeze-thaw cycles leave most Front Range lawns sitting on a near-impenetrable layer of compacted earth. When the soil is compacted, water runs off instead of soaking in, fertilizer sits on the surface instead of feeding roots, and grassroots struggle to expand. Core aeration is the single most effective remedy.",
-      "During a core aeration service, our commercial-grade aerators punch thousands of small plugs out of your lawn, each roughly three inches deep. These cores are left on the surface to break down naturally, returning nutrients to the soil while the holes they leave behind provide direct channels for air, water, and fertilizer to penetrate deep into the root zone. At Colorado's altitude, where lower atmospheric pressure and intense UV radiation stress lawns more than at sea level, maximizing every drop of water and every ounce of nutrient is critical.",
+      "If you have lived in California for any amount of time, you already know the soil can be tough. Clay composition, foot traffic, and the natural settling that occurs over time leave many California lawns sitting on a near-impenetrable layer of compacted earth. When the soil is compacted, water runs off instead of soaking in, fertilizer sits on the surface instead of feeding roots, and grassroots struggle to expand. Core aeration is the single most effective remedy.",
+      "During a core aeration service, our commercial-grade aerators punch thousands of small plugs out of your lawn, each roughly three inches deep. These cores are left on the surface to break down naturally, returning nutrients to the soil while the holes they leave behind provide direct channels for air, water, and fertilizer to penetrate deep into the root zone. In California's climate, where intense sun and water conservation demands stress lawns, maximizing every drop of water and every ounce of nutrient is critical.",
       "We begin every aeration job with a thorough soil assessment. We check moisture levels, identify areas of heavy compaction using a penetrometer, and map out any irrigation lines or utilities to avoid. After aerating, we provide detailed post-aeration watering guidance tailored to your specific soil conditions and the current season. For the best results, we strongly recommend pairing aeration with overseeding and fertilization, as the freshly opened soil creates ideal conditions for seed germination and nutrient uptake.",
     ],
     included: [
@@ -237,9 +237,9 @@ const servicesData: Record<string, ServiceData> = {
     ],
     faqs: [
       {
-        question: 'When is the best time to aerate in Colorado?',
+        question: 'When is the best time to aerate in California?',
         answer:
-          'For cool-season grasses like Kentucky bluegrass and tall fescue, early fall (late August through September) is the ideal aeration window. Spring aeration in late April or May is a solid secondary option. We do not recommend aerating during the heat of summer when lawns are already under stress.',
+          'For warm-season grasses like Bermuda and St. Augustine, late spring through early summer is the ideal aeration window. For cool-season grasses like tall fescue, early fall is best. We do not recommend aerating during the peak heat of summer when lawns are already under stress.',
       },
       {
         question: 'Should I pick up the soil plugs after aeration?',
@@ -249,7 +249,7 @@ const servicesData: Record<string, ServiceData> = {
       {
         question: 'How often does my lawn need aeration?',
         answer:
-          'Most Colorado lawns benefit from aeration once per year. High-traffic areas, heavy clay soils, or lawns that feel spongy from thatch buildup may benefit from twice-annual aeration in both spring and fall.',
+          'Most California lawns benefit from aeration once per year. High-traffic areas, heavy clay soils, or lawns that feel spongy from thatch buildup may benefit from twice-annual aeration in both spring and fall.',
       },
       {
         question: 'Can I mow right after aeration?',
@@ -268,13 +268,13 @@ const servicesData: Record<string, ServiceData> = {
     name: 'Seeding',
     slug: 'seeding',
     icon: Sprout,
-    tagline: 'Establish a lush, drought-resistant Colorado lawn',
+    tagline: 'Establish a lush, drought-resistant California lawn',
     price: 129,
     metaDescription:
-      "Professional overseeding and new lawn establishment in Colorado. Murphy's Turf uses drought-resistant grass varieties perfectly adapted to Front Range altitude, soil, and climate.",
+      "Professional overseeding and new lawn establishment in California. Murphy's Turf Care uses drought-resistant grass varieties perfectly adapted to California's soil and climate.",
     descriptionParagraphs: [
-      "Building a thick, healthy lawn in Colorado requires more than scattering seed and hoping for the best. At five thousand feet and above, the combination of intense UV radiation, low humidity, alkaline clay soil, and dramatic temperature swings between day and night means only certain grass varieties can truly thrive. Murphy's Turf seeding service takes the guesswork out of the equation by selecting, preparing, and planting the exact seed blend your property needs to develop a dense, drought-resistant lawn that stands up to Colorado's demanding conditions.",
-      "We offer both overseeding for established lawns that have thinned out and full new lawn establishment for bare or severely damaged areas. Every seeding project starts with a soil test to determine pH, nutrient levels, and organic matter content. Based on the results, we select a custom seed blend from proven Colorado performers, including Kentucky bluegrass for its rich color and self-repairing stolons, tall fescue for deep roots and drought tolerance, and buffalo grass for ultra-low-water native areas. Seed is applied with precision calibrated equipment to ensure even distribution at the optimal rate.",
+      "Building a thick, healthy lawn in California requires more than scattering seed and hoping for the best. The combination of intense sun, water conservation demands, varied soil types, and warm temperatures means only certain grass varieties can truly thrive. Murphy's Turf Care seeding service takes the guesswork out of the equation by selecting, preparing, and planting the exact seed blend your property needs to develop a dense, drought-resistant lawn that stands up to California's demanding conditions.",
+      "We offer both overseeding for established lawns that have thinned out and full new lawn establishment for bare or severely damaged areas. Every seeding project starts with a soil test to determine pH, nutrient levels, and organic matter content. Based on the results, we select a custom seed blend from proven California performers, including Bermuda grass for its heat tolerance and durability, tall fescue for deep roots and drought tolerance, and St. Augustine for lush, shade-friendly coverage. Seed is applied with precision calibrated equipment to ensure even distribution at the optimal rate.",
       "Proper seedbed preparation is just as important as the seed itself. We prepare the soil surface by removing debris, lightly raking or aerating to create seed-to-soil contact, and applying a starter fertilizer that promotes rapid root development without burning tender new seedlings. After planting, you receive a detailed watering schedule customized for your soil type and the current weather patterns. We also offer follow-up germination monitoring visits to catch any issues early, ensuring your investment takes root and fills in beautifully.",
     ],
     included: [
@@ -291,7 +291,7 @@ const servicesData: Record<string, ServiceData> = {
         icon: Sun,
         title: 'Drought Resistance',
         description:
-          'Colorado-adapted grass varieties develop deep root systems that survive dry spells and watering restrictions.',
+          'California-adapted grass varieties develop deep root systems that survive dry spells and watering restrictions.',
       },
       {
         icon: Target,
@@ -330,14 +330,14 @@ const servicesData: Record<string, ServiceData> = {
     ],
     faqs: [
       {
-        question: 'What grass types do you recommend for Colorado?',
+        question: 'What grass types do you recommend for California?',
         answer:
-          'For most Front Range properties, we recommend a blend of Kentucky bluegrass and tall fescue. This combination provides the lush appearance of bluegrass with the deep-rooted drought tolerance of fescue. For xeriscape or low-water areas, buffalo grass is an excellent native option that requires minimal irrigation once established.',
+          'For most California properties, we recommend Bermuda grass for sunny areas and tall fescue for a blend of sun and shade tolerance. This combination provides durability with deep-rooted drought tolerance. For low-water areas, native grasses and drought-tolerant varieties are excellent options that require minimal irrigation once established.',
       },
       {
-        question: 'When is the best time to seed in Colorado?',
+        question: 'When is the best time to seed in California?',
         answer:
-          'Late August through mid-September is the prime seeding window for cool-season grasses on the Front Range. Soil temperatures are warm enough for germination while cooler air temperatures reduce stress on young seedlings. Spring seeding between late April and mid-May is possible but requires more careful watering management.',
+          'For warm-season grasses like Bermuda, late spring through early summer is the prime seeding window. For cool-season grasses like tall fescue, early fall (September through October) is ideal as soil temperatures are warm enough for germination while cooler air temperatures reduce stress on young seedlings.',
       },
       {
         question: 'How long until I can walk on my newly seeded lawn?',
@@ -347,7 +347,7 @@ const servicesData: Record<string, ServiceData> = {
       {
         question: 'Do I really need a soil test before seeding?',
         answer:
-          'Yes, and here is why. Colorado soils are often highly alkaline with pH levels above 7.5, which can lock out key nutrients like iron and phosphorus. A soil test lets us amend the soil and select seed varieties that perform well in your specific conditions, dramatically improving germination rates and long-term lawn health.',
+          'Yes, and here is why. California soils vary widely from region to region, and many areas have alkaline or clay-heavy soils that can lock out key nutrients like iron and phosphorus. A soil test lets us amend the soil and select seed varieties that perform well in your specific conditions, dramatically improving germination rates and long-term lawn health.',
       },
     ],
     relatedServices: [
@@ -361,13 +361,13 @@ const servicesData: Record<string, ServiceData> = {
     name: 'Fertilization',
     slug: 'fertilization',
     icon: Droplets,
-    tagline: 'Custom nutrient programs for Colorado\'s demanding soil',
+    tagline: 'Custom nutrient programs for California\'s varied soil',
     price: 59,
     metaDescription:
-      "Custom lawn fertilization programs for Colorado's alkaline soil. Murphy's Turf uses slow-release formulas and seasonal timing to deliver the right nutrients at the right time.",
+      "Custom lawn fertilization programs for California's varied soil. Murphy's Turf Care uses slow-release formulas and seasonal timing to deliver the right nutrients at the right time.",
     descriptionParagraphs: [
-      "Colorado soil is not short on character, but it is often short on the nutrients your lawn needs to thrive. Most Front Range soils register a pH between 7.5 and 8.5, making them moderately to strongly alkaline. At these levels, essential micronutrients like iron, manganese, and zinc become chemically locked in the soil and unavailable to grass roots, even when they are technically present. The result is yellowing turf, stunted growth, and a lawn that never quite reaches its potential despite your best efforts. Murphy's Turf fertilization service solves this problem with science-backed, custom nutrient programs designed specifically for the soils and growing conditions along Colorado's Front Range.",
-      "We do not believe in one-size-fits-all fertilizer. Every program begins with a soil pH test so we know exactly what your lawn is working with. From there, we formulate a custom blend of macronutrients (nitrogen, phosphorus, and potassium) and targeted micronutrients (iron, sulfur, and manganese are the most common Colorado deficiencies) delivered in a slow-release granular format. Slow-release formulas feed your lawn gradually over six to eight weeks, preventing the surge-and-crash cycle that comes with cheap, fast-release products. This means steadier growth, less mowing, and a deeper green that lasts.",
+      "California soil varies widely by region, but many areas struggle with the nutrients your lawn needs to thrive. Many California soils can be alkaline or clay-heavy, making essential micronutrients like iron, manganese, and zinc chemically locked in the soil and unavailable to grass roots, even when they are technically present. The result is yellowing turf, stunted growth, and a lawn that never quite reaches its potential despite your best efforts. Murphy's Turf Care fertilization service solves this problem with science-backed, custom nutrient programs designed specifically for the soils and growing conditions across California.",
+      "We do not believe in one-size-fits-all fertilizer. Every program begins with a soil pH test so we know exactly what your lawn is working with. From there, we formulate a custom blend of macronutrients (nitrogen, phosphorus, and potassium) and targeted micronutrients (iron, sulfur, and manganese are the most common California deficiencies) delivered in a slow-release granular format. Slow-release formulas feed your lawn gradually over six to eight weeks, preventing the surge-and-crash cycle that comes with cheap, fast-release products. This means steadier growth, less mowing, and a deeper green that lasts.",
       "Timing matters as much as the formula itself. We build a seasonal fertilization schedule that aligns with your lawn's natural growth cycle: a light feeding in early spring to break dormancy, a heavier application in late spring for peak growth, a maintenance round in summer focused on stress tolerance, and a winterizer application in late fall to build root reserves for the cold months ahead. Each visit also includes a pre-emergent or post-emergent weed prevention treatment, so your fertilization program pulls double duty keeping weeds at bay while feeding your turf.",
     ],
     included: [
@@ -401,7 +401,7 @@ const servicesData: Record<string, ServiceData> = {
         icon: Recycle,
         title: 'Environmentally Responsible',
         description:
-          'Slow-release formulas minimize nutrient runoff, protecting Colorado waterways and the local ecosystem.',
+          'Slow-release formulas minimize nutrient runoff, protecting California waterways and the local ecosystem.',
       },
     ],
     beforeAfter: [
@@ -424,7 +424,7 @@ const servicesData: Record<string, ServiceData> = {
       {
         question: 'How many fertilizer applications does my lawn need per year?',
         answer:
-          'Most Colorado lawns perform best with four to five applications per year, spaced roughly six to eight weeks apart from early April through late October. Our seasonal schedule is designed to match your lawn type and local growing conditions.',
+          'Most California lawns perform best with four to five applications per year, spaced roughly six to eight weeks apart from early April through late October. Our seasonal schedule is designed to match your lawn type and local growing conditions.',
       },
       {
         question: 'Is your fertilizer safe for kids and pets?',
@@ -434,7 +434,7 @@ const servicesData: Record<string, ServiceData> = {
       {
         question: 'Why is my lawn yellow even though I fertilize it myself?',
         answer:
-          'Yellowing despite fertilization is almost always caused by iron chlorosis, which is extremely common in Colorado alkaline soils. Standard store-bought fertilizers rarely contain enough iron or the right form of iron to correct this. Our custom blends include chelated iron specifically formulated for high-pH soil.',
+          'Yellowing despite fertilization is almost always caused by iron chlorosis, which is common in many California soils. Standard store-bought fertilizers rarely contain enough iron or the right form of iron to correct this. Our custom blends include chelated iron specifically formulated for high-pH soil.',
       },
       {
         question: 'Do you offer organic fertilization options?',
@@ -456,9 +456,9 @@ const servicesData: Record<string, ServiceData> = {
     tagline: 'Protect your lawn with eco-friendly, targeted treatments',
     price: 79,
     metaDescription:
-      "Eco-friendly lawn pest control for Colorado properties. Murphy's Turf uses integrated pest management to eliminate grubs, chinch bugs, and sod webworms while protecting beneficial insects.",
+      "Eco-friendly lawn pest control for California properties. Murphy's Turf Care uses integrated pest management to eliminate grubs, chinch bugs, and sod webworms while protecting beneficial insects.",
     descriptionParagraphs: [
-      "A beautiful lawn can be destroyed in a matter of weeks by pests you never even see. Below the surface, white grubs, the larval stage of Japanese beetles and masked chafers, feed on grass roots until entire sections of turf can be peeled back like a carpet. On the surface, chinch bugs drain the sap from grass blades, leaving behind expanding patches of brown, dead turf that are often mistaken for drought damage. And at night, sod webworms chew through grass blades close to the soil line, leaving ragged, thinning areas that get worse with every passing day. Murphy's Turf pest control service identifies and eliminates these threats using an integrated pest management approach that is effective, targeted, and environmentally responsible.",
+      "A beautiful lawn can be destroyed in a matter of weeks by pests you never even see. Below the surface, white grubs, the larval stage of Japanese beetles and masked chafers, feed on grass roots until entire sections of turf can be peeled back like a carpet. On the surface, chinch bugs drain the sap from grass blades, leaving behind expanding patches of brown, dead turf that are often mistaken for drought damage. And at night, sod webworms chew through grass blades close to the soil line, leaving ragged, thinning areas that get worse with every passing day. Murphy's Turf Care pest control service identifies and eliminates these threats using an integrated pest management approach that is effective, targeted, and environmentally responsible.",
       "Integrated pest management, or IPM, means we do not blanket your entire property with chemicals and call it a day. Instead, we start with a thorough inspection to identify exactly which pests are present, where they are concentrated, and how severe the infestation is. We pull soil samples, examine damaged turf under magnification, and look for telltale signs like grub castings, webworm frass, or chinch bug feeding patterns. Only after we have a clear diagnosis do we apply treatment, and we target it precisely where it is needed. This approach uses less product, costs less, and protects the beneficial insects like earthworms and pollinators that keep your lawn ecosystem healthy.",
       "For homeowners who prefer a fully natural approach, we offer organic pest control options that rely on biological controls like beneficial nematodes for grubs, Bt (Bacillus thuringiensis) for webworms, and neem-based products for surface feeders. Regardless of the treatment path you choose, every pest control service includes a follow-up inspection two to three weeks after application to verify that the treatment is working and no additional action is needed. We also provide preventive barrier treatments that discourage pests from returning, keeping your lawn protected all season long.",
     ],
@@ -524,7 +524,7 @@ const servicesData: Record<string, ServiceData> = {
           'Yes. All products we use are EPA-registered and labeled for residential use. We recommend keeping pets off treated areas until the product has dried, usually two to four hours. Our organic treatment options are an excellent choice for households with pets who spend a lot of time on the lawn.',
       },
       {
-        question: 'When should I treat for grubs in Colorado?',
+        question: 'When should I treat for grubs in California?',
         answer:
           'Preventive grub treatments are most effective when applied in June or early July, before eggs hatch and larvae begin feeding. Curative treatments for active infestations work best in August and September when grubs are small and close to the surface. Fall grubs that have grown large are much harder to control.',
       },
@@ -549,10 +549,10 @@ const servicesData: Record<string, ServiceData> = {
     price: 199,
     priceLabel: '/month',
     metaDescription:
-      "Year-round lawn care maintenance programs for Colorado homeowners. Murphy's Turf handles spring cleanup, summer watering, fall aeration, and winter prep so you don't have to.",
+      "Year-round lawn care maintenance programs for California homeowners. Murphy's Turf Care handles spring cleanup, summer watering, fall aeration, and seasonal prep so you don't have to.",
     descriptionParagraphs: [
-      "Colorado throws four very different seasons at your lawn, each with its own set of challenges. Spring brings snowmelt flooding, compacted soil, and a rush of weed germination. Summer delivers scorching afternoon sun, watering restrictions, and heat stress. Fall is prime time for aeration and overseeding but also the season when fungal diseases like snow mold begin their setup. And winter, with its freeze-thaw cycles and desiccating winds, can cause crown damage and winterkill that does not become visible until the following spring. Managing all of this on your own requires knowledge, equipment, and a time commitment that most homeowners simply cannot sustain. That is where our Seasonal Maintenance program comes in.",
-      "Murphy's Turf Seasonal Maintenance is a comprehensive, year-round lawn care plan that covers every service your turf needs, when it needs it, for a single predictable monthly fee. In spring, we handle post-winter cleanup, early fertilization, and pre-emergent weed control. Summer brings mowing height guidance, irrigation system auditing, and targeted pest treatments. Fall is dedicated to core aeration, overseeding, winterizer fertilization, and leaf removal. And in late fall and early winter, we apply snow mold prevention treatments and prepare your lawn to weather the cold months ahead. Every visit is performed by the same experienced crew, so we know your property intimately and can spot emerging issues before they become expensive problems.",
+      "California's climate presents unique year-round challenges for your lawn. Spring brings rapid growth, compacted soil, and a rush of weed germination. Summer delivers scorching sun, watering restrictions, and heat stress. Fall is prime time for aeration and overseeding but also the season when cooler temperatures can invite fungal issues. And winter, while milder than other states, can still bring dormancy and damage if lawns are not properly maintained. Managing all of this on your own requires knowledge, equipment, and a time commitment that most homeowners simply cannot sustain. That is where our Seasonal Maintenance program comes in.",
+      "Murphy's Turf Care Seasonal Maintenance is a comprehensive, year-round lawn care plan that covers every service your turf needs, when it needs it, for a single predictable monthly fee. In spring, we handle post-winter cleanup, early fertilization, and pre-emergent weed control. Summer brings mowing height guidance, irrigation system auditing, and targeted pest treatments. Fall is dedicated to core aeration, overseeding, winterizer fertilization, and leaf removal. And in late fall and early winter, we apply snow mold prevention treatments and prepare your lawn to weather the cold months ahead. Every visit is performed by the same experienced crew, so we know your property intimately and can spot emerging issues before they become expensive problems.",
       "This program is not just about convenience, although it is certainly that. It is about results. Lawns on a year-round maintenance plan consistently outperform lawns that receive sporadic, reactive care. Regular, proactive treatment builds cumulative health in the soil, the root system, and the turf canopy that makes your lawn more resistant to drought, disease, pests, and extreme weather. Our seasonal maintenance clients typically see a noticeable improvement in lawn density and color within the first year, and by year two, their lawns are the envy of the neighborhood. The program includes an annual soil test so we can fine-tune every treatment to your property's evolving needs.",
     ],
     included: [
@@ -582,7 +582,7 @@ const servicesData: Record<string, ServiceData> = {
         icon: Snowflake,
         title: 'Four-Season Coverage',
         description:
-          'From spring thaw to winter freeze, your lawn is professionally managed through every Colorado season.',
+          'From spring thaw to winter freeze, your lawn is professionally managed through every California season.',
       },
       {
         icon: Award,
@@ -670,7 +670,7 @@ export async function generateMetadata({
     title: `${service.name} Services`,
     description: service.metaDescription,
     openGraph: {
-      title: `${service.name} | Murphy's Turf`,
+      title: `${service.name} | Murphy's Turf Care`,
       description: service.metaDescription,
       type: 'website',
     },
@@ -738,7 +738,7 @@ export default async function ServiceDetailPage({
       <section className="py-16 sm:py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl sm:text-3xl font-bold font-heading text-charcoal mb-8">
-            Why {service.name} Matters for Colorado Lawns
+            Why {service.name} Matters for California Lawns
           </h2>
           <div className="space-y-6">
             {service.descriptionParagraphs.map((paragraph, index) => (
@@ -889,11 +889,11 @@ export default async function ServiceDetailPage({
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <a
-                href="tel:+17205551234"
+                href="tel:+19513313300"
                 className="inline-flex items-center gap-2 text-forest font-semibold font-body hover:text-forest-light transition-colors"
               >
                 <Phone className="w-5 h-5" />
-                (720) 555-1234
+                (951) 331-3300
               </a>
             </div>
           </div>
@@ -974,7 +974,7 @@ export default async function ServiceDetailPage({
           </h2>
           <p className="text-lg text-white/85 font-body mb-8 max-w-2xl mx-auto leading-relaxed">
             Request a free, no-obligation quote for {service.name.toLowerCase()} and
-            discover why homeowners across Colorado&apos;s Front Range trust Murphy&apos;s
+            discover why homeowners across California trust Murphy&apos;s
             Turf with their lawns.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -986,11 +986,11 @@ export default async function ServiceDetailPage({
               <ArrowRight className="w-5 h-5" />
             </Link>
             <a
-              href="tel:+17205551234"
+              href="tel:+19513313300"
               className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-3.5 rounded-lg transition-colors font-body backdrop-blur-sm"
             >
               <Phone className="w-5 h-5" />
-              (720) 555-1234
+              (951) 331-3300
             </a>
           </div>
         </div>

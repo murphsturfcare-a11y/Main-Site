@@ -21,27 +21,27 @@ const openSans = Open_Sans({
 
 export const metadata: Metadata = {
   title: {
-    default: "Murphy's Turf | Professional Lawn Care & Turf Cleaning in Colorado",
-    template: "%s | Murphy's Turf",
+    default: "Murphy's Turf Care | Professional Lawn Care & Turf Cleaning in California",
+    template: "%s | Murphy's Turf Care",
   },
   description:
-    "Colorado's premier turf cleaning and lawn care company. Professional aeration, seeding, fertilization, pest control, and seasonal maintenance across the Front Range. Get a free quote today!",
+    "California's premier turf cleaning and lawn care company. Professional aeration, seeding, fertilization, pest control, and seasonal maintenance across California. Get a free quote today!",
   keywords: [
-    'lawn care Colorado',
-    'turf cleaning Denver',
-    'aeration Colorado Springs',
-    'lawn maintenance Aurora',
-    'fertilization Boulder',
-    'pest control Fort Collins',
-    'seasonal lawn care Lakewood',
+    'lawn care California',
+    'turf cleaning Los Angeles',
+    'aeration Murrieta',
+    'lawn maintenance Martinez',
+    'fertilization Sacramento',
+    'pest control Inland Empire',
+    'seasonal lawn care Southern California',
   ],
   openGraph: {
-    title: "Murphy's Turf | Professional Lawn Care & Turf Cleaning in Colorado",
+    title: "Murphy's Turf Care | Professional Lawn Care & Turf Cleaning in California",
     description:
-      "Colorado's premier turf cleaning and lawn care company serving the Front Range since 2018.",
+      "California's premier turf cleaning and lawn care company serving communities statewide since 2018.",
     type: 'website',
     locale: 'en_US',
-    siteName: "Murphy's Turf",
+    siteName: "Murphy's Turf Care",
   },
 };
 
