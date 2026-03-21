@@ -58,7 +58,7 @@ export default function Header() {
             aria-label="Murphy's Turf — Home"
           >
             <Image
-              src="/images/logo.png"
+              src="/images/logo.avif"
               alt="Murphy's Turf"
               width={80}
               height={80}
@@ -151,7 +151,7 @@ export default function Header() {
                   aria-label="Murphy's Turf — Home"
                 >
                   <Image
-                    src="/images/logo.png"
+                    src="/images/logo.avif"
                     alt="Murphy's Turf"
                     width={64}
                     height={64}

@@ -59,7 +59,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col font-body">
         <Header />
-        <main className="flex-1">{children}</main>
+        <main className="flex-1 pt-24 lg:pt-28">{children}</main>
         <Footer />
         <ExitIntentPopup />
         <MobileStickyQuote />

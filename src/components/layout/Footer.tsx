@@ -69,7 +69,7 @@ export default function Footer() {
               aria-label="Murphy's Turf — Home"
             >
               <Image
-                src="/images/logo.png"
+                src="/images/logo.avif"
                 alt="Murphy's Turf"
                 width={56}
                 height={56}
