@@ -60,9 +60,9 @@ export default function Header() {
             <Image
               src="/images/logo.png"
               alt="Murphy's Turf"
-              width={64}
-              height={64}
-              className="w-16 h-16 object-contain"
+              width={80}
+              height={80}
+              className="w-20 h-20 object-contain"
             />
           </Link>
         </motion.div>
@@ -85,10 +85,6 @@ export default function Header() {
             Locations
           </Link>
 
-          <Link href="/contact" className={linkClass}>
-            Contact
-          </Link>
-
           <Link href="/blog" className={linkClass}>
             Blog
           </Link>
@@ -96,7 +92,7 @@ export default function Header() {
 
         {/* ---- Desktop CTA ---- */}
         <Link
-          href="/contact"
+          href="/locations"
           className="hidden lg:inline-flex bg-sage text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-forest transition-colors duration-200"
         >
           Get Free Quote
@@ -157,9 +153,9 @@ export default function Header() {
                   <Image
                     src="/images/logo.png"
                     alt="Murphy's Turf"
-                    width={56}
-                    height={56}
-                    className="w-14 h-14 object-contain"
+                    width={64}
+                    height={64}
+                    className="w-16 h-16 object-contain"
                   />
                 </Link>
 
@@ -208,14 +204,6 @@ export default function Header() {
                 </Link>
 
                 <Link
-                  href="/contact"
-                  onClick={closeDrawer}
-                  className="block py-3 font-body text-base font-medium text-charcoal transition-colors hover:text-forest"
-                >
-                  Contact
-                </Link>
-
-                <Link
                   href="/blog"
                   onClick={closeDrawer}
                   className="block py-3 font-body text-base font-medium text-charcoal transition-colors hover:text-forest"
@@ -225,7 +213,7 @@ export default function Header() {
 
                 {/* CTA */}
                 <Link
-                  href="/contact"
+                  href="/locations"
                   onClick={closeDrawer}
                   className="mt-6 block text-center bg-sage text-white px-5 py-3 rounded-lg font-semibold hover:bg-forest transition-colors duration-200"
                 >
