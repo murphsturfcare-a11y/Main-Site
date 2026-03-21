@@ -2,18 +2,9 @@ import type { NavItem, NavGroup } from '../types';
 
 export const mainNav: NavItem[] = [
   { label: "Home", href: "/" },
-  {
-    label: "Learn More",
-    href: "/learn-more",
-    children: [
-      { label: "Turf Maintenance", href: "/learn-more/turf-maintenance" },
-      { label: "Turf Deodorizing", href: "/learn-more/turf-deodorizing" },
-      { label: "Turf Cleaning", href: "/learn-more/turf-cleaning" },
-    ],
-  },
   { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
-  { label: "Pricing", href: "/contact" },
+  { label: "Locations", href: "/locations" },
   { label: "Contact", href: "/contact" },
   { label: "Blog", href: "/blog" },
 ];
@@ -44,8 +35,8 @@ export const footerNav: NavGroup[] = [
       { label: "About", href: "/about" },
       { label: "Contact", href: "/contact" },
       { label: "Blog", href: "/blog" },
-      { label: "Privacy Policy", href: "/privacy" },
-      { label: "Terms of Service", href: "/terms" },
+      { label: "Privacy Policy", href: "/privacy-policy" },
+      { label: "Terms of Service", href: "/terms-of-service" },
     ],
   },
 ];

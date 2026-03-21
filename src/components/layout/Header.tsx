@@ -1,159 +1,9 @@
 'use client';
 
-import { useState, useEffect, useRef, useCallback } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Menu, X, ChevronDown } from 'lucide-react';
-
-/* ------------------------------------------------------------------ */
-/*  Data                                                               */
-/* ------------------------------------------------------------------ */
-
-const learnMoreItems = [
-  { label: 'Turf Maintenance', href: '/learn-more/turf-maintenance' },
-  { label: 'Turf Deodorizing', href: '/learn-more/turf-deodorizing' },
-  { label: 'Turf Cleaning', href: '/learn-more/turf-cleaning' },
-];
-
-/* ------------------------------------------------------------------ */
-/*  Desktop dropdown                                                   */
-/* ------------------------------------------------------------------ */
-
-interface DropdownProps {
-  label: string;
-  items: { label: string; href: string }[];
-  scrolled: boolean;
-}
-
-function DesktopDropdown({ label, items, scrolled }: DropdownProps) {
-  const [open, setOpen] = useState(false);
-  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  const handleMouseEnter = () => {
-    if (timeoutRef.current) clearTimeout(timeoutRef.current);
-    setOpen(true);
-  };
-
-  const handleMouseLeave = () => {
-    timeoutRef.current = setTimeout(() => setOpen(false), 150);
-  };
-
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      setOpen((prev) => !prev);
-    }
-    if (e.key === 'Escape') {
-      setOpen(false);
-    }
-  };
-
-  // Close when focus leaves the container entirely
-  const handleBlur = (e: React.FocusEvent) => {
-    if (!containerRef.current?.contains(e.relatedTarget as Node)) {
-      setOpen(false);
-    }
-  };
-
-  return (
-    <div
-      ref={containerRef}
-      className="relative"
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      onBlur={handleBlur}
-    >
-      <button
-        type="button"
-        onClick={() => setOpen((prev) => !prev)}
-        onKeyDown={handleKeyDown}
-        aria-expanded={open}
-        aria-haspopup="true"
-        className={`flex items-center gap-1 font-body text-sm font-medium transition-colors duration-300 hover:text-sage ${
-          scrolled ? 'text-charcoal' : 'text-white'
-        }`}
-      >
-        {label}
-        <ChevronDown
-          className={`h-4 w-4 transition-transform duration-200 ${open ? 'rotate-180' : ''}`}
-        />
-      </button>
-
-      <div
-        className={`absolute left-1/2 top-full z-50 mt-2 w-52 -translate-x-1/2 origin-top rounded-lg bg-white py-2 shadow-lg ring-1 ring-black/5 transition-all duration-200 ${
-          open
-            ? 'pointer-events-auto scale-100 opacity-100'
-            : 'pointer-events-none scale-95 opacity-0'
-        }`}
-        role="menu"
-      >
-        {items.map((item) => (
-          <Link
-            key={item.href}
-            href={item.href}
-            role="menuitem"
-            className="block px-4 py-2 text-sm font-body text-charcoal transition-colors hover:bg-cream hover:text-forest"
-            onClick={() => setOpen(false)}
-          >
-            {item.label}
-          </Link>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-/* ------------------------------------------------------------------ */
-/*  Mobile collapsible section                                         */
-/* ------------------------------------------------------------------ */
-
-interface CollapsibleProps {
-  label: string;
-  items: { label: string; href: string }[];
-  onNavigate: () => void;
-}
-
-function MobileCollapsible({ label, items, onNavigate }: CollapsibleProps) {
-  const [expanded, setExpanded] = useState(false);
-
-  return (
-    <div>
-      <button
-        type="button"
-        onClick={() => setExpanded((prev) => !prev)}
-        aria-expanded={expanded}
-        className="flex w-full items-center justify-between py-3 font-body text-base font-medium text-charcoal"
-      >
-        {label}
-        <ChevronDown
-          className={`h-5 w-5 transition-transform duration-200 ${
-            expanded ? 'rotate-180' : ''
-          }`}
-        />
-      </button>
-
-      <div
-        className={`overflow-hidden transition-all duration-300 ${
-          expanded ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-        }`}
-      >
-        <div className="ml-4 border-l-2 border-sage/30 pl-4 pb-2">
-          {items.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              onClick={onNavigate}
-              className="block py-2 text-sm font-body text-charcoal-light transition-colors hover:text-forest"
-            >
-              {item.label}
-            </Link>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-}
+import { Menu, X } from 'lucide-react';
 
 /* ------------------------------------------------------------------ */
 /*  Header                                                             */
@@ -227,12 +77,6 @@ export default function Header() {
             Home
           </Link>
 
-          <DesktopDropdown
-            label="Learn More"
-            items={learnMoreItems}
-            scrolled={scrolled}
-          />
-
           <Link href="/about" className={linkClass}>
             About
           </Link>
@@ -241,8 +85,8 @@ export default function Header() {
             Services
           </Link>
 
-          <Link href="/contact" className={linkClass}>
-            Pricing
+          <Link href="/locations" className={linkClass}>
+            Locations
           </Link>
 
           <Link href="/contact" className={linkClass}>
@@ -339,12 +183,6 @@ export default function Header() {
             Home
           </Link>
 
-          <MobileCollapsible
-            label="Learn More"
-            items={learnMoreItems}
-            onNavigate={closeDrawer}
-          />
-
           <Link
             href="/about"
             onClick={closeDrawer}
@@ -362,11 +200,11 @@ export default function Header() {
           </Link>
 
           <Link
-            href="/contact"
+            href="/locations"
             onClick={closeDrawer}
             className="block py-3 font-body text-base font-medium text-charcoal transition-colors hover:text-forest"
           >
-            Pricing
+            Locations
           </Link>
 
           <Link
