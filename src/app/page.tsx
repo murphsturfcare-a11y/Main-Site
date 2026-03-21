@@ -199,10 +199,47 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
 
 function QuoteForm() {
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState('');
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setSubmitted(true);
+    setError('');
+    setSubmitting(true);
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    const payload = {
+      name: formData.get('name') as string,
+      email: formData.get('email') as string,
+      phone: formData.get('phone') as string,
+      serviceType: formData.get('service') as string,
+      propertyAddress: formData.get('address') as string,
+      message: (formData.get('message') as string) || undefined,
+      sourceUrl: window.location.href,
+    };
+
+    try {
+      const res = await fetch('/api/leads', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        setError(data.message || 'Something went wrong. Please try again.');
+        return;
+      }
+
+      setSubmitted(true);
+    } catch {
+      setError('Network error. Please check your connection and try again.');
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   if (submitted) {
@@ -329,12 +366,17 @@ function QuoteForm() {
         </div>
       </div>
 
+      {error && (
+        <p className="mt-4 text-red-600 font-body text-sm">{error}</p>
+      )}
+
       <button
         type="submit"
-        className="btn-hover mt-6 w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-sage hover:bg-sage-dark text-white font-heading font-bold text-lg px-10 py-4 rounded-xl transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5"
+        disabled={submitting}
+        className="btn-hover mt-6 w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-sage hover:bg-sage-dark text-white font-heading font-bold text-lg px-10 py-4 rounded-xl transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5 disabled:opacity-60 disabled:cursor-not-allowed"
       >
         <Send className="w-5 h-5" />
-        Submit Free Quote Request
+        {submitting ? 'Submitting…' : 'Submit Free Quote Request'}
       </button>
     </form>
   );
