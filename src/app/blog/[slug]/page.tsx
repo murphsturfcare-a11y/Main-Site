@@ -14,6 +14,7 @@ import {
   Tag,
   List,
 } from 'lucide-react';
+import { AnimateOnScroll, StaggerContainer, StaggerItem } from '@/components/ui/AnimateOnScroll';
 
 // ---------------------------------------------------------------------------
 // Types
@@ -993,7 +994,7 @@ export default async function BlogPostPage({
       {/* Article Header */}
       {/* ----------------------------------------------------------------- */}
       <section className="bg-white border-b border-gray-100">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
+        <AnimateOnScroll direction="up" className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
           <div className="flex items-center gap-3 mb-5">
             <span
               className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold font-body ${categoryColor}`}
@@ -1019,7 +1020,7 @@ export default async function BlogPostPage({
               <span>{post.readingTime}</span>
             </div>
           </div>
-        </div>
+        </AnimateOnScroll>
       </section>
 
       {/* ----------------------------------------------------------------- */}
@@ -1183,41 +1184,42 @@ export default async function BlogPostPage({
             <h2 className="text-2xl sm:text-3xl font-bold font-heading text-charcoal mb-8 text-center">
               Related Articles
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {relatedPosts.map((related) => {
                 const relatedCategoryColor =
                   categoryColors[related.category] ||
                   'bg-sage/15 text-sage-dark';
                 return (
-                  <Link
-                    key={related.slug}
-                    href={`/blog/${related.slug}`}
-                    className="group bg-white rounded-2xl overflow-hidden border border-gray-100 hover:border-sage/30 hover:shadow-lg transition-all"
-                  >
-                    <div
-                      className={`h-36 bg-gradient-to-r ${related.featuredGradient} relative`}
+                  <StaggerItem key={related.slug}>
+                    <Link
+                      href={`/blog/${related.slug}`}
+                      className="group bg-white rounded-2xl overflow-hidden border border-gray-100 hover:border-sage/30 hover:shadow-lg transition-all card-hover block"
                     >
-                      <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-10" />
-                    </div>
-                    <div className="p-5">
-                      <span
-                        className={`inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold font-body mb-3 ${relatedCategoryColor}`}
+                      <div
+                        className={`h-36 bg-gradient-to-r ${related.featuredGradient} relative`}
                       >
-                        {related.category}
-                      </span>
-                      <h3 className="font-bold font-heading text-charcoal group-hover:text-forest transition-colors mb-2 leading-snug">
-                        {related.title}
-                      </h3>
-                      <div className="flex items-center gap-3 text-xs text-charcoal-light font-body">
-                        <span>{related.author.name}</span>
-                        <span className="text-gray-300">|</span>
-                        <span>{related.readingTime}</span>
+                        <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-10" />
                       </div>
-                    </div>
-                  </Link>
+                      <div className="p-5">
+                        <span
+                          className={`inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold font-body mb-3 ${relatedCategoryColor}`}
+                        >
+                          {related.category}
+                        </span>
+                        <h3 className="font-bold font-heading text-charcoal group-hover:text-forest transition-colors mb-2 leading-snug">
+                          {related.title}
+                        </h3>
+                        <div className="flex items-center gap-3 text-xs text-charcoal-light font-body">
+                          <span>{related.author.name}</span>
+                          <span className="text-gray-300">|</span>
+                          <span>{related.readingTime}</span>
+                        </div>
+                      </div>
+                    </Link>
+                  </StaggerItem>
                 );
               })}
-            </div>
+            </StaggerContainer>
           </div>
         </section>
       )}
@@ -1226,7 +1228,7 @@ export default async function BlogPostPage({
       {/* CTA Banner */}
       {/* ----------------------------------------------------------------- */}
       <section className="py-16 sm:py-20 bg-gradient-to-br from-forest to-forest-dark">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <AnimateOnScroll direction="up" className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold font-heading text-white mb-4">
             Ready for Cleaner, Fresher Turf?
           </h2>
@@ -1252,7 +1254,7 @@ export default async function BlogPostPage({
               (951) 331-3300
             </a>
           </div>
-        </div>
+        </AnimateOnScroll>
       </section>
     </>
   );

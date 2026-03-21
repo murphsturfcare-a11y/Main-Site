@@ -12,7 +12,7 @@ export default function LocationCard({
   slug,
 }: LocationCardProps) {
   return (
-    <div className="bg-white rounded-lg border-l-4 border-forest p-5 shadow-sm hover:shadow-lg transition-all duration-300">
+    <div className="card-hover bg-white rounded-lg border-l-4 border-forest p-5 shadow-sm hover:shadow-lg transition-all duration-300">
       <h3 className="font-heading font-semibold text-lg text-charcoal mb-2">
         {city}
       </h3>

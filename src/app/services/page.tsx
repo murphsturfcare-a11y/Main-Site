@@ -6,6 +6,7 @@ import {
   Phone,
   HelpCircle,
 } from 'lucide-react';
+import { AnimateOnScroll, StaggerContainer, StaggerItem } from '@/components/ui/AnimateOnScroll';
 
 export const metadata: Metadata = {
   title: 'Artificial Turf Cleaning Services | Murphy\'s Turf',
@@ -57,7 +58,7 @@ export default function ServicesPage() {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-forest via-forest-light to-sage py-20 sm:py-28">
         <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-5" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <AnimateOnScroll direction="up" className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-heading text-white mb-6 tracking-tight">
             Our Services
           </h1>
@@ -66,65 +67,66 @@ export default function ServicesPage() {
             years of experience. Serving Murrieta, CA and surrounding areas with
             pet-safe, eco-friendly solutions powered by OxyTurf.
           </p>
-        </div>
+        </AnimateOnScroll>
       </section>
 
       {/* Services Grid */}
       <section className="py-16 sm:py-24 bg-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <StaggerContainer staggerDelay={0.1} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service) => (
-              <div
-                key={service.slug}
-                className="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 hover:border-sage/30 flex flex-col"
-              >
-                {/* Service image */}
-                <div className="aspect-[16/10] relative overflow-hidden">
-                  <Image
-                    src={service.image}
-                    alt={service.name}
-                    fill
-                    className="object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                </div>
+              <StaggerItem key={service.slug}>
+                <div
+                  className="card-hover group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 hover:border-sage/30 flex flex-col h-full"
+                >
+                  {/* Service image */}
+                  <div className="img-zoom aspect-[16/10] relative overflow-hidden">
+                    <Image
+                      src={service.image}
+                      alt={service.name}
+                      fill
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
 
-                <div className="p-8 flex-1 flex flex-col">
-                  {/* Service Name */}
-                  <h2 className="text-xl font-bold font-heading text-charcoal mb-3">
-                    {service.name}
-                  </h2>
+                  <div className="p-8 flex-1 flex flex-col">
+                    {/* Service Name */}
+                    <h2 className="text-xl font-bold font-heading text-charcoal mb-3">
+                      {service.name}
+                    </h2>
 
-                  {/* Description */}
-                  <p className="text-charcoal-light font-body text-sm leading-relaxed mb-6 flex-1">
-                    {service.description}
-                  </p>
+                    {/* Description */}
+                    <p className="text-charcoal-light font-body text-sm leading-relaxed mb-6 flex-1">
+                      {service.description}
+                    </p>
 
-                  {/* CTA */}
-                  <div className="flex items-center justify-between pt-4 border-t border-gray-100">
-                    <Link
-                      href="/contact"
-                      className="text-sm font-semibold font-body text-forest hover:text-forest-dark transition-colors"
-                    >
-                      Get a Quote
-                    </Link>
-                    <Link
-                      href={`/services/${service.slug}`}
-                      className="inline-flex items-center gap-1.5 text-sage font-semibold font-body text-sm hover:text-forest transition-colors group/link"
-                    >
-                      Learn More
-                      <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
-                    </Link>
+                    {/* CTA */}
+                    <div className="flex items-center justify-between pt-4 border-t border-gray-100">
+                      <Link
+                        href="/contact"
+                        className="text-sm font-semibold font-body text-forest hover:text-forest-dark transition-colors"
+                      >
+                        Get a Quote
+                      </Link>
+                      <Link
+                        href={`/services/${service.slug}`}
+                        className="inline-flex items-center gap-1.5 text-sage font-semibold font-body text-sm hover:text-forest transition-colors group/link"
+                      >
+                        Learn More
+                        <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
+                      </Link>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
       </section>
 
       {/* CTA Section */}
       <section className="py-16 sm:py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <AnimateOnScroll direction="up" className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="bg-gradient-to-br from-forest to-forest-dark rounded-3xl p-10 sm:p-14 shadow-xl">
             <HelpCircle className="w-12 h-12 text-sage mx-auto mb-5" />
             <h2 className="text-3xl sm:text-4xl font-bold font-heading text-white mb-4">
@@ -139,21 +141,21 @@ export default function ServicesPage() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 bg-sage hover:bg-sage-dark text-white font-semibold px-8 py-3.5 rounded-lg transition-colors font-body shadow-md hover:shadow-lg"
+                className="btn-hover inline-flex items-center gap-2 bg-sage hover:bg-sage-dark text-white font-semibold px-8 py-3.5 rounded-lg transition-colors font-body shadow-md hover:shadow-lg"
               >
                 Get a Free Quote
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <a
                 href="tel:+19513313300"
-                className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-3.5 rounded-lg transition-colors font-body backdrop-blur-sm"
+                className="btn-hover inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-3.5 rounded-lg transition-colors font-body backdrop-blur-sm"
               >
                 <Phone className="w-5 h-5" />
                 (951) 331-3300
               </a>
             </div>
           </div>
-        </div>
+        </AnimateOnScroll>
       </section>
     </>
   );

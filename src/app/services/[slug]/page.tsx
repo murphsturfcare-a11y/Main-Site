@@ -25,6 +25,7 @@ import {
   TreePine,
   type LucideIcon,
 } from 'lucide-react';
+import { AnimateOnScroll, StaggerContainer, StaggerItem } from '@/components/ui/AnimateOnScroll';
 
 // ---------------------------------------------------------------------------
 // Types
@@ -615,14 +616,14 @@ export default async function ServiceDetailPage({
             <span className="text-white font-medium">{service.name}</span>
           </nav>
 
-          <div>
+          <AnimateOnScroll direction="fade">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-white mb-3 tracking-tight">
               {service.name}
             </h1>
             <p className="text-lg sm:text-xl text-white/85 font-body max-w-2xl">
               {service.tagline}
             </p>
-          </div>
+          </AnimateOnScroll>
         </div>
       </section>
 
@@ -630,7 +631,7 @@ export default async function ServiceDetailPage({
       {/* Full Description */}
       {/* ----------------------------------------------------------------- */}
       <section className="py-16 sm:py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <AnimateOnScroll direction="up" className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl sm:text-3xl font-bold font-heading text-charcoal mb-8">
             About {service.name}
           </h2>
@@ -644,14 +645,14 @@ export default async function ServiceDetailPage({
               </p>
             ))}
           </div>
-        </div>
+        </AnimateOnScroll>
       </section>
 
       {/* ----------------------------------------------------------------- */}
       {/* What's Included */}
       {/* ----------------------------------------------------------------- */}
       <section className="py-16 sm:py-20 bg-cream">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <AnimateOnScroll direction="up" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl sm:text-3xl font-bold font-heading text-charcoal mb-10 text-center">
             What&apos;s Included
           </h2>
@@ -670,7 +671,7 @@ export default async function ServiceDetailPage({
               </div>
             ))}
           </div>
-        </div>
+        </AnimateOnScroll>
       </section>
 
       {/* ----------------------------------------------------------------- */}
@@ -681,27 +682,28 @@ export default async function ServiceDetailPage({
           <h2 className="text-2xl sm:text-3xl font-bold font-heading text-charcoal mb-10 text-center">
             Key Benefits
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {service.benefits.map((benefit, index) => {
               const BenefitIcon = benefit.icon;
               return (
-                <div
-                  key={index}
-                  className="text-center p-6 rounded-2xl bg-cream border border-gray-100 hover:shadow-md transition-shadow"
-                >
-                  <div className="w-12 h-12 bg-sage/15 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <BenefitIcon className="w-6 h-6 text-forest" />
+                <StaggerItem key={index}>
+                  <div
+                    className="text-center p-6 rounded-2xl bg-cream border border-gray-100 hover:shadow-md transition-shadow"
+                  >
+                    <div className="w-12 h-12 bg-sage/15 rounded-xl flex items-center justify-center mx-auto mb-4">
+                      <BenefitIcon className="w-6 h-6 text-forest" />
+                    </div>
+                    <h3 className="font-bold font-heading text-charcoal mb-2">
+                      {benefit.title}
+                    </h3>
+                    <p className="text-sm text-charcoal-light font-body leading-relaxed">
+                      {benefit.description}
+                    </p>
                   </div>
-                  <h3 className="font-bold font-heading text-charcoal mb-2">
-                    {benefit.title}
-                  </h3>
-                  <p className="text-sm text-charcoal-light font-body leading-relaxed">
-                    {benefit.description}
-                  </p>
-                </div>
+                </StaggerItem>
               );
             })}
-          </div>
+          </StaggerContainer>
         </div>
       </section>
 
@@ -713,7 +715,7 @@ export default async function ServiceDetailPage({
           <h2 className="text-2xl sm:text-3xl font-bold font-heading text-charcoal mb-10 text-center">
             Before &amp; After
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <AnimateOnScroll direction="fade" className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {service.beforeAfter.map((pair, index) => (
               <div key={index} className="space-y-3">
                 <h3 className="font-semibold font-heading text-charcoal text-center">
@@ -738,7 +740,7 @@ export default async function ServiceDetailPage({
                 </div>
               </div>
             ))}
-          </div>
+          </AnimateOnScroll>
         </div>
       </section>
 
@@ -746,7 +748,7 @@ export default async function ServiceDetailPage({
       {/* Quote CTA (No Prices) */}
       {/* ----------------------------------------------------------------- */}
       <section className="py-16 sm:py-20 bg-white">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <AnimateOnScroll direction="up" className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="bg-gradient-to-br from-cream to-cream-dark rounded-3xl p-10 sm:p-14 border border-sage/20">
             <h2 className="text-2xl sm:text-3xl font-bold font-heading text-charcoal mb-3">
               Interested in {service.name}?
@@ -774,14 +776,14 @@ export default async function ServiceDetailPage({
               </a>
             </div>
           </div>
-        </div>
+        </AnimateOnScroll>
       </section>
 
       {/* ----------------------------------------------------------------- */}
       {/* FAQ */}
       {/* ----------------------------------------------------------------- */}
       <section className="py-16 sm:py-20 bg-cream">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <AnimateOnScroll direction="up" className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl sm:text-3xl font-bold font-heading text-charcoal mb-10 text-center">
             Frequently Asked Questions
           </h2>
@@ -803,7 +805,7 @@ export default async function ServiceDetailPage({
               </details>
             ))}
           </div>
-        </div>
+        </AnimateOnScroll>
       </section>
 
       {/* ----------------------------------------------------------------- */}
@@ -814,23 +816,24 @@ export default async function ServiceDetailPage({
           <h2 className="text-2xl sm:text-3xl font-bold font-heading text-charcoal mb-10 text-center">
             Related Services
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
+          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
             {service.relatedServices.map((related) => (
-              <Link
-                key={related.slug}
-                href={`/services/${related.slug}`}
-                className="group flex flex-col items-center p-6 bg-cream rounded-2xl border border-gray-100 hover:border-sage/30 hover:shadow-md transition-all text-center"
-              >
-                <span className="font-bold font-heading text-charcoal group-hover:text-forest transition-colors">
-                  {related.name}
-                </span>
-                <span className="text-xs text-sage font-body mt-2 inline-flex items-center gap-1">
-                  View Details
-                  <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
-                </span>
-              </Link>
+              <StaggerItem key={related.slug}>
+                <Link
+                  href={`/services/${related.slug}`}
+                  className="card-hover group flex flex-col items-center p-6 bg-cream rounded-2xl border border-gray-100 hover:border-sage/30 hover:shadow-md transition-all text-center"
+                >
+                  <span className="font-bold font-heading text-charcoal group-hover:text-forest transition-colors">
+                    {related.name}
+                  </span>
+                  <span className="text-xs text-sage font-body mt-2 inline-flex items-center gap-1">
+                    View Details
+                    <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
+                  </span>
+                </Link>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
       </section>
 
@@ -838,7 +841,7 @@ export default async function ServiceDetailPage({
       {/* Bottom CTA */}
       {/* ----------------------------------------------------------------- */}
       <section className="py-16 sm:py-20 bg-gradient-to-br from-forest to-forest-dark">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <AnimateOnScroll direction="up" className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold font-heading text-white mb-4">
             Ready to Restore Your Turf?
           </h2>
@@ -850,20 +853,20 @@ export default async function ServiceDetailPage({
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 bg-sage hover:bg-sage-dark text-white font-semibold px-8 py-3.5 rounded-lg transition-colors font-body shadow-md hover:shadow-lg"
+              className="btn-hover inline-flex items-center gap-2 bg-sage hover:bg-sage-dark text-white font-semibold px-8 py-3.5 rounded-lg transition-colors font-body shadow-md hover:shadow-lg"
             >
               Contact Us for Pricing
               <ArrowRight className="w-5 h-5" />
             </Link>
             <a
               href="tel:+19513313300"
-              className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-3.5 rounded-lg transition-colors font-body backdrop-blur-sm"
+              className="btn-hover inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-3.5 rounded-lg transition-colors font-body backdrop-blur-sm"
             >
               <Phone className="w-5 h-5" />
               (951) 331-3300
             </a>
           </div>
-        </div>
+        </AnimateOnScroll>
       </section>
     </>
   );

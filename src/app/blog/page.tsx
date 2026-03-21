@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import BlogContent from './BlogContent';
+import { AnimateOnScroll } from '@/components/ui/AnimateOnScroll';
 
 export const metadata: Metadata = {
   title: 'Blog',
@@ -182,7 +183,7 @@ export default function BlogPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-forest-dark/95 via-forest/90 to-sage/80" />
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_25%_25%,white_1px,transparent_1px)] bg-[length:40px_40px]" />
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 text-center">
+        <AnimateOnScroll direction="up" className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 text-center">
           <span className="inline-block bg-sage/20 border border-sage/40 text-sage-light font-body font-semibold text-sm px-4 py-1.5 rounded-full mb-6">
             Insights &amp; Expertise
           </span>
@@ -192,7 +193,7 @@ export default function BlogPage() {
           <p className="mt-5 text-lg sm:text-xl text-gray-200 font-body leading-relaxed max-w-3xl mx-auto">
             Artificial Turf Cleaning Tips, Pet Care Guides &amp; Maintenance Insights for California Homeowners
           </p>
-        </div>
+        </AnimateOnScroll>
       </section>
 
       {/* ----------------- BLOG CONTENT ----------------- */}

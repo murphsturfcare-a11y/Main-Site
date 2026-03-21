@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { AnimateOnScroll, StaggerContainer, StaggerItem } from '@/components/ui/AnimateOnScroll';
 
 const stats = [
   { value: '30+', label: 'Years Experience' },
@@ -19,41 +20,48 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto px-4 text-center py-20">
-        <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white">
-          When You Care About Clean Turf, Call Murphy&apos;s Turf
-        </h1>
+        <AnimateOnScroll direction="fade" duration={0.5}>
+          <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white">
+            When You Care About Clean Turf, Call Murphy&apos;s Turf
+          </h1>
+        </AnimateOnScroll>
 
-        <p className="text-lg md:text-xl text-white/90 mt-4 font-body">
-          Worried about your pets ruining your turf? Count on Murphy&apos;s to
-          help bring your artificial grass back to life with a variety of
-          services ranging from reblooming to debris removal &amp; deodorizing.
-        </p>
+        <AnimateOnScroll direction="up" delay={0.15} duration={0.5}>
+          <p className="text-lg md:text-xl text-white/90 mt-4 font-body">
+            Worried about your pets ruining your turf? Count on Murphy&apos;s to
+            help bring your artificial grass back to life with a variety of
+            services ranging from reblooming to debris removal &amp; deodorizing.
+          </p>
+        </AnimateOnScroll>
 
-        <Link
-          href="/contact"
-          className="inline-block bg-sage text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-sage-light transition mt-8"
-        >
-          Get Your Free Quote
-        </Link>
+        <AnimateOnScroll direction="up" delay={0.3} duration={0.5}>
+          <Link
+            href="/contact"
+            className="inline-block bg-sage text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-sage-light transition mt-8"
+          >
+            Get Your Free Quote
+          </Link>
+        </AnimateOnScroll>
 
         {/* Stats row */}
-        <div className="mt-12 grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0">
+        <StaggerContainer staggerDelay={0.1} className="mt-12 grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0">
           {stats.map((stat, index) => (
-            <div
-              key={stat.label}
-              className={`px-4 ${
-                index < stats.length - 1
-                  ? 'lg:border-r lg:border-white/30'
-                  : ''
-              }`}
-            >
-              <p className="text-3xl font-bold text-white">{stat.value}</p>
-              <p className="text-sm text-white/80 mt-1 font-body">
-                {stat.label}
-              </p>
-            </div>
+            <StaggerItem key={stat.label} direction="up" distance={20} duration={0.4}>
+              <div
+                className={`px-4 ${
+                  index < stats.length - 1
+                    ? 'lg:border-r lg:border-white/30'
+                    : ''
+                }`}
+              >
+                <p className="text-3xl font-bold text-white">{stat.value}</p>
+                <p className="text-sm text-white/80 mt-1 font-body">
+                  {stat.label}
+                </p>
+              </div>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );

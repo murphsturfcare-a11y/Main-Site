@@ -16,6 +16,7 @@ import {
   CheckCircle,
 } from 'lucide-react';
 import { notFound } from 'next/navigation';
+import { AnimateOnScroll, StaggerContainer, StaggerItem } from '@/components/ui/AnimateOnScroll';
 
 // ---------------------------------------------------------------------------
 // Types
@@ -410,7 +411,7 @@ export default async function LocationPage({
             <span className="text-white">{location.city}, {location.state}</span>
           </nav>
 
-          <div className="max-w-4xl">
+          <AnimateOnScroll direction="up" className="max-w-4xl">
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white/90 text-sm font-body px-4 py-2 rounded-full mb-6">
               <MapPin className="w-4 h-4" />
               {location.city}, California
@@ -441,7 +442,7 @@ export default async function LocationPage({
                 <ArrowRight className="w-4 h-4" />
               </a>
             </div>
-          </div>
+          </AnimateOnScroll>
         </div>
       </section>
 
@@ -449,7 +450,7 @@ export default async function LocationPage({
       <section className="py-16 sm:py-24 bg-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-3 gap-12">
-            <div className="lg:col-span-2">
+            <AnimateOnScroll direction="up" className="lg:col-span-2">
               <h2 className="text-3xl font-bold text-charcoal font-heading mb-8">
                 Professional Artificial Turf Cleaning in {location.city}
               </h2>
@@ -463,7 +464,7 @@ export default async function LocationPage({
                   </p>
                 ))}
               </div>
-            </div>
+            </AnimateOnScroll>
             <div className="space-y-6">
               {/* Climate Card */}
               <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
@@ -518,29 +519,30 @@ export default async function LocationPage({
               climate and conditions.
             </p>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service) => (
-              <Link
-                key={service.slug}
-                href={`/services/${service.slug}`}
-                className="group bg-cream hover:bg-white rounded-2xl p-6 border border-gray-100 hover:border-sage/30 hover:shadow-lg transition-all duration-300"
-              >
-                <div className="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-sage/20 transition-colors">
-                  <ServiceIcon icon={service.icon} className="w-6 h-6 text-sage" />
-                </div>
-                <h3 className="text-xl font-bold text-charcoal font-heading mb-2 group-hover:text-forest transition-colors">
-                  {service.name}
-                </h3>
-                <p className="text-charcoal-light font-body text-sm leading-relaxed mb-4">
-                  {service.shortDescription}
-                </p>
-                <span className="inline-flex items-center gap-1 text-sage font-semibold font-body text-sm group-hover:text-forest transition-colors">
-                  Learn More
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </span>
-              </Link>
+              <StaggerItem key={service.slug}>
+                <Link
+                  href={`/services/${service.slug}`}
+                  className="group bg-cream hover:bg-white rounded-2xl p-6 border border-gray-100 hover:border-sage/30 hover:shadow-lg transition-all duration-300 card-hover block"
+                >
+                  <div className="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-sage/20 transition-colors">
+                    <ServiceIcon icon={service.icon} className="w-6 h-6 text-sage" />
+                  </div>
+                  <h3 className="text-xl font-bold text-charcoal font-heading mb-2 group-hover:text-forest transition-colors">
+                    {service.name}
+                  </h3>
+                  <p className="text-charcoal-light font-body text-sm leading-relaxed mb-4">
+                    {service.shortDescription}
+                  </p>
+                  <span className="inline-flex items-center gap-1 text-sage font-semibold font-body text-sm group-hover:text-forest transition-colors">
+                    Learn More
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </Link>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
       </section>
 
@@ -555,40 +557,39 @@ export default async function LocationPage({
               Real reviews from real neighbors in {location.city}.
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+          <StaggerContainer className="grid md:grid-cols-3 gap-6 lg:gap-8">
             {location.testimonials.map((testimonial, idx) => (
-              <div
-                key={idx}
-                className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-100"
-              >
-                <div className="flex gap-1 mb-4">
-                  {Array.from({ length: testimonial.rating }).map((_, i) => (
-                    <Star
-                      key={i}
-                      className="w-5 h-5 text-sage fill-sage"
-                    />
-                  ))}
-                </div>
-                <p className="text-charcoal-light font-body text-sm leading-relaxed mb-6 italic">
-                  &ldquo;{testimonial.text}&rdquo;
-                </p>
-                <div className="border-t border-gray-100 pt-4">
-                  <p className="font-semibold text-charcoal font-heading text-sm">
-                    {testimonial.name}
+              <StaggerItem key={idx}>
+                <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-100 card-hover">
+                  <div className="flex gap-1 mb-4">
+                    {Array.from({ length: testimonial.rating }).map((_, i) => (
+                      <Star
+                        key={i}
+                        className="w-5 h-5 text-sage fill-sage"
+                      />
+                    ))}
+                  </div>
+                  <p className="text-charcoal-light font-body text-sm leading-relaxed mb-6 italic">
+                    &ldquo;{testimonial.text}&rdquo;
                   </p>
-                  <p className="text-charcoal-light font-body text-xs">
-                    {testimonial.neighborhood}, {location.city}
-                  </p>
+                  <div className="border-t border-gray-100 pt-4">
+                    <p className="font-semibold text-charcoal font-heading text-sm">
+                      {testimonial.name}
+                    </p>
+                    <p className="text-charcoal-light font-body text-xs">
+                      {testimonial.neighborhood}, {location.city}
+                    </p>
+                  </div>
                 </div>
-              </div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
       </section>
 
       {/* Lead Form Embed */}
       <section id="quote-form" className="py-16 sm:py-24 bg-cream scroll-mt-20">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <AnimateOnScroll direction="up" className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <h2 className="text-3xl sm:text-4xl font-bold text-charcoal font-heading mb-4">
               Get Your Free Quote in {location.city}
@@ -605,7 +606,7 @@ export default async function LocationPage({
               loading="lazy"
             />
           </div>
-        </div>
+        </AnimateOnScroll>
       </section>
 
       {/* Service Area Details & Neighborhoods */}
@@ -619,23 +620,22 @@ export default async function LocationPage({
               <p className="text-charcoal-light font-body leading-relaxed mb-8">
                 {location.serviceAreaDescription}
               </p>
-              <div className="grid grid-cols-2 gap-3">
+              <StaggerContainer staggerDelay={0.05} className="grid grid-cols-2 gap-3">
                 {location.neighborhoods.map((neighborhood) => (
-                  <div
-                    key={neighborhood}
-                    className="flex items-center gap-2 bg-cream rounded-lg px-4 py-3"
-                  >
-                    <CheckCircle className="w-4 h-4 text-sage flex-shrink-0" />
-                    <span className="text-charcoal font-body text-sm font-medium">
-                      {neighborhood}
-                    </span>
-                  </div>
+                  <StaggerItem key={neighborhood} direction="scale">
+                    <div className="flex items-center gap-2 bg-cream rounded-lg px-4 py-3">
+                      <CheckCircle className="w-4 h-4 text-sage flex-shrink-0" />
+                      <span className="text-charcoal font-body text-sm font-medium">
+                        {neighborhood}
+                      </span>
+                    </div>
+                  </StaggerItem>
                 ))}
-              </div>
+              </StaggerContainer>
             </div>
 
             {/* Google Map */}
-            <div className="w-full">
+            <AnimateOnScroll direction="fade" className="w-full">
               <iframe
                 src={`https://www.google.com/maps?q=${location.mapQuery}&output=embed`}
                 width="100%"
@@ -647,7 +647,7 @@ export default async function LocationPage({
                 title={`Murphy's Turf - ${location.city}`}
                 className="rounded-xl"
               />
-            </div>
+            </AnimateOnScroll>
           </div>
         </div>
       </section>

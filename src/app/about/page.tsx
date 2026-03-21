@@ -12,6 +12,7 @@ import {
   PawPrint,
   Droplets,
 } from 'lucide-react';
+import { AnimateOnScroll, StaggerContainer, StaggerItem } from '@/components/ui/AnimateOnScroll';
 
 export const metadata: Metadata = {
   title: 'About Us',
@@ -121,7 +122,7 @@ export default function AboutPage() {
         <div className="absolute top-1/2 right-1/4 opacity-5 text-white">
           <PawPrint className="w-24 h-24 rotate-[45deg]" />
         </div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <AnimateOnScroll direction="up" className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm rounded-full px-5 py-2 mb-8">
             <PawPrint className="w-5 h-5 text-sage-light" />
             <span className="text-white/90 font-body text-sm font-medium">
@@ -135,13 +136,13 @@ export default function AboutPage() {
             Get to know the crew behind California&apos;s favorite turf cleaning service
             — a hardworking pack with 30+ years of cleaning experience and plenty of personality.
           </p>
-        </div>
+        </AnimateOnScroll>
       </section>
 
       {/* Welcome / Company Story Section */}
       <section className="py-20 sm:py-28 bg-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
+          <AnimateOnScroll direction="up" delay={0.1} className="max-w-4xl mx-auto">
             <div className="flex items-center gap-3 mb-8">
               <div className="w-12 h-1 bg-sage rounded-full" />
               <span className="text-sage-dark font-semibold font-body text-sm uppercase tracking-wider">
@@ -160,13 +161,13 @@ export default function AboutPage() {
               technicians so each and every team member is proud of the service they provide our
               clients.
             </p>
-          </div>
+          </AnimateOnScroll>
         </div>
       </section>
 
       {/* Team Group Photo Section */}
       <section className="py-16 sm:py-20 bg-white">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <AnimateOnScroll direction="fade" duration={0.8} className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="relative rounded-2xl overflow-hidden shadow-xl">
             <Image
               src="/images/team/team-group.jpg"
@@ -179,7 +180,7 @@ export default function AboutPage() {
           <p className="text-center text-charcoal-light font-body text-sm mt-4 italic">
             The Murphy&apos;s Turf crew — keeping California&apos;s turf clean, one yard at a time
           </p>
-        </div>
+        </AnimateOnScroll>
       </section>
 
       {/* Team Members Grid */}
@@ -198,63 +199,64 @@ export default function AboutPage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <StaggerContainer staggerDelay={0.15} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {teamMembers.map((member, index) => (
-              <div
-                key={member.name}
-                className={`relative bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group ${
-                  index % 2 === 0 ? 'hover:-translate-y-1' : 'hover:translate-y-[-0.25rem]'
-                }`}
-              >
-                {/* Top accent bar */}
-                <div className={`h-2 ${member.accent}`} />
+              <StaggerItem key={member.name}>
+                <div
+                  className={`card-hover relative bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group ${
+                    index % 2 === 0 ? 'hover:-translate-y-1' : 'hover:translate-y-[-0.25rem]'
+                  }`}
+                >
+                  {/* Top accent bar */}
+                  <div className={`h-2 ${member.accent}`} />
 
-                {/* Decorative paw prints on card */}
-                <div className="absolute top-6 right-4 opacity-[0.06] group-hover:opacity-[0.12] transition-opacity">
-                  <PawPrint className="w-20 h-20 rotate-[-20deg] text-charcoal" />
-                </div>
-
-                <div className="p-8 pt-6 relative">
-                  {/* Team member photo */}
-                  <div
-                    className={`w-32 h-32 mx-auto rounded-full ring-4 ${member.ring} ring-offset-4 ring-offset-white overflow-hidden mb-6`}
-                  >
-                    <Image
-                      src={member.image}
-                      alt={member.name}
-                      width={160}
-                      height={160}
-                      className="rounded-full object-cover w-full h-full"
-                    />
+                  {/* Decorative paw prints on card */}
+                  <div className="absolute top-6 right-4 opacity-[0.06] group-hover:opacity-[0.12] transition-opacity">
+                    <PawPrint className="w-20 h-20 rotate-[-20deg] text-charcoal" />
                   </div>
 
-                  {/* Name & Title */}
-                  <div className="text-center mb-5">
-                    <h3 className="text-2xl font-bold font-heading text-charcoal">
-                      {member.name}
-                    </h3>
-                    <span
-                      className={`inline-block mt-2 px-4 py-1 rounded-full text-xs font-semibold font-body uppercase tracking-wider text-white ${member.accent}`}
+                  <div className="p-8 pt-6 relative">
+                    {/* Team member photo */}
+                    <div
+                      className={`img-zoom w-32 h-32 mx-auto rounded-full ring-4 ${member.ring} ring-offset-4 ring-offset-white overflow-hidden mb-6`}
                     >
-                      {member.title}
-                    </span>
+                      <Image
+                        src={member.image}
+                        alt={member.name}
+                        width={160}
+                        height={160}
+                        className="rounded-full object-cover w-full h-full"
+                      />
+                    </div>
+
+                    {/* Name & Title */}
+                    <div className="text-center mb-5">
+                      <h3 className="text-2xl font-bold font-heading text-charcoal">
+                        {member.name}
+                      </h3>
+                      <span
+                        className={`inline-block mt-2 px-4 py-1 rounded-full text-xs font-semibold font-body uppercase tracking-wider text-white ${member.accent}`}
+                      >
+                        {member.title}
+                      </span>
+                    </div>
+
+                    {/* Bio */}
+                    <p className="text-charcoal-light font-body text-sm leading-relaxed italic text-center">
+                      &ldquo;{member.bio}&rdquo;
+                    </p>
                   </div>
 
-                  {/* Bio */}
-                  <p className="text-charcoal-light font-body text-sm leading-relaxed italic text-center">
-                    &ldquo;{member.bio}&rdquo;
-                  </p>
+                  {/* Bottom paw trail decoration */}
+                  <div className="flex justify-center gap-1.5 pb-5 opacity-30">
+                    <PawPrint className="w-3 h-3 text-charcoal" />
+                    <PawPrint className="w-3 h-3 text-charcoal translate-y-0.5" />
+                    <PawPrint className="w-3 h-3 text-charcoal" />
+                  </div>
                 </div>
-
-                {/* Bottom paw trail decoration */}
-                <div className="flex justify-center gap-1.5 pb-5 opacity-30">
-                  <PawPrint className="w-3 h-3 text-charcoal" />
-                  <PawPrint className="w-3 h-3 text-charcoal translate-y-0.5" />
-                  <PawPrint className="w-3 h-3 text-charcoal" />
-                </div>
-              </div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
       </section>
 
@@ -274,31 +276,32 @@ export default function AboutPage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value) => (
-              <div
-                key={value.title}
-                className="bg-cream rounded-xl p-8 shadow-sm hover:shadow-lg transition-shadow duration-300 text-center group"
-              >
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-sage/10 rounded-2xl mb-6 group-hover:bg-sage/20 transition-colors">
-                  <value.icon className="w-8 h-8 text-forest" />
+              <StaggerItem key={value.title} direction="left">
+                <div
+                  className="bg-cream rounded-xl p-8 shadow-sm hover:shadow-lg transition-shadow duration-300 text-center group"
+                >
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-sage/10 rounded-2xl mb-6 group-hover:bg-sage/20 transition-colors">
+                    <value.icon className="w-8 h-8 text-forest" />
+                  </div>
+                  <h3 className="text-xl font-bold font-heading text-charcoal mb-3">
+                    {value.title}
+                  </h3>
+                  <p className="text-charcoal-light font-body text-sm leading-relaxed">
+                    {value.description}
+                  </p>
                 </div>
-                <h3 className="text-xl font-bold font-heading text-charcoal mb-3">
-                  {value.title}
-                </h3>
-                <p className="text-charcoal-light font-body text-sm leading-relaxed">
-                  {value.description}
-                </p>
-              </div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
       </section>
 
       {/* OxyTurf Section */}
       <section className="py-20 sm:py-24 bg-gradient-to-br from-forest-dark via-forest to-forest-light overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center relative">
+          <AnimateOnScroll direction="up" className="max-w-4xl mx-auto text-center relative">
             {/* Decorative elements */}
             <div className="absolute -top-4 -left-8 opacity-10">
               <Droplets className="w-24 h-24 text-white" />
@@ -349,13 +352,13 @@ export default function AboutPage() {
                 </div>
               </div>
             </div>
-          </div>
+          </AnimateOnScroll>
         </div>
       </section>
 
       {/* CTA Section */}
       <section className="py-20 sm:py-24 bg-cream-dark">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <AnimateOnScroll direction="up" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <PawPrint className="w-10 h-10 text-sage mx-auto mb-6" />
           <h2 className="text-3xl sm:text-4xl font-bold font-heading text-charcoal mb-6">
             Ready to See What Murphy&apos;s Team Can Do for Your Turf?
@@ -367,13 +370,13 @@ export default function AboutPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center bg-sage hover:bg-sage-dark text-white font-semibold px-8 py-4 rounded-lg transition-colors font-body shadow-md hover:shadow-lg text-lg"
+              className="btn-hover inline-flex items-center justify-center bg-sage hover:bg-sage-dark text-white font-semibold px-8 py-4 rounded-lg transition-colors font-body shadow-md hover:shadow-lg text-lg"
             >
               Get Free Quote
             </Link>
             <a
               href="tel:+19513313300"
-              className="inline-flex items-center justify-center gap-2 bg-forest hover:bg-forest-light text-white font-semibold px-8 py-4 rounded-lg transition-colors font-body shadow-md hover:shadow-lg text-lg"
+              className="btn-hover inline-flex items-center justify-center gap-2 bg-forest hover:bg-forest-light text-white font-semibold px-8 py-4 rounded-lg transition-colors font-body shadow-md hover:shadow-lg text-lg"
             >
               <Phone className="w-5 h-5" />
               (951) 331-3300
@@ -383,7 +386,7 @@ export default function AboutPage() {
             <Clock className="w-4 h-4" />
             Serving all of California
           </p>
-        </div>
+        </AnimateOnScroll>
       </section>
     </>
   );
