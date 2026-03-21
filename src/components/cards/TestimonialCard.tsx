@@ -14,7 +14,7 @@ export default function TestimonialCard({
   location,
 }: TestimonialCardProps) {
   return (
-    <div className="bg-white rounded-xl p-6 shadow-sm">
+    <div className="card-hover bg-white rounded-xl p-6 shadow-sm">
       <StarRating rating={rating} />
       <blockquote className="font-body text-charcoal italic leading-relaxed mt-4 mb-4">
         &ldquo;{quote}&rdquo;

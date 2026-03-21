@@ -12,6 +12,7 @@ import {
   CalendarCheck,
   AlertCircle,
 } from 'lucide-react';
+import { AnimateOnScroll, StaggerContainer, StaggerItem } from '@/components/ui/AnimateOnScroll';
 
 export default function ContactPage() {
   const [formStatus, setFormStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
@@ -31,7 +32,7 @@ export default function ContactPage() {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-forest via-forest-light to-sage py-20 sm:py-28">
         <div className="absolute inset-0 bg-[url('/images/grass-pattern.svg')] opacity-5" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <AnimateOnScroll direction="up" className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white font-heading tracking-tight mb-4">
             Get In Touch
           </h1>
@@ -40,12 +41,12 @@ export default function ContactPage() {
             <span className="font-semibold text-cream">free quote</span> and let our experts
             take care of the rest.
           </p>
-        </div>
+        </AnimateOnScroll>
       </section>
 
       {/* Contact Form + Info Section */}
       <section className="py-16 sm:py-24 bg-cream">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <AnimateOnScroll direction="up" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
             {/* LEFT: Contact Form */}
             <div className="lg:col-span-3">
@@ -358,12 +359,12 @@ export default function ContactPage() {
               </div>
             </div>
           </div>
-        </div>
+        </AnimateOnScroll>
       </section>
 
       {/* Map Placeholder */}
       <section className="bg-cream-dark">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <AnimateOnScroll direction="fade" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <h2 className="text-2xl sm:text-3xl font-bold text-forest font-heading text-center mb-8">
             Find Us
           </h2>
@@ -386,7 +387,7 @@ export default function ContactPage() {
               />
             </div>
           </div>
-        </div>
+        </AnimateOnScroll>
       </section>
 
       {/* What to Expect Section */}
@@ -401,58 +402,64 @@ export default function ContactPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
             {/* Step 1 */}
-            <div className="relative text-center group">
-              <div className="w-16 h-16 bg-sage/15 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-sage/25 transition-colors">
-                <ClipboardList className="w-8 h-8 text-sage" />
+            <StaggerItem>
+              <div className="relative text-center group">
+                <div className="w-16 h-16 bg-sage/15 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-sage/25 transition-colors">
+                  <ClipboardList className="w-8 h-8 text-sage" />
+                </div>
+                <div className="absolute -top-2 left-1/2 -translate-x-1/2 -translate-y-0 w-8 h-8 bg-forest text-white rounded-full flex items-center justify-center text-sm font-bold font-heading shadow-md">
+                  1
+                </div>
+                <h3 className="text-xl font-bold text-charcoal font-heading mb-3">
+                  Submit Your Request
+                </h3>
+                <p className="text-charcoal-light font-body leading-relaxed">
+                  Fill out our quick contact form or give us a call. Tell us about your turf and
+                  what services you&apos;re interested in.
+                </p>
               </div>
-              <div className="absolute -top-2 left-1/2 -translate-x-1/2 -translate-y-0 w-8 h-8 bg-forest text-white rounded-full flex items-center justify-center text-sm font-bold font-heading shadow-md">
-                1
-              </div>
-              <h3 className="text-xl font-bold text-charcoal font-heading mb-3">
-                Submit Your Request
-              </h3>
-              <p className="text-charcoal-light font-body leading-relaxed">
-                Fill out our quick contact form or give us a call. Tell us about your turf and
-                what services you&apos;re interested in.
-              </p>
-            </div>
+            </StaggerItem>
 
             {/* Step 2 */}
-            <div className="relative text-center group">
-              <div className="w-16 h-16 bg-sage/15 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-sage/25 transition-colors">
-                <MessageCircle className="w-8 h-8 text-sage" />
+            <StaggerItem>
+              <div className="relative text-center group">
+                <div className="w-16 h-16 bg-sage/15 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-sage/25 transition-colors">
+                  <MessageCircle className="w-8 h-8 text-sage" />
+                </div>
+                <div className="absolute -top-2 left-1/2 -translate-x-1/2 -translate-y-0 w-8 h-8 bg-forest text-white rounded-full flex items-center justify-center text-sm font-bold font-heading shadow-md">
+                  2
+                </div>
+                <h3 className="text-xl font-bold text-charcoal font-heading mb-3">
+                  We&apos;ll Contact You Within 24 Hours
+                </h3>
+                <p className="text-charcoal-light font-body leading-relaxed">
+                  A turf cleaning specialist will reach out to discuss your needs, answer any questions,
+                  and schedule a convenient time to visit.
+                </p>
               </div>
-              <div className="absolute -top-2 left-1/2 -translate-x-1/2 -translate-y-0 w-8 h-8 bg-forest text-white rounded-full flex items-center justify-center text-sm font-bold font-heading shadow-md">
-                2
-              </div>
-              <h3 className="text-xl font-bold text-charcoal font-heading mb-3">
-                We&apos;ll Contact You Within 24 Hours
-              </h3>
-              <p className="text-charcoal-light font-body leading-relaxed">
-                A turf cleaning specialist will reach out to discuss your needs, answer any questions,
-                and schedule a convenient time to visit.
-              </p>
-            </div>
+            </StaggerItem>
 
             {/* Step 3 */}
-            <div className="relative text-center group">
-              <div className="w-16 h-16 bg-sage/15 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-sage/25 transition-colors">
-                <CalendarCheck className="w-8 h-8 text-sage" />
+            <StaggerItem>
+              <div className="relative text-center group">
+                <div className="w-16 h-16 bg-sage/15 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-sage/25 transition-colors">
+                  <CalendarCheck className="w-8 h-8 text-sage" />
+                </div>
+                <div className="absolute -top-2 left-1/2 -translate-x-1/2 -translate-y-0 w-8 h-8 bg-forest text-white rounded-full flex items-center justify-center text-sm font-bold font-heading shadow-md">
+                  3
+                </div>
+                <h3 className="text-xl font-bold text-charcoal font-heading mb-3">
+                  Get Your Free On-Site Estimate
+                </h3>
+                <p className="text-charcoal-light font-body leading-relaxed">
+                  We&apos;ll visit your property, assess your turf&apos;s condition, and provide a
+                  detailed, no-obligation quote tailored to your needs.
+                </p>
               </div>
-              <div className="absolute -top-2 left-1/2 -translate-x-1/2 -translate-y-0 w-8 h-8 bg-forest text-white rounded-full flex items-center justify-center text-sm font-bold font-heading shadow-md">
-                3
-              </div>
-              <h3 className="text-xl font-bold text-charcoal font-heading mb-3">
-                Get Your Free On-Site Estimate
-              </h3>
-              <p className="text-charcoal-light font-body leading-relaxed">
-                We&apos;ll visit your property, assess your turf&apos;s condition, and provide a
-                detailed, no-obligation quote tailored to your needs.
-              </p>
-            </div>
-          </div>
+            </StaggerItem>
+          </StaggerContainer>
         </div>
       </section>
     </>

@@ -15,7 +15,7 @@ export default function ServiceCard({
   slug,
 }: ServiceCardProps) {
   return (
-    <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+    <div className="card-hover bg-white rounded-xl p-6 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
       <Icon size={40} className="text-forest mb-4" aria-hidden="true" />
       <h3 className="font-heading font-semibold text-lg text-charcoal mb-2">
         {name}

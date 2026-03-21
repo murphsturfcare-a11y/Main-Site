@@ -148,7 +148,7 @@ export default function BlogContent({
                   {paginatedPosts.map((post) => (
                     <article
                       key={post.slug}
-                      className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl border border-gray-100 hover:border-sage/30 transition-all duration-300 hover:-translate-y-1 flex flex-col"
+                      className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl border border-gray-100 hover:border-sage/30 transition-all duration-300 hover:-translate-y-1 flex flex-col card-hover"
                     >
                       {/* Featured image placeholder */}
                       <Link
@@ -156,7 +156,7 @@ export default function BlogContent({
                         className="block relative"
                       >
                         <div
-                          className={`aspect-[16/9] bg-gradient-to-br ${post.gradient} relative overflow-hidden`}
+                          className={`aspect-[16/9] bg-gradient-to-br ${post.gradient} relative overflow-hidden img-zoom`}
                         >
                           <div className="absolute inset-0 opacity-20 bg-[radial-gradient(ellipse_at_30%_20%,rgba(255,255,255,0.4)_0%,transparent_70%)]" />
                           <div className="absolute inset-0 opacity-30 bg-[linear-gradient(135deg,transparent_30%,rgba(0,0,0,0.1)_70%)]" />

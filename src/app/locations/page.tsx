@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { MapPin, ArrowRight, Map, Phone, Sparkles } from 'lucide-react';
+import { AnimateOnScroll, StaggerContainer, StaggerItem } from '@/components/ui/AnimateOnScroll';
 
 export const metadata: Metadata = {
   title: 'Service Locations | Artificial Turf Cleaning Across California',
@@ -47,7 +48,7 @@ export default function LocationsPage() {
         <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-5" />
         <div className="absolute top-10 right-10 w-72 h-72 bg-sage/20 rounded-full blur-3xl" />
         <div className="absolute bottom-10 left-10 w-96 h-96 bg-forest-dark/30 rounded-full blur-3xl" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <AnimateOnScroll direction="up" className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white/90 text-sm font-body px-4 py-2 rounded-full mb-6">
             <MapPin className="w-4 h-4" />
             Proudly Serving 4 California Regions
@@ -63,7 +64,7 @@ export default function LocationsPage() {
             With 30+ years of experience and our proprietary OxyTurf product, we keep your
             synthetic turf clean, safe, and looking like new.
           </p>
-        </div>
+        </AnimateOnScroll>
       </section>
 
       {/* Location Cards Grid */}
@@ -79,45 +80,46 @@ export default function LocationsPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8">
+          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8">
             {locations.map((location) => (
-              <Link
-                key={location.slug}
-                href={`/locations/${location.slug}`}
-                className="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 hover:border-sage/30 hover:-translate-y-1"
-              >
-                <div className="h-2 bg-gradient-to-r from-forest to-sage group-hover:from-sage group-hover:to-forest transition-all duration-500" />
-                <div className="p-6 sm:p-8">
-                  <div className="flex items-start justify-between mb-4">
-                    <div>
-                      <div className="inline-block bg-cream text-forest text-xs font-semibold font-body px-3 py-1 rounded-full mb-3">
-                        {location.highlight}
+              <StaggerItem key={location.slug}>
+                <Link
+                  href={`/locations/${location.slug}`}
+                  className="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 hover:border-sage/30 hover:-translate-y-1 card-hover block"
+                >
+                  <div className="h-2 bg-gradient-to-r from-forest to-sage group-hover:from-sage group-hover:to-forest transition-all duration-500" />
+                  <div className="p-6 sm:p-8">
+                    <div className="flex items-start justify-between mb-4">
+                      <div>
+                        <div className="inline-block bg-cream text-forest text-xs font-semibold font-body px-3 py-1 rounded-full mb-3">
+                          {location.highlight}
+                        </div>
+                        <h3 className="text-2xl font-bold text-charcoal font-heading group-hover:text-forest transition-colors">
+                          {location.city}
+                        </h3>
                       </div>
-                      <h3 className="text-2xl font-bold text-charcoal font-heading group-hover:text-forest transition-colors">
-                        {location.city}
-                      </h3>
+                      <div className="w-10 h-10 bg-cream rounded-full flex items-center justify-center group-hover:bg-sage/10 transition-colors flex-shrink-0">
+                        <MapPin className="w-5 h-5 text-sage" />
+                      </div>
                     </div>
-                    <div className="w-10 h-10 bg-cream rounded-full flex items-center justify-center group-hover:bg-sage/10 transition-colors flex-shrink-0">
-                      <MapPin className="w-5 h-5 text-sage" />
+                    <p className="text-charcoal-light font-body text-sm leading-relaxed mb-6">
+                      {location.description}
+                    </p>
+                    <div className="flex items-center gap-2 text-sage font-semibold font-body text-sm group-hover:text-forest transition-colors">
+                      View Services & Get Quote
+                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </div>
                   </div>
-                  <p className="text-charcoal-light font-body text-sm leading-relaxed mb-6">
-                    {location.description}
-                  </p>
-                  <div className="flex items-center gap-2 text-sage font-semibold font-body text-sm group-hover:text-forest transition-colors">
-                    View Services & Get Quote
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </div>
-              </Link>
+                </Link>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
       </section>
 
       {/* Map Placeholder */}
       <section className="py-16 sm:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <AnimateOnScroll direction="fade" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <h2 className="text-3xl sm:text-4xl font-bold text-charcoal font-heading mb-4">
               Our Coverage Area
@@ -153,7 +155,7 @@ export default function LocationsPage() {
               </div>
             </div>
           </div>
-        </div>
+        </AnimateOnScroll>
       </section>
 
       {/* Stats Section */}
@@ -181,7 +183,7 @@ export default function LocationsPage() {
 
       {/* CTA Section */}
       <section className="py-16 sm:py-24 bg-cream">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <AnimateOnScroll direction="up" className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="bg-white rounded-2xl shadow-lg p-8 sm:p-12 border border-gray-100">
             <div className="w-16 h-16 bg-sage/10 rounded-full flex items-center justify-center mx-auto mb-6">
               <Sparkles className="w-8 h-8 text-sage" />
@@ -211,7 +213,7 @@ export default function LocationsPage() {
               </a>
             </div>
           </div>
-        </div>
+        </AnimateOnScroll>
       </section>
     </>
   );

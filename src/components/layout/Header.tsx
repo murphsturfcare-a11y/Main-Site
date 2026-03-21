@@ -4,6 +4,7 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Menu, X, ChevronDown } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 /* ------------------------------------------------------------------ */
 /*  Data                                                               */
@@ -200,26 +201,28 @@ export default function Header() {
         aria-label="Main navigation"
       >
         {/* ---- Logo ---- */}
-        <Link
-          href="/"
-          className="flex items-center gap-2 transition-colors duration-300"
-          aria-label="Murphy's Turf — Home"
-        >
-          <Image
-            src="/images/logo.png"
-            alt="Murphy's Turf"
-            width={48}
-            height={48}
-            className="w-12 h-12 object-contain"
-          />
-          <span
-            className={`font-heading text-xl font-bold transition-colors duration-300 ${
-              scrolled ? 'text-forest' : 'text-white'
-            }`}
+        <motion.div whileHover={{ scale: 1.02 }} transition={{ duration: 0.2 }}>
+          <Link
+            href="/"
+            className="flex items-center gap-2 transition-colors duration-300"
+            aria-label="Murphy's Turf — Home"
           >
-            Murphy&apos;s Turf
-          </span>
-        </Link>
+            <Image
+              src="/images/logo.png"
+              alt="Murphy's Turf"
+              width={48}
+              height={48}
+              className="w-12 h-12 object-contain"
+            />
+            <span
+              className={`font-heading text-xl font-bold transition-colors duration-300 ${
+                scrolled ? 'text-forest' : 'text-white'
+              }`}
+            >
+              Murphy&apos;s Turf
+            </span>
+          </Link>
+        </motion.div>
 
         {/* ---- Desktop nav ---- */}
         <div className="hidden lg:flex lg:items-center lg:gap-8">
@@ -279,122 +282,132 @@ export default function Header() {
       {/*  Mobile drawer                                                    */}
       {/* ================================================================ */}
 
-      {/* Backdrop */}
-      <div
-        className={`fixed inset-0 z-40 bg-black/50 transition-opacity duration-300 lg:hidden ${
-          drawerOpen
-            ? 'pointer-events-auto opacity-100'
-            : 'pointer-events-none opacity-0'
-        }`}
-        aria-hidden="true"
-        onClick={closeDrawer}
-      />
-
-      {/* Drawer panel */}
-      <div
-        className={`fixed right-0 top-0 z-50 h-full w-80 max-w-[85vw] bg-white shadow-xl transition-transform duration-300 ease-in-out lg:hidden ${
-          drawerOpen ? 'translate-x-0' : 'translate-x-full'
-        }`}
-        role="dialog"
-        aria-modal="true"
-        aria-label="Mobile navigation"
-      >
-        {/* Drawer header */}
-        <div className="flex items-center justify-between border-b border-gray-200 px-5 py-4">
-          <Link
-            href="/"
-            onClick={closeDrawer}
-            className="flex items-center gap-2 text-forest"
-            aria-label="Murphy's Turf — Home"
-          >
-            <Image
-              src="/images/logo.png"
-              alt="Murphy's Turf"
-              width={48}
-              height={48}
-              className="w-10 h-10 object-contain"
+      <AnimatePresence>
+        {drawerOpen && (
+          <>
+            {/* Backdrop */}
+            <motion.div
+              key="drawer-backdrop"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3, ease: 'easeOut' }}
+              className="fixed inset-0 z-40 bg-black/50 lg:hidden"
+              aria-hidden="true"
+              onClick={closeDrawer}
             />
-            <span className="font-heading text-lg font-bold">
-              Murphy&apos;s Turf
-            </span>
-          </Link>
 
-          <button
-            type="button"
-            onClick={closeDrawer}
-            className="text-charcoal-light hover:text-charcoal transition-colors"
-            aria-label="Close menu"
-          >
-            <X className="h-6 w-6" />
-          </button>
-        </div>
+            {/* Drawer panel */}
+            <motion.div
+              key="drawer-panel"
+              initial={{ x: '100%' }}
+              animate={{ x: 0 }}
+              exit={{ x: '100%' }}
+              transition={{ duration: 0.3, ease: 'easeOut' }}
+              className="fixed right-0 top-0 z-50 h-full w-80 max-w-[85vw] bg-white shadow-xl lg:hidden"
+              role="dialog"
+              aria-modal="true"
+              aria-label="Mobile navigation"
+            >
+              {/* Drawer header */}
+              <div className="flex items-center justify-between border-b border-gray-200 px-5 py-4">
+                <Link
+                  href="/"
+                  onClick={closeDrawer}
+                  className="flex items-center gap-2 text-forest"
+                  aria-label="Murphy's Turf — Home"
+                >
+                  <Image
+                    src="/images/logo.png"
+                    alt="Murphy's Turf"
+                    width={48}
+                    height={48}
+                    className="w-10 h-10 object-contain"
+                  />
+                  <span className="font-heading text-lg font-bold">
+                    Murphy&apos;s Turf
+                  </span>
+                </Link>
 
-        {/* Drawer body */}
-        <div className="overflow-y-auto h-[calc(100%-73px)] px-5 py-4">
-          <Link
-            href="/"
-            onClick={closeDrawer}
-            className="block py-3 font-body text-base font-medium text-charcoal transition-colors hover:text-forest"
-          >
-            Home
-          </Link>
+                <button
+                  type="button"
+                  onClick={closeDrawer}
+                  className="text-charcoal-light hover:text-charcoal transition-colors"
+                  aria-label="Close menu"
+                >
+                  <X className="h-6 w-6" />
+                </button>
+              </div>
 
-          <MobileCollapsible
-            label="Learn More"
-            items={learnMoreItems}
-            onNavigate={closeDrawer}
-          />
+              {/* Drawer body */}
+              <div className="overflow-y-auto h-[calc(100%-73px)] px-5 py-4">
+                <Link
+                  href="/"
+                  onClick={closeDrawer}
+                  className="block py-3 font-body text-base font-medium text-charcoal transition-colors hover:text-forest"
+                >
+                  Home
+                </Link>
 
-          <Link
-            href="/about"
-            onClick={closeDrawer}
-            className="block py-3 font-body text-base font-medium text-charcoal transition-colors hover:text-forest"
-          >
-            About
-          </Link>
+                <MobileCollapsible
+                  label="Learn More"
+                  items={learnMoreItems}
+                  onNavigate={closeDrawer}
+                />
 
-          <Link
-            href="/services"
-            onClick={closeDrawer}
-            className="block py-3 font-body text-base font-medium text-charcoal transition-colors hover:text-forest"
-          >
-            Services
-          </Link>
+                <Link
+                  href="/about"
+                  onClick={closeDrawer}
+                  className="block py-3 font-body text-base font-medium text-charcoal transition-colors hover:text-forest"
+                >
+                  About
+                </Link>
 
-          <Link
-            href="/contact"
-            onClick={closeDrawer}
-            className="block py-3 font-body text-base font-medium text-charcoal transition-colors hover:text-forest"
-          >
-            Pricing
-          </Link>
+                <Link
+                  href="/services"
+                  onClick={closeDrawer}
+                  className="block py-3 font-body text-base font-medium text-charcoal transition-colors hover:text-forest"
+                >
+                  Services
+                </Link>
 
-          <Link
-            href="/contact"
-            onClick={closeDrawer}
-            className="block py-3 font-body text-base font-medium text-charcoal transition-colors hover:text-forest"
-          >
-            Contact
-          </Link>
+                <Link
+                  href="/contact"
+                  onClick={closeDrawer}
+                  className="block py-3 font-body text-base font-medium text-charcoal transition-colors hover:text-forest"
+                >
+                  Pricing
+                </Link>
 
-          <Link
-            href="/blog"
-            onClick={closeDrawer}
-            className="block py-3 font-body text-base font-medium text-charcoal transition-colors hover:text-forest"
-          >
-            Blog
-          </Link>
+                <Link
+                  href="/contact"
+                  onClick={closeDrawer}
+                  className="block py-3 font-body text-base font-medium text-charcoal transition-colors hover:text-forest"
+                >
+                  Contact
+                </Link>
 
-          {/* CTA */}
-          <Link
-            href="/contact"
-            onClick={closeDrawer}
-            className="mt-6 block text-center bg-sage text-white px-5 py-3 rounded-lg font-semibold hover:bg-forest transition-colors duration-200"
-          >
-            Get Free Quote
-          </Link>
-        </div>
-      </div>
+                <Link
+                  href="/blog"
+                  onClick={closeDrawer}
+                  className="block py-3 font-body text-base font-medium text-charcoal transition-colors hover:text-forest"
+                >
+                  Blog
+                </Link>
+
+                {/* CTA */}
+                <Link
+                  href="/contact"
+                  onClick={closeDrawer}
+                  className="mt-6 block text-center bg-sage text-white px-5 py-3 rounded-lg font-semibold hover:bg-forest transition-colors duration-200"
+                >
+                  Get Free Quote
+                </Link>
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
     </header>
   );
 }

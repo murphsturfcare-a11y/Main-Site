@@ -3,6 +3,12 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
+import {
+  AnimateOnScroll,
+  StaggerContainer,
+  StaggerItem,
+} from '@/components/ui/AnimateOnScroll';
 import {
   Star,
   ThumbsUp,
@@ -325,7 +331,7 @@ function QuoteForm() {
 
       <button
         type="submit"
-        className="mt-6 w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-sage hover:bg-sage-dark text-white font-heading font-bold text-lg px-10 py-4 rounded-xl transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5"
+        className="btn-hover mt-6 w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-sage hover:bg-sage-dark text-white font-heading font-bold text-lg px-10 py-4 rounded-xl transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5"
       >
         <Send className="w-5 h-5" />
         Submit Free Quote Request
@@ -356,43 +362,68 @@ export default function Home() {
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 lg:py-40">
           <div className="max-w-3xl">
-            <span className="inline-block bg-sage/20 border border-sage/40 text-sage-light font-body font-semibold text-sm px-4 py-1.5 rounded-full mb-6">
+            <motion.span
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, ease: 'easeOut' }}
+              className="inline-block bg-sage/20 border border-sage/40 text-sage-light font-body font-semibold text-sm px-4 py-1.5 rounded-full mb-6"
+            >
               Professional Artificial Turf Cleaning
-            </span>
-            <h1 className="font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-white leading-tight tracking-tight">
+            </motion.span>
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0, ease: 'easeOut' }}
+              className="font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-white leading-tight tracking-tight"
+            >
               When you care about clean turf call{' '}
               <span className="text-sage-light">Murphy&apos;s Turf</span>
-            </h1>
-            <p className="mt-6 text-lg sm:text-xl text-gray-200 font-body leading-relaxed max-w-2xl">
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.2, ease: 'easeOut' }}
+              className="mt-6 text-lg sm:text-xl text-gray-200 font-body leading-relaxed max-w-2xl"
+            >
               Worried about your pets ruining your turf? Count on Murphy&apos;s to help
               bring your artificial grass back to life with a variety of services
               ranging from reblooming to debris &amp; deodorizing. Our chemicals are
               no worry as we use pet-friendly and environmentally safe products to
               refresh your lawn.
-            </p>
-            <div className="mt-8 flex flex-col sm:flex-row gap-4">
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.4, ease: 'easeOut' }}
+              className="mt-8 flex flex-col sm:flex-row gap-4"
+            >
               <Link
                 href="/services"
-                className="inline-flex items-center justify-center gap-2 bg-sage hover:bg-sage-dark text-white font-heading font-bold text-lg px-8 py-4 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+                className="btn-hover inline-flex items-center justify-center gap-2 bg-sage hover:bg-sage-dark text-white font-heading font-bold text-lg px-8 py-4 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
               >
                 Read More
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-2 bg-white/15 backdrop-blur-sm border border-white/25 hover:bg-white/25 text-white font-heading font-semibold text-lg px-8 py-4 rounded-xl transition-all duration-200"
+                className="btn-hover inline-flex items-center justify-center gap-2 bg-white/15 backdrop-blur-sm border border-white/25 hover:bg-white/25 text-white font-heading font-semibold text-lg px-8 py-4 rounded-xl transition-all duration-200"
               >
                 Contact Us
               </Link>
               <a
                 href="tel:+19513313300"
-                className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 text-white font-heading font-semibold text-lg px-8 py-4 rounded-xl transition-all duration-200"
+                className="btn-hover inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 text-white font-heading font-semibold text-lg px-8 py-4 rounded-xl transition-all duration-200"
               >
                 <Phone className="w-5 h-5" />
                 Call Us
               </a>
-            </div>
-            <div className="mt-6">
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.5, ease: 'easeOut' }}
+              className="mt-6"
+            >
               <Link
                 href="/services/poop-scooping"
                 className="inline-flex items-center gap-2 text-sage-light hover:text-white font-body font-medium text-base transition-colors group"
@@ -400,7 +431,7 @@ export default function Home() {
                 Just looking for a Poop Removal Service?
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </Link>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -408,58 +439,59 @@ export default function Home() {
       {/* ────────────────── 2. WELCOME SECTION ────────────────── */}
       <section className="bg-white py-20 sm:py-28">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="inline-block font-body font-semibold text-sage text-sm uppercase tracking-widest mb-3">
-            About Us
-          </span>
-          <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-charcoal">
-            Welcome to Murphy&apos;s
-          </h2>
-          <p className="mt-6 font-body text-charcoal-light text-lg leading-relaxed max-w-3xl mx-auto">
-            With over 30 years in the cleaning &amp; disinfecting business, we&apos;ve
-            decided to take our experience and bring it to your lawn with turf
-            maintenance and pet waste removal services. Murphy&apos;s technicians are
-            carefully selected and trained to provide you the satisfaction of clean
-            and maintained artificial grass with the best of our ability. With this
-            process we ensure consistency as well as invest in our technicians so
-            each and every team member is proud of the service they provide our
-            clients.
-          </p>
-          <div className="mt-8 flex items-center justify-center gap-3">
-            <div className="w-12 h-1 rounded-full bg-sage" />
-            <Sparkles className="w-5 h-5 text-sage" />
-            <div className="w-12 h-1 rounded-full bg-sage" />
-          </div>
+          <AnimateOnScroll direction="fade" duration={0.6}>
+            <span className="inline-block font-body font-semibold text-sage text-sm uppercase tracking-widest mb-3">
+              About Us
+            </span>
+            <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-charcoal">
+              Welcome to Murphy&apos;s
+            </h2>
+            <p className="mt-6 font-body text-charcoal-light text-lg leading-relaxed max-w-3xl mx-auto">
+              With over 30 years in the cleaning &amp; disinfecting business, we&apos;ve
+              decided to take our experience and bring it to your lawn with turf
+              maintenance and pet waste removal services. Murphy&apos;s technicians are
+              carefully selected and trained to provide you the satisfaction of clean
+              and maintained artificial grass with the best of our ability. With this
+              process we ensure consistency as well as invest in our technicians so
+              each and every team member is proud of the service they provide our
+              clients.
+            </p>
+            <div className="mt-8 flex items-center justify-center gap-3">
+              <div className="w-12 h-1 rounded-full bg-sage" />
+              <Sparkles className="w-5 h-5 text-sage" />
+              <div className="w-12 h-1 rounded-full bg-sage" />
+            </div>
+          </AnimateOnScroll>
         </div>
       </section>
 
       {/* ────────────────── 3. TRUST BADGES ────────────────── */}
       <section className="bg-cream border-y border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-3 gap-8">
             {trustBadges.map((badge) => {
               const Icon = badge.icon;
               return (
-                <div
-                  key={badge.label}
-                  className="flex flex-col items-center text-center gap-3"
-                >
-                  <div className="w-16 h-16 bg-sage/15 rounded-full flex items-center justify-center">
-                    <Icon className="w-8 h-8 text-forest" />
+                <StaggerItem key={badge.label} direction="scale">
+                  <div className="flex flex-col items-center text-center gap-3">
+                    <div className="w-16 h-16 bg-sage/15 rounded-full flex items-center justify-center">
+                      <Icon className="w-8 h-8 text-forest" />
+                    </div>
+                    <span className="font-heading font-bold text-lg text-charcoal">
+                      {badge.label}
+                    </span>
                   </div>
-                  <span className="font-heading font-bold text-lg text-charcoal">
-                    {badge.label}
-                  </span>
-                </div>
+                </StaggerItem>
               );
             })}
-          </div>
+          </StaggerContainer>
         </div>
       </section>
 
       {/* ────────────────── 4. SERVICES SECTION ────────────────── */}
       <section className="bg-cream py-20 sm:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-14">
+          <AnimateOnScroll direction="fade" duration={0.6} className="text-center max-w-2xl mx-auto mb-14">
             <span className="inline-block font-body font-semibold text-sage text-sm uppercase tracking-widest mb-3">
               What We Offer
             </span>
@@ -470,46 +502,47 @@ export default function Home() {
               Comprehensive artificial turf care solutions to keep your lawn looking,
               feeling, and smelling like new.
             </p>
-          </div>
+          </AnimateOnScroll>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          <StaggerContainer staggerDelay={0.1} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {services.map((service) => (
-              <Link
-                key={service.slug}
-                href={`/services/${service.slug}`}
-                className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl border border-gray-100 hover:border-sage/30 transition-all duration-300 hover:-translate-y-1 flex flex-col"
-              >
-                {/* Service image */}
-                <div className="aspect-[16/10] relative overflow-hidden">
-                  <Image
-                    src={service.image}
-                    alt={service.name}
-                    fill
-                    className="object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                </div>
-                <div className="p-6 flex flex-col flex-1">
-                  <h3 className="font-heading font-bold text-xl text-charcoal group-hover:text-forest transition-colors">
-                    {service.name}
-                  </h3>
-                  <p className="mt-2 font-body text-charcoal-light leading-relaxed text-[15px] flex-1">
-                    {service.description}
-                  </p>
-                  <span className="mt-4 inline-flex items-center gap-1 font-body font-semibold text-sage group-hover:text-sage-dark transition-colors text-sm">
-                    Learn More
-                    <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                  </span>
-                </div>
-              </Link>
+              <StaggerItem key={service.slug}>
+                <Link
+                  href={`/services/${service.slug}`}
+                  className="card-hover group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl border border-gray-100 hover:border-sage/30 transition-all duration-300 flex flex-col"
+                >
+                  {/* Service image */}
+                  <div className="aspect-[16/10] relative overflow-hidden img-zoom">
+                    <Image
+                      src={service.image}
+                      alt={service.name}
+                      fill
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                  <div className="p-6 flex flex-col flex-1">
+                    <h3 className="font-heading font-bold text-xl text-charcoal group-hover:text-forest transition-colors">
+                      {service.name}
+                    </h3>
+                    <p className="mt-2 font-body text-charcoal-light leading-relaxed text-[15px] flex-1">
+                      {service.description}
+                    </p>
+                    <span className="mt-4 inline-flex items-center gap-1 font-body font-semibold text-sage group-hover:text-sage-dark transition-colors text-sm">
+                      Learn More
+                      <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                    </span>
+                  </div>
+                </Link>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
       </section>
 
       {/* ────────────────── 5. BEFORE / AFTER SECTION ────────────────── */}
       <section className="bg-white py-20 sm:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-14">
+          <AnimateOnScroll direction="fade" duration={0.6} className="text-center max-w-2xl mx-auto mb-14">
             <span className="inline-block font-body font-semibold text-sage text-sm uppercase tracking-widest mb-3">
               Real Results
             </span>
@@ -520,26 +553,28 @@ export default function Home() {
               Real transformations from Murphy&apos;s Turf cleaning projects.
               The results speak for themselves.
             </p>
-          </div>
+          </AnimateOnScroll>
 
           {/* Before/After comparison */}
-          <div className="bg-cream rounded-3xl overflow-hidden shadow-lg border border-gray-100 max-w-5xl mx-auto">
-            <Image
-              src="/images/before-after.png"
-              alt="Before and after artificial turf cleaning"
-              width={800}
-              height={400}
-              className="rounded-t-3xl w-full h-auto"
-            />
-            <div className="px-6 py-5 text-center bg-white">
-              <p className="font-heading font-semibold text-charcoal text-lg">
-                Complete Turf Restoration
-              </p>
-              <p className="mt-1 font-body text-charcoal-light text-sm">
-                Pet hair removal, blooming, disinfect &amp; deodorize with OxyTurf
-              </p>
+          <AnimateOnScroll direction="fade" duration={0.8}>
+            <div className="bg-cream rounded-3xl overflow-hidden shadow-lg border border-gray-100 max-w-5xl mx-auto">
+              <Image
+                src="/images/before-after.png"
+                alt="Before and after artificial turf cleaning"
+                width={800}
+                height={400}
+                className="rounded-t-3xl w-full h-auto"
+              />
+              <div className="px-6 py-5 text-center bg-white">
+                <p className="font-heading font-semibold text-charcoal text-lg">
+                  Complete Turf Restoration
+                </p>
+                <p className="mt-1 font-body text-charcoal-light text-sm">
+                  Pet hair removal, blooming, disinfect &amp; deodorize with OxyTurf
+                </p>
+              </div>
             </div>
-          </div>
+          </AnimateOnScroll>
         </div>
       </section>
 
@@ -548,7 +583,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Content */}
-            <div>
+            <AnimateOnScroll direction="left">
               <span className="inline-block font-body font-semibold text-sage text-sm uppercase tracking-widest mb-3">
                 Our Secret Weapon
               </span>
@@ -578,27 +613,29 @@ export default function Home() {
               <div className="mt-8">
                 <Link
                   href="/services/oxyturf"
-                  className="inline-flex items-center justify-center gap-2 bg-forest hover:bg-forest-dark text-white font-heading font-bold text-lg px-8 py-4 rounded-xl transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5"
+                  className="btn-hover inline-flex items-center justify-center gap-2 bg-forest hover:bg-forest-dark text-white font-heading font-bold text-lg px-8 py-4 rounded-xl transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5"
                 >
                   Learn About OxyTurf
                   <ArrowRight className="w-5 h-5" />
                 </Link>
               </div>
-            </div>
+            </AnimateOnScroll>
             {/* OxyTurf product image */}
-            <div className="relative">
-              <div className="aspect-[4/3] relative rounded-2xl shadow-xl overflow-hidden">
-                <Image
-                  src="/images/oxyturf-logo.png"
-                  alt="OxyTurf - Pet-safe artificial turf cleaner and deodorizer"
-                  fill
-                  className="object-cover"
-                />
+            <AnimateOnScroll direction="right">
+              <div className="relative">
+                <div className="aspect-[4/3] relative rounded-2xl shadow-xl overflow-hidden">
+                  <Image
+                    src="/images/oxyturf-logo.png"
+                    alt="OxyTurf - Pet-safe artificial turf cleaner and deodorizer"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                {/* Decorative accent */}
+                <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-sage/20 rounded-full blur-2xl" />
+                <div className="absolute -top-4 -left-4 w-32 h-32 bg-forest/10 rounded-full blur-3xl" />
               </div>
-              {/* Decorative accent */}
-              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-sage/20 rounded-full blur-2xl" />
-              <div className="absolute -top-4 -left-4 w-32 h-32 bg-forest/10 rounded-full blur-3xl" />
-            </div>
+            </AnimateOnScroll>
           </div>
         </div>
       </section>
@@ -606,7 +643,7 @@ export default function Home() {
       {/* ────────────────── 7. TESTIMONIALS ────────────────── */}
       <section className="bg-white py-20 sm:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-14">
+          <AnimateOnScroll direction="fade" duration={0.6} className="text-center max-w-2xl mx-auto mb-14">
             <span className="inline-block font-body font-semibold text-sage text-sm uppercase tracking-widest mb-3">
               Customer Reviews
             </span>
@@ -617,51 +654,50 @@ export default function Home() {
               Don&apos;t just take our word for it. Hear from pet owners across
               California who trust Murphy&apos;s Turf.
             </p>
-          </div>
+          </AnimateOnScroll>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
             {testimonials.map((t, i) => (
-              <div
-                key={i}
-                className="bg-cream/60 rounded-2xl p-7 border border-gray-100 hover:shadow-lg transition-shadow duration-300 flex flex-col"
-              >
-                {/* Stars */}
-                <div className="flex gap-1 mb-4">
-                  {[...Array(5)].map((_, idx) => (
-                    <Star
-                      key={idx}
-                      className="w-5 h-5 fill-amber-400 text-amber-400"
-                    />
-                  ))}
-                </div>
-                <blockquote className="font-body text-charcoal-light leading-relaxed flex-1">
-                  &ldquo;{t.quote}&rdquo;
-                </blockquote>
-                <div className="mt-6 flex items-center gap-3">
-                  <div className="w-10 h-10 bg-forest/10 rounded-full flex items-center justify-center">
-                    <span className="font-heading font-bold text-forest text-sm">
-                      {t.name.charAt(0)}
-                    </span>
+              <StaggerItem key={i}>
+                <div className="card-hover bg-cream/60 rounded-2xl p-7 border border-gray-100 hover:shadow-lg transition-shadow duration-300 flex flex-col h-full">
+                  {/* Stars */}
+                  <div className="flex gap-1 mb-4">
+                    {[...Array(5)].map((_, idx) => (
+                      <Star
+                        key={idx}
+                        className="w-5 h-5 fill-amber-400 text-amber-400"
+                      />
+                    ))}
                   </div>
-                  <div>
-                    <p className="font-heading font-semibold text-charcoal text-sm">
-                      {t.name}
-                    </p>
-                    <p className="font-body text-charcoal-light text-xs">
-                      {t.location}
-                    </p>
+                  <blockquote className="font-body text-charcoal-light leading-relaxed flex-1">
+                    &ldquo;{t.quote}&rdquo;
+                  </blockquote>
+                  <div className="mt-6 flex items-center gap-3">
+                    <div className="w-10 h-10 bg-forest/10 rounded-full flex items-center justify-center">
+                      <span className="font-heading font-bold text-forest text-sm">
+                        {t.name.charAt(0)}
+                      </span>
+                    </div>
+                    <div>
+                      <p className="font-heading font-semibold text-charcoal text-sm">
+                        {t.name}
+                      </p>
+                      <p className="font-body text-charcoal-light text-xs">
+                        {t.location}
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
       </section>
 
       {/* ────────────────── 8. SERVICE AREAS ────────────────── */}
       <section className="bg-cream py-20 sm:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-14">
+          <AnimateOnScroll direction="fade" duration={0.6} className="text-center max-w-2xl mx-auto mb-14">
             <span className="inline-block font-body font-semibold text-sage text-sm uppercase tracking-widest mb-3">
               Where We Work
             </span>
@@ -672,43 +708,44 @@ export default function Home() {
               From the coast to the capital, our team brings professional turf
               cleaning right to your doorstep.
             </p>
-          </div>
+          </AnimateOnScroll>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {locations.map((loc) => (
-              <Link
-                key={loc.slug}
-                href={`/locations/${loc.slug}`}
-                className="group bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl border border-gray-100 hover:border-sage/30 transition-all duration-300 hover:-translate-y-1 text-center"
-              >
-                <div className="w-14 h-14 bg-forest/10 group-hover:bg-sage/20 rounded-full flex items-center justify-center mx-auto transition-colors duration-300">
-                  <MapPin className="w-7 h-7 text-forest group-hover:text-sage transition-colors duration-300" />
-                </div>
-                <h3 className="mt-4 font-heading font-bold text-lg text-charcoal group-hover:text-forest transition-colors">
-                  {loc.name}
-                </h3>
-                {loc.isHQ && (
-                  <span className="inline-block mt-1 bg-sage/15 text-sage font-body font-semibold text-xs px-3 py-0.5 rounded-full uppercase tracking-wide">
-                    HQ
+              <StaggerItem key={loc.slug}>
+                <Link
+                  href={`/locations/${loc.slug}`}
+                  className="card-hover group bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl border border-gray-100 hover:border-sage/30 transition-all duration-300 block text-center"
+                >
+                  <div className="w-14 h-14 bg-forest/10 group-hover:bg-sage/20 rounded-full flex items-center justify-center mx-auto transition-colors duration-300">
+                    <MapPin className="w-7 h-7 text-forest group-hover:text-sage transition-colors duration-300" />
+                  </div>
+                  <h3 className="mt-4 font-heading font-bold text-lg text-charcoal group-hover:text-forest transition-colors">
+                    {loc.name}
+                  </h3>
+                  {loc.isHQ && (
+                    <span className="inline-block mt-1 bg-sage/15 text-sage font-body font-semibold text-xs px-3 py-0.5 rounded-full uppercase tracking-wide">
+                      HQ
+                    </span>
+                  )}
+                  <p className="mt-2 font-body text-charcoal-light text-sm leading-relaxed">
+                    {loc.tagline}
+                  </p>
+                  <span className="mt-3 inline-flex items-center gap-1 font-body font-semibold text-sage group-hover:text-sage-dark transition-colors text-sm">
+                    View Area
+                    <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
                   </span>
-                )}
-                <p className="mt-2 font-body text-charcoal-light text-sm leading-relaxed">
-                  {loc.tagline}
-                </p>
-                <span className="mt-3 inline-flex items-center gap-1 font-body font-semibold text-sage group-hover:text-sage-dark transition-colors text-sm">
-                  View Area
-                  <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
-                </span>
-              </Link>
+                </Link>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
       </section>
 
       {/* ────────────────── 9. FAQ ACCORDION ────────────────── */}
       <section className="bg-white py-20 sm:py-28">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
+          <AnimateOnScroll direction="fade" duration={0.6} className="text-center mb-14">
             <span className="inline-block font-body font-semibold text-sage text-sm uppercase tracking-widest mb-3">
               Got Questions?
             </span>
@@ -725,11 +762,13 @@ export default function Home() {
                 Contact us directly
               </Link>.
             </p>
-          </div>
+          </AnimateOnScroll>
 
           <div className="space-y-3">
             {faqs.map((faq, i) => (
-              <FAQItem key={i} question={faq.question} answer={faq.answer} />
+              <AnimateOnScroll key={i} direction="fade" delay={i * 0.05} duration={0.5}>
+                <FAQItem question={faq.question} answer={faq.answer} />
+              </AnimateOnScroll>
             ))}
           </div>
         </div>
@@ -740,66 +779,70 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-r from-forest-dark via-forest to-forest-light" />
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_75%_50%,white_1px,transparent_1px)] bg-[length:32px_32px]" />
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-24 text-center">
-          <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white">
-            Ready for Fresh, Clean Turf?
-          </h2>
-          <p className="mt-4 font-body text-lg sm:text-xl text-gray-200 max-w-2xl mx-auto leading-relaxed">
-            Get a free, no-obligation quote and discover why pet owners across
-            California trust Murphy&apos;s Turf to keep their artificial grass
-            looking and smelling like new.
-          </p>
-          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center gap-2 bg-sage hover:bg-sage-dark text-white font-heading font-bold text-lg px-10 py-4 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
-            >
-              Get Free Quote
-              <ArrowRight className="w-5 h-5" />
-            </Link>
-            <a
-              href="tel:+19513313300"
-              className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 text-white font-heading font-semibold text-lg px-10 py-4 rounded-xl transition-all duration-200"
-            >
-              <Phone className="w-5 h-5" />
-              Call 951-331-3300
-            </a>
+        <AnimateOnScroll direction="up">
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-24 text-center">
+            <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white">
+              Ready for Fresh, Clean Turf?
+            </h2>
+            <p className="mt-4 font-body text-lg sm:text-xl text-gray-200 max-w-2xl mx-auto leading-relaxed">
+              Get a free, no-obligation quote and discover why pet owners across
+              California trust Murphy&apos;s Turf to keep their artificial grass
+              looking and smelling like new.
+            </p>
+            <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link
+                href="/contact"
+                className="btn-hover inline-flex items-center justify-center gap-2 bg-sage hover:bg-sage-dark text-white font-heading font-bold text-lg px-10 py-4 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+              >
+                Get Free Quote
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+              <a
+                href="tel:+19513313300"
+                className="btn-hover inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 text-white font-heading font-semibold text-lg px-10 py-4 rounded-xl transition-all duration-200"
+              >
+                <Phone className="w-5 h-5" />
+                Call 951-331-3300
+              </a>
+            </div>
           </div>
-        </div>
+        </AnimateOnScroll>
       </section>
 
       {/* ────────────────── 11. QUOTE FORM SECTION ────────────────── */}
       <section className="bg-cream py-20 sm:py-28">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <span className="inline-block font-body font-semibold text-sage text-sm uppercase tracking-widest mb-3">
-              Free Estimate
-            </span>
-            <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-charcoal">
-              Request Your Free Quote
-            </h2>
-            <p className="mt-4 font-body text-charcoal-light text-lg leading-relaxed max-w-2xl mx-auto">
-              Fill out the form below and one of our turf care specialists will get
-              back to you within 24 hours with a personalized quote.
-            </p>
-            <div className="flex items-center justify-center gap-6 mt-5 text-sm font-body text-charcoal-light flex-wrap">
-              <span className="flex items-center gap-1.5">
-                <CheckCircle2 className="w-4 h-4 text-sage" />
-                No Obligation
+        <AnimateOnScroll direction="up">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-10">
+              <span className="inline-block font-body font-semibold text-sage text-sm uppercase tracking-widest mb-3">
+                Free Estimate
               </span>
-              <span className="flex items-center gap-1.5">
-                <Clock className="w-4 h-4 text-sage" />
-                Response in 24hrs
-              </span>
-              <span className="flex items-center gap-1.5">
-                <Shield className="w-4 h-4 text-sage" />
-                Pet-Safe Products
-              </span>
+              <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-charcoal">
+                Request Your Free Quote
+              </h2>
+              <p className="mt-4 font-body text-charcoal-light text-lg leading-relaxed max-w-2xl mx-auto">
+                Fill out the form below and one of our turf care specialists will get
+                back to you within 24 hours with a personalized quote.
+              </p>
+              <div className="flex items-center justify-center gap-6 mt-5 text-sm font-body text-charcoal-light flex-wrap">
+                <span className="flex items-center gap-1.5">
+                  <CheckCircle2 className="w-4 h-4 text-sage" />
+                  No Obligation
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <Clock className="w-4 h-4 text-sage" />
+                  Response in 24hrs
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <Shield className="w-4 h-4 text-sage" />
+                  Pet-Safe Products
+                </span>
+              </div>
             </div>
-          </div>
 
-          <QuoteForm />
-        </div>
+            <QuoteForm />
+          </div>
+        </AnimateOnScroll>
       </section>
     </>
   );
