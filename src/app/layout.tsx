@@ -22,6 +22,10 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://murphys-turf.netlify.app'),
+  alternates: {
+    canonical: '/',
+  },
   title: {
     default: "Murphy's Turf | Professional Artificial Turf Cleaning in California",
     template: "%s | Murphy's Turf",
@@ -66,6 +70,42 @@ export default function RootLayout({
         <Script
           src="https://link.msgsndr.com/js/form_embed.js"
           strategy="lazyOnload"
+        />
+        <Script
+          id="structured-data"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              "name": "Murphy's Turf",
+              "description": "Professional artificial turf cleaning company serving California. Powered by OxyTurf pet-safe cleaning technology.",
+              "url": "https://murphys-turf.netlify.app",
+              "telephone": "+19513313300",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "26323 Jefferson Avenue",
+                "addressLocality": "Murrieta",
+                "addressRegion": "CA",
+                "postalCode": "92562",
+                "addressCountry": "US"
+              },
+              "areaServed": [
+                { "@type": "City", "name": "Huntington Beach" },
+                { "@type": "City", "name": "Murrieta" },
+                { "@type": "City", "name": "Martinez" },
+                { "@type": "City", "name": "Sacramento" }
+              ],
+              "openingHours": ["Mo-Fr 07:00-18:00", "Sa 08:00-16:00"],
+              "priceRange": "$$",
+              "image": "https://murphys-turf.netlify.app/images/logo.avif",
+              "sameAs": [
+                "https://www.instagram.com/murphysturfcare/",
+                "https://www.facebook.com/profile.php?id=100090088264095",
+                "https://www.youtube.com/@murphysturfcare/featured"
+              ]
+            })
+          }}
         />
       </body>
     </html>

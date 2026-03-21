@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://murphys-turf.netlify.app/sitemap.xml
