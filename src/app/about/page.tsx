@@ -107,7 +107,7 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-forest via-forest-light to-sage py-24 sm:py-32 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-forest via-forest-light to-sage py-16 sm:py-24 overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-10 left-10 w-72 h-72 bg-white rounded-full blur-3xl" />
           <div className="absolute bottom-10 right-10 w-96 h-96 bg-sage rounded-full blur-3xl" />
@@ -140,7 +140,7 @@ export default function AboutPage() {
       </section>
 
       {/* Welcome / Company Story Section */}
-      <section className="py-20 sm:py-28 bg-cream">
+      <section className="py-12 sm:py-20 bg-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll direction="up" delay={0.1} className="max-w-4xl mx-auto">
             <div className="flex items-center gap-3 mb-8">
@@ -166,7 +166,7 @@ export default function AboutPage() {
       </section>
 
       {/* Team Group Photo Section */}
-      <section className="py-16 sm:py-20 bg-white">
+      <section className="py-12 sm:py-16 bg-white">
         <AnimateOnScroll direction="fade" duration={0.8} className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="relative rounded-2xl overflow-hidden shadow-xl">
             <Image
@@ -184,7 +184,7 @@ export default function AboutPage() {
       </section>
 
       {/* Team Members Grid */}
-      <section className="py-20 sm:py-28 bg-cream">
+      <section className="py-12 sm:py-20 bg-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="flex items-center justify-center gap-3 mb-4">
@@ -261,7 +261,7 @@ export default function AboutPage() {
       </section>
 
       {/* Values Section */}
-      <section className="py-20 sm:py-28 bg-white">
+      <section className="py-12 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="flex items-center justify-center gap-3 mb-4">
@@ -299,7 +299,7 @@ export default function AboutPage() {
       </section>
 
       {/* OxyTurf Section */}
-      <section className="py-20 sm:py-24 bg-gradient-to-br from-forest-dark via-forest to-forest-light overflow-hidden">
+      <section className="py-12 sm:py-20 bg-gradient-to-br from-forest-dark via-forest to-forest-light overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll direction="up" className="max-w-4xl mx-auto text-center relative">
             {/* Decorative elements */}
@@ -357,7 +357,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 sm:py-24 bg-cream-dark">
+      <section className="py-12 sm:py-20 bg-cream-dark">
         <AnimateOnScroll direction="up" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <PawPrint className="w-10 h-10 text-sage mx-auto mb-6" />
           <h2 className="text-3xl sm:text-4xl font-bold font-heading text-charcoal mb-6">

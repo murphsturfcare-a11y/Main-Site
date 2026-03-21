@@ -70,15 +70,28 @@ export function AnimateOnScroll({
   distance = 40,
   className = '',
   once = true,
-  amount = 0.2,
+  amount = 0.05,
 }: AnimateOnScrollProps) {
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { once, amount });
+  const [isVisible, setIsVisible] = useState(false);
   const variants = getVariants(direction, distance, duration);
+
+  useEffect(() => {
+    if (isInView) setIsVisible(true);
+  }, [isInView]);
+
+  // Fallback: ensure content becomes visible even if observer never fires
+  useEffect(() => {
+    const timer = setTimeout(() => setIsVisible(true), 1500);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <motion.div
+      ref={ref}
       initial="hidden"
-      whileInView="visible"
-      viewport={{ once, amount }}
+      animate={isVisible ? 'visible' : 'hidden'}
       variants={variants}
       transition={{ delay }}
       className={className}
@@ -114,13 +127,27 @@ export function StaggerContainer({
   staggerDelay = 0.1,
   className = '',
   once = true,
-  amount = 0.15,
+  amount = 0.05,
 }: StaggerContainerProps) {
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { once, amount });
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    if (isInView) setIsVisible(true);
+  }, [isInView]);
+
+  // Fallback: ensure content becomes visible even if observer never fires
+  useEffect(() => {
+    const timer = setTimeout(() => setIsVisible(true), 1500);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <motion.div
+      ref={ref}
       initial="hidden"
-      whileInView="visible"
-      viewport={{ once, amount }}
+      animate={isVisible ? 'visible' : 'hidden'}
       variants={{
         hidden: {},
         visible: {

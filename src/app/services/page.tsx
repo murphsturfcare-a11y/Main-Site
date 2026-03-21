@@ -56,7 +56,7 @@ export default function ServicesPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-forest via-forest-light to-sage py-20 sm:py-28">
+      <section className="relative bg-gradient-to-br from-forest via-forest-light to-sage py-12 sm:py-20">
         <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-5" />
         <AnimateOnScroll direction="up" className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-heading text-white mb-6 tracking-tight">
@@ -71,7 +71,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Services Grid */}
-      <section className="py-16 sm:py-24 bg-cream">
+      <section className="py-12 sm:py-20 bg-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <StaggerContainer staggerDelay={0.1} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service) => (
@@ -125,7 +125,7 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 sm:py-20 bg-white">
+      <section className="py-12 sm:py-16 bg-white">
         <AnimateOnScroll direction="up" className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="bg-gradient-to-br from-forest to-forest-dark rounded-3xl p-10 sm:p-14 shadow-xl">
             <HelpCircle className="w-12 h-12 text-sage mx-auto mb-5" />
