@@ -88,7 +88,11 @@ export default function RootLayout({
               "name": "Murphy's Turf",
               "description": "Professional artificial turf cleaning company serving California. Powered by OxyTurf pet-safe cleaning technology.",
               "url": "https://murphys-turf.netlify.app",
-              "telephone": "+19513313300",
+              "contactPoint": [
+                { "@type": "ContactPoint", "telephone": "+19513313300", "areaServed": ["Huntington Beach", "Murrieta"], "contactType": "customer service" },
+                { "@type": "ContactPoint", "telephone": "+19253380048", "areaServed": ["Martinez", "Bay Area"], "contactType": "customer service" },
+                { "@type": "ContactPoint", "telephone": "+19164325033", "areaServed": ["Sacramento"], "contactType": "customer service" }
+              ],
               "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "26323 Jefferson Avenue",
