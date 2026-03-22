@@ -36,6 +36,14 @@ export const metadata: Metadata = {
     'turf maintenance Sacramento',
     'pet-safe turf cleaning Southern California',
   ],
+  icons: {
+    icon: [
+      { url: '/icon-192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/icon-512.png', sizes: '512x512', type: 'image/png' },
+    ],
+    apple: '/apple-touch-icon.png',
+  },
+  manifest: '/manifest.json',
   openGraph: {
     title: "Murphy's Turf | Professional Artificial Turf Cleaning in California",
     description:
@@ -43,6 +51,14 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     siteName: "Murphy's Turf",
+    images: [
+      {
+        url: '/images/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: "Murphy's Turf - Professional Artificial Turf Cleaning",
+      },
+    ],
   },
 };
 
