@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { MapPin, ArrowRight, Map, Mail, Sparkles } from 'lucide-react';
+import { MapPin, ArrowRight, Map, Phone, Sparkles } from 'lucide-react';
 import { AnimateOnScroll, StaggerContainer, StaggerItem } from '@/components/ui/AnimateOnScroll';
 
 export const metadata: Metadata = {
@@ -14,28 +14,28 @@ const locations = [
     city: 'Huntington Beach / LA Area',
     slug: 'huntington-beach',
     description:
-      'Professional artificial turf cleaning across the LA coastal corridor — Huntington Beach, Newport Beach, Costa Mesa, Long Beach, and Seal Beach. OxyTurf-powered cleaning for Southern California\'s beachside communities.',
+      'OxyTurf-powered turf cleaning for coastal LA — from Huntington Beach to Seal Beach.',
     highlight: 'LA Area',
   },
   {
     city: 'Murrieta / Inland Empire',
     slug: 'murrieta',
     description:
-      'Our headquarters in the heart of the Inland Empire. Full-service turf cleaning and disinfecting for Murrieta, Temecula, French Valley, Menifee, Lake Elsinore, Hemet, Perris, Wildomar, Canyon Lake, Temescal Valley, and Winchester.',
+      'Our headquarters. Serving the entire Inland Empire from Murrieta to Temecula and beyond.',
     highlight: 'Headquarters',
   },
   {
     city: 'Martinez / Bay Area',
     slug: 'martinez',
     description:
-      'Serving the East Bay with expert artificial turf cleaning and sanitization. Covering Concord, Pleasant Hill, Walnut Creek, Antioch, and Brentwood throughout Contra Costa County.',
+      'Expert turf cleaning across Contra Costa County and the East Bay.',
     highlight: 'Bay Area',
   },
   {
     city: 'Greater Sacramento',
     slug: 'sacramento',
     description:
-      'Professional artificial turf cleaning for the capital region. Serving Elk Grove, Roseville, Folsom, and Rancho Cordova with OxyTurf-powered disinfecting treatments built for Central Valley heat.',
+      'Professional turf cleaning built for Central Valley heat. Serving Sacramento to Folsom.',
     highlight: 'Central Valley',
   },
 ];
@@ -197,19 +197,19 @@ export default function LocationsPage() {
               clean turf, call Murphy&apos;s Turf.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link
-                href="/locations"
+              <a
+                href="tel:9513313300"
                 className="inline-flex items-center gap-2 bg-sage hover:bg-sage-dark text-white font-semibold px-8 py-3.5 rounded-lg transition-colors font-body shadow-sm hover:shadow-md"
               >
-                Contact Us Today
-                <ArrowRight className="w-4 h-4" />
-              </Link>
+                <Phone className="w-4 h-4" />
+                Call Us
+              </a>
               <Link
-                href="/locations"
+                href="/locations/murrieta#quote-form"
                 className="inline-flex items-center gap-2 bg-forest hover:bg-forest-light text-white font-semibold px-8 py-3.5 rounded-lg transition-colors font-body shadow-sm hover:shadow-md"
               >
-                <Mail className="w-4 h-4" />
-                Contact Us
+                Get a Free Quote
+                <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
           </div>
