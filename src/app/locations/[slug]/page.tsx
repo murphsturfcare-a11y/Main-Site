@@ -1,22 +1,20 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import {
-  MapPin,
   Phone,
   Mail,
   ArrowRight,
   Star,
-  Sparkles,
-  Droplets,
-  Sprout,
-  ShieldCheck,
-  Leaf,
   ChevronRight,
-  Clock,
   CheckCircle,
+  PawPrint,
+  Leaf,
+  ThumbsUp,
 } from 'lucide-react';
 import { notFound } from 'next/navigation';
 import { AnimateOnScroll, StaggerContainer, StaggerItem } from '@/components/ui/AnimateOnScroll';
+import FAQ from '@/components/sections/FAQ';
 
 // ---------------------------------------------------------------------------
 // Types
@@ -29,63 +27,109 @@ interface Testimonial {
   text: string;
 }
 
-interface ServiceItem {
-  name: string;
-  slug: string;
-  icon: string;
-  shortDescription: string;
-}
-
 interface LocationData {
   city: string;
   slug: string;
   state: string;
   phone: string;
   email: string;
-  heroSubtitle: string;
-  description: string[];
   neighborhoods: string[];
   testimonials: Testimonial[];
   metaTitle: string;
   metaDescription: string;
-  climateNote: string;
   serviceAreaDescription: string;
   formId: string;
   mapQuery: string;
 }
 
 // ---------------------------------------------------------------------------
-// Shared services (same across all locations)
+// Shared data
 // ---------------------------------------------------------------------------
 
-const services: ServiceItem[] = [
+const services = [
   {
     name: 'Pet Hair & Debris Removal',
     slug: 'pet-hair-debris',
-    icon: 'sparkles',
+    image: '/images/gallery/service-turf-cleaning.png',
     shortDescription:
       'Commercial-grade extraction of pet hair, leaves, dirt, and embedded debris from turf fibers and infill.',
   },
   {
     name: 'Blooming & De-Compacting',
     slug: 'blooming-decompacting',
-    icon: 'sprout',
+    image: '/images/gallery/service-turf-blooming.png',
     shortDescription:
       'Restore flattened fibers and break up compacted infill for better drainage and appearance.',
   },
   {
     name: 'Disinfect & Deodorize',
     slug: 'disinfect-deodorize',
-    icon: 'shieldcheck',
+    image: '/images/gallery/service-turf-disinfecting.png',
     shortDescription:
       'Professional-grade disinfecting that eliminates bacteria, pet odors, mold, and mildew at their source.',
   },
   {
     name: 'Poop Scooping & Removal',
     slug: 'poop-scooping',
-    icon: 'droplets',
+    image: '/images/gallery/service-turf-deodorizing.png',
     shortDescription:
       'Scheduled weekly or bi-weekly pet waste removal to keep your turf clean and hygienic.',
+  },
+];
+
+const processSteps = [
+  {
+    image: '/images/gallery/process-contact-us.png',
+    title: 'Contact Us',
+    description: 'Get a free quote',
+  },
+  {
+    image: '/images/gallery/process-schedule-estimate.png',
+    title: 'Schedule Your Estimate',
+    description: 'We visit your property',
+  },
+  {
+    image: '/images/gallery/process-get-job-done.png',
+    title: 'Get The Job Done',
+    description: 'Enjoy your fresh, clean turf',
+  },
+];
+
+const galleryImages = Array.from({ length: 11 }, (_, i) => ({
+  src: `/images/gallery/gallery-${String(i + 1).padStart(2, '0')}.png`,
+  alt: `Murphy's Turf cleaning work sample ${i + 1}`,
+}));
+
+const locationFaqs = [
+  {
+    question: 'How often should artificial turf be cleaned?',
+    answer:
+      'We recommend professional cleaning every 4-6 weeks for homes with pets. For turf without pets, a quarterly deep clean is usually sufficient.',
+  },
+  {
+    question: 'Are your cleaning products safe for pets and kids?',
+    answer:
+      'Absolutely. Our cleaning solution is hydrogen peroxide-based with no bleach or ammonia. It breaks down into water and oxygen, making it safe for pets, children, and the environment.',
+  },
+  {
+    question: 'What does your turf cleaning process include?',
+    answer:
+      'Our process includes pet hair and debris removal, de-weeding, magnet sweep for metal objects, blooming and de-compacting, and a full disinfect and deodorize treatment.',
+  },
+  {
+    question: 'How long does a cleaning take?',
+    answer:
+      'Most residential cleanings take 45 minutes to 1.5 hours depending on size and services included. Your turf is safe to use as soon as it dries, usually 1-2 hours.',
+  },
+  {
+    question: 'Do I need to be home during service?',
+    answer:
+      "No, you don't need to be home. We just need access to the turf area and a water source. We'll send a notification when the job is done.",
+  },
+  {
+    question: 'Do you offer maintenance plans?',
+    answer:
+      'Yes, we offer weekly, bi-weekly, monthly, and quarterly maintenance plans. Regular plans keep costs predictable and your turf clean year-round.',
   },
 ];
 
@@ -100,11 +144,6 @@ const locationData: Record<string, LocationData> = {
     state: 'CA',
     phone: '(951) 331-3300',
     email: 'info@murphysturf.com',
-    heroSubtitle:
-      "Professional-grade turf cleaning for Huntington Beach and the LA coast.",
-    description: [
-      "Salt air, sand, and marine layer moisture make the LA coast uniquely tough on artificial turf — promoting mold, embedding debris, and baking pet waste into stubborn deposits. Murphy's Turf uses our professional-grade cleaning formula to dissolve uric acid, kill bacteria, and neutralize odors at the source, with flexible maintenance plans for year-round coastal living.",
-    ],
     neighborhoods: [
       'Huntington Beach',
       'Newport Beach',
@@ -135,8 +174,6 @@ const locationData: Record<string, LocationData> = {
     metaTitle: "Artificial Turf Cleaning in Huntington Beach & LA Area | Murphy's Turf",
     metaDescription:
       "Professional artificial turf cleaning in Huntington Beach, Newport Beach, Costa Mesa, Long Beach & Seal Beach. Professional-grade disinfecting. Get a free quote today.",
-    climateNote:
-      'Mild Mediterranean climate with coastal fog and marine layer that promote mold, plus afternoon sun that bakes pet contaminants into infill.',
     serviceAreaDescription:
       'Serving the LA coastal corridor from Long Beach through Huntington Beach, Seal Beach, Newport Beach, and Costa Mesa.',
     formId: 'HYkmRFcmdQ1GD7aEpXzq',
@@ -149,11 +186,6 @@ const locationData: Record<string, LocationData> = {
     state: 'CA',
     phone: '(951) 331-3300',
     email: 'info@murphysturf.com',
-    heroSubtitle:
-      "Our home base. Turf cleaning headquarters for the Inland Empire.",
-    description: [
-      "The Inland Empire's 100°F+ heat crystallizes pet urine into deep uric acid deposits, multiplies bacteria in warm infill, and Santa Ana winds pack debris into fibers. Our professional-grade cleaning system was developed in this exact environment — dissolving heat-hardened contamination and restoring fibers flattened by triple-digit summers. As our headquarters, Murrieta gets the fastest response times in our network.",
-    ],
     neighborhoods: [
       'Temecula',
       'French Valley',
@@ -189,8 +221,6 @@ const locationData: Record<string, LocationData> = {
     metaTitle: "Artificial Turf Cleaning in Murrieta & Inland Empire | Murphy's Turf HQ",
     metaDescription:
       "Murphy's Turf headquarters in Murrieta. Professional artificial turf cleaning, pet odor removal & professional-grade disinfecting for the Inland Empire & Temecula Valley. Get a free quote today.",
-    climateNote:
-      'Hot semi-arid climate with summers regularly exceeding 100°F, Santa Ana winds, and heavy clay soil — all of which accelerate turf contamination and odor.',
     serviceAreaDescription:
       'Serving the entire Inland Empire from Temecula and French Valley through Menifee, Lake Elsinore, Hemet, Perris, Wildomar, Canyon Lake, and Winchester.',
     formId: 'xBvd9OY1s3jhTIKq93sM',
@@ -203,11 +233,6 @@ const locationData: Record<string, LocationData> = {
     state: 'CA',
     phone: '(925) 338-0048',
     email: 'info@murphysturf.com',
-    heroSubtitle:
-      "Expert turf cleaning for Martinez and the East Bay.",
-    description: [
-      "The East Bay's geography — where the Delta meets the Bay — creates coastal moisture that promotes mold near the strait and heat-driven pet odor issues further inland. Our professional-grade cleaning eliminates mold and bacteria at the infill layer, not just the surface, with every treatment tailored to your property's specific microclimate.",
-    ],
     neighborhoods: [
       'Concord',
       'Pleasant Hill',
@@ -238,8 +263,6 @@ const locationData: Record<string, LocationData> = {
     metaTitle: "Artificial Turf Cleaning in Martinez & East Bay | Murphy's Turf",
     metaDescription:
       "East Bay artificial turf cleaning experts. Murphy's Turf serves Martinez, Walnut Creek, Pleasant Hill, Concord, Antioch & Brentwood with professional-grade disinfecting. Get a free quote today.",
-    climateNote:
-      'Mediterranean climate shaped by fog, marine layer, and delta breezes — mild and damp near the strait, significantly hotter inland toward Antioch and Brentwood.',
     serviceAreaDescription:
       'Serving Contra Costa County from Martinez through Concord, Pleasant Hill, Walnut Creek, Antioch, and Brentwood.',
     formId: 'mSr8BxMIMWFW5iSStd5F',
@@ -252,11 +275,6 @@ const locationData: Record<string, LocationData> = {
     state: 'CA',
     phone: '(916) 432-5033',
     email: 'info@murphysturf.com',
-    heroSubtitle:
-      "Professional turf cleaning for Sacramento and the Central Valley.",
-    description: [
-      "Sacramento summers push past 105°F, crystallizing pet urine into deep deposits, multiplying bacteria in warm infill, and rapidly decomposing tree debris beneath the surface. Our professional-grade cleaning dissolves heat-hardened uric acid, eliminates bacterial biofilms, and neutralizes odors — while our blooming service restores fibers baked flat by years of triple-digit heat.",
-    ],
     neighborhoods: [
       'Elk Grove',
       'Roseville',
@@ -286,36 +304,12 @@ const locationData: Record<string, LocationData> = {
     metaTitle: "Artificial Turf Cleaning in Sacramento, CA | Murphy's Turf",
     metaDescription:
       "Sacramento's professional artificial turf cleaning. Murphy's Turf serves Elk Grove, Roseville, Folsom & Rancho Cordova with professional-grade disinfecting. Get a free quote today.",
-    climateNote:
-      'Hot-summer Mediterranean climate with temps often exceeding 105°F. Intense heat accelerates pet odor, bacterial growth, and infill compaction.',
     serviceAreaDescription:
       'Serving the greater Sacramento metro including Elk Grove, Roseville, Folsom, and Rancho Cordova.',
     formId: 'E4GmpR4mgHj6kL4dFr2w',
     mapQuery: "Murphy's+Turf+Sacramento+CA",
   },
 };
-
-// ---------------------------------------------------------------------------
-// Icon helper
-// ---------------------------------------------------------------------------
-
-function ServiceIcon({ icon, className }: { icon: string; className?: string }) {
-  const props = { className: className || 'w-6 h-6' };
-  switch (icon) {
-    case 'sparkles':
-      return <Sparkles {...props} />;
-    case 'sprout':
-      return <Sprout {...props} />;
-    case 'shieldcheck':
-      return <ShieldCheck {...props} />;
-    case 'droplets':
-      return <Droplets {...props} />;
-    case 'leaf':
-      return <Leaf {...props} />;
-    default:
-      return <Sparkles {...props} />;
-  }
-}
 
 // ---------------------------------------------------------------------------
 // Static params & metadata
@@ -368,13 +362,25 @@ export default async function LocationPage({
   }
 
   return (
-    <div className="pb-20 lg:pb-0">
-      {/* Hero */}
-      <section className="relative bg-gradient-to-br from-forest via-forest-light to-sage py-16 sm:py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-5" />
-        <div className="absolute top-10 right-10 w-72 h-72 bg-sage/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-10 left-10 w-96 h-96 bg-forest-dark/30 rounded-full blur-3xl" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="scroll-smooth pb-20 lg:pb-0">
+
+      {/* ================================================================
+          1. HERO WITH EMBEDDED LEAD FORM
+          ================================================================ */}
+      <section id="quote-form" className="relative overflow-hidden scroll-mt-20">
+        {/* Background image with dark overlay */}
+        <div className="absolute inset-0">
+          <Image
+            src="/images/gallery/about-turf-cleaning.png"
+            alt=""
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-forest/85" />
+        </div>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
           {/* Breadcrumb */}
           <nav className="flex items-center gap-2 text-white/60 text-sm font-body mb-8">
             <Link href="/" className="hover:text-white transition-colors">
@@ -388,146 +394,83 @@ export default async function LocationPage({
             <span className="text-white">{location.city}, {location.state}</span>
           </nav>
 
-          <AnimateOnScroll direction="up" className="max-w-4xl">
-            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white/90 text-sm font-body px-4 py-2 rounded-full mb-6">
-              <MapPin className="w-4 h-4" />
-              {location.city}, California
-            </div>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white font-heading mb-6 leading-tight">
-              Artificial Turf Cleaning
-              <br />
-              <span className="text-cream">
-                in {location.city}, CA
-              </span>
-            </h1>
-            <p className="text-lg text-white/80 font-body leading-relaxed max-w-3xl">
-              {location.heroSubtitle}
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 mt-8">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+            {/* Left: headline + phone */}
+            <AnimateOnScroll direction="up">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white font-heading mb-4 leading-tight">
+                Turf Cleaning &amp; Maintenance
+                <br />
+                <span className="text-cream">
+                  in {location.city}, CA
+                </span>
+              </h1>
+              <p className="text-lg sm:text-xl text-white/80 font-body mb-8">
+                30+ Years of Trusted Cleaning for Your Turf &amp; Pets
+              </p>
               <a
                 href={`tel:${location.phone.replace(/[^\d+]/g, '')}`}
-                className="inline-flex items-center justify-center gap-2 bg-white text-forest font-semibold px-8 py-3.5 rounded-lg hover:bg-cream transition-colors font-body shadow-md"
+                className="inline-flex items-center gap-3 bg-white text-forest font-bold text-lg px-8 py-4 rounded-xl hover:bg-cream transition-colors font-body shadow-lg"
               >
-                <Phone className="w-4 h-4" />
+                <Phone className="w-5 h-5" />
                 {location.phone}
               </a>
-              <a
-                href="#quote-form"
-                className="inline-flex items-center justify-center gap-2 bg-sage hover:bg-sage-dark text-white font-semibold px-8 py-3.5 rounded-lg transition-colors font-body shadow-md"
-              >
-                Get a Free Quote
-                <ArrowRight className="w-4 h-4" />
-              </a>
-            </div>
-          </AnimateOnScroll>
-        </div>
-      </section>
+            </AnimateOnScroll>
 
-      {/* Lead Form Embed */}
-      <section id="quote-form" className="py-10 sm:py-14 bg-cream scroll-mt-20">
-        <AnimateOnScroll direction="up" className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl sm:text-4xl font-bold text-charcoal font-heading mb-4">
-              Get Your Free Quote in {location.city}
-            </h2>
-            <p className="text-lg text-charcoal-light font-body">
-              Fill out the form below and we&apos;ll get back to you within 24 hours
-            </p>
-          </div>
-          <div className="bg-white rounded-2xl shadow-lg p-2 sm:p-4 border border-gray-100">
-            <iframe
-              src={`https://api.leadconnectorhq.com/widget/form/${location.formId}`}
-              style={{ width: '100%', height: '848px', border: 'none', borderRadius: '3px' }}
-              title={`Get a Free Quote - ${location.city}`}
-              loading="lazy"
-            />
-          </div>
-        </AnimateOnScroll>
-      </section>
-
-      {/* City Description */}
-      <section className="py-10 sm:py-14 bg-cream">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-3 gap-12">
-            <AnimateOnScroll direction="up" className="lg:col-span-2">
-              <h2 className="text-3xl font-bold text-charcoal font-heading mb-8">
-                Professional Artificial Turf Cleaning in {location.city}
-              </h2>
-              <div className="space-y-6">
-                {location.description.map((paragraph, idx) => (
-                  <p
-                    key={idx}
-                    className="text-charcoal-light font-body leading-relaxed text-base"
-                  >
-                    {paragraph}
-                  </p>
-                ))}
+            {/* Right: Lead form iframe */}
+            <AnimateOnScroll direction="up" className="w-full">
+              <div className="bg-white rounded-2xl shadow-2xl p-2 sm:p-3">
+                <iframe
+                  src={`https://api.leadconnectorhq.com/widget/form/${location.formId}`}
+                  style={{ width: '100%', height: '500px', border: 'none', borderRadius: '12px' }}
+                  title={`Get a Free Quote - ${location.city}`}
+                />
               </div>
             </AnimateOnScroll>
-            <div className="space-y-6">
-              {/* Quick Contact Card */}
-              <div className="bg-forest rounded-2xl p-6 text-white">
-                <h3 className="text-lg font-bold font-heading mb-4">
-                  {location.city} Office
-                </h3>
-                <div className="space-y-3">
-                  <a
-                    href={`tel:${location.phone.replace(/[^\d+]/g, '')}`}
-                    className="flex items-center gap-3 text-white/90 hover:text-sage-light transition-colors font-body text-sm"
-                  >
-                    <Phone className="w-4 h-4 flex-shrink-0" />
-                    {location.phone}
-                  </a>
-                  <a
-                    href={`mailto:${location.email}`}
-                    className="flex items-center gap-3 text-white/90 hover:text-sage-light transition-colors font-body text-sm"
-                  >
-                    <Mail className="w-4 h-4 flex-shrink-0" />
-                    {location.email}
-                  </a>
-                  <div className="flex items-center gap-3 text-white/90 font-body text-sm">
-                    <Clock className="w-4 h-4 flex-shrink-0" />
-                    Mon-Fri 7am-6pm, Sat 8am-4pm
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
 
-      {/* Services Available */}
-      <section className="py-10 sm:py-14 bg-white">
+      {/* ================================================================
+          2. SERVICES
+          ================================================================ */}
+      <section className="py-14 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <AnimateOnScroll direction="up" className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-charcoal font-heading mb-4">
-              Services Available in {location.city}
+              Our Services in {location.city}
             </h2>
             <p className="text-lg text-charcoal-light font-body max-w-2xl mx-auto">
-              Every service uses professional-grade products and is tailored to {location.city}&apos;s specific
-              climate and conditions.
+              Professional turf care tailored to {location.city}&apos;s specific climate and conditions.
             </p>
-          </div>
-          <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          </AnimateOnScroll>
+
+          <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service) => (
               <StaggerItem key={service.slug}>
                 <Link
                   href={`/services/${service.slug}`}
-                  className="group bg-cream hover:bg-white rounded-2xl p-6 border border-gray-100 hover:border-sage/30 hover:shadow-lg transition-all duration-300 card-hover block"
+                  className="group bg-cream hover:bg-white rounded-2xl overflow-hidden border border-gray-100 hover:border-sage/30 hover:shadow-xl transition-all duration-300 block"
                 >
-                  <div className="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-sage/20 transition-colors">
-                    <ServiceIcon icon={service.icon} className="w-6 h-6 text-sage" />
+                  <div className="relative h-48 overflow-hidden">
+                    <Image
+                      src={service.image}
+                      alt={service.name}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
                   </div>
-                  <h3 className="text-xl font-bold text-charcoal font-heading mb-2 group-hover:text-forest transition-colors">
-                    {service.name}
-                  </h3>
-                  <p className="text-charcoal-light font-body text-sm leading-relaxed mb-4">
-                    {service.shortDescription}
-                  </p>
-                  <span className="inline-flex items-center gap-1 text-sage font-semibold font-body text-sm group-hover:text-forest transition-colors">
-                    Learn More
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </span>
+                  <div className="p-5">
+                    <h3 className="text-lg font-bold text-charcoal font-heading mb-2 group-hover:text-forest transition-colors">
+                      {service.name}
+                    </h3>
+                    <p className="text-charcoal-light font-body text-sm leading-relaxed mb-3">
+                      {service.shortDescription}
+                    </p>
+                    <span className="inline-flex items-center gap-1 text-sage font-semibold font-body text-sm group-hover:text-forest transition-colors">
+                      Learn More
+                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    </span>
+                  </div>
                 </Link>
               </StaggerItem>
             ))}
@@ -535,21 +478,150 @@ export default async function LocationPage({
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-10 sm:py-14 bg-cream">
+      {/* ================================================================
+          3. ABOUT US
+          ================================================================ */}
+      <section className="py-14 sm:py-20 bg-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+            <AnimateOnScroll direction="fade">
+              <Image
+                src="/images/gallery/about-turf-cleaning.png"
+                alt="Murphy's Turf professional turf cleaning"
+                width={500}
+                height={400}
+                className="w-full h-auto rounded-2xl shadow-lg"
+              />
+            </AnimateOnScroll>
+
+            <AnimateOnScroll direction="up">
+              <h2 className="text-3xl sm:text-4xl font-bold text-charcoal font-heading mb-6">
+                Reliable Turf Cleaning &amp; Maintenance
+              </h2>
+              <p className="text-charcoal-light font-body leading-relaxed text-base mb-8">
+                30+ years in cleaning &amp; disinfecting, now applied to your lawn. Our trained
+                technicians deliver consistent, satisfaction-guaranteed turf care across{' '}
+                {location.city} and surrounding communities.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                {[
+                  { icon: PawPrint, label: 'Pet Friendly' },
+                  { icon: Leaf, label: 'Eco Friendly' },
+                  { icon: ThumbsUp, label: 'Satisfaction Guaranteed' },
+                ].map((badge) => (
+                  <div
+                    key={badge.label}
+                    className="flex items-center gap-2 bg-white rounded-full px-5 py-2.5 shadow-sm border border-gray-100"
+                  >
+                    <badge.icon className="w-5 h-5 text-sage" />
+                    <span className="text-charcoal font-body text-sm font-medium">
+                      {badge.label}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </AnimateOnScroll>
+          </div>
+        </div>
+      </section>
+
+      {/* ================================================================
+          4. THREE-STEP PROCESS
+          ================================================================ */}
+      <section className="py-14 sm:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimateOnScroll direction="up" className="text-center mb-14">
+            <h2 className="text-3xl sm:text-4xl font-bold text-charcoal font-heading mb-4">
+              Our Simple 3 Step Process
+            </h2>
+          </AnimateOnScroll>
+
+          <StaggerContainer className="grid sm:grid-cols-3 gap-8 lg:gap-12">
+            {processSteps.map((step, idx) => (
+              <StaggerItem key={step.title}>
+                <div className="text-center">
+                  <div className="relative w-32 h-32 mx-auto mb-6">
+                    <Image
+                      src={step.image}
+                      alt={step.title}
+                      width={256}
+                      height={256}
+                      className="w-full h-full object-contain"
+                    />
+                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-sage rounded-full flex items-center justify-center text-white font-bold font-heading text-sm shadow-md">
+                      {idx + 1}
+                    </div>
+                  </div>
+                  <h3 className="text-xl font-bold text-charcoal font-heading mb-2">
+                    {step.title}
+                  </h3>
+                  <p className="text-charcoal-light font-body">
+                    {step.description}
+                  </p>
+                </div>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+
+          <div className="text-center mt-12">
+            <a
+              href="#quote-form"
+              className="inline-flex items-center gap-2 bg-sage hover:bg-sage-dark text-white font-semibold px-8 py-3.5 rounded-lg transition-colors font-body shadow-md"
+            >
+              Get Free Quote
+              <ArrowRight className="w-4 h-4" />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ================================================================
+          5. PHOTO GALLERY
+          ================================================================ */}
+      <section className="py-14 sm:py-20 bg-cream">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimateOnScroll direction="up" className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-charcoal font-heading">
+              Our Work
+            </h2>
+          </AnimateOnScroll>
+
+          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {galleryImages.map((img, idx) => (
+              <StaggerItem key={idx}>
+                <div className="relative aspect-[5/4] rounded-xl overflow-hidden group">
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    loading="lazy"
+                  />
+                </div>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+        </div>
+      </section>
+
+      {/* ================================================================
+          6. TESTIMONIALS
+          ================================================================ */}
+      <section className="py-14 sm:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimateOnScroll direction="up" className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-charcoal font-heading mb-4">
               What {location.city} Customers Say
             </h2>
             <p className="text-lg text-charcoal-light font-body">
-              Real reviews from real neighbors in {location.city}.
+              Real reviews from real neighbors.
             </p>
-          </div>
+          </AnimateOnScroll>
+
           <StaggerContainer className="grid md:grid-cols-3 gap-6 lg:gap-8">
             {location.testimonials.map((testimonial, idx) => (
               <StaggerItem key={idx}>
-                <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-100 card-hover">
+                <div className="bg-cream rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-100">
                   <div className="flex gap-1 mb-4">
                     {Array.from({ length: testimonial.rating }).map((_, i) => (
                       <Star
@@ -561,12 +633,12 @@ export default async function LocationPage({
                   <p className="text-charcoal-light font-body text-sm leading-relaxed mb-6 italic">
                     &ldquo;{testimonial.text}&rdquo;
                   </p>
-                  <div className="border-t border-gray-100 pt-4">
+                  <div className="border-t border-gray-200 pt-4">
                     <p className="font-semibold text-charcoal font-heading text-sm">
                       {testimonial.name}
                     </p>
                     <p className="text-charcoal-light font-body text-xs">
-                      {testimonial.neighborhood}, {location.city}
+                      {testimonial.neighborhood}, {location.state}
                     </p>
                   </div>
                 </div>
@@ -576,8 +648,15 @@ export default async function LocationPage({
         </div>
       </section>
 
-      {/* Service Area Details & Neighborhoods */}
-      <section className="py-10 sm:py-14 bg-white">
+      {/* ================================================================
+          7. FAQ
+          ================================================================ */}
+      <FAQ items={locationFaqs} />
+
+      {/* ================================================================
+          8. NEIGHBORHOODS WE SERVE
+          ================================================================ */}
+      <section className="py-14 sm:py-20 bg-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div>
@@ -590,7 +669,7 @@ export default async function LocationPage({
               <StaggerContainer staggerDelay={0.05} className="grid grid-cols-2 gap-3">
                 {location.neighborhoods.map((neighborhood) => (
                   <StaggerItem key={neighborhood} direction="scale">
-                    <div className="flex items-center gap-2 bg-cream rounded-lg px-4 py-3">
+                    <div className="flex items-center gap-2 bg-white rounded-lg px-4 py-3 shadow-sm">
                       <CheckCircle className="w-4 h-4 text-sage flex-shrink-0" />
                       <span className="text-charcoal font-body text-sm font-medium">
                         {neighborhood}
@@ -612,32 +691,61 @@ export default async function LocationPage({
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 title={`Murphy's Turf - ${location.city}`}
-                className="rounded-xl"
+                className="rounded-xl shadow-lg"
               />
             </AnimateOnScroll>
           </div>
         </div>
       </section>
 
-      {/* Other Locations CTA */}
-      <section className="py-12 bg-forest">
+      {/* ================================================================
+          9. BOTTOM CTA + LEAD FORM
+          ================================================================ */}
+      <section id="bottom-form" className="py-14 sm:py-20 bg-forest scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
-            <div>
-              <h3 className="text-xl font-bold text-white font-heading mb-1">
-                We Also Serve Other California Communities
-              </h3>
-              <p className="text-white/70 font-body text-sm">
-                See all locations or contact us if you don&apos;t see your area listed.
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+            {/* Left: CTA text + contact info */}
+            <AnimateOnScroll direction="up">
+              <h2 className="text-3xl sm:text-4xl font-bold text-white font-heading mb-6">
+                Ready for Fresh, Clean Turf in {location.city}?
+              </h2>
+              <p className="text-white/80 font-body text-lg mb-8">
+                Get your free quote today. Our team is ready to make your turf look and
+                smell like new.
               </p>
-            </div>
-            <Link
-              href="/locations"
-              className="inline-flex items-center gap-2 bg-white text-forest font-semibold px-6 py-3 rounded-lg hover:bg-cream transition-colors font-body shadow-sm flex-shrink-0"
-            >
-              View All Locations
-              <ArrowRight className="w-4 h-4" />
-            </Link>
+              <div className="space-y-4">
+                <a
+                  href={`tel:${location.phone.replace(/[^\d+]/g, '')}`}
+                  className="flex items-center gap-3 text-white hover:text-sage-light transition-colors font-body text-lg"
+                >
+                  <div className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Phone className="w-5 h-5" />
+                  </div>
+                  {location.phone}
+                </a>
+                <a
+                  href={`mailto:${location.email}`}
+                  className="flex items-center gap-3 text-white hover:text-sage-light transition-colors font-body text-lg"
+                >
+                  <div className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Mail className="w-5 h-5" />
+                  </div>
+                  {location.email}
+                </a>
+              </div>
+            </AnimateOnScroll>
+
+            {/* Right: Lead form iframe */}
+            <AnimateOnScroll direction="up" className="w-full">
+              <div className="bg-white rounded-2xl shadow-2xl p-2 sm:p-4">
+                <iframe
+                  src={`https://api.leadconnectorhq.com/widget/form/${location.formId}`}
+                  style={{ width: '100%', height: '500px', border: 'none', borderRadius: '12px' }}
+                  title={`Get a Free Quote - ${location.city}`}
+                  loading="lazy"
+                />
+              </div>
+            </AnimateOnScroll>
           </div>
         </div>
       </section>
