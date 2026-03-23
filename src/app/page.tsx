@@ -506,7 +506,7 @@ export default function Home() {
             <p className="mt-4 font-body text-charcoal-light text-lg leading-relaxed">
               Can&apos;t find your answer?{' '}
               <Link
-                href="/contact"
+                href="/locations"
                 className="text-sage hover:text-sage-dark font-semibold underline underline-offset-2"
               >
                 Contact us directly

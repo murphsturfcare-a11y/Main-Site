@@ -18,12 +18,6 @@ export const aboutMetadata = generatePageMetadata(
   "/about"
 );
 
-export const contactMetadata = generatePageMetadata(
-  "Contact Us",
-  "Get a free artificial turf cleaning quote from Murphy's Turf. Serving Huntington Beach, Murrieta, Martinez, and Sacramento. Fill out our form or call your local office.",
-  "/contact"
-);
-
 export const servicesMetadata = generatePageMetadata(
   "Our Artificial Turf Cleaning Services",
   "Murphy's Turf offers complete artificial turf cleaning: pet hair & debris removal, blooming & decompacting, disinfecting & deodorizing, poop scooping, and our signature deep cleaning treatment. 30+ years experience.",

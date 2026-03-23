@@ -436,7 +436,7 @@ export default async function LocationPage({
       <section className="py-14 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll direction="up" className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-charcoal font-heading mb-4">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal font-heading mb-4">
               Our Services in {location.city}
             </h2>
             <p className="text-lg text-charcoal-light font-body max-w-2xl mx-auto">
@@ -495,7 +495,7 @@ export default async function LocationPage({
             </AnimateOnScroll>
 
             <AnimateOnScroll direction="up">
-              <h2 className="text-3xl sm:text-4xl font-bold text-charcoal font-heading mb-6">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal font-heading mb-6">
                 Reliable Turf Cleaning &amp; Maintenance
               </h2>
               <p className="text-charcoal-light font-body leading-relaxed text-base mb-8">
@@ -531,7 +531,7 @@ export default async function LocationPage({
       <section className="py-14 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll direction="up" className="text-center mb-14">
-            <h2 className="text-3xl sm:text-4xl font-bold text-charcoal font-heading mb-4">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal font-heading mb-4">
               Our Simple 3 Step Process
             </h2>
           </AnimateOnScroll>
@@ -581,7 +581,7 @@ export default async function LocationPage({
       <section className="py-14 sm:py-20 bg-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll direction="up" className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-charcoal font-heading">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal font-heading">
               Our Work
             </h2>
           </AnimateOnScroll>
@@ -610,7 +610,7 @@ export default async function LocationPage({
       <section className="py-14 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll direction="up" className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-charcoal font-heading mb-4">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal font-heading mb-4">
               What {location.city} Customers Say
             </h2>
             <p className="text-lg text-charcoal-light font-body">
@@ -660,13 +660,13 @@ export default async function LocationPage({
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div>
-              <h2 className="text-3xl font-bold text-charcoal font-heading mb-6">
+              <h2 className="text-2xl sm:text-3xl font-bold text-charcoal font-heading mb-6">
                 Neighborhoods We Serve in {location.city}
               </h2>
               <p className="text-charcoal-light font-body leading-relaxed mb-8">
                 {location.serviceAreaDescription}
               </p>
-              <StaggerContainer staggerDelay={0.05} className="grid grid-cols-2 gap-3">
+              <StaggerContainer staggerDelay={0.05} className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {location.neighborhoods.map((neighborhood) => (
                   <StaggerItem key={neighborhood} direction="scale">
                     <div className="flex items-center gap-2 bg-white rounded-lg px-4 py-3 shadow-sm">
@@ -706,7 +706,7 @@ export default async function LocationPage({
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
             {/* Left: CTA text + contact info */}
             <AnimateOnScroll direction="up">
-              <h2 className="text-3xl sm:text-4xl font-bold text-white font-heading mb-6">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white font-heading mb-6">
                 Ready for Fresh, Clean Turf in {location.city}?
               </h2>
               <p className="text-white/80 font-body text-lg mb-8">

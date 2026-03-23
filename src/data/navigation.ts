@@ -5,7 +5,7 @@ export const mainNav: NavItem[] = [
   { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
   { label: "Locations", href: "/locations" },
-  { label: "Contact", href: "/contact" },
+  { label: "Contact", href: "/locations" },
   { label: "Blog", href: "/blog" },
 ];
 
@@ -32,7 +32,7 @@ export const footerNav: NavGroup[] = [
     title: "Company",
     links: [
       { label: "About", href: "/about" },
-      { label: "Contact", href: "/contact" },
+      { label: "Contact", href: "/locations" },
       { label: "Blog", href: "/blog" },
       { label: "Privacy Policy", href: "/privacy-policy" },
       { label: "Terms of Service", href: "/terms-of-service" },
@@ -41,4 +41,4 @@ export const footerNav: NavGroup[] = [
 ];
 
 export const ctaText = "Get a Quote";
-export const ctaHref = "/contact";
+export const ctaHref = "/locations";
