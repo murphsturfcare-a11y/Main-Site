@@ -112,11 +112,11 @@ export default function LocationsPage() {
               clean turf, call Murphy&apos;s Turf.
             </p>
             <a
-              href="tel:9513313300"
+              href="tel:9253380048"
               className="inline-flex items-center gap-2 bg-forest hover:bg-forest-light text-white font-bold px-10 py-4 rounded-lg transition-colors font-body shadow-md hover:shadow-lg text-lg"
             >
               <Phone className="w-5 h-5" />
-              Call Ralph: (951) 331-3300
+              Call Ralph: (925) 338-0048
             </a>
           </div>
         </AnimateOnScroll>
