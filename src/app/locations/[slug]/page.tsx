@@ -11,6 +11,7 @@ import {
   PawPrint,
   Leaf,
   ThumbsUp,
+  Droplets,
 } from 'lucide-react';
 import { notFound } from 'next/navigation';
 import { AnimateOnScroll, StaggerContainer, StaggerItem } from '@/components/ui/AnimateOnScroll';
@@ -38,6 +39,7 @@ interface LocationData {
   metaTitle: string;
   metaDescription: string;
   serviceAreaDescription: string;
+  climateNote: string;
   formId: string;
   mapQuery: string;
 }
@@ -176,6 +178,8 @@ const locationData: Record<string, LocationData> = {
       "Professional artificial turf cleaning in Huntington Beach, Newport Beach, Costa Mesa, Long Beach & Seal Beach. Professional-grade disinfecting. Get a free quote today.",
     serviceAreaDescription:
       'Serving the LA coastal corridor from Long Beach through Huntington Beach, Seal Beach, Newport Beach, and Costa Mesa.',
+    climateNote:
+      'Coastal fog and marine layer promote mold, while afternoon sun bakes pet contaminants into infill.',
     formId: 'HYkmRFcmdQ1GD7aEpXzq',
     mapQuery: "Murphy's+Turf+Huntington+Beach+CA",
   },
@@ -223,6 +227,8 @@ const locationData: Record<string, LocationData> = {
       "Murphy's Turf headquarters in Murrieta. Professional artificial turf cleaning, pet odor removal & professional-grade disinfecting for the Inland Empire & Temecula Valley. Get a free quote today.",
     serviceAreaDescription:
       'Serving the entire Inland Empire from Temecula and French Valley through Menifee, Lake Elsinore, Hemet, Perris, Wildomar, Canyon Lake, and Winchester.',
+    climateNote:
+      'Summer temps exceed 100°F regularly, baking pet waste into infill and accelerating bacterial growth.',
     formId: 'xBvd9OY1s3jhTIKq93sM',
     mapQuery: '26323+Jefferson+Avenue+Murrieta+CA+92562',
   },
@@ -265,6 +271,8 @@ const locationData: Record<string, LocationData> = {
       "East Bay artificial turf cleaning experts. Murphy's Turf serves Martinez, Walnut Creek, Pleasant Hill, Concord, Antioch & Brentwood with professional-grade disinfecting. Get a free quote today.",
     serviceAreaDescription:
       'Serving Contra Costa County from Martinez through Concord, Pleasant Hill, Walnut Creek, Antioch, and Brentwood.',
+    climateNote:
+      'Bay Area microclimates range from damp coastal fog near the strait to hot, dry conditions inland.',
     formId: 'mSr8BxMIMWFW5iSStd5F',
     mapQuery: "Murphy's+Turf+Martinez+CA",
   },
@@ -306,6 +314,8 @@ const locationData: Record<string, LocationData> = {
       "Sacramento's professional artificial turf cleaning. Murphy's Turf serves Elk Grove, Roseville, Folsom & Rancho Cordova with professional-grade disinfecting. Get a free quote today.",
     serviceAreaDescription:
       'Serving the greater Sacramento metro including Elk Grove, Roseville, Folsom, and Rancho Cordova.',
+    climateNote:
+      'Central Valley heat regularly exceeds 105°F, rapidly crystallizing pet urine and multiplying bacteria.',
     formId: 'E4GmpR4mgHj6kL4dFr2w',
     mapQuery: "Murphy's+Turf+Sacramento+CA",
   },
@@ -678,6 +688,17 @@ export default async function LocationPage({
                   </StaggerItem>
                 ))}
               </StaggerContainer>
+
+              {/* Climate Note */}
+              <div className="bg-sage/10 rounded-xl p-4 border border-sage/20 mt-6">
+                <div className="flex items-start gap-3">
+                  <Droplets className="w-5 h-5 text-sage flex-shrink-0 mt-0.5" />
+                  <div>
+                    <h4 className="text-sm font-bold text-charcoal font-heading mb-1">Local Climate</h4>
+                    <p className="text-charcoal-light font-body text-sm leading-relaxed">{location.climateNote}</p>
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* Google Map */}
