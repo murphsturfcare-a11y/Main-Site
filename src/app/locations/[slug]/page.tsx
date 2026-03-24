@@ -42,6 +42,7 @@ interface LocationData {
   climateNote: string;
   formId: string;
   mapQuery: string;
+  mapEmbedUrl?: string;
 }
 
 // ---------------------------------------------------------------------------
@@ -97,10 +98,17 @@ const processSteps = [
   },
 ];
 
-const galleryImages = Array.from({ length: 11 }, (_, i) => ({
-  src: `/images/gallery/gallery-${String(i + 1).padStart(2, '0')}.png`,
-  alt: `Murphy's Turf cleaning work sample ${i + 1}`,
-}));
+const galleryImages = [
+  { src: '/images/gallery/gallery-01.png', alt: "Murphy's Turf cleaning project — before and after" },
+  { src: '/images/gallery/gallery-02.png', alt: "Murphy's Turf cleaning project — turf disinfecting" },
+  { src: '/images/gallery/gallery-03.png', alt: "Murphy's Turf cleaning project — turf deodorizing" },
+  { src: '/images/gallery/gallery-12.jpeg', alt: "Murphy's Turf — backyard turf with curved patio edge" },
+  { src: '/images/gallery/gallery-13.jpeg', alt: "Murphy's Turf — side yard turf with rock border" },
+  { src: '/images/gallery/gallery-14.jpeg', alt: "Murphy's Turf — poolside turf with stepping stones" },
+  { src: '/images/gallery/gallery-15.jpeg', alt: "Murphy's Turf — backyard putting green by pool" },
+  { src: '/images/gallery/gallery-16.jpeg', alt: "Murphy's Turf — front yard turf with dog" },
+  { src: '/images/gallery/gallery-05.png', alt: "Murphy's Turf cleaning project — turf restoration" },
+];
 
 const locationFaqs = [
   {
@@ -182,6 +190,7 @@ const locationData: Record<string, LocationData> = {
       'Coastal fog and marine layer promote mold, while afternoon sun bakes pet contaminants into infill.',
     formId: 'HYkmRFcmdQ1GD7aEpXzq',
     mapQuery: "Murphy's+Turf+Huntington+Beach+CA",
+    mapEmbedUrl: "https://www.google.com/maps?q=Murphy's+Turf&cid=17738077160014500110&output=embed",
   },
 
   murrieta: {
@@ -231,6 +240,7 @@ const locationData: Record<string, LocationData> = {
       'Summer temps exceed 100°F regularly, baking pet waste into infill and accelerating bacterial growth.',
     formId: 'xBvd9OY1s3jhTIKq93sM',
     mapQuery: '26323+Jefferson+Avenue+Murrieta+CA+92562',
+    mapEmbedUrl: "https://www.google.com/maps?q=Murphy's+Turf&cid=4930650047464481625&output=embed",
   },
 
   martinez: {
@@ -704,7 +714,7 @@ export default async function LocationPage({
             {/* Google Map */}
             <AnimateOnScroll direction="fade" className="w-full">
               <iframe
-                src={`https://www.google.com/maps?q=${location.mapQuery}&output=embed`}
+                src={location.mapEmbedUrl || `https://www.google.com/maps?q=${location.mapQuery}&output=embed`}
                 width="100%"
                 height="400"
                 style={{ border: 0 }}

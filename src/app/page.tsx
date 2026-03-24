@@ -160,10 +160,17 @@ const processSteps = [
   },
 ];
 
-const galleryImages = Array.from({ length: 11 }, (_, i) => ({
-  src: `/images/gallery/gallery-${String(i + 1).padStart(2, '0')}.png`,
-  alt: `Murphy's Turf cleaning project ${i + 1}`,
-}));
+const galleryImages = [
+  { src: '/images/gallery/gallery-01.png', alt: "Murphy's Turf cleaning project — before and after" },
+  { src: '/images/gallery/gallery-02.png', alt: "Murphy's Turf cleaning project — turf disinfecting" },
+  { src: '/images/gallery/gallery-03.png', alt: "Murphy's Turf cleaning project — turf deodorizing" },
+  { src: '/images/gallery/gallery-12.jpeg', alt: "Murphy's Turf — backyard turf with curved patio edge" },
+  { src: '/images/gallery/gallery-13.jpeg', alt: "Murphy's Turf — side yard turf with rock border" },
+  { src: '/images/gallery/gallery-14.jpeg', alt: "Murphy's Turf — poolside turf with stepping stones" },
+  { src: '/images/gallery/gallery-15.jpeg', alt: "Murphy's Turf — backyard putting green by pool" },
+  { src: '/images/gallery/gallery-16.jpeg', alt: "Murphy's Turf — front yard turf with dog" },
+  { src: '/images/gallery/gallery-05.png', alt: "Murphy's Turf cleaning project — turf restoration" },
+];
 
 /* ===================== FAQ ACCORDION ITEM ===================== */
 
@@ -248,11 +255,11 @@ export default function Home() {
                 Professional Artificial Turf Cleaning
               </span>
               <h1 className="font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl text-white leading-tight tracking-tight">
-                Your Turf, Like New.{' '}
-                <span className="text-sage-light">Guaranteed.</span>
+                Your Turf,{' '}
+                <span className="text-sage-light">Like New.</span>
               </h1>
               <p className="mt-5 text-lg sm:text-xl text-gray-200 font-body leading-relaxed max-w-xl">
-                Pet-safe. Odor-free. Looks brand new.
+                Pet-safe. Professional-grade cleaning. Looks brand new.
               </p>
             </div>
 
