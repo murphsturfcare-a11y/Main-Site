@@ -101,7 +101,6 @@ const processSteps = [
 const galleryImages = [
   { src: '/images/gallery/gallery-01.png', alt: "Murphy's Turf cleaning project — before and after" },
   { src: '/images/gallery/gallery-02.png', alt: "Murphy's Turf cleaning project — turf disinfecting" },
-  { src: '/images/gallery/gallery-03.png', alt: "Murphy's Turf cleaning project — turf deodorizing" },
   { src: '/images/gallery/gallery-12.jpeg', alt: "Murphy's Turf — backyard turf with curved patio edge" },
   { src: '/images/gallery/gallery-13.jpeg', alt: "Murphy's Turf — side yard turf with rock border" },
   { src: '/images/gallery/gallery-14.jpeg', alt: "Murphy's Turf — poolside turf with stepping stones" },
