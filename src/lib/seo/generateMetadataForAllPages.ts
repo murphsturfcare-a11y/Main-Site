@@ -41,7 +41,7 @@ const services = [
     name: "Disinfect & Deodorize",
     slug: "disinfect-deodorize" as const,
     shortDescription:
-      "Kill 99.9% of bacteria and eliminate odors from your artificial turf with our professional disinfecting and deodorizing treatment. Safe for pets and kids.",
+      "Kill bacteria and eliminate odors from your artificial turf with our professional disinfecting and deodorizing treatment. Safe for pets and kids.",
   },
   {
     name: "Poop Scooping",
@@ -134,10 +134,10 @@ const blogPosts = [
       "The recommended cleaning frequency for residential and commercial artificial turf. Factors that affect your schedule: pets, foot traffic, trees, and California climate.",
   },
   {
-    title: "Hydrogen Peroxide Turf Cleaning: The Safe Way to Clean Synthetic Turf",
-    slug: "hydrogen-peroxide-safe-turf-cleaning",
+    title: "Chlorine Tablet Turf Cleaning: The Safe Way to Clean Synthetic Turf",
+    slug: "chlorine-based-turf-cleaning",
     description:
-      "Learn about our professional-grade hydrogen peroxide-based cleaning solution. How it works, why it's safe for pets and children, and what makes it different from generic turf cleaners.",
+      "Learn about our professional-grade chlorine tablet cleaning solution. How it works, why it's safe for pets and children, and what makes it different from generic turf cleaners.",
   },
   {
     title: "DIY vs. Professional Turf Cleaning: Is It Worth It?",

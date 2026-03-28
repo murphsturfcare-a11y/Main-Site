@@ -14,7 +14,7 @@ export const faqs: FAQItem[] = [
   },
   {
     question: "Are your cleaning products safe for pets and children?",
-    answer: "Absolutely. We exclusively use professional-grade cleaning products featuring a stabilized accelerated hydrogen peroxide formula that contains no bleach or ammonia. It breaks down into water and oxygen after use, making it completely safe for pets, children, and the environment.",
+    answer: "Absolutely. We exclusively use professional-grade cleaning products featuring a professional-grade chlorine tablet formula that contains no bleach or ammonia. It leaves no harmful residue after use, making it completely safe for pets, children, and the environment.",
     category: "general",
   },
   {
@@ -29,7 +29,7 @@ export const faqs: FAQItem[] = [
   },
   {
     question: "What cleaning products do you use?",
-    answer: "We use a professional-grade stabilized accelerated hydrogen peroxide cleaner-deodorizer specifically formulated for synthetic turf. Unlike bleach or ammonia-based cleaners, our deep cleaning process kills 99.9% of germs and bacteria without leaving harmful residues, and it leaves your turf smelling like fresh real grass.",
+    answer: "We use a professional-grade chlorine tablet cleaner-deodorizer specifically formulated for synthetic turf. Unlike bleach or ammonia-based cleaners, our deep cleaning process kills germs and bacteria without leaving harmful residues, and it leaves your turf smelling like fresh real grass.",
     category: "general",
     serviceSlug: "disinfect-deodorize",
   },
@@ -40,7 +40,7 @@ export const faqs: FAQItem[] = [
   },
   {
     question: "Why can't I just hose down my artificial turf myself?",
-    answer: "Water alone only rinses the surface. Bacteria, urine crystals, and contaminants live deep in the infill layer where a garden hose can't reach. Our professional-grade power-spray treatment penetrates into the infill to kill 99.9% of germs at their source — something water simply cannot do.",
+    answer: "Water alone only rinses the surface. Bacteria, urine crystals, and contaminants live deep in the infill layer where a garden hose can't reach. Our professional-grade power-spray treatment penetrates into the infill to kill germs at their source — something water simply cannot do.",
     category: "general",
   },
 
@@ -93,7 +93,7 @@ export const faqs: FAQItem[] = [
   },
   {
     question: "Why are your cleaning products better than bleach for cleaning turf?",
-    answer: "Bleach and ammonia-based cleaners can leave residues that irritate skin, weaken turf fibers, and create mystery odors. Our professional-grade cleaning products use stabilized accelerated hydrogen peroxide that kills 99.9% of bacteria, then breaks down into water and oxygen — no residues, no damage, no harsh chemical smells.",
+    answer: "Bleach and ammonia-based cleaners can leave residues that irritate skin, weaken turf fibers, and create mystery odors. Our professional-grade cleaning products use chlorine tablets that kill bacteria and leave no harmful residue — no damage, no harsh chemical smells.",
     category: "services",
     serviceSlug: "disinfect-deodorize",
   },
@@ -127,7 +127,7 @@ export const faqs: FAQItem[] = [
   },
   {
     question: "How soon can we use the turf after cleaning?",
-    answer: "Your turf is safe to use as soon as it dries — typically 1 to 2 hours in California's warm climate. Our cleaning solution breaks down into water and oxygen, so there are no harmful residues to worry about.",
+    answer: "Your turf is safe to use as soon as it dries — typically 1 to 2 hours in California's warm climate. Our cleaning solution leaves no harmful residue, so there's nothing to worry about.",
     category: "scheduling",
   },
 

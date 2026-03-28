@@ -118,7 +118,7 @@ const locationFaqs = [
   {
     question: 'Are your cleaning products safe for pets and kids?',
     answer:
-      'Absolutely. Our cleaning solution is hydrogen peroxide-based with no bleach or ammonia. It breaks down into water and oxygen, making it safe for pets, children, and the environment.',
+      'Absolutely. Our cleaning solution is chlorine-based with no bleach or ammonia. It leaves no harmful residue, making it safe for pets, children, and the environment.',
   },
   {
     question: 'What does your turf cleaning process include?',

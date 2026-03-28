@@ -108,27 +108,27 @@ We recommend blooming and de-compacting every six to twelve months depending on 
   {
     slug: 'disinfect-deodorize',
     name: 'Disinfect & Deodorize',
-    shortDescription: 'Power-spray our professional-grade cleaning solution to kill 99.9% of germs and bacteria in your artificial turf infill — no bleach, no ammonia, completely pet-safe.',
+    shortDescription: 'Power-spray our professional-grade cleaning solution to kill germs and bacteria in your artificial turf infill — no bleach, no ammonia, completely pet-safe.',
     fullDescription: `Murphy's Turf disinfecting and deodorizing service is the core of what we do, and it is the treatment that makes the biggest difference in the health, safety, and freshness of your artificial turf. Our process consists of power-spraying a professional-grade cleaning solution specifically formulated for synthetic turf that performs simultaneously as a cleaner, disinfectant, and deodorizer. Unlike surface-level cleaning methods that only address what you can see, our advanced cleaning solution is engineered to cut past the top synthetic turf layer and penetrate deep into the infill where bacteria and viruses actually live. It attacks contaminants at their source — the dense layer of infill material beneath the visible fibers where pet urine crystallizes, organic matter decomposes, and harmful microorganisms establish thriving colonies that are completely invisible from the surface.
 
-The science behind our cleaning solution is what sets it apart from every other turf cleaning product on the market. Formulated with stabilized accelerated hydrogen peroxide, our advanced cleaning solution delivers powerful disinfection without relying on bleach or ammonia — two chemicals that are unfortunately common in many cleaning products marketed for artificial turf. The problem with bleach and ammonia-based cleaners is significant: bleach leaves chemical residues on turf fibers that can irritate the skin of children and pets, weaken and discolor turf materials over time, and produce harsh fumes during application. Ammonia-based products are even worse for pet owners because ammonia is a component of urine — applying it to turf can actually attract pets to urinate in treated areas and creates a lingering chemical odor that many homeowners describe as a mystery smell they cannot identify or eliminate. Our cleaning solution avoids all of these problems because stabilized accelerated hydrogen peroxide breaks down into water and oxygen after doing its work, leaving absolutely no harmful residues behind.
+The science behind our cleaning solution is what sets it apart from every other turf cleaning product on the market. Formulated with professional-grade chlorine tablets, our advanced cleaning solution delivers powerful disinfection without relying on bleach or ammonia — two chemicals that are unfortunately common in many cleaning products marketed for artificial turf. The problem with bleach and ammonia-based cleaners is significant: bleach leaves chemical residues on turf fibers that can irritate the skin of children and pets, weaken and discolor turf materials over time, and produce harsh fumes during application. Ammonia-based products are even worse for pet owners because ammonia is a component of urine — applying it to turf can actually attract pets to urinate in treated areas and creates a lingering chemical odor that many homeowners describe as a mystery smell they cannot identify or eliminate. Our cleaning solution avoids all of these problems because our chlorine tablet formula leaves no harmful residue behind after doing its work.
 
-When power-sprayed onto your turf, our cleaning solution penetrates the synthetic surface and reaches the infill layer within minutes, where it kills 99.9% of germs and bacteria including dangerous pathogens like E. coli, Staphylococcus, and Salmonella. The deodorizing effect is equally impressive — rather than masking odors with artificial fragrance the way many consumer products do, our cleaning solution neutralizes odor-causing compounds at the molecular level and replaces them with a fresh, clean scent reminiscent of real grass. This is why so many of our customers tell us their artificial turf smells better after a Murphy's Turf cleaning than it did the day it was installed.
+When power-sprayed onto your turf, our cleaning solution penetrates the synthetic surface and reaches the infill layer within minutes, where it kills germs and bacteria including dangerous pathogens like E. coli, Staphylococcus, and Salmonella. The deodorizing effect is equally impressive — rather than masking odors with artificial fragrance the way many consumer products do, our cleaning solution neutralizes odor-causing compounds at the molecular level and replaces them with a fresh, clean scent reminiscent of real grass. This is why so many of our customers tell us their artificial turf smells better after a Murphy's Turf cleaning than it did the day it was installed.
 
 California's warm climate makes professional disinfection and deodorizing essential, not optional. The state's heat accelerates bacterial growth exponentially — what might take weeks to become a problem in a cooler climate can develop in just days during a California summer. Pet waste, spilled food and beverages, bird droppings, and even pollen that settles on your turf all become fuel for bacterial colonies that multiply rapidly in warm conditions. Regular professional treatment keeps these populations in check and ensures your turf remains a safe, hygienic surface for your entire family. After treatment, your turf is safe for use as soon as it dries, which typically takes one to two hours in California's sunny conditions. This disinfect and deodorize service is the heart of Murphy's Turf cleaning process and the step that our customers value most.`,
     benefits: [
-      'Kills 99.9% of germs and bacteria in minutes',
+      'Kills germs and bacteria in minutes',
       'Penetrates deep into infill where contaminants live',
       'No bleach, no ammonia — completely safe for pets and children',
       'Eliminates odors at their source, not just masking them',
       'Leaves turf smelling fresh like real grass',
       'Won\'t damage turf fibers or leave harmful residues',
-      'Powered by stabilized accelerated hydrogen peroxide — no bleach or ammonia',
+      'Powered by professional-grade chlorine tablets — no bleach or ammonia',
     ],
     whatIncludes: [
       'Full-surface power-spray application of our professional-grade cleaning solution',
       'Deep penetration treatment into infill layer',
-      'Bacteria and virus elimination (99.9% kill rate)',
+      'Bacteria and virus elimination',
       'Odor neutralization and fresh scent treatment',
       'Edge and border treatment for complete coverage',
       'Safe for use within hours of application',
@@ -137,15 +137,15 @@ California's warm climate makes professional disinfection and deodorizing essent
     iconName: 'SprayCanIcon',
     image: '/images/gallery/service-turf-disinfecting-v2.jpeg',
     metaTitle: "Artificial Turf Disinfecting & Deodorizing | Murphy's Turf",
-    metaDescription: "Power-spray our professional-grade cleaning solution to kill 99.9% of germs and bacteria in your artificial turf. No bleach, no ammonia, pet-safe. Murphy's Turf serves California.",
+    metaDescription: "Power-spray our professional-grade cleaning solution to kill germs and bacteria in your artificial turf. No bleach, no ammonia, pet-safe. Murphy's Turf serves California.",
     faqs: [
       {
         question: 'What cleaning solution do you use and how does it work?',
-        answer: 'We use a professional-grade stabilized accelerated hydrogen peroxide cleaning solution specifically formulated for synthetic turf. Unlike bleach or ammonia-based cleaners, our solution penetrates past the turf surface into the infill where bacteria and viruses actually live, killing 99.9% of contaminants without leaving harmful residues.',
+        answer: 'We use a professional-grade chlorine tablet cleaning solution specifically formulated for synthetic turf. Unlike bleach or ammonia-based cleaners, our solution penetrates past the turf surface into the infill where bacteria and viruses actually live, killing contaminants without leaving harmful residues.',
       },
       {
         question: 'Is your cleaning solution safe for my pets and children?',
-        answer: 'Absolutely. Our cleaning solution contains no bleach or ammonia — chemicals that can leave residues that irritate skin, weaken turf fibers, and create mystery odors. The stabilized hydrogen peroxide formula breaks down into water and oxygen, making it completely safe for pets, kids, and the environment.',
+        answer: 'Absolutely. Our cleaning solution contains no bleach or ammonia — chemicals that can leave residues that irritate skin, weaken turf fibers, and create mystery odors. The chlorine tablet formula leaves no harmful residue, making it completely safe for pets, kids, and the environment.',
       },
       {
         question: 'How soon can we use the turf after treatment?',

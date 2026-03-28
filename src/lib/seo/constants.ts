@@ -42,7 +42,7 @@ export const BLOG_SLUGS = [
   "sacramento-turf-cleaning-tips",
   "health-benefits-turf-sanitization",
   "how-often-clean-artificial-turf",
-  "hydrogen-peroxide-safe-turf-cleaning",
+  "chlorine-based-turf-cleaning",
   "diy-vs-professional-turf-cleaning",
   "artificial-turf-pets-clean-safe",
   "why-artificial-turf-smells-fix",

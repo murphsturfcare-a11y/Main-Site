@@ -5,7 +5,7 @@ export const blogPosts: BlogPost[] = [
     slug: "how-to-clean-artificial-turf-complete-guide",
     title: "How to Clean Artificial Turf: The Complete Guide",
     excerpt:
-      "Learn everything you need to know about cleaning artificial turf, from basic DIY maintenance to professional deep cleaning with hydrogen peroxide-based disinfection.",
+      "Learn everything you need to know about cleaning artificial turf, from basic DIY maintenance to professional deep cleaning with chlorine-based disinfection.",
     content: `
 # How to Clean Artificial Turf: The Complete Guide
 
@@ -66,7 +66,7 @@ Next, we use specialized power brushes to lift matted turf fibers and de-compact
 
 ### Step 3: Professional Disinfection and Deodorization
 
-This is where the real magic happens. We apply our professional-grade stabilized accelerated hydrogen peroxide solution. Unlike harsh chemicals that contain bleach or ammonia, our cleaning solution is completely pet-safe and family-friendly while killing 99.9% of bacteria on contact. It penetrates deep into the infill layer to neutralize odor-causing compounds at their source rather than just masking them with fragrance.
+This is where the real magic happens. We apply our professional-grade chlorine tablet solution. Unlike harsh chemicals that contain bleach or ammonia, our cleaning solution is completely pet-safe and family-friendly while killing bacteria on contact. It penetrates deep into the infill layer to neutralize odor-causing compounds at their source rather than just masking them with fragrance.
 
 ### Step 4: Poop Scooping (Add-On Service)
 
@@ -101,7 +101,7 @@ Your artificial turf is an investment worth protecting. Whether you need a one-t
     metaTitle:
       "How to Clean Artificial Turf: The Complete Guide | Murphy's Turf",
     metaDescription:
-      "Complete guide to cleaning artificial turf. Learn DIY maintenance tips and when to call Murphy's Turf for professional hydrogen peroxide-based disinfection. Visit murphysturf.com/locations.",
+      "Complete guide to cleaning artificial turf. Learn DIY maintenance tips and when to call Murphy's Turf for professional chlorine-based disinfection. Visit murphysturf.com/locations.",
     featuredImage:
       "/images/blog/how-to-clean-artificial-turf-complete-guide.jpg",
   },
@@ -110,7 +110,7 @@ Your artificial turf is an investment worth protecting. Whether you need a one-t
     title:
       "Why Professional Turf Cleaning is Essential in Huntington Beach",
     excerpt:
-      "Huntington Beach turf faces unique challenges from salt air, sand, and coastal moisture. Learn why professional cleaning with our hydrogen peroxide-based solution is essential for coastal homeowners.",
+      "Huntington Beach turf faces unique challenges from salt air, sand, and coastal moisture. Learn why professional cleaning with our chlorine-based solution is essential for coastal homeowners.",
     content: `
 # Why Professional Turf Cleaning is Essential in Huntington Beach
 
@@ -148,7 +148,7 @@ Huntington Beach is one of the most dog-friendly communities in California. With
 
 Dogs returning from the beach track in sand, salt water, and organic matter from the shoreline. Combined with regular pet waste on the turf, this creates a potent mix of contaminants that standard rinsing cannot adequately address. The bacteria count in turf used by beach-going dogs can be significantly higher than in turf used by dogs that stay close to home.
 
-Our poop scooping service combined with professional hydrogen peroxide-based disinfection is specifically designed to address these compounded contamination issues. Our professional-grade cleaning solution is a stabilized accelerated hydrogen peroxide formula that contains no bleach or ammonia, making it completely safe for your pets while killing 99.9% of bacteria lurking in your turf and infill.
+Our poop scooping service combined with professional chlorine-based disinfection is specifically designed to address these compounded contamination issues. Our professional-grade cleaning solution is a professional-grade chlorine tablet formula that contains no bleach or ammonia, making it completely safe for your pets while killing bacteria lurking in your turf and infill.
 
 ## Why DIY Is Not Enough in Huntington Beach
 
@@ -157,7 +157,7 @@ Many Huntington Beach homeowners try to maintain their turf with regular rinsing
 - **Surface-level only**: Garden hoses and spray-on products only reach the top layer of your turf. The real contamination lives in the infill and backing layers below.
 - **Sand compaction**: Without professional blooming and de-compaction equipment, you cannot address the sand infiltration that is unique to coastal properties.
 - **Salt buildup**: Consumer products are not formulated to break down the mineral deposits that salt air leaves in your turf system.
-- **Insufficient disinfection**: Over-the-counter enzyme cleaners do not achieve the 99.9% bacteria kill rate that our professional-grade cleaning solution delivers.
+- **Insufficient disinfection**: Over-the-counter enzyme cleaners do not achieve the bacteria kill rate that our professional-grade cleaning solution delivers.
 
 ## The Murphy's Turf Coastal Cleaning Process
 
@@ -189,7 +189,7 @@ Your artificial turf was a significant investment in your Huntington Beach home.
     metaTitle:
       "Professional Turf Cleaning in Huntington Beach | Murphy's Turf",
     metaDescription:
-      "Huntington Beach artificial turf faces salt air, sand, and coastal moisture challenges. Murphy's Turf provides professional hydrogen peroxide-based cleaning. Call 951-331-3300.",
+      "Huntington Beach artificial turf faces salt air, sand, and coastal moisture challenges. Murphy's Turf provides professional chlorine-based cleaning. Call 951-331-3300.",
     featuredImage:
       "/images/blog/why-professional-turf-cleaning-essential-huntington-beach.jpg",
     location: "huntington-beach",
@@ -247,19 +247,19 @@ Regular rinsing is an important part of turf maintenance, but water alone cannot
 
 ## How Our Professional-Grade Cleaning Solution Solves the Problem
 
-Our professional-grade cleaning solution is a stabilized accelerated hydrogen peroxide formula specifically designed for artificial turf applications. Unlike consumer products, it is engineered to work in the exact conditions that make Inland Empire turf so challenging:
+Our professional-grade cleaning solution is a professional-grade chlorine tablet formula specifically designed for artificial turf applications. Unlike consumer products, it is engineered to work in the exact conditions that make Inland Empire turf so challenging:
 
 ### Deep Infill Penetration
 
 Our professional application method delivers the cleaning solution deep into the infill layer where uric acid crystals and bacterial colonies live. The stabilized formula resists rapid evaporation, giving it time to break down the organic compounds that cause persistent odors even in extreme heat.
 
-### 99.9% Bacteria Kill Rate
+### Effective Bacteria Elimination
 
-Our professional-grade cleaning solution kills 99.9% of bacteria on contact, including E. coli, Staphylococcus, and Salmonella. This is not just about odor; it is about making your turf safe for your family and pets to use. Best of all, it contains no bleach or ammonia. It is completely pet-safe, so your dogs can return to the turf as soon as the treatment dries.
+Our professional-grade cleaning solution kills bacteria on contact, including E. coli, Staphylococcus, and Salmonella. This is not just about odor; it is about making your turf safe for your family and pets to use. Best of all, it contains no bleach or ammonia. It is completely pet-safe, so your dogs can return to the turf as soon as the treatment dries.
 
 ### Uric Acid Crystal Breakdown
 
-The accelerated hydrogen peroxide in our cleaning solution oxidizes and breaks down the uric acid crystals that other products leave behind. This addresses the root cause of persistent odors rather than simply masking them with fragrance.
+The chlorine tablets in our cleaning solution oxidize and break down the uric acid crystals that other products leave behind. This addresses the root cause of persistent odors rather than simply masking them with fragrance.
 
 ## Prevention Tips Between Professional Cleanings
 
@@ -357,7 +357,7 @@ As temperatures warm and rains taper, the combination of residual moisture and r
 
 - **Schedule a spring deep cleaning**: This is arguably the most important professional cleaning of the year for Bay Area turf. Winter has deposited months of moisture and organic matter, and warming temperatures are activating bacterial and mold growth.
 - **Begin regular rinsing**: As rain becomes less frequent, start rinsing your turf weekly to prevent contaminant concentration.
-- **Address any mold patches**: If you see mold or mildew, do not wait. Professional hydrogen peroxide-based treatment eliminates existing growth and helps prevent recurrence.
+- **Address any mold patches**: If you see mold or mildew, do not wait. Professional chlorine-based treatment eliminates existing growth and helps prevent recurrence.
 
 ### Summer (June through August)
 
@@ -377,7 +377,7 @@ The transition back to wetter weather requires preparation:
 
 ## Why Our Professional-Grade Cleaning Solution Is Perfect for Bay Area Conditions
 
-Our professional-grade cleaning solution, a stabilized accelerated hydrogen peroxide treatment, is particularly well-suited to Bay Area turf challenges. Its oxidizing action is highly effective against mold and mildew, which are the primary biological concerns in this moisture-rich climate. It kills 99.9% of bacteria, mold, and mildew on contact while remaining completely safe for pets and families. It contains no bleach or ammonia, so it will not damage your turf fibers or harm the surrounding landscape.
+Our professional-grade cleaning solution, a professional-grade chlorine tablet treatment, is particularly well-suited to Bay Area turf challenges. Its oxidizing action is highly effective against mold and mildew, which are the primary biological concerns in this moisture-rich climate. It kills bacteria, mold, and mildew on contact while remaining completely safe for pets and families. It contains no bleach or ammonia, so it will not damage your turf fibers or harm the surrounding landscape.
 
 Our full service process includes pet hair and debris removal, thorough blooming and de-compacting of the infill layer, and deep professional disinfection and deodorization. For pet owners, we also offer poop scooping to ensure your turf is completely clean before treatment.
 
@@ -401,7 +401,7 @@ Whether you are in Martinez, Concord, Walnut Creek, or anywhere in the East Bay 
     metaTitle:
       "Artificial Turf Maintenance for Bay Area Homeowners | Murphy's Turf",
     metaDescription:
-      "Bay Area turf faces moisture, mold, and microclimate challenges. Murphy's Turf provides professional hydrogen peroxide-based cleaning in Martinez and the East Bay. Call 925-338-0048.",
+      "Bay Area turf faces moisture, mold, and microclimate challenges. Murphy's Turf provides professional chlorine-based cleaning in Martinez and the East Bay. Call 925-338-0048.",
     featuredImage:
       "/images/blog/artificial-turf-maintenance-bay-area-martinez.jpg",
     location: "martinez",
@@ -501,7 +501,7 @@ There are clear signs that it is time to call Murphy's Turf for a professional c
 - Any signs of mold during the damp winter months
 - Turf that looks matted and lifeless despite regular brushing
 
-Our professional process addresses all of these issues. We start with thorough pet hair and debris removal, then bloom and de-compact the infill layer to restore proper drainage and fiber appearance. The cornerstone of our service is our professional-grade stabilized accelerated hydrogen peroxide treatment that kills 99.9% of bacteria while being completely pet-safe with no bleach or ammonia. It penetrates deep into the infill to eliminate odors and contaminants at their source.
+Our professional process addresses all of these issues. We start with thorough pet hair and debris removal, then bloom and de-compact the infill layer to restore proper drainage and fiber appearance. The cornerstone of our service is our professional-grade chlorine tablet treatment that kills bacteria while being completely pet-safe with no bleach or ammonia. It penetrates deep into the infill to eliminate odors and contaminants at their source.
 
 ## Your Sacramento Turf Partner
 
@@ -539,7 +539,7 @@ Sacramento is a fantastic place to live, and artificial turf is the perfect land
 
 Artificial turf has become a staple in homes, schools, daycares, dog parks, and commercial properties across California. It is beautiful, durable, and water-efficient. But beneath that pristine green surface, an unsanitized artificial lawn can harbor a startling array of bacteria, viruses, and other pathogens that pose real health risks to anyone who uses it. Regular sanitization is not just about keeping your turf looking and smelling good; it is a genuine health necessity.
 
-At Murphy's Turf, we have made turf sanitization our specialty. Serving communities across Huntington Beach, Los Angeles, Murrieta, the Inland Empire, Martinez, the Bay Area, and Sacramento, we have seen firsthand what lurks in neglected turf and what a difference professional sanitization makes. In this article, we will look at the science behind turf contamination, the specific health risks involved, and why our professional-grade hydrogen peroxide-based treatment is the gold standard for turf sanitization.
+At Murphy's Turf, we have made turf sanitization our specialty. Serving communities across Huntington Beach, Los Angeles, Murrieta, the Inland Empire, Martinez, the Bay Area, and Sacramento, we have seen firsthand what lurks in neglected turf and what a difference professional sanitization makes. In this article, we will look at the science behind turf contamination, the specific health risks involved, and why our professional-grade chlorine-based treatment is the gold standard for turf sanitization.
 
 ## What Bacteria Live in Your Artificial Turf?
 
@@ -592,13 +592,13 @@ People with compromised immune systems due to illness, medication, or age are at
 
 Anyone who exercises on artificial turf, whether it is backyard yoga, playing catch with the kids, or organized sports, has increased skin contact with the surface. Sweat, minor abrasions, and turf burns create pathways for bacteria to enter the body.
 
-## Why Professional Hydrogen Peroxide-Based Sanitization Matters
+## Why Professional Chlorine-Based Sanitization Matters
 
 Knowing what lives in your turf makes the case for professional sanitization clear. But not all sanitization methods are created equal. Here is why our professional-grade cleaning solution stands apart:
 
-### 99.9% Bacteria Kill Rate
+### Effective Bacteria Elimination
 
-Our professional-grade cleaning solution is a stabilized accelerated hydrogen peroxide formula that kills 99.9% of bacteria, including E. coli, Staphylococcus, and Salmonella, on contact. This is not a marketing claim; it is verified performance data. Consumer products rarely approach this level of effectiveness.
+Our professional-grade cleaning solution is a professional-grade chlorine tablet formula that kills bacteria, including E. coli, Staphylococcus, and Salmonella, on contact. This is verified performance data. Consumer products rarely approach this level of effectiveness.
 
 ### No Bleach, No Ammonia
 
@@ -639,12 +639,12 @@ Our comprehensive sanitization service goes beyond just applying a disinfectant.
 
 1. **Pet hair and debris removal**: We clear all surface contaminants to ensure maximum cleaning solution contact with the turf and infill.
 2. **Blooming and de-compacting**: We restore proper infill structure so the treatment can penetrate effectively.
-3. **Professional disinfection and deodorization**: We apply our professional-grade hydrogen peroxide-based treatment throughout the turf, ensuring complete coverage and deep infill penetration.
+3. **Professional disinfection and deodorization**: We apply our professional-grade chlorine-based treatment throughout the turf, ensuring complete coverage and deep infill penetration.
 4. **Poop scooping**: For properties with pets, we include thorough waste removal as part of the service.
 
 ## Protect the Health of Everyone Who Uses Your Turf
 
-Your artificial turf should be a place where your family, pets, and guests can play, relax, and enjoy the outdoors without health concerns. Regular professional sanitization with our hydrogen peroxide-based cleaning solution makes that possible. Do not wait for a health scare to take action. Contact your local Murphy's Turf office to schedule your sanitization service and start protecting the people and pets you care about most. Visit [murphysturf.com/locations](/locations) to find the team nearest you.
+Your artificial turf should be a place where your family, pets, and guests can play, relax, and enjoy the outdoors without health concerns. Regular professional sanitization with our chlorine-based cleaning solution makes that possible. Do not wait for a health scare to take action. Contact your local Murphy's Turf office to schedule your sanitization service and start protecting the people and pets you care about most. Visit [murphysturf.com/locations](/locations) to find the team nearest you.
     `,
     author: "Murphy's Turf Team",
     publishedDate: "2025-08-22",
@@ -689,7 +689,7 @@ Even without pets, leaves, bird droppings, airborne pollutants, and pollen accum
 
 If you have one or two dogs using the turf regularly, **monthly professional cleaning** is the gold standard. Pet urine doesn't just sit on the surface — it seeps into the infill layer where it crystallizes and becomes a persistent odor source. Fecal bacteria, even after you pick up solid waste, leaves behind microscopic residue that multiplies rapidly in warm conditions.
 
-Monthly service from Murphy's Turf includes pet hair and debris removal, a full disinfect and deodorize treatment using our professional-grade cleaning solution, and blooming to keep fibers from matting down in high-traffic pet paths. Our stabilized accelerated hydrogen peroxide solution kills 99.9% of bacteria on contact and breaks down urine crystals at the molecular level, then decomposes into nothing but water and oxygen. No harsh chemicals lingering where your pets play.
+Monthly service from Murphy's Turf includes pet hair and debris removal, a full disinfect and deodorize treatment using our professional-grade cleaning solution, and blooming to keep fibers from matting down in high-traffic pet paths. Our professional-grade chlorine tablet solution kills bacteria on contact and breaks down urine crystals at the molecular level, leaving no harmful residue. No harsh chemicals lingering where your pets play.
 
 Between professional visits, we recommend rinsing pet areas with a garden hose two to three times per week and picking up solid waste daily.
 
@@ -754,30 +754,28 @@ Every Murphy's Turf service includes our complete treatment — pet hair and deb
     featuredImage: "/images/blog/how-often-clean-artificial-turf.jpg",
   },
   {
-    slug: "hydrogen-peroxide-turf-cleaning-science",
-    title: "What Is Hydrogen Peroxide-Based Turf Cleaning? The Science Behind Safe Turf Cleaning",
+    slug: "chlorine-based-turf-cleaning-science",
+    title: "The Science Behind Our Professional Chlorine-Based Cleaning Process",
     excerpt:
-      "Discover the science behind our professional-grade cleaning solution — a stabilized accelerated hydrogen peroxide formula that kills 99.9% of bacteria without bleach, ammonia, or toxic residue.",
+      "Discover the science behind our professional-grade cleaning solution — a professional-grade chlorine tablet formula that kills bacteria without bleach, ammonia, or toxic residue.",
     content: `
-## What Is Hydrogen Peroxide-Based Turf Cleaning? The Science Behind Safe Turf Cleaning
+## The Science Behind Our Professional Chlorine-Based Cleaning Process
 
-At Murphy's Turf, every cleaning service we perform centers around one product: our professional-grade hydrogen peroxide-based cleaning solution. It's a carefully formulated stabilized accelerated hydrogen peroxide solution that represents the safest, most effective approach to artificial turf sanitation available today. After more than 30 years in the cleaning industry, we chose this solution because the science behind it is simply superior to everything else on the market.
+At Murphy's Turf, every cleaning service we perform centers around one product: our professional-grade chlorine-based cleaning solution. It's a carefully formulated professional-grade chlorine tablet solution that represents the safest, most effective approach to artificial turf sanitation available today. After more than 30 years in the cleaning industry, we chose this solution because the science behind it is simply superior to everything else on the market.
 
 This article is our definitive guide to what our professional-grade cleaning solution is, how it works at a molecular level, and why it matters for your family, your pets, and the environment.
 
-### The Active Ingredient: Stabilized Accelerated Hydrogen Peroxide
+### The Active Ingredient: Professional-Grade Chlorine Tablets
 
-You're probably familiar with hydrogen peroxide — that brown bottle in your medicine cabinet. Standard hydrogen peroxide (H2O2) is a powerful oxidizer, but it's unstable. It breaks down quickly when exposed to light, heat, or organic matter, which means it often loses potency before finishing the job.
-
-Our professional-grade cleaning solution uses **stabilized accelerated hydrogen peroxide (SAHP)**, which solves both problems. The "stabilized" component means the hydrogen peroxide maintains its potency over time and resists premature decomposition. The "accelerated" component means it works faster and more effectively at lower concentrations than standard hydrogen peroxide, thanks to proprietary surfactants and stabilizers that enhance its interaction with target organisms.
+Our professional-grade cleaning solution uses **professional-grade chlorine tablets**, which are specifically formulated for artificial turf applications. The tablets are designed to maintain consistent potency and work effectively at controlled concentrations, thanks to proprietary surfactants and stabilizers that enhance their interaction with target organisms.
 
 The result is a cleaning agent that delivers hospital-grade disinfection without the toxicity profile of conventional disinfectants.
 
 ### How Our Cleaning Solution Kills Bacteria
 
-When our cleaning solution contacts bacteria, the mechanism is elegant and thorough. The accelerated hydrogen peroxide releases reactive oxygen species — highly energetic oxygen molecules that attack bacterial cell walls and membranes. This oxidative burst ruptures the cell structure, destroys the organism's DNA, and neutralizes the proteins that bacteria need to function and reproduce.
+When our cleaning solution contacts bacteria, the mechanism is elegant and thorough. The chlorine-based formula releases active sanitizing agents that attack bacterial cell walls and membranes. This process ruptures the cell structure, destroys the organism's DNA, and neutralizes the proteins that bacteria need to function and reproduce.
 
-This is not a slow process. Our cleaning solution achieves a **99.9% kill rate** against common turf bacteria including E. coli, Salmonella, Staphylococcus, and the pathogens commonly found in pet waste. The reactive oxygen species work on contact, meaning bacteria don't have time to develop resistance — a growing concern with traditional chemical disinfectants.
+This is not a slow process. Our cleaning solution **eliminates** common turf bacteria including E. coli, Salmonella, Staphylococcus, and the pathogens commonly found in pet waste. The active agents work on contact, meaning bacteria don't have time to develop resistance — a growing concern with traditional chemical disinfectants.
 
 ### What Makes It Different from Bleach
 
@@ -789,7 +787,7 @@ Bleach (sodium hypochlorite) is the go-to disinfectant for many cleaning compani
 
 **Environmental runoff:** When it rains or when you rinse your turf, bleach-contaminated water flows into storm drains and eventually into local waterways. In California, where water quality regulations are among the strictest in the nation, this is both an environmental and legal concern.
 
-**Our solution's advantage:** After our cleaning solution completes its disinfection work, it breaks down into just two things — **water (H2O) and oxygen (O2)**. That's it. No toxic residue on your turf. No harmful runoff into the environment. No damage to synthetic fibers. No risk to the pets and children who use the surface minutes after treatment.
+**Our solution's advantage:** After our cleaning solution completes its disinfection work, it leaves no harmful residue. No toxic buildup on your turf. No harmful runoff into the environment. No damage to synthetic fibers. No risk to the pets and children who use the surface minutes after treatment.
 
 ### What Makes It Different from Ammonia
 
@@ -799,7 +797,7 @@ Our professional-grade cleaning solution takes the opposite approach. Its oxidat
 
 ### The Fresh Grass Scent
 
-One of the things our customers love most about our professional-grade cleaning solution is what happens after the science does its work. Once bacteria and organic contaminants are eliminated and the hydrogen peroxide has broken down, what remains is a **clean, fresh grass scent** — not an artificial perfume layered over contamination, but a genuinely clean surface that smells the way a healthy lawn should.
+One of the things our customers love most about our professional-grade cleaning solution is what happens after the science does its work. Once bacteria and organic contaminants are eliminated, what remains is a **clean, fresh grass scent** — not an artificial perfume layered over contamination, but a genuinely clean surface that smells the way a healthy lawn should.
 
 This scent is a carefully selected component of the formulation, designed to complement the cleaning process rather than mask shortcomings. When you smell that fresh grass scent after a Murphy's Turf treatment, it means the turf is actually clean — not just covered up.
 
@@ -813,19 +811,19 @@ For a surface where dogs roll around, toddlers crawl, and families spend their e
 
 ### Environmental Benefits
 
-Beyond your backyard, our professional-grade cleaning solution aligns with broader environmental responsibility. Every treatment that uses hydrogen peroxide instead of bleach or ammonia means:
+Beyond your backyard, our professional-grade cleaning solution aligns with broader environmental responsibility. Every treatment that uses chlorine tablets instead of bleach or ammonia means:
 
 - **Zero toxic runoff** entering storm drains and waterways
 - **No contribution** to chlorinated byproduct contamination in soil
 - **No volatile organic compounds (VOCs)** released into the air during application
-- **Complete biodegradability** — the end products are literally water and oxygen
+- **Complete biodegradability** — leaves no harmful residue after treatment
 - **Reduced chemical manufacturing footprint** compared to petroleum-derived cleaning agents
 
 In a state like California, where drought conditions make every drop of water precious and environmental regulations reflect a genuine commitment to ecological health, choosing our professional-grade cleaning solution isn't just good for your yard — it's good citizenship.
 
 ### Experience the Difference
 
-Every service Murphy's Turf performs — from pet hair and debris removal to blooming and de-compacting to our full disinfect and deodorize treatment — features our professional-grade hydrogen peroxide-based cleaning solution as the cornerstone product. It's the reason we can guarantee a clean, safe, fresh-smelling turf surface every single time.
+Every service Murphy's Turf performs — from pet hair and debris removal to blooming and de-compacting to our full disinfect and deodorize treatment — features our professional-grade chlorine-based cleaning solution as the cornerstone product. It's the reason we can guarantee a clean, safe, fresh-smelling turf surface every single time.
 
 Want to see the difference for yourself? Contact your local Murphy's Turf office and schedule your first professional cleaning treatment. Once you experience the results, you'll understand why we built our entire service around this remarkable product.
     `,
@@ -833,8 +831,8 @@ Want to see the difference for yourself? Contact your local Murphy's Turf office
     publishedDate: "2025-07-18",
     category: "products",
     tags: [
-      "hydrogen peroxide cleaner",
-      "hydrogen peroxide turf cleaner",
+      "chlorine tablet cleaner",
+      "chlorine tablet turf cleaner",
       "safe turf cleaning",
       "pet-safe disinfectant",
       "artificial turf sanitizer",
@@ -842,9 +840,9 @@ Want to see the difference for yourself? Contact your local Murphy's Turf office
       "bleach-free turf cleaner",
     ],
     metaTitle:
-      "What Is Hydrogen Peroxide-Based Turf Cleaning? Science Behind Safe Artificial Turf Cleaning",
+      "The Science Behind Our Professional Chlorine-Based Cleaning Process | Safe Artificial Turf Cleaning",
     metaDescription:
-      "Learn how our stabilized accelerated hydrogen peroxide cleaning solution kills 99.9% of bacteria without bleach or ammonia, then breaks down into water and oxygen. Pet-safe and eco-friendly.",
+      "Learn how our professional-grade chlorine tablet cleaning solution kills bacteria without bleach or ammonia. Pet-safe and eco-friendly.",
     featuredImage:
       "/images/gallery/service-turf-disinfecting-v2.jpeg",
   },
@@ -885,7 +883,7 @@ These DIY tasks are genuinely effective at maintaining day-to-day cleanliness an
 
 Here's where the DIY approach hits its limits — and it's important to understand why, not just take our word for it.
 
-**Deep sanitization with our professional-grade cleaning solution:** You can't replicate a professional disinfection treatment at home. Our stabilized accelerated hydrogen peroxide solution requires specific application equipment to ensure even distribution across the entire turf surface and proper penetration into the infill layer. The product itself kills 99.9% of bacteria and breaks down into water and oxygen, but it needs to be applied at the correct concentration and contact time to achieve full efficacy. Pouring hydrogen peroxide from the drugstore on your turf is not the same thing.
+**Deep sanitization with our professional-grade cleaning solution:** You can't replicate a professional disinfection treatment at home. Our professional-grade chlorine tablet solution requires specific application equipment to ensure even distribution across the entire turf surface and proper penetration into the infill layer. The product itself kills bacteria and leaves no harmful residue, but it needs to be applied at the correct concentration and contact time to achieve full efficacy. Using off-the-shelf products on your turf is not the same thing.
 
 **Blooming and de-compacting:** Over time, artificial turf fibers get pressed flat by foot traffic, pet activity, and furniture. Professional blooming uses specialized power brushes calibrated to lift fibers without damaging them while simultaneously de-compacting the infill layer below. A push broom provides surface-level help, but it can't reach the infill compaction that restricts drainage and traps contaminants. Our equipment restores the turf to its original upright, plush condition and ensures the infill layer drains properly.
 
@@ -1008,18 +1006,18 @@ It's a simple service, but it addresses the single biggest source of bacterial c
 
 ### Professional-Grade Cleaning: The Pet Owner's Secret Weapon
 
-Here's where proper professional maintenance transforms the pet turf experience. During every Murphy's Turf service visit, we apply our professional-grade stabilized accelerated hydrogen peroxide solution across the entire turf surface.
+Here's where proper professional maintenance transforms the pet turf experience. During every Murphy's Turf service visit, we apply our professional-grade chlorine tablet solution across the entire turf surface.
 
 What our professional-grade cleaning solution does for pet owners:
 
-- **Kills 99.9% of bacteria** including E. coli, Salmonella, and other pathogens from pet waste
+- **Kills bacteria** including E. coli, Salmonella, and other pathogens from pet waste
 - **Breaks down uric acid crystals** that cause persistent ammonia odor
 - **Eliminates odor at the molecular source** rather than masking it with fragrance
-- **Decomposes into water and oxygen** — completely safe for pets to walk on immediately after treatment
+- **Leaves no harmful residue** — completely safe for pets to walk on immediately after treatment
 - **Contains no bleach, no ammonia** — zero toxic residue in the turf where your pets play, roll, and lie down
 - **Leaves a fresh grass scent** that replaces contamination odor with genuine cleanliness
 
-The pet safety factor cannot be overstated. Dogs spend significant time with their faces close to the turf surface. They lick their paws. They roll on the grass. Any cleaning product that leaves toxic residue poses a direct ingestion and contact risk. Our professional-grade cleaning solution eliminates this concern entirely — once it finishes working, all that remains is water, oxygen, and a clean surface.
+The pet safety factor cannot be overstated. Dogs spend significant time with their faces close to the turf surface. They lick their paws. They roll on the grass. Any cleaning product that leaves toxic residue poses a direct ingestion and contact risk. Our professional-grade cleaning solution eliminates this concern entirely — once it finishes working, all that remains is a clean surface with no harmful residue.
 
 ### EPA Statistics on Pet Waste
 
@@ -1038,7 +1036,7 @@ The best approach combines your daily efforts with professional support:
 
 - **Daily:** Pick up waste, rinse high-use areas
 - **Weekly:** Light brushing of matted areas, thorough debris removal
-- **Monthly:** Professional Murphy's Turf service including hydrogen peroxide-based treatment, blooming, de-compacting, and comprehensive disinfection
+- **Monthly:** Professional Murphy's Turf service including chlorine-based treatment, blooming, de-compacting, and comprehensive disinfection
 - **As needed:** Poop scooping service for busy schedules
 
 This routine keeps bacterial levels low, prevents odor from developing, maintains drainage, and ensures your turf stays safe for every member of your family — two-legged and four-legged alike.
@@ -1055,7 +1053,7 @@ Artificial turf is the best surface for pet owners who want a beautiful, durable
       "dog turf cleaning",
       "pet urine turf odor",
       "pet-safe turf cleaner",
-      "hydrogen peroxide cleaner pets",
+      "chlorine tablet cleaner pets",
       "poop scooping service",
       "pet waste bacteria",
     ],
@@ -1118,17 +1116,17 @@ Home remedies face similar limitations. Vinegar provides temporary pH disruption
 
 ### How Our Professional-Grade Cleaning Solution Eliminates Odor at the Source
 
-This is where our professional-grade cleaning solution — a stabilized accelerated hydrogen peroxide formula used exclusively by Murphy's Turf — changes everything. Instead of masking odor or providing temporary surface relief, it attacks the actual sources of smell.
+This is where our professional-grade cleaning solution — a professional-grade chlorine tablet formula used exclusively by Murphy's Turf — changes everything. Instead of masking odor or providing temporary surface relief, it attacks the actual sources of smell.
 
 **Against uric acid crystals:** The solution's oxidative action breaks down the molecular structure of uric acid crystals in the infill. Rather than trying to dissolve them with water (which is chemically impossible), the reactive oxygen species oxidize the crystal bonds, converting them into water-soluble compounds that can be flushed from the system.
 
-**Against bacteria:** Our cleaning solution kills 99.9% of bacteria on contact. The accelerated hydrogen peroxide ruptures bacterial cell walls through oxidative stress, destroying the organisms and their ability to reproduce. This isn't a temporary suppression — it's elimination.
+**Against bacteria:** Our cleaning solution eliminates bacteria on contact. The chlorine-based formula ruptures bacterial cell walls through oxidative stress, destroying the organisms and their ability to reproduce. This isn't a temporary suppression — it's elimination.
 
 **Against mold and mildew:** The same oxidative mechanism that kills bacteria is equally effective against fungal organisms. Our cleaning solution destroys mold and mildew colonies and removes the organic residue they feed on.
 
 **Against organic debris:** The solution's surfactants help break down and lift decomposed organic matter from the turf fibers and infill, allowing it to be removed during the cleaning process.
 
-And here's the critical difference: after our cleaning solution completes its work, it breaks down into **water and oxygen**. No toxic residue. No chemical smell replacing a biological one. No harsh compounds lingering where your family and pets spend time. Just clean turf and a fresh grass scent that signals genuine cleanliness.
+And here's the critical difference: after our cleaning solution completes its work, it leaves no harmful residue. No toxic buildup. No chemical smell replacing a biological one. No harsh compounds lingering where your family and pets spend time. Just clean turf and a fresh grass scent that signals genuine cleanliness.
 
 ### When to Call Murphy's Turf
 
@@ -1144,7 +1142,7 @@ Every Murphy's Turf service includes our complete package: pet hair and debris r
 
 ### Don't Live With the Smell
 
-Artificial turf odor is not something you have to accept, and it's not a sign that your turf needs replacement. In the vast majority of cases, professional cleaning with our hydrogen peroxide-based solution completely resolves the problem and regular maintenance prevents it from returning.
+Artificial turf odor is not something you have to accept, and it's not a sign that your turf needs replacement. In the vast majority of cases, professional cleaning with our chlorine-based solution completely resolves the problem and regular maintenance prevents it from returning.
 
 Contact your local Murphy's Turf office to schedule your turf assessment. We'll identify exactly what's causing your odor and give your turf the treatment it needs to smell the way it should — like a clean, fresh yard your whole family can enjoy. Visit [murphysturf.com/locations](/locations) to find the team nearest you.
     `,
@@ -1185,7 +1183,7 @@ Here are the warning signs that your artificial turf needs professional cleaning
 
 **What it means:** Bacterial contamination has established itself in the infill layer. In most cases, pet urine crystals (uric acid) have accumulated to a concentration that produces consistent ammonia off-gassing. If the smell is musty rather than sharp, mold or mildew may be developing in areas with trapped moisture.
 
-**Which service fixes it:** Our full **disinfect and deodorize treatment with our professional-grade cleaning solution** directly targets this issue. The stabilized accelerated hydrogen peroxide kills 99.9% of bacteria, breaks down uric acid crystals through oxidation, and eliminates the molecular source of the odor. It then decomposes into water and oxygen, leaving behind a fresh grass scent and a genuinely clean surface — no masking, no toxic residue.
+**Which service fixes it:** Our full **disinfect and deodorize treatment with our professional-grade cleaning solution** directly targets this issue. The professional-grade chlorine tablet formula kills bacteria, breaks down uric acid crystals through oxidation, and eliminates the molecular source of the odor. It leaves no harmful residue, just a fresh grass scent and a genuinely clean surface — no masking, no toxic buildup.
 
 ### Sign #2: Discoloration or Staining
 
@@ -1193,7 +1191,7 @@ Here are the warning signs that your artificial turf needs professional cleaning
 
 **What it means:** Organic material has broken down on the surface or in the upper infill layer, leaving behind residue that adheres to the turf fibers. Dark patches often indicate concentrated bacterial activity. Yellowing can result from accumulated urine residue, decomposed organic matter, or chemical reactions from improper cleaning products. Staining near trees or plants may come from tannins in leaves, berries, or sap.
 
-**Which service fixes it:** Our **pet hair and debris removal** service eliminates surface-level organic material, while our professional disinfect and deodorize treatment addresses biological staining at a deeper level. The oxidative action of the hydrogen peroxide-based solution breaks down the compounds causing discoloration, restoring a more uniform appearance.
+**Which service fixes it:** Our **pet hair and debris removal** service eliminates surface-level organic material, while our professional disinfect and deodorize treatment addresses biological staining at a deeper level. The oxidative action of the chlorine-based solution breaks down the compounds causing discoloration, restoring a more uniform appearance.
 
 ### Sign #3: Matted or Flattened Fibers
 
@@ -1217,7 +1215,7 @@ Here are the warning signs that your artificial turf needs professional cleaning
 
 **What it means:** Conditions have allowed mold or mildew to colonize the turf system. This typically occurs in shaded areas, spots with poor drainage, or sections where organic debris has accumulated and trapped moisture. Mold on artificial turf is both an aesthetic and health concern — mold spores can trigger allergic reactions and respiratory issues in sensitive individuals.
 
-**Which service fixes it:** The **professional disinfect and deodorize treatment** eliminates mold and mildew through the same oxidative mechanism that kills bacteria. The reactive oxygen species in our hydrogen peroxide-based solution destroy fungal cells and break down the organic material they feed on. Our de-compacting service then addresses the drainage issues that allowed mold to develop in the first place.
+**Which service fixes it:** The **professional disinfect and deodorize treatment** eliminates mold and mildew through the same oxidative mechanism that kills bacteria. The active agents in our chlorine-based solution destroy fungal cells and break down the organic material they feed on. Our de-compacting service then addresses the drainage issues that allowed mold to develop in the first place.
 
 ### Sign #6: Compacted or Uneven Infill
 
@@ -1233,7 +1231,7 @@ Here are the warning signs that your artificial turf needs professional cleaning
 
 **What it means:** Allergen levels on the turf have accumulated to a point that triggers reactions. Common turf allergens include mold spores, dust mite waste (which thrives in organic debris accumulation), pollen trapped in fibers, and bacterial endotoxins. While artificial turf actually produces fewer allergens than natural grass when properly maintained, a neglected turf surface can become an allergen reservoir.
 
-**Which service fixes it:** Our complete service package addresses every allergen source. **Debris removal** eliminates pollen and organic material. **De-compacting** removes trapped dust and particulates. **Professional hydrogen peroxide-based treatment** kills mold, bacteria, and the organisms that produce allergenic waste products.
+**Which service fixes it:** Our complete service package addresses every allergen source. **Debris removal** eliminates pollen and organic material. **De-compacting** removes trapped dust and particulates. **Professional chlorine-based treatment** kills mold, bacteria, and the organisms that produce allergenic waste products.
 
 ### Sign #8: Pets Avoiding the Turf
 

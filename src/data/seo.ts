@@ -28,7 +28,7 @@ export const seoMetadata: Record<string, SEOMetadata> = {
   },
   "services/disinfect-deodorize": {
     title: "Artificial Turf Disinfecting & Deodorizing | Murphy's Turf",
-    description: "Kill 99.9% of bacteria and eliminate odors from your artificial turf. Professional disinfecting and deodorizing that's safe for pets and kids. Get a free quote today.",
+    description: "Kill bacteria and eliminate odors from your artificial turf. Professional disinfecting and deodorizing that's safe for pets and kids. Get a free quote today.",
     keywords: ["turf disinfecting", "turf deodorizing", "artificial turf sanitization", "synthetic grass odor removal", "antibacterial turf treatment", "safe turf cleaning pets kids"],
   },
   "services/poop-scooping": {

@@ -259,20 +259,20 @@ const servicesData: Record<string, ServiceData> = {
     name: 'Disinfect & Deodorize',
     slug: 'disinfect-deodorize',
     image: '/images/gallery/service-turf-disinfecting-v2.jpeg',
-    tagline: 'Kill 99.9% of bacteria and eliminate odors at the source',
+    tagline: 'Kill bacteria and eliminate odors at the source',
     metaDescription:
-      "Professional artificial turf disinfecting and deodorizing in Murrieta, CA. Murphy's Turf uses a professional-grade hydrogen peroxide-based cleaner to kill 99.9% of bacteria and eliminate pet odors without harsh chemicals. Get a free quote.",
+      "Professional artificial turf disinfecting and deodorizing in Murrieta, CA. Murphy's Turf uses a professional-grade chlorine-based cleaner to kill bacteria and eliminate pet odors without harsh chemicals. Get a free quote.",
     descriptionParagraphs: [
-      "Our disinfecting and deodorizing turf services consist of power-spraying our professional-grade cleaning solution. This solution is designed to perform as a cleaner, disinfectant, & deodorizer. It cuts past the top synthetic turf layer, into the infill where bacteria & viruses live, and attacks the contaminants at their source. Our cleaning solution will penetrate the synthetic turf, clean & kill 99.9% of germs & bacteria in just minutes, all without any hazardous chemicals.",
+      "Our disinfecting and deodorizing turf services consist of power-spraying our professional-grade cleaning solution. This solution is designed to perform as a cleaner, disinfectant, & deodorizer. It cuts past the top synthetic turf layer, into the infill where bacteria & viruses live, and attacks the contaminants at their source. Our cleaning solution will penetrate the synthetic turf, clean & kill germs & bacteria in just minutes, all without any hazardous chemicals.",
       "If you have pets — or even if you do not — your artificial turf is harboring more bacteria than you might realize. Every time a dog urinates on synthetic turf, the liquid passes through the blades and settles into the infill layer below. In Murrieta's warm Southern California climate, heat accelerates bacterial growth and amplifies odors, turning a minor issue into a persistent problem that surface-level rinsing cannot solve. Bacteria, viruses, and the ammonia compounds from pet urine thrive in the warm, moist environment beneath your turf's surface, and no amount of hosing down the top layer will reach them. That is exactly why Murphy's Turf relies on a professional-grade cleaning solution specifically formulated to penetrate past the surface and attack contaminants where they actually live.",
-      "Our power-spray process is thorough and systematic. Our technicians apply our professional-grade cleaning solution across the entire turf surface using commercial spraying equipment that ensures complete, even coverage. The solution is designed to cut through the synthetic turf layer and soak into the infill, where it goes to work immediately — killing 99.9% of germs and bacteria in just minutes. Unlike household cleaners or DIY solutions, our cleaning solution does not simply mask odors. It neutralizes the bacterial source of the smell, replacing it with a clean, fresh grass scent. The result is turf that does not just smell better for a day or two — it stays fresh because the underlying cause of the odor has been eliminated.",
-      "What makes our cleaning solution stand out from other turf cleaners is what it does not contain. Our professional-grade solution uses stabilized accelerated hydrogen peroxide as its active ingredient, which means no bleach, no ammonia, and no harsh chemical residues. Many competing turf cleaners rely on bleach or ammonia-based formulas that can irritate skin, weaken turf fibers over time, and leave behind chemical odors that are unpleasant for both people and pets. With our cleaning solution, your turf is safe for pets and children to use as soon as it dries — typically within 30 to 60 minutes depending on weather conditions. For families in Murrieta, Temecula, and throughout the Inland Empire who want a genuinely clean and safe outdoor surface, our disinfect and deodorize service delivers peace of mind along with a dramatically fresher yard.",
+      "Our power-spray process is thorough and systematic. Our technicians apply our professional-grade cleaning solution across the entire turf surface using commercial spraying equipment that ensures complete, even coverage. The solution is designed to cut through the synthetic turf layer and soak into the infill, where it goes to work immediately — killing germs and bacteria in just minutes. Unlike household cleaners or DIY solutions, our cleaning solution does not simply mask odors. It neutralizes the bacterial source of the smell, replacing it with a clean, fresh grass scent. The result is turf that does not just smell better for a day or two — it stays fresh because the underlying cause of the odor has been eliminated.",
+      "What makes our cleaning solution stand out from other turf cleaners is what it does not contain. Our professional-grade solution uses a professional-grade chlorine tablet as its active ingredient, which means no bleach, no ammonia, and no harsh chemical residues. Many competing turf cleaners rely on bleach or ammonia-based formulas that can irritate skin, weaken turf fibers over time, and leave behind chemical odors that are unpleasant for both people and pets. With our cleaning solution, your turf is safe for pets and children to use as soon as it dries — typically within 30 to 60 minutes depending on weather conditions. For families in Murrieta, Temecula, and throughout the Inland Empire who want a genuinely clean and safe outdoor surface, our disinfect and deodorize service delivers peace of mind along with a dramatically fresher yard.",
     ],
     included: [
       'Full-surface professional-grade power spray',
       'Infill-level sanitization',
       'Odor neutralization',
-      'Bacteria elimination (99.9%)',
+      'Bacteria elimination',
       'Safe for immediate pet/child use after drying',
     ],
     benefits: [
@@ -286,13 +286,13 @@ const servicesData: Record<string, ServiceData> = {
         icon: ShieldCheck,
         title: 'Kills Bacteria at the Source',
         description:
-          'Penetrates past the turf surface to the infill layer where 99.9% of germs and bacteria are eliminated in minutes.',
+          'Penetrates past the turf surface to the infill layer where germs and bacteria are eliminated in minutes.',
       },
       {
         icon: Heart,
         title: 'No Harsh Chemical Residue',
         description:
-          'Stabilized hydrogen peroxide means no bleach, no ammonia, and no skin-irritating residues left behind.',
+          'Professional-grade chlorine tablet means no bleach, no ammonia, and no skin-irritating residues left behind.',
       },
       {
         icon: TreePine,
@@ -314,7 +314,7 @@ const servicesData: Record<string, ServiceData> = {
         beforeColor: 'bg-brown/30',
         afterColor: 'bg-sage/60',
         beforeCaption: 'Bacteria-laden infill from pet use',
-        afterCaption: '99.9% bacteria eliminated, safe for family use',
+        afterCaption: 'Bacteria eliminated, safe for family use',
       },
     ],
     faqs: [
@@ -331,7 +331,7 @@ const servicesData: Record<string, ServiceData> = {
       {
         question: 'Will your cleaning solution damage or discolor my artificial turf?',
         answer:
-          'No. Our cleaning solution is specifically formulated for synthetic turf and will not damage, discolor, or weaken your turf fibers. Unlike bleach-based cleaners that can fade turf color and break down fibers over time, our professional-grade solution uses stabilized accelerated hydrogen peroxide that is tough on bacteria but gentle on your turf investment.',
+          'No. Our cleaning solution is specifically formulated for synthetic turf and will not damage, discolor, or weaken your turf fibers. Unlike bleach-based cleaners that can fade turf color and break down fibers over time, our professional-grade chlorine tablet solution is tough on bacteria but gentle on your turf investment.',
       },
       {
         question: 'Can I just hose down my turf to remove pet odors?',

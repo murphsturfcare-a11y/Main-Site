@@ -54,7 +54,7 @@ export const testimonials: Testimonial[] = [
     customerName: 'Lisa Martinez',
     customerLocation: 'Huntington Beach',
     rating: 5,
-    reviewText: "I love that they use a hydrogen peroxide-based cleaner instead of bleach. Our neighbors used a different company that used bleach-based cleaner and it left a weird chemical smell and lightened their turf. Their cleaning solution smells like fresh grass and my dogs were back on the turf within an hour. Night and day difference.",
+    reviewText: "I love that they use a chlorine-based cleaner instead of bleach. Our neighbors used a different company that used bleach-based cleaner and it left a weird chemical smell and lightened their turf. Their cleaning solution smells like fresh grass and my dogs were back on the turf within an hour. Night and day difference.",
     serviceType: 'disinfect-deodorize',
   },
   {

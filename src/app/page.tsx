@@ -35,7 +35,7 @@ const services = [
     name: 'Disinfect & Deodorize',
     slug: 'disinfect-deodorize',
     description:
-      'Our professional-grade cleaning kills 99.9% of germs and bacteria on your turf without hazardous chemicals, leaving your yard fresh and safe.',
+      'Our professional-grade cleaning eliminates germs and bacteria on your turf without hazardous chemicals, leaving your yard fresh and safe.',
     image: '/images/gallery/service-turf-disinfecting-v2.jpeg',
   },
   {
@@ -108,7 +108,7 @@ const faqs = [
   {
     question: 'Are your cleaning products safe for my pets and kids?',
     answer:
-      'Absolutely. Our professional-grade cleaning solution is hydrogen peroxide-based and contains no bleach, ammonia, or hazardous chemicals. It is specifically formulated to be safe for pets, children, and the environment while still killing 99.9% of germs and bacteria.',
+      'Absolutely. Our professional-grade cleaning solution is chlorine-based and contains no bleach, ammonia, or hazardous chemicals. It is specifically formulated to be safe for pets, children, and the environment while effectively eliminating germs and bacteria.',
   },
   {
     question: 'What does your turf cleaning process include?',

@@ -34,7 +34,7 @@ const services = [
     slug: 'disinfect-deodorize',
     image: '/images/gallery/service-turf-disinfecting-v2.jpeg',
     description:
-      'Our professional-grade disinfecting and deodorizing service power-sprays your turf, cutting past the top layer into the infill where bacteria and viruses live. Kills 99.9% of germs and bacteria in minutes without hazardous chemicals.',
+      'Our professional-grade disinfecting and deodorizing service power-sprays your turf, cutting past the top layer into the infill where bacteria and viruses live. Eliminates germs and bacteria in minutes without hazardous chemicals.',
   },
   {
     name: 'Poop Scooping & Removal',

@@ -181,7 +181,7 @@ const faqs = [
   {
     question: 'Are your cleaning products safe for pets and kids?',
     answer:
-      'Absolutely. Our cleaning solution is hydrogen peroxide-based with no bleach or ammonia. It breaks down into water and oxygen, making it safe for pets, children, and the environment.',
+      'Absolutely. Our cleaning solution is chlorine-based with no bleach or ammonia. It leaves no harmful residue, making it safe for pets, children, and the environment.',
   },
   {
     question: 'What does your turf cleaning process include?',
@@ -402,7 +402,7 @@ export default async function SubLocationPage({
             <p>
               Our comprehensive turf cleaning process includes pet hair and debris extraction, turf
               blooming and de-compacting, and a full disinfect and deodorize treatment using our
-              hydrogen peroxide-based cleaning solution — no bleach, no harsh chemicals, completely
+              chlorine-based cleaning solution — no bleach, no harsh chemicals, completely
               safe for pets and children.
             </p>
             <p>

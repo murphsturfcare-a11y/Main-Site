@@ -43,7 +43,7 @@ const blogPosts: BlogPost[] = [
     author: "Murphy's Turf Team",
     date: '2026-03-08',
     excerpt:
-      'Pet urine odor on artificial turf is one of the most common complaints from homeowners. Learn which products actually eliminate odors versus just masking them, and why enzyme-based and hydrogen peroxide solutions outperform everything else.',
+      'Pet urine odor on artificial turf is one of the most common complaints from homeowners. Learn which products actually eliminate odors versus just masking them, and why enzyme-based and chlorine tablet solutions outperform everything else.',
     gradient: 'from-amber-500 via-orange-400 to-yellow-400',
   },
   {
@@ -77,13 +77,13 @@ const blogPosts: BlogPost[] = [
     gradient: 'from-teal-500 via-emerald-400 to-green-400',
   },
   {
-    slug: 'hydrogen-peroxide-turf-cleaning',
-    title: 'The Science Behind Our Hydrogen Peroxide-Based Cleaning Process',
+    slug: 'chlorine-based-turf-cleaning',
+    title: 'The Science Behind Our Chlorine-Based Cleaning Process',
     category: 'Turf Cleaning',
     author: "Murphy's Turf Team",
     date: '2026-02-01',
     excerpt:
-      'Our hydrogen peroxide-based cleaning solution eliminates bacteria and odors without harsh chemicals. Learn how it works, why we chose it over bleach and ammonia, and what makes it safe for pets and kids.',
+      'Our chlorine-based cleaning solution eliminates bacteria and odors without harsh chemicals. Learn how it works, why we chose it over bleach and ammonia, and what makes it safe for pets and kids.',
     gradient: 'from-lime-500 via-green-400 to-emerald-400',
   },
   {
