@@ -66,10 +66,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Sub-location pages (turf-cleaning-in-{city})
   const subLocationMap: Record<string, string[]> = {
-    'huntington-beach': ['newport-beach', 'costa-mesa', 'long-beach', 'seal-beach'],
-    'murrieta': ['temecula', 'french-valley', 'menifee', 'lake-elsinore', 'hemet', 'perris', 'wildomar', 'canyon-lake', 'temescal-valley', 'winchester'],
-    'martinez': ['concord', 'pleasant-hill', 'walnut-creek', 'antioch', 'brentwood'],
-    'sacramento': ['elk-grove', 'roseville', 'folsom', 'rancho-cordova'],
+    'huntington-beach': ['newport-beach', 'costa-mesa', 'long-beach', 'seal-beach', 'irvine', 'fountain-valley', 'garden-grove', 'westminster', 'laguna-beach', 'dana-point', 'san-clemente', 'anaheim'],
+    'murrieta': ['temecula', 'french-valley', 'menifee', 'lake-elsinore', 'hemet', 'perris', 'wildomar', 'canyon-lake', 'temescal-valley', 'winchester', 'corona', 'riverside', 'moreno-valley', 'san-jacinto', 'beaumont', 'eastvale', 'norco', 'fallbrook'],
+    'martinez': ['concord', 'pleasant-hill', 'walnut-creek', 'antioch', 'brentwood', 'lafayette', 'danville', 'san-ramon', 'dublin', 'livermore', 'pleasanton', 'orinda', 'alamo', 'oakley'],
+    'sacramento': ['elk-grove', 'roseville', 'folsom', 'rancho-cordova', 'citrus-heights', 'west-sacramento', 'carmichael', 'fair-oaks', 'rocklin', 'granite-bay', 'natomas', 'orangevale'],
   };
 
   const subLocationPages: MetadataRoute.Sitemap = Object.entries(subLocationMap).flatMap(
