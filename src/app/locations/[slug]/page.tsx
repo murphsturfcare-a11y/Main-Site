@@ -3,7 +3,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import {
   Phone,
-  Mail,
   ArrowRight,
   Star,
   ChevronRight,
@@ -53,7 +52,7 @@ const services = [
   {
     name: 'Pet Hair & Debris Removal',
     slug: 'pet-hair-debris',
-    image: '/images/gallery/service-turf-cleaning.png',
+    image: '/images/gallery/service-pet-hair-debris.jpeg',
     shortDescription:
       'Commercial-grade extraction of pet hair, leaves, dirt, and embedded debris from turf fibers and infill.',
   },
@@ -309,6 +308,7 @@ const locationData: Record<string, LocationData> = {
       'Bay Area microclimates range from damp coastal fog near the strait to hot, dry conditions inland.',
     formId: 'mSr8BxMIMWFW5iSStd5F',
     mapQuery: "Murphy's+Turf+Martinez+CA",
+    mapEmbedUrl: "https://www.google.com/maps?q=Murphy's+Turf&cid=14996248927137245841&output=embed",
   },
 
   sacramento: {
@@ -360,6 +360,7 @@ const locationData: Record<string, LocationData> = {
       'Central Valley heat regularly exceeds 105°F, rapidly crystallizing pet urine and multiplying bacteria.',
     formId: 'E4GmpR4mgHj6kL4dFr2w',
     mapQuery: "Murphy's+Turf+Sacramento+CA",
+    mapEmbedUrl: "https://www.google.com/maps?q=Murphy's+Turf&cid=16737636760996869549&output=embed",
   },
 };
 
@@ -389,10 +390,21 @@ export async function generateMetadata({
   return {
     title: location.metaTitle,
     description: location.metaDescription,
+    alternates: {
+      canonical: `https://murphysturf.com/locations/${slug}`,
+    },
     openGraph: {
       title: location.metaTitle,
       description: location.metaDescription,
       type: 'website',
+      url: `https://murphysturf.com/locations/${slug}`,
+      images: [{ url: '/images/og-image.png', width: 1200, height: 630, alt: `Murphy's Turf - ${location.city}` }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: location.metaTitle,
+      description: location.metaDescription,
+      images: ['/images/og-image.png'],
     },
   };
 }
@@ -415,6 +427,24 @@ export default async function LocationPage({
 
   return (
     <div className="scroll-smooth pb-20 lg:pb-0">
+      {/* LocalBusiness structured data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": `Murphy's Turf - ${location.city}`,
+            "description": location.metaDescription,
+            "url": `https://murphysturf.com/locations/${slug}`,
+            "telephone": location.phone,
+            "areaServed": location.neighborhoods.map(n => ({ "@type": "City", "name": n })),
+            "image": "https://murphysturf.com/images/og-image.png",
+            "priceRange": "$$",
+            "openingHours": ["Mo-Fr 07:00-18:00", "Sa 08:00-16:00"],
+          }),
+        }}
+      />
 
       {/* ================================================================
           1. HERO WITH EMBEDDED LEAD FORM
@@ -424,7 +454,7 @@ export default async function LocationPage({
         <div className="absolute inset-0">
           <Image
             src="/images/gallery/about-turf-cleaning.png"
-            alt=""
+            alt={`Professional artificial turf cleaning service in ${location.city}, California`}
             fill
             className="object-cover"
             priority
@@ -473,7 +503,10 @@ export default async function LocationPage({
               <div className="bg-white rounded-2xl shadow-2xl p-2 sm:p-3">
                 <iframe
                   src={`https://api.leadconnectorhq.com/widget/form/${location.formId}`}
-                  style={{ width: '100%', height: '500px', border: 'none', borderRadius: '12px' }}
+                  style={{ width: '100%', border: 'none', borderRadius: '12px' }}
+                  scrolling="no"
+                  id="quote-form"
+                  className="min-h-[500px]"
                   title={`Get a Free Quote - ${location.city}`}
                 />
               </div>
@@ -653,6 +686,16 @@ export default async function LocationPage({
               </StaggerItem>
             ))}
           </StaggerContainer>
+
+          <AnimateOnScroll direction="fade" className="text-center mt-12">
+            <a
+              href="#quote-form"
+              className="inline-flex items-center gap-2 bg-sage hover:bg-sage-dark text-white font-semibold px-8 py-3.5 rounded-lg transition-colors font-body shadow-md"
+            >
+              Get Your Free Quote
+              <ArrowRight className="w-4 h-4" />
+            </a>
+          </AnimateOnScroll>
         </div>
       </section>
 
@@ -697,6 +740,16 @@ export default async function LocationPage({
               </StaggerItem>
             ))}
           </StaggerContainer>
+
+          <div className="text-center mt-12">
+            <a
+              href="#quote-form"
+              className="inline-flex items-center gap-2 bg-sage hover:bg-sage-dark text-white font-semibold px-8 py-3.5 rounded-lg transition-colors font-body shadow-md"
+            >
+              Get Your Free Quote
+              <ArrowRight className="w-4 h-4" />
+            </a>
+          </div>
         </div>
       </section>
 
@@ -792,15 +845,6 @@ export default async function LocationPage({
                   </div>
                   {location.phone}
                 </a>
-                <a
-                  href={`mailto:${location.email}`}
-                  className="flex items-center gap-3 text-white hover:text-sage-light transition-colors font-body text-lg"
-                >
-                  <div className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Mail className="w-5 h-5" />
-                  </div>
-                  {location.email}
-                </a>
               </div>
             </AnimateOnScroll>
 
@@ -809,9 +853,10 @@ export default async function LocationPage({
               <div className="bg-white rounded-2xl shadow-2xl p-2 sm:p-4">
                 <iframe
                   src={`https://api.leadconnectorhq.com/widget/form/${location.formId}`}
-                  style={{ width: '100%', height: '500px', border: 'none', borderRadius: '12px' }}
+                  style={{ width: '100%', border: 'none', borderRadius: '12px' }}
+                  scrolling="no"
+                  className="min-h-[500px]"
                   title={`Get a Free Quote - ${location.city}`}
-                  loading="lazy"
                 />
               </div>
             </AnimateOnScroll>

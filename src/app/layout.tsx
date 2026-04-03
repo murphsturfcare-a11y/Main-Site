@@ -1,27 +1,31 @@
 import type { Metadata, Viewport } from 'next';
 import { Montserrat, Open_Sans } from 'next/font/google';
 import Script from 'next/script';
+import dynamic from 'next/dynamic';
 import './globals.css';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
-import ExitIntentPopup from '@/components/ExitIntentPopup';
-import MobileStickyQuote from '@/components/ui/MobileStickyQuote';
 import { GoogleAnalytics } from '@/components/analytics/GoogleAnalytics';
 import { GTMHead, GTMBody } from '@/components/analytics/GoogleTagManager';
-import { CookieConsent } from '@/components/analytics/CookieConsent';
+
+const ExitIntentPopup = dynamic(() => import('@/components/ExitIntentPopup'));
+const MobileStickyQuote = dynamic(() => import('@/components/ui/MobileStickyQuote'));
+const CookieConsent = dynamic(
+  () => import('@/components/analytics/CookieConsent').then(mod => ({ default: mod.CookieConsent }))
+);
 
 const montserrat = Montserrat({
   variable: '--font-heading',
   subsets: ['latin'],
   display: 'swap',
-  weight: ['400', '500', '600', '700', '800', '900'],
+  weight: ['600', '700', '900'],
 });
 
 const openSans = Open_Sans({
   variable: '--font-body',
   subsets: ['latin'],
   display: 'swap',
-  weight: ['300', '400', '500', '600', '700'],
+  weight: ['400', '500', '600', '700'],
 });
 
 export const viewport: Viewport = {
@@ -99,7 +103,7 @@ export default function RootLayout({
         <CookieConsent />
         <Script
           src="https://link.msgsndr.com/js/form_embed.js"
-          strategy="lazyOnload"
+          strategy="afterInteractive"
         />
         <Script
           id="structured-data"

@@ -178,7 +178,7 @@ const services = [
   {
     name: 'Pet Hair & Debris Removal',
     slug: 'pet-hair-debris',
-    image: '/images/gallery/service-turf-cleaning.png',
+    image: '/images/gallery/service-pet-hair-debris.jpeg',
     shortDescription:
       'Commercial-grade extraction of pet hair, leaves, dirt, and embedded debris from turf fibers and infill.',
   },
@@ -325,6 +325,13 @@ export async function generateMetadata({
       description,
       type: 'website',
       url: `https://murphysturf.com/locations/${parent.slug}/${sub.slug}`,
+      images: [{ url: '/images/og-image.png', width: 1200, height: 630, alt: `Murphy's Turf - ${sub.name}` }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: ['/images/og-image.png'],
     },
   };
 }
@@ -405,7 +412,7 @@ export default async function SubLocationPage({
         <div className="absolute inset-0">
           <Image
             src="/images/gallery/about-turf-cleaning.png"
-            alt=""
+            alt={`Professional artificial turf cleaning in ${sub.name}, California`}
             fill
             className="object-cover"
             priority
@@ -463,10 +470,11 @@ export default async function SubLocationPage({
                   src={`https://api.leadconnectorhq.com/widget/form/${parent.formId}`}
                   style={{
                     width: '100%',
-                    height: '500px',
                     border: 'none',
                     borderRadius: '12px',
                   }}
+                  scrolling="no"
+                  className="min-h-[500px]"
                   title={`Get a Free Quote - ${sub.name}`}
                 />
               </div>

@@ -919,12 +919,23 @@ export async function generateMetadata({
   return {
     title: post.title,
     description: post.metaDescription,
+    alternates: {
+      canonical: `https://murphysturf.com/blog/${slug}`,
+    },
     openGraph: {
       title: `${post.title} | Murphy's Turf Blog`,
       description: post.metaDescription,
       type: 'article',
+      url: `https://murphysturf.com/blog/${slug}`,
       publishedTime: post.publishDate,
       authors: [post.author.name],
+      images: [{ url: '/images/og-image.png', width: 1200, height: 630, alt: `Murphy's Turf Blog - ${post.title}` }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: post.metaDescription,
+      images: ['/images/og-image.png'],
     },
   };
 }

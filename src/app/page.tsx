@@ -22,7 +22,7 @@ const services = [
     slug: 'pet-hair-debris',
     description:
       'We remove pet hair, waste, leaves, branches, and run a magnet for metal objects while de-weeding edges and seams to leave your turf spotless.',
-    image: '/images/gallery/service-turf-cleaning.png',
+    image: '/images/gallery/service-pet-hair-debris.jpeg',
   },
   {
     name: 'Blooming & De-Compacting',
@@ -73,30 +73,6 @@ const locationButtons = [
   { name: 'Murrieta / Inland Empire', slug: 'murrieta' },
   { name: 'Martinez / Bay Area', slug: 'martinez' },
   { name: 'Greater Sacramento', slug: 'sacramento' },
-];
-
-const locations = [
-  {
-    name: 'Huntington Beach / LA Area',
-    slug: 'huntington-beach',
-    tagline: 'Premium artificial turf cleaning for coastal Southern California.',
-  },
-  {
-    name: 'Murrieta / Inland Empire',
-    slug: 'murrieta',
-    tagline: 'Our headquarters and home base. Proudly serving the IE community.',
-    isHQ: true,
-  },
-  {
-    name: 'Martinez / Bay Area',
-    slug: 'martinez',
-    tagline: 'Trusted turf cleaning and maintenance for Bay Area families.',
-  },
-  {
-    name: 'Sacramento',
-    slug: 'sacramento',
-    tagline: 'Professional turf care across Sacramento and surrounding areas.',
-  },
 ];
 
 const faqs = [
@@ -360,6 +336,13 @@ export default function Home() {
                   );
                 })}
               </ul>
+              <a
+                href="#get-quote"
+                className="mt-8 inline-flex items-center justify-center gap-2 bg-sage hover:bg-sage-dark text-white font-heading font-bold text-lg px-8 py-4 rounded-xl transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5"
+              >
+                Get Free Quote
+                <ArrowRight className="w-5 h-5" />
+              </a>
             </div>
           </div>
         </div>
@@ -398,13 +381,13 @@ export default function Home() {
           </div>
 
           <div className="mt-12 text-center">
-            <Link
-              href="/locations"
+            <a
+              href="#get-quote"
               className="inline-flex items-center justify-center gap-2 bg-sage hover:bg-sage-dark text-white font-heading font-bold text-lg px-8 py-4 rounded-xl transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5"
             >
               Get Free Quote
               <ArrowRight className="w-5 h-5" />
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -436,6 +419,16 @@ export default function Home() {
                 <div className="absolute inset-0 bg-forest-dark/0 group-hover:bg-forest-dark/20 transition-colors duration-300" />
               </div>
             ))}
+          </div>
+
+          <div className="mt-12 text-center">
+            <a
+              href="#get-quote"
+              className="inline-flex items-center justify-center gap-2 bg-sage hover:bg-sage-dark text-white font-heading font-bold text-lg px-8 py-4 rounded-xl transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5"
+            >
+              Get Your Free Quote
+              <ArrowRight className="w-5 h-5" />
+            </a>
           </div>
         </div>
       </section>
@@ -487,6 +480,16 @@ export default function Home() {
               </div>
             ))}
           </div>
+
+          <div className="mt-12 text-center">
+            <a
+              href="#get-quote"
+              className="inline-flex items-center justify-center gap-2 bg-sage hover:bg-sage-dark text-white font-heading font-bold text-lg px-8 py-4 rounded-xl transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5"
+            >
+              Get Your Free Quote
+              <ArrowRight className="w-5 h-5" />
+            </a>
+          </div>
         </div>
       </section>
 
@@ -519,51 +522,27 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ────────────────── 8. LOCATIONS SECTION ────────────────── */}
-      <section className="bg-white py-14 sm:py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
-            <span className="inline-block font-body font-semibold text-sage text-sm uppercase tracking-widest mb-3">
-              Where We Work
-            </span>
-            <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-charcoal">
-              Serving California Communities
-            </h2>
-          </div>
+      {/* FAQPage structured data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faqs.map(faq => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer,
+              },
+            })),
+          }),
+        }}
+      />
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {locations.map((loc) => (
-              <Link
-                key={loc.slug}
-                href={`/locations/${loc.slug}`}
-                className="group bg-cream/60 rounded-2xl p-6 shadow-sm hover:shadow-xl border border-gray-100 hover:border-sage/30 transition-all duration-300 hover:-translate-y-1 text-center"
-              >
-                <div className="w-14 h-14 bg-forest/10 group-hover:bg-sage/20 rounded-full flex items-center justify-center mx-auto transition-colors duration-300">
-                  <MapPin className="w-7 h-7 text-forest group-hover:text-sage transition-colors duration-300" />
-                </div>
-                <h3 className="mt-4 font-heading font-bold text-lg text-charcoal group-hover:text-forest transition-colors">
-                  {loc.name}
-                </h3>
-                {loc.isHQ && (
-                  <span className="inline-block mt-1 bg-sage/15 text-sage font-body font-semibold text-xs px-3 py-0.5 rounded-full uppercase tracking-wide">
-                    HQ
-                  </span>
-                )}
-                <p className="mt-2 font-body text-charcoal-light text-sm leading-relaxed">
-                  {loc.tagline}
-                </p>
-                <span className="mt-3 inline-flex items-center gap-1 font-body font-semibold text-sage group-hover:text-sage-dark transition-colors text-sm">
-                  View Area
-                  <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
-                </span>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ────────────────── 9. BOTTOM CTA SECTION ────────────────── */}
-      <section className="relative overflow-hidden">
+      {/* ────────────────── 8. BOTTOM CTA SECTION ────────────────── */}
+      <section id="get-quote" className="relative overflow-hidden scroll-mt-20">
         <div className="absolute inset-0 bg-gradient-to-br from-forest-dark via-forest to-forest-light" />
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_75%_50%,white_1px,transparent_1px)] bg-[length:32px_32px]" />
 

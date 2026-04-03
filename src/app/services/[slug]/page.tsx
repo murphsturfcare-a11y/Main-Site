@@ -467,10 +467,21 @@ export async function generateMetadata({
   return {
     title: `${service.name} | Murphy's Turf`,
     description: service.metaDescription,
+    alternates: {
+      canonical: `https://murphysturf.com/services/${slug}`,
+    },
     openGraph: {
       title: `${service.name} | Murphy's Turf — Artificial Turf Cleaning`,
       description: service.metaDescription,
       type: 'website',
+      url: `https://murphysturf.com/services/${slug}`,
+      images: [{ url: '/images/og-image.png', width: 1200, height: 630, alt: `Murphy's Turf - ${service.name}` }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${service.name} | Murphy's Turf`,
+      description: service.metaDescription,
+      images: ['/images/og-image.png'],
     },
   };
 }
@@ -493,6 +504,31 @@ export default async function ServiceDetailPage({
 
   return (
     <>
+      {/* Service structured data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": service.name,
+            "description": service.metaDescription,
+            "provider": {
+              "@type": "LocalBusiness",
+              "name": "Murphy's Turf",
+              "url": "https://murphysturf.com",
+            },
+            "areaServed": [
+              { "@type": "City", "name": "Huntington Beach" },
+              { "@type": "City", "name": "Murrieta" },
+              { "@type": "City", "name": "Martinez" },
+              { "@type": "City", "name": "Sacramento" },
+            ],
+            "url": `https://murphysturf.com/services/${slug}`,
+          }),
+        }}
+      />
+
       {/* ----------------------------------------------------------------- */}
       {/* Hero */}
       {/* ----------------------------------------------------------------- */}
