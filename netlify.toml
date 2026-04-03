@@ -39,3 +39,38 @@
   from = "/contact/*"
   to = "/locations"
   status = 301
+
+[[redirects]]
+  from = "/blog/hydrogen-peroxide-turf-cleaning"
+  to = "/blog/chlorine-based-turf-cleaning"
+  status = 301
+
+[[redirects]]
+  from = "/blog/professional-turf-cleaning-huntington-beach"
+  to = "/blog/turf-cleaning-huntington-beach"
+  status = 301
+
+[[redirects]]
+  from = "/blog/removing-pet-odors-murrieta"
+  to = "/blog/removing-pet-odors-artificial-turf"
+  status = 301
+
+[[redirects]]
+  from = "/blog/artificial-turf-maintenance-bay-area"
+  to = "/blog/turf-cleaning-bay-area-martinez"
+  status = 301
+
+[[redirects]]
+  from = "/blog/sacramento-turf-cleaning-tips"
+  to = "/blog/turf-cleaning-sacramento"
+  status = 301
+
+[[redirects]]
+  from = "/blog/health-benefits-turf-sanitization"
+  to = "/blog/artificial-turf-bacteria-health-risks"
+  status = 301
+
+[[redirects]]
+  from = "/blog/why-artificial-turf-smells-fix"
+  to = "/blog/removing-pet-odors-artificial-turf"
+  status = 301
