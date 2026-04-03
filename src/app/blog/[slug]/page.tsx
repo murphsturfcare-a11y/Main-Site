@@ -1318,6 +1318,88 @@ const blogPosts: Record<string, BlogPost> = {
       'turf-cleaning-murrieta-inland-empire',
     ],
   },
+
+  'artificial-turf-cleaning-orange-county': {
+    slug: 'artificial-turf-cleaning-orange-county',
+    title: 'Artificial Turf Cleaning in Orange County: The Complete Local Guide',
+    metaDescription:
+      'Orange County homeowners need professional artificial turf cleaning to handle coastal salt, inland heat, pet waste, and year-round outdoor use. Learn the best maintenance strategies for OC synthetic grass.',
+    category: 'Local Guides',
+    author: authors["Murphy's Turf Team"],
+    publishDate: 'April 3, 2026',
+    readingTime: '10 min read',
+    featuredGradient: 'from-orange-600 via-amber-500 to-yellow-400',
+    headings: [
+      'Why Orange County Is a Turf Cleaning Hotspot',
+      'Coastal OC vs Inland OC: Two Different Worlds',
+      'The OC Pet Problem: Dogs, Turf, and Bacteria',
+      'Orange County Water Restrictions and Artificial Turf',
+      'HOA Requirements Across Orange County',
+      'City-by-City Cleaning Considerations',
+      'Professional Cleaning Schedule for OC Homeowners',
+      'Murphy\'s Turf: Orange County\'s Turf Cleaning Experts',
+    ],
+    content: `
+      <h2 id="why-orange-county-is-a-turf-cleaning-hotspot" class="text-2xl font-bold font-heading text-charcoal mt-8 mb-4">Why Orange County Is a Turf Cleaning Hotspot</h2>
+      <p class="text-charcoal-light font-body leading-relaxed mb-4">Orange County has one of the highest concentrations of artificial turf installations in the entire United States. The combination of year-round sunshine, chronic water restrictions, high property values, and an outdoor lifestyle that puts lawns to constant use has made synthetic grass the default choice for hundreds of thousands of OC homeowners. From beachfront properties in Newport Beach to family homes in Anaheim and master-planned communities in Irvine, artificial turf is everywhere in Orange County.</p>
+      <p class="text-charcoal-light font-body leading-relaxed mb-4">But all that turf needs cleaning. Orange County's warm climate, high pet ownership rates, and year-round outdoor activity create conditions where artificial turf accumulates bacteria, odors, and debris faster than homeowners expect. At Murphy's Turf, our Huntington Beach office serves all of Orange County, and we have cleaned thousands of OC lawns. This guide covers everything Orange County homeowners need to know about keeping their synthetic grass clean, safe, and looking its best.</p>
+
+      <h2 id="coastal-oc-vs-inland-oc-two-different-worlds" class="text-2xl font-bold font-heading text-charcoal mt-8 mb-4">Coastal OC vs Inland OC: Two Different Worlds</h2>
+      <p class="text-charcoal-light font-body leading-relaxed mb-4">Orange County spans from the Pacific coastline to the Santa Ana Mountains, and this geographic range creates dramatically different turf maintenance conditions depending on where you live.</p>
+      <p class="text-charcoal-light font-body leading-relaxed mb-4"><strong class="text-charcoal">Coastal communities</strong> — Huntington Beach, Newport Beach, Laguna Beach, Dana Point, San Clemente, Seal Beach, and Costa Mesa — deal with salt air that deposits on turf fibers and accelerates material degradation. Sand blows in from beaches and tracks in on feet and paws, mixing with the engineered infill and clogging drainage. The marine layer keeps turf damp during spring and early summer mornings, creating conditions where mold and mildew thrive, especially in shaded areas. Coastal OC turf owners need to focus on regular freshwater rinsing, mold prevention, and sand management.</p>
+      <p class="text-charcoal-light font-body leading-relaxed mb-4"><strong class="text-charcoal">Inland communities</strong> — Anaheim, Irvine, Orange, Fullerton, Tustin, Mission Viejo, Lake Forest, Rancho Santa Margarita, and Yorba Linda — experience significantly warmer summers, often 10 to 15 degrees hotter than the coast. This heat accelerates bacterial growth, intensifies pet waste odors, and causes cleaning solutions to evaporate faster. Inland OC turf owners need to prioritize heat-specific cleaning strategies: cleaning during cool hours, increasing rinse volumes, and scheduling more frequent professional service during summer months.</p>
+
+      <h2 id="the-oc-pet-problem-dogs-turf-and-bacteria" class="text-2xl font-bold font-heading text-charcoal mt-8 mb-4">The OC Pet Problem: Dogs, Turf, and Bacteria</h2>
+      <p class="text-charcoal-light font-body leading-relaxed mb-4">Orange County is one of the most dog-friendly regions in California, and the vast majority of residential turf installations we service are used by pets daily. Dog urine is the single biggest driver of artificial turf contamination in OC. When your dog urinates on artificial turf, the liquid passes through the blades and into the infill layer, where bacteria break it down into ammonia and sulfur compounds that produce powerful, persistent odors.</p>
+      <p class="text-charcoal-light font-body leading-relaxed mb-4">In Orange County's warm climate, this bacterial process runs fast. A urine spot that would take days to become noticeable in cooler weather can produce detectable odor within hours on a warm OC afternoon. For multi-dog households — which are common in OC's family-oriented communities — the contamination compounds quickly.</p>
+      <p class="text-charcoal-light font-body leading-relaxed mb-4">The solution is a layered approach:</p>
+      <ul class="list-disc list-inside space-y-2 mb-4 text-charcoal-light font-body leading-relaxed ml-4">
+        <li><strong class="text-charcoal">Immediate waste removal:</strong> Pick up solid waste as soon as possible. The longer it sits, the deeper residue penetrates into the infill.</li>
+        <li><strong class="text-charcoal">Daily rinse of pet areas:</strong> A thorough hose rinse of the spots your dogs use most frequently dilutes urine and slows bacterial buildup. Time your rinse for early morning or evening when water will not evaporate instantly.</li>
+        <li><strong class="text-charcoal">Monthly sanitization:</strong> Apply a chlorine-based turf cleaner to kill bacteria that rinsing alone cannot eliminate. Focus on the areas your pets use most.</li>
+        <li><strong class="text-charcoal">Professional deep cleaning every 6 to 8 weeks:</strong> Our professional treatment reaches contamination deep in the infill that no amount of surface rinsing can address. For multi-pet households in OC, this frequency is essential during warm months.</li>
+      </ul>
+
+      <h2 id="orange-county-water-restrictions-and-artificial-turf" class="text-2xl font-bold font-heading text-charcoal mt-8 mb-4">Orange County Water Restrictions and Artificial Turf</h2>
+      <p class="text-charcoal-light font-body leading-relaxed mb-4">Water conservation is a way of life in Orange County. The Metropolitan Water District, OCWD, and local utilities have implemented tiered pricing and watering restrictions that make natural lawn maintenance increasingly expensive. Many OC homeowners installed artificial turf specifically to reduce water consumption and avoid penalty-tier water rates.</p>
+      <p class="text-charcoal-light font-body leading-relaxed mb-4">The water needed to clean artificial turf is a fraction of what a natural lawn requires. A typical OC backyard turf area of 400 to 600 square feet needs roughly 40 to 80 gallons per weekly rinse — about what a natural lawn the same size would consume in a single day of irrigation during summer. Over a year, you are using 80 to 90 percent less water for turf maintenance than you would for natural grass, even accounting for cleaning.</p>
+
+      <h2 id="hoa-requirements-across-orange-county" class="text-2xl font-bold font-heading text-charcoal mt-8 mb-4">HOA Requirements Across Orange County</h2>
+      <p class="text-charcoal-light font-body leading-relaxed mb-4">Orange County has more homeowners associations per capita than almost anywhere in the country. Communities like Irvine, Mission Viejo, Rancho Santa Margarita, Aliso Viejo, and Ladera Ranch have HOAs that set strict standards for property appearance. While most OC HOAs now approve artificial turf (many actively encourage it for water conservation), they expect it to look maintained. Matted, discolored, or visibly dirty turf can trigger compliance notices.</p>
+      <p class="text-charcoal-light font-body leading-relaxed mb-4">Regular professional cleaning keeps your turf looking full, green, and natural — exactly the appearance standard your HOA expects. Professional blooming restores fiber height and uniformity, while deep cleaning removes the dulling effect of accumulated dust and debris. Our OC clients who schedule quarterly professional service never hear from their HOA about turf appearance.</p>
+
+      <h2 id="city-by-city-cleaning-considerations" class="text-2xl font-bold font-heading text-charcoal mt-8 mb-4">City-by-City Cleaning Considerations</h2>
+      <p class="text-charcoal-light font-body leading-relaxed mb-4">Every Orange County city has its own microclimate and conditions. Here is a quick reference for the major OC communities we serve:</p>
+      <ul class="list-disc list-inside space-y-2 mb-4 text-charcoal-light font-body leading-relaxed ml-4">
+        <li><strong class="text-charcoal">Huntington Beach & Seal Beach:</strong> Heavy salt and sand exposure, marine layer moisture. Focus on twice-weekly freshwater rinsing and monthly mold prevention.</li>
+        <li><strong class="text-charcoal">Newport Beach & Laguna Beach:</strong> Premium properties with high appearance standards. Quarterly professional cleaning minimum, with extra attention to mold in shaded hillside areas.</li>
+        <li><strong class="text-charcoal">Costa Mesa & Fountain Valley:</strong> Transitional zone — some marine influence, warmer than the coast. Standard weekly rinse and quarterly professional service works well.</li>
+        <li><strong class="text-charcoal">Anaheim & Garden Grove:</strong> Fully inland heat. Follow summer heat protocols with early morning or evening cleaning, increased rinse volume, and more frequent professional visits June through September.</li>
+        <li><strong class="text-charcoal">Irvine & Tustin:</strong> Moderate-to-warm temperatures, HOA-heavy communities. Quarterly professional cleaning to maintain appearance standards, with increased frequency for pet households.</li>
+        <li><strong class="text-charcoal">Mission Viejo & Lake Forest:</strong> Warm inland valleys with canyon winds that deposit dust and debris. Regular debris removal and quarterly professional de-compacting are essential.</li>
+        <li><strong class="text-charcoal">Dana Point & San Clemente:</strong> South OC coastal, similar to Huntington Beach. Salt management and mold prevention are priorities.</li>
+      </ul>
+
+      <h2 id="professional-cleaning-schedule-for-oc-homeowners" class="text-2xl font-bold font-heading text-charcoal mt-8 mb-4">Professional Cleaning Schedule for OC Homeowners</h2>
+      <p class="text-charcoal-light font-body leading-relaxed mb-4">Based on years of serving Orange County homes, here is our recommended maintenance schedule:</p>
+      <ul class="list-disc list-inside space-y-2 mb-4 text-charcoal-light font-body leading-relaxed ml-4">
+        <li><strong class="text-charcoal">Coastal OC, no pets:</strong> Twice-weekly freshwater rinse, quarterly professional cleaning</li>
+        <li><strong class="text-charcoal">Coastal OC, with pets:</strong> Daily pet area rinse, monthly chlorine-based treatment, professional cleaning every 8 weeks</li>
+        <li><strong class="text-charcoal">Inland OC, no pets:</strong> Weekly rinse, quarterly professional cleaning (increase to every 8 weeks in summer)</li>
+        <li><strong class="text-charcoal">Inland OC, with pets:</strong> Daily pet area rinse, monthly chlorine-based treatment, professional cleaning every 6 weeks during warm months</li>
+        <li><strong class="text-charcoal">HOA communities:</strong> Add quarterly professional blooming to any schedule above to maintain fiber appearance</li>
+      </ul>
+
+      <h2 id="murphys-turf-orange-countys-turf-cleaning-experts" class="text-2xl font-bold font-heading text-charcoal mt-8 mb-4">Murphy's Turf: Orange County's Turf Cleaning Experts</h2>
+      <p class="text-charcoal-light font-body leading-relaxed mb-4">Murphy's Turf has been serving Orange County homeowners from our <a href="/locations/huntington-beach" class="text-sage hover:text-sage-dark underline">Huntington Beach office</a> since day one. We know every OC microclimate, every HOA standard, and every challenge that Orange County turf faces. Our full service menu includes <a href="/services/pet-hair-debris" class="text-sage hover:text-sage-dark underline">Pet Hair & Debris Removal</a>, <a href="/services/blooming-decompacting" class="text-sage hover:text-sage-dark underline">Blooming & De-Compacting</a>, <a href="/services/disinfect-deodorize" class="text-sage hover:text-sage-dark underline">Disinfect & Deodorize</a>, and <a href="/services/poop-scooping" class="text-sage hover:text-sage-dark underline">Poop Scooping</a> — everything your Orange County turf needs to stay clean, safe, and looking like the day it was installed.</p>
+      <p class="text-charcoal-light font-body leading-relaxed mb-4">We serve every city in Orange County, from San Clemente to Seal Beach and everywhere in between. <a href="/locations/huntington-beach" class="text-sage hover:text-sage-dark underline">Contact our Orange County office</a> for a free quote and find out why hundreds of OC homeowners trust Murphy's Turf with their synthetic lawns.</p>
+    `,
+    relatedSlugs: [
+      'turf-cleaning-huntington-beach',
+      'artificial-turf-cleaning-anaheim',
+      'artificial-turf-cleaning-irvine',
+    ],
+  },
 };
 
 // ---------------------------------------------------------------------------
@@ -1345,6 +1427,7 @@ const validSlugs = [
   'artificial-turf-cleaning-irvine',
   'artificial-turf-cleaning-long-beach',
   'artificial-turf-cleaning-san-diego',
+  'artificial-turf-cleaning-orange-county',
 ];
 
 export function generateStaticParams() {

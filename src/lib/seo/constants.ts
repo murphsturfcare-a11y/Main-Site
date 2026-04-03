@@ -57,6 +57,7 @@ export const BLOG_SLUGS = [
   "artificial-turf-cleaning-irvine",
   "artificial-turf-cleaning-long-beach",
   "artificial-turf-cleaning-san-diego",
+  "artificial-turf-cleaning-orange-county",
 ] as const;
 
 export type ServiceSlug = (typeof SERVICE_SLUGS)[number];

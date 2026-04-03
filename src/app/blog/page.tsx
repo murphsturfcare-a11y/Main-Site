@@ -226,6 +226,16 @@ const blogPosts: BlogPost[] = [
       'San Diego homeowners enjoy year-round sun but face unique turf cleaning challenges. Learn how to maintain artificial turf in San Diego\'s coastal and inland neighborhoods for a clean, fresh lawn.',
     gradient: 'from-blue-500 via-sky-400 to-cyan-400',
   },
+  {
+    slug: 'artificial-turf-cleaning-orange-county',
+    title: 'Artificial Turf Cleaning in Orange County: The Complete Local Guide',
+    category: 'Local Guides',
+    author: "Murphy's Turf Team",
+    date: '2026-04-03',
+    excerpt:
+      'Orange County has one of the highest concentrations of artificial turf in the US. From coastal salt air in Huntington Beach to inland heat in Anaheim, learn the city-by-city cleaning strategies every OC homeowner needs.',
+    gradient: 'from-orange-600 via-amber-500 to-yellow-400',
+  },
 ];
 
 const categories = ['All', 'Turf Cleaning', 'Pet Care', 'Maintenance Tips', 'Local Guides'] as const;
