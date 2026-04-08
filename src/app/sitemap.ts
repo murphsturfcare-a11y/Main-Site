@@ -64,6 +64,31 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
+  // LLM / AI-crawler friendly markdown mirrors of every blog post.
+  // Listed in the sitemap so AI search engines discover them alongside HTML.
+  const blogMarkdownPages: MetadataRoute.Sitemap = BLOG_SLUGS.map((slug) => ({
+    url: `${SITE_URL}/blog/${slug}.md`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.5,
+  }));
+
+  // llms.txt index + full content file for LLM ingestion
+  const llmFiles: MetadataRoute.Sitemap = [
+    {
+      url: `${SITE_URL}/llms.txt`,
+      lastModified: new Date(),
+      changeFrequency: "weekly" as const,
+      priority: 0.6,
+    },
+    {
+      url: `${SITE_URL}/llms-full.txt`,
+      lastModified: new Date(),
+      changeFrequency: "weekly" as const,
+      priority: 0.6,
+    },
+  ];
+
   // Sub-location pages (turf-cleaning-in-{city})
   const subLocationMap: Record<string, string[]> = {
     'huntington-beach': ['newport-beach', 'costa-mesa', 'long-beach', 'seal-beach', 'irvine', 'fountain-valley', 'garden-grove', 'westminster', 'laguna-beach', 'dana-point', 'san-clemente', 'anaheim'],
@@ -82,5 +107,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       }))
   );
 
-  return [...staticPages, ...servicePages, ...locationPages, ...subLocationPages, ...blogPages];
+  return [
+    ...staticPages,
+    ...servicePages,
+    ...locationPages,
+    ...subLocationPages,
+    ...blogPages,
+    ...blogMarkdownPages,
+    ...llmFiles,
+  ];
 }

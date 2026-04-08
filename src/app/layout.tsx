@@ -63,6 +63,11 @@ export const metadata: Metadata = {
     apple: '/apple-touch-icon.png',
   },
   manifest: '/manifest.json',
+  other: {
+    // AI crawler / LLM SEO signals
+    'ai-content-declaration': 'human-authored',
+    'content-type-ai-readable': 'true',
+  },
   openGraph: {
     title: "Murphy's Turf | Professional Artificial Turf Cleaning in California",
     description:

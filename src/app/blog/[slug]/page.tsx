@@ -1457,8 +1457,10 @@ export async function generateMetadata({
       description: post.metaDescription,
       type: 'article',
       url: `https://murphysturf.com/blog/${slug}`,
-      publishedTime: post.publishDate,
+      publishedTime: new Date(post.publishDate).toISOString(),
+      modifiedTime: new Date(post.publishDate).toISOString(),
       authors: [post.author.name],
+      section: post.category,
       images: [{ url: '/images/og-image.png', width: 1200, height: 630, alt: `Murphy's Turf Blog - ${post.title}` }],
     },
     twitter: {
@@ -1502,8 +1504,83 @@ export default async function BlogPostPage({
   const categoryColor =
     categoryColors[post.category] || 'bg-sage/15 text-sage-dark';
 
+  // ISO 8601 dates for structured data
+  const publishDateIso = new Date(post.publishDate).toISOString();
+
+  // BlogPosting JSON-LD
+  const blogPostingSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.title,
+    description: post.metaDescription,
+    url: `https://murphysturf.com/blog/${slug}`,
+    datePublished: publishDateIso,
+    dateModified: publishDateIso,
+    author: {
+      '@type': 'Organization',
+      name: post.author.name,
+      url: 'https://murphysturf.com',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: "Murphy's Turf",
+      url: 'https://murphysturf.com',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://murphysturf.com/images/logo.png',
+      },
+    },
+    image: 'https://murphysturf.com/images/og-image.png',
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `https://murphysturf.com/blog/${slug}`,
+    },
+    articleSection: post.category,
+    inLanguage: 'en-US',
+  };
+
+  // BreadcrumbList JSON-LD
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://murphysturf.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Blog',
+        item: 'https://murphysturf.com/blog',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: post.title,
+        item: `https://murphysturf.com/blog/${slug}`,
+      },
+    ],
+  };
+
   return (
     <>
+      {/* Structured data for AI & search engines */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(blogPostingSchema).replace(/</g, '\\u003c'),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema).replace(/</g, '\\u003c'),
+        }}
+      />
+
       {/* ----------------------------------------------------------------- */}
       {/* Breadcrumb */}
       {/* ----------------------------------------------------------------- */}

@@ -537,6 +537,31 @@ export default async function LocationPage({
     notFound();
   }
 
+  // FAQPage JSON-LD for rich results and AI citations
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": locationFaqs.map((faq) => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer,
+      },
+    })),
+  };
+
+  // BreadcrumbList JSON-LD
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://murphysturf.com" },
+      { "@type": "ListItem", "position": 2, "name": "Locations", "item": "https://murphysturf.com/locations" },
+      { "@type": "ListItem", "position": 3, "name": location.city, "item": `https://murphysturf.com/locations/${slug}` },
+    ],
+  };
+
   return (
     <div className="scroll-smooth pb-20 lg:pb-0">
       {/* LocalBusiness structured data */}
@@ -554,7 +579,21 @@ export default async function LocationPage({
             "image": "https://murphysturf.com/images/og-image.png",
             "priceRange": "$$",
             "openingHours": ["Mo-Fr 07:00-18:00", "Sa 08:00-16:00"],
-          }),
+          }).replace(/</g, '\\u003c'),
+        }}
+      />
+      {/* FAQPage structured data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqSchema).replace(/</g, '\\u003c'),
+        }}
+      />
+      {/* BreadcrumbList structured data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema).replace(/</g, '\\u003c'),
         }}
       />
 
