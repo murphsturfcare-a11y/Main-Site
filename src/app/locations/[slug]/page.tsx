@@ -42,6 +42,10 @@ interface LocationData {
   formId: string;
   mapQuery: string;
   mapEmbedUrl?: string;
+  localContentHeading: string;
+  localContentIntro: string;
+  localChallenges: { title: string; description: string }[];
+  localWhyUs: string;
 }
 
 // ---------------------------------------------------------------------------
@@ -197,6 +201,33 @@ const locationData: Record<string, LocationData> = {
     formId: 'HYkmRFcmdQ1GD7aEpXzq',
     mapQuery: "Murphy's+Turf+Huntington+Beach+CA",
     mapEmbedUrl: "https://www.google.com/maps?q=Murphy's+Turf&cid=17738077160014500110&output=embed",
+    localContentHeading: "Why Huntington Beach Artificial Turf Needs Specialized Care",
+    localContentIntro:
+      "Huntington Beach sits directly on the Pacific Ocean, which means every artificial turf installation in our service area deals with challenges that inland properties never see. The combination of salt air, wind-blown sand, marine layer moisture, and year-round outdoor use creates a unique set of maintenance demands. Murphy's Turf has cleaned thousands of synthetic lawns along the coastal corridor from Long Beach down through San Clemente, and we have refined our process specifically for the conditions that coastal Orange County properties face. Surf City USA homeowners love their outdoor space, and keeping that turf clean, fresh, and safe for families and pets is what we do every day.",
+    localChallenges: [
+      {
+        title: "Salt Air & Coastal Wind",
+        description:
+          "Properties within a few miles of the Huntington Beach pier get constant exposure to salt-laden marine air. Salt deposits accumulate on turf fibers, accelerate material degradation, and leave a whitish residue that dulls the turf's color. Onshore winds also carry fine beach sand that works its way into the infill layer, mixing with engineered crumb rubber or silica and clogging drainage. Regular freshwater rinsing is essential, and our professional de-compacting treatment removes the salt and sand buildup that homeowner garden hoses cannot reach.",
+      },
+      {
+        title: "Marine Layer & June Gloom",
+        description:
+          "From May through July, Huntington Beach experiences the famous 'June Gloom' — thick morning fog that keeps outdoor surfaces damp until early afternoon. This extended moisture exposure creates ideal conditions for mold, mildew, and algae growth, especially in shaded areas near structures or under mature landscaping. Our chlorine-based disinfecting treatment prevents mold establishment and eliminates existing colonies before they spread. Coastal properties benefit from monthly sanitization during the marine layer season.",
+      },
+      {
+        title: "Beach Lifestyle & Pet Traffic",
+        description:
+          "Huntington Beach is one of the most dog-friendly cities in Southern California, with its famous Dog Beach drawing owners and pets from across the region. Many HB residents have multiple dogs, and the warm coastal climate means year-round backyard use. Pet urine combined with sand tracked in from beach visits creates a specific contamination pattern our team is highly experienced with. Our pet hair and debris removal service, combined with our disinfecting treatment, keeps coastal turf fresh and family-safe.",
+      },
+      {
+        title: "HOA & Property Value Standards",
+        description:
+          "Properties in Huntington Harbour, Seacliff, Brightwater, and other Huntington Beach communities often have HOA landscaping standards that expect a consistently manicured appearance. Artificial turf that looks matted, discolored, or dirty can draw compliance notices and affect property values. Our blooming and de-compacting service restores fiber height and uniformity so your turf always looks its best. Regular quarterly service keeps HB homes looking beach-community perfect.",
+      },
+    ],
+    localWhyUs:
+      "Murphy's Turf serves Huntington Beach, Newport Beach, Costa Mesa, Long Beach, Seal Beach, Irvine, Fountain Valley, Garden Grove, Westminster, Laguna Beach, Dana Point, San Clemente, and Anaheim from our Orange County operations. Our trucks are on coastal OC streets daily, and our technicians live in the communities they serve. We understand the specific challenges of beachfront living, the demands of coastal microclimates, and the expectations of Orange County homeowners. When you call Murphy's Turf, you are working with a team that has built its reputation on delivering the cleanest artificial turf in the LA coastal corridor. Every service comes with our 30+ years of professional cleaning expertise and our commitment to pet-safe, family-friendly products that actually work.",
   },
 
   murrieta: {
@@ -255,6 +286,33 @@ const locationData: Record<string, LocationData> = {
     formId: 'xBvd9OY1s3jhTIKq93sM',
     mapQuery: '26323+Jefferson+Avenue+Murrieta+CA+92562',
     mapEmbedUrl: "https://www.google.com/maps?q=Murphy's+Turf&cid=4930650047464481625&output=embed",
+    localContentHeading: "Murrieta Artificial Turf Cleaning: Built for Inland Empire Heat",
+    localContentIntro:
+      "Murphy's Turf was founded in Murrieta, and our headquarters at 26323 Jefferson Avenue is the nerve center of our Inland Empire operations. We know this region because we live here — through the 110-degree summer afternoons, the Santa Ana wind events, the dry autumn months, and everything in between. Inland Empire artificial turf faces challenges that coastal companies simply do not understand, and our cleaning protocols have been refined over years of serving Murrieta, Temecula, Menifee, Lake Elsinore, Hemet, and the entire Riverside and San Diego County Inland Empire region. When Inland Empire homeowners call Murphy's Turf, they are calling the local experts who built their business on the specific demands of this climate.",
+    localChallenges: [
+      {
+        title: "Triple-Digit Summer Heat",
+        description:
+          "From June through September, Murrieta and the surrounding Inland Empire regularly see temperatures above 100°F, with heat waves pushing past 110°F. This extreme heat fundamentally changes how artificial turf contamination works. Bacterial growth in pet urine accelerates dramatically — what would take days to develop odor in cooler climates happens in hours here. Cleaning solutions evaporate before they can work if applied during peak heat, and turf surface temperatures can exceed 150°F. Our team applies treatments during early morning or evening hours and uses higher-volume processes calibrated for the heat.",
+      },
+      {
+        title: "Pet Waste Intensification",
+        description:
+          "Murrieta is an extremely family-oriented community with high pet ownership rates. Inland Empire heat combined with dog urine creates the most challenging contamination scenario we deal with anywhere in our California service area. The heat bakes pet waste residue deep into the infill, intensifies ammonia and mercaptan odors, and accelerates the bacterial process that produces them. Our chlorine-based disinfecting treatment reaches the deep infill contamination that no surface cleaning can touch, and our technicians know exactly how to approach multi-pet households in 100-degree weather.",
+      },
+      {
+        title: "Santa Ana Winds & Agricultural Dust",
+        description:
+          "The Inland Empire experiences periodic Santa Ana wind events that carry dust, debris, and fine particulates from undeveloped hillsides and surrounding agricultural areas. Between these events, the general dry climate means there is always some level of airborne dust settling on outdoor surfaces. This particulate accumulation fills gaps between infill granules, reduces drainage, and combines with organic contamination to create a dense, hard-to-clean layer. Our professional de-compacting and blooming service removes this buildup that accumulates faster here than in coastal areas.",
+      },
+      {
+        title: "Wine Country & Rural Property Challenges",
+        description:
+          "Temecula Valley wine country and the surrounding rural properties bring unique turf cleaning challenges — from the vineyard dust that blows across the valley to the larger turf installations common on acreage properties. Corona, Riverside, Moreno Valley, and Eastvale also have sprawling residential developments with significant turf installations. Whether you have a compact backyard in French Valley or a multi-thousand square foot installation in Temecula, Murphy's Turf has the equipment and expertise to handle properties of any size across the Inland Empire.",
+      },
+    ],
+    localWhyUs:
+      "As the founding Murphy's Turf location, our Murrieta headquarters anchors our Inland Empire service. We serve Temecula, French Valley, Menifee, Lake Elsinore, Hemet, Perris, Wildomar, Canyon Lake, Temescal Valley, Winchester, Corona, Riverside, Moreno Valley, San Jacinto, Beaumont, Eastvale, Norco, and Fallbrook with the same professional-grade cleaning process we have built our reputation on. Our crews know the neighborhoods, the communities, and the specific maintenance needs that Inland Empire turf faces through brutal summers and dry winters. Call the team that literally wrote the playbook on cleaning synthetic grass in this climate — Murphy's Turf has been headquartered in Murrieta since day one, and we are not going anywhere.",
   },
 
   martinez: {
@@ -309,6 +367,33 @@ const locationData: Record<string, LocationData> = {
     formId: 'mSr8BxMIMWFW5iSStd5F',
     mapQuery: "Murphy's+Turf+Martinez+CA",
     mapEmbedUrl: "https://www.google.com/maps?q=Murphy's+Turf&cid=14996248927137245841&output=embed",
+    localContentHeading: "East Bay & Contra Costa County Artificial Turf Cleaning",
+    localContentIntro:
+      "Murphy's Turf serves the East Bay from our Martinez office, covering Contra Costa County and the Tri-Valley with a cleaning approach tailored to the Bay Area's famously variable microclimates. Unlike other regions where a single cleaning protocol works across the service area, the East Bay demands flexibility. Our crews might start their morning cleaning a fog-dampened turf in Martinez and finish the afternoon working a sun-baked property in Walnut Creek — and both require different approaches. This is turf cleaning designed by people who understand that driving 20 minutes inland in the East Bay can mean a 20-degree temperature swing and a completely different set of maintenance challenges.",
+    localChallenges: [
+      {
+        title: "Bay Fog & Delta Moisture",
+        description:
+          "Martinez sits along the Carquinez Strait, where bay and delta influences keep outdoor surfaces damp for extended periods. Morning fog often persists into mid-morning, and the general humidity near the water creates ideal conditions for mold, mildew, and algae growth on artificial turf. Properties in Benicia, Port Costa, Rodeo, and the Martinez waterfront neighborhoods face these challenges year-round, with spring and early summer being the worst. Our monthly chlorine-based disinfecting prevents mold establishment in the shaded and moisture-prone areas that define waterfront East Bay living.",
+      },
+      {
+        title: "Inland Heat Pockets",
+        description:
+          "Drive 15 miles inland from Martinez and you enter a completely different climate. Walnut Creek, Concord, Danville, San Ramon, Dublin, Livermore, and Pleasanton see summer temperatures in the mid-90s to low 100s, with Antioch and Brentwood in East Contra Costa often hotter. These inland Tri-Valley and East County properties need heat-specific maintenance protocols — early morning or evening cleaning, increased rinse volume, and more frequent professional service during summer months. Our team adjusts treatment timing based on your specific neighborhood, not a generic regional average.",
+      },
+      {
+        title: "Oak Leaf & Tree Debris",
+        description:
+          "The East Bay is famous for its oak-studded hills, from the Briones wilderness around Martinez to the established neighborhoods of Lafayette, Orinda, and Alamo. All those trees mean constant leaf drop and organic debris accumulation on artificial turf. Oak leaves are particularly problematic because they decompose slowly and contain tannins that can stain turf fibers. Our pet hair and debris removal service uses commercial-grade equipment to extract leaf litter from deep in the turf pile, preventing the decomposition that creates bacterial food sources and staining.",
+      },
+      {
+        title: "Tri-Valley HOA & Professional Households",
+        description:
+          "Walnut Creek, Danville, San Ramon, Dublin, and the Tri-Valley communities have high concentrations of professional households and HOA-governed neighborhoods with strict landscaping standards. Homeowners here expect immaculate property appearance and have no tolerance for matted, discolored, or smelly turf. Our quarterly professional service keeps Tri-Valley turf at the appearance standard these communities demand, with blooming treatments that restore fiber height and deep cleaning that maintains color and freshness.",
+      },
+    ],
+    localWhyUs:
+      "Our Martinez office serves Concord, Pleasant Hill, Walnut Creek, Antioch, Brentwood, Lafayette, Danville, San Ramon, Dublin, Livermore, Pleasanton, Orinda, Alamo, and Oakley with professional artificial turf cleaning tailored to East Bay conditions. Murphy's Turf has been servicing Contra Costa County long enough to know every microclimate quirk, every HOA expectation, and every common turf problem from Martinez to Livermore. Our technicians bring the same professional-grade cleaning process we use across California, calibrated for the Bay Area's unique demands. Whether you are dealing with Martinez fog, Walnut Creek heat, or Antioch summers, we have the experience and local knowledge to keep your turf clean and fresh year-round.",
   },
 
   sacramento: {
@@ -361,6 +446,33 @@ const locationData: Record<string, LocationData> = {
     formId: 'E4GmpR4mgHj6kL4dFr2w',
     mapQuery: "Murphy's+Turf+Sacramento+CA",
     mapEmbedUrl: "https://www.google.com/maps?q=Murphy's+Turf&cid=16737636760996869549&output=embed",
+    localContentHeading: "Sacramento & Central Valley Artificial Turf Cleaning",
+    localContentIntro:
+      "Sacramento homeowners have embraced artificial turf at a higher rate than almost anywhere in California, and for good reason. The Central Valley's combination of extreme summer heat, minimal rainfall, and water conservation mandates makes natural lawn maintenance both expensive and impractical. Synthetic grass solves those problems beautifully — but only if it is properly maintained. Murphy's Turf brings professional artificial turf cleaning to the entire Sacramento metropolitan area, from Elk Grove in the south to Granite Bay in the north, with cleaning protocols calibrated for the unique challenges of Central Valley conditions. Our team understands what 105-degree summer afternoons do to synthetic lawns, and we have the process and equipment to keep your Sacramento turf clean and fresh despite the heat.",
+    localChallenges: [
+      {
+        title: "Central Valley Extreme Heat",
+        description:
+          "Sacramento summers are brutal for artificial turf. June through September routinely sees temperatures above 100°F, with heat waves pushing past 110°F in places like Elk Grove, Natomas, and West Sacramento. This extreme heat causes turf surface temperatures to exceed 150°F on dark-colored installations, accelerates every contamination process, and makes cleaning timing critical. Our Sacramento crews schedule service for early morning or evening hours when cleaning solutions can actually work before evaporating, and we increase water volumes to compensate for rapid evaporation. This heat-specific approach delivers results that generic cleaning protocols cannot match.",
+      },
+      {
+        title: "Agricultural Dust & Pollen",
+        description:
+          "The Central Valley is one of the most productive agricultural regions in the world, and that agricultural activity creates airborne dust and pollen that settles on every outdoor surface in the Sacramento area. Properties in Rancho Cordova, Folsom, Fair Oaks, and the eastern suburbs see particularly heavy pollen accumulation during spring, while the general dry climate means dust is a year-round concern. This particulate load fills infill gaps, reduces drainage, and creates a dull surface appearance that homeowner rinsing cannot address. Our de-compacting service removes the embedded dust that standard cleaning leaves behind.",
+      },
+      {
+        title: "Water Conservation Balance",
+        description:
+          "Sacramento homeowners chose artificial turf specifically to conserve water, and many are understandably cautious about using water for cleaning. The good news is that efficient turf maintenance uses roughly 80-90% less water than maintaining a natural lawn the same size. Our cleaning process is calibrated to use water efficiently — rinsing during cool hours when evaporation is minimized, focusing volume on contaminated areas rather than spraying uniformly, and relying on our chlorine-based cleaning solution to do the heavy lifting so less water is needed for final rinsing. Sacramento clients see clean turf without the water bills that natural grass would demand.",
+      },
+      {
+        title: "Growing Suburban Footprint",
+        description:
+          "The Sacramento metro area has some of California's fastest-growing suburbs, from Elk Grove and Roseville to Rocklin and Lincoln. These master-planned communities have extensive artificial turf installations in both residential and HOA-common areas. Families in these neighborhoods often have multiple pets, active children, and high expectations for property appearance. Our residential cleaning plans are designed for these Sacramento-area households, with flexible scheduling that fits busy family calendars and consistent service quality that keeps turf looking its best year-round.",
+      },
+    ],
+    localWhyUs:
+      "Murphy's Turf serves the greater Sacramento area from our local office, covering Elk Grove, Roseville, Folsom, Rancho Cordova, Citrus Heights, West Sacramento, Carmichael, Fair Oaks, Rocklin, Granite Bay, Natomas, and Orangevale with the same professional-grade cleaning process we have built our reputation on across California. Our Sacramento crews understand Central Valley heat because they work in it every summer, and our cleaning protocols are refined specifically for the conditions that Sacramento artificial turf faces. Whether you need a one-time deep cleaning or want to set up a recurring maintenance plan, Murphy's Turf is the trusted choice for Sacramento homeowners who take their outdoor space seriously. Call us for a free quote and find out why Sacramento families trust Murphy's Turf with their synthetic lawns.",
   },
 };
 
@@ -750,6 +862,45 @@ export default async function LocationPage({
               <ArrowRight className="w-4 h-4" />
             </a>
           </div>
+        </div>
+      </section>
+
+      {/* ================================================================
+          6.5 LOCAL CONTENT — unique per city for SEO
+          ================================================================ */}
+      <section className="py-14 sm:py-20 bg-cream">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimateOnScroll direction="up" className="mb-10">
+            <h2 className="text-3xl sm:text-4xl font-bold text-charcoal font-heading mb-6">
+              {location.localContentHeading}
+            </h2>
+            <p className="text-base sm:text-lg text-charcoal-light font-body leading-relaxed">
+              {location.localContentIntro}
+            </p>
+          </AnimateOnScroll>
+
+          <StaggerContainer staggerDelay={0.1} className="grid md:grid-cols-2 gap-6 lg:gap-8 mb-10">
+            {location.localChallenges.map((challenge) => (
+              <StaggerItem key={challenge.title}>
+                <div className="bg-white rounded-2xl p-6 sm:p-7 shadow-sm border border-gray-100 h-full">
+                  <h3 className="text-lg sm:text-xl font-bold text-charcoal font-heading mb-3">
+                    {challenge.title}
+                  </h3>
+                  <p className="text-charcoal-light font-body text-sm sm:text-base leading-relaxed">
+                    {challenge.description}
+                  </p>
+                </div>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+
+          <AnimateOnScroll direction="up">
+            <div className="bg-sage/5 border-l-4 border-sage rounded-r-xl p-6 sm:p-8">
+              <p className="text-charcoal-light font-body text-sm sm:text-base leading-relaxed">
+                {location.localWhyUs}
+              </p>
+            </div>
+          </AnimateOnScroll>
         </div>
       </section>
 
