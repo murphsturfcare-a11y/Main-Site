@@ -14,6 +14,7 @@ import {
   Award,
 } from 'lucide-react';
 import { notFound } from 'next/navigation';
+import LeadForm from '@/components/forms/LeadForm';
 
 // ---------------------------------------------------------------------------
 // Types
@@ -465,19 +466,7 @@ export default async function SubLocationPage({
 
             {/* Right: Lead form */}
             <div className="w-full">
-              <div className="bg-white rounded-2xl shadow-2xl p-2 sm:p-3">
-                <iframe
-                  src={`https://api.leadconnectorhq.com/widget/form/${parent.formId}`}
-                  style={{
-                    width: '100%',
-                    border: 'none',
-                    borderRadius: '12px',
-                  }}
-                  scrolling="no"
-                  className="min-h-[500px]"
-                  title={`Get a Free Quote - ${sub.name}`}
-                />
-              </div>
+              <LeadForm locationCity={sub.name} locationSlug={parent.slug} />
             </div>
           </div>
         </div>

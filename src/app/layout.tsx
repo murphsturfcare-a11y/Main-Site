@@ -106,10 +106,7 @@ export default function RootLayout({
         <ExitIntentPopup />
         <MobileStickyQuote />
         <CookieConsent />
-        <Script
-          src="https://link.msgsndr.com/js/form_embed.js"
-          strategy="afterInteractive"
-        />
+        {/* GHL form_embed.js removed — replaced with native LeadForm + Netlify function */}
         <Script
           id="structured-data"
           type="application/ld+json"

@@ -15,6 +15,7 @@ import {
 import { notFound } from 'next/navigation';
 import { AnimateOnScroll, StaggerContainer, StaggerItem } from '@/components/ui/AnimateOnScroll';
 import FAQ from '@/components/sections/FAQ';
+import LeadForm from '@/components/forms/LeadForm';
 
 // ---------------------------------------------------------------------------
 // Types
@@ -649,19 +650,12 @@ export default async function LocationPage({
               </a>
             </AnimateOnScroll>
 
-            {/* Right: Lead form iframe */}
-            <AnimateOnScroll direction="up" className="w-full">
-              <div className="bg-white rounded-2xl shadow-2xl p-2 sm:p-3">
-                <iframe
-                  src={`https://api.leadconnectorhq.com/widget/form/${location.formId}`}
-                  style={{ width: '100%', border: 'none', borderRadius: '12px' }}
-                  scrolling="no"
-                  id="quote-form"
-                  className="min-h-[500px]"
-                  title={`Get a Free Quote - ${location.city}`}
-                />
-              </div>
-            </AnimateOnScroll>
+            {/* Right: Lead form */}
+            <div id="quote-form" className="w-full">
+              <AnimateOnScroll direction="up">
+                <LeadForm locationCity={location.city} locationSlug={location.slug} />
+              </AnimateOnScroll>
+            </div>
           </div>
         </div>
       </section>
@@ -1038,17 +1032,9 @@ export default async function LocationPage({
               </div>
             </AnimateOnScroll>
 
-            {/* Right: Lead form iframe */}
+            {/* Right: Lead form */}
             <AnimateOnScroll direction="up" className="w-full">
-              <div className="bg-white rounded-2xl shadow-2xl p-2 sm:p-4">
-                <iframe
-                  src={`https://api.leadconnectorhq.com/widget/form/${location.formId}`}
-                  style={{ width: '100%', border: 'none', borderRadius: '12px' }}
-                  scrolling="no"
-                  className="min-h-[500px]"
-                  title={`Get a Free Quote - ${location.city}`}
-                />
-              </div>
+              <LeadForm locationCity={location.city} locationSlug={location.slug} />
             </AnimateOnScroll>
           </div>
         </div>
