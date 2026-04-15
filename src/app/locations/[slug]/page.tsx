@@ -92,8 +92,8 @@ const processSteps = [
   },
   {
     image: '/images/gallery/process-schedule-estimate.png',
-    title: 'Schedule Your Estimate',
-    description: 'We visit your property',
+    title: 'Get Your Fast Online Quote',
+    description: 'Send turf measurements or we pull them from Google Earth — no on-site visit',
   },
   {
     image: '/images/gallery/process-get-job-done.png',
