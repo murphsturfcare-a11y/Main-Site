@@ -16,12 +16,15 @@ export function generatePageMetadata(
   const ogImage = image || DEFAULT_OG_IMAGE;
 
   return {
-    title: `${title} | ${COMPANY_NAME}`,
+    // Plain string: the layout's title.template appends " | Murphy's Turf"
+    // exactly once. Do NOT add the brand here or it doubles.
+    title,
     description,
     alternates: {
       canonical: url,
     },
     openGraph: {
+      // OG titles are NOT templated, so the brand is added explicitly here.
       title: `${title} | ${COMPANY_NAME}`,
       description,
       url,
@@ -72,6 +75,30 @@ export function generateLocationMetadata(location: {
   );
 }
 
+export function generateCommercialMetadata(): Metadata {
+  const title = "Commercial Artificial Turf Cleaning California";
+  const description = `Commercial artificial turf cleaning for dog daycares, HOAs, schools, gyms & hospitality across California. Recurring, pet-safe, bonded & insured service from ${COMPANY_NAME} — 30+ years experience. Get a free quote!`;
+
+  return generatePageMetadata(title, description, "/commercial-turf-cleaning");
+}
+
+export function generateCommercialLocationMetadata(location: {
+  name: string;
+  regionSlug: string;
+  subSlug: string;
+  phone?: string;
+}): Metadata {
+  const title = `Commercial Artificial Turf Cleaning in ${location.name}, CA`;
+  const phone = location.phone ? ` Call ${location.phone}.` : "";
+  const description = `Commercial artificial turf cleaning in ${location.name}, CA for dog daycares, HOAs, schools, gyms & hospitality. Recurring, pet-safe, bonded & insured service from ${COMPANY_NAME}.${phone}`;
+
+  return generatePageMetadata(
+    title,
+    description,
+    `/commercial-turf-cleaning/${location.regionSlug}/${location.subSlug}`
+  );
+}
+
 export function generateBlogMetadata(post: {
   title: string;
   slug: string;
@@ -81,7 +108,9 @@ export function generateBlogMetadata(post: {
   const ogImage = post.image || DEFAULT_OG_IMAGE;
 
   return {
-    title: `${post.title} | ${COMPANY_NAME} Blog`,
+    // `absolute` keeps the "... | Murphy's Turf Blog" wording without the
+    // layout template appending a second brand.
+    title: { absolute: `${post.title} | ${COMPANY_NAME} Blog` },
     description: post.description,
     alternates: {
       canonical: `${SITE_URL}/blog/${post.slug}`,

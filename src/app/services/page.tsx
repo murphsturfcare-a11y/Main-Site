@@ -1,15 +1,11 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import {
-  ArrowRight,
-  MapPin,
-  HelpCircle,
-} from 'lucide-react';
+import { ArrowRight, MapPin, HelpCircle } from 'lucide-react';
 import { AnimateOnScroll, StaggerContainer, StaggerItem } from '@/components/ui/AnimateOnScroll';
 
 export const metadata: Metadata = {
-  title: 'Artificial Turf Cleaning Services | Murphy\'s Turf',
+  title: 'Artificial Turf Cleaning Services',
   description:
     "Professional artificial turf cleaning and maintenance services in Murrieta, CA. Pet hair removal, blooming, disinfecting, deodorizing, and poop scooping. Get a free quote today.",
 };
@@ -18,6 +14,7 @@ const services = [
   {
     name: 'Pet Hair & Debris Removal',
     slug: 'pet-hair-debris',
+    href: '/services/pet-hair-debris',
     image: '/images/services/debris-removal.png',
     description:
       'All of our turf services begin with removing pet hair and waste along with any other debris such as leaves and branches. We also run a magnet over the turf to remove any metal objects and use a de-weeding tool to clear weeds from edges and seams.',
@@ -25,6 +22,7 @@ const services = [
   {
     name: 'Blooming & De-Compacting',
     slug: 'blooming-decompacting',
+    href: '/services/blooming-decompacting',
     image: '/images/services/blooming.png',
     description:
       'Over time, frequent foot traffic causes turf blades to become matted down. Our blooming process uses commercial-grade machines to remove caked debris from the fibers and fluff the blades back to life, standing upright like natural grass.',
@@ -32,6 +30,7 @@ const services = [
   {
     name: 'Disinfect & Deodorize',
     slug: 'disinfect-deodorize',
+    href: '/services/disinfect-deodorize',
     image: '/images/gallery/service-turf-disinfecting-v2.jpeg',
     description:
       'Our professional-grade disinfecting and deodorizing service power-sprays your turf, cutting past the top layer into the infill where bacteria and viruses live. Eliminates germs and bacteria in minutes without hazardous chemicals.',
@@ -39,9 +38,18 @@ const services = [
   {
     name: 'Poop Scooping & Removal',
     slug: 'poop-scooping',
+    href: '/services/poop-scooping',
     image: '/images/services/poop-scooping.jpg',
     description:
       'Pet waste is not only an unruly sight but also harmful to the environment and people around you. According to the EPA, pet waste is very toxic. We provide flexible service plans dedicated to waste removal so you can enjoy your yard worry-free.',
+  },
+  {
+    name: 'Commercial Turf Cleaning',
+    slug: 'commercial-turf-cleaning',
+    href: '/commercial-turf-cleaning',
+    image: '/images/gallery/service-turf-cleaning.png',
+    description:
+      'Recurring, pet-safe turf cleaning for dog daycares, HOAs, schools, gyms, and hospitality venues across California. Bonded, insured, and documented for property managers and boards — scheduled around your hours and budget.',
   },
 ];
 
@@ -102,7 +110,7 @@ export default function ServicesPage() {
                         Get a Quote
                       </Link>
                       <Link
-                        href={`/services/${service.slug}`}
+                        href={service.href}
                         className="inline-flex items-center gap-1.5 text-sage font-semibold font-body text-sm hover:text-forest transition-colors group/link"
                       >
                         Learn More

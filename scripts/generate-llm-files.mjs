@@ -230,6 +230,10 @@ We serve every major region of California including Los Angeles, Orange County, 
 - [Disinfect & Deodorize](${SITE_URL}/services/disinfect-deodorize): Professional chlorine-based sanitization that eliminates bacteria and neutralizes odors at the source.
 - [Poop Scooping](${SITE_URL}/services/poop-scooping): Thorough pet waste removal as a standalone service or part of recurring maintenance plans.
 
+## Commercial Turf Cleaning
+
+- [Commercial Artificial Turf Cleaning](${SITE_URL}/commercial-turf-cleaning): Recurring, pet-safe commercial turf cleaning for businesses across California. Bonded and insured, with documented invoicing and after-hours scheduling. We serve four segments: dog daycares/boarding/kennels, HOAs and property management, schools/preschools/playgrounds, and gyms/hotels/sports & event venues. Available in every city we serve — e.g. Temecula, Roseville, Concord, Irvine.
+
 ## Service Locations
 
 - [Huntington Beach / LA Coastal Corridor](${SITE_URL}/locations/huntington-beach): Serving Huntington Beach, Newport Beach, Costa Mesa, Long Beach, Seal Beach, Irvine, Fountain Valley, Garden Grove, Westminster, Laguna Beach, Dana Point, San Clemente, and Anaheim.
@@ -267,6 +271,42 @@ This file contains the full content of every blog article published by Murphy's 
 
 Site: ${SITE_URL}
 Service areas: Huntington Beach, Murrieta, Martinez, Sacramento, and all surrounding California communities.
+
+---
+
+# Commercial Artificial Turf Cleaning
+
+**URL:** ${SITE_URL}/commercial-turf-cleaning
+**Category:** Commercial Services
+
+> Recurring, pet-safe artificial turf cleaning for businesses across California. Murphy's Turf brings 30+ years of professional turf cleaning to commercial properties — bonded, insured, and documented for property managers and boards.
+
+Murphy's Turf provides commercial artificial turf cleaning to businesses throughout California, from a single dog-daycare play yard to portfolios of HOA common areas. Commercial turf takes far more abuse than a backyard lawn — heavier foot traffic, more pets, and higher expectations from customers, residents, and inspectors. Our commercial-grade process penetrates past the surface into the infill where bacteria and odor actually live, using a chlorine-based solution (no bleach, no ammonia) that is safe for pets and children once dry.
+
+## Commercial Segments We Serve
+
+- **Dog Daycares, Boarding & Kennels:** Pet facilities put more wear and waste on turf in a week than a backyard sees in a year. We keep play yards sanitized, odor-free, and safe — addressing constant urine saturation, baked-in odor, and bacteria/parasite risk in high-density play areas.
+- **HOAs & Property Management:** Common-area turf, dog runs, and entry landscaping reflect on the whole community. We keep multi-family and HOA grounds presentable with predictable, invoice-friendly recurring service that fits board budgets.
+- **Schools, Preschools & Playgrounds:** Where kids crawl, sit, and play, sanitization is not optional. Our pet-safe, chlorine-based process eliminates bacteria without harsh chemicals — safe for children as soon as it dries, meeting parent and licensing expectations.
+- **Gyms, Hotels, Sports & Event Venues:** Turf gym floors, rooftop lounges, hotel pet areas, and athletic fields take a beating and stay in the public eye. We restore appearance and freshness on after-hours schedules that fit your operations.
+
+## What Every Commercial Clean Includes
+
+- Pet hair, waste, and debris extraction from fibers and infill
+- De-weeding and magnet sweep for metal objects
+- Commercial-grade blooming and de-compacting of high-traffic areas
+- Full disinfect and deodorize treatment at the infill level
+- Recurring weekly, bi-weekly, monthly, or quarterly plans
+- After-hours scheduling and documented, invoice-friendly billing
+
+## Why Businesses Choose Murphy's Turf
+
+- **Bonded & Insured:** Licensed, bonded, and insured crews your facility and board can sign off on.
+- **Pet- & Child-Safe:** Chlorine-based process — no bleach, no ammonia. Safe for pets and kids once dry.
+- **Recurring Plans:** Predictable schedules and pricing built around your hours and budget.
+- **Documented Service:** Clear invoicing and service records for property managers and boards.
+
+Commercial turf cleaning is available in every city we serve. City pages live under ${SITE_URL}/commercial-turf-cleaning
 
 ---
 

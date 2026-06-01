@@ -465,7 +465,8 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${service.name} | Murphy's Turf`,
+    // Plain string: the layout title.template appends " | Murphy's Turf" once.
+    title: service.name,
     description: service.metaDescription,
     alternates: {
       canonical: `https://murphysturf.com/services/${slug}`,

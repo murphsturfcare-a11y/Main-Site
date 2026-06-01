@@ -3,6 +3,7 @@ import type { NavItem, NavGroup } from '../types';
 export const mainNav: NavItem[] = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/services" },
+  { label: "Commercial", href: "/commercial-turf-cleaning" },
   { label: "Locations", href: "/locations" },
   { label: "Contact", href: "/locations" },
   { label: "Blog", href: "/blog" },
@@ -16,6 +17,7 @@ export const footerNav: NavGroup[] = [
       { label: "Blooming & De-Compacting", href: "/services/blooming-decompacting" },
       { label: "Disinfect & Deodorize", href: "/services/disinfect-deodorize" },
       { label: "Poop Scooping & Removal", href: "/services/poop-scooping" },
+      { label: "Commercial Turf Cleaning", href: "/commercial-turf-cleaning" },
     ],
   },
   {

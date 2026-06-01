@@ -55,7 +55,7 @@ Poop scooping is most effective when combined with regular turf cleaning. At Mur
 
 ## Getting Started with Murphy's Turf
 
-Murphy's Turf offers Poop Scooping & Removal as both a standalone service and as part of comprehensive turf maintenance packages. We serve pet owners in Huntington Beach, Murrieta, Martinez, and Sacramento with flexible scheduling that fits your household's needs. Whether you have one small dog or a pack of big ones, we have a plan that works. [Contact us](https://murphysturf.com/locations) or [find your local office](https://murphysturf.com/locations)to get started.
+Murphy's Turf offers Poop Scooping & Removal as both a standalone service and as part of comprehensive turf maintenance packages. We serve pet owners in Huntington Beach, Murrieta, Martinez, and Sacramento with flexible scheduling that fits your household's needs. Whether you have one small dog or a pack of big ones, we have a plan that works. [Contact us](https://murphysturf.com/locations) or [find your local office](https://murphysturf.com/locations)to get started. For dog daycares, kennels, and other pet businesses, see our [commercial turf cleaning services](https://murphysturf.com/commercial-turf-cleaning).
 
 ---
 

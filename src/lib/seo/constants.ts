@@ -34,6 +34,8 @@ export const LOCATION_SLUGS = [
   "sacramento",
 ] as const;
 
+export const COMMERCIAL_SLUG = "commercial-turf-cleaning";
+
 export const BLOG_SLUGS = [
   // Existing posts (match actual built pages)
   "how-to-clean-artificial-turf",

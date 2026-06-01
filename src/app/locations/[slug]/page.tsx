@@ -501,7 +501,9 @@ export async function generateMetadata({
     return { title: 'Location Not Found' };
   }
   return {
-    title: location.metaTitle,
+    // metaTitle already contains the brand (e.g. "... | Murphy's Turf HQ").
+    // Use `absolute` so the layout template does NOT append a second brand.
+    title: { absolute: location.metaTitle },
     description: location.metaDescription,
     alternates: {
       canonical: `https://murphysturf.com/locations/${slug}`,

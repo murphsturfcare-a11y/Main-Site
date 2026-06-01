@@ -77,6 +77,10 @@ export default function Header() {
             Services
           </Link>
 
+          <Link href="/commercial-turf-cleaning" className={linkClass}>
+            Commercial
+          </Link>
+
           <Link href="/locations" className={linkClass}>
             Locations
           </Link>
@@ -181,6 +185,14 @@ export default function Header() {
                   className="block py-3 font-body text-base font-medium text-charcoal transition-colors hover:text-forest"
                 >
                   Services
+                </Link>
+
+                <Link
+                  href="/commercial-turf-cleaning"
+                  onClick={closeDrawer}
+                  className="block py-3 font-body text-base font-medium text-charcoal transition-colors hover:text-forest"
+                >
+                  Commercial
                 </Link>
 
                 <Link

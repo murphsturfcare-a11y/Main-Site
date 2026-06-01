@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { SITE_URL, SERVICE_SLUGS, LOCATION_SLUGS, BLOG_SLUGS } from "@/lib/seo/constants";
+import { commercialRegions, commercialSubLocationParams } from "@/data/commercial";
 
 export const dynamic = "force-static";
 
@@ -107,11 +108,41 @@ export default function sitemap(): MetadataRoute.Sitemap {
       }))
   );
 
+  // Commercial turf cleaning hub + 4 regional hubs + city pages
+  const commercialHub: MetadataRoute.Sitemap = [
+    {
+      url: `${SITE_URL}/commercial-turf-cleaning`,
+      lastModified: new Date(),
+      changeFrequency: "weekly" as const,
+      priority: 0.9,
+    },
+  ];
+
+  const commercialRegionPages: MetadataRoute.Sitemap = commercialRegions.map(
+    (region) => ({
+      url: `${SITE_URL}/commercial-turf-cleaning/${region.slug}`,
+      lastModified: new Date(),
+      changeFrequency: "weekly" as const,
+      priority: 0.8,
+    })
+  );
+
+  const commercialSubLocationPages: MetadataRoute.Sitemap =
+    commercialSubLocationParams().map(({ location, subLocation }) => ({
+      url: `${SITE_URL}/commercial-turf-cleaning/${location}/${subLocation}`,
+      lastModified: new Date(),
+      changeFrequency: "weekly" as const,
+      priority: 0.7,
+    }));
+
   return [
     ...staticPages,
     ...servicePages,
     ...locationPages,
     ...subLocationPages,
+    ...commercialHub,
+    ...commercialRegionPages,
+    ...commercialSubLocationPages,
     ...blogPages,
     ...blogMarkdownPages,
     ...llmFiles,

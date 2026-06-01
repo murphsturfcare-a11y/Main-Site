@@ -47,7 +47,7 @@ For multi-pet households in Irvine, professional cleaning every 6 to 8 weeks dur
 
 ## Murphy's Turf in Irvine
 
-Murphy's Turf serves Irvine with professional artificial turf cleaning that meets the high standards Irvine homeowners expect. Our [Pet Hair & Debris Removal](https://murphysturf.com/services), [Blooming & De-Compacting](https://murphysturf.com/services), and [Disinfect & Deodorize](https://murphysturf.com/services) services keep your turf looking and performing at its best. [Contact our Orange County office](https://murphysturf.com/locations/huntington-beach) for a free quote.
+Murphy's Turf serves Irvine with professional artificial turf cleaning that meets the high standards Irvine homeowners expect. Our [Pet Hair & Debris Removal](https://murphysturf.com/services), [Blooming & De-Compacting](https://murphysturf.com/services), and [Disinfect & Deodorize](https://murphysturf.com/services) services keep your turf looking and performing at its best. [Contact our Orange County office](https://murphysturf.com/locations/huntington-beach) for a free quote. Managing an HOA or business property? We also provide [commercial turf cleaning for HOAs](https://murphysturf.com/commercial-turf-cleaning) across Orange County.
 
 ---
 

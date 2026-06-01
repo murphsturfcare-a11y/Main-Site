@@ -87,7 +87,7 @@ Based on years of serving Orange County homes, here is our recommended maintenan
 
 Murphy's Turf has been serving Orange County homeowners from our [Huntington Beach office](https://murphysturf.com/locations/huntington-beach) since day one. We know every OC microclimate, every HOA standard, and every challenge that Orange County turf faces. Our full service menu includes [Pet Hair & Debris Removal](https://murphysturf.com/services/pet-hair-debris), [Blooming & De-Compacting](https://murphysturf.com/services/blooming-decompacting), [Disinfect & Deodorize](https://murphysturf.com/services/disinfect-deodorize), and [Poop Scooping](https://murphysturf.com/services/poop-scooping) — everything your Orange County turf needs to stay clean, safe, and looking like the day it was installed.
 
-We serve every city in Orange County, from San Clemente to Seal Beach and everywhere in between. [Contact our Orange County office](https://murphysturf.com/locations/huntington-beach) for a free quote and find out why hundreds of OC homeowners trust Murphy's Turf with their synthetic lawns.
+We serve every city in Orange County, from San Clemente to Seal Beach and everywhere in between. [Contact our Orange County office](https://murphysturf.com/locations/huntington-beach) for a free quote and find out why hundreds of OC homeowners trust Murphy's Turf with their synthetic lawns. HOA boards and property managers can also schedule recurring [commercial artificial turf cleaning](https://murphysturf.com/commercial-turf-cleaning) for common areas.
 
 ---
 

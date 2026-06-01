@@ -14,6 +14,7 @@ const servicesLinks = [
   { label: 'Blooming & De-Compacting', href: '/services/blooming-decompacting' },
   { label: 'Disinfect & Deodorize', href: '/services/disinfect-deodorize' },
   { label: 'Poop Scooping & Removal', href: '/services/poop-scooping' },
+  { label: 'Commercial Turf Cleaning', href: '/commercial-turf-cleaning' },
 ];
 
 const locationsLinks = [

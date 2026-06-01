@@ -316,7 +316,9 @@ export async function generateMetadata({
   const description = `Professional artificial turf cleaning in ${sub.name}, California. Pet-safe disinfecting, deodorizing, blooming & debris removal. 30+ years experience serving ${sub.name} and the ${parent.city} area. Call ${parent.phone} for a free quote.`;
 
   return {
-    title,
+    // `title` already includes the brand; use `absolute` so the layout
+    // template doesn't append a second " | Murphy's Turf".
+    title: { absolute: title },
     description,
     alternates: {
       canonical: `https://murphysturf.com/locations/${parent.slug}/${sub.slug}`,
