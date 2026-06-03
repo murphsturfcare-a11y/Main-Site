@@ -60,6 +60,28 @@ export const BLOG_SLUGS = [
   "artificial-turf-cleaning-long-beach",
   "artificial-turf-cleaning-san-diego",
   "artificial-turf-cleaning-orange-county",
+  // Commercial pillar posts
+  "commercial-turf-cleaning-dog-daycares-kennels",
+  "hoa-artificial-turf-maintenance-guide",
+  "playground-turf-cleaning-schools-preschools",
+  "gym-hotel-event-venue-turf-cleaning",
+  // Commercial location-specific spoke posts
+  "dog-daycare-turf-cleaning-irvine",
+  "commercial-turf-cleaning-anaheim-hotels-venues",
+  "hoa-turf-maintenance-newport-beach",
+  "preschool-turf-cleaning-huntington-beach",
+  "hoa-turf-maintenance-temecula",
+  "dog-daycare-turf-cleaning-murrieta",
+  "school-turf-cleaning-riverside",
+  "gym-fitness-turf-cleaning-corona",
+  "hoa-turf-maintenance-walnut-creek",
+  "dog-daycare-turf-cleaning-concord",
+  "preschool-turf-cleaning-san-ramon",
+  "gym-hotel-turf-cleaning-pleasanton",
+  "hoa-turf-maintenance-roseville",
+  "dog-daycare-turf-cleaning-sacramento",
+  "preschool-turf-cleaning-elk-grove",
+  "gym-hotel-turf-cleaning-folsom",
 ] as const;
 
 export type ServiceSlug = (typeof SERVICE_SLUGS)[number];

@@ -236,15 +236,216 @@ const blogPosts: BlogPost[] = [
       'Orange County has one of the highest concentrations of artificial turf in the US. From coastal salt air in Huntington Beach to inland heat in Anaheim, learn the city-by-city cleaning strategies every OC homeowner needs.',
     gradient: 'from-orange-600 via-amber-500 to-yellow-400',
   },
+  {
+    slug: 'commercial-turf-cleaning-dog-daycares-kennels',
+    title: 'Turf Cleaning for Dog Daycares, Boarding Facilities and Kennels: An Operator Guide',
+    category: 'Commercial',
+    author: "Murphy's Turf Team",
+    date: '2026-06-02',
+    excerpt:
+      'A practical guide to keeping artificial turf clean, odor-free, and sanitary at dog daycares, boarding facilities, and kennels. Learn cleaning frequency, pet-safe disinfecting, and what to look for in a commercial turf cleaning vendor.',
+    gradient: 'from-sage via-forest to-forest-dark',
+  },
+  {
+    slug: 'hoa-artificial-turf-maintenance-guide',
+    title: 'Artificial Turf Maintenance for HOAs and Property Managers: Costs, Responsibilities and a Vendor Checklist',
+    category: 'Commercial',
+    author: "Murphy's Turf Team",
+    date: '2026-06-01',
+    excerpt:
+      'A guide for HOA boards and property managers on maintaining common-area artificial turf: who is responsible, what cleaning involves, how to budget, and a checklist for choosing a bonded, insured commercial turf cleaning vendor.',
+    gradient: 'from-forest via-sage to-forest-light',
+  },
+  {
+    slug: 'playground-turf-cleaning-schools-preschools',
+    title: 'Is Playground Turf Safe? Cleaning and Sanitizing Standards for Schools and Preschools',
+    category: 'Commercial',
+    author: "Murphy's Turf Team",
+    date: '2026-05-30',
+    excerpt:
+      'What schools, preschools, and childcare centers need to know about cleaning and sanitizing playground artificial turf. Covers bacteria risks, child-safe cleaning products, frequency, and documentation administrators expect.',
+    gradient: 'from-sage via-emerald-500 to-forest',
+  },
+  {
+    slug: 'gym-hotel-event-venue-turf-cleaning',
+    title: 'Commercial Turf Cleaning for Gyms, Hotels and Event Venues',
+    category: 'Commercial',
+    author: "Murphy's Turf Team",
+    date: '2026-05-28',
+    excerpt:
+      'How gyms, hotels, and event venues keep artificial turf clean, safe, and guest-ready. Covers high-traffic wear, sweat and bacteria in fitness turf, hospitality appearance standards, and building a recurring maintenance plan.',
+    gradient: 'from-forest-dark via-forest to-sage',
+  },
+  {
+    slug: 'dog-daycare-turf-cleaning-irvine',
+    title: 'Dog Daycare Turf Cleaning in Irvine: Keeping Play Yards Odor-Free Near the Coast',
+    category: 'Commercial',
+    author: "Murphy's Turf Team",
+    date: '2026-05-27',
+    excerpt:
+      'How dog daycares, boarding facilities, and pet resorts in Irvine keep artificial turf play yards sanitary and odor-free, with coastal-climate cleaning frequency and Irvine landscape standards.',
+    gradient: 'from-sage via-forest to-forest-dark',
+  },
+  {
+    slug: 'commercial-turf-cleaning-anaheim-hotels-venues',
+    title: 'Commercial Turf Cleaning in Anaheim: Hotels, Event Lawns and High-Traffic Venues',
+    category: 'Commercial',
+    author: "Murphy's Turf Team",
+    date: '2026-05-26',
+    excerpt:
+      'Anaheim hotels, resorts, and event venues near the Convention Center and Resort District rely on guest-ready turf. How foot traffic and inland heat drive a recurring commercial cleaning plan.',
+    gradient: 'from-forest-dark via-forest to-sage',
+  },
+  {
+    slug: 'hoa-turf-maintenance-newport-beach',
+    title: 'HOA Artificial Turf Maintenance in Newport Beach: Common-Area Care on the Coast',
+    category: 'Commercial',
+    author: "Murphy's Turf Team",
+    date: '2026-05-25',
+    excerpt:
+      'How Newport Beach HOAs keep common-area artificial turf clean and compliant, covering coastal salt air, Davis-Stirling responsibilities, budgeting, and a vendor checklist for boards.',
+    gradient: 'from-forest via-sage to-forest-light',
+  },
+  {
+    slug: 'preschool-turf-cleaning-huntington-beach',
+    title: 'Preschool and Playground Turf Cleaning in Huntington Beach: Safe Surfaces by the Sea',
+    category: 'Commercial',
+    author: "Murphy's Turf Team",
+    date: '2026-05-24',
+    excerpt:
+      'How preschools and childcare centers in Huntington Beach keep playground turf clean and child-safe, covering coastal moisture, Community Care Licensing standards, and a sanitizing schedule.',
+    gradient: 'from-sage via-emerald-500 to-forest',
+  },
+  {
+    slug: 'hoa-turf-maintenance-temecula',
+    title: 'HOA Turf Maintenance in Temecula: Master-Planned Communities and Inland Heat',
+    category: 'Commercial',
+    author: "Murphy's Turf Team",
+    date: '2026-05-23',
+    excerpt:
+      'How Temecula HOAs keep common-area artificial turf clean in extreme Inland Empire heat, covering Davis-Stirling responsibilities, budgeting, and a vendor checklist for community boards.',
+    gradient: 'from-forest via-sage to-forest-light',
+  },
+  {
+    slug: 'dog-daycare-turf-cleaning-murrieta',
+    title: 'Dog Daycare Turf Cleaning in Murrieta: Beating the Inland Empire Heat',
+    category: 'Commercial',
+    author: "Murphy's Turf Team",
+    date: '2026-05-22',
+    excerpt:
+      'How dog daycares, boarding facilities, and kennels in Murrieta keep artificial turf sanitary in extreme heat, with deep extraction and a local commercial cleaning schedule.',
+    gradient: 'from-sage via-forest to-forest-dark',
+  },
+  {
+    slug: 'school-turf-cleaning-riverside',
+    title: 'School and Playground Turf Cleaning in Riverside: Safe Surfaces in the Heat',
+    category: 'Commercial',
+    author: "Murphy's Turf Team",
+    date: '2026-05-21',
+    excerpt:
+      'How schools and childcare centers in Riverside keep playground turf clean and child-safe through Inland Empire heat, covering Title 22 standards and sanitizing frequency.',
+    gradient: 'from-sage via-emerald-500 to-forest',
+  },
+  {
+    slug: 'gym-fitness-turf-cleaning-corona',
+    title: 'Gym and Fitness Turf Cleaning in Corona: Sweat, Bacteria and High-Traffic Floors',
+    category: 'Commercial',
+    author: "Murphy's Turf Team",
+    date: '2026-05-20',
+    excerpt:
+      'How gyms and fitness studios in Corona keep artificial turf training areas clean and odor-free, covering sweat-driven bacteria, Inland Empire heat, and a recurring cleaning plan.',
+    gradient: 'from-forest-dark via-forest to-sage',
+  },
+  {
+    slug: 'hoa-turf-maintenance-walnut-creek',
+    title: 'HOA Turf Maintenance in Walnut Creek: Common-Area Care in the East Bay',
+    category: 'Commercial',
+    author: "Murphy's Turf Team",
+    date: '2026-05-19',
+    excerpt:
+      'How Walnut Creek HOAs keep common-area artificial turf clean and compliant, covering East Bay damp and mildew, Davis-Stirling responsibilities, budgeting, and a vendor checklist.',
+    gradient: 'from-forest via-sage to-forest-light',
+  },
+  {
+    slug: 'dog-daycare-turf-cleaning-concord',
+    title: 'Dog Daycare Turf Cleaning in Concord: Odor Control in the East Bay',
+    category: 'Commercial',
+    author: "Murphy's Turf Team",
+    date: '2026-05-18',
+    excerpt:
+      'How dog daycares and kennels in Concord keep artificial turf play yards sanitary and odor-free, covering East Bay moisture, cleaning frequency, and choosing a commercial vendor.',
+    gradient: 'from-sage via-forest to-forest-dark',
+  },
+  {
+    slug: 'preschool-turf-cleaning-san-ramon',
+    title: 'Preschool Turf Cleaning in San Ramon: Child-Safe Play Yards in the Tri-Valley',
+    category: 'Commercial',
+    author: "Murphy's Turf Team",
+    date: '2026-05-17',
+    excerpt:
+      'How preschools and childcare centers in San Ramon keep playground turf clean and child-safe, covering East Bay climate, Community Care Licensing standards, and a sanitizing schedule.',
+    gradient: 'from-sage via-emerald-500 to-forest',
+  },
+  {
+    slug: 'gym-hotel-turf-cleaning-pleasanton',
+    title: 'Gym and Hotel Turf Cleaning in Pleasanton: Guest-Ready Surfaces in the Tri-Valley',
+    category: 'Commercial',
+    author: "Murphy's Turf Team",
+    date: '2026-05-16',
+    excerpt:
+      'How gyms, hotels, and corporate campuses in Pleasanton keep artificial turf clean, odor-free, and guest-ready, covering sweat and foot traffic, appearance standards, and a recurring plan.',
+    gradient: 'from-forest-dark via-forest to-sage',
+  },
+  {
+    slug: 'hoa-turf-maintenance-roseville',
+    title: 'HOA Turf Maintenance in Roseville: Master-Planned Communities and Valley Heat',
+    category: 'Commercial',
+    author: "Murphy's Turf Team",
+    date: '2026-05-15',
+    excerpt:
+      'How Roseville HOAs keep common-area artificial turf clean in Central Valley heat, covering Davis-Stirling responsibilities, budgeting, and a vendor checklist for community boards.',
+    gradient: 'from-forest via-sage to-forest-light',
+  },
+  {
+    slug: 'dog-daycare-turf-cleaning-sacramento',
+    title: 'Dog Daycare Turf Cleaning in Sacramento: Odor Control in Valley Heat',
+    category: 'Commercial',
+    author: "Murphy's Turf Team",
+    date: '2026-05-14',
+    excerpt:
+      'How dog daycares and kennels in Sacramento keep artificial turf play yards sanitary in Central Valley heat, with deep extraction and a recurring commercial cleaning schedule.',
+    gradient: 'from-sage via-forest to-forest-dark',
+  },
+  {
+    slug: 'preschool-turf-cleaning-elk-grove',
+    title: 'Preschool and Childcare Turf Cleaning in Elk Grove: Safe Play Yards in the Valley',
+    category: 'Commercial',
+    author: "Murphy's Turf Team",
+    date: '2026-05-13',
+    excerpt:
+      'How preschools and childcare centers in Elk Grove keep playground turf clean and child-safe through Central Valley heat, covering Title 22 standards and sanitizing frequency.',
+    gradient: 'from-sage via-emerald-500 to-forest',
+  },
+  {
+    slug: 'gym-hotel-turf-cleaning-folsom',
+    title: 'Gym, Hotel and Event Turf Cleaning in Folsom: Guest-Ready Surfaces in the Valley',
+    category: 'Commercial',
+    author: "Murphy's Turf Team",
+    date: '2026-05-12',
+    excerpt:
+      'How gyms, hotels, and event venues in Folsom keep artificial turf clean, odor-free, and guest-ready, covering sweat and foot traffic, valley heat, and a recurring commercial cleaning plan.',
+    gradient: 'from-forest-dark via-forest to-sage',
+  },
 ];
 
-const categories = ['All', 'Turf Cleaning', 'Pet Care', 'Maintenance Tips', 'Local Guides'] as const;
+const categories = ['All', 'Turf Cleaning', 'Pet Care', 'Maintenance Tips', 'Local Guides', 'Commercial'] as const;
 
 const categoryColors: Record<string, { bg: string; text: string }> = {
   'Turf Cleaning': { bg: 'bg-sage/15', text: 'text-sage-dark' },
   'Pet Care': { bg: 'bg-amber-100', text: 'text-amber-700' },
   'Maintenance Tips': { bg: 'bg-emerald-100', text: 'text-emerald-700' },
   'Local Guides': { bg: 'bg-blue-100', text: 'text-blue-700' },
+  'Commercial': { bg: 'bg-forest/10', text: 'text-forest' },
 };
 
 function formatDate(dateStr: string): string {

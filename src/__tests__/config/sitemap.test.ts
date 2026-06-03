@@ -54,8 +54,8 @@ describe("sitemap()", () => {
     }
   });
 
-  it("includes all 12 blog pages", () => {
-    expect(BLOG_SLUGS).toHaveLength(12);
+  it("includes all 41 blog pages", () => {
+    expect(BLOG_SLUGS).toHaveLength(41);
 
     for (const slug of BLOG_SLUGS) {
       const entry = entries.find((e) => e.url === `${SITE_URL}/blog/${slug}`);

@@ -75,7 +75,7 @@ describe("SEO constants", () => {
     expect(LOCATION_SLUGS).toContain("sacramento");
   });
 
-  it("BLOG_SLUGS has exactly 12 entries", () => {
-    expect(BLOG_SLUGS).toHaveLength(12);
+  it("BLOG_SLUGS has exactly 41 entries", () => {
+    expect(BLOG_SLUGS).toHaveLength(41);
   });
 });
