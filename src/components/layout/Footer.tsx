@@ -145,6 +145,14 @@ export default function Footer() {
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 py-6 sm:flex-row lg:px-8">
           <p className="font-body text-sm text-gray-400">
             &copy; {new Date().getFullYear()} Murphy&apos;s Turf. All rights reserved.
+            {' '}&middot;{' '}
+            <a
+              href="https://tothemaxmedia.com"
+              rel="noopener"
+              className="text-gray-400 transition-colors hover:text-sage"
+            >
+              Built by To The Max Media
+            </a>
           </p>
           <p className="font-body text-sm text-gray-400">
             100% Pet Friendly | Eco Friendly | Satisfaction Guaranteed
