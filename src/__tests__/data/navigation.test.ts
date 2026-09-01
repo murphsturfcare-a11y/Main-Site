@@ -4,7 +4,7 @@ import { SERVICE_SLUGS, LOCATION_SLUGS } from '@/lib/seo/constants';
 describe('navigation data', () => {
   describe('mainNav', () => {
     it('has correct links for all primary pages', () => {
-      const expectedHrefs = ['/', '/about', '/services', '/locations', '/contact', '/blog'];
+      const expectedHrefs = ['/', '/services', '/commercial-turf-cleaning', '/locations', '/blog'];
       const hrefs = mainNav.map((item) => item.href);
       for (const expected of expectedHrefs) {
         expect(hrefs).toContain(expected);
@@ -38,7 +38,7 @@ describe('navigation data', () => {
       }
     });
 
-    it('Services group links match all 5 service slugs', () => {
+    it('Services group includes a link for every service slug', () => {
       const servicesGroup = footerNav.find((g) => g.title === 'Services');
       expect(servicesGroup).toBeDefined();
       const hrefs = servicesGroup!.links.map((l) => l.href);
@@ -62,8 +62,8 @@ describe('navigation data', () => {
       expect(ctaText).toBe('Get a Quote');
     });
 
-    it('ctaHref is "/contact"', () => {
-      expect(ctaHref).toBe('/contact');
+    it('ctaHref is "/locations"', () => {
+      expect(ctaHref).toBe('/locations');
     });
   });
 });

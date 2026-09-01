@@ -10,12 +10,12 @@ import {
 
 const SITE_URL = "https://murphysturf.com";
 const COMPANY_NAME = "Murphy's Turf";
-const DEFAULT_OG_IMAGE = "/images/og-default.jpg";
+const DEFAULT_OG_IMAGE = "/images/og-image.png";
 
 describe("generatePageMetadata", () => {
-  it("formats the title as '{title} | Murphy's Turf'", () => {
+  it("returns the bare title (the layout's title.template appends the brand)", () => {
     const meta = generatePageMetadata("About Us", "Our story", "/about");
-    expect(meta.title).toBe("About Us | Murphy's Turf");
+    expect(meta.title).toBe("About Us");
   });
 
   it("sets the canonical URL from SITE_URL + path", () => {
@@ -162,9 +162,11 @@ describe("generateBlogMetadata", () => {
     description: "A guide to cleaning turf properly.",
   };
 
-  it("formats the title as '{title} | Murphy's Turf Blog'", () => {
+  it("formats the title as an absolute '{title} | Murphy's Turf Blog'", () => {
     const meta = generateBlogMetadata(post);
-    expect(meta.title).toBe("How to Clean Turf | Murphy's Turf Blog");
+    expect(meta.title).toEqual({
+      absolute: "How to Clean Turf | Murphy's Turf Blog",
+    });
   });
 
   it("sets the canonical URL to /blog/{slug}", () => {

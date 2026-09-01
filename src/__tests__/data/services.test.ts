@@ -3,8 +3,8 @@ import { SERVICE_SLUGS } from '@/lib/seo/constants';
 
 describe('services data', () => {
   describe('collection integrity', () => {
-    it('exports exactly 5 services', () => {
-      expect(services).toHaveLength(5);
+    it('exports exactly 4 services', () => {
+      expect(services).toHaveLength(4);
     });
 
     it('has all unique slugs', () => {

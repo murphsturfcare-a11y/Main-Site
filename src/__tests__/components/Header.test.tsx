@@ -18,9 +18,9 @@ describe('Header', () => {
     expect(homeLinks[0]).toHaveAttribute('href', '/');
   });
 
-  it('renders desktop navigation links (Home, About, Services, Locations, Contact, Blog)', () => {
+  it('renders desktop navigation links (Home, Services, Commercial, Locations, Blog)', () => {
     render(<Header />);
-    const navLabels = ['Home', 'About', 'Services', 'Locations', 'Contact', 'Blog'];
+    const navLabels = ['Home', 'Services', 'Commercial', 'Locations', 'Blog'];
     for (const label of navLabels) {
       const links = screen.getAllByText(label);
       expect(links.length).toBeGreaterThanOrEqual(1);
@@ -31,7 +31,7 @@ describe('Header', () => {
     render(<Header />);
     const ctaLinks = screen.getAllByText('Get Free Quote');
     expect(ctaLinks.length).toBeGreaterThanOrEqual(1);
-    expect(ctaLinks[0]).toHaveAttribute('href', '/contact');
+    expect(ctaLinks[0]).toHaveAttribute('href', '/locations');
   });
 
   it('renders mobile menu toggle button with aria-label "Open menu"', () => {

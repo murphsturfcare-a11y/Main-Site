@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import { describe, it, expect, vi } from 'vitest';
 
 vi.mock('next/link', () => ({
@@ -8,16 +8,32 @@ vi.mock('next/link', () => ({
 import MobileStickyQuote from '@/components/ui/MobileStickyQuote';
 
 describe('MobileStickyQuote', () => {
-  it('renders Call Now link with correct tel: href', () => {
+  it('clicking Call Now opens a picker with tel: links for each location', () => {
     render(<MobileStickyQuote />);
-    const callLink = screen.getByRole('link', { name: /call now/i });
-    expect(callLink).toHaveAttribute('href', 'tel:9513313300');
+    fireEvent.click(screen.getByRole('button', { name: /call now/i }));
+
+    expect(screen.getByText('Call Your Local Office')).toBeInTheDocument();
+    const telLinks = screen
+      .getAllByRole('link')
+      .filter((link) => link.getAttribute('href')?.startsWith('tel:'));
+    expect(telLinks).toHaveLength(4);
+    const hrefs = telLinks.map((link) => link.getAttribute('href'));
+    expect(hrefs).toContain('tel:9513313300');
+    expect(hrefs).toContain('tel:9253380048');
+    expect(hrefs).toContain('tel:9164325033');
   });
 
-  it('renders Get Free Quote link with href /contact', () => {
+  it('clicking Get Free Quote opens a picker linking to each location quote form', () => {
     render(<MobileStickyQuote />);
-    const quoteLink = screen.getByRole('link', { name: /get free quote/i });
-    expect(quoteLink).toHaveAttribute('href', '/contact');
+    fireEvent.click(screen.getByRole('button', { name: /get free quote/i }));
+
+    expect(screen.getByText('Select Your Area')).toBeInTheDocument();
+    for (const slug of ['huntington-beach', 'murrieta', 'martinez', 'sacramento']) {
+      const links = screen
+        .getAllByRole('link')
+        .filter((link) => link.getAttribute('href') === `/locations/${slug}#quote-form`);
+      expect(links).toHaveLength(1);
+    }
   });
 
   it('has fixed positioning classes', () => {

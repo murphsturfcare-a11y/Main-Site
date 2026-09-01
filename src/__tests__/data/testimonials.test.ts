@@ -2,16 +2,16 @@ import { testimonials } from '@/data/testimonials';
 import { services } from '@/data/services';
 import { locations } from '@/data/locations';
 
+// reviewText is intentionally excluded: rating-only reviews have an empty string.
 const REQUIRED_STRING_FIELDS = [
   'customerName',
   'customerLocation',
-  'reviewText',
   'serviceType',
 ] as const;
 
 describe('testimonials data', () => {
-  it('contains exactly 10 testimonials', () => {
-    expect(testimonials).toHaveLength(10);
+  it('contains exactly 18 testimonials', () => {
+    expect(testimonials).toHaveLength(18);
   });
 
   it('each testimonial has all required fields with non-empty string values', () => {
@@ -21,6 +21,7 @@ describe('testimonials data', () => {
         expect(typeof testimonial[field]).toBe('string');
         expect(testimonial[field].trim()).not.toBe('');
       }
+      expect(typeof testimonial.reviewText).toBe('string');
       expect(testimonial.rating).toBeDefined();
       expect(typeof testimonial.rating).toBe('number');
     }
@@ -53,7 +54,7 @@ describe('testimonials data', () => {
     }
   });
 
-  it('no string field contains an empty string', () => {
+  it('no required string field contains an empty string', () => {
     for (const testimonial of testimonials) {
       for (const field of REQUIRED_STRING_FIELDS) {
         expect(testimonial[field]).not.toBe('');

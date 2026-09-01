@@ -20,7 +20,7 @@ describe('Hero', () => {
 
   it('renders hero image', () => {
     render(<Hero />);
-    const img = screen.getByAlt('Beautiful clean artificial turf');
+    const img = screen.getByAltText('Beautiful clean artificial turf');
     expect(img).toBeInTheDocument();
     expect(img).toHaveAttribute('src', '/images/hero.jpg');
   });

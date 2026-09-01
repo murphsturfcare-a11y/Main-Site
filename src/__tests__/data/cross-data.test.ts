@@ -68,6 +68,9 @@ describe('cross-data validation', () => {
       expect(servicesGroup).toBeDefined();
 
       for (const link of servicesGroup!.links) {
+        // The commercial hub lives at /commercial-turf-cleaning, outside /services/
+        if (link.href === '/commercial-turf-cleaning') continue;
+
         const match = link.href.match(/^\/services\/(.+)$/);
         expect(match, `Service link "${link.href}" does not match /services/[slug] pattern`).not.toBeNull();
 

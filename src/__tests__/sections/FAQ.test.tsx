@@ -7,7 +7,7 @@ const defaultQuestions = [
   'How much does artificial turf cleaning cost?',
   'How often should I have my turf cleaned?',
   'Do you offer free estimates?',
-  'Is your cleaning solution safe for pets and children?',
+  'Are your cleaning products safe for pets and children?',
   'What areas do you serve?',
   "What if I'm not satisfied with the service?",
 ];

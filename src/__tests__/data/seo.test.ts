@@ -2,7 +2,7 @@ import { seoMetadata } from '@/data/seo';
 import { SERVICE_SLUGS, LOCATION_SLUGS } from '@/lib/seo/constants';
 
 describe('seo metadata', () => {
-  const staticPages = ['home', 'about', 'contact', 'services', 'locations', 'blog', 'privacy', 'terms'];
+  const staticPages = ['home', 'contact', 'services', 'locations', 'blog', 'privacy', 'terms'];
 
   describe('page coverage', () => {
     it('has entries for all static pages', () => {
@@ -27,11 +27,7 @@ describe('seo metadata', () => {
   });
 
   describe('field integrity', () => {
-    const allKeys = [
-      ...staticPages,
-      ...SERVICE_SLUGS.map((s) => `services/${s}`),
-      ...LOCATION_SLUGS.map((l) => `locations/${l}`),
-    ];
+    const allKeys = Object.keys(seoMetadata);
 
     it('every entry has a non-empty title', () => {
       for (const key of allKeys) {
