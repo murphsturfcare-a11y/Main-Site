@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import { describe, it, expect, vi } from 'vitest';
 
 vi.mock('next/link', () => ({
@@ -8,16 +8,30 @@ vi.mock('next/link', () => ({
 import MobileStickyQuote from '@/components/ui/MobileStickyQuote';
 
 describe('MobileStickyQuote', () => {
-  it('renders Call Now link with correct tel: href', () => {
+  it('Call Now opens a picker with a tel: link for each location', () => {
     render(<MobileStickyQuote />);
-    const callLink = screen.getByRole('link', { name: /call now/i });
-    expect(callLink).toHaveAttribute('href', 'tel:9513313300');
+    fireEvent.click(screen.getByRole('button', { name: /call now/i }));
+
+    const hrefs = screen.getAllByRole('link').map((l) => l.getAttribute('href'));
+    expect(hrefs).toEqual([
+      'tel:9513313300',
+      'tel:9513313300',
+      'tel:9253380048',
+      'tel:9164325033',
+    ]);
   });
 
-  it('renders Get Free Quote link with href /contact', () => {
+  it('Get Free Quote opens a picker linking to each location quote form', () => {
     render(<MobileStickyQuote />);
-    const quoteLink = screen.getByRole('link', { name: /get free quote/i });
-    expect(quoteLink).toHaveAttribute('href', '/contact');
+    fireEvent.click(screen.getByRole('button', { name: /get free quote/i }));
+
+    const hrefs = screen.getAllByRole('link').map((l) => l.getAttribute('href'));
+    expect(hrefs).toEqual([
+      '/locations/huntington-beach#quote-form',
+      '/locations/murrieta#quote-form',
+      '/locations/martinez#quote-form',
+      '/locations/sacramento#quote-form',
+    ]);
   });
 
   it('has fixed positioning classes', () => {

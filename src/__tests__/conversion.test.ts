@@ -28,7 +28,7 @@ describe("conversion tracking module", () => {
         service_type: "turf_cleaning",
         location: "Dublin",
         value: 1,
-        currency: "EUR",
+        currency: "USD",
       });
     });
 
@@ -49,7 +49,7 @@ describe("conversion tracking module", () => {
         service_type: "turf_cleaning",
         location: "",
         value: 1,
-        currency: "EUR",
+        currency: "USD",
       });
 
       expect(window.dataLayer).toContainEqual({
@@ -66,7 +66,7 @@ describe("conversion tracking module", () => {
 
       expect(gtag.event).toHaveBeenCalledWith("contact_form_submission", {
         value: 1,
-        currency: "EUR",
+        currency: "USD",
       });
     });
 
@@ -85,7 +85,7 @@ describe("conversion tracking module", () => {
 
       expect(gtag.event).toHaveBeenCalledWith("newsletter_signup", {
         value: 0.5,
-        currency: "EUR",
+        currency: "USD",
       });
     });
 
@@ -105,7 +105,7 @@ describe("conversion tracking module", () => {
       expect(gtag.event).toHaveBeenCalledWith("quote_request", {
         service_type: "turf_cleaning",
         value: 5,
-        currency: "EUR",
+        currency: "USD",
       });
     });
 

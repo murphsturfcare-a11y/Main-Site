@@ -67,7 +67,13 @@ describe('cross-data validation', () => {
       const servicesGroup = footerNav.find((group) => group.title === 'Services');
       expect(servicesGroup).toBeDefined();
 
-      for (const link of servicesGroup!.links) {
+      // The commercial hub lives at /commercial-turf-cleaning, not under /services/
+      const serviceLinks = servicesGroup!.links.filter(
+        (link) => link.href !== '/commercial-turf-cleaning',
+      );
+      expect(serviceLinks.length).toBeGreaterThan(0);
+
+      for (const link of serviceLinks) {
         const match = link.href.match(/^\/services\/(.+)$/);
         expect(match, `Service link "${link.href}" does not match /services/[slug] pattern`).not.toBeNull();
 

@@ -448,8 +448,9 @@ describe("ServiceType enum values don't match seed services", () => {
     );
     expect(leadsTable).not.toBeNull();
     expect(leadsTable![1]).toContain('service_type    text');
-    // There is a CHECK on status, but NOT on service_type
-    expect(leadsTable![1]).not.toMatch(/service_type.*CHECK/s);
+    // There is a CHECK on status, but NOT on service_type (checked per-line so
+    // the later status CHECK lines don't produce a false match)
+    expect(leadsTable![1]).not.toMatch(/service_type[^\n]*CHECK/);
   });
 
   it('should have zero overlap between TS ServiceType values and seed service types', () => {

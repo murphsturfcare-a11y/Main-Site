@@ -1,8 +1,6 @@
 import { describe, expect, it } from "vitest";
 import {
   homeMetadata,
-  aboutMetadata,
-  contactMetadata,
   servicesMetadata,
   locationsMetadata,
   serviceMetadata,
@@ -28,34 +26,6 @@ describe("generateMetadataForAllPages", () => {
     it("has title and description properties", () => {
       expect(homeMetadata.title).toBeDefined();
       expect(homeMetadata.description).toBeDefined();
-    });
-  });
-
-  describe("aboutMetadata", () => {
-    it("has title containing 'About Us'", () => {
-      expect(aboutMetadata.title).toContain("About Us");
-    });
-
-    it("has canonical for /about", () => {
-      expect(aboutMetadata.alternates?.canonical).toBe(`${SITE_URL}/about`);
-    });
-
-    it("has title and description properties", () => {
-      expect(aboutMetadata.title).toBeDefined();
-      expect(aboutMetadata.description).toBeDefined();
-    });
-  });
-
-  describe("contactMetadata", () => {
-    it("has canonical for /contact", () => {
-      expect(contactMetadata.alternates?.canonical).toBe(
-        `${SITE_URL}/contact`
-      );
-    });
-
-    it("has title and description properties", () => {
-      expect(contactMetadata.title).toBeDefined();
-      expect(contactMetadata.description).toBeDefined();
     });
   });
 

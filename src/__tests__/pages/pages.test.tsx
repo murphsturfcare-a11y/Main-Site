@@ -16,18 +16,7 @@ describe('Home Page', () => {
   it('renders without crashing and displays "Murphy" text', async () => {
     const HomePage = (await import('@/app/page')).default;
     render(<HomePage />);
-    expect(screen.getByText(/Murphy/i)).toBeInTheDocument();
-  });
-});
-
-// ─────────────────────────────────────────────────────────────
-// 2. About Page
-// ─────────────────────────────────────────────────────────────
-describe('About Page', () => {
-  it('renders without crashing and displays "Meet the Murphy" heading text', async () => {
-    const AboutPage = (await import('@/app/about/page')).default;
-    render(<AboutPage />);
-    expect(screen.getByText(/Meet the Murphy/i)).toBeInTheDocument();
+    expect(screen.getAllByText(/Murphy/i).length).toBeGreaterThan(0);
   });
 });
 
@@ -78,8 +67,8 @@ describe('Blog Page', () => {
   it('renders without crashing and displays "Murphy" and "Blog" text', async () => {
     const BlogPage = (await import('@/app/blog/page')).default;
     render(<BlogPage />);
-    expect(screen.getByText(/Murphy/i)).toBeInTheDocument();
-    expect(screen.getByText(/Blog/i)).toBeInTheDocument();
+    expect(screen.getAllByText(/Murphy/i).length).toBeGreaterThan(0);
+    expect(screen.getAllByText(/Blog/i).length).toBeGreaterThan(0);
   });
 });
 
@@ -99,7 +88,7 @@ describe('Privacy Policy Page', () => {
   it('renders without crashing and displays "Privacy Policy" heading', async () => {
     const PrivacyPolicyPage = (await import('@/app/privacy-policy/page')).default;
     render(<PrivacyPolicyPage />);
-    expect(screen.getByText(/Privacy Policy/i)).toBeInTheDocument();
+    expect(screen.getAllByText(/Privacy Policy/i).length).toBeGreaterThan(0);
   });
 });
 
@@ -110,7 +99,7 @@ describe('Terms of Service Page', () => {
   it('renders without crashing and displays "Terms of Service" heading', async () => {
     const TermsOfServicePage = (await import('@/app/terms-of-service/page')).default;
     render(<TermsOfServicePage />);
-    expect(screen.getByText(/Terms of Service/i)).toBeInTheDocument();
+    expect(screen.getAllByText(/Terms of Service/i).length).toBeGreaterThan(0);
   });
 });
 

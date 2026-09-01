@@ -93,6 +93,6 @@ describe('Footer', () => {
     render(<Footer />);
     const logo = screen.getByAltText("Murphy's Turf");
     expect(logo).toBeInTheDocument();
-    expect(logo).toHaveAttribute('src', '/images/logo.png');
+    expect(logo).toHaveAttribute('src', '/images/logo.avif');
   });
 });

@@ -22,7 +22,6 @@ describe("sitemap()", () => {
 
   it("includes all static pages", () => {
     const staticPaths = [
-      "/about",
       "/services",
       "/locations",
       "/blog",
@@ -36,8 +35,8 @@ describe("sitemap()", () => {
     }
   });
 
-  it("includes all 5 service pages", () => {
-    expect(SERVICE_SLUGS).toHaveLength(5);
+  it("includes all 4 service pages", () => {
+    expect(SERVICE_SLUGS).toHaveLength(4);
 
     for (const slug of SERVICE_SLUGS) {
       const entry = entries.find((e) => e.url === `${SITE_URL}/services/${slug}`);

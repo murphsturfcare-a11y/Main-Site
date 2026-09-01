@@ -10,8 +10,8 @@ const REQUIRED_STRING_FIELDS = [
 ] as const;
 
 describe('testimonials data', () => {
-  it('contains exactly 10 testimonials', () => {
-    expect(testimonials).toHaveLength(10);
+  it('contains exactly 17 testimonials', () => {
+    expect(testimonials).toHaveLength(17);
   });
 
   it('each testimonial has all required fields with non-empty string values', () => {

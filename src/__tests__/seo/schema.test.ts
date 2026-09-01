@@ -145,7 +145,7 @@ describe("generateLocalBusinessSchema", () => {
 
   it("includes image URL", () => {
     const schema = generateLocalBusinessSchema();
-    expect(schema.image).toBe(`${SITE_URL}/images/og-default.jpg`);
+    expect(schema.image).toBe(`${SITE_URL}/images/og-image.png`);
   });
 
   it("includes 3 social links in sameAs", () => {
@@ -508,7 +508,7 @@ describe("generateBlogPostSchema", () => {
 
   it("uses default image when no image is provided", () => {
     const schema = generateBlogPostSchema(basePost);
-    expect(schema.image).toBe(`${SITE_URL}/images/og-default.jpg`);
+    expect(schema.image).toBe(`${SITE_URL}/images/og-image.png`);
   });
 
   it("prepends SITE_URL to relative image paths", () => {

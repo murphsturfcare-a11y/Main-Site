@@ -65,13 +65,6 @@ export const testimonials: Testimonial[] = [
     serviceType: 'pet-hair-debris',
   },
   {
-    customerName: 'Marco Taylor',
-    customerLocation: 'Murrieta',
-    rating: 5,
-    reviewText: "",
-    serviceType: 'disinfect-deodorize',
-  },
-  {
     customerName: 'Sharon Dillon',
     customerLocation: 'Murrieta',
     rating: 5,
