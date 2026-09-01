@@ -27,7 +27,7 @@ Because the valley heat accelerates buildup, many Roseville associations schedul
 
 ## A Vendor Checklist for Roseville Boards
 
-Confirm the vendor is licensed and insured, will name the association on a certificate of insurance, uses pet-safe products, and bills on a clear recurring schedule. Murphy's Turf provides [commercial and HOA turf cleaning in Roseville](https://murphysturf.com/commercial-turf-cleaning/sacramento/commercial-turf-cleaning-in-roseville) and across [Greater Sacramento](https://murphysturf.com/commercial-turf-cleaning/sacramento). Call 916-432-5033 or [request a commercial quote](https://murphysturf.com/commercial-turf-cleaning).
+Confirm the vendor is insured and will name the association on a certificate of insurance, uses pet-safe products, and bills on a clear recurring schedule. Murphy's Turf provides [commercial and HOA turf cleaning in Roseville](https://murphysturf.com/commercial-turf-cleaning/sacramento/commercial-turf-cleaning-in-roseville) and across [Greater Sacramento](https://murphysturf.com/commercial-turf-cleaning/sacramento). Call 916-432-5033 or [request a commercial quote](https://murphysturf.com/commercial-turf-cleaning).
 
 ---
 

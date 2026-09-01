@@ -27,7 +27,7 @@ Because Temecula's heat accelerates buildup, many associations schedule more fre
 
 ## A Vendor Checklist for Temecula Boards
 
-Confirm the vendor is licensed and insured, will name the association on a certificate of insurance, uses pet-safe products, and offers a clear recurring schedule. As the local Murrieta-based team, Murphy's Turf provides [commercial and HOA turf cleaning in Temecula](https://murphysturf.com/commercial-turf-cleaning/murrieta/commercial-turf-cleaning-in-temecula) and across [the Inland Empire](https://murphysturf.com/commercial-turf-cleaning/murrieta). Call 951-331-3300 or [request a commercial quote](https://murphysturf.com/commercial-turf-cleaning).
+Confirm the vendor is insured and will name the association on a certificate of insurance, uses pet-safe products, and offers a clear recurring schedule. As the local Murrieta-based team, Murphy's Turf provides [commercial and HOA turf cleaning in Temecula](https://murphysturf.com/commercial-turf-cleaning/murrieta/commercial-turf-cleaning-in-temecula) and across [the Inland Empire](https://murphysturf.com/commercial-turf-cleaning/murrieta). Call 951-331-3300 or [request a commercial quote](https://murphysturf.com/commercial-turf-cleaning).
 
 ---
 

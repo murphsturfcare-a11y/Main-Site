@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: 'Privacy Policy',
   description:
     "Murphy's Turf privacy policy. Learn how we collect, use, and protect your personal information when you use our artificial turf cleaning services.",
+  alternates: {
+    canonical: '/privacy-policy',
+  },
 };
 
 const sections = [

@@ -262,7 +262,7 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {services.map((service) => (
+            {services.map((service, index) => (
               <Link
                 key={service.slug}
                 href={`/services/${service.slug}`}
@@ -273,6 +273,8 @@ export default function Home() {
                     src={service.image}
                     alt={service.name}
                     fill
+                    loading={index === 0 ? 'eager' : undefined}
+                    fetchPriority={index === 0 ? 'high' : undefined}
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import BlogContent from './BlogContent';
 import { AnimateOnScroll } from '@/components/ui/AnimateOnScroll';
 
@@ -6,6 +7,9 @@ export const metadata: Metadata = {
   title: 'Blog',
   description:
     "Expert artificial turf cleaning tips, pet care guides, and maintenance insights for California homeowners. Learn from Murphy's Turf professionals how to keep your synthetic turf clean, safe, and looking like new.",
+  alternates: {
+    canonical: '/blog',
+  },
   openGraph: {
     title: "Blog | Murphy's Turf",
     description:
@@ -494,6 +498,42 @@ export default function BlogPage() {
         categoryColors={categoryColors}
         categoryCounts={categoryCounts}
       />
+
+      {/* ----------------- FULL ARTICLE INDEX ----------------- */}
+      {/* Server-rendered directory so every post is reachable by a real link
+          (the grid above paginates client-side and only exposes page one). */}
+      <section className="bg-cream border-t border-gray-200 py-14 sm:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="font-heading font-bold text-2xl sm:text-3xl text-charcoal">
+            All Articles
+          </h2>
+          <div className="mt-8 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
+            {categories
+              .filter((category) => category !== 'All')
+              .map((category) => (
+                <div key={category}>
+                  <h3 className="font-heading text-sm font-semibold uppercase tracking-widest text-sage-dark">
+                    {category}
+                  </h3>
+                  <ul className="mt-4 space-y-2.5">
+                    {blogPosts
+                      .filter((post) => post.category === category)
+                      .map((post) => (
+                        <li key={post.slug}>
+                          <Link
+                            href={`/blog/${post.slug}`}
+                            className="font-body text-sm leading-snug text-charcoal-light transition-colors hover:text-forest"
+                          >
+                            {post.title}
+                          </Link>
+                        </li>
+                      ))}
+                  </ul>
+                </div>
+              ))}
+          </div>
+        </div>
+      </section>
     </>
   );
 }

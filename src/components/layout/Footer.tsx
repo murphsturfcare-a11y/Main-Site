@@ -146,6 +146,20 @@ export default function Footer() {
           <p className="font-body text-sm text-gray-400">
             &copy; {new Date().getFullYear()} Murphy&apos;s Turf. All rights reserved.
             {' '}&middot;{' '}
+            <Link
+              href="/privacy-policy"
+              className="text-gray-400 transition-colors hover:text-sage"
+            >
+              Privacy Policy
+            </Link>
+            {' '}&middot;{' '}
+            <Link
+              href="/terms-of-service"
+              className="text-gray-400 transition-colors hover:text-sage"
+            >
+              Terms of Service
+            </Link>
+            {' '}&middot;{' '}
             <a
               href="https://tothemaxmedia.com"
               rel="noopener"

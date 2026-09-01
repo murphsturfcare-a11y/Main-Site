@@ -27,7 +27,7 @@ Turf cleaning is a predictable operating expense, which makes it easy to fold in
 
 ## A Vendor Checklist for Newport Beach Boards
 
-Choose a vendor that is licensed and insured, provides certificates of insurance naming the association, uses pet-safe products, and bills on a clear recurring schedule. Murphy's Turf provides [commercial and HOA turf cleaning in Newport Beach](https://murphysturf.com/commercial-turf-cleaning/huntington-beach/commercial-turf-cleaning-in-newport-beach) and across [Orange County and the LA area](https://murphysturf.com/commercial-turf-cleaning/huntington-beach). Call 951-331-3300 or [request a commercial quote](https://murphysturf.com/commercial-turf-cleaning).
+Choose a vendor that provides certificates of insurance naming the association, uses pet-safe products, and bills on a clear recurring schedule. Murphy's Turf provides [commercial and HOA turf cleaning in Newport Beach](https://murphysturf.com/commercial-turf-cleaning/huntington-beach/commercial-turf-cleaning-in-newport-beach) and across [Orange County and the LA area](https://murphysturf.com/commercial-turf-cleaning/huntington-beach). Call 951-331-3300 or [request a commercial quote](https://murphysturf.com/commercial-turf-cleaning).
 
 ---
 

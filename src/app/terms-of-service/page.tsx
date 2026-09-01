@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: 'Terms of Service',
   description:
     "Murphy's Turf terms of service. Review the terms and conditions governing your use of our artificial turf cleaning services in California.",
+  alternates: {
+    canonical: '/terms-of-service',
+  },
 };
 
 const sections = [

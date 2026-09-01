@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: 'Artificial Turf Cleaning Services',
   description:
     "Professional artificial turf cleaning and maintenance services in Murrieta, CA. Pet hair removal, blooming, disinfecting, deodorizing, and poop scooping. Get a free quote today.",
+  alternates: {
+    canonical: '/services',
+  },
 };
 
 const services = [
@@ -75,7 +78,7 @@ export default function ServicesPage() {
       <section className="py-12 sm:py-20 bg-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <StaggerContainer staggerDelay={0.1} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service) => (
+            {services.map((service, index) => (
               <StaggerItem key={service.slug}>
                 <div
                   className="card-hover group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 hover:border-sage/30 flex flex-col h-full"
@@ -86,6 +89,8 @@ export default function ServicesPage() {
                       src={service.image}
                       alt={service.name}
                       fill
+                      loading={index === 0 ? 'eager' : undefined}
+                      fetchPriority={index === 0 ? 'high' : undefined}
                       className="object-cover transition-transform duration-300 group-hover:scale-105"
                     />
                   </div>

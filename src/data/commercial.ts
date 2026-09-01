@@ -110,7 +110,7 @@ export const commercialOverview = {
     {
       iconName: 'ShieldCheck',
       title: 'Bonded & Insured',
-      description: 'Licensed, bonded, and insured crews your facility and board can sign off on.',
+      description: 'Bonded and insured crews your facility and board can sign off on.',
     },
     {
       iconName: 'PawPrint',

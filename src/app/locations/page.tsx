@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: 'Service Locations | Artificial Turf Cleaning Across California',
   description:
     "Murphy's Turf provides professional artificial turf cleaning and disinfecting services across California. Serving Huntington Beach, Murrieta, Martinez, and Sacramento.",
+  alternates: {
+    canonical: '/locations',
+  },
 };
 
 const locations = [
