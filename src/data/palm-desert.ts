@@ -1,3 +1,5 @@
+import { locations } from './locations';
+
 // Geographic references used to check neighborhood names and context. These
 // establish places, not customer relationships or a business office.
 export const palmDesertGeographicSources = [
@@ -31,10 +33,10 @@ export interface PalmDesertArea {
   commercial: DesertPageContent;
 }
 
-// Dedicated Palm Desert inquiry line confirmed by the business (2026-09-13).
-// Keep in sync with the palm-desert entry in locations.ts. Do not infer a new office address.
-export const PALM_DESERT_PHONE = '925-588-6546';
 export const PALM_DESERT_REGION_SLUG = 'palm-desert';
+// Dedicated Palm Desert inquiry line confirmed by the business (2026-09-13). Read from
+// the region data so pages, call picker and schema share one source. Do not infer a new office address.
+export const PALM_DESERT_PHONE = locations.find((location) => location.slug === PALM_DESERT_REGION_SLUG)?.phone ?? '';
 
 export const palmDesertAreas: PalmDesertArea[] = [
   {
