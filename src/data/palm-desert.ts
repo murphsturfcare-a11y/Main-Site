@@ -31,9 +31,9 @@ export interface PalmDesertArea {
   commercial: DesertPageContent;
 }
 
-// Use the established Southern California inquiry line until a dedicated
-// Palm Desert routing number is supplied. Do not infer a new office address.
-export const PALM_DESERT_PHONE = '951-331-3300';
+// Dedicated Palm Desert inquiry line confirmed by the business (2026-09-13).
+// Keep in sync with the palm-desert entry in locations.ts. Do not infer a new office address.
+export const PALM_DESERT_PHONE = '925-588-6546';
 export const PALM_DESERT_REGION_SLUG = 'palm-desert';
 
 export const palmDesertAreas: PalmDesertArea[] = [

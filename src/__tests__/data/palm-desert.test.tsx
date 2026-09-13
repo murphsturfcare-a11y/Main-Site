@@ -49,7 +49,8 @@ describe.each(palmDesertAreas.map((area) => [area.name, area] as const))('%s ser
     expect(doc.querySelector('h1')?.textContent).toContain(area.name);
     expect(faq.mainEntity.map((question: { name: string }) => question.name)).toEqual(Array.from(doc.querySelectorAll('summary')).map((summary) => summary.textContent));
     for (const question of faq.mainEntity) expect(doc.body.textContent).toContain(question.acceptedAnswer.text);
-    expect(doc.querySelector('a[href="tel:951-331-3300"]')).not.toBeNull();
+    expect(doc.querySelector('a[href="tel:925-588-6546"]')).not.toBeNull();
+    expect(doc.querySelector('a[href^="tel:"][href*="331"]')).toBeNull();
     expect(palmDesertPageMetadata(area, commercial).path).toBe(palmDesertPath(area, commercial));
     const ids = Array.from(doc.querySelectorAll('[id]')).map((element) => element.id);
     expect(new Set(ids).size).toBe(ids.length);

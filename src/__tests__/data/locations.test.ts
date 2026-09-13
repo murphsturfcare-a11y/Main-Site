@@ -19,7 +19,7 @@ const EXPECTED_PHONES: Record<string, string> = {
   murrieta: '951-331-3300',
   martinez: '925-338-0048',
   sacramento: '916-432-5033',
-  'palm-desert': '951-331-3300',
+  'palm-desert': '925-588-6546',
 };
 
 describe('locations data', () => {

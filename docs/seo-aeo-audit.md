@@ -10,7 +10,7 @@ The expansion adds **12 service pages and four original guides**: a Palm Desert 
 
 The supplied map was treated as geographic context. Coverage centers on **Palm Desert, Indian Wells, Bermuda Dunes, La Quinta, Indio, and Coachella**, with **Sun City Palm Desert / Desert Palms** covered within the hub. Named neighborhoods appear within the relevant city page, with coverage confirmation for addresses near the approximate outer boundary. This does not expand coverage to all of the Coachella Valley. Geographic references are recorded in [the location data](../src/data/palm-desert.ts).
 
-**Phone assumption:** the new area uses the existing Southern California number **951-331-3300**. No dedicated Palm Desert number was supplied during implementation. Quote forms submit the existing `palm-desert` region tag with the selected city. Source inspection shows the current lead function can accept that tag; live CRM delivery was not exercised.
+**Phone:** the area launched on the shared Southern California number 951-331-3300; on September 13, 2026 the business confirmed the dedicated Palm Desert number **925-588-6546**, which now appears on all Palm Desert pages, the regional call picker and service schema. Quote forms submit the `location-palm-desert` region tag with the selected city. A labeled live test lead on September 13 confirmed CRM contact creation, both tags, custom fields and the campaign note; workflow notification delivery was not independently verified.
 
 ## Audit results and repairs
 

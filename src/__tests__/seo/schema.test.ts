@@ -188,7 +188,7 @@ describe("generateServiceSchema", () => {
 });
 
 describe("generateLocationSchema", () => {
-  const location = { name: "Palm Desert", slug: "palm-desert", description: "Desert turf cleaning.", phone: "951-331-3300" };
+  const location = { name: "Palm Desert", slug: "palm-desert", description: "Desert turf cleaning.", phone: "925-588-6546" };
 
   it("describes a service area rather than an unverified local branch", () => {
     const schema = generateLocationSchema(location);

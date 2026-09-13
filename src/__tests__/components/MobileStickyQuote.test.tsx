@@ -20,6 +20,7 @@ describe('MobileStickyQuote', () => {
     expect(hrefs).toContain('tel:9513313300');
     expect(hrefs).toContain('tel:9253380048');
     expect(hrefs).toContain('tel:9164325033');
+    expect(hrefs).toContain('tel:9255886546');
   });
 
   it('clicking Get Free Quote opens a picker linking to each location quote form', () => {

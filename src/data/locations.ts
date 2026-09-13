@@ -127,7 +127,7 @@ export const locations: Location[] = [
       "Indio",
       "Coachella"
     ],
-    "phone": "951-331-3300",
+    "phone": "925-588-6546",
     "address": "Palm Desert, CA service area",
     "metaTitle": "Artificial Turf Cleaning in Palm Desert, CA | Murphy's Turf",
     "metaDescription": "Turf cleaning in Palm Desert, Indian Wells, Bermuda Dunes, La Quinta, Indio & Coachella. Pet odor, debris removal and turf care. Request a free quote."
