@@ -6,8 +6,8 @@ describe('company data', () => {
       expect(company.name).toBe("Murphy's Turf");
     });
 
-    it('company.email is "info@murphysturf.com"', () => {
-      expect(company.email).toBe('info@murphysturf.com');
+    it('company.email is "murphsturfcare@gmail.com"', () => {
+      expect(company.email).toBe('murphsturfcare@gmail.com');
     });
 
     it('omits an unverified founding date', () => {

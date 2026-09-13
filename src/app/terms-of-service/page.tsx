@@ -525,10 +525,10 @@ export default function TermsOfServicePage() {
                   local office number
                 </Link>) or by email at{' '}
                 <a
-                  href="mailto:info@murphysturfcare.com"
+                  href="mailto:murphsturfcare@gmail.com"
                   className="text-forest hover:text-forest-dark underline underline-offset-2 transition-colors"
                 >
-                  info@murphysturfcare.com
+                  murphsturfcare@gmail.com
                 </a>{' '}
                 to discuss your concern. Many issues can be resolved quickly through open and honest
                 communication. We aim to respond to all complaints within two (2) business days.
@@ -605,10 +605,10 @@ export default function TermsOfServicePage() {
                   <p>
                     <strong>Email:</strong>{' '}
                     <a
-                      href="mailto:info@murphysturfcare.com"
+                      href="mailto:murphsturfcare@gmail.com"
                       className="text-forest hover:text-forest-dark underline underline-offset-2 transition-colors"
                     >
-                      info@murphysturfcare.com
+                      murphsturfcare@gmail.com
                     </a>
                   </p>
                   <p>

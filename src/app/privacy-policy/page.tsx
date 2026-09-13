@@ -394,10 +394,10 @@ export default function PrivacyPolicyPage() {
                 If you are a parent or guardian and believe your child has provided us with personal
                 information without your consent, please contact us at{' '}
                 <a
-                  href="mailto:info@murphysturfcare.com"
+                  href="mailto:murphsturfcare@gmail.com"
                   className="text-forest hover:text-forest-dark underline underline-offset-2 transition-colors"
                 >
-                  info@murphysturfcare.com
+                  murphsturfcare@gmail.com
                 </a>{' '}
                 so that we can take appropriate action.
               </p>
@@ -441,10 +441,10 @@ export default function PrivacyPolicyPage() {
                   <p>
                     <strong>Email:</strong>{' '}
                     <a
-                      href="mailto:info@murphysturfcare.com"
+                      href="mailto:murphsturfcare@gmail.com"
                       className="text-forest hover:text-forest-dark underline underline-offset-2 transition-colors"
                     >
-                      info@murphysturfcare.com
+                      murphsturfcare@gmail.com
                     </a>
                   </p>
                   <p>

@@ -186,7 +186,7 @@ export interface CommercialRegion {
   subLocations: CommercialSubLocation[];
 }
 
-const EMAIL = 'info@murphysturf.com';
+const EMAIL = 'murphsturfcare@gmail.com';
 
 export const commercialRegions: CommercialRegion[] = locations.map((loc) => {
   const meta = regionMeta[loc.slug];

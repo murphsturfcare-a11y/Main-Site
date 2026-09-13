@@ -83,7 +83,7 @@ describe("generateLocalBusinessSchema", () => {
     expect(schema.name).toBe(COMPANY_NAME);
     expect(schema.description).toBeTruthy();
     expect(schema.url).toBe(SITE_URL);
-    expect(schema.email).toBe("info@murphysturf.com");
+    expect(schema.email).toBe("murphsturfcare@gmail.com");
   });
 
   it("uses the supported business identity without a deprecated service type", () => {
