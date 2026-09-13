@@ -1,4 +1,5 @@
 import sitemap from "@/app/sitemap";
+import { locations } from '@/data/locations';
 import { SITE_URL } from "@/lib/seo/constants";
 import {
   generateCommercialMetadata,
@@ -15,8 +16,8 @@ import {
 } from "@/data/commercial";
 
 describe("commercial data layer", () => {
-  it("derives 4 regions from locations", () => {
-    expect(commercialRegions).toHaveLength(4);
+  it("derives every service region from locations", () => {
+    expect(commercialRegions.map((region) => region.slug)).toEqual(locations.map((location) => location.slug));
     for (const region of commercialRegions) {
       expect(region.slug).toBeTruthy();
       expect(region.region).toBeTruthy();
@@ -119,7 +120,7 @@ describe("commercial sitemap entries", () => {
     expect(hub).toBeDefined();
   });
 
-  it("includes all 4 commercial region pages", () => {
+  it("includes all commercial region pages", () => {
     for (const region of commercialRegions) {
       const entry = entries.find(
         (e) => e.url === `${SITE_URL}/commercial-turf-cleaning/${region.slug}`,

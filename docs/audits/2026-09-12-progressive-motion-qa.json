@@ -1,0 +1,109 @@
+{
+  "checkedAt": "2026-09-13T00:41:28.279Z",
+  "environment": "Local production export; Chromium",
+  "checks": [
+    {
+      "mode": "no JavaScript",
+      "route": "/locations",
+      "targets": [
+        {
+          "tag": "HEADER",
+          "hiddenAncestors": []
+        },
+        {
+          "tag": "H1",
+          "hiddenAncestors": []
+        },
+        {
+          "tag": "FOOTER",
+          "hiddenAncestors": []
+        }
+      ],
+      "submitButtonsDisabled": []
+    },
+    {
+      "mode": "no JavaScript",
+      "route": "/locations/murrieta",
+      "targets": [
+        {
+          "tag": "HEADER",
+          "hiddenAncestors": []
+        },
+        {
+          "tag": "H1",
+          "hiddenAncestors": []
+        },
+        {
+          "tag": "FORM",
+          "hiddenAncestors": []
+        },
+        {
+          "tag": "FORM",
+          "hiddenAncestors": []
+        },
+        {
+          "tag": "FOOTER",
+          "hiddenAncestors": []
+        }
+      ],
+      "submitButtonsDisabled": [
+        true,
+        true
+      ]
+    },
+    {
+      "mode": "reduced motion",
+      "route": "/locations",
+      "targets": [
+        {
+          "tag": "HEADER",
+          "hiddenAncestors": []
+        },
+        {
+          "tag": "H1",
+          "hiddenAncestors": []
+        },
+        {
+          "tag": "FOOTER",
+          "hiddenAncestors": []
+        }
+      ],
+      "submitButtonsDisabled": []
+    },
+    {
+      "mode": "reduced motion",
+      "route": "/locations/murrieta",
+      "targets": [
+        {
+          "tag": "HEADER",
+          "hiddenAncestors": []
+        },
+        {
+          "tag": "H1",
+          "hiddenAncestors": []
+        },
+        {
+          "tag": "FORM",
+          "hiddenAncestors": []
+        },
+        {
+          "tag": "FORM",
+          "hiddenAncestors": []
+        },
+        {
+          "tag": "FOOTER",
+          "hiddenAncestors": []
+        }
+      ],
+      "submitButtonsDisabled": [
+        false,
+        false
+      ]
+    },
+    {
+      "mode": "optional scroll enhancement",
+      "route": "/locations",
+      "animationsObserved": 2
+    }
+  ]
+}

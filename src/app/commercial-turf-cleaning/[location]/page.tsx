@@ -14,6 +14,9 @@ import {
 } from 'lucide-react';
 import { notFound } from 'next/navigation';
 import LeadForm from '@/components/forms/LeadForm';
+import FAQ from '@/components/sections/FAQ';
+import PalmDesertAreaPage from '@/components/sections/PalmDesertAreaPage';
+import { getPalmDesertArea, palmDesertPageMetadata } from '@/data/palm-desert';
 import { generatePageMetadata } from '@/lib/seo/metadata';
 import { generateBreadcrumbSchema, generateFAQSchema } from '@/lib/seo/schema';
 import { SITE_URL, COMPANY_NAME } from '@/lib/seo/constants';
@@ -43,9 +46,13 @@ export async function generateMetadata({
   const { location } = await params;
   const region = findCommercialRegion(location);
   if (!region) return { title: 'Area Not Found' };
+  if (region.slug === 'palm-desert') {
+    const meta = palmDesertPageMetadata(getPalmDesertArea(region.slug)!, true);
+    return generatePageMetadata(meta.title, meta.description, meta.path);
+  }
 
   const title = `Commercial Artificial Turf Cleaning in ${region.region}`;
-  const description = `Commercial artificial turf cleaning across ${region.region}, CA — dog daycares, HOAs, schools, gyms & hospitality. Recurring, pet-safe, bonded & insured. Call ${region.phone} for a free quote.`;
+  const description = `Commercial artificial turf cleaning across ${region.region}, CA — dog daycares, HOAs, schools, gyms & hospitality. Discuss access, surface care and maintenance. Call ${region.phone} for a free quote.`;
   return generatePageMetadata(title, description, `/commercial-turf-cleaning/${region.slug}`);
 }
 
@@ -57,6 +64,7 @@ export default async function CommercialRegionPage({
   const { location } = await params;
   const region = findCommercialRegion(location);
   if (!region) notFound();
+  if (region.slug === 'palm-desert') return <PalmDesertAreaPage area={getPalmDesertArea(region.slug)!} commercial />;
 
   const pageUrl = `${SITE_URL}/commercial-turf-cleaning/${region.slug}`;
 
@@ -67,7 +75,7 @@ export default async function CommercialRegionPage({
     name: `Commercial Artificial Turf Cleaning in ${region.region}`,
     description: region.commercialIntro,
     url: pageUrl,
-    provider: { '@type': 'LocalBusiness', name: COMPANY_NAME, url: SITE_URL, telephone: region.phone },
+    provider: { '@id': `${SITE_URL}/#localbusiness` },
     areaServed: { '@type': 'City', name: region.city, containedInPlace: { '@type': 'State', name: 'California' } },
   };
 
@@ -128,8 +136,7 @@ export default async function CommercialRegionPage({
             <p>
               {COMPANY_NAME} provides recurring, commercial-grade artificial turf cleaning to
               businesses throughout {region.region}. From dog daycares and HOA common areas to
-              childcare centers, gyms, and hospitality venues, we keep your turf sanitized,
-              presentable, and odor-free.
+              childcare centers, gyms, and hospitality venues, we review the turf condition and agree on the work to include in your quote.
             </p>
             <p>{region.serviceAreaDescription}</p>
           </div>
@@ -194,6 +201,8 @@ export default async function CommercialRegionPage({
         </div>
       </section>
 
+      <FAQ items={commercialOverview.faqs} />
+
       {/* CTA */}
       <section className="py-14 sm:py-20 bg-forest">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -212,7 +221,7 @@ export default async function CommercialRegionPage({
             </a>
             <a
               href="#quote-form"
-              className="inline-flex items-center justify-center gap-2 bg-sage text-white font-bold text-lg px-8 py-4 rounded-xl hover:bg-sage/90 transition-colors font-body shadow-lg"
+              className="inline-flex items-center justify-center gap-2 bg-sage text-forest-dark font-bold text-lg px-8 py-4 rounded-xl hover:bg-sage-light transition-colors font-body shadow-lg"
             >
               Get Free Quote <ArrowRight className="w-5 h-5" />
             </a>

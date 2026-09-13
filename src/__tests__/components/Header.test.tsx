@@ -1,12 +1,6 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import { describe, it, expect, vi } from 'vitest';
+import { describe, it, expect } from 'vitest';
 
-vi.mock('next/link', () => ({
-  default: ({ children, href, ...props }: any) => <a href={href} {...props}>{children}</a>,
-}));
-vi.mock('next/image', () => ({
-  default: (props: any) => <img {...props} />,
-}));
 
 import Header from '@/components/layout/Header';
 

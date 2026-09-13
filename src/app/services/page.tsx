@@ -7,7 +7,7 @@ import { AnimateOnScroll, StaggerContainer, StaggerItem } from '@/components/ui/
 export const metadata: Metadata = {
   title: 'Artificial Turf Cleaning Services',
   description:
-    "Professional artificial turf cleaning and maintenance services in Murrieta, CA. Pet hair removal, blooming, disinfecting, deodorizing, and poop scooping. Get a free quote today.",
+    "Professional artificial turf cleaning and maintenance services across our California service areas, including Palm Desert. Pet hair removal, blooming, disinfecting, deodorizing, and poop scooping. Get a free quote today.",
   alternates: {
     canonical: '/services',
   },
@@ -36,7 +36,7 @@ const services = [
     href: '/services/disinfect-deodorize',
     image: '/images/gallery/service-turf-disinfecting-v2.jpeg',
     description:
-      'Our professional-grade disinfecting and deodorizing service power-sprays your turf, cutting past the top layer into the infill where bacteria and viruses live. Eliminates germs and bacteria in minutes without hazardous chemicals.',
+      'We remove debris, assess odor-prone areas, and plan treatment for your turf. Your technician explains the product, application precautions, and return-to-use instructions.',
   },
   {
     name: 'Poop Scooping & Removal',
@@ -44,7 +44,7 @@ const services = [
     href: '/services/poop-scooping',
     image: '/images/services/poop-scooping.jpg',
     description:
-      'Pet waste is not only an unruly sight but also harmful to the environment and people around you. According to the EPA, pet waste is very toxic. We provide flexible service plans dedicated to waste removal so you can enjoy your yard worry-free.',
+      'Request pet waste pickup for the agreed turf areas, with access, disposal, and visit frequency confirmed in your quote.',
   },
   {
     name: 'Commercial Turf Cleaning',
@@ -52,7 +52,7 @@ const services = [
     href: '/commercial-turf-cleaning',
     image: '/images/gallery/service-turf-cleaning.png',
     description:
-      'Recurring, pet-safe turf cleaning for dog daycares, HOAs, schools, gyms, and hospitality venues across California. Bonded, insured, and documented for property managers and boards — scheduled around your hours and budget.',
+      'Commercial turf care for pet facilities, HOAs, schools, gyms, and hospitality spaces. Discuss surface requirements, access windows, and a maintenance scope for your property.',
   },
 ];
 
@@ -67,9 +67,7 @@ export default function ServicesPage() {
             Our Services
           </h1>
           <p className="text-lg sm:text-xl text-white/90 font-body max-w-3xl mx-auto leading-relaxed">
-            Professional artificial turf cleaning and maintenance backed by 30+
-            years of experience. Serving Murrieta, CA and surrounding areas with
-            pet-safe, eco-friendly solutions.
+            Artificial turf cleaning and maintenance across our California service areas. Choose help with debris, matted fibers, pet odor, or waste pickup.
           </p>
         </AnimateOnScroll>
       </section>
@@ -116,7 +114,7 @@ export default function ServicesPage() {
                       </Link>
                       <Link
                         href={service.href}
-                        className="inline-flex items-center gap-1.5 text-sage font-semibold font-body text-sm hover:text-forest transition-colors group/link"
+                        className="inline-flex items-center gap-1.5 text-forest font-semibold font-body text-sm hover:text-forest-dark transition-colors group/link"
                       >
                         Learn More
                         <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
@@ -139,15 +137,12 @@ export default function ServicesPage() {
               Not Sure What Your Turf Needs?
             </h2>
             <p className="text-lg text-white/85 font-body mb-8 max-w-2xl mx-auto leading-relaxed">
-              Every yard is different. Let our team with 30+ years of experience
-              assess your artificial turf and recommend the perfect combination
-              of services for your property. Free consultations available for all
-              Murrieta-area homeowners.
+              Every yard is different. Share the condition of your turf, approximate size, and access details so we can discuss a suitable service scope and free quote.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
                 href="/locations"
-                className="btn-hover inline-flex items-center gap-2 bg-sage hover:bg-sage-dark text-white font-semibold px-8 py-3.5 rounded-lg transition-colors font-body shadow-md hover:shadow-lg"
+                className="btn-hover inline-flex items-center gap-2 bg-sage hover:bg-sage-light text-forest-dark font-semibold px-8 py-3.5 rounded-lg transition-colors font-body shadow-md hover:shadow-lg"
               >
                 Get a Free Quote
                 <ArrowRight className="w-5 h-5" />
@@ -157,7 +152,7 @@ export default function ServicesPage() {
                 className="btn-hover inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-3.5 rounded-lg transition-colors font-body backdrop-blur-sm"
               >
                 <MapPin className="w-5 h-5" />
-                Find Your Local Office
+                Find Your Service Area
               </Link>
             </div>
           </div>

@@ -4,14 +4,7 @@ import { useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { Counter } from '@/components/ui/AnimateOnScroll';
 
-const stats = [
-  { value: 30, suffix: '+', label: 'Years Experience' },
-  { value: 5000, suffix: '+', label: 'Happy Customers' },
-  { value: 99, suffix: '%', label: 'Satisfaction Rate' },
-  { value: 15000, suffix: '+', label: 'Projects Completed' },
-];
 
 const headlineWords = "When You Care About Clean Turf, Call Murphy\u2019s Turf".split(' ');
 
@@ -124,55 +117,13 @@ export default function Hero() {
           >
             <Link
               href="/locations"
-              className="inline-block bg-sage text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-sage-light transition"
+              className="inline-block bg-sage text-forest-dark px-8 py-4 rounded-lg text-lg font-semibold hover:bg-sage-light transition"
             >
               Get Your Free Quote
             </Link>
           </motion.div>
         </motion.div>
 
-        {/* Stats row — staggered reveal with animated Counter values */}
-        <motion.div
-          className="mt-12 grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0"
-          initial="hidden"
-          animate="visible"
-          variants={{
-            hidden: {},
-            visible: {
-              transition: { staggerChildren: 0.12, delayChildren: 2.1 },
-            },
-          }}
-        >
-          {stats.map((stat, index) => (
-            <motion.div
-              key={stat.label}
-              variants={{
-                hidden: { opacity: 0, y: 30, scale: 0.95 },
-                visible: {
-                  opacity: 1,
-                  y: 0,
-                  scale: 1,
-                  transition: { duration: 0.55, ease: [0.25, 0.1, 0.25, 1] },
-                },
-              }}
-            >
-              <div
-                className={`px-4 ${
-                  index < stats.length - 1
-                    ? 'lg:border-r lg:border-white/30'
-                    : ''
-                }`}
-              >
-                <p className="text-3xl font-bold text-white">
-                  <Counter value={stat.value} suffix={stat.suffix} duration={2.5} />
-                </p>
-                <p className="text-sm text-white/80 mt-1 font-body">
-                  {stat.label}
-                </p>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
       </motion.div>
     </section>
   );

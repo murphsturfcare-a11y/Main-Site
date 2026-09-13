@@ -1,0 +1,42 @@
+{
+  "environment": "Local production export; Chromium",
+  "checks": [
+    {
+      "slug": "how-to-clean-artificial-turf",
+      "width": 390,
+      "overflow": false,
+      "sectionHeadings": 6
+    },
+    {
+      "slug": "dog-daycare-turf-cleaning-irvine",
+      "width": 390,
+      "overflow": false,
+      "sectionHeadings": 6
+    },
+    {
+      "slug": "commercial-turf-cleaning-anaheim-hotels-venues",
+      "width": 390,
+      "overflow": false,
+      "sectionHeadings": 6
+    },
+    {
+      "slug": "how-to-clean-artificial-turf",
+      "width": 1440,
+      "overflow": false,
+      "sectionHeadings": 6
+    },
+    {
+      "slug": "dog-daycare-turf-cleaning-irvine",
+      "width": 1440,
+      "overflow": false,
+      "sectionHeadings": 6
+    },
+    {
+      "slug": "commercial-turf-cleaning-anaheim-hotels-venues",
+      "width": 1440,
+      "overflow": false,
+      "sectionHeadings": 6
+    }
+  ],
+  "errors": []
+}

@@ -10,21 +10,21 @@ interface Benefit {
 const benefits: Benefit[] = [
   {
     icon: PawPrint,
-    title: '100% Pet Friendly',
+    title: 'Care for Pet Yards',
     description:
-      'All our products and methods are completely safe for your furry friends. Your pets can enjoy the turf right after service.',
+      'Plan around pet use and follow the treatment instructions before pets return to the yard.',
   },
   {
     icon: Leaf,
-    title: 'Eco Friendly',
+    title: 'Surface-Specific Care',
     description:
-      'We use environmentally responsible, biodegradable products that are safe for your family, pets, and the planet.',
+      'Share your turf and infill information so the cleaning method can suit the installed surface.',
   },
   {
     icon: ShieldCheck,
-    title: 'Satisfaction Guaranteed',
+    title: 'Clear Service Scope',
     description:
-      'Not happy with our work? We\'ll come back and make it right. Your satisfaction is our top priority, guaranteed.',
+      'Confirm the areas, work, and access details in your quote, and contact the team with questions about the visit.',
   },
 ];
 

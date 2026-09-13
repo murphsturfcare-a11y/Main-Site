@@ -28,7 +28,7 @@ export default function LocationCard({
         </Link>
         <Link
           href={`/locations/${slug}#quote-form`}
-          className="inline-flex items-center justify-center gap-1 bg-sage text-white text-sm font-semibold px-4 py-2 rounded-lg hover:bg-forest transition-colors min-h-[44px]"
+          className="inline-flex items-center justify-center gap-1 bg-sage text-forest-dark text-sm font-semibold px-4 py-2 rounded-lg hover:bg-sage-light transition-colors min-h-[44px]"
         >
           Get a Quote &rarr;
         </Link>

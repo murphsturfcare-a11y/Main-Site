@@ -1,0 +1,72 @@
+{
+  "checkedAt": "2026-09-13T00:37:37.544Z",
+  "environment": "Local production export; Chromium",
+  "scenarios": [
+    {
+      "name": "desktop",
+      "videoRequests": [
+        "http://127.0.0.1:3093/images/gallery/hero-video-1280.mp4"
+      ],
+      "posterVisible": true,
+      "headingVisible": true,
+      "errors": [],
+      "controls": "pause/play work; deliberate pause survives scrolling; playing video pauses offscreen and resumes onscreen",
+      "preferenceChange": "enabling reduced motion unloads video"
+    },
+    {
+      "name": "mobile",
+      "videoRequests": [],
+      "posterVisible": true,
+      "headingVisible": true,
+      "errors": [],
+      "staticOnly": true
+    },
+    {
+      "name": "reduced motion",
+      "videoRequests": [],
+      "posterVisible": true,
+      "headingVisible": true,
+      "errors": [],
+      "staticOnly": true
+    },
+    {
+      "name": "Save-Data",
+      "videoRequests": [],
+      "posterVisible": true,
+      "headingVisible": true,
+      "errors": [],
+      "staticOnly": true
+    },
+    {
+      "name": "3G connection",
+      "videoRequests": [],
+      "posterVisible": true,
+      "headingVisible": true,
+      "errors": [],
+      "staticOnly": true
+    },
+    {
+      "name": "blocked autoplay",
+      "videoRequests": [
+        "http://127.0.0.1:3093/images/gallery/hero-video-1280.mp4"
+      ],
+      "posterVisible": true,
+      "headingVisible": true,
+      "errors": [],
+      "fallback": "poster retained after rejected autoplay; explicit play works"
+    },
+    {
+      "name": "JavaScript disabled",
+      "videoRequests": [],
+      "posterVisible": true,
+      "headingVisible": true,
+      "errors": [],
+      "staticOnly": true
+    }
+  ],
+  "originalBytes": 12922331,
+  "optimizedVideoBytes": 836458,
+  "posterBytes": 47918,
+  "videoReductionPercent": 93.52703471223575,
+  "staticPosterReductionPercent": 99.62918454882482
+}

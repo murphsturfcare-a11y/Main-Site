@@ -2,16 +2,21 @@
 
 import Script from "next/script";
 import { usePathname } from "next/navigation";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { GA_MEASUREMENT_ID, pageview } from "@/lib/analytics/gtag";
+import { CONSENT_INITIALIZATION_SCRIPT } from '@/lib/analytics/consent';
 
 export function GoogleAnalytics() {
   const pathname = usePathname();
+  const previousPathname = useRef(pathname);
 
   useEffect(() => {
-    if (pathname) {
+    // The bootstrap records the initial page. Only send another pageview when
+    // client navigation changes the path, including after development remounts.
+    if (GA_MEASUREMENT_ID && pathname && pathname !== previousPathname.current) {
       pageview(pathname);
     }
+    previousPathname.current = pathname;
   }, [pathname]);
 
   if (!GA_MEASUREMENT_ID) return null;
@@ -19,28 +24,21 @@ export function GoogleAnalytics() {
   return (
     <>
       <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-        strategy="afterInteractive"
-      />
-      <Script
         id="google-analytics"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('consent', 'default', {
-              analytics_storage: 'denied',
-              ad_storage: 'denied',
-              ad_user_data: 'denied',
-              ad_personalization: 'denied',
-            });
-            gtag('config', '${GA_MEASUREMENT_ID}', {
+            ${CONSENT_INITIALIZATION_SCRIPT}
+            window.gtag('js', new Date());
+            window.gtag('config', ${JSON.stringify(GA_MEASUREMENT_ID).replace(/</g, '\\u003c')}, {
               page_path: window.location.pathname,
             });
           `,
         }}
+      />
+      <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+        strategy="afterInteractive"
       />
     </>
   );

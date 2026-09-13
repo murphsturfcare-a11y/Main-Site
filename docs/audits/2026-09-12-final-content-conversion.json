@@ -1,0 +1,43 @@
+{
+  "checkedAt": "2026-09-13T02:28:50.202Z",
+  "base": "http://127.0.0.1:3093",
+  "method": "Mobile browser primary quote CTA click-through; no form submission, call, or external message.",
+  "checks": [
+    {
+      "slug": "seasonal-home-commercial-turf-palm-desert",
+      "expected": "/commercial-turf-cleaning/palm-desert#quote-form",
+      "href": "/commercial-turf-cleaning/palm-desert#quote-form",
+      "finalUrl": "http://127.0.0.1:3093/commercial-turf-cleaning/palm-desert#quote-form",
+      "anchorFound": true,
+      "phoneLinks": 1,
+      "pass": true
+    },
+    {
+      "slug": "dog-daycare-turf-cleaning-irvine",
+      "expected": "/commercial-turf-cleaning/huntington-beach/commercial-turf-cleaning-in-irvine#quote-form",
+      "href": "/commercial-turf-cleaning/huntington-beach/commercial-turf-cleaning-in-irvine#quote-form",
+      "finalUrl": "http://127.0.0.1:3093/commercial-turf-cleaning/huntington-beach/commercial-turf-cleaning-in-irvine#quote-form",
+      "anchorFound": true,
+      "phoneLinks": 2,
+      "pass": true
+    },
+    {
+      "slug": "artificial-turf-cleaning-riverside",
+      "expected": "/locations/murrieta/turf-cleaning-in-riverside#quote-form",
+      "href": "/locations/murrieta/turf-cleaning-in-riverside#quote-form",
+      "finalUrl": "http://127.0.0.1:3093/locations/murrieta/turf-cleaning-in-riverside#quote-form",
+      "anchorFound": true,
+      "phoneLinks": 2,
+      "pass": true
+    },
+    {
+      "slug": "hoa-artificial-turf-maintenance-guide",
+      "expected": "/commercial-turf-cleaning#service-areas",
+      "href": "/commercial-turf-cleaning#service-areas",
+      "finalUrl": "http://127.0.0.1:3093/commercial-turf-cleaning#service-areas",
+      "anchorFound": true,
+      "phoneLinks": 0,
+      "pass": true
+    }
+  ]
+}

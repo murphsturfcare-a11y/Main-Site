@@ -114,6 +114,7 @@ export interface Location {
 }
 
 export interface Testimonial {
+  sourceUrl: string;
   customerName: string;
   customerLocation: string;
   rating: number;
@@ -174,11 +175,11 @@ export interface Company {
   email: string;
   address: CompanyAddress;
   businessHours: BusinessHours;
-  founded: number;
+  founded?: number;
   description: string;
   mission: string;
   values: CompanyValue[];
-  stats: CompanyStats;
+  stats?: CompanyStats;
   socialMedia: SocialMedia;
   certifications: string[];
 }

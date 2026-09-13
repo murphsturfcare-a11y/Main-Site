@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "node scripts/generate-llm-files.mjs",
+    "prebuild": "node scripts/check-public-files.mjs && node scripts/generate-llm-files.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",

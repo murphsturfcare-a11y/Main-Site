@@ -1,3 +1,4 @@
+/// <reference types="vitest/globals" />
 import '@testing-library/jest-dom/vitest';
 import React from 'react';
 
@@ -9,16 +10,25 @@ vi.mock('next/link', () => ({
 
 // Mock next/image
 vi.mock('next/image', () => ({
-  default: ({ src, alt, fill, priority, ...props }: { src: string; alt: string; fill?: boolean; priority?: boolean; [key: string]: unknown }) =>
-    React.createElement('img', { src, alt, ...props }),
+  default: (props: { src: string; alt: string; [key: string]: unknown }) => {
+    const imageProps = { ...props };
+    delete imageProps.fill;
+    delete imageProps.priority;
+    return React.createElement('img', imageProps);
+  },
 }));
 
 // Mock framer-motion
 vi.mock('framer-motion', () => {
-  const createMotionComponent = (tag: string) =>
-    React.forwardRef(({ children, initial, animate, exit, variants, transition, whileHover, whileInView, style, ...props }: Record<string, unknown>, ref: React.Ref<HTMLElement>) => {
-      return React.createElement(tag, { ...props, ref, style }, children as React.ReactNode);
+  const createMotionComponent = (tag: string) => {
+    const MockMotion = React.forwardRef((props: Record<string, unknown>, ref: React.Ref<HTMLElement>) => {
+      const elementProps = { ...props };
+      for (const key of ['children', 'initial', 'animate', 'exit', 'variants', 'transition', 'whileHover', 'whileInView']) delete elementProps[key];
+      return React.createElement(tag, { ...elementProps, ref }, props.children as React.ReactNode);
     });
+    MockMotion.displayName = `MockMotion.${tag}`;
+    return MockMotion;
+  };
 
   return {
     motion: new Proxy({} as Record<string, unknown>, {
@@ -45,6 +55,22 @@ class MockIntersectionObserver {
 Object.defineProperty(window, 'IntersectionObserver', {
   writable: true,
   value: MockIntersectionObserver,
+});
+
+// Ordinary page tests use the static, reduced-motion presentation. Media tests
+// override this with the viewport and motion preferences under examination.
+Object.defineProperty(window, 'matchMedia', {
+  writable: true,
+  value: vi.fn((query: string) => ({
+    matches: query === '(prefers-reduced-motion: reduce)',
+    media: query,
+    onchange: null,
+    addListener: vi.fn(),
+    removeListener: vi.fn(),
+    addEventListener: vi.fn(),
+    removeEventListener: vi.fn(),
+    dispatchEvent: vi.fn(),
+  })),
 });
 
 // Mock localStorage

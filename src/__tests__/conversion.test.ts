@@ -1,5 +1,6 @@
 import { describe, it, expect, beforeEach, afterEach, vi } from "vitest";
 import * as gtag from "@/lib/analytics/gtag";
+import { CONSENT_KEY } from '@/lib/analytics/consent';
 import {
   trackLeadConversion,
   trackContactConversion,
@@ -11,7 +12,9 @@ vi.mock("@/lib/analytics/gtag");
 
 describe("conversion tracking module", () => {
   beforeEach(() => {
+    delete window.murphysConsentChoice;
     window.dataLayer = [];
+    localStorage.setItem(CONSENT_KEY, 'accepted');
   });
 
   afterEach(() => {
@@ -27,8 +30,6 @@ describe("conversion tracking module", () => {
       expect(gtag.event).toHaveBeenCalledWith("generate_lead", {
         service_type: "turf_cleaning",
         location: "Dublin",
-        value: 1,
-        currency: "USD",
       });
     });
 
@@ -48,8 +49,6 @@ describe("conversion tracking module", () => {
       expect(gtag.event).toHaveBeenCalledWith("generate_lead", {
         service_type: "turf_cleaning",
         location: "",
-        value: 1,
-        currency: "USD",
       });
 
       expect(window.dataLayer).toContainEqual({
@@ -58,6 +57,13 @@ describe("conversion tracking module", () => {
         location: "",
       });
     });
+  });
+
+  it('does not emit lead conversions without analytics consent', () => {
+    localStorage.setItem(CONSENT_KEY, 'declined');
+    trackLeadConversion('turf_cleaning', 'Palm Desert');
+    expect(gtag.event).not.toHaveBeenCalled();
+    expect(window.dataLayer).toEqual([]);
   });
 
   describe("trackContactConversion", () => {

@@ -28,15 +28,29 @@ export function parseUTMFromURL(searchParams: URLSearchParams): UTMParams | null
 
 export function storeUTMParams(params: UTMParams): void {
   if (typeof window === "undefined") return;
-  sessionStorage.setItem(UTM_STORAGE_KEY, JSON.stringify(params));
+  try {
+    sessionStorage.setItem(UTM_STORAGE_KEY, JSON.stringify(params));
+  } catch {
+    // Attribution storage must not prevent a visitor from using the quote form.
+  }
 }
 
 export function getStoredUTMParams(): UTMParams | null {
   if (typeof window === "undefined") return null;
-  const stored = sessionStorage.getItem(UTM_STORAGE_KEY);
-  if (!stored) return null;
   try {
-    return JSON.parse(stored) as UTMParams;
+    const stored = sessionStorage.getItem(UTM_STORAGE_KEY);
+    if (!stored) return null;
+    const value: unknown = JSON.parse(stored);
+    if (!value || typeof value !== "object" || Array.isArray(value)) return null;
+    const candidate = value as Record<string, unknown>;
+    if (!["source", "medium", "campaign", "term", "content"].every((key) => typeof candidate[key] === "string")) return null;
+    return {
+      source: candidate.source as string,
+      medium: candidate.medium as string,
+      campaign: candidate.campaign as string,
+      term: candidate.term as string,
+      content: candidate.content as string,
+    };
   } catch {
     return null;
   }

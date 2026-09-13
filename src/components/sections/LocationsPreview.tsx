@@ -55,7 +55,7 @@ export default function LocationsPreview() {
           {/* Map Placeholder */}
           <div className="rounded-xl bg-sage/10 border-2 border-dashed border-sage/30 min-h-[400px] flex flex-col items-center justify-center gap-3">
             <MapPin className="w-10 h-10 text-sage" />
-            <p className="text-sage font-semibold font-body">
+            <p className="text-forest font-semibold font-body">
               Interactive Map Coming Soon
             </p>
           </div>

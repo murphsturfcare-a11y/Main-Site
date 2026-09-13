@@ -10,8 +10,8 @@ describe('company data', () => {
       expect(company.email).toBe('info@murphysturf.com');
     });
 
-    it('company.founded is 1994', () => {
-      expect(company.founded).toBe(1994);
+    it('omits an unverified founding date', () => {
+      expect(company).not.toHaveProperty('founded');
     });
   });
 
@@ -53,17 +53,14 @@ describe('company data', () => {
   });
 
   describe('certifications', () => {
-    it('has at least 3 certifications', () => {
-      expect(company.certifications.length).toBeGreaterThanOrEqual(3);
+    it('does not publish credentials without source evidence', () => {
+      expect(company.certifications).toEqual([]);
     });
   });
 
   describe('stats', () => {
-    it('has yearsInBusiness, customersServed, satisfactionRate, and projectsCompleted', () => {
-      expect(company.stats).toHaveProperty('yearsInBusiness');
-      expect(company.stats).toHaveProperty('customersServed');
-      expect(company.stats).toHaveProperty('satisfactionRate');
-      expect(company.stats).toHaveProperty('projectsCompleted');
+    it('omits unverified business metrics instead of serializing invented values', () => {
+      expect(company).not.toHaveProperty('stats');
     });
   });
 

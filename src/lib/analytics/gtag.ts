@@ -3,7 +3,7 @@ export const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID as st
 declare global {
   interface Window {
     gtag: (...args: [string, ...unknown[]]) => void;
-    dataLayer: Record<string, unknown>[];
+    dataLayer: unknown[];
   }
 }
 

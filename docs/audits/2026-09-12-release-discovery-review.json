@@ -1,0 +1,320 @@
+{
+  "checkedAt": "2026-09-13T01:58:25.203Z",
+  "sitemapPages": 188,
+  "reachableFromHome": 188,
+  "unreachable": [],
+  "zeroIncoming": [],
+  "scope": "Read-only graph of existing exported HTML and selected schema samples before the final scope/pricing cleanup; not a repeat HTTP crawl or a post-repair build.",
+  "schemaSamplesBeforeRepair": [
+    {
+      "route": "/",
+      "ogDescription": "California's premier artificial turf cleaning company, serving communities statewide.",
+      "schemas": [
+        {
+          "type": "LocalBusiness",
+          "areaServed": [
+            {
+              "@type": "Place",
+              "name": "Huntington Beach / LA Area",
+              "url": "https://murphysturf.com/locations/huntington-beach"
+            },
+            {
+              "@type": "Place",
+              "name": "Murrieta / Inland Empire",
+              "url": "https://murphysturf.com/locations/murrieta"
+            },
+            {
+              "@type": "Place",
+              "name": "Martinez / Bay Area",
+              "url": "https://murphysturf.com/locations/martinez"
+            },
+            {
+              "@type": "Place",
+              "name": "Greater Sacramento",
+              "url": "https://murphysturf.com/locations/sacramento"
+            },
+            {
+              "@type": "Place",
+              "name": "Palm Desert & Nearby Cities",
+              "url": "https://murphysturf.com/locations/palm-desert"
+            }
+          ],
+          "priceRange": "$$"
+        }
+      ]
+    },
+    {
+      "route": "/services",
+      "ogDescription": "California's premier artificial turf cleaning company, serving communities statewide.",
+      "schemas": [
+        {
+          "type": "LocalBusiness",
+          "areaServed": [
+            {
+              "@type": "Place",
+              "name": "Huntington Beach / LA Area",
+              "url": "https://murphysturf.com/locations/huntington-beach"
+            },
+            {
+              "@type": "Place",
+              "name": "Murrieta / Inland Empire",
+              "url": "https://murphysturf.com/locations/murrieta"
+            },
+            {
+              "@type": "Place",
+              "name": "Martinez / Bay Area",
+              "url": "https://murphysturf.com/locations/martinez"
+            },
+            {
+              "@type": "Place",
+              "name": "Greater Sacramento",
+              "url": "https://murphysturf.com/locations/sacramento"
+            },
+            {
+              "@type": "Place",
+              "name": "Palm Desert & Nearby Cities",
+              "url": "https://murphysturf.com/locations/palm-desert"
+            }
+          ],
+          "priceRange": "$$"
+        }
+      ]
+    },
+    {
+      "route": "/locations",
+      "ogDescription": "California's premier artificial turf cleaning company, serving communities statewide.",
+      "schemas": [
+        {
+          "type": "LocalBusiness",
+          "areaServed": [
+            {
+              "@type": "Place",
+              "name": "Huntington Beach / LA Area",
+              "url": "https://murphysturf.com/locations/huntington-beach"
+            },
+            {
+              "@type": "Place",
+              "name": "Murrieta / Inland Empire",
+              "url": "https://murphysturf.com/locations/murrieta"
+            },
+            {
+              "@type": "Place",
+              "name": "Martinez / Bay Area",
+              "url": "https://murphysturf.com/locations/martinez"
+            },
+            {
+              "@type": "Place",
+              "name": "Greater Sacramento",
+              "url": "https://murphysturf.com/locations/sacramento"
+            },
+            {
+              "@type": "Place",
+              "name": "Palm Desert & Nearby Cities",
+              "url": "https://murphysturf.com/locations/palm-desert"
+            }
+          ],
+          "priceRange": "$$"
+        }
+      ]
+    },
+    {
+      "route": "/commercial-turf-cleaning",
+      "ogDescription": "Commercial artificial turf cleaning for pet facilities, HOAs, schools, gyms and hospitality. Request a property-specific scope from Murphy's Turf.",
+      "schemas": [
+        {
+          "type": "Service",
+          "areaServed": {
+            "@type": "State",
+            "name": "California"
+          },
+          "offers": {
+            "@type": "Offer",
+            "availability": "https://schema.org/InStock",
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "type": "LocalBusiness",
+          "areaServed": [
+            {
+              "@type": "Place",
+              "name": "Huntington Beach / LA Area",
+              "url": "https://murphysturf.com/locations/huntington-beach"
+            },
+            {
+              "@type": "Place",
+              "name": "Murrieta / Inland Empire",
+              "url": "https://murphysturf.com/locations/murrieta"
+            },
+            {
+              "@type": "Place",
+              "name": "Martinez / Bay Area",
+              "url": "https://murphysturf.com/locations/martinez"
+            },
+            {
+              "@type": "Place",
+              "name": "Greater Sacramento",
+              "url": "https://murphysturf.com/locations/sacramento"
+            },
+            {
+              "@type": "Place",
+              "name": "Palm Desert & Nearby Cities",
+              "url": "https://murphysturf.com/locations/palm-desert"
+            }
+          ],
+          "priceRange": "$$"
+        }
+      ]
+    },
+    {
+      "route": "/locations/palm-desert",
+      "ogDescription": "Artificial turf cleaning in Palm Desert, CA. Help with pet odor, debris and flattened turf, plus neighborhood coverage and practical care guidance. Get a quote.",
+      "schemas": [
+        {
+          "type": "Service",
+          "areaServed": [
+            {
+              "@type": "City",
+              "name": "Palm Desert"
+            },
+            {
+              "@type": "City",
+              "name": "Indian Wells"
+            },
+            {
+              "@type": "Place",
+              "name": "Bermuda Dunes"
+            },
+            {
+              "@type": "City",
+              "name": "La Quinta"
+            },
+            {
+              "@type": "City",
+              "name": "Indio"
+            },
+            {
+              "@type": "City",
+              "name": "Coachella"
+            },
+            {
+              "@type": "Place",
+              "name": "Desert Palms / Sun City Palm Desert"
+            }
+          ]
+        },
+        {
+          "type": "LocalBusiness",
+          "areaServed": [
+            {
+              "@type": "Place",
+              "name": "Huntington Beach / LA Area",
+              "url": "https://murphysturf.com/locations/huntington-beach"
+            },
+            {
+              "@type": "Place",
+              "name": "Murrieta / Inland Empire",
+              "url": "https://murphysturf.com/locations/murrieta"
+            },
+            {
+              "@type": "Place",
+              "name": "Martinez / Bay Area",
+              "url": "https://murphysturf.com/locations/martinez"
+            },
+            {
+              "@type": "Place",
+              "name": "Greater Sacramento",
+              "url": "https://murphysturf.com/locations/sacramento"
+            },
+            {
+              "@type": "Place",
+              "name": "Palm Desert & Nearby Cities",
+              "url": "https://murphysturf.com/locations/palm-desert"
+            }
+          ],
+          "priceRange": "$$"
+        }
+      ]
+    },
+    {
+      "route": "/commercial-turf-cleaning/palm-desert",
+      "ogDescription": "Commercial turf cleaning in Palm Desert, CA for managed properties, pet areas and guest spaces. Discuss access, service scope and recurring care. Get a quote.",
+      "schemas": [
+        {
+          "type": "Service",
+          "areaServed": [
+            {
+              "@type": "City",
+              "name": "Palm Desert"
+            },
+            {
+              "@type": "City",
+              "name": "Indian Wells"
+            },
+            {
+              "@type": "Place",
+              "name": "Bermuda Dunes"
+            },
+            {
+              "@type": "City",
+              "name": "La Quinta"
+            },
+            {
+              "@type": "City",
+              "name": "Indio"
+            },
+            {
+              "@type": "City",
+              "name": "Coachella"
+            },
+            {
+              "@type": "Place",
+              "name": "Desert Palms / Sun City Palm Desert"
+            }
+          ]
+        },
+        {
+          "type": "LocalBusiness",
+          "areaServed": [
+            {
+              "@type": "Place",
+              "name": "Huntington Beach / LA Area",
+              "url": "https://murphysturf.com/locations/huntington-beach"
+            },
+            {
+              "@type": "Place",
+              "name": "Murrieta / Inland Empire",
+              "url": "https://murphysturf.com/locations/murrieta"
+            },
+            {
+              "@type": "Place",
+              "name": "Martinez / Bay Area",
+              "url": "https://murphysturf.com/locations/martinez"
+            },
+            {
+              "@type": "Place",
+              "name": "Greater Sacramento",
+              "url": "https://murphysturf.com/locations/sacramento"
+            },
+            {
+              "@type": "Place",
+              "name": "Palm Desert & Nearby Cities",
+              "url": "https://murphysturf.com/locations/palm-desert"
+            }
+          ],
+          "priceRange": "$$"
+        }
+      ]
+    }
+  ],
+  "exportedHtmlOutsideSitemap": [
+    {
+      "route": "/404",
+      "robots": "noindex"
+    },
+    {
+      "route": "/_not-found",
+      "robots": "noindex"
+    }
+  ]
+}

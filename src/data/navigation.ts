@@ -1,4 +1,5 @@
 import type { NavItem, NavGroup } from '../types';
+import { locations } from './locations';
 
 export const mainNav: NavItem[] = [
   { label: "Home", href: "/" },
@@ -22,12 +23,7 @@ export const footerNav: NavGroup[] = [
   },
   {
     title: "Locations",
-    links: [
-      { label: "Huntington Beach / LA Area", href: "/locations/huntington-beach" },
-      { label: "Murrieta / Inland Empire", href: "/locations/murrieta" },
-      { label: "Martinez / Bay Area", href: "/locations/martinez" },
-      { label: "Greater Sacramento", href: "/locations/sacramento" },
-    ],
+    links: locations.map(location => ({ label: location.name, href: `/locations/${location.slug}` })),
   },
   {
     title: "Company",

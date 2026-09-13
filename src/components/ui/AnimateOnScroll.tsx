@@ -1,7 +1,7 @@
 'use client';
 
-import { type ReactNode, useRef, useState, useEffect } from 'react';
-import { motion, useInView, type Variants } from 'framer-motion';
+import { createContext, type ReactNode, useContext, useEffect, useMemo, useRef } from 'react';
+import type { Variants } from 'framer-motion';
 
 type Direction = 'up' | 'down' | 'left' | 'right' | 'fade' | 'scale';
 
@@ -16,83 +16,84 @@ interface AnimateOnScrollProps {
   amount?: number;
 }
 
-const getVariants = (
-  direction: Direction,
-  distance: number,
-  duration: number,
-): Variants => {
-  const hidden: Record<string, number> = { opacity: 0 };
-  const visible: Record<string, number> = { opacity: 1 };
-
-  switch (direction) {
-    case 'up':
-      hidden.y = distance;
-      visible.y = 0;
-      break;
-    case 'down':
-      hidden.y = -distance;
-      visible.y = 0;
-      break;
-    case 'left':
-      hidden.x = distance;
-      visible.x = 0;
-      break;
-    case 'right':
-      hidden.x = -distance;
-      visible.x = 0;
-      break;
-    case 'scale':
-      hidden.scale = 0.9;
-      visible.scale = 1;
-      break;
-    case 'fade':
-    default:
-      break;
-  }
-
-  return {
-    hidden,
-    visible: {
-      ...visible,
-      transition: {
-        duration,
-        ease: [0.25, 0.1, 0.25, 1],
-      },
-    },
-  };
-};
-
-export function AnimateOnScroll({
-  children,
-  direction = 'up',
-  delay = 0,
-  duration = 0.6,
-  distance = 40,
-  className = '',
-  once = true,
-  amount = 0.05,
-}: AnimateOnScrollProps) {
-  const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once, amount });
-  const variants = getVariants(direction, distance, duration);
-
-  return (
-    <motion.div
-      ref={ref}
-      initial="hidden"
-      animate={isInView ? 'visible' : 'hidden'}
-      variants={variants}
-      transition={{ delay }}
-      className={className}
-    >
-      {children}
-    </motion.div>
-  );
+interface RevealOptions {
+  direction: Direction;
+  delay: number;
+  duration: number;
+  distance: number;
+  once: boolean;
+  amount: number;
+  staggerDelay?: number;
 }
 
-/* ------------------------------------------------------------------ */
-/* Stagger container — wrap a grid/list, each direct child staggers in */
-/* ------------------------------------------------------------------ */
+function initialTransform(direction: Direction, distance: number) {
+  switch (direction) {
+    case 'up': return `translate3d(0, ${distance}px, 0)`;
+    case 'down': return `translate3d(0, ${-distance}px, 0)`;
+    case 'left': return `translate3d(${distance}px, 0, 0)`;
+    case 'right': return `translate3d(${-distance}px, 0, 0)`;
+    case 'scale': return 'scale(0.95)';
+    default: return 'none';
+  }
+}
+
+function useScrollReveal({ direction, delay, duration, distance, once, amount, staggerDelay = 0 }: RevealOptions) {
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const element = ref.current;
+    if (!element || !('IntersectionObserver' in window) || typeof element.animate !== 'function') return;
+    const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
+    if (preference.matches) return;
+
+    // Above-the-fold content is already visible. Do not hide it after hydration
+    // to replay an entrance; only enhance content that starts offscreen.
+    const bounds = element.getBoundingClientRect();
+    if (bounds.top < window.innerHeight && bounds.bottom > 0) return;
+
+    let animation: Animation | undefined;
+    const observer = new IntersectionObserver(([entry]) => {
+      if (!entry.isIntersecting || preference.matches) return;
+      const siblings = element.parentElement ? Array.from(element.parentElement.children) : [];
+      const index = Math.max(0, siblings.indexOf(element));
+      animation?.cancel();
+      animation = element.animate([
+        { opacity: 0, transform: initialTransform(direction, distance) },
+        { opacity: 1, transform: 'none' },
+      ], {
+        duration: Math.max(0, duration * 1000),
+        delay: Math.max(0, (delay + index * staggerDelay) * 1000),
+        easing: 'cubic-bezier(0.23, 1, 0.32, 1)',
+        fill: 'backwards',
+      });
+      if (once) observer.unobserve(element);
+    }, { threshold: Math.min(1, Math.max(0, amount)) });
+
+    const onPreferenceChange = () => {
+      if (preference.matches) {
+        observer.disconnect();
+        animation?.cancel();
+      }
+    };
+    observer.observe(element);
+    preference.addEventListener('change', onPreferenceChange);
+    return () => {
+      observer.disconnect();
+      animation?.cancel();
+      preference.removeEventListener('change', onPreferenceChange);
+    };
+  }, [direction, delay, duration, distance, once, amount, staggerDelay]);
+
+  return ref;
+}
+
+export function AnimateOnScroll({
+  children, direction = 'up', delay = 0, duration = 0.6, distance = 40,
+  className = '', once = true, amount = 0.05,
+}: AnimateOnScrollProps) {
+  const ref = useScrollReveal({ direction, delay, duration, distance, once, amount });
+  return <div ref={ref} className={className}>{children}</div>;
+}
 
 interface StaggerContainerProps {
   children: ReactNode;
@@ -102,46 +103,18 @@ interface StaggerContainerProps {
   amount?: number;
 }
 
-const containerVariants: Variants = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.1,
-    },
-  },
-};
+const StaggerContext = createContext({ staggerDelay: 0, once: true, amount: 0.05 });
 
 export function StaggerContainer({
-  children,
-  staggerDelay = 0.1,
-  className = '',
-  once = true,
-  amount = 0.05,
+  children, staggerDelay = 0.06, className = '', once = true, amount = 0.05,
 }: StaggerContainerProps) {
-  const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once, amount });
-
+  const policy = useMemo(() => ({ staggerDelay, once, amount }), [staggerDelay, once, amount]);
   return (
-    <motion.div
-      ref={ref}
-      initial="hidden"
-      animate={isInView ? 'visible' : 'hidden'}
-      variants={{
-        hidden: {},
-        visible: {
-          transition: { staggerChildren: staggerDelay },
-        },
-      }}
-      className={className}
-    >
-      {children}
-    </motion.div>
+    <StaggerContext.Provider value={policy}>
+      <div className={className}>{children}</div>
+    </StaggerContext.Provider>
   );
 }
-
-/* ------------------------------------------------------------------ */
-/* Stagger item — direct child of StaggerContainer                     */
-/* ------------------------------------------------------------------ */
 
 interface StaggerItemProps {
   children: ReactNode;
@@ -152,24 +125,12 @@ interface StaggerItemProps {
 }
 
 export function StaggerItem({
-  children,
-  direction = 'up',
-  distance = 30,
-  duration = 0.5,
-  className = '',
+  children, direction = 'up', distance = 30, duration = 0.5, className = '',
 }: StaggerItemProps) {
-  const variants = getVariants(direction, distance, duration);
-
-  return (
-    <motion.div variants={variants} className={className}>
-      {children}
-    </motion.div>
-  );
+  const policy = useContext(StaggerContext);
+  const ref = useScrollReveal({ direction, distance, duration, delay: 0, ...policy });
+  return <div ref={ref} className={className}>{children}</div>;
 }
-
-/* ------------------------------------------------------------------ */
-/* Counter — animates a number counting up                             */
-/* ------------------------------------------------------------------ */
 
 interface CounterProps {
   value: number;
@@ -179,47 +140,14 @@ interface CounterProps {
   className?: string;
 }
 
-export function Counter({
-  value,
-  suffix = '',
-  prefix = '',
-  duration = 2,
-  className = '',
-}: CounterProps) {
-  return (
-    <span className={className}>
-      {prefix}
-      <CounterInner target={value} duration={duration} />
-      {suffix}
-    </span>
-  );
+// A statistic is content, so show its actual value in every rendering mode.
+// Keep the duration prop in the public interface for existing callers.
+export function Counter({ value, suffix = '', prefix = '', className = '' }: CounterProps) {
+  return <span className={className}>{prefix}{value.toLocaleString('en-US')}{suffix}</span>;
 }
 
-function CounterInner({ target, duration }: { target: number; duration: number }) {
-  const ref = useRef<HTMLSpanElement>(null);
-  const isInView = useInView(ref, { once: true });
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    if (!isInView) return;
-
-    let startTime: number | null = null;
-    const step = (timestamp: number) => {
-      if (!startTime) startTime = timestamp;
-      const progress = Math.min((timestamp - startTime) / (duration * 1000), 1);
-      setCount(Math.floor(progress * target));
-      if (progress < 1) {
-        requestAnimationFrame(step);
-      }
-    };
-    requestAnimationFrame(step);
-  }, [isInView, target, duration]);
-
-  return <span ref={ref}>{count.toLocaleString()}</span>;
-}
-
-/* ------------------------------------------------------------------ */
-/* Reduced motion hook                                                 */
-/* ------------------------------------------------------------------ */
-
-export { containerVariants };
+// Retained for compatibility with callers using this exported transition map.
+export const containerVariants: Variants = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.06 } },
+};

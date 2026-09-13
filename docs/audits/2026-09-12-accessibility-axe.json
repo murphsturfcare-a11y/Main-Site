@@ -1,0 +1,1345 @@
+{
+  "checkedAt": "2026-09-13T02:01:28.161Z",
+  "base": "http://127.0.0.1:3093",
+  "axeVersion": "4.11.1",
+  "method": "axe-core automated WCAG A/AA plus best-practice scan, 390 and 1440px, reduced motion, no form interactions or submissions",
+  "limitations": [
+    "Automated scans do not establish full WCAG conformance or keyboard usability.",
+    "Cross-origin form content may be incomplete or inaccessible to axe; host page findings remain applicable.",
+    "Contrast diagnostics must be checked against rendered imagery, gradients, opacity, and element state."
+  ],
+  "assessment": {
+    "accessibleNameLabelAriaOrTabindexViolations": 0,
+    "keyboardFlow": "Not established by this automated scan; no form submission, menu, or modal interactions were performed.",
+    "crossOriginFrames": "Murrieta iframe returned frame-tested incomplete at both widths; embedded contents are not cleared by this audit.",
+    "groups": [
+      {
+        "category": "Solid-color contrast failures",
+        "sources": [
+          "src/app/globals.css:16",
+          "src/app/globals.css:18",
+          "src/components/layout/Header.tsx:87",
+          "src/components/forms/LeadForm.tsx:280",
+          "src/components/ui/MobileStickyQuote.tsx",
+          "src/app/page.tsx",
+          "src/app/services/[slug]/page.tsx",
+          "src/app/blog/[slug]/page.tsx",
+          "src/data/blog.ts"
+        ],
+        "finding": "Sage #7cb342 on white = 2.5:1; sage on cream = 2.35:1; white on sage = 2.5:1; article link sage-dark #689f38 on white = 3.17:1. These regular-size text/button labels require 4.5:1.",
+        "action": "Use a darker accessible text/action color for these solid-background uses; keep decorative/gradient use separate."
+      },
+      {
+        "category": "Cookie consent, shared across all scans",
+        "sources": [
+          "src/components/analytics/CookieConsent.tsx:24",
+          "src/components/analytics/CookieConsent.tsx:39"
+        ],
+        "finding": "Accept white text on green #00a63e measures 3.21:1. Banner explanatory content is outside a landmark (axe best-practice region warning).",
+        "action": "Use an adequate contrast action color and expose the nonmodal consent notice as an appropriately named region."
+      },
+      {
+        "category": "Heading hierarchy, best practice",
+        "sources": [
+          "src/components/forms/LeadForm.tsx:123",
+          "src/app/locations/[slug]/page.tsx:544"
+        ],
+        "finding": "Quote form H3 follows page H1 without H2 on both Palm Desert hubs and Murrieta; Local Climate H4 skips H3 on Murrieta.",
+        "action": "Use heading levels that match the surrounding outline, retaining visual styling."
+      },
+      {
+        "category": "Blog landmark, best practice",
+        "sources": [
+          "src/app/blog/[slug]/page.tsx:259"
+        ],
+        "finding": "Desktop sidebar aside is a complementary landmark nested within main; axe reports landmark-complementary-is-top-level.",
+        "action": "Review whether the article tools need a separate landmark; retain the labeled TOC navigation either way."
+      },
+      {
+        "category": "Manual contrast diagnostics, not established failures",
+        "sources": [
+          "Multiple image, gradient, and translucent backgrounds"
+        ],
+        "finding": "Axe reports incomplete color-contrast cases on every route; automated background determination was insufficient.",
+        "action": "Review rendered backgrounds and element state visually before deciding on changes."
+      }
+    ]
+  },
+  "checks": [
+    {
+      "route": "/",
+      "width": 390,
+      "status": 200,
+      "violations": [
+        {
+          "rule": "color-contrast",
+          "nodes": 15,
+          "evidence": [
+            "AX01",
+            "AX02",
+            "AX03",
+            "AX04",
+            "AX05",
+            "AX06",
+            "AX07",
+            "AX08",
+            "AX09",
+            "AX10",
+            "AX11"
+          ]
+        },
+        {
+          "rule": "region",
+          "nodes": 1,
+          "evidence": [
+            "AX12"
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "rule": "color-contrast",
+          "nodes": 23,
+          "examples": [
+            {
+              "selector": [
+                ".bg-sage\\/20"
+              ],
+              "reason": "Element's background color could not be determined due to a background gradient"
+            },
+            {
+              "selector": [
+                "h1"
+              ],
+              "reason": "Element's background color could not be determined due to a background gradient"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/locations/palm-desert",
+      "width": 390,
+      "status": 200,
+      "violations": [
+        {
+          "rule": "color-contrast",
+          "nodes": 4,
+          "evidence": [
+            "AX13",
+            "AX14",
+            "AX10",
+            "AX11"
+          ]
+        },
+        {
+          "rule": "heading-order",
+          "nodes": 1,
+          "evidence": [
+            "AX15"
+          ]
+        },
+        {
+          "rule": "region",
+          "nodes": 1,
+          "evidence": [
+            "AX12"
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "rule": "color-contrast",
+          "nodes": 9,
+          "examples": [
+            {
+              "selector": [
+                "span:nth-child(1) > .hover\\:text-white.hover\\:underline.underline-offset-4"
+              ],
+              "reason": "Element's background color could not be determined due to a background gradient"
+            },
+            {
+              "selector": [
+                "span:nth-child(2) > .hover\\:text-white.hover\\:underline.underline-offset-4"
+              ],
+              "reason": "Element's background color could not be determined due to a background gradient"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/locations/murrieta",
+      "width": 390,
+      "status": 200,
+      "violations": [
+        {
+          "rule": "color-contrast",
+          "nodes": 11,
+          "evidence": [
+            "AX13",
+            "AX16",
+            "AX17",
+            "AX18",
+            "AX10",
+            "AX11"
+          ]
+        },
+        {
+          "rule": "heading-order",
+          "nodes": 2,
+          "evidence": [
+            "AX15",
+            "AX19"
+          ]
+        },
+        {
+          "rule": "region",
+          "nodes": 1,
+          "evidence": [
+            "AX12"
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "rule": "color-contrast",
+          "nodes": 10,
+          "examples": [
+            {
+              "selector": [
+                ".hover\\:text-white[href=\"/\"]"
+              ],
+              "reason": "Element's background color could not be determined because element contains an image node"
+            },
+            {
+              "selector": [
+                ".hover\\:text-white[href$=\"locations\"]"
+              ],
+              "reason": "Element's background color could not be determined because element contains an image node"
+            }
+          ]
+        },
+        {
+          "rule": "frame-tested",
+          "nodes": 1,
+          "examples": [
+            {
+              "selector": [
+                "iframe"
+              ],
+              "reason": "The iframe still has to be tested with axe-core"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/services/disinfect-deodorize",
+      "width": 390,
+      "status": 200,
+      "violations": [
+        {
+          "rule": "color-contrast",
+          "nodes": 7,
+          "evidence": [
+            "AX20",
+            "AX21",
+            "AX22",
+            "AX10",
+            "AX11"
+          ]
+        },
+        {
+          "rule": "region",
+          "nodes": 1,
+          "evidence": [
+            "AX12"
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "rule": "color-contrast",
+          "nodes": 12,
+          "examples": [
+            {
+              "selector": [
+                ".hover\\:text-white[href=\"/\"]"
+              ],
+              "reason": "Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "selector": [
+                ".hover\\:text-white[href$=\"services\"]"
+              ],
+              "reason": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/commercial-turf-cleaning/palm-desert",
+      "width": 390,
+      "status": 200,
+      "violations": [
+        {
+          "rule": "color-contrast",
+          "nodes": 4,
+          "evidence": [
+            "AX13",
+            "AX14",
+            "AX10",
+            "AX11"
+          ]
+        },
+        {
+          "rule": "heading-order",
+          "nodes": 1,
+          "evidence": [
+            "AX15"
+          ]
+        },
+        {
+          "rule": "region",
+          "nodes": 1,
+          "evidence": [
+            "AX12"
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "rule": "color-contrast",
+          "nodes": 9,
+          "examples": [
+            {
+              "selector": [
+                "span:nth-child(1) > .hover\\:text-white.hover\\:underline.underline-offset-4"
+              ],
+              "reason": "Element's background color could not be determined due to a background gradient"
+            },
+            {
+              "selector": [
+                "span:nth-child(2) > .hover\\:text-white.hover\\:underline.underline-offset-4"
+              ],
+              "reason": "Element's background color could not be determined due to a background gradient"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/blog/artificial-turf-cleaning-palm-desert",
+      "width": 390,
+      "status": 200,
+      "violations": [
+        {
+          "rule": "color-contrast",
+          "nodes": 9,
+          "evidence": [
+            "AX23",
+            "AX24",
+            "AX25",
+            "AX26",
+            "AX27",
+            "AX28",
+            "AX29",
+            "AX10",
+            "AX11"
+          ]
+        },
+        {
+          "rule": "region",
+          "nodes": 1,
+          "evidence": [
+            "AX12"
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "rule": "color-contrast",
+          "nodes": 4,
+          "examples": [
+            {
+              "selector": [
+                ".text-center.max-w-4xl.sm\\:px-6 > .text-3xl.sm\\:text-4xl"
+              ],
+              "reason": "Element's background color could not be determined due to a background gradient"
+            },
+            {
+              "selector": [
+                ".text-white\\/85"
+              ],
+              "reason": "Element's background color could not be determined due to a background gradient"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/",
+      "width": 1440,
+      "status": 200,
+      "violations": [
+        {
+          "rule": "color-contrast",
+          "nodes": 15,
+          "evidence": [
+            "AX30",
+            "AX01",
+            "AX02",
+            "AX03",
+            "AX04",
+            "AX05",
+            "AX06",
+            "AX07",
+            "AX08",
+            "AX09",
+            "AX11"
+          ]
+        },
+        {
+          "rule": "region",
+          "nodes": 1,
+          "evidence": [
+            "AX12"
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "rule": "color-contrast",
+          "nodes": 22,
+          "examples": [
+            {
+              "selector": [
+                ".bg-sage\\/20"
+              ],
+              "reason": "Element's background color could not be determined due to a background gradient"
+            },
+            {
+              "selector": [
+                "h1"
+              ],
+              "reason": "Element's background color could not be determined due to a background gradient"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/locations/palm-desert",
+      "width": 1440,
+      "status": 200,
+      "violations": [
+        {
+          "rule": "color-contrast",
+          "nodes": 4,
+          "evidence": [
+            "AX30",
+            "AX13",
+            "AX14",
+            "AX11"
+          ]
+        },
+        {
+          "rule": "heading-order",
+          "nodes": 1,
+          "evidence": [
+            "AX15"
+          ]
+        },
+        {
+          "rule": "region",
+          "nodes": 1,
+          "evidence": [
+            "AX12"
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "rule": "color-contrast",
+          "nodes": 8,
+          "examples": [
+            {
+              "selector": [
+                "span:nth-child(1) > .hover\\:text-white.hover\\:underline.underline-offset-4"
+              ],
+              "reason": "Element's background color could not be determined due to a background gradient"
+            },
+            {
+              "selector": [
+                "span:nth-child(2) > .hover\\:text-white.hover\\:underline.underline-offset-4"
+              ],
+              "reason": "Element's background color could not be determined due to a background gradient"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/locations/murrieta",
+      "width": 1440,
+      "status": 200,
+      "violations": [
+        {
+          "rule": "color-contrast",
+          "nodes": 10,
+          "evidence": [
+            "AX30",
+            "AX13",
+            "AX16",
+            "AX17",
+            "AX11"
+          ]
+        },
+        {
+          "rule": "heading-order",
+          "nodes": 2,
+          "evidence": [
+            "AX15",
+            "AX19"
+          ]
+        },
+        {
+          "rule": "region",
+          "nodes": 1,
+          "evidence": [
+            "AX12"
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "rule": "color-contrast",
+          "nodes": 9,
+          "examples": [
+            {
+              "selector": [
+                ".hover\\:text-white[href=\"/\"]"
+              ],
+              "reason": "Element's background color could not be determined because element contains an image node"
+            },
+            {
+              "selector": [
+                ".hover\\:text-white[href$=\"locations\"]"
+              ],
+              "reason": "Element's background color could not be determined because element contains an image node"
+            }
+          ]
+        },
+        {
+          "rule": "frame-tested",
+          "nodes": 1,
+          "examples": [
+            {
+              "selector": [
+                "iframe"
+              ],
+              "reason": "The iframe still has to be tested with axe-core"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/services/disinfect-deodorize",
+      "width": 1440,
+      "status": 200,
+      "violations": [
+        {
+          "rule": "color-contrast",
+          "nodes": 7,
+          "evidence": [
+            "AX30",
+            "AX20",
+            "AX21",
+            "AX22",
+            "AX11"
+          ]
+        },
+        {
+          "rule": "region",
+          "nodes": 1,
+          "evidence": [
+            "AX12"
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "rule": "color-contrast",
+          "nodes": 11,
+          "examples": [
+            {
+              "selector": [
+                ".hover\\:text-white[href=\"/\"]"
+              ],
+              "reason": "Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "selector": [
+                ".hover\\:text-white[href$=\"services\"]"
+              ],
+              "reason": "Element's background color could not be determined because it is overlapped by another element"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/commercial-turf-cleaning/palm-desert",
+      "width": 1440,
+      "status": 200,
+      "violations": [
+        {
+          "rule": "color-contrast",
+          "nodes": 4,
+          "evidence": [
+            "AX30",
+            "AX13",
+            "AX14",
+            "AX11"
+          ]
+        },
+        {
+          "rule": "heading-order",
+          "nodes": 1,
+          "evidence": [
+            "AX15"
+          ]
+        },
+        {
+          "rule": "region",
+          "nodes": 1,
+          "evidence": [
+            "AX12"
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "rule": "color-contrast",
+          "nodes": 8,
+          "examples": [
+            {
+              "selector": [
+                "span:nth-child(1) > .hover\\:text-white.hover\\:underline.underline-offset-4"
+              ],
+              "reason": "Element's background color could not be determined due to a background gradient"
+            },
+            {
+              "selector": [
+                "span:nth-child(2) > .hover\\:text-white.hover\\:underline.underline-offset-4"
+              ],
+              "reason": "Element's background color could not be determined due to a background gradient"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/blog/artificial-turf-cleaning-palm-desert",
+      "width": 1440,
+      "status": 200,
+      "violations": [
+        {
+          "rule": "color-contrast",
+          "nodes": 10,
+          "evidence": [
+            "AX30",
+            "AX23",
+            "AX24",
+            "AX25",
+            "AX26",
+            "AX27",
+            "AX31",
+            "AX28",
+            "AX29",
+            "AX11"
+          ]
+        },
+        {
+          "rule": "landmark-complementary-is-top-level",
+          "nodes": 1,
+          "evidence": [
+            "AX32"
+          ]
+        },
+        {
+          "rule": "region",
+          "nodes": 1,
+          "evidence": [
+            "AX12"
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "rule": "color-contrast",
+          "nodes": 6,
+          "examples": [
+            {
+              "selector": [
+                ".text-lg.mb-2"
+              ],
+              "reason": "Element's background color could not be determined due to a background gradient"
+            },
+            {
+              "selector": [
+                ".text-white\\/80.mb-5.leading-relaxed"
+              ],
+              "reason": "Element's background color could not be determined due to a background gradient"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "AX01",
+      "rule": "color-contrast",
+      "impact": "serious",
+      "html": "<span class=\"inline-block font-body font-semibold text-sage text-sm uppercase tracking-widest mb-3\">What We Offer</span>",
+      "selector": [
+        ".py-14.sm\\:py-20:nth-child(2) > .sm\\:px-6.max-w-7xl.lg\\:px-8 > .max-w-2xl.mb-10.sm\\:mb-14 > .uppercase.tracking-widest.mb-3"
+      ],
+      "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.5 (foreground color: #7cb342, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "measurement": [
+        {
+          "fgColor": "#7cb342",
+          "bgColor": "#ffffff",
+          "contrastRatio": 2.5,
+          "fontSize": "10.5pt (14px)",
+          "fontWeight": "normal",
+          "messageKey": null,
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "id": "AX02",
+      "rule": "color-contrast",
+      "impact": "serious",
+      "html": "<span class=\"mt-3 inline-flex items-center gap-1 font-body font-semibold text-sage group-hover:text-sage-dark transition-colors text-sm\">",
+      "selector": [
+        ".shadow-sm.hover\\:shadow-xl[href$=\"pet-hair-debris\"] > .p-5.flex-1.flex-col > .mt-3.gap-1.group-hover\\:text-sage-dark"
+      ],
+      "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.5 (foreground color: #7cb342, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "measurement": [
+        {
+          "fgColor": "#7cb342",
+          "bgColor": "#ffffff",
+          "contrastRatio": 2.5,
+          "fontSize": "10.5pt (14px)",
+          "fontWeight": "normal",
+          "messageKey": null,
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "id": "AX03",
+      "rule": "color-contrast",
+      "impact": "serious",
+      "html": "<span class=\"inline-block font-body font-semibold text-sage text-sm uppercase tracking-widest mb-3\">About Us</span>",
+      "selector": [
+        "div:nth-child(2) > .uppercase.tracking-widest.mb-3"
+      ],
+      "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.35 (foreground color: #7cb342, background color: #fff8e1, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "measurement": [
+        {
+          "fgColor": "#7cb342",
+          "bgColor": "#fff8e1",
+          "contrastRatio": 2.35,
+          "fontSize": "10.5pt (14px)",
+          "fontWeight": "normal",
+          "messageKey": null,
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "id": "AX04",
+      "rule": "color-contrast",
+      "impact": "serious",
+      "html": "<a href=\"#get-quote\" class=\"mt-8 inline-flex items-center justify-center gap-2 bg-sage hover:bg-sage-dark text-white font-heading font-bold text-lg px-8 py-4 rounded-xl transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5\">",
+      "selector": [
+        ".mt-8.px-8.hover\\:shadow-lg"
+      ],
+      "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.5 (foreground color: #ffffff, background color: #7cb342, font size: 13.5pt (18px), font weight: bold). Expected contrast ratio of 4.5:1",
+      "measurement": [
+        {
+          "fgColor": "#ffffff",
+          "bgColor": "#7cb342",
+          "contrastRatio": 2.5,
+          "fontSize": "13.5pt (18px)",
+          "fontWeight": "bold",
+          "messageKey": null,
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "id": "AX05",
+      "rule": "color-contrast",
+      "impact": "serious",
+      "html": "<span class=\"inline-block font-body font-semibold text-sage text-sm uppercase tracking-widest mb-3\">How It Works</span>",
+      "selector": [
+        ".py-14.sm\\:py-20:nth-child(4) > .sm\\:px-6.max-w-7xl.lg\\:px-8 > .max-w-2xl.mb-10.sm\\:mb-14 > .uppercase.tracking-widest.mb-3"
+      ],
+      "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.5 (foreground color: #7cb342, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "measurement": [
+        {
+          "fgColor": "#7cb342",
+          "bgColor": "#ffffff",
+          "contrastRatio": 2.5,
+          "fontSize": "10.5pt (14px)",
+          "fontWeight": "normal",
+          "messageKey": null,
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "id": "AX06",
+      "rule": "color-contrast",
+      "impact": "serious",
+      "html": "<a href=\"#get-quote\" class=\"inline-flex items-center justify-center gap-2 bg-sage hover:bg-sage-dark text-white font-heading font-bold text-lg px-8 py-4 rounded-xl transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5\">",
+      "selector": [
+        ".py-14.sm\\:py-20:nth-child(4) > .sm\\:px-6.max-w-7xl.lg\\:px-8 > .mt-12.text-center > .px-8.hover\\:shadow-lg[href$=\"#get-quote\"]"
+      ],
+      "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.5 (foreground color: #ffffff, background color: #7cb342, font size: 13.5pt (18px), font weight: bold). Expected contrast ratio of 4.5:1",
+      "measurement": [
+        {
+          "fgColor": "#ffffff",
+          "bgColor": "#7cb342",
+          "contrastRatio": 2.5,
+          "fontSize": "13.5pt (18px)",
+          "fontWeight": "bold",
+          "messageKey": null,
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "id": "AX07",
+      "rule": "color-contrast",
+      "impact": "serious",
+      "html": "<span class=\"inline-block font-body font-semibold text-sage text-sm uppercase tracking-widest mb-3\">Turf Gallery</span>",
+      "selector": [
+        ".bg-cream.py-14.sm\\:py-20:nth-child(5) > .sm\\:px-6.max-w-7xl.lg\\:px-8 > .max-w-2xl.mb-10.sm\\:mb-14 > .uppercase.tracking-widest.mb-3"
+      ],
+      "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.35 (foreground color: #7cb342, background color: #fff8e1, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "measurement": [
+        {
+          "fgColor": "#7cb342",
+          "bgColor": "#fff8e1",
+          "contrastRatio": 2.35,
+          "fontSize": "10.5pt (14px)",
+          "fontWeight": "normal",
+          "messageKey": null,
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "id": "AX08",
+      "rule": "color-contrast",
+      "impact": "serious",
+      "html": "<span class=\"inline-block font-body font-semibold text-sage text-sm uppercase tracking-widest mb-3\">Got Questions?</span>",
+      "selector": [
+        ".max-w-3xl > .mb-10.sm\\:mb-14.text-center > .uppercase.tracking-widest.mb-3"
+      ],
+      "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.35 (foreground color: #7cb342, background color: #fff8e1, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "measurement": [
+        {
+          "fgColor": "#7cb342",
+          "bgColor": "#fff8e1",
+          "contrastRatio": 2.35,
+          "fontSize": "10.5pt (14px)",
+          "fontWeight": "normal",
+          "messageKey": null,
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "id": "AX09",
+      "rule": "color-contrast",
+      "impact": "serious",
+      "html": "<a class=\"text-sage hover:text-sage-dark font-semibold underline underline-offset-2\" href=\"/locations\">Contact us directly</a>",
+      "selector": [
+        ".hover\\:text-sage-dark"
+      ],
+      "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.35 (foreground color: #7cb342, background color: #fff8e1, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "measurement": [
+        {
+          "fgColor": "#7cb342",
+          "bgColor": "#fff8e1",
+          "contrastRatio": 2.35,
+          "fontSize": "13.5pt (18px)",
+          "fontWeight": "normal",
+          "messageKey": null,
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "id": "AX10",
+      "rule": "color-contrast",
+      "impact": "serious",
+      "html": "<button type=\"button\" class=\"flex-1 inline-flex items-center justify-center gap-2 bg-sage text-white py-3 rounded-lg font-semibold font-body text-sm min-h-[44px] transition-colors hover:bg-sage-dark\">",
+      "selector": [
+        ".min-h-\\[44px\\].py-3[type=\"button\"]:nth-child(2)"
+      ],
+      "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.5 (foreground color: #ffffff, background color: #7cb342, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "measurement": [
+        {
+          "fgColor": "#ffffff",
+          "bgColor": "#7cb342",
+          "contrastRatio": 2.5,
+          "fontSize": "10.5pt (14px)",
+          "fontWeight": "normal",
+          "messageKey": null,
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "id": "AX11",
+      "rule": "color-contrast",
+      "impact": "serious",
+      "html": "<button class=\"rounded-md bg-green-600 px-4 py-2 text-sm font-medium text-white hover:bg-green-700 transition-colors\">Accept</button>",
+      "selector": [
+        ".bg-green-600"
+      ],
+      "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.21 (foreground color: #ffffff, background color: #00a63e, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "measurement": [
+        {
+          "fgColor": "#ffffff",
+          "bgColor": "#00a63e",
+          "contrastRatio": 3.21,
+          "fontSize": "10.5pt (14px)",
+          "fontWeight": "normal",
+          "messageKey": null,
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "id": "AX12",
+      "rule": "region",
+      "impact": "moderate",
+      "html": "<p class=\"text-sm text-gray-700\">We use cookies to improve your experience and analyze site traffic. By accepting, you consent to our use of cookies.</p>",
+      "selector": [
+        ".sm\\:flex-row.max-w-7xl.justify-between > .text-gray-700"
+      ],
+      "explanation": "Fix any of the following:\n  Some page content is not contained by landmarks",
+      "measurement": [
+        {
+          "isIframe": false
+        }
+      ]
+    },
+    {
+      "id": "AX13",
+      "rule": "color-contrast",
+      "impact": "serious",
+      "html": "<button type=\"submit\" class=\"w-full bg-sage hover:bg-sage-dark disabled:bg-sage/60 text-white font-bold py-3 rounded-lg transition-colors font-body flex items-center justify-center gap-2 shadow-md\">",
+      "selector": [
+        ".disabled\\:bg-sage\\/60"
+      ],
+      "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.5 (foreground color: #ffffff, background color: #7cb342, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1",
+      "measurement": [
+        {
+          "fgColor": "#ffffff",
+          "bgColor": "#7cb342",
+          "contrastRatio": 2.5,
+          "fontSize": "12.0pt (16px)",
+          "fontWeight": "bold",
+          "messageKey": null,
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "id": "AX14",
+      "rule": "color-contrast",
+      "impact": "serious",
+      "html": "<p class=\"text-sage font-body font-semibold mb-2\">Care built around your property</p>",
+      "selector": [
+        ".mb-2"
+      ],
+      "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.35 (foreground color: #7cb342, background color: #fff8e1, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "measurement": [
+        {
+          "fgColor": "#7cb342",
+          "bgColor": "#fff8e1",
+          "contrastRatio": 2.35,
+          "fontSize": "12.0pt (16px)",
+          "fontWeight": "normal",
+          "messageKey": null,
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "id": "AX15",
+      "rule": "heading-order",
+      "impact": "moderate",
+      "html": "<h3 class=\"text-xl font-bold text-charcoal font-heading mb-1 text-center\">Get a Free Quote</h3>",
+      "selector": [
+        ".text-center.text-xl.mb-1"
+      ],
+      "explanation": "Fix any of the following:\n  Heading order invalid",
+      "measurement": []
+    },
+    {
+      "id": "AX16",
+      "rule": "color-contrast",
+      "impact": "serious",
+      "html": "<span class=\"inline-flex items-center gap-1 text-sage font-semibold font-body text-sm group-hover:text-forest transition-colors\">",
+      "selector": [
+        ".hover\\:bg-white.hover\\:border-sage\\/30[href$=\"pet-hair-debris\"] > .p-5 > .gap-1.group-hover\\:text-forest.inline-flex"
+      ],
+      "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.35 (foreground color: #7cb342, background color: #fff8e1, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "measurement": [
+        {
+          "fgColor": "#7cb342",
+          "bgColor": "#fff8e1",
+          "contrastRatio": 2.35,
+          "fontSize": "10.5pt (14px)",
+          "fontWeight": "normal",
+          "messageKey": null,
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "id": "AX17",
+      "rule": "color-contrast",
+      "impact": "serious",
+      "html": "<a href=\"#quote-form\" class=\"inline-flex items-center gap-2 bg-sage hover:bg-sage-dark text-white font-semibold px-8 py-3.5 rounded-lg transition-colors font-body shadow-md\">",
+      "selector": [
+        ".py-14.sm\\:py-20:nth-child(7) > .sm\\:px-6.max-w-7xl.lg\\:px-8 > .mt-12.text-center > .py-3\\.5.px-8[href$=\"#quote-form\"]"
+      ],
+      "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.5 (foreground color: #ffffff, background color: #7cb342, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "measurement": [
+        {
+          "fgColor": "#ffffff",
+          "bgColor": "#7cb342",
+          "contrastRatio": 2.5,
+          "fontSize": "12.0pt (16px)",
+          "fontWeight": "normal",
+          "messageKey": null,
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "id": "AX18",
+      "rule": "color-contrast",
+      "impact": "serious",
+      "html": "<a href=\"#quote-form\" class=\"flex-1 mr-2 bg-sage hover:bg-sage-dark text-white font-bold text-sm min-h-[44px] flex items-center justify-center px-4 rounded-lg text-center font-body transition-colors\">Get Free Quote</a>",
+      "selector": [
+        ".mr-2"
+      ],
+      "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.5 (foreground color: #ffffff, background color: #7cb342, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1",
+      "measurement": [
+        {
+          "fgColor": "#ffffff",
+          "bgColor": "#7cb342",
+          "contrastRatio": 2.5,
+          "fontSize": "10.5pt (14px)",
+          "fontWeight": "bold",
+          "messageKey": null,
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "id": "AX19",
+      "rule": "heading-order",
+      "impact": "moderate",
+      "html": "<h4 class=\"text-sm font-bold text-charcoal font-heading mb-1\">Local Climate</h4>",
+      "selector": [
+        ".items-start.gap-3.flex > div > h4"
+      ],
+      "explanation": "Fix any of the following:\n  Heading order invalid",
+      "measurement": []
+    },
+    {
+      "id": "AX20",
+      "rule": "color-contrast",
+      "impact": "serious",
+      "html": "<a class=\"inline-flex items-center gap-2 bg-sage hover:bg-sage-dark text-white font-semibold px-8 py-3.5 rounded-lg transition-colors font-body shadow-md hover:shadow-lg\" href=\"/locations\">",
+      "selector": [
+        ".from-cream > .sm\\:flex-row.gap-4.flex-col > .hover\\:shadow-lg.hover\\:bg-sage-dark.px-8"
+      ],
+      "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.5 (foreground color: #ffffff, background color: #7cb342, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "measurement": [
+        {
+          "fgColor": "#ffffff",
+          "bgColor": "#7cb342",
+          "contrastRatio": 2.5,
+          "fontSize": "12.0pt (16px)",
+          "fontWeight": "normal",
+          "messageKey": null,
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "id": "AX21",
+      "rule": "color-contrast",
+      "impact": "serious",
+      "html": "<span class=\"text-xs text-sage font-body mt-2 inline-flex items-center gap-1\">",
+      "selector": [
+        ".card-hover.hover\\:border-sage\\/30[href$=\"pet-hair-debris\"] > .text-xs.mt-2.gap-1"
+      ],
+      "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.35 (foreground color: #7cb342, background color: #fff8e1, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "measurement": [
+        {
+          "fgColor": "#7cb342",
+          "bgColor": "#fff8e1",
+          "contrastRatio": 2.35,
+          "fontSize": "9.0pt (12px)",
+          "fontWeight": "normal",
+          "messageKey": null,
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "id": "AX22",
+      "rule": "color-contrast",
+      "impact": "serious",
+      "html": "<a class=\"btn-hover inline-flex items-center gap-2 bg-sage hover:bg-sage-dark text-white font-semibold px-8 py-3.5 rounded-lg transition-colors font-body shadow-md hover:shadow-lg\" href=\"/locations\">",
+      "selector": [
+        ".btn-hover.hover\\:shadow-lg.hover\\:bg-sage-dark"
+      ],
+      "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.5 (foreground color: #ffffff, background color: #7cb342, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "measurement": [
+        {
+          "fgColor": "#ffffff",
+          "bgColor": "#7cb342",
+          "contrastRatio": 2.5,
+          "fontSize": "12.0pt (16px)",
+          "fontWeight": "normal",
+          "messageKey": null,
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "id": "AX23",
+      "rule": "color-contrast",
+      "impact": "serious",
+      "html": "<a class=\"text-sage-dark underline underline-offset-2 hover:text-forest\" href=\"https://www.palmdesert.gov/community/landscaping-and-park-maintenance\">Palm Desert's landscape maintenance guidance</a>",
+      "selector": [
+        ".leading-relaxed.mb-4:nth-child(11) > .text-sage-dark.underline.underline-offset-2:nth-child(1)"
+      ],
+      "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.17 (foreground color: #689f38, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "measurement": [
+        {
+          "fgColor": "#689f38",
+          "bgColor": "#ffffff",
+          "contrastRatio": 3.17,
+          "fontSize": "12.0pt (16px)",
+          "fontWeight": "normal",
+          "messageKey": null,
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "id": "AX24",
+      "rule": "color-contrast",
+      "impact": "serious",
+      "html": "<a class=\"text-sage-dark underline underline-offset-2 hover:text-forest\" href=\"https://www.cvwd.org/667/Water-Saving-Guidelines\">CVWD's water-saving guidance</a>",
+      "selector": [
+        ".leading-relaxed.mb-4:nth-child(11) > .text-sage-dark.underline.underline-offset-2:nth-child(2)"
+      ],
+      "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.17 (foreground color: #689f38, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "measurement": [
+        {
+          "fgColor": "#689f38",
+          "bgColor": "#ffffff",
+          "contrastRatio": 3.17,
+          "fontSize": "12.0pt (16px)",
+          "fontWeight": "normal",
+          "messageKey": null,
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "id": "AX25",
+      "rule": "color-contrast",
+      "impact": "serious",
+      "html": "<a class=\"text-sage-dark underline underline-offset-2 hover:text-forest\" href=\"/locations/palm-desert\">Palm Desert turf cleaning and the nearby service areas</a>",
+      "selector": [
+        ".leading-relaxed.mb-4:nth-child(19) > .text-sage-dark.underline.underline-offset-2:nth-child(1)"
+      ],
+      "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.17 (foreground color: #689f38, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "measurement": [
+        {
+          "fgColor": "#689f38",
+          "bgColor": "#ffffff",
+          "contrastRatio": 3.17,
+          "fontSize": "12.0pt (16px)",
+          "fontWeight": "normal",
+          "messageKey": null,
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "id": "AX26",
+      "rule": "color-contrast",
+      "impact": "serious",
+      "html": "<a class=\"text-sage-dark underline underline-offset-2 hover:text-forest\" href=\"/blog/pet-turf-odor-palm-desert\">pet-area troubleshooting guide</a>",
+      "selector": [
+        ".leading-relaxed.mb-4:nth-child(19) > .text-sage-dark.underline.underline-offset-2:nth-child(2)"
+      ],
+      "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.17 (foreground color: #689f38, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "measurement": [
+        {
+          "fgColor": "#689f38",
+          "bgColor": "#ffffff",
+          "contrastRatio": 3.17,
+          "fontSize": "12.0pt (16px)",
+          "fontWeight": "normal",
+          "messageKey": null,
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "id": "AX27",
+      "rule": "color-contrast",
+      "impact": "serious",
+      "html": "<a class=\"text-sage-dark underline underline-offset-2 hover:text-forest\" href=\"/blog/desert-turf-dust-drainage-coachella-valley\">dust and drainage guide</a>",
+      "selector": [
+        ".text-sage-dark.underline.underline-offset-2:nth-child(3)"
+      ],
+      "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.17 (foreground color: #689f38, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "measurement": [
+        {
+          "fgColor": "#689f38",
+          "bgColor": "#ffffff",
+          "contrastRatio": 3.17,
+          "fontSize": "12.0pt (16px)",
+          "fontWeight": "normal",
+          "messageKey": null,
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "id": "AX28",
+      "rule": "color-contrast",
+      "impact": "serious",
+      "html": "<p class=\"text-sm font-body text-sage font-semibold mb-3\">Professional Turf Care Specialists</p>",
+      "selector": [
+        ".text-sage.mb-3.font-semibold"
+      ],
+      "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.35 (foreground color: #7cb342, background color: #fff8e1, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "measurement": [
+        {
+          "fgColor": "#7cb342",
+          "bgColor": "#fff8e1",
+          "contrastRatio": 2.35,
+          "fontSize": "10.5pt (14px)",
+          "fontWeight": "normal",
+          "messageKey": null,
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "id": "AX29",
+      "rule": "color-contrast",
+      "impact": "serious",
+      "html": "<a class=\"inline-flex items-center gap-2 bg-sage hover:bg-sage-dark text-white font-semibold px-8 py-3.5 rounded-lg transition-colors font-body shadow-md hover:shadow-lg\" href=\"/locations/palm-desert\">",
+      "selector": [
+        ".px-8.py-3\\.5.shadow-md"
+      ],
+      "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.5 (foreground color: #ffffff, background color: #7cb342, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "measurement": [
+        {
+          "fgColor": "#ffffff",
+          "bgColor": "#7cb342",
+          "contrastRatio": 2.5,
+          "fontSize": "12.0pt (16px)",
+          "fontWeight": "normal",
+          "messageKey": null,
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "id": "AX30",
+      "rule": "color-contrast",
+      "impact": "serious",
+      "html": "<a class=\"hidden lg:inline-flex bg-sage text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-forest transition-colors duration-200\" href=\"/locations\">Get Free Quote</a>",
+      "selector": [
+        ".lg\\:inline-flex"
+      ],
+      "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.5 (foreground color: #ffffff, background color: #7cb342, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "measurement": [
+        {
+          "fgColor": "#ffffff",
+          "bgColor": "#7cb342",
+          "contrastRatio": 2.5,
+          "fontSize": "12.0pt (16px)",
+          "fontWeight": "normal",
+          "messageKey": null,
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "id": "AX31",
+      "rule": "color-contrast",
+      "impact": "serious",
+      "html": "<a class=\"inline-flex items-center gap-2 bg-sage hover:bg-sage-dark text-white font-semibold px-5 py-2.5 rounded-lg transition-colors font-body text-sm w-full justify-center\" href=\"/locations/palm-desert\">",
+      "selector": [
+        ".py-2\\.5.hover\\:bg-sage-dark.px-5"
+      ],
+      "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.5 (foreground color: #ffffff, background color: #7cb342, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "measurement": [
+        {
+          "fgColor": "#ffffff",
+          "bgColor": "#7cb342",
+          "contrastRatio": 2.5,
+          "fontSize": "10.5pt (14px)",
+          "fontWeight": "normal",
+          "messageKey": null,
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "id": "AX32",
+      "rule": "landmark-complementary-is-top-level",
+      "impact": "moderate",
+      "html": "<aside class=\"hidden lg:block\">",
+      "selector": [
+        "aside"
+      ],
+      "explanation": "Fix any of the following:\n  The null landmark is contained in another landmark.",
+      "measurement": [
+        {
+          "role": null
+        }
+      ]
+    }
+  ]
+}

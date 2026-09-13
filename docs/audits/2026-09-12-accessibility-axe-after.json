@@ -1,0 +1,1148 @@
+{
+  "checkedAt": "2026-09-13T02:29:05.361Z",
+  "base": "http://127.0.0.1:3093",
+  "axeVersion": "4.11.1",
+  "method": "axe-core automated WCAG A/AA plus best-practice scan, 390 and 1440px, reduced motion, no form interactions or submissions",
+  "assessment": {
+    "violations": 0,
+    "checks": 12,
+    "notes": [
+      "Solid-background text/link/button contrast, cookie region naming, skipped headings, and nested blog complementary landmark findings are resolved on the six representative pages at both widths.",
+      "Sage buttons use forest-dark text (5.03:1 at rest, 6.74:1 on sage-light hover); light-surface links use forest. Lighter sage foreground accents on dark backgrounds were preserved.",
+      "Blog TOC retains its labeled navigation and now sticks below the fixed header.",
+      "Screenshots were visually reviewed for readability, placement, and responsive regression. Axe incomplete gradient/image/translucency cases are documented separately and are not established failures or a certification of contrast.",
+      "The Murrieta map iframe remains frame-tested incomplete; third-party embedded content was not tested.",
+      "Next.js development-only indicator was hidden for dev scans; no site elements were excluded. No real forms or messages were submitted."
+    ],
+    "changedSourceFiles": [
+      "src/app/page.tsx",
+      "src/app/not-found.tsx",
+      "src/app/services/page.tsx",
+      "src/app/services/[slug]/page.tsx",
+      "src/app/locations/page.tsx",
+      "src/app/locations/[slug]/page.tsx",
+      "src/app/locations/[slug]/[subLocation]/page.tsx",
+      "src/app/commercial-turf-cleaning/page.tsx",
+      "src/app/commercial-turf-cleaning/[location]/page.tsx",
+      "src/app/commercial-turf-cleaning/[location]/[subLocation]/page.tsx",
+      "src/app/blog/page.tsx",
+      "src/app/blog/[slug]/page.tsx",
+      "src/app/blog/BlogContent.tsx",
+      "src/app/privacy-policy/page.tsx",
+      "src/app/terms-of-service/page.tsx",
+      "src/components/ExitIntentPopup.tsx",
+      "src/components/cards/LocationCard.tsx",
+      "src/components/layout/Header.tsx",
+      "src/components/sections/Hero.tsx",
+      "src/components/sections/LocationsPreview.tsx",
+      "src/components/sections/PalmDesertAreaPage.tsx",
+      "src/components/ui/MobileStickyQuote.tsx",
+      "src/components/ui/LocationPicker.tsx",
+      "src/components/analytics/CookieConsent.tsx",
+      "src/data/blog.ts"
+    ],
+    "verification": [
+      "Changed-source ESLint passed.",
+      "47 focused component/blog tests passed after updating the stale LocationCard text color expectation.",
+      "Cookie consent named region is asserted in the existing test."
+    ],
+    "screenshotFiles": [
+      "accessibility-home-390.png",
+      "accessibility-home-1440.png",
+      "accessibility-palm-desert-390.png",
+      "accessibility-palm-desert-1440.png",
+      "accessibility-blog-links-390.png",
+      "accessibility-blog-links-1440.png"
+    ]
+  },
+  "limitations": [
+    "Automated scans do not establish full WCAG conformance or keyboard usability.",
+    "Initial page states were scanned; no menus, dialogs, or form error paths were opened.",
+    "Image, gradient, opacity, and cross-origin frame diagnostics require separate assessment."
+  ],
+  "checks": [
+    {
+      "route": "/",
+      "width": 390,
+      "status": 200,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodeCount": 20,
+          "evidence": [
+            "INC01",
+            "INC02",
+            "INC03",
+            "INC04",
+            "INC05",
+            "INC06",
+            "INC07",
+            "INC08",
+            "INC09",
+            "INC10",
+            "INC11",
+            "INC12",
+            "INC13",
+            "INC14",
+            "INC15",
+            "INC16",
+            "INC17",
+            "INC18",
+            "INC19",
+            "INC20"
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/locations/palm-desert",
+      "width": 390,
+      "status": 200,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodeCount": 9,
+          "evidence": [
+            "INC21",
+            "INC22",
+            "INC23",
+            "INC24",
+            "INC25",
+            "INC26",
+            "INC27",
+            "INC28",
+            "INC29"
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/locations/murrieta",
+      "width": 390,
+      "status": 200,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodeCount": 7,
+          "evidence": [
+            "INC30",
+            "INC31",
+            "INC32",
+            "INC33",
+            "INC34",
+            "INC35",
+            "INC36"
+          ]
+        },
+        {
+          "id": "frame-tested",
+          "nodeCount": 1,
+          "evidence": [
+            "INC37"
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/services/disinfect-deodorize",
+      "width": 390,
+      "status": 200,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodeCount": 12,
+          "evidence": [
+            "INC38",
+            "INC39",
+            "INC40",
+            "INC41",
+            "INC42",
+            "INC43",
+            "INC44",
+            "INC45",
+            "INC46",
+            "INC47",
+            "INC48",
+            "INC49"
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/commercial-turf-cleaning/palm-desert",
+      "width": 390,
+      "status": 200,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodeCount": 9,
+          "evidence": [
+            "INC50",
+            "INC51",
+            "INC52",
+            "INC53",
+            "INC54",
+            "INC55",
+            "INC56",
+            "INC57",
+            "INC58"
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/blog/artificial-turf-cleaning-palm-desert",
+      "width": 390,
+      "status": 200,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodeCount": 4,
+          "evidence": [
+            "INC59",
+            "INC60",
+            "INC61",
+            "INC62"
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/",
+      "width": 1440,
+      "status": 200,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodeCount": 19,
+          "evidence": [
+            "INC01",
+            "INC02",
+            "INC03",
+            "INC04",
+            "INC05",
+            "INC06",
+            "INC07",
+            "INC08",
+            "INC09",
+            "INC10",
+            "INC11",
+            "INC12",
+            "INC13",
+            "INC14",
+            "INC15",
+            "INC16",
+            "INC17",
+            "INC18",
+            "INC19"
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/locations/palm-desert",
+      "width": 1440,
+      "status": 200,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodeCount": 8,
+          "evidence": [
+            "INC21",
+            "INC22",
+            "INC23",
+            "INC24",
+            "INC25",
+            "INC26",
+            "INC27",
+            "INC28"
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/locations/murrieta",
+      "width": 1440,
+      "status": 200,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodeCount": 6,
+          "evidence": [
+            "INC30",
+            "INC31",
+            "INC32",
+            "INC33",
+            "INC34",
+            "INC35"
+          ]
+        },
+        {
+          "id": "frame-tested",
+          "nodeCount": 1,
+          "evidence": [
+            "INC37"
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/services/disinfect-deodorize",
+      "width": 1440,
+      "status": 200,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodeCount": 11,
+          "evidence": [
+            "INC38",
+            "INC39",
+            "INC40",
+            "INC41",
+            "INC42",
+            "INC43",
+            "INC44",
+            "INC45",
+            "INC46",
+            "INC47",
+            "INC48"
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/commercial-turf-cleaning/palm-desert",
+      "width": 1440,
+      "status": 200,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodeCount": 8,
+          "evidence": [
+            "INC50",
+            "INC51",
+            "INC52",
+            "INC53",
+            "INC54",
+            "INC55",
+            "INC56",
+            "INC57"
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/blog/artificial-turf-cleaning-palm-desert",
+      "width": 1440,
+      "status": 200,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodeCount": 6,
+          "evidence": [
+            "INC63",
+            "INC64",
+            "INC65",
+            "INC59",
+            "INC60",
+            "INC61"
+          ]
+        }
+      ]
+    }
+  ],
+  "incompleteEvidence": [
+    {
+      "id": "INC01",
+      "rule": "color-contrast",
+      "route": "/",
+      "target": [
+        ".bg-sage\\/20"
+      ],
+      "text": "Professional Artificial Turf Cleaning",
+      "reasons": [
+        "Element's background color could not be determined due to a background gradient"
+      ]
+    },
+    {
+      "id": "INC02",
+      "rule": "color-contrast",
+      "route": "/",
+      "target": [
+        "h1"
+      ],
+      "text": "Clean Turf, Less Upkeep.",
+      "reasons": [
+        "Element's background color could not be determined due to a background gradient"
+      ]
+    },
+    {
+      "id": "INC03",
+      "rule": "color-contrast",
+      "route": "/",
+      "target": [
+        "h1 > .text-sage-light"
+      ],
+      "text": "Less Upkeep.",
+      "reasons": [
+        "Element's background color could not be determined due to a background gradient"
+      ]
+    },
+    {
+      "id": "INC04",
+      "rule": "color-contrast",
+      "route": "/",
+      "target": [
+        ".sm\\:text-xl"
+      ],
+      "text": "Artificial turf cleaning, pet odor treatment, and maintenance for California homes and businesses.",
+      "reasons": [
+        "Element's background color could not be determined due to a background gradient"
+      ]
+    },
+    {
+      "id": "INC05",
+      "rule": "color-contrast",
+      "route": "/",
+      "target": [
+        ".sm\\:text-2xl"
+      ],
+      "text": "Select Your Area to Get a Free Quote",
+      "reasons": [
+        "Element's background color could not be determined due to a background gradient"
+      ]
+    },
+    {
+      "id": "INC06",
+      "rule": "color-contrast",
+      "route": "/",
+      "target": [
+        ".backdrop-blur-md > .sm\\:grid-cols-2.grid.grid-cols-1 > .focus-visible\\:outline-sage-light.hover\\:bg-white\\/20[href$=\"huntington-beach\"] > .min-w-0 > .sm\\:text-base.block"
+      ],
+      "text": "Huntington Beach / LA Area",
+      "reasons": [
+        "Element's background color could not be determined due to a background gradient"
+      ]
+    },
+    {
+      "id": "INC07",
+      "rule": "color-contrast",
+      "route": "/",
+      "target": [
+        ".backdrop-blur-md > .sm\\:grid-cols-2.grid.grid-cols-1 > .focus-visible\\:outline-sage-light.hover\\:bg-white\\/20[href$=\"murrieta\"] > .min-w-0 > .sm\\:text-base.block"
+      ],
+      "text": "Murrieta / Inland Empire",
+      "reasons": [
+        "Element's background color could not be determined due to a background gradient"
+      ]
+    },
+    {
+      "id": "INC08",
+      "rule": "color-contrast",
+      "route": "/",
+      "target": [
+        ".backdrop-blur-md > .sm\\:grid-cols-2.grid.grid-cols-1 > .focus-visible\\:outline-sage-light.hover\\:bg-white\\/20[href$=\"martinez\"] > .min-w-0 > .sm\\:text-base.block"
+      ],
+      "text": "Martinez / Bay Area",
+      "reasons": [
+        "Element's background color could not be determined due to a background gradient"
+      ]
+    },
+    {
+      "id": "INC09",
+      "rule": "color-contrast",
+      "route": "/",
+      "target": [
+        ".backdrop-blur-md > .sm\\:grid-cols-2.grid.grid-cols-1 > .focus-visible\\:outline-sage-light.hover\\:bg-white\\/20[href$=\"sacramento\"] > .min-w-0 > .sm\\:text-base.block"
+      ],
+      "text": "Greater Sacramento",
+      "reasons": [
+        "Element's background color could not be determined due to a background gradient"
+      ]
+    },
+    {
+      "id": "INC10",
+      "rule": "color-contrast",
+      "route": "/",
+      "target": [
+        ".backdrop-blur-md > .sm\\:grid-cols-2.grid.grid-cols-1 > .sm\\:col-span-2.focus-visible\\:outline-sage-light[href$=\"palm-desert\"] > .min-w-0 > .sm\\:text-base.block"
+      ],
+      "text": "Palm Desert &amp; Nearby Cities",
+      "reasons": [
+        "Element's background color could not be determined due to a background gradient"
+      ]
+    },
+    {
+      "id": "INC11",
+      "rule": "color-contrast",
+      "route": "/",
+      "target": [
+        ".backdrop-blur-md > .sm\\:grid-cols-2.grid.grid-cols-1 > .sm\\:col-span-2.focus-visible\\:outline-sage-light[href$=\"palm-desert\"] > .min-w-0 > .text-xs.font-normal.text-white\\/80"
+      ],
+      "text": "Indian Wells, Bermuda Dunes, La Quinta, Indio &amp; Coachella",
+      "reasons": [
+        "Element's background color could not be determined due to a background gradient"
+      ]
+    },
+    {
+      "id": "INC12",
+      "rule": "color-contrast",
+      "route": "/",
+      "target": [
+        ".max-w-4xl > .text-3xl.sm\\:text-4xl.lg\\:text-5xl"
+      ],
+      "text": "Ready for Fresh, Clean Turf?",
+      "reasons": [
+        "Element's background color could not be determined because it is overlapped by another element"
+      ]
+    },
+    {
+      "id": "INC13",
+      "rule": "color-contrast",
+      "route": "/",
+      "target": [
+        ".text-gray-200.max-w-2xl.mt-4"
+      ],
+      "text": "Select your area below for a free, no-obligation quote.",
+      "reasons": [
+        "Element's background color could not be determined because it is overlapped by another element"
+      ]
+    },
+    {
+      "id": "INC14",
+      "rule": "color-contrast",
+      "route": "/",
+      "target": [
+        ".mt-8.max-w-xl.mx-auto > .sm\\:grid-cols-2.grid.grid-cols-1 > .focus-visible\\:outline-sage-light.hover\\:bg-white\\/20[href$=\"huntington-beach\"] > .min-w-0 > .sm\\:text-base.block"
+      ],
+      "text": "Huntington Beach / LA Area",
+      "reasons": [
+        "Element's background color could not be determined because it is overlapped by another element"
+      ]
+    },
+    {
+      "id": "INC15",
+      "rule": "color-contrast",
+      "route": "/",
+      "target": [
+        ".mt-8.max-w-xl.mx-auto > .sm\\:grid-cols-2.grid.grid-cols-1 > .focus-visible\\:outline-sage-light.hover\\:bg-white\\/20[href$=\"murrieta\"] > .min-w-0 > .sm\\:text-base.block"
+      ],
+      "text": "Murrieta / Inland Empire",
+      "reasons": [
+        "Element's background color could not be determined because it is overlapped by another element"
+      ]
+    },
+    {
+      "id": "INC16",
+      "rule": "color-contrast",
+      "route": "/",
+      "target": [
+        ".mt-8.max-w-xl.mx-auto > .sm\\:grid-cols-2.grid.grid-cols-1 > .focus-visible\\:outline-sage-light.hover\\:bg-white\\/20[href$=\"martinez\"] > .min-w-0 > .sm\\:text-base.block"
+      ],
+      "text": "Martinez / Bay Area",
+      "reasons": [
+        "Element's background color could not be determined because it is overlapped by another element"
+      ]
+    },
+    {
+      "id": "INC17",
+      "rule": "color-contrast",
+      "route": "/",
+      "target": [
+        ".mt-8.max-w-xl.mx-auto > .sm\\:grid-cols-2.grid.grid-cols-1 > .focus-visible\\:outline-sage-light.hover\\:bg-white\\/20[href$=\"sacramento\"] > .min-w-0 > .sm\\:text-base.block"
+      ],
+      "text": "Greater Sacramento",
+      "reasons": [
+        "Element's background color could not be determined because it is overlapped by another element"
+      ]
+    },
+    {
+      "id": "INC18",
+      "rule": "color-contrast",
+      "route": "/",
+      "target": [
+        ".mt-8.max-w-xl.mx-auto > .sm\\:grid-cols-2.grid.grid-cols-1 > .sm\\:col-span-2.focus-visible\\:outline-sage-light[href$=\"palm-desert\"] > .min-w-0 > .sm\\:text-base.block"
+      ],
+      "text": "Palm Desert &amp; Nearby Cities",
+      "reasons": [
+        "Element's background color could not be determined because it is overlapped by another element"
+      ]
+    },
+    {
+      "id": "INC19",
+      "rule": "color-contrast",
+      "route": "/",
+      "target": [
+        ".mt-8.max-w-xl.mx-auto > .sm\\:grid-cols-2.grid.grid-cols-1 > .sm\\:col-span-2.focus-visible\\:outline-sage-light[href$=\"palm-desert\"] > .min-w-0 > .text-xs.font-normal.text-white\\/80"
+      ],
+      "text": "Indian Wells, Bermuda Dunes, La Quinta, Indio &amp; Coachella",
+      "reasons": [
+        "Element's background color could not be determined because it is overlapped by another element"
+      ]
+    },
+    {
+      "id": "INC20",
+      "rule": "color-contrast",
+      "route": "/",
+      "target": [
+        ".sm\\:flex-row.max-w-7xl.justify-between > .text-gray-700"
+      ],
+      "text": "We use cookies to improve your experience and analyze site traffic. By accepting, you consent to our use of cookies.",
+      "reasons": [
+        "Element's background color could not be determined because it partially overlaps other elements"
+      ]
+    },
+    {
+      "id": "INC21",
+      "rule": "color-contrast",
+      "route": "/locations/palm-desert",
+      "target": [
+        "span:nth-child(1) > .hover\\:text-white.hover\\:underline.underline-offset-4"
+      ],
+      "text": "Home",
+      "reasons": [
+        "Element's background color could not be determined due to a background gradient"
+      ]
+    },
+    {
+      "id": "INC22",
+      "rule": "color-contrast",
+      "route": "/locations/palm-desert",
+      "target": [
+        "span:nth-child(2) > .hover\\:text-white.hover\\:underline.underline-offset-4"
+      ],
+      "text": "Service Areas",
+      "reasons": [
+        "Element's background color could not be determined due to a background gradient"
+      ]
+    },
+    {
+      "id": "INC23",
+      "rule": "color-contrast",
+      "route": "/locations/palm-desert",
+      "target": [
+        "span[aria-current=\"page\"]"
+      ],
+      "text": "Palm Desert",
+      "reasons": [
+        "Element's background color could not be determined due to a background gradient"
+      ]
+    },
+    {
+      "id": "INC24",
+      "rule": "color-contrast",
+      "route": "/locations/palm-desert",
+      "target": [
+        ".tracking-wider"
+      ],
+      "text": "Palm Desert service area",
+      "reasons": [
+        "Element's background color could not be determined due to a background gradient"
+      ]
+    },
+    {
+      "id": "INC25",
+      "rule": "color-contrast",
+      "route": "/locations/palm-desert",
+      "target": [
+        "h1"
+      ],
+      "text": "Artificial Turf Cleaning in Palm Desert",
+      "reasons": [
+        "Element's background color could not be determined due to a background gradient"
+      ]
+    },
+    {
+      "id": "INC26",
+      "rule": "color-contrast",
+      "route": "/locations/palm-desert",
+      "target": [
+        "h1 > .text-cream"
+      ],
+      "text": "in Palm Desert",
+      "reasons": [
+        "Element's background color could not be determined due to a background gradient"
+      ]
+    },
+    {
+      "id": "INC27",
+      "rule": "color-contrast",
+      "route": "/locations/palm-desert",
+      "target": [
+        ".sm\\:text-xl"
+      ],
+      "text": "",
+      "reasons": [
+        "Element's background color could not be determined due to a background gradient"
+      ]
+    },
+    {
+      "id": "INC28",
+      "rule": "color-contrast",
+      "route": "/locations/palm-desert",
+      "target": [
+        ".text-white\\/75"
+      ],
+      "text": "Free quote · Service at your property · Address-based coverage confirmation",
+      "reasons": [
+        "Element's background color could not be determined due to a background gradient"
+      ]
+    },
+    {
+      "id": "INC29",
+      "rule": "color-contrast",
+      "route": "/locations/palm-desert",
+      "target": [
+        ".sm\\:flex-row.flex-col.justify-between > .text-gray-700"
+      ],
+      "text": "We use cookies to improve your experience and analyze site traffic. By accepting, you consent to our use of cookies.",
+      "reasons": [
+        "Element's background color could not be determined because it partially overlaps other elements"
+      ]
+    },
+    {
+      "id": "INC30",
+      "rule": "color-contrast",
+      "route": "/locations/murrieta",
+      "target": [
+        ".hover\\:text-white[href=\"/\"]"
+      ],
+      "text": "Home",
+      "reasons": [
+        "Element's background color could not be determined because element contains an image node"
+      ]
+    },
+    {
+      "id": "INC31",
+      "rule": "color-contrast",
+      "route": "/locations/murrieta",
+      "target": [
+        ".hover\\:text-white[href$=\"locations\"]"
+      ],
+      "text": "Locations",
+      "reasons": [
+        "Element's background color could not be determined because element contains an image node"
+      ]
+    },
+    {
+      "id": "INC32",
+      "rule": "color-contrast",
+      "route": "/locations/murrieta",
+      "target": [
+        ".text-white\\/60 > .text-white"
+      ],
+      "text": "Murrieta, CA",
+      "reasons": [
+        "Element's background color could not be determined because element contains an image node"
+      ]
+    },
+    {
+      "id": "INC33",
+      "rule": "color-contrast",
+      "route": "/locations/murrieta",
+      "target": [
+        "h1"
+      ],
+      "text": "Turf Cleaning &amp; Maintenancein Murrieta, CA",
+      "reasons": [
+        "Element's background color could not be determined because element contains an image node"
+      ]
+    },
+    {
+      "id": "INC34",
+      "rule": "color-contrast",
+      "route": "/locations/murrieta",
+      "target": [
+        ".text-cream"
+      ],
+      "text": "in Murrieta, CA",
+      "reasons": [
+        "Element's background color could not be determined because element contains an image node"
+      ]
+    },
+    {
+      "id": "INC35",
+      "rule": "color-contrast",
+      "route": "/locations/murrieta",
+      "target": [
+        ".text-white\\/80.sm\\:text-xl.mb-8"
+      ],
+      "text": "Cleaning, Grooming &amp; Care for Your Turf",
+      "reasons": [
+        "Element's background color could not be determined because element contains an image node"
+      ]
+    },
+    {
+      "id": "INC36",
+      "rule": "color-contrast",
+      "route": "/locations/murrieta",
+      "target": [
+        ".sm\\:flex-row.flex-col.gap-4 > .text-gray-700"
+      ],
+      "text": "We use cookies to improve your experience and analyze site traffic. By accepting, you consent to our use of cookies.",
+      "reasons": [
+        "Element's background color could not be determined because it partially overlaps other elements"
+      ]
+    },
+    {
+      "id": "INC37",
+      "rule": "frame-tested",
+      "route": "/locations/murrieta",
+      "target": [
+        "iframe"
+      ],
+      "text": "",
+      "reasons": [
+        "The iframe still has to be tested with axe-core"
+      ]
+    },
+    {
+      "id": "INC38",
+      "rule": "color-contrast",
+      "route": "/services/disinfect-deodorize",
+      "target": [
+        ".hover\\:text-white[href=\"/\"]"
+      ],
+      "text": "Home",
+      "reasons": [
+        "Element's background color could not be determined because it is overlapped by another element"
+      ]
+    },
+    {
+      "id": "INC39",
+      "rule": "color-contrast",
+      "route": "/services/disinfect-deodorize",
+      "target": [
+        ".hover\\:text-white[href$=\"services\"]"
+      ],
+      "text": "Services",
+      "reasons": [
+        "Element's background color could not be determined because it is overlapped by another element"
+      ]
+    },
+    {
+      "id": "INC40",
+      "rule": "color-contrast",
+      "route": "/services/disinfect-deodorize",
+      "target": [
+        ".text-white\\/70 > .text-white.font-medium"
+      ],
+      "text": "Disinfect &amp; Deodorize",
+      "reasons": [
+        "Element's background color could not be determined because it is overlapped by another element"
+      ]
+    },
+    {
+      "id": "INC41",
+      "rule": "color-contrast",
+      "route": "/services/disinfect-deodorize",
+      "target": [
+        "h1"
+      ],
+      "text": "Disinfect &amp; Deodorize",
+      "reasons": [
+        "Element's background color could not be determined because it is overlapped by another element"
+      ]
+    },
+    {
+      "id": "INC42",
+      "rule": "color-contrast",
+      "route": "/services/disinfect-deodorize",
+      "target": [
+        ".sm\\:text-xl"
+      ],
+      "text": "Turf cleaning and odor treatment with a plan suited to your turf, pet use, and product-specific care requirements.",
+      "reasons": [
+        "Element's background color could not be determined because it is overlapped by another element"
+      ]
+    },
+    {
+      "id": "INC43",
+      "rule": "color-contrast",
+      "route": "/services/disinfect-deodorize",
+      "target": [
+        ".mb-3.text-2xl.sm\\:text-3xl"
+      ],
+      "text": "Interested in Disinfect &amp; Deodorize?",
+      "reasons": [
+        "Element's background color could not be determined due to a background gradient"
+      ]
+    },
+    {
+      "id": "INC44",
+      "rule": "color-contrast",
+      "route": "/services/disinfect-deodorize",
+      "target": [
+        ".from-cream > .max-w-2xl.mb-8.leading-relaxed"
+      ],
+      "text": "Every property is different. Contact us for a free, no-obligation quote tailored to your turf size, use, access, and condition.",
+      "reasons": [
+        "Element's background color could not be determined due to a background gradient"
+      ]
+    },
+    {
+      "id": "INC45",
+      "rule": "color-contrast",
+      "route": "/services/disinfect-deodorize",
+      "target": [
+        ".hover\\:text-forest-light"
+      ],
+      "text": "",
+      "reasons": [
+        "Element's background color could not be determined due to a background gradient"
+      ]
+    },
+    {
+      "id": "INC46",
+      "rule": "color-contrast",
+      "route": "/services/disinfect-deodorize",
+      "target": [
+        ".sm\\:text-4xl.text-3xl.mb-4"
+      ],
+      "text": "Ready to Restore Your Turf?",
+      "reasons": [
+        "Element's background color could not be determined due to a background gradient"
+      ]
+    },
+    {
+      "id": "INC47",
+      "rule": "color-contrast",
+      "route": "/services/disinfect-deodorize",
+      "target": [
+        ".max-w-4xl.sm\\:px-6.lg\\:px-8 > .text-lg.text-white\\/85.max-w-2xl"
+      ],
+      "text": "Request a free, no-obligation quote for disinfect &amp; deodorize and discuss the work that fits your property.",
+      "reasons": [
+        "Element's background color could not be determined due to a background gradient"
+      ]
+    },
+    {
+      "id": "INC48",
+      "rule": "color-contrast",
+      "route": "/services/disinfect-deodorize",
+      "target": [
+        ".bg-white\\/10"
+      ],
+      "text": "",
+      "reasons": [
+        "Element's background color could not be determined due to a background gradient"
+      ]
+    },
+    {
+      "id": "INC49",
+      "rule": "color-contrast",
+      "route": "/services/disinfect-deodorize",
+      "target": [
+        ".sm\\:flex-row.gap-4.justify-between > .text-gray-700"
+      ],
+      "text": "We use cookies to improve your experience and analyze site traffic. By accepting, you consent to our use of cookies.",
+      "reasons": [
+        "Element's background color could not be determined because it partially overlaps other elements"
+      ]
+    },
+    {
+      "id": "INC50",
+      "rule": "color-contrast",
+      "route": "/commercial-turf-cleaning/palm-desert",
+      "target": [
+        "span:nth-child(1) > .hover\\:text-white.hover\\:underline.underline-offset-4"
+      ],
+      "text": "Home",
+      "reasons": [
+        "Element's background color could not be determined due to a background gradient"
+      ]
+    },
+    {
+      "id": "INC51",
+      "rule": "color-contrast",
+      "route": "/commercial-turf-cleaning/palm-desert",
+      "target": [
+        "span:nth-child(2) > .hover\\:text-white.hover\\:underline.underline-offset-4"
+      ],
+      "text": "Commercial Turf Cleaning",
+      "reasons": [
+        "Element's background color could not be determined due to a background gradient"
+      ]
+    },
+    {
+      "id": "INC52",
+      "rule": "color-contrast",
+      "route": "/commercial-turf-cleaning/palm-desert",
+      "target": [
+        "span[aria-current=\"page\"]"
+      ],
+      "text": "Palm Desert",
+      "reasons": [
+        "Element's background color could not be determined due to a background gradient"
+      ]
+    },
+    {
+      "id": "INC53",
+      "rule": "color-contrast",
+      "route": "/commercial-turf-cleaning/palm-desert",
+      "target": [
+        ".tracking-wider"
+      ],
+      "text": "Palm Desert service area",
+      "reasons": [
+        "Element's background color could not be determined due to a background gradient"
+      ]
+    },
+    {
+      "id": "INC54",
+      "rule": "color-contrast",
+      "route": "/commercial-turf-cleaning/palm-desert",
+      "target": [
+        "h1"
+      ],
+      "text": "Commercial Turf Cleaning in Palm Desert",
+      "reasons": [
+        "Element's background color could not be determined due to a background gradient"
+      ]
+    },
+    {
+      "id": "INC55",
+      "rule": "color-contrast",
+      "route": "/commercial-turf-cleaning/palm-desert",
+      "target": [
+        "h1 > .text-cream"
+      ],
+      "text": "in Palm Desert",
+      "reasons": [
+        "Element's background color could not be determined due to a background gradient"
+      ]
+    },
+    {
+      "id": "INC56",
+      "rule": "color-contrast",
+      "route": "/commercial-turf-cleaning/palm-desert",
+      "target": [
+        ".sm\\:text-xl"
+      ],
+      "text": "",
+      "reasons": [
+        "Element's background color could not be determined due to a background gradient"
+      ]
+    },
+    {
+      "id": "INC57",
+      "rule": "color-contrast",
+      "route": "/commercial-turf-cleaning/palm-desert",
+      "target": [
+        ".text-white\\/75"
+      ],
+      "text": "Free quote · Service at your property · Address-based coverage confirmation",
+      "reasons": [
+        "Element's background color could not be determined due to a background gradient"
+      ]
+    },
+    {
+      "id": "INC58",
+      "rule": "color-contrast",
+      "route": "/commercial-turf-cleaning/palm-desert",
+      "target": [
+        ".sm\\:flex-row.flex-col.justify-between > .text-gray-700"
+      ],
+      "text": "We use cookies to improve your experience and analyze site traffic. By accepting, you consent to our use of cookies.",
+      "reasons": [
+        "Element's background color could not be determined because it partially overlaps other elements"
+      ]
+    },
+    {
+      "id": "INC59",
+      "rule": "color-contrast",
+      "route": "/blog/artificial-turf-cleaning-palm-desert",
+      "target": [
+        ".text-center.max-w-4xl.sm\\:px-6 > .text-3xl.sm\\:text-4xl"
+      ],
+      "text": "Ready for Cleaner, Fresher Turf?",
+      "reasons": [
+        "Element's background color could not be determined due to a background gradient"
+      ]
+    },
+    {
+      "id": "INC60",
+      "rule": "color-contrast",
+      "route": "/blog/artificial-turf-cleaning-palm-desert",
+      "target": [
+        ".text-white\\/85"
+      ],
+      "text": "Share the property address, approximate turf size, the condition you want addressed, and access details. We'll review the cleaning scope for your home, business, or managed property.",
+      "reasons": [
+        "Element's background color could not be determined due to a background gradient"
+      ]
+    },
+    {
+      "id": "INC61",
+      "rule": "color-contrast",
+      "route": "/blog/artificial-turf-cleaning-palm-desert",
+      "target": [
+        ".bg-white\\/10"
+      ],
+      "text": "",
+      "reasons": [
+        "Element's background color could not be determined due to a background gradient"
+      ]
+    },
+    {
+      "id": "INC62",
+      "rule": "color-contrast",
+      "route": "/blog/artificial-turf-cleaning-palm-desert",
+      "target": [
+        ".justify-between.sm\\:flex-row.flex-col > .text-gray-700"
+      ],
+      "text": "We use cookies to improve your experience and analyze site traffic. By accepting, you consent to our use of cookies.",
+      "reasons": [
+        "Element's background color could not be determined because it partially overlaps other elements"
+      ]
+    },
+    {
+      "id": "INC63",
+      "rule": "color-contrast",
+      "route": "/blog/artificial-turf-cleaning-palm-desert",
+      "target": [
+        ".text-lg.mb-2"
+      ],
+      "text": "Need Professional Turf Cleaning?",
+      "reasons": [
+        "Element's background color could not be determined due to a background gradient"
+      ]
+    },
+    {
+      "id": "INC64",
+      "rule": "color-contrast",
+      "route": "/blog/artificial-turf-cleaning-palm-desert",
+      "target": [
+        ".text-white\\/80.mb-5.leading-relaxed"
+      ],
+      "text": "Murphy's Turf serves communities across California. Get a free, no-obligation quote today.",
+      "reasons": [
+        "Element's background color could not be determined due to a background gradient"
+      ]
+    },
+    {
+      "id": "INC65",
+      "rule": "color-contrast",
+      "route": "/blog/artificial-turf-cleaning-palm-desert",
+      "target": [
+        ".hover\\:text-white"
+      ],
+      "text": "",
+      "reasons": [
+        "Element's background color could not be determined due to a background gradient"
+      ]
+    }
+  ]
+}

@@ -1,11 +1,17 @@
 import type { Metadata, Viewport } from 'next';
+import { Suspense } from 'react';
 import { Montserrat, Open_Sans } from 'next/font/google';
-import Script from 'next/script';
+import { JsonLd } from '@/components/seo/JsonLd';
+import { generateLocalBusinessSchema } from '@/lib/seo/schema';
+import { COMPANY_DESCRIPTION } from '@/lib/seo/constants';
 import dynamic from 'next/dynamic';
 import './globals.css';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { GoogleAnalytics } from '@/components/analytics/GoogleAnalytics';
+import AttributionCapture from '@/components/analytics/AttributionCapture';
+import Script from 'next/script';
+import { CONSENT_INITIALIZATION_SCRIPT } from '@/lib/analytics/consent';
 import { GTMHead, GTMBody } from '@/components/analytics/GoogleTagManager';
 
 const ExitIntentPopup = dynamic(() => import('@/components/ExitIntentPopup'));
@@ -45,7 +51,7 @@ export const metadata: Metadata = {
     template: "%s | Murphy's Turf",
   },
   description:
-    "California's premier artificial turf cleaning company. We provide pet-safe turf cleaning, disinfecting, deodorizing, and maintenance services. Serving Murrieta, Huntington Beach, Martinez, and Sacramento. Get a free quote today!",
+    "Artificial turf cleaning, debris removal, grooming, pet odor treatment, and maintenance services. Serving Murrieta, Huntington Beach, Martinez, Sacramento, and Palm Desert. Get a free quote today!",
   keywords: [
     'artificial turf cleaning California',
     'turf cleaning Murrieta',
@@ -53,7 +59,7 @@ export const metadata: Metadata = {
 'pet turf cleaning Huntington Beach',
     'turf disinfect deodorize Martinez',
     'turf maintenance Sacramento',
-    'pet-safe turf cleaning Southern California',
+    'pet turf cleaning Southern California',
   ],
   icons: {
     icon: [
@@ -62,16 +68,10 @@ export const metadata: Metadata = {
     ],
     apple: '/apple-touch-icon.png',
   },
-  manifest: '/manifest.json',
-  other: {
-    // AI crawler / LLM SEO signals
-    'ai-content-declaration': 'human-authored',
-    'content-type-ai-readable': 'true',
-  },
+  manifest: '/manifest.webmanifest',
   openGraph: {
     title: "Murphy's Turf | Professional Artificial Turf Cleaning in California",
-    description:
-      "California's premier artificial turf cleaning company, serving communities statewide.",
+    description: COMPANY_DESCRIPTION,
     type: 'website',
     locale: 'en_US',
     siteName: "Murphy's Turf",
@@ -97,7 +97,9 @@ export default function RootLayout({
       className={`${montserrat.variable} ${openSans.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-body">
+        <Script id="google-consent" strategy="beforeInteractive" dangerouslySetInnerHTML={{ __html: CONSENT_INITIALIZATION_SCRIPT }} />
         <GoogleAnalytics />
+        <Suspense fallback={null}><AttributionCapture /></Suspense>
         <GTMHead />
         <GTMBody />
         <Header />
@@ -107,46 +109,7 @@ export default function RootLayout({
         <MobileStickyQuote />
         <CookieConsent />
         {/* GHL form_embed.js removed — replaced with native LeadForm + Netlify function */}
-        <Script
-          id="structured-data"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "LocalBusiness",
-              "name": "Murphy's Turf",
-              "description": "Professional artificial turf cleaning company serving California with pet-safe cleaning technology.",
-              "url": "https://murphysturf.com",
-              "contactPoint": [
-                { "@type": "ContactPoint", "telephone": "+19513313300", "areaServed": ["Huntington Beach", "Murrieta"], "contactType": "customer service" },
-                { "@type": "ContactPoint", "telephone": "+19253380048", "areaServed": ["Martinez", "Bay Area"], "contactType": "customer service" },
-                { "@type": "ContactPoint", "telephone": "+19164325033", "areaServed": ["Sacramento"], "contactType": "customer service" }
-              ],
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "26323 Jefferson Avenue",
-                "addressLocality": "Murrieta",
-                "addressRegion": "CA",
-                "postalCode": "92562",
-                "addressCountry": "US"
-              },
-              "areaServed": [
-                { "@type": "City", "name": "Huntington Beach" },
-                { "@type": "City", "name": "Murrieta" },
-                { "@type": "City", "name": "Martinez" },
-                { "@type": "City", "name": "Sacramento" }
-              ],
-              "openingHours": ["Mo-Fr 07:00-18:00", "Sa 08:00-16:00"],
-              "priceRange": "$$",
-              "image": "https://murphysturf.com/images/logo.avif",
-              "sameAs": [
-                "https://www.instagram.com/murphysturfcare/",
-                "https://www.facebook.com/profile.php?id=100090088264095",
-                "https://www.youtube.com/@murphysturfcare/featured"
-              ]
-            })
-          }}
-        />
+        <JsonLd schema={generateLocalBusinessSchema()} />
       </body>
     </html>
   );

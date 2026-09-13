@@ -1,0 +1,45 @@
+# Quote form and campaign attribution QA
+
+September 12, 2026. Source changes and local simulation only; no real contact, message, account change, or deployment was made.
+
+## Findings and repairs
+
+The active shared `LeadForm` did not call the existing UTM or conversion helpers. It sent region/city and form answers to the Netlify function, but no campaign parameters. The function accepted none of those parameters into its CRM payload. Displaying the success message did not emit a successful-lead event.
+
+The shared layout now captures an accepted visitor's campaign parameters through `AttributionCapture`, inside a null-fallback Suspense boundary. The allowlist is `utm_source`, `utm_medium`, `utm_campaign`, `utm_term`, `utm_content`, `gclid`, `gbraid`, `wbraid`, and a query-free `landing_page` path. It retains the latest campaign through navigation in session storage; a new campaign replaces the previous record so old click IDs cannot be combined with a new source. It does not copy the complete URL, unrelated query parameters, or form identity fields into attribution. Without explicit effective consent, campaign capture and the new conversion call are omitted. A denied choice clears the captured campaign. Storage failures do not block the quote form.
+
+All consent consumers use the same effective current-page choice. An explicit Accept or Decline takes precedence over saved data even when persistence fails; in particular, a failed Decline write cannot keep using an older stored acceptance. A shared storage listener updates the effective choice before notifying the banner and attribution capture. Cross-tab deletion returns to denied/unknown, clears campaign data, and reopens the banner. On a new document, only a successfully saved explicit acceptance restores grants; inaccessible or missing storage defaults to denied.
+
+The form passes this context to `netlify/functions/lead.mts`. Analytics consent and the quote communication checkbox remain separate: declining analytics does not change a visitor's communication selection, and checking communication permission does not grant analytics consent. The existing `Website` source, `location-palm-desert` tag, actual city, four custom field IDs, and `Website - {locationCity}` Contact Source format remain intact.
+
+The function validates JSON shape, required fields, email, service selections, and service-area slug before calling the CRM. A confirmed contact ID is required for a successful response. Neither raw CRM error bodies nor exception details are logged. The form prevents concurrent duplicate submissions and checks the function's success response before showing confirmation.
+
+After confirmed success, the form calls the existing conversion helper. It emits GA4 `generate_lead` and the existing `lead_conversion` data-layer event, containing only service type and the page's service-area city. The previously invented $1 lead value was removed. Failures and validation errors emit no lead event; a tracking exception cannot turn a submitted lead into an error or encourage a duplicate retry. No ad conversion ID, label, financial value, or account configuration was invented.
+
+The shared form heading is now H2. Its sage button uses forest-dark text with the established sage-light hover to address the contrast finding while retaining the design.
+
+## CRM attribution storage
+
+The documented Create Contact API does not expose writable native attribution fields. The implementation therefore preserves campaign context in a contact note after successful creation. HighLevel documents `POST /contacts/:contactId/notes`, requiring a note body, and assigns it the same `contacts.write` scope as contact creation. No note-author identity or new custom-field ID is assumed. [Create Note, API version 2021-07-28](https://marketplace.gohighlevel.com/docs/2021-07-28/ghl/contacts/create-note/index.html), [HighLevel scopes](https://marketplace.gohighlevel.com/docs/Authorization/Scopes/index.html).
+
+The note contains only the bounded attribution allowlist. Its request has a **2.5-second timeout**. A note error or timeout logs a safe operational warning and leaves the confirmed lead successful. Optional `GHL_ATTRIBUTION_FIELD_IDS` maps the same allowlist to actual pre-existing custom-field IDs for structured reporting. Empty or invalid mapping does not block a request; reserved form-field IDs and duplicate mappings are excluded. Campaign notes work without this optional mapping. Configuration is described in `.env.example`.
+
+A note preserves CRM context; it does not establish native First/Last Attribution reporting or Google Ads offline conversion delivery. Dedicated CRM fields, ad conversion actions, GA4 key-event settings, and their downstream use still require account-level verification. Google's `generate_lead` is the recommended generated-lead event; configured financial values must have an actual business basis. [Google recommended events](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?authuser=3&client_type=gtm#generate_lead).
+
+## Verification
+
+**94 scoped tests passed across 11 files. Scoped ESLint and TypeScript passed.** The integration test runs the actual form through the actual function with all network calls replaced by local mocks. It verifies the Indio page under Palm Desert, CRM routing and existing custom fields, campaign notes, explicit field mappings, separate consent selections, exactly one success event, validation/rejection behavior, duplicate-submit prevention, analytics failure, and note failure. Full-pipeline regressions also cover failed Accept persistence and failed Decline persistence over stale saved acceptance. Other tests cover consent reload/bootstrap ordering, cross-tab deletion and subscriber ordering, campaign navigation, blocked storage, and allowlist validation.
+
+The final integration build and Netlify function bundle passed, as did all 859 tests across 72 files, lint and TypeScript. Exported-page browser checks exercised campaign entry on the homepage, navigation to Palm Desert, a simulated rejection and a successful retry. Accepted, declined and blocked-storage acceptance scenarios passed: failures emitted no conversion, consented confirmations emitted exactly one, and no form identity fields appeared in the conversion events. Every external request was blocked and all six form requests were intercepted. [Browser evidence](audits/2026-09-12-attribution-browser-qa.json).
+
+These checks establish local behavior, not live delivery. Production project/CRM credentials were unavailable for this task. An authorized live test still needs to verify contact creation, regional workflow/notification routing, note receipt, and the intended Analytics/Ads destination. No new deployment or live write was performed during this review.
+
+## Final Palm Desert tag verification
+
+The exact new account tag is **`location-palm-desert`**, alongside the existing **`website-lead`** tag. This follows the existing `location-{region slug}` convention used by the contact function and legacy regional test-contact script. HighLevel documents contact `tags` as an array of names; the source does not assume undocumented automatic tag creation. [Create Contact, API version 2021-07-28](https://marketplace.gohighlevel.com/docs/2021-07-28/ghl/contacts/create-contact/index.html).
+
+The final server check now resolves both the region and page city through the shared location inventory. Invalid region/city pairs are rejected before any CRM call; valid city casing is normalized to the canonical city name. The separately entered property city remains a contact field, preserving address-based coverage confirmation for neighborhoods such as Sun City Palm Desert. The tag and `Website - {canonical page city}` field have no unknown-value fallback.
+
+**52 routing/pipeline/function tests passed across four files**, including actual form submissions through all 12 Palm Desert route components (residential and commercial, hub and five cities) with mocked CRM calls, the four existing regional tag conventions, and invalid/mismatched page cities. An inventory contract also renders all 112 legacy child pages (56 residential and 56 commercial), captures their actual form city/region props, and verifies that the contact function accepts each pair while preserving its regional tag and Contact Source. Scoped ESLint and TypeScript passed. Netlify's installed function packager also built `lead.zip` successfully; the extracted bundled function executed a mocked request with the expected Palm Desert tag and canonical Indio source.
+
+In GHL, the tag must exist in the same sub-account selected by the production `GHL_LOCATION_ID`. Account workflows still need the intended Palm Desert tag trigger, assignee/recipient routing, and communication-consent handling. Attaching a tag does not itself establish those account actions. External tag creation and release verification are owned by the main task; no external write was performed by this code review.

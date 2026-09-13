@@ -1,19 +1,20 @@
 import type { SEOMetadata } from '../types';
+import { locations } from './locations';
 
 export const seoMetadata: Record<string, SEOMetadata> = {
   home: {
     title: "Murphy's Turf | Professional Artificial Turf Cleaning California",
-    description: "Murphy's Turf — 30+ years of professional artificial turf cleaning, sanitization, and deodorizing across California. Professional-grade deep cleaning. Serving Huntington Beach, Murrieta, Bay Area & Sacramento. Get a free quote today.",
+    description: "Artificial turf cleaning, debris removal, grooming, and odor treatment. Serving Huntington Beach, Murrieta, Bay Area, Sacramento & Palm Desert. Get a free quote today.",
     keywords: ["artificial turf cleaning", "synthetic turf cleaning California", "turf sanitization", "pet turf cleaning", "professional turf cleaning", "Murphy's Turf", "turf odor removal", "California turf cleaning"],
   },
   contact: {
     title: "Contact Murphy's Turf | Free Artificial Turf Cleaning Quote",
-    description: "Contact Murphy's Turf for a free artificial turf cleaning estimate. Serving Huntington Beach, Murrieta, Martinez, and Sacramento. Get a free quote today.",
+    description: "Contact Murphy's Turf for a free artificial turf cleaning estimate. Serving Huntington Beach, Murrieta, Martinez, Sacramento, and Palm Desert. Get a free quote today.",
     keywords: ["contact Murphy's Turf", "free turf cleaning quote", "artificial turf cleaning estimate", "schedule turf cleaning"],
   },
   services: {
     title: "Artificial Turf Cleaning Services | Murphy's Turf",
-    description: "Professional artificial turf cleaning services: pet hair & debris removal, blooming & decompacting, disinfect & deodorize, poop scooping, and our signature deep cleaning treatment. 30+ years experience.",
+    description: "Professional artificial turf cleaning services: pet hair & debris removal, blooming & decompacting, disinfect & deodorize, poop scooping, and our signature deep cleaning treatment. Request a free quote.",
     keywords: ["artificial turf cleaning services", "professional turf cleaning", "turf sanitization", "pet odor removal turf", "turf blooming decompacting", "poop scooping turf"],
   },
   "services/pet-hair-debris": {
@@ -23,47 +24,32 @@ export const seoMetadata: Record<string, SEOMetadata> = {
   },
   "services/blooming-decompacting": {
     title: "Turf Blooming & Decompacting Services | Murphy's Turf",
-    description: "Restore your artificial turf's natural look with professional blooming and decompacting. We lift matted fibers and loosen compacted infill for a fresh, upright appearance. 30+ years experience.",
+    description: "Turf blooming and de-compacting for matted artificial grass. Discuss the surface condition, infill, and a suitable grooming plan. Request a free quote.",
     keywords: ["turf blooming", "turf decompacting", "artificial turf restoration", "matted turf fibers", "infill decompacting", "synthetic turf rejuvenation"],
   },
   "services/disinfect-deodorize": {
     title: "Artificial Turf Disinfecting & Deodorizing | Murphy's Turf",
-    description: "Kill bacteria and eliminate odors from your artificial turf. Professional disinfecting and deodorizing that's safe for pets and kids. Get a free quote today.",
+    description: "Artificial turf odor treatment and cleaning with a scope suited to your surface. Ask about products, application, and return-to-use instructions.",
     keywords: ["turf disinfecting", "turf deodorizing", "artificial turf sanitization", "synthetic grass odor removal", "antibacterial turf treatment", "safe turf cleaning pets kids"],
   },
   "services/poop-scooping": {
     title: "Poop Scooping Service for Artificial Turf | Murphy's Turf",
-    description: "Regular poop scooping service for artificial turf. We remove pet waste and sanitize the affected area to prevent odor and bacteria buildup. Serving California.",
+    description: "Regular poop scooping service for artificial turf. Request pickup for the agreed areas and discuss any additional cleaning. Serving California.",
     keywords: ["poop scooping artificial turf", "pet waste removal turf", "dog poop cleanup synthetic grass", "turf poop scooping service", "pet waste turf sanitization"],
   },
   locations: {
     title: "Service Areas | Artificial Turf Cleaning Across California | Murphy's Turf",
-    description: "Murphy's Turf serves Huntington Beach, Murrieta, Martinez/Bay Area, and Sacramento. Professional artificial turf cleaning with 30+ years experience. Get a free quote today.",
+    description: "Murphy's Turf serves Huntington Beach, Murrieta, Martinez/Bay Area, Sacramento, and Palm Desert. Professional artificial turf cleaning with a property-specific service scope. Get a free quote today.",
     keywords: ["California artificial turf cleaning", "Huntington Beach turf cleaning", "Murrieta turf cleaning", "Bay Area turf cleaning", "Sacramento turf cleaning", "Inland Empire turf cleaning"],
   },
-  "locations/huntington-beach": {
-    title: "Artificial Turf Cleaning in Huntington Beach, CA | Murphy's Turf",
-    description: "Professional artificial turf cleaning in Huntington Beach and Orange County. Pet odor removal, professional-grade sanitization, and turf deodorizing. Call 951-331-3300 for a free quote.",
-    keywords: ["artificial turf cleaning Huntington Beach", "turf cleaning Orange County", "synthetic turf cleaning Huntington Beach", "pet turf cleaning Orange County", "professional turf cleaning Huntington Beach"],
-  },
-  "locations/murrieta": {
-    title: "Artificial Turf Cleaning in Murrieta, CA | Murphy's Turf",
-    description: "Murphy's Turf headquarters in Murrieta. Professional artificial turf cleaning, pet odor removal & professional-grade sanitization for the Inland Empire, Temecula, and surrounding areas. Call 951-331-3300.",
-    keywords: ["artificial turf cleaning Murrieta", "turf cleaning Inland Empire", "turf cleaning Temecula", "synthetic turf cleaning Murrieta", "pet turf cleaning Inland Empire", "professional turf cleaning Murrieta"],
-  },
-  "locations/martinez": {
-    title: "Artificial Turf Cleaning in Martinez & Bay Area, CA | Murphy's Turf",
-    description: "Professional artificial turf cleaning in Martinez, Walnut Creek, Concord & the East Bay. Murphy's Turf serves Contra Costa County with 30+ years experience. Call 925-338-0048.",
-    keywords: ["artificial turf cleaning Martinez", "turf cleaning East Bay", "turf cleaning Contra Costa", "Bay Area turf cleaning", "Walnut Creek turf cleaning", "professional turf cleaning Martinez"],
-  },
-  "locations/sacramento": {
-    title: "Artificial Turf Cleaning in Sacramento, CA | Murphy's Turf",
-    description: "Professional artificial turf cleaning in Sacramento. Serving Elk Grove, Roseville, Folsom & more. Beat the Central Valley heat with professional-grade deep cleaning. Call 916-432-5033.",
-    keywords: ["artificial turf cleaning Sacramento", "turf cleaning Sacramento", "turf cleaning Elk Grove", "turf cleaning Roseville", "Central Valley turf cleaning", "professional turf cleaning Sacramento"],
-  },
+  ...Object.fromEntries(locations.map((location) => [`locations/${location.slug}`, {
+    title: location.metaTitle,
+    description: location.metaDescription,
+    keywords: [`artificial turf cleaning ${location.name}`, 'pet turf cleaning', 'turf odor removal'],
+  }])),
   blog: {
     title: "Artificial Turf Cleaning Blog | Tips & Guides | Murphy's Turf",
-    description: "Expert artificial turf cleaning tips, guides, and maintenance advice from Murphy's Turf — 30+ years experience. Learn about turf sanitization, pet odor removal, and keeping synthetic grass clean.",
+    description: "Expert artificial turf cleaning tips, guides, and maintenance advice from Murphy's Turf. Learn about turf sanitization, pet odor removal, and keeping synthetic grass clean.",
     keywords: ["artificial turf cleaning blog", "synthetic turf maintenance tips", "turf cleaning guide", "turf cleaning advice", "pet turf care", "Murphy's Turf blog"],
   },
   privacy: {

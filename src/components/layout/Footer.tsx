@@ -1,9 +1,7 @@
-'use client';
-
 import Link from 'next/link';
 import Image from 'next/image';
 import { Instagram, Facebook, Youtube } from 'lucide-react';
-import NewsletterForm from '@/components/forms/NewsletterForm';
+import { locations } from '@/data/locations';
 
 /* ------------------------------------------------------------------ */
 /*  Data                                                               */
@@ -17,12 +15,7 @@ const servicesLinks = [
   { label: 'Commercial Turf Cleaning', href: '/commercial-turf-cleaning' },
 ];
 
-const locationsLinks = [
-  { label: 'Huntington Beach / LA Area', href: '/locations/huntington-beach' },
-  { label: 'Murrieta / Inland Empire', href: '/locations/murrieta' },
-  { label: 'Martinez / Bay Area', href: '/locations/martinez' },
-  { label: 'Greater Sacramento', href: '/locations/sacramento' },
-];
+const locationsLinks = locations.map(location => ({ label: location.name, href: `/locations/${location.slug}` }));
 
 const socialLinks = [
   { name: 'Instagram', href: 'https://www.instagram.com/murphysturfcare/', icon: Instagram },
@@ -43,15 +36,14 @@ export default function Footer() {
           <div className="flex flex-col items-center gap-6 md:flex-row md:justify-between">
             <div className="text-center md:text-left">
               <h3 className="font-heading text-xl font-bold text-white">
-                Stay Updated with Turf Care Tips
+                Practical Turf Care Tips
               </h3>
               <p className="mt-1 font-body text-sm text-gray-400">
-                Get seasonal advice and exclusive offers delivered to your
-                inbox.
+                Explore seasonal maintenance, pet odor advice, and desert turf care.
               </p>
             </div>
             <div className="w-full max-w-md">
-              <NewsletterForm />
+              <Link href="/blog" className="inline-flex rounded-lg bg-forest px-5 py-3 font-heading font-semibold text-white hover:bg-forest-dark focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">Read the Turf Care Guides</Link>
             </div>
           </div>
         </div>
@@ -77,7 +69,7 @@ export default function Footer() {
             </Link>
             <p className="mt-4 font-body text-sm leading-relaxed text-gray-400">
               California&apos;s trusted artificial turf cleaning experts. Specializing in pet hair
-              removal, turf deodorizing, and maintenance. Serving California since 1994.
+              removal, turf deodorizing, and maintenance. Request a service scope suited to your turf and property.
             </p>
             {/* Social Media Links */}
             <div className="mt-6 flex items-center gap-4">
@@ -169,7 +161,7 @@ export default function Footer() {
             </a>
           </p>
           <p className="font-body text-sm text-gray-400">
-            100% Pet Friendly | Eco Friendly | Satisfaction Guaranteed
+            Turf Cleaning | Pet Odor Care | Maintenance
           </p>
         </div>
       </div>

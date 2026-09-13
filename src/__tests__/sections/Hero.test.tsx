@@ -25,12 +25,10 @@ describe('Hero', () => {
     expect(img).toHaveAttribute('src', '/images/hero.jpg');
   });
 
-  it('renders all stats labels', () => {
-    render(<Hero />);
-    expect(screen.getByText('Years Experience')).toBeInTheDocument();
-    expect(screen.getByText('Happy Customers')).toBeInTheDocument();
-    expect(screen.getByText('Satisfaction Rate')).toBeInTheDocument();
-    expect(screen.getByText('Projects Completed')).toBeInTheDocument();
+  it('does not display unsourced business statistics', () => {
+    const { container } = render(<Hero />);
+    expect(container.textContent).not.toContain('Happy Customers');
+    expect(container.textContent).not.toContain('Satisfaction Rate');
   });
 
   it('renders subtitle text', () => {

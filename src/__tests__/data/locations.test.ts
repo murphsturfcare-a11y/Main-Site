@@ -19,11 +19,12 @@ const EXPECTED_PHONES: Record<string, string> = {
   murrieta: '951-331-3300',
   martinez: '925-338-0048',
   sacramento: '916-432-5033',
+  'palm-desert': '951-331-3300',
 };
 
 describe('locations data', () => {
-  it('contains exactly 4 locations', () => {
-    expect(locations).toHaveLength(4);
+  it('contains five core service areas', () => {
+    expect(locations).toHaveLength(5);
   });
 
   describe('slug integrity', () => {

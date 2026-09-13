@@ -1,0 +1,38 @@
+{
+  "verifiedAt": "2026-09-13T02:29:22.473637+00:00",
+  "site": "http://127.0.0.1:3093",
+  "scenarios": [
+    {
+      "choice": "Accept",
+      "blockedWrites": false,
+      "campaignRetainedAcrossNavigation": true,
+      "rejectedRequestConversions": 0,
+      "confirmedRequestConversions": 1,
+      "nonPIIEvents": true,
+      "requestsIntercepted": 2,
+      "uncaughtErrors": []
+    },
+    {
+      "choice": "Decline",
+      "blockedWrites": false,
+      "campaignRetainedAcrossNavigation": false,
+      "rejectedRequestConversions": 0,
+      "confirmedRequestConversions": 0,
+      "nonPIIEvents": true,
+      "requestsIntercepted": 2,
+      "uncaughtErrors": []
+    },
+    {
+      "choice": "Accept",
+      "blockedWrites": true,
+      "campaignRetainedAcrossNavigation": true,
+      "rejectedRequestConversions": 0,
+      "confirmedRequestConversions": 1,
+      "nonPIIEvents": true,
+      "requestsIntercepted": 2,
+      "uncaughtErrors": []
+    }
+  ],
+  "realSubmissions": 0,
+  "externalRequestsAllowed": 0
+}

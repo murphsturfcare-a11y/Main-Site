@@ -1,79 +1,37 @@
-import sitemap from "@/app/sitemap";
-import {
-  SITE_URL,
-  SERVICE_SLUGS,
-  LOCATION_SLUGS,
-  BLOG_SLUGS,
-} from "@/lib/seo/constants";
+import sitemap from '@/app/sitemap';
+import { SITE_URL, SERVICE_SLUGS, LOCATION_SLUGS, BLOG_SLUGS } from '@/lib/seo/constants';
+import { blogPosts } from '@/data/blog';
+import { residentialLocationParams } from '@/data/locations';
+import { commercialSubLocationParams } from '@/data/commercial';
 
-describe("sitemap()", () => {
+describe('sitemap()', () => {
   const entries = sitemap();
+  const urls = new Set(entries.map((entry) => entry.url));
 
-  it("returns an array of URL entries", () => {
-    expect(Array.isArray(entries)).toBe(true);
-    expect(entries.length).toBeGreaterThan(0);
+  it('includes every published canonical page exactly once', () => {
+    expect(urls.size).toBe(entries.length);
+    for (const path of ['', '/services', '/locations', '/blog', '/privacy-policy', '/terms-of-service', '/commercial-turf-cleaning']) expect(urls.has(`${SITE_URL}${path}`)).toBe(true);
+    for (const slug of SERVICE_SLUGS) expect(urls.has(`${SITE_URL}/services/${slug}`)).toBe(true);
+    for (const slug of LOCATION_SLUGS) expect(urls.has(`${SITE_URL}/locations/${slug}`)).toBe(true);
+    for (const slug of BLOG_SLUGS) expect(urls.has(`${SITE_URL}/blog/${slug}`)).toBe(true);
+    for (const { slug, subLocation } of residentialLocationParams()) expect(urls.has(`${SITE_URL}/locations/${slug}/${subLocation}`)).toBe(true);
+    for (const { location, subLocation } of commercialSubLocationParams()) expect(urls.has(`${SITE_URL}/commercial-turf-cleaning/${location}/${subLocation}`)).toBe(true);
   });
 
-  it("includes the homepage", () => {
-    const homepage = entries.find((e) => e.url === SITE_URL);
-    expect(homepage).toBeDefined();
-    expect(homepage!.priority).toBe(1.0);
-  });
-
-  it("includes all static pages", () => {
-    const staticPaths = [
-      "/services",
-      "/locations",
-      "/blog",
-      "/privacy-policy",
-      "/terms-of-service",
-    ];
-
-    for (const path of staticPaths) {
-      const entry = entries.find((e) => e.url === `${SITE_URL}${path}`);
-      expect(entry, `expected static page ${path} to be in sitemap`).toBeDefined();
+  it('uses actual article dates and never substitutes the build time', () => {
+    for (const post of Object.values(blogPosts)) {
+      expect(entries.find((entry) => entry.url === `${SITE_URL}/blog/${post.slug}`)?.lastModified).toBe(new Date(post.updatedDate || post.publishDate).toISOString().slice(0, 10));
     }
+    expect(entries.find((entry) => entry.url === SITE_URL)).not.toHaveProperty('lastModified');
+    expect(sitemap()).toEqual(entries);
   });
 
-  it("includes all 4 service pages", () => {
-    expect(SERVICE_SLUGS).toHaveLength(4);
-
-    for (const slug of SERVICE_SLUGS) {
-      const entry = entries.find((e) => e.url === `${SITE_URL}/services/${slug}`);
-      expect(entry, `expected service page /services/${slug} to be in sitemap`).toBeDefined();
-    }
-  });
-
-  it("includes all 4 location pages", () => {
-    expect(LOCATION_SLUGS).toHaveLength(4);
-
-    for (const slug of LOCATION_SLUGS) {
-      const entry = entries.find((e) => e.url === `${SITE_URL}/locations/${slug}`);
-      expect(entry, `expected location page /locations/${slug} to be in sitemap`).toBeDefined();
-    }
-  });
-
-  it("includes all 41 blog pages", () => {
-    expect(BLOG_SLUGS).toHaveLength(41);
-
-    for (const slug of BLOG_SLUGS) {
-      const entry = entries.find((e) => e.url === `${SITE_URL}/blog/${slug}`);
-      expect(entry, `expected blog page /blog/${slug} to be in sitemap`).toBeDefined();
-    }
-  });
-
-  it("every entry has url and lastModified fields", () => {
+  it('excludes duplicate text mirrors, redirects and unknown city pages', () => {
     for (const entry of entries) {
-      expect(entry.url).toBeDefined();
-      expect(typeof entry.url).toBe("string");
-      expect(entry.lastModified).toBeDefined();
-      expect(entry.lastModified).toBeInstanceOf(Date);
+      expect(entry.url.startsWith(`${SITE_URL}`)).toBe(true);
+      expect(entry.url).not.toMatch(/\.(?:md|txt)$/);
     }
-  });
-
-  it("all URLs use the base URL https://murphysturf.com", () => {
-    for (const entry of entries) {
-      expect(entry.url).toMatch(/^https:\/\/murphysturf\.com/);
-    }
+    expect(urls.has(`${SITE_URL}/contact`)).toBe(false);
+    expect(urls.has(`${SITE_URL}/locations/huntington-beach/turf-cleaning-in-huntington-beach`)).toBe(false);
   });
 });

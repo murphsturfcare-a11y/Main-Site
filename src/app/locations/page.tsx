@@ -1,47 +1,31 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { MapPin, ArrowRight, Phone } from 'lucide-react';
+import { locations as serviceLocations } from '@/data/locations';
 import { AnimateOnScroll, StaggerContainer, StaggerItem } from '@/components/ui/AnimateOnScroll';
 
 export const metadata: Metadata = {
   title: 'Service Locations | Artificial Turf Cleaning Across California',
   description:
-    "Murphy's Turf provides professional artificial turf cleaning and disinfecting services across California. Serving Huntington Beach, Murrieta, Martinez, and Sacramento.",
+    "Murphy's Turf provides professional artificial turf cleaning and disinfecting services across California. Serving Huntington Beach, Murrieta, Martinez, Sacramento, and Palm Desert.",
   alternates: {
     canonical: '/locations',
   },
 };
 
-const locations = [
-  {
-    city: 'Huntington Beach / LA Area',
-    slug: 'huntington-beach',
-    description:
-      'Professional-grade turf cleaning for coastal LA — from Huntington Beach to Seal Beach.',
-    highlight: 'LA Area',
-  },
-  {
-    city: 'Murrieta / Inland Empire',
-    slug: 'murrieta',
-    description:
-      'Our headquarters. Serving the entire Inland Empire from Murrieta to Temecula and beyond.',
-    highlight: 'Headquarters',
-  },
-  {
-    city: 'Martinez / Bay Area',
-    slug: 'martinez',
-    description:
-      'Expert turf cleaning across Contra Costa County and the East Bay.',
-    highlight: 'Bay Area',
-  },
-  {
-    city: 'Greater Sacramento',
-    slug: 'sacramento',
-    description:
-      'Professional turf cleaning built for Central Valley heat. Serving Sacramento to Folsom.',
-    highlight: 'Central Valley',
-  },
-];
+const regionHighlights: Record<string, string> = {
+  'huntington-beach': 'LA Coast',
+  murrieta: 'Inland Empire',
+  martinez: 'East Bay',
+  sacramento: 'Central Valley',
+  'palm-desert': 'Palm Desert & Nearby Cities',
+};
+const locations = serviceLocations.map(location => ({
+  ...location,
+  city: location.name,
+  highlight: regionHighlights[location.slug],
+  description: location.serviceAreaDescription,
+}));
 
 export default function LocationsPage() {
   return (
@@ -54,7 +38,7 @@ export default function LocationsPage() {
         <AnimateOnScroll direction="up" className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white/90 text-sm font-body px-4 py-2 rounded-full mb-6">
             <MapPin className="w-4 h-4" />
-            Proudly Serving 4 California Regions
+            Serving {locations.length} California Regions
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white font-heading mb-12 leading-tight">
             Serving California
@@ -64,7 +48,7 @@ export default function LocationsPage() {
 
           <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto text-left">
             {locations.map((location) => (
-              <StaggerItem key={location.slug}>
+              <StaggerItem key={location.slug} className="last:odd:sm:col-span-2">
                 <Link
                   href={`/locations/${location.slug}`}
                   className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden hover:-translate-y-1 block"
@@ -76,9 +60,9 @@ export default function LocationsPage() {
                         <div className="inline-block bg-cream text-forest text-xs font-semibold font-body px-3 py-1 rounded-full mb-3">
                           {location.highlight}
                         </div>
-                        <h3 className="text-2xl font-bold text-charcoal font-heading group-hover:text-forest transition-colors">
+                        <h2 className="text-2xl font-bold text-charcoal font-heading group-hover:text-forest transition-colors">
                           {location.city}
-                        </h3>
+                        </h2>
                       </div>
                       <div className="w-10 h-10 bg-cream rounded-full flex items-center justify-center group-hover:bg-sage/10 transition-colors flex-shrink-0">
                         <MapPin className="w-5 h-5 text-sage" />
@@ -87,7 +71,7 @@ export default function LocationsPage() {
                     <p className="text-charcoal-light font-body text-sm leading-relaxed mb-6">
                       {location.description}
                     </p>
-                    <div className="flex items-center gap-2 text-sage font-semibold font-body text-sm group-hover:text-forest transition-colors">
+                    <div className="flex items-center gap-2 text-forest font-semibold font-body text-sm group-hover:text-forest transition-colors">
                       View Services & Get Quote
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </div>
