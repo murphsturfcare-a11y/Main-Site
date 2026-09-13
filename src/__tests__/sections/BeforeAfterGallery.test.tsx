@@ -1,35 +1,16 @@
 import { render, screen } from '@testing-library/react';
-import { describe, it, expect } from 'vitest';
 import BeforeAfterGallery from '@/components/sections/BeforeAfterGallery';
+import { turfGalleryPhotos } from '@/data/gallery';
 
-describe('BeforeAfterGallery', () => {
-  it('renders section heading', () => {
+describe('Turf gallery', () => {
+  it('shows distinct existing photographs with descriptive captions', () => {
     render(<BeforeAfterGallery />);
-    expect(screen.getByText('See the Difference')).toBeInTheDocument();
-  });
-
-  it('renders subtitle', () => {
-    render(<BeforeAfterGallery />);
-    expect(
-      screen.getByText('Real results from real customers'),
-    ).toBeInTheDocument();
-  });
-
-  it('renders before/after image with correct src and alt', () => {
-    render(<BeforeAfterGallery />);
-    const img = screen.getByAltText(
-      "Before and after turf cleaning by Murphy's Turf",
-    );
-    expect(img).toBeInTheDocument();
-    expect(img).toHaveAttribute('src', '/images/before-after.png');
-  });
-
-  it('renders caption text', () => {
-    render(<BeforeAfterGallery />);
-    expect(
-      screen.getByText(
-        /30\+ years of experience delivering results you can see/,
-      ),
-    ).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: 'Turf Gallery' })).toBeInTheDocument();
+    expect(screen.getAllByRole('img')).toHaveLength(turfGalleryPhotos.length);
+    expect(new Set(turfGalleryPhotos.map((photo) => photo.src)).size).toBe(turfGalleryPhotos.length);
+    for (const photo of turfGalleryPhotos) {
+      expect(screen.getByAltText(photo.alt)).toHaveAttribute('src', photo.src);
+      expect(screen.getByText(photo.alt)).toBeInTheDocument();
+    }
   });
 });

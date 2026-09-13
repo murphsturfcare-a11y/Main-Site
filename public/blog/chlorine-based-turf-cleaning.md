@@ -1,80 +1,57 @@
-# The Science Behind Our Professional Chlorine-Based Cleaning Process
+# Choosing a Turf Cleaning Product: What Chlorine-Based Claims Do and Do Not Tell You
 
-> Discover how our chlorine-based cleaning solution uses oxidation to eliminate bacteria, odors, and contaminants from artificial turf without harsh chemicals. Safe for pets, kids, and the environment.
+> Understand how to evaluate turf cleaners using the actual label, intended surface, application instructions, and manufacturer compatibility instead of broad promises.
 
 **Category:** Turf Cleaning
 **Published:** February 1, 2026
-**Reading time:** 8 min read
+**Updated:** September 12, 2026
+**Reading time:** 4 min read
 **Source:** https://murphysturf.com/blog/chlorine-based-turf-cleaning
 
 ---
 
-## The Problem with Traditional Turf Cleaners
+**A description such as chlorine based does not identify a complete turf-cleaning product or establish that it is suitable for your lawn. Choose a method using the actual product label, the turf manufacturer's guidance, and the problem being treated. There is no universal dilution, contact time, or reopening rule for every turf cleaner.**
 
-When artificial turf started gaining popularity in California residential properties, homeowners and even many cleaning companies tried to use the same products they used on hard surfaces: bleach, ammonia-based cleaners, and chemical disinfectants. The results were consistently bad. Bleach faded turf fibers and degraded the UV-resistant coatings that keep synthetic grass from deteriorating in the California sun. Ammonia reacted with uric acid in pet urine to create even more potent odors. Chemical disinfectants left residues that were unsafe for pets and children.
+This guide explains what to ask before treatment. It does not provide a chemical recipe or claim that Murphy's Turf uses a particular active ingredient at every property. The selected product and work plan should be discussed for the actual visit.
 
-The artificial turf cleaning industry needed a product that could deliver hospital-grade disinfection without damaging synthetic materials or leaving toxic residues in an outdoor space where families and pets play. That need is exactly what drove the development of our professional-grade cleaning solution.
+## Start with the result being requested
 
-## How Our Cleaning Solution Works
+Cleaning may involve removing debris or residue. Deodorizing addresses an odor concern. A disinfecting claim has a different evidentiary basis and must relate to the specific product and application. Do not assume that a fresh scent or visibly groomed fibers prove all three outcomes.
 
-Our cleaning solution is a chlorine-based cleaning system engineered specifically for artificial turf applications. Its active ingredient is professional-grade chlorine tablets, combined with proprietary surfactants that enhance penetration into turf infill and backing materials.
+Write down the problem in ordinary terms: a repeatedly used dog corner, an unidentified stain, a spill, or material left in the fibers. If the issue is a low spot, detached seam, or damaged backing, choosing another cleaner does not address the installation defect.
 
-The cleaning mechanism is oxidation. When our cleaning solution contacts organic contaminants like bacteria, urine compounds, fecal residue, mold spores, or decomposing plant matter, the chlorine-based formula releases active sanitizing agents. These agents attack and break apart the molecular bonds in organic matter, destroying the contaminant at a chemical level. This is fundamentally different from cleaners that merely dissolve, dilute, or mask contamination.
+## Ask for product identification
 
-Here is what happens step by step when our cleaning solution is applied to contaminated turf:
+Request the product name and the instructions that apply to the proposed use. If disinfection is being claimed, ask how the labeled surface and intended use match this installation. A product suitable for a hard, nonporous surface does not automatically establish a use on artificial grass, infill, or backing.
 
-- **Contact:** The solution's surfactants break surface tension, allowing the solution to penetrate deep into the infill rather than beading on the surface.
+EPA explains that registered disinfectant directions identify approved uses and application conditions, including wet contact time. Read [EPA's guidance on registered disinfectants](https://www.epa.gov/pesticide-registration/selected-epa-registered-disinfectants). A provider should be able to explain how the proposed work follows the relevant directions.
 
-- **Oxidation:** The chlorine-based formula encounters bacteria, uric acid crystals, ammonia, and other organic contaminants. The active agents destroy their molecular structure.
+## Check the turf requirements independently
 
-- **Foaming:** The oxidation reaction produces oxygen gas, which creates visible foaming. This foaming action physically lifts loosened debris and dead bacteria out of the infill.
+The cleaning product and the turf system are two separate parts of the decision. Review the turf maker's restrictions on chemicals, brush types, water pressure, and infill disturbance. Include the warranty terms where applicable.
 
-- **Residue-free:** After completing its cleaning work, the solution leaves no harmful residue. No chemical buildup, no synthetic fragrance, no toxic byproducts.
+Tell the provider about repaired seams, prior discoloration, nearby plants, drains, and anything previously applied. If either the turf or previous treatment is unknown, make that uncertainty part of the assessment. A test area may help assess appearance or compatibility, but it cannot prove every performance claim.
 
-## Why Chlorine Tablets Over Other Disinfectants
+## Recognize claims that need more information
 
-We chose chlorine tablets as our cleaning solution's active ingredient after extensive testing of alternatives. Here is how it compares to other common disinfecting agents:
+- **Works in every temperature:** ask for the actual application conditions.
+- **Ready as soon as it dries:** ask for the complete reopening instructions.
+- **No residue or environmental impact:** ask what evidence supports that statement for the product and use.
+- **Eliminates every germ:** ask which organisms and surfaces are covered by the claim.
+- **Professional grade:** ask what product and process that phrase describes.
 
-- **Bleach (sodium hypochlorite):** Effective disinfectant but highly damaging to synthetic turf materials. Causes fiber discoloration, degrades UV stabilizers, and produces toxic chloramine gas when mixed with ammonia from pet urine.
+The right response to an incomplete claim is an explanation, not a stronger slogan. Do not mix household products or use pool-treatment materials as a substitute for a selected turf-cleaning method.
 
-- **Quaternary ammonium compounds (quats):** Common in household disinfectants. They leave a chemical film on surfaces that can irritate pet paw pads and are harmful if ingested. Bacteria can develop resistance to quats over time.
+## Agree on the worksite plan
 
-- **Isopropyl alcohol:** Evaporates too quickly for effective turf treatment and has limited effectiveness against bacterial biofilms in infill. Also a fire hazard in hot, dry conditions.
+Before application, identify who controls access, where equipment and water are available, and how runoff will be prevented. Confirm preparation, treatment, any required rinsing, and who checks the surface before people or pets return.
 
-- **Chlorine tablets:** Broad-spectrum antimicrobial activity against bacteria, viruses, fungi, and mold. No residue. No bacterial resistance development. Compatible with all artificial turf materials. Safe for pets and children after drying.
+Keep a record of the product and work performed. That helps a future provider avoid repeating an unsuitable treatment and gives you a useful reference if odor or staining returns. Appearance photographs can document the visit but should not be presented as laboratory evidence.
 
-Our chlorine tablet solution is also an environmentally responsible disinfectant. It does not contaminate groundwater, does not harm soil microorganisms outside the treated area, and leaves no harmful residue.
+## Discuss your own turf
 
-## Safety Profile
+See [our cleaning and odor-treatment service](https://murphysturf.com/services/disinfect-deodorize) to request an assessment. If your main concern is odor, start with [the pet-odor troubleshooting guide](https://murphysturf.com/blog/removing-pet-odors-artificial-turf); if you need a basic routine, use [the cleaning steps](https://murphysturf.com/blog/how-to-clean-artificial-turf).
 
-Safety was our top priority when developing our cleaning process. Here is what you need to know:
+### Is chlorine based the same as bleach free?
 
-- **Pet safe:** Our cleaning solution contains no bleach, no ammonia, no phenols, and no essential oils. Once the solution dries, zero chemical residue remains on the turf. Pets can safely use the area.
-
-- **Child safe:** The same residue-free decomposition that makes our cleaning solution safe for pets makes it safe for children who play on treated turf.
-
-- **Turf material safe:** Our cleaning solution has been tested on all major artificial turf fiber types — polyethylene, polypropylene, and nylon — as well as common infill materials. It does not degrade fibers, fade colors, or damage UV coatings.
-
-- **Environmentally safe:** Leaves no harmful residue. No volatile organic compounds, no persistent environmental pollutants.
-
-## Real-World Results
-
-Numbers tell the story better than words. Independent testing of artificial turf treated with our cleaning solution shows consistent results:
-
-- Significant reduction in E. coli and Staphylococcus bacteria on treated surfaces
-
-- Complete neutralization of ammonia-based odor compounds within the treatment dwell time
-
-- No measurable chemical residue on turf surfaces 30 minutes after treatment
-
-- No degradation of turf fiber tensile strength after 50 repeated applications
-
-These results are why Murphy's Turf built our entire cleaning service around this chlorine-based solution. It is the most effective product we have found for delivering a genuinely clean, safe, and odor-free artificial turf surface.
-
-## Experience Professional Cleaning with Murphy's Turf
-
-Every Murphy's Turf service is [powered by our professional-grade cleaning solution](https://murphysturf.com/services). Whether you book our [Disinfect & Deodorize](https://murphysturf.com/services) service, a full-service cleaning package, or a recurring maintenance plan, you get the benefit of the most effective artificial turf cleaning product on the market. We serve homeowners in Huntington Beach, Murrieta, Martinez, and Sacramento. [Contact us](https://murphysturf.com/locations) or [find your local office](https://murphysturf.com/locations)to schedule your first treatment.
-
----
-
-*This article was published by Murphy's Turf, California's professional artificial turf cleaning company. We serve Huntington Beach, Murrieta, Martinez, Sacramento, and the entire state with pet-safe, chlorine-based cleaning treatments. Contact us at https://murphysturf.com for a free quote.*
+The phrase alone does not answer a formulation question. Use the named product's ingredient and label information rather than treating broad chemical categories as guarantees.

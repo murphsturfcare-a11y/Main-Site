@@ -28,10 +28,10 @@ describe("SEO constants", () => {
     expect(COMPANY_TAGLINE.length).toBeGreaterThan(0);
   });
 
-  it("COMPANY_DESCRIPTION contains key terms", () => {
-    expect(COMPANY_DESCRIPTION).toContain("professional-grade");
-    expect(COMPANY_DESCRIPTION).toContain("California");
-    expect(COMPANY_DESCRIPTION).toContain("artificial turf");
+  it("COMPANY_DESCRIPTION identifies the business, service, and new coverage", () => {
+    expect(COMPANY_DESCRIPTION).toContain(COMPANY_NAME);
+    expect(COMPANY_DESCRIPTION).toContain("artificial turf cleaning");
+    expect(COMPANY_DESCRIPTION).toContain("Palm Desert");
   });
 
   it("COMPANY_EMAIL is info@murphysturf.com", () => {
@@ -67,15 +67,16 @@ describe("SEO constants", () => {
     expect(SERVICE_SLUGS).toContain("poop-scooping");
   });
 
-  it("LOCATION_SLUGS has exactly 4 entries with expected slugs", () => {
-    expect(LOCATION_SLUGS).toHaveLength(4);
+  it("LOCATION_SLUGS includes the five published regions", () => {
+    expect(LOCATION_SLUGS).toHaveLength(5);
     expect(LOCATION_SLUGS).toContain("huntington-beach");
     expect(LOCATION_SLUGS).toContain("murrieta");
     expect(LOCATION_SLUGS).toContain("martinez");
     expect(LOCATION_SLUGS).toContain("sacramento");
+    expect(LOCATION_SLUGS).toContain("palm-desert");
   });
 
-  it("BLOG_SLUGS has exactly 41 entries", () => {
-    expect(BLOG_SLUGS).toHaveLength(41);
+  it("BLOG_SLUGS includes the existing articles and four desert guides", () => {
+    expect(BLOG_SLUGS).toHaveLength(45);
   });
 });

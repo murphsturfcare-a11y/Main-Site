@@ -1,0 +1,3425 @@
+{
+  "checkedAt": "2026-09-12T23:47:17.084Z",
+  "base": "https://murphysturf.com",
+  "sitemapEntries": 215,
+  "htmlPages": 172,
+  "linkedResources": 197,
+  "additionalResourcesChecked": 25,
+  "issues": [
+    {
+      "url": "https://murphysturf.com/blog/chlorine-based-turf-cleaning",
+      "issue": "missing anchor /blog/chlorine-based-turf-cleaning#experience-professional-cleaning-with-murphy-s-turf"
+    },
+    {
+      "url": "https://murphysturf.com/blog/poop-scooping-service-worth-it",
+      "issue": "missing anchor /blog/poop-scooping-service-worth-it#getting-started-with-murphy-s-turf"
+    },
+    {
+      "url": "https://murphysturf.com/blog/turf-cleaning-huntington-beach",
+      "issue": "missing anchor /blog/turf-cleaning-huntington-beach#murphy-s-turf-in-huntington-beach"
+    },
+    {
+      "url": "https://murphysturf.com/blog/turf-cleaning-murrieta-inland-empire",
+      "issue": "missing anchor /blog/turf-cleaning-murrieta-inland-empire#murphy-s-turf-born-in-murrieta"
+    },
+    {
+      "url": "https://murphysturf.com/blog/turf-cleaning-bay-area-martinez",
+      "issue": "missing anchor /blog/turf-cleaning-bay-area-martinez#murphy-s-turf-in-the-bay-area"
+    },
+    {
+      "url": "https://murphysturf.com/blog/turf-cleaning-sacramento",
+      "issue": "missing anchor /blog/turf-cleaning-sacramento#murphy-s-turf-in-sacramento"
+    },
+    {
+      "url": "https://murphysturf.com/blog/artificial-turf-cleaning-los-angeles",
+      "issue": "missing anchor /blog/artificial-turf-cleaning-los-angeles#murphy-s-turf-serves-greater-los-angeles"
+    },
+    {
+      "url": "https://murphysturf.com/blog/artificial-turf-cleaning-anaheim",
+      "issue": "missing anchor /blog/artificial-turf-cleaning-anaheim#anaheim-s-climate-and-artificial-turf"
+    },
+    {
+      "url": "https://murphysturf.com/blog/artificial-turf-cleaning-anaheim",
+      "issue": "missing anchor /blog/artificial-turf-cleaning-anaheim#murphy-s-turf-in-anaheim-and-north-oc"
+    },
+    {
+      "url": "https://murphysturf.com/blog/artificial-turf-cleaning-riverside",
+      "issue": "missing anchor /blog/artificial-turf-cleaning-riverside#riverside-s-climate-and-turf-maintenance"
+    },
+    {
+      "url": "https://murphysturf.com/blog/artificial-turf-cleaning-riverside",
+      "issue": "missing anchor /blog/artificial-turf-cleaning-riverside#murphy-s-turf-in-riverside"
+    },
+    {
+      "url": "https://murphysturf.com/blog/artificial-turf-cleaning-irvine",
+      "issue": "missing anchor /blog/artificial-turf-cleaning-irvine#irvine-s-climate-and-turf-challenges"
+    },
+    {
+      "url": "https://murphysturf.com/blog/artificial-turf-cleaning-irvine",
+      "issue": "missing anchor /blog/artificial-turf-cleaning-irvine#murphy-s-turf-in-irvine"
+    },
+    {
+      "url": "https://murphysturf.com/blog/artificial-turf-cleaning-long-beach",
+      "issue": "missing anchor /blog/artificial-turf-cleaning-long-beach#murphy-s-turf-in-long-beach"
+    },
+    {
+      "url": "https://murphysturf.com/blog/artificial-turf-cleaning-san-diego",
+      "issue": "missing anchor /blog/artificial-turf-cleaning-san-diego#san-diego-s-dog-friendly-culture-and-turf-hygiene"
+    },
+    {
+      "url": "https://murphysturf.com/blog/artificial-turf-cleaning-san-diego",
+      "issue": "missing anchor /blog/artificial-turf-cleaning-san-diego#murphy-s-turf-in-san-diego"
+    },
+    {
+      "url": "https://murphysturf.com/blog/artificial-turf-cleaning-orange-county",
+      "issue": "missing anchor /blog/artificial-turf-cleaning-orange-county#murphy-s-turf-orange-county-s-turf-cleaning-experts"
+    },
+    {
+      "url": "https://murphysturf.com/locations/huntington-beach",
+      "issue": "broken internal resource /locations/huntington-beach/turf-cleaning-in-huntington-beach: HTTP 404"
+    }
+  ],
+  "probes": [
+    {
+      "pathname": "/seo-audit-does-not-exist",
+      "status": 404,
+      "finalUrl": "https://murphysturf.com/seo-audit-does-not-exist",
+      "type": "text/html; charset=utf-8",
+      "noindex": true
+    },
+    {
+      "pathname": "/locations/not-a-location",
+      "status": 404,
+      "finalUrl": "https://murphysturf.com/locations/not-a-location",
+      "type": "text/html; charset=utf-8",
+      "noindex": true
+    },
+    {
+      "pathname": "/blog/not-an-article",
+      "status": 404,
+      "finalUrl": "https://murphysturf.com/blog/not-an-article",
+      "type": "text/html; charset=utf-8",
+      "noindex": true
+    },
+    {
+      "pathname": "/robots.txt",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/robots.txt",
+      "type": "text/plain; charset=UTF-8",
+      "noindex": false
+    },
+    {
+      "pathname": "/llms.txt",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/llms.txt",
+      "type": "text/plain; charset=utf-8",
+      "noindex": false
+    },
+    {
+      "pathname": "/llms-full.txt",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/llms-full.txt",
+      "type": "text/plain; charset=utf-8",
+      "noindex": false
+    },
+    {
+      "pathname": "/contact",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/locations",
+      "type": "text/html; charset=UTF-8",
+      "noindex": false
+    },
+    {
+      "pathname": "/blog/hydrogen-peroxide-turf-cleaning",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/chlorine-based-turf-cleaning",
+      "type": "text/html; charset=UTF-8",
+      "noindex": false
+    }
+  ],
+  "pages": [
+    {
+      "url": "https://murphysturf.com",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/",
+      "type": "text/html; charset=UTF-8",
+      "title": "Murphy's Turf | Professional Artificial Turf Cleaning in California",
+      "description": "California's premier artificial turf cleaning company. We provide pet-safe turf cleaning, disinfecting, deodorizing, and maintenance services. Serving Murrieta, Huntington Beach, Martinez, and Sacramento. Get a free quote today!",
+      "canonical": "https://murphysturf.com/",
+      "h1": [
+        "Your Turf, Like New."
+      ],
+      "mainWords": 1008,
+      "schemaTypes": [
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/terms-of-service",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/terms-of-service",
+      "type": "text/html; charset=UTF-8",
+      "title": "Terms of Service | Murphy's Turf",
+      "description": "Murphy's Turf terms of service. Review the terms and conditions governing your use of our artificial turf cleaning services in California.",
+      "canonical": "https://murphysturf.com/terms-of-service",
+      "h1": [
+        "Terms of Service"
+      ],
+      "mainWords": 2645,
+      "schemaTypes": []
+    },
+    {
+      "url": "https://murphysturf.com/locations",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/locations",
+      "type": "text/html; charset=UTF-8",
+      "title": "Service Locations | Artificial Turf Cleaning Across California | Murphy's Turf",
+      "description": "Murphy's Turf provides professional artificial turf cleaning and disinfecting services across California. Serving Huntington Beach, Murrieta, Martinez, and Sacramento.",
+      "canonical": "https://murphysturf.com/locations",
+      "h1": [
+        "Serving CaliforniaCommunities"
+      ],
+      "mainWords": 113,
+      "schemaTypes": []
+    },
+    {
+      "url": "https://murphysturf.com/services",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/services",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning Services | Murphy's Turf",
+      "description": "Professional artificial turf cleaning and maintenance services in Murrieta, CA. Pet hair removal, blooming, disinfecting, deodorizing, and poop scooping. Get a free quote today.",
+      "canonical": "https://murphysturf.com/services",
+      "h1": [
+        "Our Services"
+      ],
+      "mainWords": 278,
+      "schemaTypes": []
+    },
+    {
+      "url": "https://murphysturf.com/blog",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog",
+      "type": "text/html; charset=UTF-8",
+      "title": "Blog | Murphy's Turf",
+      "description": "Expert artificial turf cleaning tips, pet care guides, and maintenance insights for California homeowners. Learn from Murphy's Turf professionals how to keep your synthetic turf clean, safe, and looking like new.",
+      "canonical": "https://murphysturf.com/blog",
+      "h1": [
+        "Murphy's Turf Blog"
+      ],
+      "mainWords": 820,
+      "schemaTypes": []
+    },
+    {
+      "url": "https://murphysturf.com/privacy-policy",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/privacy-policy",
+      "type": "text/html; charset=UTF-8",
+      "title": "Privacy Policy | Murphy's Turf",
+      "description": "Murphy's Turf privacy policy. Learn how we collect, use, and protect your personal information when you use our artificial turf cleaning services.",
+      "canonical": "https://murphysturf.com/privacy-policy",
+      "h1": [
+        "Privacy Policy"
+      ],
+      "mainWords": 1443,
+      "schemaTypes": []
+    },
+    {
+      "url": "https://murphysturf.com/services/pet-hair-debris",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/services/pet-hair-debris",
+      "type": "text/html; charset=UTF-8",
+      "title": "Pet Hair & Debris Removal | Murphy's Turf",
+      "description": "Professional pet hair and debris removal for artificial turf in Murrieta, CA. Murphy's Turf removes pet hair, waste, leaves, metal objects, and weeds from your synthetic lawn. Get a free quote.",
+      "canonical": "https://murphysturf.com/services/pet-hair-debris",
+      "h1": [
+        "Pet Hair & Debris Removal"
+      ],
+      "mainWords": 857,
+      "schemaTypes": [
+        "Service"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/services/blooming-decompacting",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/services/blooming-decompacting",
+      "type": "text/html; charset=UTF-8",
+      "title": "Blooming & De-Compacting | Murphy's Turf",
+      "description": "Professional turf blooming and de-compacting services in Murrieta, CA. Murphy's Turf restores matted, worn artificial grass to like-new condition with commercial-grade power brushing. Get a free quote.",
+      "canonical": "https://murphysturf.com/services/blooming-decompacting",
+      "h1": [
+        "Blooming & De-Compacting"
+      ],
+      "mainWords": 904,
+      "schemaTypes": [
+        "Service"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/services/disinfect-deodorize",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/services/disinfect-deodorize",
+      "type": "text/html; charset=UTF-8",
+      "title": "Disinfect & Deodorize | Murphy's Turf",
+      "description": "Professional artificial turf disinfecting and deodorizing in Murrieta, CA. Murphy's Turf uses a professional-grade chlorine-based cleaner to kill bacteria and eliminate pet odors without harsh chemicals. Get a free quote.",
+      "canonical": "https://murphysturf.com/services/disinfect-deodorize",
+      "h1": [
+        "Disinfect & Deodorize"
+      ],
+      "mainWords": 941,
+      "schemaTypes": [
+        "Service"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/services/poop-scooping",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/services/poop-scooping",
+      "type": "text/html; charset=UTF-8",
+      "title": "Poop Scooping & Removal | Murphy's Turf",
+      "description": "Professional poop scooping and pet waste removal for artificial turf in Murrieta, CA. Murphy's Turf offers flexible weekly and daily plans to keep your yard clean and safe. Get a free quote.",
+      "canonical": "https://murphysturf.com/services/poop-scooping",
+      "h1": [
+        "Poop Scooping & Removal"
+      ],
+      "mainWords": 955,
+      "schemaTypes": [
+        "Service"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/locations/huntington-beach",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/locations/huntington-beach",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in Huntington Beach & LA Area | Murphy's Turf",
+      "description": "Professional artificial turf cleaning in Huntington Beach, Newport Beach, Costa Mesa, Long Beach & Seal Beach. Professional-grade disinfecting. Get a free quote today.",
+      "canonical": "https://murphysturf.com/locations/huntington-beach",
+      "h1": [
+        "Turf Cleaning & Maintenancein Huntington Beach, CA"
+      ],
+      "mainWords": 1503,
+      "schemaTypes": [
+        "LocalBusiness",
+        "FAQPage",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/locations/murrieta",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/locations/murrieta",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in Murrieta & Inland Empire | Murphy's Turf HQ",
+      "description": "Murphy's Turf headquarters in Murrieta. Professional artificial turf cleaning, pet odor removal & professional-grade disinfecting for the Inland Empire & Temecula Valley. Get a free quote today.",
+      "canonical": "https://murphysturf.com/locations/murrieta",
+      "h1": [
+        "Turf Cleaning & Maintenancein Murrieta, CA"
+      ],
+      "mainWords": 1522,
+      "schemaTypes": [
+        "LocalBusiness",
+        "FAQPage",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/locations/martinez",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/locations/martinez",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in Martinez & East Bay | Murphy's Turf",
+      "description": "East Bay artificial turf cleaning experts. Murphy's Turf serves Martinez, Walnut Creek, Pleasant Hill, Concord, Antioch & Brentwood with professional-grade disinfecting. Get a free quote today.",
+      "canonical": "https://murphysturf.com/locations/martinez",
+      "h1": [
+        "Turf Cleaning & Maintenancein Martinez, CA"
+      ],
+      "mainWords": 1495,
+      "schemaTypes": [
+        "LocalBusiness",
+        "FAQPage",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/locations/huntington-beach/turf-cleaning-in-newport-beach",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/locations/huntington-beach/turf-cleaning-in-newport-beach",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in Newport Beach, CA | Murphy's Turf",
+      "description": "Professional artificial turf cleaning in Newport Beach, California. Pet-safe disinfecting, deodorizing, blooming & debris removal. 30+ years experience serving Newport Beach and the Huntington Beach area. Call (951) 331-3300 for a free quote.",
+      "canonical": "https://murphysturf.com/locations/huntington-beach/turf-cleaning-in-newport-beach",
+      "h1": [
+        "Professional Artificial Turf Cleaningin Newport Beach, CA"
+      ],
+      "mainWords": 807,
+      "schemaTypes": [
+        "LocalBusiness",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/locations/sacramento",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/locations/sacramento",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in Sacramento, CA | Murphy's Turf",
+      "description": "Sacramento's professional artificial turf cleaning. Murphy's Turf serves Elk Grove, Roseville, Folsom & Rancho Cordova with professional-grade disinfecting. Get a free quote today.",
+      "canonical": "https://murphysturf.com/locations/sacramento",
+      "h1": [
+        "Turf Cleaning & Maintenancein Sacramento, CA"
+      ],
+      "mainWords": 1553,
+      "schemaTypes": [
+        "LocalBusiness",
+        "FAQPage",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/locations/huntington-beach/turf-cleaning-in-costa-mesa",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/locations/huntington-beach/turf-cleaning-in-costa-mesa",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in Costa Mesa, CA | Murphy's Turf",
+      "description": "Professional artificial turf cleaning in Costa Mesa, California. Pet-safe disinfecting, deodorizing, blooming & debris removal. 30+ years experience serving Costa Mesa and the Huntington Beach area. Call (951) 331-3300 for a free quote.",
+      "canonical": "https://murphysturf.com/locations/huntington-beach/turf-cleaning-in-costa-mesa",
+      "h1": [
+        "Professional Artificial Turf Cleaningin Costa Mesa, CA"
+      ],
+      "mainWords": 807,
+      "schemaTypes": [
+        "LocalBusiness",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/locations/huntington-beach/turf-cleaning-in-long-beach",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/locations/huntington-beach/turf-cleaning-in-long-beach",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in Long Beach, CA | Murphy's Turf",
+      "description": "Professional artificial turf cleaning in Long Beach, California. Pet-safe disinfecting, deodorizing, blooming & debris removal. 30+ years experience serving Long Beach and the Huntington Beach area. Call (951) 331-3300 for a free quote.",
+      "canonical": "https://murphysturf.com/locations/huntington-beach/turf-cleaning-in-long-beach",
+      "h1": [
+        "Professional Artificial Turf Cleaningin Long Beach, CA"
+      ],
+      "mainWords": 807,
+      "schemaTypes": [
+        "LocalBusiness",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/locations/huntington-beach/turf-cleaning-in-irvine",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/locations/huntington-beach/turf-cleaning-in-irvine",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in Irvine, CA | Murphy's Turf",
+      "description": "Professional artificial turf cleaning in Irvine, California. Pet-safe disinfecting, deodorizing, blooming & debris removal. 30+ years experience serving Irvine and the Huntington Beach area. Call (951) 331-3300 for a free quote.",
+      "canonical": "https://murphysturf.com/locations/huntington-beach/turf-cleaning-in-irvine",
+      "h1": [
+        "Professional Artificial Turf Cleaningin Irvine, CA"
+      ],
+      "mainWords": 790,
+      "schemaTypes": [
+        "LocalBusiness",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/locations/huntington-beach/turf-cleaning-in-seal-beach",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/locations/huntington-beach/turf-cleaning-in-seal-beach",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in Seal Beach, CA | Murphy's Turf",
+      "description": "Professional artificial turf cleaning in Seal Beach, California. Pet-safe disinfecting, deodorizing, blooming & debris removal. 30+ years experience serving Seal Beach and the Huntington Beach area. Call (951) 331-3300 for a free quote.",
+      "canonical": "https://murphysturf.com/locations/huntington-beach/turf-cleaning-in-seal-beach",
+      "h1": [
+        "Professional Artificial Turf Cleaningin Seal Beach, CA"
+      ],
+      "mainWords": 807,
+      "schemaTypes": [
+        "LocalBusiness",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/locations/huntington-beach/turf-cleaning-in-garden-grove",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/locations/huntington-beach/turf-cleaning-in-garden-grove",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in Garden Grove, CA | Murphy's Turf",
+      "description": "Professional artificial turf cleaning in Garden Grove, California. Pet-safe disinfecting, deodorizing, blooming & debris removal. 30+ years experience serving Garden Grove and the Huntington Beach area. Call (951) 331-3300 for a free quote.",
+      "canonical": "https://murphysturf.com/locations/huntington-beach/turf-cleaning-in-garden-grove",
+      "h1": [
+        "Professional Artificial Turf Cleaningin Garden Grove, CA"
+      ],
+      "mainWords": 807,
+      "schemaTypes": [
+        "LocalBusiness",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/locations/huntington-beach/turf-cleaning-in-westminster",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/locations/huntington-beach/turf-cleaning-in-westminster",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in Westminster, CA | Murphy's Turf",
+      "description": "Professional artificial turf cleaning in Westminster, California. Pet-safe disinfecting, deodorizing, blooming & debris removal. 30+ years experience serving Westminster and the Huntington Beach area. Call (951) 331-3300 for a free quote.",
+      "canonical": "https://murphysturf.com/locations/huntington-beach/turf-cleaning-in-westminster",
+      "h1": [
+        "Professional Artificial Turf Cleaningin Westminster, CA"
+      ],
+      "mainWords": 790,
+      "schemaTypes": [
+        "LocalBusiness",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/locations/huntington-beach/turf-cleaning-in-laguna-beach",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/locations/huntington-beach/turf-cleaning-in-laguna-beach",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in Laguna Beach, CA | Murphy's Turf",
+      "description": "Professional artificial turf cleaning in Laguna Beach, California. Pet-safe disinfecting, deodorizing, blooming & debris removal. 30+ years experience serving Laguna Beach and the Huntington Beach area. Call (951) 331-3300 for a free quote.",
+      "canonical": "https://murphysturf.com/locations/huntington-beach/turf-cleaning-in-laguna-beach",
+      "h1": [
+        "Professional Artificial Turf Cleaningin Laguna Beach, CA"
+      ],
+      "mainWords": 807,
+      "schemaTypes": [
+        "LocalBusiness",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/locations/huntington-beach/turf-cleaning-in-fountain-valley",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/locations/huntington-beach/turf-cleaning-in-fountain-valley",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in Fountain Valley, CA | Murphy's Turf",
+      "description": "Professional artificial turf cleaning in Fountain Valley, California. Pet-safe disinfecting, deodorizing, blooming & debris removal. 30+ years experience serving Fountain Valley and the Huntington Beach area. Call (951) 331-3300 for a free quote.",
+      "canonical": "https://murphysturf.com/locations/huntington-beach/turf-cleaning-in-fountain-valley",
+      "h1": [
+        "Professional Artificial Turf Cleaningin Fountain Valley, CA"
+      ],
+      "mainWords": 807,
+      "schemaTypes": [
+        "LocalBusiness",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/locations/huntington-beach/turf-cleaning-in-dana-point",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/locations/huntington-beach/turf-cleaning-in-dana-point",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in Dana Point, CA | Murphy's Turf",
+      "description": "Professional artificial turf cleaning in Dana Point, California. Pet-safe disinfecting, deodorizing, blooming & debris removal. 30+ years experience serving Dana Point and the Huntington Beach area. Call (951) 331-3300 for a free quote.",
+      "canonical": "https://murphysturf.com/locations/huntington-beach/turf-cleaning-in-dana-point",
+      "h1": [
+        "Professional Artificial Turf Cleaningin Dana Point, CA"
+      ],
+      "mainWords": 807,
+      "schemaTypes": [
+        "LocalBusiness",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/locations/huntington-beach/turf-cleaning-in-san-clemente",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/locations/huntington-beach/turf-cleaning-in-san-clemente",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in San Clemente, CA | Murphy's Turf",
+      "description": "Professional artificial turf cleaning in San Clemente, California. Pet-safe disinfecting, deodorizing, blooming & debris removal. 30+ years experience serving San Clemente and the Huntington Beach area. Call (951) 331-3300 for a free quote.",
+      "canonical": "https://murphysturf.com/locations/huntington-beach/turf-cleaning-in-san-clemente",
+      "h1": [
+        "Professional Artificial Turf Cleaningin San Clemente, CA"
+      ],
+      "mainWords": 807,
+      "schemaTypes": [
+        "LocalBusiness",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/locations/huntington-beach/turf-cleaning-in-anaheim",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/locations/huntington-beach/turf-cleaning-in-anaheim",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in Anaheim, CA | Murphy's Turf",
+      "description": "Professional artificial turf cleaning in Anaheim, California. Pet-safe disinfecting, deodorizing, blooming & debris removal. 30+ years experience serving Anaheim and the Huntington Beach area. Call (951) 331-3300 for a free quote.",
+      "canonical": "https://murphysturf.com/locations/huntington-beach/turf-cleaning-in-anaheim",
+      "h1": [
+        "Professional Artificial Turf Cleaningin Anaheim, CA"
+      ],
+      "mainWords": 790,
+      "schemaTypes": [
+        "LocalBusiness",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/locations/murrieta/turf-cleaning-in-temecula",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/locations/murrieta/turf-cleaning-in-temecula",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in Temecula, CA | Murphy's Turf",
+      "description": "Professional artificial turf cleaning in Temecula, California. Pet-safe disinfecting, deodorizing, blooming & debris removal. 30+ years experience serving Temecula and the Murrieta area. Call (951) 331-3300 for a free quote.",
+      "canonical": "https://murphysturf.com/locations/murrieta/turf-cleaning-in-temecula",
+      "h1": [
+        "Professional Artificial Turf Cleaningin Temecula, CA"
+      ],
+      "mainWords": 776,
+      "schemaTypes": [
+        "LocalBusiness",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/locations/murrieta/turf-cleaning-in-french-valley",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/locations/murrieta/turf-cleaning-in-french-valley",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in French Valley, CA | Murphy's Turf",
+      "description": "Professional artificial turf cleaning in French Valley, California. Pet-safe disinfecting, deodorizing, blooming & debris removal. 30+ years experience serving French Valley and the Murrieta area. Call (951) 331-3300 for a free quote.",
+      "canonical": "https://murphysturf.com/locations/murrieta/turf-cleaning-in-french-valley",
+      "h1": [
+        "Professional Artificial Turf Cleaningin French Valley, CA"
+      ],
+      "mainWords": 793,
+      "schemaTypes": [
+        "LocalBusiness",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/locations/murrieta/turf-cleaning-in-menifee",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/locations/murrieta/turf-cleaning-in-menifee",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in Menifee, CA | Murphy's Turf",
+      "description": "Professional artificial turf cleaning in Menifee, California. Pet-safe disinfecting, deodorizing, blooming & debris removal. 30+ years experience serving Menifee and the Murrieta area. Call (951) 331-3300 for a free quote.",
+      "canonical": "https://murphysturf.com/locations/murrieta/turf-cleaning-in-menifee",
+      "h1": [
+        "Professional Artificial Turf Cleaningin Menifee, CA"
+      ],
+      "mainWords": 776,
+      "schemaTypes": [
+        "LocalBusiness",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/locations/murrieta/turf-cleaning-in-hemet",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/locations/murrieta/turf-cleaning-in-hemet",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in Hemet, CA | Murphy's Turf",
+      "description": "Professional artificial turf cleaning in Hemet, California. Pet-safe disinfecting, deodorizing, blooming & debris removal. 30+ years experience serving Hemet and the Murrieta area. Call (951) 331-3300 for a free quote.",
+      "canonical": "https://murphysturf.com/locations/murrieta/turf-cleaning-in-hemet",
+      "h1": [
+        "Professional Artificial Turf Cleaningin Hemet, CA"
+      ],
+      "mainWords": 776,
+      "schemaTypes": [
+        "LocalBusiness",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/locations/murrieta/turf-cleaning-in-lake-elsinore",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/locations/murrieta/turf-cleaning-in-lake-elsinore",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in Lake Elsinore, CA | Murphy's Turf",
+      "description": "Professional artificial turf cleaning in Lake Elsinore, California. Pet-safe disinfecting, deodorizing, blooming & debris removal. 30+ years experience serving Lake Elsinore and the Murrieta area. Call (951) 331-3300 for a free quote.",
+      "canonical": "https://murphysturf.com/locations/murrieta/turf-cleaning-in-lake-elsinore",
+      "h1": [
+        "Professional Artificial Turf Cleaningin Lake Elsinore, CA"
+      ],
+      "mainWords": 793,
+      "schemaTypes": [
+        "LocalBusiness",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/locations/murrieta/turf-cleaning-in-wildomar",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/locations/murrieta/turf-cleaning-in-wildomar",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in Wildomar, CA | Murphy's Turf",
+      "description": "Professional artificial turf cleaning in Wildomar, California. Pet-safe disinfecting, deodorizing, blooming & debris removal. 30+ years experience serving Wildomar and the Murrieta area. Call (951) 331-3300 for a free quote.",
+      "canonical": "https://murphysturf.com/locations/murrieta/turf-cleaning-in-wildomar",
+      "h1": [
+        "Professional Artificial Turf Cleaningin Wildomar, CA"
+      ],
+      "mainWords": 776,
+      "schemaTypes": [
+        "LocalBusiness",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/locations/murrieta/turf-cleaning-in-perris",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/locations/murrieta/turf-cleaning-in-perris",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in Perris, CA | Murphy's Turf",
+      "description": "Professional artificial turf cleaning in Perris, California. Pet-safe disinfecting, deodorizing, blooming & debris removal. 30+ years experience serving Perris and the Murrieta area. Call (951) 331-3300 for a free quote.",
+      "canonical": "https://murphysturf.com/locations/murrieta/turf-cleaning-in-perris",
+      "h1": [
+        "Professional Artificial Turf Cleaningin Perris, CA"
+      ],
+      "mainWords": 776,
+      "schemaTypes": [
+        "LocalBusiness",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/locations/murrieta/turf-cleaning-in-canyon-lake",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/locations/murrieta/turf-cleaning-in-canyon-lake",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in Canyon Lake, CA | Murphy's Turf",
+      "description": "Professional artificial turf cleaning in Canyon Lake, California. Pet-safe disinfecting, deodorizing, blooming & debris removal. 30+ years experience serving Canyon Lake and the Murrieta area. Call (951) 331-3300 for a free quote.",
+      "canonical": "https://murphysturf.com/locations/murrieta/turf-cleaning-in-canyon-lake",
+      "h1": [
+        "Professional Artificial Turf Cleaningin Canyon Lake, CA"
+      ],
+      "mainWords": 793,
+      "schemaTypes": [
+        "LocalBusiness",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/locations/murrieta/turf-cleaning-in-temescal-valley",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/locations/murrieta/turf-cleaning-in-temescal-valley",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in Temescal Valley, CA | Murphy's Turf",
+      "description": "Professional artificial turf cleaning in Temescal Valley, California. Pet-safe disinfecting, deodorizing, blooming & debris removal. 30+ years experience serving Temescal Valley and the Murrieta area. Call (951) 331-3300 for a free quote.",
+      "canonical": "https://murphysturf.com/locations/murrieta/turf-cleaning-in-temescal-valley",
+      "h1": [
+        "Professional Artificial Turf Cleaningin Temescal Valley, CA"
+      ],
+      "mainWords": 793,
+      "schemaTypes": [
+        "LocalBusiness",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/locations/murrieta/turf-cleaning-in-corona",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/locations/murrieta/turf-cleaning-in-corona",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in Corona, CA | Murphy's Turf",
+      "description": "Professional artificial turf cleaning in Corona, California. Pet-safe disinfecting, deodorizing, blooming & debris removal. 30+ years experience serving Corona and the Murrieta area. Call (951) 331-3300 for a free quote.",
+      "canonical": "https://murphysturf.com/locations/murrieta/turf-cleaning-in-corona",
+      "h1": [
+        "Professional Artificial Turf Cleaningin Corona, CA"
+      ],
+      "mainWords": 776,
+      "schemaTypes": [
+        "LocalBusiness",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/locations/murrieta/turf-cleaning-in-winchester",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/locations/murrieta/turf-cleaning-in-winchester",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in Winchester, CA | Murphy's Turf",
+      "description": "Professional artificial turf cleaning in Winchester, California. Pet-safe disinfecting, deodorizing, blooming & debris removal. 30+ years experience serving Winchester and the Murrieta area. Call (951) 331-3300 for a free quote.",
+      "canonical": "https://murphysturf.com/locations/murrieta/turf-cleaning-in-winchester",
+      "h1": [
+        "Professional Artificial Turf Cleaningin Winchester, CA"
+      ],
+      "mainWords": 776,
+      "schemaTypes": [
+        "LocalBusiness",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/locations/murrieta/turf-cleaning-in-san-jacinto",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/locations/murrieta/turf-cleaning-in-san-jacinto",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in San Jacinto, CA | Murphy's Turf",
+      "description": "Professional artificial turf cleaning in San Jacinto, California. Pet-safe disinfecting, deodorizing, blooming & debris removal. 30+ years experience serving San Jacinto and the Murrieta area. Call (951) 331-3300 for a free quote.",
+      "canonical": "https://murphysturf.com/locations/murrieta/turf-cleaning-in-san-jacinto",
+      "h1": [
+        "Professional Artificial Turf Cleaningin San Jacinto, CA"
+      ],
+      "mainWords": 793,
+      "schemaTypes": [
+        "LocalBusiness",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/locations/murrieta/turf-cleaning-in-riverside",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/locations/murrieta/turf-cleaning-in-riverside",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in Riverside, CA | Murphy's Turf",
+      "description": "Professional artificial turf cleaning in Riverside, California. Pet-safe disinfecting, deodorizing, blooming & debris removal. 30+ years experience serving Riverside and the Murrieta area. Call (951) 331-3300 for a free quote.",
+      "canonical": "https://murphysturf.com/locations/murrieta/turf-cleaning-in-riverside",
+      "h1": [
+        "Professional Artificial Turf Cleaningin Riverside, CA"
+      ],
+      "mainWords": 776,
+      "schemaTypes": [
+        "LocalBusiness",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/locations/murrieta/turf-cleaning-in-moreno-valley",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/locations/murrieta/turf-cleaning-in-moreno-valley",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in Moreno Valley, CA | Murphy's Turf",
+      "description": "Professional artificial turf cleaning in Moreno Valley, California. Pet-safe disinfecting, deodorizing, blooming & debris removal. 30+ years experience serving Moreno Valley and the Murrieta area. Call (951) 331-3300 for a free quote.",
+      "canonical": "https://murphysturf.com/locations/murrieta/turf-cleaning-in-moreno-valley",
+      "h1": [
+        "Professional Artificial Turf Cleaningin Moreno Valley, CA"
+      ],
+      "mainWords": 793,
+      "schemaTypes": [
+        "LocalBusiness",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/locations/murrieta/turf-cleaning-in-beaumont",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/locations/murrieta/turf-cleaning-in-beaumont",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in Beaumont, CA | Murphy's Turf",
+      "description": "Professional artificial turf cleaning in Beaumont, California. Pet-safe disinfecting, deodorizing, blooming & debris removal. 30+ years experience serving Beaumont and the Murrieta area. Call (951) 331-3300 for a free quote.",
+      "canonical": "https://murphysturf.com/locations/murrieta/turf-cleaning-in-beaumont",
+      "h1": [
+        "Professional Artificial Turf Cleaningin Beaumont, CA"
+      ],
+      "mainWords": 776,
+      "schemaTypes": [
+        "LocalBusiness",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/locations/murrieta/turf-cleaning-in-eastvale",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/locations/murrieta/turf-cleaning-in-eastvale",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in Eastvale, CA | Murphy's Turf",
+      "description": "Professional artificial turf cleaning in Eastvale, California. Pet-safe disinfecting, deodorizing, blooming & debris removal. 30+ years experience serving Eastvale and the Murrieta area. Call (951) 331-3300 for a free quote.",
+      "canonical": "https://murphysturf.com/locations/murrieta/turf-cleaning-in-eastvale",
+      "h1": [
+        "Professional Artificial Turf Cleaningin Eastvale, CA"
+      ],
+      "mainWords": 776,
+      "schemaTypes": [
+        "LocalBusiness",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/locations/murrieta/turf-cleaning-in-norco",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/locations/murrieta/turf-cleaning-in-norco",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in Norco, CA | Murphy's Turf",
+      "description": "Professional artificial turf cleaning in Norco, California. Pet-safe disinfecting, deodorizing, blooming & debris removal. 30+ years experience serving Norco and the Murrieta area. Call (951) 331-3300 for a free quote.",
+      "canonical": "https://murphysturf.com/locations/murrieta/turf-cleaning-in-norco",
+      "h1": [
+        "Professional Artificial Turf Cleaningin Norco, CA"
+      ],
+      "mainWords": 776,
+      "schemaTypes": [
+        "LocalBusiness",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/locations/murrieta/turf-cleaning-in-fallbrook",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/locations/murrieta/turf-cleaning-in-fallbrook",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in Fallbrook, CA | Murphy's Turf",
+      "description": "Professional artificial turf cleaning in Fallbrook, California. Pet-safe disinfecting, deodorizing, blooming & debris removal. 30+ years experience serving Fallbrook and the Murrieta area. Call (951) 331-3300 for a free quote.",
+      "canonical": "https://murphysturf.com/locations/murrieta/turf-cleaning-in-fallbrook",
+      "h1": [
+        "Professional Artificial Turf Cleaningin Fallbrook, CA"
+      ],
+      "mainWords": 776,
+      "schemaTypes": [
+        "LocalBusiness",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/locations/martinez/turf-cleaning-in-concord",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/locations/martinez/turf-cleaning-in-concord",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in Concord, CA | Murphy's Turf",
+      "description": "Professional artificial turf cleaning in Concord, California. Pet-safe disinfecting, deodorizing, blooming & debris removal. 30+ years experience serving Concord and the Martinez area. Call (925) 338-0048 for a free quote.",
+      "canonical": "https://murphysturf.com/locations/martinez/turf-cleaning-in-concord",
+      "h1": [
+        "Professional Artificial Turf Cleaningin Concord, CA"
+      ],
+      "mainWords": 784,
+      "schemaTypes": [
+        "LocalBusiness",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/locations/martinez/turf-cleaning-in-walnut-creek",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/locations/martinez/turf-cleaning-in-walnut-creek",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in Walnut Creek, CA | Murphy's Turf",
+      "description": "Professional artificial turf cleaning in Walnut Creek, California. Pet-safe disinfecting, deodorizing, blooming & debris removal. 30+ years experience serving Walnut Creek and the Martinez area. Call (925) 338-0048 for a free quote.",
+      "canonical": "https://murphysturf.com/locations/martinez/turf-cleaning-in-walnut-creek",
+      "h1": [
+        "Professional Artificial Turf Cleaningin Walnut Creek, CA"
+      ],
+      "mainWords": 801,
+      "schemaTypes": [
+        "LocalBusiness",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/locations/martinez/turf-cleaning-in-pleasant-hill",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/locations/martinez/turf-cleaning-in-pleasant-hill",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in Pleasant Hill, CA | Murphy's Turf",
+      "description": "Professional artificial turf cleaning in Pleasant Hill, California. Pet-safe disinfecting, deodorizing, blooming & debris removal. 30+ years experience serving Pleasant Hill and the Martinez area. Call (925) 338-0048 for a free quote.",
+      "canonical": "https://murphysturf.com/locations/martinez/turf-cleaning-in-pleasant-hill",
+      "h1": [
+        "Professional Artificial Turf Cleaningin Pleasant Hill, CA"
+      ],
+      "mainWords": 801,
+      "schemaTypes": [
+        "LocalBusiness",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/locations/martinez/turf-cleaning-in-antioch",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/locations/martinez/turf-cleaning-in-antioch",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in Antioch, CA | Murphy's Turf",
+      "description": "Professional artificial turf cleaning in Antioch, California. Pet-safe disinfecting, deodorizing, blooming & debris removal. 30+ years experience serving Antioch and the Martinez area. Call (925) 338-0048 for a free quote.",
+      "canonical": "https://murphysturf.com/locations/martinez/turf-cleaning-in-antioch",
+      "h1": [
+        "Professional Artificial Turf Cleaningin Antioch, CA"
+      ],
+      "mainWords": 784,
+      "schemaTypes": [
+        "LocalBusiness",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/locations/martinez/turf-cleaning-in-brentwood",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/locations/martinez/turf-cleaning-in-brentwood",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in Brentwood, CA | Murphy's Turf",
+      "description": "Professional artificial turf cleaning in Brentwood, California. Pet-safe disinfecting, deodorizing, blooming & debris removal. 30+ years experience serving Brentwood and the Martinez area. Call (925) 338-0048 for a free quote.",
+      "canonical": "https://murphysturf.com/locations/martinez/turf-cleaning-in-brentwood",
+      "h1": [
+        "Professional Artificial Turf Cleaningin Brentwood, CA"
+      ],
+      "mainWords": 784,
+      "schemaTypes": [
+        "LocalBusiness",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/locations/martinez/turf-cleaning-in-lafayette",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/locations/martinez/turf-cleaning-in-lafayette",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in Lafayette, CA | Murphy's Turf",
+      "description": "Professional artificial turf cleaning in Lafayette, California. Pet-safe disinfecting, deodorizing, blooming & debris removal. 30+ years experience serving Lafayette and the Martinez area. Call (925) 338-0048 for a free quote.",
+      "canonical": "https://murphysturf.com/locations/martinez/turf-cleaning-in-lafayette",
+      "h1": [
+        "Professional Artificial Turf Cleaningin Lafayette, CA"
+      ],
+      "mainWords": 784,
+      "schemaTypes": [
+        "LocalBusiness",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/locations/martinez/turf-cleaning-in-danville",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/locations/martinez/turf-cleaning-in-danville",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in Danville, CA | Murphy's Turf",
+      "description": "Professional artificial turf cleaning in Danville, California. Pet-safe disinfecting, deodorizing, blooming & debris removal. 30+ years experience serving Danville and the Martinez area. Call (925) 338-0048 for a free quote.",
+      "canonical": "https://murphysturf.com/locations/martinez/turf-cleaning-in-danville",
+      "h1": [
+        "Professional Artificial Turf Cleaningin Danville, CA"
+      ],
+      "mainWords": 784,
+      "schemaTypes": [
+        "LocalBusiness",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/locations/martinez/turf-cleaning-in-dublin",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/locations/martinez/turf-cleaning-in-dublin",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in Dublin, CA | Murphy's Turf",
+      "description": "Professional artificial turf cleaning in Dublin, California. Pet-safe disinfecting, deodorizing, blooming & debris removal. 30+ years experience serving Dublin and the Martinez area. Call (925) 338-0048 for a free quote.",
+      "canonical": "https://murphysturf.com/locations/martinez/turf-cleaning-in-dublin",
+      "h1": [
+        "Professional Artificial Turf Cleaningin Dublin, CA"
+      ],
+      "mainWords": 784,
+      "schemaTypes": [
+        "LocalBusiness",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/locations/martinez/turf-cleaning-in-san-ramon",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/locations/martinez/turf-cleaning-in-san-ramon",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in San Ramon, CA | Murphy's Turf",
+      "description": "Professional artificial turf cleaning in San Ramon, California. Pet-safe disinfecting, deodorizing, blooming & debris removal. 30+ years experience serving San Ramon and the Martinez area. Call (925) 338-0048 for a free quote.",
+      "canonical": "https://murphysturf.com/locations/martinez/turf-cleaning-in-san-ramon",
+      "h1": [
+        "Professional Artificial Turf Cleaningin San Ramon, CA"
+      ],
+      "mainWords": 801,
+      "schemaTypes": [
+        "LocalBusiness",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/locations/martinez/turf-cleaning-in-livermore",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/locations/martinez/turf-cleaning-in-livermore",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in Livermore, CA | Murphy's Turf",
+      "description": "Professional artificial turf cleaning in Livermore, California. Pet-safe disinfecting, deodorizing, blooming & debris removal. 30+ years experience serving Livermore and the Martinez area. Call (925) 338-0048 for a free quote.",
+      "canonical": "https://murphysturf.com/locations/martinez/turf-cleaning-in-livermore",
+      "h1": [
+        "Professional Artificial Turf Cleaningin Livermore, CA"
+      ],
+      "mainWords": 784,
+      "schemaTypes": [
+        "LocalBusiness",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/locations/martinez/turf-cleaning-in-pleasanton",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/locations/martinez/turf-cleaning-in-pleasanton",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in Pleasanton, CA | Murphy's Turf",
+      "description": "Professional artificial turf cleaning in Pleasanton, California. Pet-safe disinfecting, deodorizing, blooming & debris removal. 30+ years experience serving Pleasanton and the Martinez area. Call (925) 338-0048 for a free quote.",
+      "canonical": "https://murphysturf.com/locations/martinez/turf-cleaning-in-pleasanton",
+      "h1": [
+        "Professional Artificial Turf Cleaningin Pleasanton, CA"
+      ],
+      "mainWords": 784,
+      "schemaTypes": [
+        "LocalBusiness",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/locations/martinez/turf-cleaning-in-orinda",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/locations/martinez/turf-cleaning-in-orinda",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in Orinda, CA | Murphy's Turf",
+      "description": "Professional artificial turf cleaning in Orinda, California. Pet-safe disinfecting, deodorizing, blooming & debris removal. 30+ years experience serving Orinda and the Martinez area. Call (925) 338-0048 for a free quote.",
+      "canonical": "https://murphysturf.com/locations/martinez/turf-cleaning-in-orinda",
+      "h1": [
+        "Professional Artificial Turf Cleaningin Orinda, CA"
+      ],
+      "mainWords": 784,
+      "schemaTypes": [
+        "LocalBusiness",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/locations/martinez/turf-cleaning-in-alamo",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/locations/martinez/turf-cleaning-in-alamo",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in Alamo, CA | Murphy's Turf",
+      "description": "Professional artificial turf cleaning in Alamo, California. Pet-safe disinfecting, deodorizing, blooming & debris removal. 30+ years experience serving Alamo and the Martinez area. Call (925) 338-0048 for a free quote.",
+      "canonical": "https://murphysturf.com/locations/martinez/turf-cleaning-in-alamo",
+      "h1": [
+        "Professional Artificial Turf Cleaningin Alamo, CA"
+      ],
+      "mainWords": 784,
+      "schemaTypes": [
+        "LocalBusiness",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/locations/martinez/turf-cleaning-in-oakley",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/locations/martinez/turf-cleaning-in-oakley",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in Oakley, CA | Murphy's Turf",
+      "description": "Professional artificial turf cleaning in Oakley, California. Pet-safe disinfecting, deodorizing, blooming & debris removal. 30+ years experience serving Oakley and the Martinez area. Call (925) 338-0048 for a free quote.",
+      "canonical": "https://murphysturf.com/locations/martinez/turf-cleaning-in-oakley",
+      "h1": [
+        "Professional Artificial Turf Cleaningin Oakley, CA"
+      ],
+      "mainWords": 784,
+      "schemaTypes": [
+        "LocalBusiness",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/locations/sacramento/turf-cleaning-in-elk-grove",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/locations/sacramento/turf-cleaning-in-elk-grove",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in Elk Grove, CA | Murphy's Turf",
+      "description": "Professional artificial turf cleaning in Elk Grove, California. Pet-safe disinfecting, deodorizing, blooming & debris removal. 30+ years experience serving Elk Grove and the Sacramento area. Call (916) 432-5033 for a free quote.",
+      "canonical": "https://murphysturf.com/locations/sacramento/turf-cleaning-in-elk-grove",
+      "h1": [
+        "Professional Artificial Turf Cleaningin Elk Grove, CA"
+      ],
+      "mainWords": 799,
+      "schemaTypes": [
+        "LocalBusiness",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/locations/sacramento/turf-cleaning-in-folsom",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/locations/sacramento/turf-cleaning-in-folsom",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in Folsom, CA | Murphy's Turf",
+      "description": "Professional artificial turf cleaning in Folsom, California. Pet-safe disinfecting, deodorizing, blooming & debris removal. 30+ years experience serving Folsom and the Sacramento area. Call (916) 432-5033 for a free quote.",
+      "canonical": "https://murphysturf.com/locations/sacramento/turf-cleaning-in-folsom",
+      "h1": [
+        "Professional Artificial Turf Cleaningin Folsom, CA"
+      ],
+      "mainWords": 782,
+      "schemaTypes": [
+        "LocalBusiness",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/locations/sacramento/turf-cleaning-in-roseville",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/locations/sacramento/turf-cleaning-in-roseville",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in Roseville, CA | Murphy's Turf",
+      "description": "Professional artificial turf cleaning in Roseville, California. Pet-safe disinfecting, deodorizing, blooming & debris removal. 30+ years experience serving Roseville and the Sacramento area. Call (916) 432-5033 for a free quote.",
+      "canonical": "https://murphysturf.com/locations/sacramento/turf-cleaning-in-roseville",
+      "h1": [
+        "Professional Artificial Turf Cleaningin Roseville, CA"
+      ],
+      "mainWords": 782,
+      "schemaTypes": [
+        "LocalBusiness",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/locations/sacramento/turf-cleaning-in-citrus-heights",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/locations/sacramento/turf-cleaning-in-citrus-heights",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in Citrus Heights, CA | Murphy's Turf",
+      "description": "Professional artificial turf cleaning in Citrus Heights, California. Pet-safe disinfecting, deodorizing, blooming & debris removal. 30+ years experience serving Citrus Heights and the Sacramento area. Call (916) 432-5033 for a free quote.",
+      "canonical": "https://murphysturf.com/locations/sacramento/turf-cleaning-in-citrus-heights",
+      "h1": [
+        "Professional Artificial Turf Cleaningin Citrus Heights, CA"
+      ],
+      "mainWords": 799,
+      "schemaTypes": [
+        "LocalBusiness",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/locations/sacramento/turf-cleaning-in-rancho-cordova",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/locations/sacramento/turf-cleaning-in-rancho-cordova",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in Rancho Cordova, CA | Murphy's Turf",
+      "description": "Professional artificial turf cleaning in Rancho Cordova, California. Pet-safe disinfecting, deodorizing, blooming & debris removal. 30+ years experience serving Rancho Cordova and the Sacramento area. Call (916) 432-5033 for a free quote.",
+      "canonical": "https://murphysturf.com/locations/sacramento/turf-cleaning-in-rancho-cordova",
+      "h1": [
+        "Professional Artificial Turf Cleaningin Rancho Cordova, CA"
+      ],
+      "mainWords": 799,
+      "schemaTypes": [
+        "LocalBusiness",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/locations/sacramento/turf-cleaning-in-west-sacramento",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/locations/sacramento/turf-cleaning-in-west-sacramento",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in West Sacramento, CA | Murphy's Turf",
+      "description": "Professional artificial turf cleaning in West Sacramento, California. Pet-safe disinfecting, deodorizing, blooming & debris removal. 30+ years experience serving West Sacramento and the Sacramento area. Call (916) 432-5033 for a free quote.",
+      "canonical": "https://murphysturf.com/locations/sacramento/turf-cleaning-in-west-sacramento",
+      "h1": [
+        "Professional Artificial Turf Cleaningin West Sacramento, CA"
+      ],
+      "mainWords": 799,
+      "schemaTypes": [
+        "LocalBusiness",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/locations/sacramento/turf-cleaning-in-carmichael",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/locations/sacramento/turf-cleaning-in-carmichael",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in Carmichael, CA | Murphy's Turf",
+      "description": "Professional artificial turf cleaning in Carmichael, California. Pet-safe disinfecting, deodorizing, blooming & debris removal. 30+ years experience serving Carmichael and the Sacramento area. Call (916) 432-5033 for a free quote.",
+      "canonical": "https://murphysturf.com/locations/sacramento/turf-cleaning-in-carmichael",
+      "h1": [
+        "Professional Artificial Turf Cleaningin Carmichael, CA"
+      ],
+      "mainWords": 782,
+      "schemaTypes": [
+        "LocalBusiness",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/locations/sacramento/turf-cleaning-in-fair-oaks",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/locations/sacramento/turf-cleaning-in-fair-oaks",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in Fair Oaks, CA | Murphy's Turf",
+      "description": "Professional artificial turf cleaning in Fair Oaks, California. Pet-safe disinfecting, deodorizing, blooming & debris removal. 30+ years experience serving Fair Oaks and the Sacramento area. Call (916) 432-5033 for a free quote.",
+      "canonical": "https://murphysturf.com/locations/sacramento/turf-cleaning-in-fair-oaks",
+      "h1": [
+        "Professional Artificial Turf Cleaningin Fair Oaks, CA"
+      ],
+      "mainWords": 799,
+      "schemaTypes": [
+        "LocalBusiness",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/locations/sacramento/turf-cleaning-in-rocklin",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/locations/sacramento/turf-cleaning-in-rocklin",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in Rocklin, CA | Murphy's Turf",
+      "description": "Professional artificial turf cleaning in Rocklin, California. Pet-safe disinfecting, deodorizing, blooming & debris removal. 30+ years experience serving Rocklin and the Sacramento area. Call (916) 432-5033 for a free quote.",
+      "canonical": "https://murphysturf.com/locations/sacramento/turf-cleaning-in-rocklin",
+      "h1": [
+        "Professional Artificial Turf Cleaningin Rocklin, CA"
+      ],
+      "mainWords": 782,
+      "schemaTypes": [
+        "LocalBusiness",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/locations/sacramento/turf-cleaning-in-granite-bay",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/locations/sacramento/turf-cleaning-in-granite-bay",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in Granite Bay, CA | Murphy's Turf",
+      "description": "Professional artificial turf cleaning in Granite Bay, California. Pet-safe disinfecting, deodorizing, blooming & debris removal. 30+ years experience serving Granite Bay and the Sacramento area. Call (916) 432-5033 for a free quote.",
+      "canonical": "https://murphysturf.com/locations/sacramento/turf-cleaning-in-granite-bay",
+      "h1": [
+        "Professional Artificial Turf Cleaningin Granite Bay, CA"
+      ],
+      "mainWords": 799,
+      "schemaTypes": [
+        "LocalBusiness",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/locations/sacramento/turf-cleaning-in-natomas",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/locations/sacramento/turf-cleaning-in-natomas",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in Natomas, CA | Murphy's Turf",
+      "description": "Professional artificial turf cleaning in Natomas, California. Pet-safe disinfecting, deodorizing, blooming & debris removal. 30+ years experience serving Natomas and the Sacramento area. Call (916) 432-5033 for a free quote.",
+      "canonical": "https://murphysturf.com/locations/sacramento/turf-cleaning-in-natomas",
+      "h1": [
+        "Professional Artificial Turf Cleaningin Natomas, CA"
+      ],
+      "mainWords": 782,
+      "schemaTypes": [
+        "LocalBusiness",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/locations/sacramento/turf-cleaning-in-orangevale",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/locations/sacramento/turf-cleaning-in-orangevale",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in Orangevale, CA | Murphy's Turf",
+      "description": "Professional artificial turf cleaning in Orangevale, California. Pet-safe disinfecting, deodorizing, blooming & debris removal. 30+ years experience serving Orangevale and the Sacramento area. Call (916) 432-5033 for a free quote.",
+      "canonical": "https://murphysturf.com/locations/sacramento/turf-cleaning-in-orangevale",
+      "h1": [
+        "Professional Artificial Turf Cleaningin Orangevale, CA"
+      ],
+      "mainWords": 782,
+      "schemaTypes": [
+        "LocalBusiness",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/commercial-turf-cleaning",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/commercial-turf-cleaning",
+      "type": "text/html; charset=UTF-8",
+      "title": "Commercial Artificial Turf Cleaning California | Murphy's Turf",
+      "description": "Commercial artificial turf cleaning for dog daycares, HOAs, schools, gyms & hospitality across California. Recurring, pet-safe, bonded & insured service from Murphy's Turf — 30+ years experience. Get a free quote!",
+      "canonical": "https://murphysturf.com/commercial-turf-cleaning",
+      "h1": [
+        "Commercial Artificial Turf Cleaning in California"
+      ],
+      "mainWords": 987,
+      "schemaTypes": [
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/commercial-turf-cleaning/huntington-beach",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/commercial-turf-cleaning/huntington-beach",
+      "type": "text/html; charset=UTF-8",
+      "title": "Commercial Artificial Turf Cleaning in Huntington Beach / LA Area | Murphy's Turf",
+      "description": "Commercial artificial turf cleaning across Huntington Beach / LA Area, CA — dog daycares, HOAs, schools, gyms & hospitality. Recurring, pet-safe, bonded & insured. Call (951) 331-3300 for a free quote.",
+      "canonical": "https://murphysturf.com/commercial-turf-cleaning/huntington-beach",
+      "h1": [
+        "Commercial Artificial Turf Cleaningin Huntington Beach / LA Area"
+      ],
+      "mainWords": 608,
+      "schemaTypes": [
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/commercial-turf-cleaning/murrieta",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/commercial-turf-cleaning/murrieta",
+      "type": "text/html; charset=UTF-8",
+      "title": "Commercial Artificial Turf Cleaning in Murrieta / Inland Empire | Murphy's Turf",
+      "description": "Commercial artificial turf cleaning across Murrieta / Inland Empire, CA — dog daycares, HOAs, schools, gyms & hospitality. Recurring, pet-safe, bonded & insured. Call (951) 331-3300 for a free quote.",
+      "canonical": "https://murphysturf.com/commercial-turf-cleaning/murrieta",
+      "h1": [
+        "Commercial Artificial Turf Cleaningin Murrieta / Inland Empire"
+      ],
+      "mainWords": 588,
+      "schemaTypes": [
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/commercial-turf-cleaning/martinez",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/commercial-turf-cleaning/martinez",
+      "type": "text/html; charset=UTF-8",
+      "title": "Commercial Artificial Turf Cleaning in Martinez / Bay Area | Murphy's Turf",
+      "description": "Commercial artificial turf cleaning across Martinez / Bay Area, CA — dog daycares, HOAs, schools, gyms & hospitality. Recurring, pet-safe, bonded & insured. Call (925) 338-0048 for a free quote.",
+      "canonical": "https://murphysturf.com/commercial-turf-cleaning/martinez",
+      "h1": [
+        "Commercial Artificial Turf Cleaningin Martinez / Bay Area"
+      ],
+      "mainWords": 586,
+      "schemaTypes": [
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/commercial-turf-cleaning/sacramento",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/commercial-turf-cleaning/sacramento",
+      "type": "text/html; charset=UTF-8",
+      "title": "Commercial Artificial Turf Cleaning in Greater Sacramento | Murphy's Turf",
+      "description": "Commercial artificial turf cleaning across Greater Sacramento, CA — dog daycares, HOAs, schools, gyms & hospitality. Recurring, pet-safe, bonded & insured. Call (916) 432-5033 for a free quote.",
+      "canonical": "https://murphysturf.com/commercial-turf-cleaning/sacramento",
+      "h1": [
+        "Commercial Artificial Turf Cleaningin Greater Sacramento"
+      ],
+      "mainWords": 568,
+      "schemaTypes": [
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/commercial-turf-cleaning/huntington-beach/commercial-turf-cleaning-in-newport-beach",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/commercial-turf-cleaning/huntington-beach/commercial-turf-cleaning-in-newport-beach",
+      "type": "text/html; charset=UTF-8",
+      "title": "Commercial Artificial Turf Cleaning in Newport Beach, CA | Murphy's Turf",
+      "description": "Commercial artificial turf cleaning in Newport Beach, CA for dog daycares, HOAs, schools, gyms & hospitality. Recurring, pet-safe, bonded & insured service from Murphy's Turf. Call (951) 331-3300.",
+      "canonical": "https://murphysturf.com/commercial-turf-cleaning/huntington-beach/commercial-turf-cleaning-in-newport-beach",
+      "h1": [
+        "Commercial Artificial Turf Cleaningin Newport Beach, CA"
+      ],
+      "mainWords": 798,
+      "schemaTypes": [
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/commercial-turf-cleaning/huntington-beach/commercial-turf-cleaning-in-costa-mesa",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/commercial-turf-cleaning/huntington-beach/commercial-turf-cleaning-in-costa-mesa",
+      "type": "text/html; charset=UTF-8",
+      "title": "Commercial Artificial Turf Cleaning in Costa Mesa, CA | Murphy's Turf",
+      "description": "Commercial artificial turf cleaning in Costa Mesa, CA for dog daycares, HOAs, schools, gyms & hospitality. Recurring, pet-safe, bonded & insured service from Murphy's Turf. Call (951) 331-3300.",
+      "canonical": "https://murphysturf.com/commercial-turf-cleaning/huntington-beach/commercial-turf-cleaning-in-costa-mesa",
+      "h1": [
+        "Commercial Artificial Turf Cleaningin Costa Mesa, CA"
+      ],
+      "mainWords": 786,
+      "schemaTypes": [
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/commercial-turf-cleaning/huntington-beach/commercial-turf-cleaning-in-long-beach",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/commercial-turf-cleaning/huntington-beach/commercial-turf-cleaning-in-long-beach",
+      "type": "text/html; charset=UTF-8",
+      "title": "Commercial Artificial Turf Cleaning in Long Beach, CA | Murphy's Turf",
+      "description": "Commercial artificial turf cleaning in Long Beach, CA for dog daycares, HOAs, schools, gyms & hospitality. Recurring, pet-safe, bonded & insured service from Murphy's Turf. Call (951) 331-3300.",
+      "canonical": "https://murphysturf.com/commercial-turf-cleaning/huntington-beach/commercial-turf-cleaning-in-long-beach",
+      "h1": [
+        "Commercial Artificial Turf Cleaningin Long Beach, CA"
+      ],
+      "mainWords": 790,
+      "schemaTypes": [
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/commercial-turf-cleaning/huntington-beach/commercial-turf-cleaning-in-irvine",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/commercial-turf-cleaning/huntington-beach/commercial-turf-cleaning-in-irvine",
+      "type": "text/html; charset=UTF-8",
+      "title": "Commercial Artificial Turf Cleaning in Irvine, CA | Murphy's Turf",
+      "description": "Commercial artificial turf cleaning in Irvine, CA for dog daycares, HOAs, schools, gyms & hospitality. Recurring, pet-safe, bonded & insured service from Murphy's Turf. Call (951) 331-3300.",
+      "canonical": "https://murphysturf.com/commercial-turf-cleaning/huntington-beach/commercial-turf-cleaning-in-irvine",
+      "h1": [
+        "Commercial Artificial Turf Cleaningin Irvine, CA"
+      ],
+      "mainWords": 780,
+      "schemaTypes": [
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/commercial-turf-cleaning/huntington-beach/commercial-turf-cleaning-in-seal-beach",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/commercial-turf-cleaning/huntington-beach/commercial-turf-cleaning-in-seal-beach",
+      "type": "text/html; charset=UTF-8",
+      "title": "Commercial Artificial Turf Cleaning in Seal Beach, CA | Murphy's Turf",
+      "description": "Commercial artificial turf cleaning in Seal Beach, CA for dog daycares, HOAs, schools, gyms & hospitality. Recurring, pet-safe, bonded & insured service from Murphy's Turf. Call (951) 331-3300.",
+      "canonical": "https://murphysturf.com/commercial-turf-cleaning/huntington-beach/commercial-turf-cleaning-in-seal-beach",
+      "h1": [
+        "Commercial Artificial Turf Cleaningin Seal Beach, CA"
+      ],
+      "mainWords": 796,
+      "schemaTypes": [
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/commercial-turf-cleaning/huntington-beach/commercial-turf-cleaning-in-fountain-valley",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/commercial-turf-cleaning/huntington-beach/commercial-turf-cleaning-in-fountain-valley",
+      "type": "text/html; charset=UTF-8",
+      "title": "Commercial Artificial Turf Cleaning in Fountain Valley, CA | Murphy's Turf",
+      "description": "Commercial artificial turf cleaning in Fountain Valley, CA for dog daycares, HOAs, schools, gyms & hospitality. Recurring, pet-safe, bonded & insured service from Murphy's Turf. Call (951) 331-3300.",
+      "canonical": "https://murphysturf.com/commercial-turf-cleaning/huntington-beach/commercial-turf-cleaning-in-fountain-valley",
+      "h1": [
+        "Commercial Artificial Turf Cleaningin Fountain Valley, CA"
+      ],
+      "mainWords": 786,
+      "schemaTypes": [
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/commercial-turf-cleaning/huntington-beach/commercial-turf-cleaning-in-garden-grove",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/commercial-turf-cleaning/huntington-beach/commercial-turf-cleaning-in-garden-grove",
+      "type": "text/html; charset=UTF-8",
+      "title": "Commercial Artificial Turf Cleaning in Garden Grove, CA | Murphy's Turf",
+      "description": "Commercial artificial turf cleaning in Garden Grove, CA for dog daycares, HOAs, schools, gyms & hospitality. Recurring, pet-safe, bonded & insured service from Murphy's Turf. Call (951) 331-3300.",
+      "canonical": "https://murphysturf.com/commercial-turf-cleaning/huntington-beach/commercial-turf-cleaning-in-garden-grove",
+      "h1": [
+        "Commercial Artificial Turf Cleaningin Garden Grove, CA"
+      ],
+      "mainWords": 790,
+      "schemaTypes": [
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/commercial-turf-cleaning/huntington-beach/commercial-turf-cleaning-in-westminster",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/commercial-turf-cleaning/huntington-beach/commercial-turf-cleaning-in-westminster",
+      "type": "text/html; charset=UTF-8",
+      "title": "Commercial Artificial Turf Cleaning in Westminster, CA | Murphy's Turf",
+      "description": "Commercial artificial turf cleaning in Westminster, CA for dog daycares, HOAs, schools, gyms & hospitality. Recurring, pet-safe, bonded & insured service from Murphy's Turf. Call (951) 331-3300.",
+      "canonical": "https://murphysturf.com/commercial-turf-cleaning/huntington-beach/commercial-turf-cleaning-in-westminster",
+      "h1": [
+        "Commercial Artificial Turf Cleaningin Westminster, CA"
+      ],
+      "mainWords": 778,
+      "schemaTypes": [
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/commercial-turf-cleaning/huntington-beach/commercial-turf-cleaning-in-laguna-beach",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/commercial-turf-cleaning/huntington-beach/commercial-turf-cleaning-in-laguna-beach",
+      "type": "text/html; charset=UTF-8",
+      "title": "Commercial Artificial Turf Cleaning in Laguna Beach, CA | Murphy's Turf",
+      "description": "Commercial artificial turf cleaning in Laguna Beach, CA for dog daycares, HOAs, schools, gyms & hospitality. Recurring, pet-safe, bonded & insured service from Murphy's Turf. Call (951) 331-3300.",
+      "canonical": "https://murphysturf.com/commercial-turf-cleaning/huntington-beach/commercial-turf-cleaning-in-laguna-beach",
+      "h1": [
+        "Commercial Artificial Turf Cleaningin Laguna Beach, CA"
+      ],
+      "mainWords": 798,
+      "schemaTypes": [
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/commercial-turf-cleaning/huntington-beach/commercial-turf-cleaning-in-dana-point",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/commercial-turf-cleaning/huntington-beach/commercial-turf-cleaning-in-dana-point",
+      "type": "text/html; charset=UTF-8",
+      "title": "Commercial Artificial Turf Cleaning in Dana Point, CA | Murphy's Turf",
+      "description": "Commercial artificial turf cleaning in Dana Point, CA for dog daycares, HOAs, schools, gyms & hospitality. Recurring, pet-safe, bonded & insured service from Murphy's Turf. Call (951) 331-3300.",
+      "canonical": "https://murphysturf.com/commercial-turf-cleaning/huntington-beach/commercial-turf-cleaning-in-dana-point",
+      "h1": [
+        "Commercial Artificial Turf Cleaningin Dana Point, CA"
+      ],
+      "mainWords": 786,
+      "schemaTypes": [
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/commercial-turf-cleaning/huntington-beach/commercial-turf-cleaning-in-san-clemente",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/commercial-turf-cleaning/huntington-beach/commercial-turf-cleaning-in-san-clemente",
+      "type": "text/html; charset=UTF-8",
+      "title": "Commercial Artificial Turf Cleaning in San Clemente, CA | Murphy's Turf",
+      "description": "Commercial artificial turf cleaning in San Clemente, CA for dog daycares, HOAs, schools, gyms & hospitality. Recurring, pet-safe, bonded & insured service from Murphy's Turf. Call (951) 331-3300.",
+      "canonical": "https://murphysturf.com/commercial-turf-cleaning/huntington-beach/commercial-turf-cleaning-in-san-clemente",
+      "h1": [
+        "Commercial Artificial Turf Cleaningin San Clemente, CA"
+      ],
+      "mainWords": 790,
+      "schemaTypes": [
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/commercial-turf-cleaning/huntington-beach/commercial-turf-cleaning-in-anaheim",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/commercial-turf-cleaning/huntington-beach/commercial-turf-cleaning-in-anaheim",
+      "type": "text/html; charset=UTF-8",
+      "title": "Commercial Artificial Turf Cleaning in Anaheim, CA | Murphy's Turf",
+      "description": "Commercial artificial turf cleaning in Anaheim, CA for dog daycares, HOAs, schools, gyms & hospitality. Recurring, pet-safe, bonded & insured service from Murphy's Turf. Call (951) 331-3300.",
+      "canonical": "https://murphysturf.com/commercial-turf-cleaning/huntington-beach/commercial-turf-cleaning-in-anaheim",
+      "h1": [
+        "Commercial Artificial Turf Cleaningin Anaheim, CA"
+      ],
+      "mainWords": 778,
+      "schemaTypes": [
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/commercial-turf-cleaning/murrieta/commercial-turf-cleaning-in-temecula",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/commercial-turf-cleaning/murrieta/commercial-turf-cleaning-in-temecula",
+      "type": "text/html; charset=UTF-8",
+      "title": "Commercial Artificial Turf Cleaning in Temecula, CA | Murphy's Turf",
+      "description": "Commercial artificial turf cleaning in Temecula, CA for dog daycares, HOAs, schools, gyms & hospitality. Recurring, pet-safe, bonded & insured service from Murphy's Turf. Call (951) 331-3300.",
+      "canonical": "https://murphysturf.com/commercial-turf-cleaning/murrieta/commercial-turf-cleaning-in-temecula",
+      "h1": [
+        "Commercial Artificial Turf Cleaningin Temecula, CA"
+      ],
+      "mainWords": 771,
+      "schemaTypes": [
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/commercial-turf-cleaning/murrieta/commercial-turf-cleaning-in-french-valley",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/commercial-turf-cleaning/murrieta/commercial-turf-cleaning-in-french-valley",
+      "type": "text/html; charset=UTF-8",
+      "title": "Commercial Artificial Turf Cleaning in French Valley, CA | Murphy's Turf",
+      "description": "Commercial artificial turf cleaning in French Valley, CA for dog daycares, HOAs, schools, gyms & hospitality. Recurring, pet-safe, bonded & insured service from Murphy's Turf. Call (951) 331-3300.",
+      "canonical": "https://murphysturf.com/commercial-turf-cleaning/murrieta/commercial-turf-cleaning-in-french-valley",
+      "h1": [
+        "Commercial Artificial Turf Cleaningin French Valley, CA"
+      ],
+      "mainWords": 777,
+      "schemaTypes": [
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/commercial-turf-cleaning/murrieta/commercial-turf-cleaning-in-lake-elsinore",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/commercial-turf-cleaning/murrieta/commercial-turf-cleaning-in-lake-elsinore",
+      "type": "text/html; charset=UTF-8",
+      "title": "Commercial Artificial Turf Cleaning in Lake Elsinore, CA | Murphy's Turf",
+      "description": "Commercial artificial turf cleaning in Lake Elsinore, CA for dog daycares, HOAs, schools, gyms & hospitality. Recurring, pet-safe, bonded & insured service from Murphy's Turf. Call (951) 331-3300.",
+      "canonical": "https://murphysturf.com/commercial-turf-cleaning/murrieta/commercial-turf-cleaning-in-lake-elsinore",
+      "h1": [
+        "Commercial Artificial Turf Cleaningin Lake Elsinore, CA"
+      ],
+      "mainWords": 787,
+      "schemaTypes": [
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/commercial-turf-cleaning/murrieta/commercial-turf-cleaning-in-menifee",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/commercial-turf-cleaning/murrieta/commercial-turf-cleaning-in-menifee",
+      "type": "text/html; charset=UTF-8",
+      "title": "Commercial Artificial Turf Cleaning in Menifee, CA | Murphy's Turf",
+      "description": "Commercial artificial turf cleaning in Menifee, CA for dog daycares, HOAs, schools, gyms & hospitality. Recurring, pet-safe, bonded & insured service from Murphy's Turf. Call (951) 331-3300.",
+      "canonical": "https://murphysturf.com/commercial-turf-cleaning/murrieta/commercial-turf-cleaning-in-menifee",
+      "h1": [
+        "Commercial Artificial Turf Cleaningin Menifee, CA"
+      ],
+      "mainWords": 763,
+      "schemaTypes": [
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/commercial-turf-cleaning/murrieta/commercial-turf-cleaning-in-hemet",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/commercial-turf-cleaning/murrieta/commercial-turf-cleaning-in-hemet",
+      "type": "text/html; charset=UTF-8",
+      "title": "Commercial Artificial Turf Cleaning in Hemet, CA | Murphy's Turf",
+      "description": "Commercial artificial turf cleaning in Hemet, CA for dog daycares, HOAs, schools, gyms & hospitality. Recurring, pet-safe, bonded & insured service from Murphy's Turf. Call (951) 331-3300.",
+      "canonical": "https://murphysturf.com/commercial-turf-cleaning/murrieta/commercial-turf-cleaning-in-hemet",
+      "h1": [
+        "Commercial Artificial Turf Cleaningin Hemet, CA"
+      ],
+      "mainWords": 771,
+      "schemaTypes": [
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/commercial-turf-cleaning/murrieta/commercial-turf-cleaning-in-perris",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/commercial-turf-cleaning/murrieta/commercial-turf-cleaning-in-perris",
+      "type": "text/html; charset=UTF-8",
+      "title": "Commercial Artificial Turf Cleaning in Perris, CA | Murphy's Turf",
+      "description": "Commercial artificial turf cleaning in Perris, CA for dog daycares, HOAs, schools, gyms & hospitality. Recurring, pet-safe, bonded & insured service from Murphy's Turf. Call (951) 331-3300.",
+      "canonical": "https://murphysturf.com/commercial-turf-cleaning/murrieta/commercial-turf-cleaning-in-perris",
+      "h1": [
+        "Commercial Artificial Turf Cleaningin Perris, CA"
+      ],
+      "mainWords": 759,
+      "schemaTypes": [
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/commercial-turf-cleaning/murrieta/commercial-turf-cleaning-in-wildomar",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/commercial-turf-cleaning/murrieta/commercial-turf-cleaning-in-wildomar",
+      "type": "text/html; charset=UTF-8",
+      "title": "Commercial Artificial Turf Cleaning in Wildomar, CA | Murphy's Turf",
+      "description": "Commercial artificial turf cleaning in Wildomar, CA for dog daycares, HOAs, schools, gyms & hospitality. Recurring, pet-safe, bonded & insured service from Murphy's Turf. Call (951) 331-3300.",
+      "canonical": "https://murphysturf.com/commercial-turf-cleaning/murrieta/commercial-turf-cleaning-in-wildomar",
+      "h1": [
+        "Commercial Artificial Turf Cleaningin Wildomar, CA"
+      ],
+      "mainWords": 763,
+      "schemaTypes": [
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/commercial-turf-cleaning/murrieta/commercial-turf-cleaning-in-canyon-lake",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/commercial-turf-cleaning/murrieta/commercial-turf-cleaning-in-canyon-lake",
+      "type": "text/html; charset=UTF-8",
+      "title": "Commercial Artificial Turf Cleaning in Canyon Lake, CA | Murphy's Turf",
+      "description": "Commercial artificial turf cleaning in Canyon Lake, CA for dog daycares, HOAs, schools, gyms & hospitality. Recurring, pet-safe, bonded & insured service from Murphy's Turf. Call (951) 331-3300.",
+      "canonical": "https://murphysturf.com/commercial-turf-cleaning/murrieta/commercial-turf-cleaning-in-canyon-lake",
+      "h1": [
+        "Commercial Artificial Turf Cleaningin Canyon Lake, CA"
+      ],
+      "mainWords": 787,
+      "schemaTypes": [
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/commercial-turf-cleaning/murrieta/commercial-turf-cleaning-in-temescal-valley",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/commercial-turf-cleaning/murrieta/commercial-turf-cleaning-in-temescal-valley",
+      "type": "text/html; charset=UTF-8",
+      "title": "Commercial Artificial Turf Cleaning in Temescal Valley, CA | Murphy's Turf",
+      "description": "Commercial artificial turf cleaning in Temescal Valley, CA for dog daycares, HOAs, schools, gyms & hospitality. Recurring, pet-safe, bonded & insured service from Murphy's Turf. Call (951) 331-3300.",
+      "canonical": "https://murphysturf.com/commercial-turf-cleaning/murrieta/commercial-turf-cleaning-in-temescal-valley",
+      "h1": [
+        "Commercial Artificial Turf Cleaningin Temescal Valley, CA"
+      ],
+      "mainWords": 789,
+      "schemaTypes": [
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/commercial-turf-cleaning/murrieta/commercial-turf-cleaning-in-winchester",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/commercial-turf-cleaning/murrieta/commercial-turf-cleaning-in-winchester",
+      "type": "text/html; charset=UTF-8",
+      "title": "Commercial Artificial Turf Cleaning in Winchester, CA | Murphy's Turf",
+      "description": "Commercial artificial turf cleaning in Winchester, CA for dog daycares, HOAs, schools, gyms & hospitality. Recurring, pet-safe, bonded & insured service from Murphy's Turf. Call (951) 331-3300.",
+      "canonical": "https://murphysturf.com/commercial-turf-cleaning/murrieta/commercial-turf-cleaning-in-winchester",
+      "h1": [
+        "Commercial Artificial Turf Cleaningin Winchester, CA"
+      ],
+      "mainWords": 759,
+      "schemaTypes": [
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/commercial-turf-cleaning/murrieta/commercial-turf-cleaning-in-corona",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/commercial-turf-cleaning/murrieta/commercial-turf-cleaning-in-corona",
+      "type": "text/html; charset=UTF-8",
+      "title": "Commercial Artificial Turf Cleaning in Corona, CA | Murphy's Turf",
+      "description": "Commercial artificial turf cleaning in Corona, CA for dog daycares, HOAs, schools, gyms & hospitality. Recurring, pet-safe, bonded & insured service from Murphy's Turf. Call (951) 331-3300.",
+      "canonical": "https://murphysturf.com/commercial-turf-cleaning/murrieta/commercial-turf-cleaning-in-corona",
+      "h1": [
+        "Commercial Artificial Turf Cleaningin Corona, CA"
+      ],
+      "mainWords": 763,
+      "schemaTypes": [
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/commercial-turf-cleaning/murrieta/commercial-turf-cleaning-in-riverside",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/commercial-turf-cleaning/murrieta/commercial-turf-cleaning-in-riverside",
+      "type": "text/html; charset=UTF-8",
+      "title": "Commercial Artificial Turf Cleaning in Riverside, CA | Murphy's Turf",
+      "description": "Commercial artificial turf cleaning in Riverside, CA for dog daycares, HOAs, schools, gyms & hospitality. Recurring, pet-safe, bonded & insured service from Murphy's Turf. Call (951) 331-3300.",
+      "canonical": "https://murphysturf.com/commercial-turf-cleaning/murrieta/commercial-turf-cleaning-in-riverside",
+      "h1": [
+        "Commercial Artificial Turf Cleaningin Riverside, CA"
+      ],
+      "mainWords": 769,
+      "schemaTypes": [
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/commercial-turf-cleaning/murrieta/commercial-turf-cleaning-in-moreno-valley",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/commercial-turf-cleaning/murrieta/commercial-turf-cleaning-in-moreno-valley",
+      "type": "text/html; charset=UTF-8",
+      "title": "Commercial Artificial Turf Cleaning in Moreno Valley, CA | Murphy's Turf",
+      "description": "Commercial artificial turf cleaning in Moreno Valley, CA for dog daycares, HOAs, schools, gyms & hospitality. Recurring, pet-safe, bonded & insured service from Murphy's Turf. Call (951) 331-3300.",
+      "canonical": "https://murphysturf.com/commercial-turf-cleaning/murrieta/commercial-turf-cleaning-in-moreno-valley",
+      "h1": [
+        "Commercial Artificial Turf Cleaningin Moreno Valley, CA"
+      ],
+      "mainWords": 789,
+      "schemaTypes": [
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/commercial-turf-cleaning/murrieta/commercial-turf-cleaning-in-san-jacinto",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/commercial-turf-cleaning/murrieta/commercial-turf-cleaning-in-san-jacinto",
+      "type": "text/html; charset=UTF-8",
+      "title": "Commercial Artificial Turf Cleaning in San Jacinto, CA | Murphy's Turf",
+      "description": "Commercial artificial turf cleaning in San Jacinto, CA for dog daycares, HOAs, schools, gyms & hospitality. Recurring, pet-safe, bonded & insured service from Murphy's Turf. Call (951) 331-3300.",
+      "canonical": "https://murphysturf.com/commercial-turf-cleaning/murrieta/commercial-turf-cleaning-in-san-jacinto",
+      "h1": [
+        "Commercial Artificial Turf Cleaningin San Jacinto, CA"
+      ],
+      "mainWords": 777,
+      "schemaTypes": [
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/commercial-turf-cleaning/murrieta/commercial-turf-cleaning-in-beaumont",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/commercial-turf-cleaning/murrieta/commercial-turf-cleaning-in-beaumont",
+      "type": "text/html; charset=UTF-8",
+      "title": "Commercial Artificial Turf Cleaning in Beaumont, CA | Murphy's Turf",
+      "description": "Commercial artificial turf cleaning in Beaumont, CA for dog daycares, HOAs, schools, gyms & hospitality. Recurring, pet-safe, bonded & insured service from Murphy's Turf. Call (951) 331-3300.",
+      "canonical": "https://murphysturf.com/commercial-turf-cleaning/murrieta/commercial-turf-cleaning-in-beaumont",
+      "h1": [
+        "Commercial Artificial Turf Cleaningin Beaumont, CA"
+      ],
+      "mainWords": 763,
+      "schemaTypes": [
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/commercial-turf-cleaning/murrieta/commercial-turf-cleaning-in-eastvale",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/commercial-turf-cleaning/murrieta/commercial-turf-cleaning-in-eastvale",
+      "type": "text/html; charset=UTF-8",
+      "title": "Commercial Artificial Turf Cleaning in Eastvale, CA | Murphy's Turf",
+      "description": "Commercial artificial turf cleaning in Eastvale, CA for dog daycares, HOAs, schools, gyms & hospitality. Recurring, pet-safe, bonded & insured service from Murphy's Turf. Call (951) 331-3300.",
+      "canonical": "https://murphysturf.com/commercial-turf-cleaning/murrieta/commercial-turf-cleaning-in-eastvale",
+      "h1": [
+        "Commercial Artificial Turf Cleaningin Eastvale, CA"
+      ],
+      "mainWords": 769,
+      "schemaTypes": [
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/commercial-turf-cleaning/murrieta/commercial-turf-cleaning-in-norco",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/commercial-turf-cleaning/murrieta/commercial-turf-cleaning-in-norco",
+      "type": "text/html; charset=UTF-8",
+      "title": "Commercial Artificial Turf Cleaning in Norco, CA | Murphy's Turf",
+      "description": "Commercial artificial turf cleaning in Norco, CA for dog daycares, HOAs, schools, gyms & hospitality. Recurring, pet-safe, bonded & insured service from Murphy's Turf. Call (951) 331-3300.",
+      "canonical": "https://murphysturf.com/commercial-turf-cleaning/murrieta/commercial-turf-cleaning-in-norco",
+      "h1": [
+        "Commercial Artificial Turf Cleaningin Norco, CA"
+      ],
+      "mainWords": 771,
+      "schemaTypes": [
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/commercial-turf-cleaning/murrieta/commercial-turf-cleaning-in-fallbrook",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/commercial-turf-cleaning/murrieta/commercial-turf-cleaning-in-fallbrook",
+      "type": "text/html; charset=UTF-8",
+      "title": "Commercial Artificial Turf Cleaning in Fallbrook, CA | Murphy's Turf",
+      "description": "Commercial artificial turf cleaning in Fallbrook, CA for dog daycares, HOAs, schools, gyms & hospitality. Recurring, pet-safe, bonded & insured service from Murphy's Turf. Call (951) 331-3300.",
+      "canonical": "https://murphysturf.com/commercial-turf-cleaning/murrieta/commercial-turf-cleaning-in-fallbrook",
+      "h1": [
+        "Commercial Artificial Turf Cleaningin Fallbrook, CA"
+      ],
+      "mainWords": 759,
+      "schemaTypes": [
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/commercial-turf-cleaning/martinez/commercial-turf-cleaning-in-concord",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/commercial-turf-cleaning/martinez/commercial-turf-cleaning-in-concord",
+      "type": "text/html; charset=UTF-8",
+      "title": "Commercial Artificial Turf Cleaning in Concord, CA | Murphy's Turf",
+      "description": "Commercial artificial turf cleaning in Concord, CA for dog daycares, HOAs, schools, gyms & hospitality. Recurring, pet-safe, bonded & insured service from Murphy's Turf. Call (925) 338-0048.",
+      "canonical": "https://murphysturf.com/commercial-turf-cleaning/martinez/commercial-turf-cleaning-in-concord",
+      "h1": [
+        "Commercial Artificial Turf Cleaningin Concord, CA"
+      ],
+      "mainWords": 775,
+      "schemaTypes": [
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/commercial-turf-cleaning/martinez/commercial-turf-cleaning-in-pleasant-hill",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/commercial-turf-cleaning/martinez/commercial-turf-cleaning-in-pleasant-hill",
+      "type": "text/html; charset=UTF-8",
+      "title": "Commercial Artificial Turf Cleaning in Pleasant Hill, CA | Murphy's Turf",
+      "description": "Commercial artificial turf cleaning in Pleasant Hill, CA for dog daycares, HOAs, schools, gyms & hospitality. Recurring, pet-safe, bonded & insured service from Murphy's Turf. Call (925) 338-0048.",
+      "canonical": "https://murphysturf.com/commercial-turf-cleaning/martinez/commercial-turf-cleaning-in-pleasant-hill",
+      "h1": [
+        "Commercial Artificial Turf Cleaningin Pleasant Hill, CA"
+      ],
+      "mainWords": 781,
+      "schemaTypes": [
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/commercial-turf-cleaning/martinez/commercial-turf-cleaning-in-walnut-creek",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/commercial-turf-cleaning/martinez/commercial-turf-cleaning-in-walnut-creek",
+      "type": "text/html; charset=UTF-8",
+      "title": "Commercial Artificial Turf Cleaning in Walnut Creek, CA | Murphy's Turf",
+      "description": "Commercial artificial turf cleaning in Walnut Creek, CA for dog daycares, HOAs, schools, gyms & hospitality. Recurring, pet-safe, bonded & insured service from Murphy's Turf. Call (925) 338-0048.",
+      "canonical": "https://murphysturf.com/commercial-turf-cleaning/martinez/commercial-turf-cleaning-in-walnut-creek",
+      "h1": [
+        "Commercial Artificial Turf Cleaningin Walnut Creek, CA"
+      ],
+      "mainWords": 785,
+      "schemaTypes": [
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/commercial-turf-cleaning/martinez/commercial-turf-cleaning-in-antioch",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/commercial-turf-cleaning/martinez/commercial-turf-cleaning-in-antioch",
+      "type": "text/html; charset=UTF-8",
+      "title": "Commercial Artificial Turf Cleaning in Antioch, CA | Murphy's Turf",
+      "description": "Commercial artificial turf cleaning in Antioch, CA for dog daycares, HOAs, schools, gyms & hospitality. Recurring, pet-safe, bonded & insured service from Murphy's Turf. Call (925) 338-0048.",
+      "canonical": "https://murphysturf.com/commercial-turf-cleaning/martinez/commercial-turf-cleaning-in-antioch",
+      "h1": [
+        "Commercial Artificial Turf Cleaningin Antioch, CA"
+      ],
+      "mainWords": 773,
+      "schemaTypes": [
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/commercial-turf-cleaning/martinez/commercial-turf-cleaning-in-brentwood",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/commercial-turf-cleaning/martinez/commercial-turf-cleaning-in-brentwood",
+      "type": "text/html; charset=UTF-8",
+      "title": "Commercial Artificial Turf Cleaning in Brentwood, CA | Murphy's Turf",
+      "description": "Commercial artificial turf cleaning in Brentwood, CA for dog daycares, HOAs, schools, gyms & hospitality. Recurring, pet-safe, bonded & insured service from Murphy's Turf. Call (925) 338-0048.",
+      "canonical": "https://murphysturf.com/commercial-turf-cleaning/martinez/commercial-turf-cleaning-in-brentwood",
+      "h1": [
+        "Commercial Artificial Turf Cleaningin Brentwood, CA"
+      ],
+      "mainWords": 775,
+      "schemaTypes": [
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/commercial-turf-cleaning/martinez/commercial-turf-cleaning-in-danville",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/commercial-turf-cleaning/martinez/commercial-turf-cleaning-in-danville",
+      "type": "text/html; charset=UTF-8",
+      "title": "Commercial Artificial Turf Cleaning in Danville, CA | Murphy's Turf",
+      "description": "Commercial artificial turf cleaning in Danville, CA for dog daycares, HOAs, schools, gyms & hospitality. Recurring, pet-safe, bonded & insured service from Murphy's Turf. Call (925) 338-0048.",
+      "canonical": "https://murphysturf.com/commercial-turf-cleaning/martinez/commercial-turf-cleaning-in-danville",
+      "h1": [
+        "Commercial Artificial Turf Cleaningin Danville, CA"
+      ],
+      "mainWords": 767,
+      "schemaTypes": [
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/commercial-turf-cleaning/martinez/commercial-turf-cleaning-in-lafayette",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/commercial-turf-cleaning/martinez/commercial-turf-cleaning-in-lafayette",
+      "type": "text/html; charset=UTF-8",
+      "title": "Commercial Artificial Turf Cleaning in Lafayette, CA | Murphy's Turf",
+      "description": "Commercial artificial turf cleaning in Lafayette, CA for dog daycares, HOAs, schools, gyms & hospitality. Recurring, pet-safe, bonded & insured service from Murphy's Turf. Call (925) 338-0048.",
+      "canonical": "https://murphysturf.com/commercial-turf-cleaning/martinez/commercial-turf-cleaning-in-lafayette",
+      "h1": [
+        "Commercial Artificial Turf Cleaningin Lafayette, CA"
+      ],
+      "mainWords": 763,
+      "schemaTypes": [
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/commercial-turf-cleaning/martinez/commercial-turf-cleaning-in-san-ramon",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/commercial-turf-cleaning/martinez/commercial-turf-cleaning-in-san-ramon",
+      "type": "text/html; charset=UTF-8",
+      "title": "Commercial Artificial Turf Cleaning in San Ramon, CA | Murphy's Turf",
+      "description": "Commercial artificial turf cleaning in San Ramon, CA for dog daycares, HOAs, schools, gyms & hospitality. Recurring, pet-safe, bonded & insured service from Murphy's Turf. Call (925) 338-0048.",
+      "canonical": "https://murphysturf.com/commercial-turf-cleaning/martinez/commercial-turf-cleaning-in-san-ramon",
+      "h1": [
+        "Commercial Artificial Turf Cleaningin San Ramon, CA"
+      ],
+      "mainWords": 791,
+      "schemaTypes": [
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/commercial-turf-cleaning/martinez/commercial-turf-cleaning-in-dublin",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/commercial-turf-cleaning/martinez/commercial-turf-cleaning-in-dublin",
+      "type": "text/html; charset=UTF-8",
+      "title": "Commercial Artificial Turf Cleaning in Dublin, CA | Murphy's Turf",
+      "description": "Commercial artificial turf cleaning in Dublin, CA for dog daycares, HOAs, schools, gyms & hospitality. Recurring, pet-safe, bonded & insured service from Murphy's Turf. Call (925) 338-0048.",
+      "canonical": "https://murphysturf.com/commercial-turf-cleaning/martinez/commercial-turf-cleaning-in-dublin",
+      "h1": [
+        "Commercial Artificial Turf Cleaningin Dublin, CA"
+      ],
+      "mainWords": 775,
+      "schemaTypes": [
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/commercial-turf-cleaning/martinez/commercial-turf-cleaning-in-livermore",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/commercial-turf-cleaning/martinez/commercial-turf-cleaning-in-livermore",
+      "type": "text/html; charset=UTF-8",
+      "title": "Commercial Artificial Turf Cleaning in Livermore, CA | Murphy's Turf",
+      "description": "Commercial artificial turf cleaning in Livermore, CA for dog daycares, HOAs, schools, gyms & hospitality. Recurring, pet-safe, bonded & insured service from Murphy's Turf. Call (925) 338-0048.",
+      "canonical": "https://murphysturf.com/commercial-turf-cleaning/martinez/commercial-turf-cleaning-in-livermore",
+      "h1": [
+        "Commercial Artificial Turf Cleaningin Livermore, CA"
+      ],
+      "mainWords": 763,
+      "schemaTypes": [
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/commercial-turf-cleaning/martinez/commercial-turf-cleaning-in-pleasanton",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/commercial-turf-cleaning/martinez/commercial-turf-cleaning-in-pleasanton",
+      "type": "text/html; charset=UTF-8",
+      "title": "Commercial Artificial Turf Cleaning in Pleasanton, CA | Murphy's Turf",
+      "description": "Commercial artificial turf cleaning in Pleasanton, CA for dog daycares, HOAs, schools, gyms & hospitality. Recurring, pet-safe, bonded & insured service from Murphy's Turf. Call (925) 338-0048.",
+      "canonical": "https://murphysturf.com/commercial-turf-cleaning/martinez/commercial-turf-cleaning-in-pleasanton",
+      "h1": [
+        "Commercial Artificial Turf Cleaningin Pleasanton, CA"
+      ],
+      "mainWords": 767,
+      "schemaTypes": [
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/commercial-turf-cleaning/martinez/commercial-turf-cleaning-in-alamo",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/commercial-turf-cleaning/martinez/commercial-turf-cleaning-in-alamo",
+      "type": "text/html; charset=UTF-8",
+      "title": "Commercial Artificial Turf Cleaning in Alamo, CA | Murphy's Turf",
+      "description": "Commercial artificial turf cleaning in Alamo, CA for dog daycares, HOAs, schools, gyms & hospitality. Recurring, pet-safe, bonded & insured service from Murphy's Turf. Call (925) 338-0048.",
+      "canonical": "https://murphysturf.com/commercial-turf-cleaning/martinez/commercial-turf-cleaning-in-alamo",
+      "h1": [
+        "Commercial Artificial Turf Cleaningin Alamo, CA"
+      ],
+      "mainWords": 775,
+      "schemaTypes": [
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/commercial-turf-cleaning/martinez/commercial-turf-cleaning-in-orinda",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/commercial-turf-cleaning/martinez/commercial-turf-cleaning-in-orinda",
+      "type": "text/html; charset=UTF-8",
+      "title": "Commercial Artificial Turf Cleaning in Orinda, CA | Murphy's Turf",
+      "description": "Commercial artificial turf cleaning in Orinda, CA for dog daycares, HOAs, schools, gyms & hospitality. Recurring, pet-safe, bonded & insured service from Murphy's Turf. Call (925) 338-0048.",
+      "canonical": "https://murphysturf.com/commercial-turf-cleaning/martinez/commercial-turf-cleaning-in-orinda",
+      "h1": [
+        "Commercial Artificial Turf Cleaningin Orinda, CA"
+      ],
+      "mainWords": 773,
+      "schemaTypes": [
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/commercial-turf-cleaning/martinez/commercial-turf-cleaning-in-oakley",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/commercial-turf-cleaning/martinez/commercial-turf-cleaning-in-oakley",
+      "type": "text/html; charset=UTF-8",
+      "title": "Commercial Artificial Turf Cleaning in Oakley, CA | Murphy's Turf",
+      "description": "Commercial artificial turf cleaning in Oakley, CA for dog daycares, HOAs, schools, gyms & hospitality. Recurring, pet-safe, bonded & insured service from Murphy's Turf. Call (925) 338-0048.",
+      "canonical": "https://murphysturf.com/commercial-turf-cleaning/martinez/commercial-turf-cleaning-in-oakley",
+      "h1": [
+        "Commercial Artificial Turf Cleaningin Oakley, CA"
+      ],
+      "mainWords": 763,
+      "schemaTypes": [
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/commercial-turf-cleaning/sacramento/commercial-turf-cleaning-in-elk-grove",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/commercial-turf-cleaning/sacramento/commercial-turf-cleaning-in-elk-grove",
+      "type": "text/html; charset=UTF-8",
+      "title": "Commercial Artificial Turf Cleaning in Elk Grove, CA | Murphy's Turf",
+      "description": "Commercial artificial turf cleaning in Elk Grove, CA for dog daycares, HOAs, schools, gyms & hospitality. Recurring, pet-safe, bonded & insured service from Murphy's Turf. Call (916) 432-5033.",
+      "canonical": "https://murphysturf.com/commercial-turf-cleaning/sacramento/commercial-turf-cleaning-in-elk-grove",
+      "h1": [
+        "Commercial Artificial Turf Cleaningin Elk Grove, CA"
+      ],
+      "mainWords": 785,
+      "schemaTypes": [
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/commercial-turf-cleaning/sacramento/commercial-turf-cleaning-in-roseville",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/commercial-turf-cleaning/sacramento/commercial-turf-cleaning-in-roseville",
+      "type": "text/html; charset=UTF-8",
+      "title": "Commercial Artificial Turf Cleaning in Roseville, CA | Murphy's Turf",
+      "description": "Commercial artificial turf cleaning in Roseville, CA for dog daycares, HOAs, schools, gyms & hospitality. Recurring, pet-safe, bonded & insured service from Murphy's Turf. Call (916) 432-5033.",
+      "canonical": "https://murphysturf.com/commercial-turf-cleaning/sacramento/commercial-turf-cleaning-in-roseville",
+      "h1": [
+        "Commercial Artificial Turf Cleaningin Roseville, CA"
+      ],
+      "mainWords": 755,
+      "schemaTypes": [
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/commercial-turf-cleaning/sacramento/commercial-turf-cleaning-in-folsom",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/commercial-turf-cleaning/sacramento/commercial-turf-cleaning-in-folsom",
+      "type": "text/html; charset=UTF-8",
+      "title": "Commercial Artificial Turf Cleaning in Folsom, CA | Murphy's Turf",
+      "description": "Commercial artificial turf cleaning in Folsom, CA for dog daycares, HOAs, schools, gyms & hospitality. Recurring, pet-safe, bonded & insured service from Murphy's Turf. Call (916) 432-5033.",
+      "canonical": "https://murphysturf.com/commercial-turf-cleaning/sacramento/commercial-turf-cleaning-in-folsom",
+      "h1": [
+        "Commercial Artificial Turf Cleaningin Folsom, CA"
+      ],
+      "mainWords": 759,
+      "schemaTypes": [
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/commercial-turf-cleaning/sacramento/commercial-turf-cleaning-in-west-sacramento",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/commercial-turf-cleaning/sacramento/commercial-turf-cleaning-in-west-sacramento",
+      "type": "text/html; charset=UTF-8",
+      "title": "Commercial Artificial Turf Cleaning in West Sacramento, CA | Murphy's Turf",
+      "description": "Commercial artificial turf cleaning in West Sacramento, CA for dog daycares, HOAs, schools, gyms & hospitality. Recurring, pet-safe, bonded & insured service from Murphy's Turf. Call (916) 432-5033.",
+      "canonical": "https://murphysturf.com/commercial-turf-cleaning/sacramento/commercial-turf-cleaning-in-west-sacramento",
+      "h1": [
+        "Commercial Artificial Turf Cleaningin West Sacramento, CA"
+      ],
+      "mainWords": 773,
+      "schemaTypes": [
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/commercial-turf-cleaning/sacramento/commercial-turf-cleaning-in-rancho-cordova",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/commercial-turf-cleaning/sacramento/commercial-turf-cleaning-in-rancho-cordova",
+      "type": "text/html; charset=UTF-8",
+      "title": "Commercial Artificial Turf Cleaning in Rancho Cordova, CA | Murphy's Turf",
+      "description": "Commercial artificial turf cleaning in Rancho Cordova, CA for dog daycares, HOAs, schools, gyms & hospitality. Recurring, pet-safe, bonded & insured service from Murphy's Turf. Call (916) 432-5033.",
+      "canonical": "https://murphysturf.com/commercial-turf-cleaning/sacramento/commercial-turf-cleaning-in-rancho-cordova",
+      "h1": [
+        "Commercial Artificial Turf Cleaningin Rancho Cordova, CA"
+      ],
+      "mainWords": 783,
+      "schemaTypes": [
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/commercial-turf-cleaning/sacramento/commercial-turf-cleaning-in-citrus-heights",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/commercial-turf-cleaning/sacramento/commercial-turf-cleaning-in-citrus-heights",
+      "type": "text/html; charset=UTF-8",
+      "title": "Commercial Artificial Turf Cleaning in Citrus Heights, CA | Murphy's Turf",
+      "description": "Commercial artificial turf cleaning in Citrus Heights, CA for dog daycares, HOAs, schools, gyms & hospitality. Recurring, pet-safe, bonded & insured service from Murphy's Turf. Call (916) 432-5033.",
+      "canonical": "https://murphysturf.com/commercial-turf-cleaning/sacramento/commercial-turf-cleaning-in-citrus-heights",
+      "h1": [
+        "Commercial Artificial Turf Cleaningin Citrus Heights, CA"
+      ],
+      "mainWords": 785,
+      "schemaTypes": [
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/commercial-turf-cleaning/sacramento/commercial-turf-cleaning-in-carmichael",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/commercial-turf-cleaning/sacramento/commercial-turf-cleaning-in-carmichael",
+      "type": "text/html; charset=UTF-8",
+      "title": "Commercial Artificial Turf Cleaning in Carmichael, CA | Murphy's Turf",
+      "description": "Commercial artificial turf cleaning in Carmichael, CA for dog daycares, HOAs, schools, gyms & hospitality. Recurring, pet-safe, bonded & insured service from Murphy's Turf. Call (916) 432-5033.",
+      "canonical": "https://murphysturf.com/commercial-turf-cleaning/sacramento/commercial-turf-cleaning-in-carmichael",
+      "h1": [
+        "Commercial Artificial Turf Cleaningin Carmichael, CA"
+      ],
+      "mainWords": 759,
+      "schemaTypes": [
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/commercial-turf-cleaning/sacramento/commercial-turf-cleaning-in-fair-oaks",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/commercial-turf-cleaning/sacramento/commercial-turf-cleaning-in-fair-oaks",
+      "type": "text/html; charset=UTF-8",
+      "title": "Commercial Artificial Turf Cleaning in Fair Oaks, CA | Murphy's Turf",
+      "description": "Commercial artificial turf cleaning in Fair Oaks, CA for dog daycares, HOAs, schools, gyms & hospitality. Recurring, pet-safe, bonded & insured service from Murphy's Turf. Call (916) 432-5033.",
+      "canonical": "https://murphysturf.com/commercial-turf-cleaning/sacramento/commercial-turf-cleaning-in-fair-oaks",
+      "h1": [
+        "Commercial Artificial Turf Cleaningin Fair Oaks, CA"
+      ],
+      "mainWords": 783,
+      "schemaTypes": [
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/commercial-turf-cleaning/sacramento/commercial-turf-cleaning-in-rocklin",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/commercial-turf-cleaning/sacramento/commercial-turf-cleaning-in-rocklin",
+      "type": "text/html; charset=UTF-8",
+      "title": "Commercial Artificial Turf Cleaning in Rocklin, CA | Murphy's Turf",
+      "description": "Commercial artificial turf cleaning in Rocklin, CA for dog daycares, HOAs, schools, gyms & hospitality. Recurring, pet-safe, bonded & insured service from Murphy's Turf. Call (916) 432-5033.",
+      "canonical": "https://murphysturf.com/commercial-turf-cleaning/sacramento/commercial-turf-cleaning-in-rocklin",
+      "h1": [
+        "Commercial Artificial Turf Cleaningin Rocklin, CA"
+      ],
+      "mainWords": 767,
+      "schemaTypes": [
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/commercial-turf-cleaning/sacramento/commercial-turf-cleaning-in-natomas",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/commercial-turf-cleaning/sacramento/commercial-turf-cleaning-in-natomas",
+      "type": "text/html; charset=UTF-8",
+      "title": "Commercial Artificial Turf Cleaning in Natomas, CA | Murphy's Turf",
+      "description": "Commercial artificial turf cleaning in Natomas, CA for dog daycares, HOAs, schools, gyms & hospitality. Recurring, pet-safe, bonded & insured service from Murphy's Turf. Call (916) 432-5033.",
+      "canonical": "https://murphysturf.com/commercial-turf-cleaning/sacramento/commercial-turf-cleaning-in-natomas",
+      "h1": [
+        "Commercial Artificial Turf Cleaningin Natomas, CA"
+      ],
+      "mainWords": 759,
+      "schemaTypes": [
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/commercial-turf-cleaning/sacramento/commercial-turf-cleaning-in-granite-bay",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/commercial-turf-cleaning/sacramento/commercial-turf-cleaning-in-granite-bay",
+      "type": "text/html; charset=UTF-8",
+      "title": "Commercial Artificial Turf Cleaning in Granite Bay, CA | Murphy's Turf",
+      "description": "Commercial artificial turf cleaning in Granite Bay, CA for dog daycares, HOAs, schools, gyms & hospitality. Recurring, pet-safe, bonded & insured service from Murphy's Turf. Call (916) 432-5033.",
+      "canonical": "https://murphysturf.com/commercial-turf-cleaning/sacramento/commercial-turf-cleaning-in-granite-bay",
+      "h1": [
+        "Commercial Artificial Turf Cleaningin Granite Bay, CA"
+      ],
+      "mainWords": 773,
+      "schemaTypes": [
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/blog/how-to-clean-artificial-turf",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/how-to-clean-artificial-turf",
+      "type": "text/html; charset=UTF-8",
+      "title": "How to Clean Artificial Turf: The Complete Guide | Murphy's Turf",
+      "description": "Learn how to clean artificial turf step by step. From basic rinsing to deep sanitization with our professional-grade cleaning solution, this complete guide covers everything California homeowners need to keep synthetic grass clean and fresh.",
+      "canonical": "https://murphysturf.com/blog/how-to-clean-artificial-turf",
+      "h1": [
+        "How to Clean Artificial Turf: The Complete Guide"
+      ],
+      "mainWords": 1285,
+      "schemaTypes": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/commercial-turf-cleaning/sacramento/commercial-turf-cleaning-in-orangevale",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/commercial-turf-cleaning/sacramento/commercial-turf-cleaning-in-orangevale",
+      "type": "text/html; charset=UTF-8",
+      "title": "Commercial Artificial Turf Cleaning in Orangevale, CA | Murphy's Turf",
+      "description": "Commercial artificial turf cleaning in Orangevale, CA for dog daycares, HOAs, schools, gyms & hospitality. Recurring, pet-safe, bonded & insured service from Murphy's Turf. Call (916) 432-5033.",
+      "canonical": "https://murphysturf.com/commercial-turf-cleaning/sacramento/commercial-turf-cleaning-in-orangevale",
+      "h1": [
+        "Commercial Artificial Turf Cleaningin Orangevale, CA"
+      ],
+      "mainWords": 765,
+      "schemaTypes": [
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/blog/removing-pet-odors-artificial-turf",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/removing-pet-odors-artificial-turf",
+      "type": "text/html; charset=UTF-8",
+      "title": "Removing Pet Odors from Artificial Turf: What Actually Works | Murphy's Turf",
+      "description": "Struggling with pet urine odors on your artificial turf? Learn which cleaning methods actually work, why vinegar and baking soda fall short, and how our professional-grade cleaning solution eliminates odors at the source.",
+      "canonical": "https://murphysturf.com/blog/removing-pet-odors-artificial-turf",
+      "h1": [
+        "Removing Pet Odors from Artificial Turf: What Actually Works"
+      ],
+      "mainWords": 1190,
+      "schemaTypes": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/blog/how-often-clean-artificial-turf",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/how-often-clean-artificial-turf",
+      "type": "text/html; charset=UTF-8",
+      "title": "How Often Should You Clean Your Artificial Turf? | Murphy's Turf",
+      "description": "Find out the ideal cleaning schedule for artificial turf based on your usage, pets, and California climate. Weekly, monthly, and quarterly maintenance recommendations from turf cleaning professionals.",
+      "canonical": "https://murphysturf.com/blog/how-often-clean-artificial-turf",
+      "h1": [
+        "How Often Should You Clean Your Artificial Turf?"
+      ],
+      "mainWords": 1075,
+      "schemaTypes": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/blog/artificial-turf-pets-clean-safe",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/artificial-turf-pets-clean-safe",
+      "type": "text/html; charset=UTF-8",
+      "title": "Keeping Artificial Turf Clean and Safe for Pets | Murphy's Turf",
+      "description": "Learn how to maintain artificial turf for a clean, safe environment for your dogs. Covers waste management, bacteria prevention, pet-safe cleaning products, and creating a healthy outdoor space.",
+      "canonical": "https://murphysturf.com/blog/artificial-turf-pets-clean-safe",
+      "h1": [
+        "Keeping Artificial Turf Clean and Safe for Pets"
+      ],
+      "mainWords": 1085,
+      "schemaTypes": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/blog/chlorine-based-turf-cleaning",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/chlorine-based-turf-cleaning",
+      "type": "text/html; charset=UTF-8",
+      "title": "The Science Behind Our Professional Chlorine-Based Cleaning Process | Murphy's Turf",
+      "description": "Discover how our chlorine-based cleaning solution uses oxidation to eliminate bacteria, odors, and contaminants from artificial turf without harsh chemicals. Safe for pets, kids, and the environment.",
+      "canonical": "https://murphysturf.com/blog/chlorine-based-turf-cleaning",
+      "h1": [
+        "The Science Behind Our Professional Chlorine-Based Cleaning Process"
+      ],
+      "mainWords": 1036,
+      "schemaTypes": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/blog/diy-vs-professional-turf-cleaning",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/diy-vs-professional-turf-cleaning",
+      "type": "text/html; charset=UTF-8",
+      "title": "DIY vs Professional Turf Cleaning: Is It Worth Hiring a Pro? | Murphy's Turf",
+      "description": "Compare the costs, effort, and results of DIY artificial turf cleaning versus hiring a professional. Learn when to save money cleaning yourself and when professional service makes the difference.",
+      "canonical": "https://murphysturf.com/blog/diy-vs-professional-turf-cleaning",
+      "h1": [
+        "DIY vs Professional Turf Cleaning: Is It Worth Hiring a Pro?"
+      ],
+      "mainWords": 1006,
+      "schemaTypes": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/blog/signs-turf-needs-professional-cleaning",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/signs-turf-needs-professional-cleaning",
+      "type": "text/html; charset=UTF-8",
+      "title": "5 Signs Your Artificial Turf Needs Professional Cleaning | Murphy's Turf",
+      "description": "Not sure if your synthetic grass needs professional cleaning? These 5 warning signs — from persistent odors to matted fibers — mean it is time to call in the experts.",
+      "canonical": "https://murphysturf.com/blog/signs-turf-needs-professional-cleaning",
+      "h1": [
+        "5 Signs Your Artificial Turf Needs Professional Cleaning"
+      ],
+      "mainWords": 997,
+      "schemaTypes": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/blog/turf-cleaning-huntington-beach",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/turf-cleaning-huntington-beach",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in Huntington Beach: What Local Homeowners Need to Know | Murphy's Turf",
+      "description": "Huntington Beach homeowners face unique turf cleaning challenges from salt air, sand, and coastal moisture. Learn how to maintain artificial turf near the coast and when to call Murphy's Turf for professional help.",
+      "canonical": "https://murphysturf.com/blog/turf-cleaning-huntington-beach",
+      "h1": [
+        "Artificial Turf Cleaning in Huntington Beach: What Local Homeowners Need to Know"
+      ],
+      "mainWords": 1028,
+      "schemaTypes": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/blog/turf-cleaning-murrieta-inland-empire",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/turf-cleaning-murrieta-inland-empire",
+      "type": "text/html; charset=UTF-8",
+      "title": "Turf Cleaning in Murrieta & the Inland Empire: Beating the Heat | Murphy's Turf",
+      "description": "Murrieta and Inland Empire homeowners face extreme heat that accelerates bacterial growth on artificial turf. Learn heat-specific cleaning strategies and how Murphy's Turf keeps synthetic grass fresh through triple-digit summers.",
+      "canonical": "https://murphysturf.com/blog/turf-cleaning-murrieta-inland-empire",
+      "h1": [
+        "Turf Cleaning in Murrieta & the Inland Empire: Beating the Heat"
+      ],
+      "mainWords": 1133,
+      "schemaTypes": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/blog/poop-scooping-service-worth-it",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/poop-scooping-service-worth-it",
+      "type": "text/html; charset=UTF-8",
+      "title": "Is a Poop Scooping Service Worth It? What Pet Owners Should Know | Murphy's Turf",
+      "description": "Wondering if professional poop scooping for your artificial turf is worth the cost? Learn what the service includes, how it protects your turf investment, and why pet owners across California are signing up.",
+      "canonical": "https://murphysturf.com/blog/poop-scooping-service-worth-it",
+      "h1": [
+        "Is a Poop Scooping Service Worth It? What Pet Owners Should Know"
+      ],
+      "mainWords": 1000,
+      "schemaTypes": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/blog/artificial-turf-bacteria-health-risks",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/artificial-turf-bacteria-health-risks",
+      "type": "text/html; charset=UTF-8",
+      "title": "Bacteria on Artificial Turf: Health Risks and How to Eliminate Them | Murphy's Turf",
+      "description": "Learn about the bacteria that can grow on artificial turf, the health risks they pose, and proven methods to eliminate them. Essential reading for families and pet owners.",
+      "canonical": "https://murphysturf.com/blog/artificial-turf-bacteria-health-risks",
+      "h1": [
+        "Bacteria on Artificial Turf: Health Risks and How to Eliminate Them"
+      ],
+      "mainWords": 1227,
+      "schemaTypes": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/blog/seasonal-turf-maintenance-california",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/seasonal-turf-maintenance-california",
+      "type": "text/html; charset=UTF-8",
+      "title": "Seasonal Artificial Turf Maintenance for California Homeowners | Murphy's Turf",
+      "description": "A month-by-month guide to artificial turf maintenance across California's diverse climate zones. From summer heat to winter rains, learn how to keep your synthetic turf clean and performing year-round.",
+      "canonical": "https://murphysturf.com/blog/seasonal-turf-maintenance-california",
+      "h1": [
+        "Seasonal Artificial Turf Maintenance for California Homeowners"
+      ],
+      "mainWords": 1323,
+      "schemaTypes": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/blog/turf-cleaning-bay-area-martinez",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/turf-cleaning-bay-area-martinez",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in the Bay Area: A Guide for Martinez & East Bay Homeowners | Murphy's Turf",
+      "description": "Bay Area homeowners face unique turf cleaning challenges from microclimates, coastal fog, and seasonal rain. Learn how Murphy's Turf keeps synthetic grass clean across Martinez, Walnut Creek, Concord, and the East Bay.",
+      "canonical": "https://murphysturf.com/blog/turf-cleaning-bay-area-martinez",
+      "h1": [
+        "Artificial Turf Cleaning in the Bay Area: A Guide for Martinez & East Bay Homeowners"
+      ],
+      "mainWords": 870,
+      "schemaTypes": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/blog/turf-cleaning-sacramento",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/turf-cleaning-sacramento",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in Sacramento: Surviving Central Valley Heat | Murphy's Turf",
+      "description": "Sacramento homeowners need specialized turf cleaning strategies for Central Valley heat. Learn how to maintain artificial turf through 100-degree summers and keep your synthetic lawn fresh year-round.",
+      "canonical": "https://murphysturf.com/blog/turf-cleaning-sacramento",
+      "h1": [
+        "Artificial Turf Cleaning in Sacramento: Surviving Central Valley Heat"
+      ],
+      "mainWords": 863,
+      "schemaTypes": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/blog/artificial-turf-cleaning-los-angeles",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/artificial-turf-cleaning-los-angeles",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in Los Angeles: What LA Homeowners Need to Know | Murphy's Turf",
+      "description": "Los Angeles homeowners face unique turf cleaning challenges from smog, heat, and year-round outdoor living. Learn how to keep your artificial turf clean, safe, and fresh in the LA basin.",
+      "canonical": "https://murphysturf.com/blog/artificial-turf-cleaning-los-angeles",
+      "h1": [
+        "Artificial Turf Cleaning in Los Angeles: What LA Homeowners Need to Know"
+      ],
+      "mainWords": 852,
+      "schemaTypes": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/blog/artificial-turf-cleaning-anaheim",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/artificial-turf-cleaning-anaheim",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in Anaheim: Keeping Your Synthetic Lawn Fresh in North Orange County | Murphy's Turf",
+      "description": "Anaheim homeowners need smart turf cleaning strategies for warm inland OC temperatures. Learn how to maintain artificial turf in Anaheim and why professional cleaning makes a difference.",
+      "canonical": "https://murphysturf.com/blog/artificial-turf-cleaning-anaheim",
+      "h1": [
+        "Artificial Turf Cleaning in Anaheim: Keeping Your Synthetic Lawn Fresh in North Orange County"
+      ],
+      "mainWords": 802,
+      "schemaTypes": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/blog/artificial-turf-cleaning-long-beach",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/artificial-turf-cleaning-long-beach",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in Long Beach: Coastal Meets Urban | Murphy's Turf",
+      "description": "Long Beach homeowners face a mix of coastal moisture and urban pollution on their artificial turf. Learn the best cleaning strategies for synthetic grass in California's 7th largest city.",
+      "canonical": "https://murphysturf.com/blog/artificial-turf-cleaning-long-beach",
+      "h1": [
+        "Artificial Turf Cleaning in Long Beach: Coastal Meets Urban"
+      ],
+      "mainWords": 711,
+      "schemaTypes": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/blog/artificial-turf-cleaning-riverside",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/artificial-turf-cleaning-riverside",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in Riverside: Professional Turf Care for the Inland Empire | Murphy's Turf",
+      "description": "Riverside homeowners face extreme heat and dry conditions that accelerate turf contamination. Learn how to maintain artificial turf in Riverside and keep your synthetic lawn clean through Inland Empire summers.",
+      "canonical": "https://murphysturf.com/blog/artificial-turf-cleaning-riverside",
+      "h1": [
+        "Artificial Turf Cleaning in Riverside: Professional Turf Care for the Inland Empire"
+      ],
+      "mainWords": 777,
+      "schemaTypes": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/blog/artificial-turf-cleaning-irvine",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/artificial-turf-cleaning-irvine",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in Irvine: Maintaining Pristine Turf in South Orange County | Murphy's Turf",
+      "description": "Irvine homeowners expect perfect lawns and HOA-compliant landscapes. Learn how professional turf cleaning keeps artificial grass pristine in Irvine's warm inland OC climate.",
+      "canonical": "https://murphysturf.com/blog/artificial-turf-cleaning-irvine",
+      "h1": [
+        "Artificial Turf Cleaning in Irvine: Maintaining Pristine Turf in South Orange County"
+      ],
+      "mainWords": 763,
+      "schemaTypes": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/blog/artificial-turf-cleaning-san-diego",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/artificial-turf-cleaning-san-diego",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in San Diego: Sun, Surf, and Synthetic Grass Care | Murphy's Turf",
+      "description": "San Diego homeowners enjoy year-round sun but face unique turf cleaning challenges. Learn how to maintain artificial turf in San Diego's coastal and inland neighborhoods for a clean, fresh lawn.",
+      "canonical": "https://murphysturf.com/blog/artificial-turf-cleaning-san-diego",
+      "h1": [
+        "Artificial Turf Cleaning in San Diego: Sun, Surf, and Synthetic Grass Care"
+      ],
+      "mainWords": 908,
+      "schemaTypes": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/blog/artificial-turf-cleaning-orange-county",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/artificial-turf-cleaning-orange-county",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Cleaning in Orange County: The Complete Local Guide | Murphy's Turf",
+      "description": "Orange County homeowners need professional artificial turf cleaning to handle coastal salt, inland heat, pet waste, and year-round outdoor use. Learn the best maintenance strategies for OC synthetic grass.",
+      "canonical": "https://murphysturf.com/blog/artificial-turf-cleaning-orange-county",
+      "h1": [
+        "Artificial Turf Cleaning in Orange County: The Complete Local Guide"
+      ],
+      "mainWords": 1548,
+      "schemaTypes": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/blog/commercial-turf-cleaning-dog-daycares-kennels",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/commercial-turf-cleaning-dog-daycares-kennels",
+      "type": "text/html; charset=UTF-8",
+      "title": "Turf Cleaning for Dog Daycares, Boarding Facilities and Kennels: An Operator Guide | Murphy's Turf",
+      "description": "A practical guide to keeping artificial turf clean, odor-free, and sanitary at dog daycares, boarding facilities, and kennels. Learn cleaning frequency, pet-safe disinfecting, and what to look for in a commercial turf cleaning vendor.",
+      "canonical": "https://murphysturf.com/blog/commercial-turf-cleaning-dog-daycares-kennels",
+      "h1": [
+        "Turf Cleaning for Dog Daycares, Boarding Facilities and Kennels: An Operator Guide"
+      ],
+      "mainWords": 1139,
+      "schemaTypes": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/blog/hoa-artificial-turf-maintenance-guide",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/hoa-artificial-turf-maintenance-guide",
+      "type": "text/html; charset=UTF-8",
+      "title": "Artificial Turf Maintenance for HOAs and Property Managers: Costs, Responsibilities and a Vendor Checklist | Murphy's Turf",
+      "description": "A guide for HOA boards and property managers on maintaining common-area artificial turf: who is responsible, what cleaning involves, how to budget, and a checklist for choosing a bonded, insured commercial turf cleaning vendor.",
+      "canonical": "https://murphysturf.com/blog/hoa-artificial-turf-maintenance-guide",
+      "h1": [
+        "Artificial Turf Maintenance for HOAs and Property Managers: Costs, Responsibilities and a Vendor Checklist"
+      ],
+      "mainWords": 938,
+      "schemaTypes": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/blog/playground-turf-cleaning-schools-preschools",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/playground-turf-cleaning-schools-preschools",
+      "type": "text/html; charset=UTF-8",
+      "title": "Is Playground Turf Safe? Cleaning and Sanitizing Standards for Schools and Preschools | Murphy's Turf",
+      "description": "What schools, preschools, and childcare centers need to know about cleaning and sanitizing playground artificial turf. Covers bacteria risks, child-safe cleaning products, frequency, and documentation administrators expect.",
+      "canonical": "https://murphysturf.com/blog/playground-turf-cleaning-schools-preschools",
+      "h1": [
+        "Is Playground Turf Safe? Cleaning and Sanitizing Standards for Schools and Preschools"
+      ],
+      "mainWords": 800,
+      "schemaTypes": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/blog/dog-daycare-turf-cleaning-irvine",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/dog-daycare-turf-cleaning-irvine",
+      "type": "text/html; charset=UTF-8",
+      "title": "Dog Daycare Turf Cleaning in Irvine: Keeping Play Yards Odor-Free Near the Coast | Murphy's Turf",
+      "description": "How dog daycares, boarding facilities, and pet resorts in Irvine keep artificial turf play yards sanitary and odor-free. Coastal-climate cleaning frequency, Irvine landscape standards, and choosing a commercial vendor.",
+      "canonical": "https://murphysturf.com/blog/dog-daycare-turf-cleaning-irvine",
+      "h1": [
+        "Dog Daycare Turf Cleaning in Irvine: Keeping Play Yards Odor-Free Near the Coast"
+      ],
+      "mainWords": 733,
+      "schemaTypes": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/blog/gym-hotel-event-venue-turf-cleaning",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/gym-hotel-event-venue-turf-cleaning",
+      "type": "text/html; charset=UTF-8",
+      "title": "Commercial Turf Cleaning for Gyms, Hotels and Event Venues | Murphy's Turf",
+      "description": "How gyms, hotels, and event venues keep artificial turf clean, safe, and guest-ready. Covers high-traffic wear, sweat and bacteria in fitness turf, hospitality appearance standards, and building a recurring maintenance plan.",
+      "canonical": "https://murphysturf.com/blog/gym-hotel-event-venue-turf-cleaning",
+      "h1": [
+        "Commercial Turf Cleaning for Gyms, Hotels and Event Venues"
+      ],
+      "mainWords": 804,
+      "schemaTypes": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/blog/commercial-turf-cleaning-anaheim-hotels-venues",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/commercial-turf-cleaning-anaheim-hotels-venues",
+      "type": "text/html; charset=UTF-8",
+      "title": "Commercial Turf Cleaning in Anaheim: Hotels, Event Lawns and High-Traffic Venues | Murphy's Turf",
+      "description": "Anaheim hotels, resorts, and event venues near the Convention Center and Resort District rely on guest-ready artificial turf. How high foot traffic and inland heat drive a recurring commercial cleaning plan.",
+      "canonical": "https://murphysturf.com/blog/commercial-turf-cleaning-anaheim-hotels-venues",
+      "h1": [
+        "Commercial Turf Cleaning in Anaheim: Hotels, Event Lawns and High-Traffic Venues"
+      ],
+      "mainWords": 616,
+      "schemaTypes": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/blog/hoa-turf-maintenance-newport-beach",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/hoa-turf-maintenance-newport-beach",
+      "type": "text/html; charset=UTF-8",
+      "title": "HOA Artificial Turf Maintenance in Newport Beach: Common-Area Care on the Coast | Murphy's Turf",
+      "description": "How Newport Beach HOAs and property managers keep common-area artificial turf clean and compliant. Coastal salt air, Davis-Stirling responsibilities, budgeting, and a vendor checklist for boards.",
+      "canonical": "https://murphysturf.com/blog/hoa-turf-maintenance-newport-beach",
+      "h1": [
+        "HOA Artificial Turf Maintenance in Newport Beach: Common-Area Care on the Coast"
+      ],
+      "mainWords": 605,
+      "schemaTypes": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/blog/preschool-turf-cleaning-huntington-beach",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/preschool-turf-cleaning-huntington-beach",
+      "type": "text/html; charset=UTF-8",
+      "title": "Preschool and Playground Turf Cleaning in Huntington Beach: Safe Surfaces by the Sea | Murphy's Turf",
+      "description": "How preschools, childcare centers, and schools in Huntington Beach keep playground artificial turf clean and child-safe. Coastal moisture, Community Care Licensing standards, and a sanitizing schedule.",
+      "canonical": "https://murphysturf.com/blog/preschool-turf-cleaning-huntington-beach",
+      "h1": [
+        "Preschool and Playground Turf Cleaning in Huntington Beach: Safe Surfaces by the Sea"
+      ],
+      "mainWords": 612,
+      "schemaTypes": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/blog/hoa-turf-maintenance-temecula",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/hoa-turf-maintenance-temecula",
+      "type": "text/html; charset=UTF-8",
+      "title": "HOA Turf Maintenance in Temecula: Master-Planned Communities and Inland Heat | Murphy's Turf",
+      "description": "How Temecula HOAs and property managers keep common-area artificial turf clean in extreme Inland Empire heat. Davis-Stirling responsibilities, budgeting, and a vendor checklist for community boards.",
+      "canonical": "https://murphysturf.com/blog/hoa-turf-maintenance-temecula",
+      "h1": [
+        "HOA Turf Maintenance in Temecula: Master-Planned Communities and Inland Heat"
+      ],
+      "mainWords": 574,
+      "schemaTypes": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/blog/dog-daycare-turf-cleaning-murrieta",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/dog-daycare-turf-cleaning-murrieta",
+      "type": "text/html; charset=UTF-8",
+      "title": "Dog Daycare Turf Cleaning in Murrieta: Beating the Inland Empire Heat | Murphy's Turf",
+      "description": "How dog daycares, boarding facilities, and kennels in Murrieta keep artificial turf sanitary in extreme heat. Cleaning frequency, deep extraction, and choosing a local commercial vendor.",
+      "canonical": "https://murphysturf.com/blog/dog-daycare-turf-cleaning-murrieta",
+      "h1": [
+        "Dog Daycare Turf Cleaning in Murrieta: Beating the Inland Empire Heat"
+      ],
+      "mainWords": 552,
+      "schemaTypes": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/blog/school-turf-cleaning-riverside",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/school-turf-cleaning-riverside",
+      "type": "text/html; charset=UTF-8",
+      "title": "School and Playground Turf Cleaning in Riverside: Safe Surfaces in the Heat | Murphy's Turf",
+      "description": "How schools, preschools, and childcare centers in Riverside keep playground artificial turf clean and child-safe through Inland Empire heat. Title 22 standards, sanitizing frequency, and vendor tips.",
+      "canonical": "https://murphysturf.com/blog/school-turf-cleaning-riverside",
+      "h1": [
+        "School and Playground Turf Cleaning in Riverside: Safe Surfaces in the Heat"
+      ],
+      "mainWords": 551,
+      "schemaTypes": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/blog/gym-fitness-turf-cleaning-corona",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/gym-fitness-turf-cleaning-corona",
+      "type": "text/html; charset=UTF-8",
+      "title": "Gym and Fitness Turf Cleaning in Corona: Sweat, Bacteria and High-Traffic Floors | Murphy's Turf",
+      "description": "How gyms, fitness studios, and training facilities in Corona keep artificial turf training areas clean and odor-free. Sweat-driven bacteria, Inland Empire heat, and a recurring commercial cleaning plan.",
+      "canonical": "https://murphysturf.com/blog/gym-fitness-turf-cleaning-corona",
+      "h1": [
+        "Gym and Fitness Turf Cleaning in Corona: Sweat, Bacteria and High-Traffic Floors"
+      ],
+      "mainWords": 549,
+      "schemaTypes": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/blog/hoa-turf-maintenance-walnut-creek",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/hoa-turf-maintenance-walnut-creek",
+      "type": "text/html; charset=UTF-8",
+      "title": "HOA Turf Maintenance in Walnut Creek: Common-Area Care in the East Bay | Murphy's Turf",
+      "description": "How Walnut Creek HOAs and property managers keep common-area artificial turf clean and compliant. East Bay damp and mildew, Davis-Stirling responsibilities, budgeting, and a vendor checklist.",
+      "canonical": "https://murphysturf.com/blog/hoa-turf-maintenance-walnut-creek",
+      "h1": [
+        "HOA Turf Maintenance in Walnut Creek: Common-Area Care in the East Bay"
+      ],
+      "mainWords": 568,
+      "schemaTypes": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/blog/dog-daycare-turf-cleaning-concord",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/dog-daycare-turf-cleaning-concord",
+      "type": "text/html; charset=UTF-8",
+      "title": "Dog Daycare Turf Cleaning in Concord: Odor Control in the East Bay | Murphy's Turf",
+      "description": "How dog daycares, boarding facilities, and kennels in Concord keep artificial turf play yards sanitary and odor-free. East Bay moisture, cleaning frequency, and choosing a commercial vendor.",
+      "canonical": "https://murphysturf.com/blog/dog-daycare-turf-cleaning-concord",
+      "h1": [
+        "Dog Daycare Turf Cleaning in Concord: Odor Control in the East Bay"
+      ],
+      "mainWords": 548,
+      "schemaTypes": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/blog/preschool-turf-cleaning-san-ramon",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/preschool-turf-cleaning-san-ramon",
+      "type": "text/html; charset=UTF-8",
+      "title": "Preschool Turf Cleaning in San Ramon: Child-Safe Play Yards in the Tri-Valley | Murphy's Turf",
+      "description": "How preschools, childcare centers, and schools in San Ramon keep playground artificial turf clean and child-safe. East Bay climate, Community Care Licensing standards, and a sanitizing schedule.",
+      "canonical": "https://murphysturf.com/blog/preschool-turf-cleaning-san-ramon",
+      "h1": [
+        "Preschool Turf Cleaning in San Ramon: Child-Safe Play Yards in the Tri-Valley"
+      ],
+      "mainWords": 550,
+      "schemaTypes": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/blog/gym-hotel-turf-cleaning-pleasanton",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/gym-hotel-turf-cleaning-pleasanton",
+      "type": "text/html; charset=UTF-8",
+      "title": "Gym and Hotel Turf Cleaning in Pleasanton: Guest-Ready Surfaces in the Tri-Valley | Murphy's Turf",
+      "description": "How gyms, hotels, and corporate campuses in Pleasanton keep artificial turf clean, odor-free, and guest-ready. Sweat and foot traffic, appearance standards, and a recurring commercial cleaning plan.",
+      "canonical": "https://murphysturf.com/blog/gym-hotel-turf-cleaning-pleasanton",
+      "h1": [
+        "Gym and Hotel Turf Cleaning in Pleasanton: Guest-Ready Surfaces in the Tri-Valley"
+      ],
+      "mainWords": 542,
+      "schemaTypes": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/blog/hoa-turf-maintenance-roseville",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/hoa-turf-maintenance-roseville",
+      "type": "text/html; charset=UTF-8",
+      "title": "HOA Turf Maintenance in Roseville: Master-Planned Communities and Valley Heat | Murphy's Turf",
+      "description": "How Roseville HOAs and property managers keep common-area artificial turf clean in Central Valley heat. Davis-Stirling responsibilities, budgeting, and a vendor checklist for community boards.",
+      "canonical": "https://murphysturf.com/blog/hoa-turf-maintenance-roseville",
+      "h1": [
+        "HOA Turf Maintenance in Roseville: Master-Planned Communities and Valley Heat"
+      ],
+      "mainWords": 530,
+      "schemaTypes": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/blog/dog-daycare-turf-cleaning-sacramento",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/dog-daycare-turf-cleaning-sacramento",
+      "type": "text/html; charset=UTF-8",
+      "title": "Dog Daycare Turf Cleaning in Sacramento: Odor Control in Valley Heat | Murphy's Turf",
+      "description": "How dog daycares, boarding facilities, and kennels in Sacramento keep artificial turf play yards sanitary in Central Valley heat. Cleaning frequency, deep extraction, and choosing a commercial vendor.",
+      "canonical": "https://murphysturf.com/blog/dog-daycare-turf-cleaning-sacramento",
+      "h1": [
+        "Dog Daycare Turf Cleaning in Sacramento: Odor Control in Valley Heat"
+      ],
+      "mainWords": 535,
+      "schemaTypes": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/blog/preschool-turf-cleaning-elk-grove",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/preschool-turf-cleaning-elk-grove",
+      "type": "text/html; charset=UTF-8",
+      "title": "Preschool and Childcare Turf Cleaning in Elk Grove: Safe Play Yards in the Valley | Murphy's Turf",
+      "description": "How preschools, childcare centers, and schools in Elk Grove keep playground artificial turf clean and child-safe through Central Valley heat. Title 22 standards, sanitizing frequency, and vendor tips.",
+      "canonical": "https://murphysturf.com/blog/preschool-turf-cleaning-elk-grove",
+      "h1": [
+        "Preschool and Childcare Turf Cleaning in Elk Grove: Safe Play Yards in the Valley"
+      ],
+      "mainWords": 556,
+      "schemaTypes": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/blog/gym-hotel-turf-cleaning-folsom",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/gym-hotel-turf-cleaning-folsom",
+      "type": "text/html; charset=UTF-8",
+      "title": "Gym, Hotel and Event Turf Cleaning in Folsom: Guest-Ready Surfaces in the Valley | Murphy's Turf",
+      "description": "How gyms, hotels, and event venues in Folsom keep artificial turf clean, odor-free, and guest-ready. Sweat and foot traffic, valley heat, appearance standards, and a recurring commercial cleaning plan.",
+      "canonical": "https://murphysturf.com/blog/gym-hotel-turf-cleaning-folsom",
+      "h1": [
+        "Gym, Hotel and Event Turf Cleaning in Folsom: Guest-Ready Surfaces in the Valley"
+      ],
+      "mainWords": 536,
+      "schemaTypes": [
+        "BlogPosting",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "url": "https://murphysturf.com/blog/how-to-clean-artificial-turf.md",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/how-to-clean-artificial-turf.md",
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "url": "https://murphysturf.com/blog/removing-pet-odors-artificial-turf.md",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/removing-pet-odors-artificial-turf.md",
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "url": "https://murphysturf.com/blog/how-often-clean-artificial-turf.md",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/how-often-clean-artificial-turf.md",
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "url": "https://murphysturf.com/blog/diy-vs-professional-turf-cleaning.md",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/diy-vs-professional-turf-cleaning.md",
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "url": "https://murphysturf.com/blog/artificial-turf-pets-clean-safe.md",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/artificial-turf-pets-clean-safe.md",
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "url": "https://murphysturf.com/blog/chlorine-based-turf-cleaning.md",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/chlorine-based-turf-cleaning.md",
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "url": "https://murphysturf.com/blog/signs-turf-needs-professional-cleaning.md",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/signs-turf-needs-professional-cleaning.md",
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "url": "https://murphysturf.com/blog/turf-cleaning-huntington-beach.md",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/turf-cleaning-huntington-beach.md",
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "url": "https://murphysturf.com/blog/turf-cleaning-murrieta-inland-empire.md",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/turf-cleaning-murrieta-inland-empire.md",
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "url": "https://murphysturf.com/blog/poop-scooping-service-worth-it.md",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/poop-scooping-service-worth-it.md",
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "url": "https://murphysturf.com/blog/artificial-turf-bacteria-health-risks.md",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/artificial-turf-bacteria-health-risks.md",
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "url": "https://murphysturf.com/blog/turf-cleaning-bay-area-martinez.md",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/turf-cleaning-bay-area-martinez.md",
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "url": "https://murphysturf.com/blog/seasonal-turf-maintenance-california.md",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/seasonal-turf-maintenance-california.md",
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "url": "https://murphysturf.com/blog/turf-cleaning-sacramento.md",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/turf-cleaning-sacramento.md",
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "url": "https://murphysturf.com/blog/artificial-turf-cleaning-los-angeles.md",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/artificial-turf-cleaning-los-angeles.md",
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "url": "https://murphysturf.com/blog/artificial-turf-cleaning-anaheim.md",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/artificial-turf-cleaning-anaheim.md",
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "url": "https://murphysturf.com/blog/artificial-turf-cleaning-riverside.md",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/artificial-turf-cleaning-riverside.md",
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "url": "https://murphysturf.com/blog/artificial-turf-cleaning-long-beach.md",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/artificial-turf-cleaning-long-beach.md",
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "url": "https://murphysturf.com/blog/artificial-turf-cleaning-irvine.md",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/artificial-turf-cleaning-irvine.md",
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "url": "https://murphysturf.com/blog/artificial-turf-cleaning-san-diego.md",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/artificial-turf-cleaning-san-diego.md",
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "url": "https://murphysturf.com/blog/artificial-turf-cleaning-orange-county.md",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/artificial-turf-cleaning-orange-county.md",
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "url": "https://murphysturf.com/blog/commercial-turf-cleaning-dog-daycares-kennels.md",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/commercial-turf-cleaning-dog-daycares-kennels.md",
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "url": "https://murphysturf.com/blog/playground-turf-cleaning-schools-preschools.md",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/playground-turf-cleaning-schools-preschools.md",
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "url": "https://murphysturf.com/blog/hoa-artificial-turf-maintenance-guide.md",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/hoa-artificial-turf-maintenance-guide.md",
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "url": "https://murphysturf.com/blog/gym-hotel-event-venue-turf-cleaning.md",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/gym-hotel-event-venue-turf-cleaning.md",
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "url": "https://murphysturf.com/blog/dog-daycare-turf-cleaning-irvine.md",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/dog-daycare-turf-cleaning-irvine.md",
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "url": "https://murphysturf.com/blog/commercial-turf-cleaning-anaheim-hotels-venues.md",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/commercial-turf-cleaning-anaheim-hotels-venues.md",
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "url": "https://murphysturf.com/blog/hoa-turf-maintenance-newport-beach.md",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/hoa-turf-maintenance-newport-beach.md",
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "url": "https://murphysturf.com/blog/hoa-turf-maintenance-temecula.md",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/hoa-turf-maintenance-temecula.md",
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "url": "https://murphysturf.com/blog/dog-daycare-turf-cleaning-murrieta.md",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/dog-daycare-turf-cleaning-murrieta.md",
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "url": "https://murphysturf.com/blog/preschool-turf-cleaning-huntington-beach.md",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/preschool-turf-cleaning-huntington-beach.md",
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "url": "https://murphysturf.com/blog/school-turf-cleaning-riverside.md",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/school-turf-cleaning-riverside.md",
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "url": "https://murphysturf.com/blog/gym-fitness-turf-cleaning-corona.md",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/gym-fitness-turf-cleaning-corona.md",
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "url": "https://murphysturf.com/blog/hoa-turf-maintenance-walnut-creek.md",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/hoa-turf-maintenance-walnut-creek.md",
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "url": "https://murphysturf.com/blog/dog-daycare-turf-cleaning-concord.md",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/dog-daycare-turf-cleaning-concord.md",
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "url": "https://murphysturf.com/blog/preschool-turf-cleaning-san-ramon.md",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/preschool-turf-cleaning-san-ramon.md",
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "url": "https://murphysturf.com/blog/gym-hotel-turf-cleaning-pleasanton.md",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/gym-hotel-turf-cleaning-pleasanton.md",
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "url": "https://murphysturf.com/blog/dog-daycare-turf-cleaning-sacramento.md",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/dog-daycare-turf-cleaning-sacramento.md",
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "url": "https://murphysturf.com/blog/hoa-turf-maintenance-roseville.md",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/hoa-turf-maintenance-roseville.md",
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "url": "https://murphysturf.com/blog/preschool-turf-cleaning-elk-grove.md",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/preschool-turf-cleaning-elk-grove.md",
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "url": "https://murphysturf.com/blog/gym-hotel-turf-cleaning-folsom.md",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/blog/gym-hotel-turf-cleaning-folsom.md",
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "url": "https://murphysturf.com/llms.txt",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/llms.txt",
+      "type": "text/plain; charset=utf-8"
+    },
+    {
+      "url": "https://murphysturf.com/llms-full.txt",
+      "status": 200,
+      "finalUrl": "https://murphysturf.com/llms-full.txt",
+      "type": "text/plain; charset=utf-8"
+    }
+  ]
+}

@@ -1,8 +1,11 @@
+import { blogPosts } from '@/data/blog';
+import { locations } from '@/data/locations';
+
 export const SITE_URL = "https://murphysturf.com";
 export const COMPANY_NAME = "Murphy's Turf";
 export const COMPANY_TAGLINE = "When you care about clean turf, call Murphy's Turf";
 export const COMPANY_DESCRIPTION =
-  "Professional artificial turf cleaning and sanitization services across California. With 30+ years of experience, Murphy's Turf uses professional-grade cleaning solutions to deep clean, deodorize, and sanitize your synthetic turf. Serving Huntington Beach, Murrieta, Martinez, and Sacramento.";
+  "Murphy's Turf provides artificial turf cleaning, debris removal, grooming, pet odor treatment, and maintenance. Serving Huntington Beach, Murrieta, Martinez, Sacramento, Palm Desert, and surrounding service areas.";
 export const COMPANY_PHONE = "";
 export const COMPANY_EMAIL = "info@murphysturf.com";
 
@@ -27,62 +30,11 @@ export const SERVICE_SLUGS = [
   "poop-scooping",
 ] as const;
 
-export const LOCATION_SLUGS = [
-  "huntington-beach",
-  "murrieta",
-  "martinez",
-  "sacramento",
-] as const;
+export const LOCATION_SLUGS = locations.map((location) => location.slug);
 
 export const COMMERCIAL_SLUG = "commercial-turf-cleaning";
 
-export const BLOG_SLUGS = [
-  // Existing posts (match actual built pages)
-  "how-to-clean-artificial-turf",
-  "removing-pet-odors-artificial-turf",
-  "how-often-clean-artificial-turf",
-  "diy-vs-professional-turf-cleaning",
-  "artificial-turf-pets-clean-safe",
-  "chlorine-based-turf-cleaning",
-  "signs-turf-needs-professional-cleaning",
-  "turf-cleaning-huntington-beach",
-  "turf-cleaning-murrieta-inland-empire",
-  "poop-scooping-service-worth-it",
-  "artificial-turf-bacteria-health-risks",
-  "seasonal-turf-maintenance-california",
-  // City-targeted posts
-  "turf-cleaning-bay-area-martinez",
-  "turf-cleaning-sacramento",
-  "artificial-turf-cleaning-los-angeles",
-  "artificial-turf-cleaning-anaheim",
-  "artificial-turf-cleaning-riverside",
-  "artificial-turf-cleaning-irvine",
-  "artificial-turf-cleaning-long-beach",
-  "artificial-turf-cleaning-san-diego",
-  "artificial-turf-cleaning-orange-county",
-  // Commercial pillar posts
-  "commercial-turf-cleaning-dog-daycares-kennels",
-  "hoa-artificial-turf-maintenance-guide",
-  "playground-turf-cleaning-schools-preschools",
-  "gym-hotel-event-venue-turf-cleaning",
-  // Commercial location-specific spoke posts
-  "dog-daycare-turf-cleaning-irvine",
-  "commercial-turf-cleaning-anaheim-hotels-venues",
-  "hoa-turf-maintenance-newport-beach",
-  "preschool-turf-cleaning-huntington-beach",
-  "hoa-turf-maintenance-temecula",
-  "dog-daycare-turf-cleaning-murrieta",
-  "school-turf-cleaning-riverside",
-  "gym-fitness-turf-cleaning-corona",
-  "hoa-turf-maintenance-walnut-creek",
-  "dog-daycare-turf-cleaning-concord",
-  "preschool-turf-cleaning-san-ramon",
-  "gym-hotel-turf-cleaning-pleasanton",
-  "hoa-turf-maintenance-roseville",
-  "dog-daycare-turf-cleaning-sacramento",
-  "preschool-turf-cleaning-elk-grove",
-  "gym-hotel-turf-cleaning-folsom",
-] as const;
+export const BLOG_SLUGS = Object.keys(blogPosts);
 
 export type ServiceSlug = (typeof SERVICE_SLUGS)[number];
 export type LocationSlug = (typeof LOCATION_SLUGS)[number];

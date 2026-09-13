@@ -1,7 +1,4 @@
 import {
-  leadsRateLimiter,
-  contactRateLimiter,
-  newsletterRateLimiter,
 } from '@/lib/rate-limit';
 
 // We need to re-import fresh instances for isolated tests, so we use dynamic imports

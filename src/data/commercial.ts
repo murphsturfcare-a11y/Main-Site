@@ -1,4 +1,5 @@
 import { locations } from './locations';
+import { regionalCare } from './regional-care';
 
 // ---------------------------------------------------------------------------
 // Commercial Turf Cleaning — data layer
@@ -37,53 +38,49 @@ export interface CommercialSegment {
 
 export const commercialSegments: CommercialSegment[] = [
   {
-    slug: 'dog-daycare',
-    name: 'Dog Daycares, Boarding & Kennels',
-    iconName: 'PawPrint',
-    blurb:
-      'Pet facilities put more wear and waste on turf in a week than a backyard sees in a year. We keep play yards sanitized, odor-free, and safe for every dog that comes through your doors.',
-    painPoints: [
-      'Constant urine saturation and baked-in odor',
-      'Bacteria and parasite risk in high-density play areas',
-      'Owners and inspectors who notice smell the moment they walk in',
-    ],
+    "slug": "dog-daycare",
+    "name": "Dog Daycares, Boarding & Kennels",
+    "iconName": "PawPrint",
+    "blurb": "Plan turf care around daily pet use, routine staff pickup, and the time needed to close and reopen the play area.",
+    "painPoints": [
+      "Concentrated pet use and recurring odor",
+      "Work zones that need an alternate pet area",
+      "Clear product and reopening instructions"
+    ]
   },
   {
-    slug: 'hoa-property-management',
-    name: 'HOAs & Property Management',
-    iconName: 'Building2',
-    blurb:
-      'Common-area turf, dog runs, and entry landscaping reflect on the whole community. We keep multi-family and HOA grounds presentable with predictable, invoice-friendly recurring service.',
-    painPoints: [
-      'Shared dog areas with no single owner maintaining them',
-      'Resident complaints about odor and matted, dirty turf',
-      'Board budgets that need predictable, documented costs',
-    ],
+    "slug": "hoa-property-management",
+    "name": "HOAs & Property Management",
+    "iconName": "Building2",
+    "blurb": "Separate association common areas from private yards and request a defined maintenance scope for each synthetic surface.",
+    "painPoints": [
+      "Unclear responsibility for shared turf",
+      "Resident reports of odor, debris, or matting",
+      "Board approval, access, and invoicing requirements"
+    ]
   },
   {
-    slug: 'schools-childcare',
-    name: 'Schools, Preschools & Playgrounds',
-    iconName: 'GraduationCap',
-    blurb:
-      'Where kids crawl, sit, and play, sanitization is not optional. Our pet-safe, chlorine-based process eliminates bacteria without harsh chemicals — safe for children as soon as it dries.',
-    painPoints: [
-      'High-traffic play surfaces that trap dirt and germs',
-      'Parent and licensing expectations around hygiene',
-      'Need for non-toxic, child-safe cleaning products',
-    ],
+    "slug": "schools-childcare",
+    "name": "Schools, Preschools & Playgrounds",
+    "iconName": "GraduationCap",
+    "blurb": "Identify the installed play surface, its care requirements, and the facility schedule before selecting a cleaning plan.",
+    "painPoints": [
+      "Play-surface manufacturer requirements",
+      "Area closure and supervised reopening",
+      "Cleaning records and facility-specific procedures"
+    ]
   },
   {
-    slug: 'gyms-hospitality-sports',
-    name: 'Gyms, Hotels, Sports & Event Venues',
-    iconName: 'Dumbbell',
-    blurb:
-      'Turf gym floors, rooftop lounges, hotel pet areas, and athletic fields take a beating and stay in the public eye. We restore appearance and freshness on a schedule that fits your hours.',
-    painPoints: [
-      'Sweat, foot traffic, and matting on turf training areas',
-      'Guest-facing spaces where appearance is everything',
-      'Operations that can only allow after-hours service windows',
-    ],
-  },
+    "slug": "gyms-hospitality-sports",
+    "name": "Gyms, Hotels, Sports & Event Venues",
+    "iconName": "Dumbbell",
+    "blurb": "Distinguish fitness, recreation, and landscape turf, then coordinate equipment access and cleaning with your operating hours.",
+    "painPoints": [
+      "Different synthetic surface specifications",
+      "Guest or member circulation around the work area",
+      "Traffic wear that may need a repair assessment"
+    ]
+  }
 ];
 
 // ---------------------------------------------------------------------------
@@ -91,70 +88,64 @@ export const commercialSegments: CommercialSegment[] = [
 // ---------------------------------------------------------------------------
 
 export const commercialOverview = {
-  tagline:
-    'Recurring, pet-safe artificial turf cleaning for businesses across California.',
-  descriptionParagraphs: [
-    `Murphy's Turf brings 30+ years of professional artificial turf cleaning to commercial properties across California. From a single dog-daycare play yard to a portfolio of HOA common areas, we deep clean, disinfect, and deodorize synthetic turf so your space stays presentable, hygienic, and odor-free.`,
-    `Commercial turf takes far more abuse than a backyard lawn — heavier foot traffic, more pets, and far higher expectations from customers, residents, and inspectors. Our commercial-grade process penetrates past the surface into the infill where bacteria and odor actually live, using a chlorine-based solution that is safe for pets and children once dry.`,
-    `We build recurring maintenance plans around your hours and budget, with documented, invoice-friendly service. Whether you run a kennel, manage a community, operate a childcare center, or oversee a gym or hotel, we keep your turf in front-of-house condition year-round.`,
+  "tagline": "Artificial turf cleaning and maintenance planning for commercial properties.",
+  "descriptionParagraphs": [
+    "Murphy's Turf accepts commercial artificial turf cleaning requests across its California service areas. A useful quote identifies each synthetic surface, its size and condition, how it is used, and the work you want included. Separate pet areas, decorative landscaping, and specialty play or fitness surfaces so each can be assessed appropriately.",
+    "Before scheduling, provide the property address, an approving contact, vendor access instructions, water availability, and the operating window. Describe recurring odor, debris, matting, or standing water as separate concerns. Cleaning and grooming do not establish regulatory compliance or repair a failed base, damaged seams, or permanently worn fibers.",
+    "Discuss the proposed products and surface compatibility before treatment, then agree who will close the area and confirm reopening according to the actual instructions. For recurring service, request the current scheduling, billing, change, and cancellation terms."
   ],
-  whatIncludes: [
-    'Pet hair, waste, and debris extraction from fibers and infill',
-    'De-weeding and magnet sweep for metal objects',
-    'Commercial-grade blooming and de-compacting of high-traffic areas',
-    'Full disinfect and deodorize treatment at the infill level',
-    'Recurring weekly, bi-weekly, monthly, or quarterly plans',
-    'After-hours scheduling and documented, invoice-friendly billing',
+  "whatIncludes": [
+    "Turf area, use, and condition review",
+    "Debris and pet-use concerns identified by zone",
+    "Cleaning or grooming scope suited to the surface",
+    "Treatment and reopening instructions",
+    "Access and operating-window coordination",
+    "Recurring-service terms confirmed in the quote"
   ],
-  benefits: [
+  "benefits": [
     {
-      iconName: 'ShieldCheck',
-      title: 'Bonded & Insured',
-      description: 'Bonded and insured crews your facility and board can sign off on.',
+      "iconName": "ShieldCheck",
+      "title": "Defined Scope",
+      "description": "Confirm the areas, work, and approval contact before service."
     },
     {
-      iconName: 'PawPrint',
-      title: 'Pet- & Child-Safe',
-      description: 'Chlorine-based process — no bleach, no ammonia. Safe for pets and kids once dry.',
+      "iconName": "PawPrint",
+      "title": "Pet-Area Planning",
+      "description": "Coordinate routine pickup, treatment access, and reopening instructions."
     },
     {
-      iconName: 'CalendarClock',
-      title: 'Recurring Plans',
-      description: 'Predictable schedules and pricing built around your hours and budget.',
+      "iconName": "CalendarClock",
+      "title": "Scheduling Discussion",
+      "description": "Share the operating hours and available work windows."
     },
     {
-      iconName: 'FileText',
-      title: 'Documented Service',
-      description: 'Clear invoicing and service records for property managers and boards.',
-    },
+      "iconName": "FileText",
+      "title": "Property Requirements",
+      "description": "Request current documentation and service terms during vendor review."
+    }
   ],
-  faqs: [
+  "faqs": [
     {
-      question: 'Do you offer recurring commercial maintenance contracts?',
-      answer:
-        'Yes. Most commercial clients are on weekly, bi-weekly, monthly, or quarterly plans. Recurring service keeps costs predictable and turf consistently presentable, and we tailor the frequency to your traffic and pet load.',
+      "question": "Can I request recurring commercial maintenance?",
+      "answer": "Yes. Provide the turf areas, traffic and pet use, current condition, and preferred work windows. Confirm frequency, included services, pricing, and agreement terms in the quote."
     },
     {
-      question: 'Can you clean outside of business hours?',
-      answer:
-        'Absolutely. For gyms, hotels, daycares, and childcare centers we routinely schedule early-morning, evening, or weekend windows so service never disrupts your operations.',
+      "question": "Can cleaning take place outside business hours?",
+      "answer": "Share your operating hours and any permitted vendor windows. The team will confirm appointment availability and the time needed for the work and product-specific reopening instructions."
     },
     {
-      question: 'Are you bonded and insured for commercial work?',
-      answer:
-        "Yes — Murphy's Turf is fully bonded and insured. We're happy to provide documentation for property managers, HOA boards, and facility operators.",
+      "question": "What documentation should a property manager request?",
+      "answer": "Tell the team which current insurance, licensing, vendor, product, or invoicing documents your property requires. Review the actual documents and agreed scope before approving work."
     },
     {
-      question: 'Is the cleaning safe for facilities with children or pets?',
-      answer:
-        'Yes. Our chlorine-based cleaning solution contains no bleach or ammonia, leaves no harmful residue, and is safe for children and pets once the turf has dried — typically within 1-2 hours.',
+      "question": "When can children, pets, or guests use the area again?",
+      "answer": "Keep the area closed during treatment and follow the product-specific instructions for application, rinsing, drying, and reopening. Ask who will communicate and confirm those steps at your facility."
     },
     {
-      question: 'How do you handle billing and invoicing for commercial accounts?',
-      answer:
-        'We provide itemized invoices and service records suited to property managers, boards, and accounts-payable teams, with recurring billing options to match your maintenance plan.',
-    },
-  ],
+      "question": "Does a cleaning visit cover damaged turf?",
+      "answer": "Cleaning and grooming can address some surface conditions. Loose seams, backing damage, an uneven base, or drainage faults may require a separate repair assessment. Include photos of those concerns in the request."
+    }
+  ]
 };
 
 // ---------------------------------------------------------------------------
@@ -170,40 +161,7 @@ interface RegionMeta {
   commercialIntro: string;
 }
 
-const regionMeta: Record<string, RegionMeta> = {
-  'huntington-beach': {
-    phone: '(951) 331-3300',
-    formId: 'HYkmRFcmdQ1GD7aEpXzq',
-    climateNote:
-      'Coastal fog and marine layer promote mold growth on turf, while afternoon sun bakes pet contaminants into infill.',
-    commercialIntro:
-      'Coastal Orange County businesses — from beachfront hotels and dog daycares to HOA common areas — battle salt air, sand, and humidity that wear turf down fast.',
-  },
-  murrieta: {
-    phone: '(951) 331-3300',
-    formId: 'xBvd9OY1s3jhTIKq93sM',
-    climateNote:
-      'Summer temperatures regularly exceed 100°F in the Inland Empire, baking pet waste into infill and accelerating bacterial growth.',
-    commercialIntro:
-      'As our Inland Empire home turf, we serve kennels, gyms, childcare centers, and property managers across the IE where triple-digit heat amplifies odor and bacteria.',
-  },
-  martinez: {
-    phone: '(925) 338-0048',
-    formId: 'mSr8BxMIMWFW5iSStd5F',
-    climateNote:
-      'Bay Area microclimates range from damp coastal fog near the Carquinez Strait to hot, dry conditions inland — each creating different turf maintenance challenges.',
-    commercialIntro:
-      'East Bay and Contra Costa businesses — dog boarding, HOAs, schools, and hospitality venues — face microclimates that swing from coastal damp to inland heat.',
-  },
-  sacramento: {
-    phone: '(916) 432-5033',
-    formId: 'oM5QyTGbZdvGpxU0EvUL',
-    climateNote:
-      "Sacramento's Central Valley heat regularly exceeds 100°F, baking pet waste into turf and accelerating bacterial growth far beyond what milder climates produce.",
-    commercialIntro:
-      'Greater Sacramento facilities — from Elk Grove daycares to Roseville fitness studios and HOA communities — contend with Central Valley heat that bakes contaminants into turf.',
-  },
-};
+const regionMeta: Record<string, RegionMeta> = Object.fromEntries(locations.map((loc) => [loc.slug, { phone: loc.phone, formId: '', climateNote: regionalCare[loc.slug]?.climate ?? 'Discuss desert debris, access, and the condition of the installed turf.', commercialIntro: regionalCare[loc.slug]?.commercial ?? 'Commercial artificial turf care for Palm Desert and nearby city properties. Request a scope based on your surfaces, operating hours, and access requirements.' }]));
 
 // ---------------------------------------------------------------------------
 // Derived region + sub-location structures

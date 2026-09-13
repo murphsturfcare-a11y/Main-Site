@@ -198,7 +198,7 @@ describe('NewsletterSubscriber type maps to newsletter_subscribers table', () =>
 describe('MISMATCH: LeadStatus values differ between TypeScript and database', () => {
   // Extract TS LeadStatus values
   const tsStatusMatch = typesTS.match(
-    /export type LeadStatus\s*=\s*([^;]+);/s
+    /export type LeadStatus\s*=\s*([^;]+);/
   );
   const tsStatuses = tsStatusMatch
     ? tsStatusMatch[1].match(/'([^']+)'/g)?.map((s) => s.replace(/'/g, ''))
@@ -308,7 +308,7 @@ describe('TypeScript uses camelCase while SQL uses snake_case', () => {
 describe('Contact type is missing status field from database schema', () => {
   it('should have a status column in the contacts table SQL', () => {
     const contactsTableMatch = schemaSQL.match(
-      /CREATE TABLE contacts\s*\(([^;]+?)\);/s
+      /CREATE TABLE contacts\s*\(([^;]+?)\);/
     );
     expect(contactsTableMatch).not.toBeNull();
     expect(contactsTableMatch![1]).toContain('status');
@@ -316,7 +316,7 @@ describe('Contact type is missing status field from database schema', () => {
 
   it('should have a CHECK constraint on contacts.status for unread, read, replied', () => {
     const contactsTableMatch = schemaSQL.match(
-      /CREATE TABLE contacts\s*\(([^;]+?)\);/s
+      /CREATE TABLE contacts\s*\(([^;]+?)\);/
     );
     expect(contactsTableMatch![1]).toMatch(
       /CHECK\s*\(status\s+IN\s*\('unread',\s*'read',\s*'replied'\)\)/
@@ -336,7 +336,7 @@ describe('Contact type is missing status field from database schema', () => {
 describe('NewsletterSubscriber type is missing unsubscribed_at from database schema', () => {
   it('should have unsubscribed_at column in newsletter_subscribers SQL table', () => {
     const tableMatch = schemaSQL.match(
-      /CREATE TABLE newsletter_subscribers\s*\(([^;]+?)\);/s
+      /CREATE TABLE newsletter_subscribers\s*\(([^;]+?)\);/
     );
     expect(tableMatch).not.toBeNull();
     expect(tableMatch![1]).toContain('unsubscribed_at');
@@ -444,7 +444,7 @@ describe("ServiceType enum values don't match seed services", () => {
   it('should have DB service_type column as plain text with no CHECK constraint', () => {
     // The leads table service_type column has no CHECK constraint
     const leadsTable = schemaSQL.match(
-      /CREATE TABLE leads\s*\(([^;]+?)\);/s
+      /CREATE TABLE leads\s*\(([^;]+?)\);/
     );
     expect(leadsTable).not.toBeNull();
     expect(leadsTable![1]).toContain('service_type    text');

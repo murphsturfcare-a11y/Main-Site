@@ -1,4 +1,5 @@
 import { describe, it, expect } from "vitest";
+import { locations } from "@/data/locations";
 import {
   generateOrganizationSchema,
   generateLocalBusinessSchema,
@@ -30,17 +31,13 @@ describe("generateOrganizationSchema", () => {
 
   it("includes logo URL derived from SITE_URL", () => {
     const schema = generateOrganizationSchema();
-    expect(schema.logo).toBe(`${SITE_URL}/images/logo.png`);
+    expect(schema.logo).toBe(`${SITE_URL}/images/logo.avif`);
   });
 
   it("includes contactPoint with customer service type", () => {
     const schema = generateOrganizationSchema();
-    expect(schema.contactPoint).toEqual({
-      "@type": "ContactPoint",
-      contactType: "customer service",
-      areaServed: "US",
-      availableLanguage: "English",
-    });
+    expect(schema.contactPoint.contactType).toBe("customer service");
+    expect(schema.contactPoint.areaServed.map((area) => area.name)).toEqual(locations.map((location) => location.name));
   });
 
   it("includes address with city and state", () => {
@@ -53,12 +50,9 @@ describe("generateOrganizationSchema", () => {
     });
   });
 
-  it("includes areaServed as California", () => {
+  it("limits coverage to the published service regions", () => {
     const schema = generateOrganizationSchema();
-    expect(schema.areaServed).toEqual({
-      "@type": "State",
-      name: "California",
-    });
+    expect(schema.areaServed.map((area) => area.url)).toEqual(locations.map((location) => `${SITE_URL}/locations/${location.slug}`));
   });
 
   it("includes 3 social links in sameAs", () => {
@@ -92,11 +86,10 @@ describe("generateLocalBusinessSchema", () => {
     expect(schema.email).toBe("info@murphysturf.com");
   });
 
-  it("includes additionalType as ProfessionalService", () => {
+  it("uses the supported business identity without a deprecated service type", () => {
     const schema = generateLocalBusinessSchema();
-    expect(schema.additionalType).toBe(
-      "https://schema.org/ProfessionalService"
-    );
+    expect(schema["@type"]).toBe("LocalBusiness");
+    expect(schema).not.toHaveProperty("additionalType");
   });
 
   it("includes knowsAbout array with turf-related topics", () => {
@@ -112,35 +105,17 @@ describe("generateLocalBusinessSchema", () => {
     ]);
   });
 
-  it("includes geo coordinates for Murrieta", () => {
+  it("describes coverage without inventing a precise location or opening hours", () => {
     const schema = generateLocalBusinessSchema();
-    expect(schema.geo).toEqual({
-      "@type": "GeoCoordinates",
-      latitude: 33.5539,
-      longitude: -117.2139,
-    });
+    expect(schema).not.toHaveProperty("geo");
+    expect(schema).not.toHaveProperty("openingHoursSpecification");
+    expect(schema.areaServed.some((area) => area.name.includes("Palm Desert"))).toBe(true);
   });
 
-  it("includes opening hours for weekdays 7-18 and Saturday 8-16", () => {
+  it("does not invent a price tier for quote-based services", () => {
     const schema = generateLocalBusinessSchema();
-    expect(schema.openingHoursSpecification).toHaveLength(2);
-    expect(schema.openingHoursSpecification[0]).toEqual({
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      opens: "07:00",
-      closes: "18:00",
-    });
-    expect(schema.openingHoursSpecification[1]).toEqual({
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: "Saturday",
-      opens: "08:00",
-      closes: "16:00",
-    });
-  });
-
-  it("has priceRange set to $$", () => {
-    const schema = generateLocalBusinessSchema();
-    expect(schema.priceRange).toBe("$$");
+    expect(schema).not.toHaveProperty("priceRange");
+    expect(schema).not.toHaveProperty("offers");
   });
 
   it("includes image URL", () => {
@@ -192,105 +167,43 @@ describe("generateServiceSchema", () => {
     const schema = generateServiceSchema(service);
     expect(schema.provider).toEqual({
       "@type": "LocalBusiness",
+      "@id": `${SITE_URL}/#localbusiness`,
       name: COMPANY_NAME,
       url: SITE_URL,
     });
   });
 
-  it("includes areaServed as California", () => {
+  it("limits service coverage to the published regions within California", () => {
     const schema = generateServiceSchema(service);
-    expect(schema.areaServed).toEqual({
-      "@type": "State",
-      name: "California",
-    });
+    expect(schema.areaServed.map((area) => area.name)).toEqual(locations.map((location) => location.name));
+    expect(schema.areaServed.every((area) => area["@type"] === "Place")).toBe(true);
+    expect(schema.areaServed.every((area) => area.containedInPlace.name === "California")).toBe(true);
   });
 
-  it("includes offers with InStock availability and USD currency", () => {
+  it("does not invent pricing or immediately available stock", () => {
     const schema = generateServiceSchema(service);
-    expect(schema.offers).toEqual({
-      "@type": "Offer",
-      availability: "https://schema.org/InStock",
-      priceCurrency: "USD",
-    });
+    expect(schema).not.toHaveProperty("offers");
+    expect(schema).not.toHaveProperty("priceRange");
   });
 });
 
 describe("generateLocationSchema", () => {
-  const locationWithPhone = {
-    name: "Huntington Beach",
-    slug: "huntington-beach",
-    description: "Turf cleaning in Huntington Beach.",
-    phone: "(714) 555-1234",
-  };
+  const location = { name: "Palm Desert", slug: "palm-desert", description: "Desert turf cleaning.", phone: "951-331-3300" };
 
-  const locationWithoutPhone = {
-    name: "Martinez",
-    slug: "martinez",
-    description: "Turf cleaning in Martinez.",
-  };
-
-  it("returns valid schema.org context and type", () => {
-    const schema = generateLocationSchema(locationWithPhone);
-    expect(schema["@context"]).toBe("https://schema.org");
-    expect(schema["@type"]).toBe("LocalBusiness");
+  it("describes a service area rather than an unverified local branch", () => {
+    const schema = generateLocationSchema(location);
+    expect(schema["@type"]).toBe("Service");
+    expect(schema.url).toBe(`${SITE_URL}/locations/palm-desert`);
+    expect(schema).not.toHaveProperty("address");
+    expect(schema).not.toHaveProperty("aggregateRating");
+    expect(schema.areaServed.name).toBe("Palm Desert");
+    expect(schema.provider["@id"]).toBe(`${SITE_URL}/#localbusiness`);
+    expect(schema.provider.telephone).toBe(location.phone);
   });
 
-  it("includes company name combined with location name", () => {
-    const schema = generateLocationSchema(locationWithPhone);
-    expect(schema.name).toBe(`${COMPANY_NAME} - Huntington Beach`);
-  });
-
-  it("builds URL from /locations/{slug} pattern", () => {
-    const schema = generateLocationSchema(locationWithPhone);
-    expect(schema.url).toBe(`${SITE_URL}/locations/huntington-beach`);
-  });
-
-  it("includes telephone when phone is provided", () => {
-    const schema = generateLocationSchema(locationWithPhone);
-    expect(schema.telephone).toBe("(714) 555-1234");
-  });
-
-  it("does not include telephone when phone is not provided", () => {
-    const schema = generateLocationSchema(locationWithoutPhone);
-    expect(schema).not.toHaveProperty("telephone");
-  });
-
-  it("includes additionalType as ProfessionalService", () => {
-    const schema = generateLocationSchema(locationWithPhone);
-    expect(schema.additionalType).toBe(
-      "https://schema.org/ProfessionalService"
-    );
-  });
-
-  it("includes address with location name as addressLocality and CA as region", () => {
-    const schema = generateLocationSchema(locationWithPhone);
-    expect(schema.address).toEqual({
-      "@type": "PostalAddress",
-      addressLocality: "Huntington Beach",
-      addressRegion: "CA",
-      addressCountry: "US",
-    });
-  });
-
-  it("includes parentOrganization", () => {
-    const schema = generateLocationSchema(locationWithPhone);
-    expect(schema.parentOrganization).toEqual({
-      "@type": "Organization",
-      name: COMPANY_NAME,
-      url: SITE_URL,
-    });
-  });
-
-  it("includes serviceArea with city contained in California", () => {
-    const schema = generateLocationSchema(locationWithPhone);
-    expect(schema.serviceArea).toEqual({
-      "@type": "City",
-      name: "Huntington Beach",
-      containedInPlace: {
-        "@type": "State",
-        name: "California",
-      },
-    });
+  it("omits telephone when there is no published regional number", () => {
+    const schema = generateLocationSchema({ name: "Palm Desert", slug: "palm-desert", description: "Desert turf cleaning." });
+    expect(schema.provider).not.toHaveProperty("telephone");
   });
 });
 
@@ -501,7 +414,7 @@ describe("generateBlogPostSchema", () => {
       url: SITE_URL,
       logo: {
         "@type": "ImageObject",
-        url: `${SITE_URL}/images/logo.png`,
+        url: `${SITE_URL}/images/logo.avif`,
       },
     });
   });

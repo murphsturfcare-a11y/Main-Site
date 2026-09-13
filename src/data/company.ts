@@ -1,54 +1,41 @@
 import type { Company } from '../types';
 
 export const company: Company = {
-  name: "Murphy's Turf",
-  tagline: "When you care about clean turf, call Murphy's Turf",
-  phone: "",
-  email: "info@murphysturf.com",
-  address: {
-    street: "",
-    city: "Murrieta",
-    state: "CA",
-    zip: "92562",
+  "name": "Murphy's Turf",
+  "tagline": "When you care about clean turf, call Murphy's Turf",
+  "phone": "",
+  "email": "info@murphysturf.com",
+  "address": {
+    "street": "",
+    "city": "Murrieta",
+    "state": "CA",
+    "zip": "92562"
   },
-  businessHours: {
-    weekdays: "7:00 AM - 6:00 PM",
-    saturday: "8:00 AM - 4:00 PM",
-    sunday: "Closed",
+  "businessHours": {
+    "weekdays": "7:00 AM - 6:00 PM",
+    "saturday": "8:00 AM - 4:00 PM",
+    "sunday": "Closed"
   },
-  founded: 1994,
-  description: `With over 30 years in the cleaning & disinfecting business, we've decided to take our experience and bring it to your lawn with turf maintenance and pet waste removal services. Murphy's technicians are carefully selected and trained to provide you the satisfaction of clean and maintained artificial grass with the best of our ability. With this process we ensure consistency as well as invest in our technicians so each and every team member is proud of the service they provide our clients.
-
-Murphy's Turf is a family-owned artificial turf cleaning company headquartered in Murrieta, California. We serve homeowners and businesses across Southern California and the Bay Area — from Huntington Beach and the LA coast to the Inland Empire, Martinez and Contra Costa County, and the Greater Sacramento region. Our professional-grade cleaning products use a professional-grade chlorine tablet formula that contains no bleach or ammonia, making it completely safe for your pets, kids, and the environment while eliminating germs and bacteria.`,
-  mission: "To provide every customer with clean, sanitized, and beautifully maintained artificial turf using safe, eco-friendly products that protect families, pets, and the environment.",
-  values: [
+  "description": "Murphy's Turf provides artificial turf cleaning and maintenance for homes and businesses across its California service areas. Services include pet hair and debris removal, grooming, odor treatment, and pet waste pickup. Contact the regional number for your property to discuss the turf condition, access, and the work to include in a quote.",
+  "mission": "Help property owners maintain artificial turf with a clear service scope and care instructions suited to the installed surface.",
+  "values": [
     {
-      title: "100% Pet Friendly",
-      description: "Every product we use is completely safe for your pets. Our professional-grade cleaning solution contains no bleach or ammonia — just professional-grade chlorine tablets that eliminate bacteria without leaving harmful residues.",
+      "title": "Care for Pet Households",
+      "description": "We plan cleaning around the way your pets use the yard. Keep animals away during service and follow the product-specific re-entry instructions your technician provides."
     },
     {
-      title: "Eco Friendly",
-      description: "We're committed to environmentally responsible cleaning. Our advanced cleaning solution is biodegradable and free from harsh chemicals, protecting California's ecosystems while delivering a superior clean.",
+      "title": "Considerate Maintenance",
+      "description": "We remove debris before treatment and discuss drainage and rinse-water handling for your property. Cleaning products must be used according to their labels and your turf manufacturer's care instructions."
     },
     {
-      title: "Satisfaction Guaranteed",
-      description: "We stand behind every service we provide. If you're not completely satisfied with the results, we'll make it right. Our 30+ years of cleaning experience means we know how to deliver results that exceed expectations.",
-    },
+      "title": "Clear Service Scope",
+      "description": "Discuss the areas, services, access requirements, and follow-up instructions before work begins. Contact the team if you have questions about the completed visit."
+    }
   ],
-  stats: {
-    yearsInBusiness: 30,
-    customersServed: "5,000+",
-    satisfactionRate: "99%",
-    projectsCompleted: "15,000+",
+  "socialMedia": {
+    "facebook": "https://www.facebook.com/profile.php?id=100090088264095",
+    "instagram": "https://www.instagram.com/murphysturfcare/",
+    "youtube": "https://www.youtube.com/@murphysturfcare/featured"
   },
-  socialMedia: {
-    facebook: "https://www.facebook.com/profile.php?id=100090088264095",
-    instagram: "https://www.instagram.com/murphysturfcare/",
-    youtube: "https://www.youtube.com/@murphysturfcare/featured",
-  },
-  certifications: [
-    "Licensed & Insured",
-    "30+ Years Cleaning & Disinfecting Experience",
-    "Certified Turf Cleaning Applicator",
-  ],
+  "certifications": []
 };

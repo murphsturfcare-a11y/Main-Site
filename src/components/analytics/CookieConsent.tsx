@@ -1,42 +1,24 @@
 "use client";
 
-import { useState, useEffect } from "react";
-
-const CONSENT_KEY = "murphys_turf_cookie_consent";
+import { useSyncExternalStore } from "react";
+import { readEffectiveConsent, saveConsent, subscribeToConsent } from '@/lib/analytics/consent';
 
 export function CookieConsent() {
-  const [showBanner, setShowBanner] = useState(false);
-
-  useEffect(() => {
-    const consent = localStorage.getItem(CONSENT_KEY);
-    if (!consent) {
-      setShowBanner(true);
-    }
-  }, []);
+  const consent = useSyncExternalStore(subscribeToConsent, readEffectiveConsent, () => 'pending');
+  const showBanner = consent === null;
 
   function handleAccept() {
-    localStorage.setItem(CONSENT_KEY, "accepted");
-    setShowBanner(false);
-
-    if (typeof window !== "undefined" && window.gtag) {
-      window.gtag("consent", "update", {
-        analytics_storage: "granted",
-        ad_storage: "granted",
-        ad_user_data: "granted",
-        ad_personalization: "granted",
-      });
-    }
+    saveConsent('accepted');
   }
 
   function handleDecline() {
-    localStorage.setItem(CONSENT_KEY, "declined");
-    setShowBanner(false);
+    saveConsent('declined');
   }
 
   if (!showBanner) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-200 p-4 shadow-lg">
+    <div role="region" aria-label="Cookie preferences" className="fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-200 p-4 shadow-lg">
       <div className="mx-auto max-w-7xl flex flex-col sm:flex-row items-center justify-between gap-4">
         <p className="text-sm text-gray-700">
           We use cookies to improve your experience and analyze site traffic. By accepting, you
@@ -51,7 +33,7 @@ export function CookieConsent() {
           </button>
           <button
             onClick={handleAccept}
-            className="rounded-md bg-green-600 px-4 py-2 text-sm font-medium text-white hover:bg-green-700 transition-colors"
+            className="rounded-md bg-forest px-4 py-2 text-sm font-medium text-white hover:bg-forest-dark transition-colors"
           >
             Accept
           </button>

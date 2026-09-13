@@ -4,6 +4,8 @@ import { Scissors, Home, Mail } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Page Not Found',
+  robots: { index: false, follow: true },
+  alternates: { canonical: null },
 };
 
 export default function NotFound() {
@@ -75,7 +77,7 @@ export default function NotFound() {
         <div className="mt-8 flex flex-col sm:flex-row items-center gap-4">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 px-8 py-3 bg-sage hover:bg-sage-dark text-white font-heading font-semibold rounded-full transition-colors shadow-md hover:shadow-lg"
+            className="inline-flex items-center gap-2 px-8 py-3 bg-sage hover:bg-sage-light text-forest-dark font-heading font-semibold rounded-full transition-colors shadow-md hover:shadow-lg"
           >
             <Home className="w-5 h-5" />
             Back to Home

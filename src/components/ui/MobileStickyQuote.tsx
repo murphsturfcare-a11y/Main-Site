@@ -1,19 +1,28 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { locations } from '@/data/locations';
 import Link from 'next/link';
 import { Phone, ArrowRight, MapPin, X } from 'lucide-react';
 
-const locations = [
-  { slug: 'huntington-beach', name: 'Huntington Beach / LA Area', phone: '951-331-3300', tel: '9513313300' },
-  { slug: 'murrieta', name: 'Murrieta / Inland Empire', phone: '951-331-3300', tel: '9513313300' },
-  { slug: 'martinez', name: 'Martinez / Bay Area', phone: '925-338-0048', tel: '9253380048' },
-  { slug: 'sacramento', name: 'Greater Sacramento', phone: '916-432-5033', tel: '9164325033' },
-];
+
 
 export default function MobileStickyQuote() {
+  const pickerRef = useRef<HTMLDivElement>(null);
   const [pickerOpen, setPickerOpen] = useState(false);
   const [pickerMode, setPickerMode] = useState<'call' | 'quote'>('call');
+
+  useEffect(() => {
+    if (!pickerOpen) return;
+    const previousFocus = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    pickerRef.current?.querySelector('button')?.focus();
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      previousFocus?.focus();
+    };
+  }, [pickerOpen]);
 
   function openPicker(mode: 'call' | 'quote') {
     setPickerMode(mode);
@@ -29,10 +38,26 @@ export default function MobileStickyQuote() {
             className="absolute inset-0 bg-black/50"
             onClick={() => setPickerOpen(false)}
           />
-          <div className="relative w-full bg-white rounded-t-2xl shadow-xl p-5 pb-8 animate-slide-up">
+          <div
+            ref={pickerRef}
+            role="dialog"
+            aria-modal="true"
+            aria-label={pickerMode === 'call' ? 'Call Your Regional Team' : 'Select Your Area'}
+            className="relative w-full max-h-[85dvh] overflow-y-auto bg-white rounded-t-2xl shadow-xl p-5 pb-8 animate-slide-up"
+            onKeyDown={(event) => {
+              if (event.key === 'Escape') setPickerOpen(false);
+              if (event.key !== 'Tab') return;
+              const controls = pickerRef.current?.querySelectorAll<HTMLElement>('button, a[href]');
+              if (!controls?.length) return;
+              const first = controls[0];
+              const last = controls[controls.length - 1];
+              if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+              else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+            }}
+          >
             <div className="flex items-center justify-between mb-4">
               <h3 className="text-lg font-bold text-forest font-heading">
-                {pickerMode === 'call' ? 'Call Your Local Office' : 'Select Your Area'}
+                {pickerMode === 'call' ? 'Call Your Regional Team' : 'Select Your Area'}
               </h3>
               <button
                 type="button"
@@ -48,7 +73,7 @@ export default function MobileStickyQuote() {
                 pickerMode === 'call' ? (
                   <a
                     key={loc.slug}
-                    href={`tel:${loc.tel}`}
+                    href={`tel:${loc.phone.replace(/\D/g, '')}`}
                     className="flex items-center gap-3 p-4 rounded-xl border border-gray-100 hover:border-sage/30 hover:bg-cream transition-all"
                     onClick={() => setPickerOpen(false)}
                   >
@@ -59,7 +84,7 @@ export default function MobileStickyQuote() {
                       <span className="block font-semibold text-charcoal font-body text-sm">
                         {loc.name}
                       </span>
-                      <span className="block text-sage font-bold font-body text-sm">
+                      <span className="block text-forest font-bold font-body text-sm">
                         {loc.phone}
                       </span>
                     </div>
@@ -104,7 +129,7 @@ export default function MobileStickyQuote() {
           <button
             type="button"
             onClick={() => openPicker('quote')}
-            className="flex-1 inline-flex items-center justify-center gap-2 bg-sage text-white py-3 rounded-lg font-semibold font-body text-sm min-h-[44px] transition-colors hover:bg-sage-dark"
+            className="flex-1 inline-flex items-center justify-center gap-2 bg-sage text-forest-dark py-3 rounded-lg font-semibold font-body text-sm min-h-[44px] transition-colors hover:bg-sage-light"
           >
             Get Free Quote
             <ArrowRight className="w-4 h-4" />

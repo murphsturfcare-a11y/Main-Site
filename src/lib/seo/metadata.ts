@@ -55,7 +55,7 @@ export function generateServiceMetadata(service: {
   shortDescription: string;
 }): Metadata {
   const title = `${service.name} | Artificial Turf Cleaning California`;
-  const description = `${service.shortDescription} Professional ${service.name.toLowerCase()} by ${COMPANY_NAME} — 30+ years experience. Get a free quote today!`;
+  const description = `${service.shortDescription} Professional ${service.name.toLowerCase()} by ${COMPANY_NAME}. Get a free quote today!`;
 
   return generatePageMetadata(title, description, `/services/${service.slug}`);
 }
@@ -64,9 +64,10 @@ export function generateLocationMetadata(location: {
   name: string;
   slug: string;
   description: string;
+  metaDescription?: string;
 }): Metadata {
   const title = `Artificial Turf Cleaning in ${location.name}, CA`;
-  const description = `${location.description} ${COMPANY_NAME} provides professional artificial turf cleaning and sanitization in ${location.name}, CA. Get a free estimate today!`;
+  const description = location.metaDescription || `Artificial turf cleaning in ${location.name}, CA. Pet hair removal, deep cleaning, deodorizing and maintenance from ${COMPANY_NAME}. Request a quote.`;
 
   return generatePageMetadata(
     title,
@@ -77,7 +78,7 @@ export function generateLocationMetadata(location: {
 
 export function generateCommercialMetadata(): Metadata {
   const title = "Commercial Artificial Turf Cleaning California";
-  const description = `Commercial artificial turf cleaning for dog daycares, HOAs, schools, gyms & hospitality across California. Recurring, pet-safe, bonded & insured service from ${COMPANY_NAME} — 30+ years experience. Get a free quote!`;
+  const description = `Commercial artificial turf cleaning for pet facilities, HOAs, schools, gyms and hospitality. Request a property-specific scope from ${COMPANY_NAME}.`;
 
   return generatePageMetadata(title, description, "/commercial-turf-cleaning");
 }
@@ -90,7 +91,7 @@ export function generateCommercialLocationMetadata(location: {
 }): Metadata {
   const title = `Commercial Artificial Turf Cleaning in ${location.name}, CA`;
   const phone = location.phone ? ` Call ${location.phone}.` : "";
-  const description = `Commercial artificial turf cleaning in ${location.name}, CA for dog daycares, HOAs, schools, gyms & hospitality. Recurring, pet-safe, bonded & insured service from ${COMPANY_NAME}.${phone}`;
+  const description = `Commercial artificial turf cleaning in ${location.name}, CA for pet areas, managed properties and recreation spaces. Request a service quote.${phone}`;
 
   return generatePageMetadata(
     title,
@@ -143,7 +144,7 @@ export function generateBlogMetadata(post: {
 export function generateBlogIndexMetadata(): Metadata {
   return generatePageMetadata(
     "Artificial Turf Cleaning Blog — Tips & Guides",
-    "Expert artificial turf cleaning tips, deep cleaning guides, and synthetic turf maintenance advice from Murphy's Turf. 30+ years of experience keeping California turf clean and fresh.",
+    "Expert artificial turf cleaning tips, deep cleaning guides, and synthetic turf maintenance advice from Murphy's Turf. Practical guidance for property owners across our California service areas.",
     "/blog"
   );
 }
@@ -168,6 +169,7 @@ export const DEFAULT_METADATA: Metadata = {
     "turf cleaning Murrieta",
     "turf cleaning Martinez",
     "turf cleaning Sacramento",
+    "turf cleaning Palm Desert",
     "Murphy's Turf",
   ],
   alternates: {

@@ -27,3 +27,13 @@ describe("robots", () => {
     expect(result.sitemap).toBe("https://murphysturf.com/sitemap.xml");
   });
 });
+
+// Specific bot groups must never bypass the wildcard's exclusions.
+it("applies private-path exclusions consistently to search and AI crawlers", () => {
+  const result = robots();
+  const rules = Array.isArray(result.rules) ? result.rules : [result.rules];
+  for (const rule of rules) {
+    expect(rule.disallow).toContain("/admin/");
+    expect(rule.disallow).toContain("/api/");
+  }
+});

@@ -12,26 +12,26 @@ describe('WhyChooseUs', () => {
 
   it('renders all 3 benefit titles', () => {
     render(<WhyChooseUs />);
-    expect(screen.getByText('100% Pet Friendly')).toBeInTheDocument();
-    expect(screen.getByText('Eco Friendly')).toBeInTheDocument();
-    expect(screen.getByText('Satisfaction Guaranteed')).toBeInTheDocument();
+    expect(screen.getByText('Care for Pet Yards')).toBeInTheDocument();
+    expect(screen.getByText('Surface-Specific Care')).toBeInTheDocument();
+    expect(screen.getByText('Clear Service Scope')).toBeInTheDocument();
   });
 
   it('renders all 3 benefit descriptions', () => {
     render(<WhyChooseUs />);
     expect(
       screen.getByText(
-        /all our products and methods are completely safe for your furry friends/i
+        /Plan around pet use and follow the treatment instructions/i
       )
     ).toBeInTheDocument();
     expect(
       screen.getByText(
-        /we use environmentally responsible, biodegradable products/i
+        /Share your turf and infill information/i
       )
     ).toBeInTheDocument();
     expect(
       screen.getByText(
-        /not happy with our work\? we.ll come back and make it right/i
+        /Confirm the areas, work, and access details/i
       )
     ).toBeInTheDocument();
   });

@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Murphy's Turf website
 
-## Getting Started
+Next.js static website for Murphy's Turf at [murphysturf.com](https://murphysturf.com). The site covers Murrieta / Inland Empire, Huntington Beach / LA, Martinez / Bay Area, Sacramento, and Palm Desert with residential, commercial, service and guide pages.
 
-First, run the development server:
+## Develop and verify
 
-```bash
+```sh
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm test
+npm run lint
+npm run build
+npx tsc --noEmit
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The build checks `public` for internal tool/environment files, generates optional article/text mirrors from the shared content data, and exports the site to `out`. Keep private files outside `public`; everything in it can be published. The actual lead endpoint is `netlify/functions/lead.mts`, separate from the static export. Validate its bundle with `netlify functions:build` when changing the form or handler.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Content and lead routing
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `src/data/locations.ts`, `palm-desert.ts` and `commercial.ts` define service coverage.
+- `src/data/blog.ts` is the article source; `scripts/generate-llm-files.mjs` generates text mirrors.
+- `src/components/forms/LeadForm.tsx` sends quote requests to the Netlify function.
+- The handler uses server-only `GHL_API_KEY` and `GHL_LOCATION_ID`; see `.env.example` for configuration names. Never expose these as `NEXT_PUBLIC_*` values.
+- Palm Desert requests carry `website-lead` and `location-palm-desert`. The service-area page city is validated separately from the visitor's property city. Account-side tag/routing setup is documented in the [Claude GHL handoff](docs/ghl-palm-desert-handoff.md).
 
-## Learn More
+## Release
 
-To learn more about Next.js, take a look at the following resources:
+The authorized repository is `murphsturfcare-a11y/Main-Site`, remote **`client`**, default branch **`main`**. The other remote's push URL is deliberately disabled and must not be used. `netlify.toml` specifies `npm run build` and publish directory `out`. A successful Git push is separate from a confirmed Netlify deployment; verify the live page identity, headers, routes and function after release.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Audit and QA evidence:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- [Final organic-lead SEO/AEO audit](docs/final-organic-lead-audit.md)
+- [Expansion and complete audit](docs/seo-aeo-audit.md)
+- [Quote attribution checks](docs/lead-attribution-qa.md)
+- [Hero media checks](docs/hero-media-performance.md)
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The audits distinguish local simulation, deployed behavior and account-level verification. Search rankings, real CRM receipt and workflow notifications require their own evidence.

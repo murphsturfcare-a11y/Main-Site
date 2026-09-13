@@ -1,173 +1,60 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, it } from 'vitest';
 import {
-  homeMetadata,
-  servicesMetadata,
-  locationsMetadata,
-  serviceMetadata,
-  locationMetadata,
-  blogIndexMetadata,
-  blogMetadata,
-} from "@/lib/seo/generateMetadataForAllPages";
+  homeMetadata, servicesMetadata, locationsMetadata, serviceMetadata,
+  locationMetadata, blogIndexMetadata, blogMetadata,
+} from '@/lib/seo/generateMetadataForAllPages';
+import { services } from '@/data/services';
+import { locations } from '@/data/locations';
+import { blogPosts } from '@/data/blog';
+import { seoMetadata } from '@/data/seo';
+import { COMPANY_NAME, SITE_URL } from '@/lib/seo/constants';
 
-const SITE_URL = "https://murphysturf.com";
-
-describe("generateMetadataForAllPages", () => {
-  describe("homeMetadata", () => {
-    it("has title containing 'Professional Artificial Turf Cleaning'", () => {
-      expect(homeMetadata.title).toContain(
-        "Professional Artificial Turf Cleaning"
-      );
-    });
-
-    it(`has canonical equal to ${SITE_URL}/`, () => {
-      expect(homeMetadata.alternates?.canonical).toBe(`${SITE_URL}/`);
-    });
-
-    it("has title and description properties", () => {
-      expect(homeMetadata.title).toBeDefined();
-      expect(homeMetadata.description).toBeDefined();
-    });
+describe('shared page metadata inventory', () => {
+  it('takes static page descriptions from reviewed metadata', () => {
+    for (const [metadata, key, path] of [
+      [homeMetadata, 'home', '/'],
+      [servicesMetadata, 'services', '/services'],
+      [locationsMetadata, 'locations', '/locations'],
+      [blogIndexMetadata, 'blog', '/blog'],
+    ] as const) {
+      expect(metadata.description).toBe(seoMetadata[key].description);
+      expect(metadata.alternates?.canonical).toBe(`${SITE_URL}${path}`);
+    }
   });
 
-  describe("servicesMetadata", () => {
-    it("has canonical for /services", () => {
-      expect(servicesMetadata.alternates?.canonical).toBe(
-        `${SITE_URL}/services`
-      );
-    });
-
-    it("has title and description properties", () => {
-      expect(servicesMetadata.title).toBeDefined();
-      expect(servicesMetadata.description).toBeDefined();
-    });
+  it('covers exactly the published service inventory', () => {
+    expect(Object.keys(serviceMetadata).sort()).toEqual(services.map((service) => service.slug).sort());
+    for (const service of services) {
+      expect(serviceMetadata[service.slug].description).toBe(service.metaDescription);
+      expect(serviceMetadata[service.slug].alternates?.canonical).toBe(`${SITE_URL}/services/${service.slug}`);
+    }
   });
 
-  describe("locationsMetadata", () => {
-    it("has canonical for /locations", () => {
-      expect(locationsMetadata.alternates?.canonical).toBe(
-        `${SITE_URL}/locations`
-      );
-    });
-
-    it("has title and description properties", () => {
-      expect(locationsMetadata.title).toBeDefined();
-      expect(locationsMetadata.description).toBeDefined();
-    });
+  it('includes Palm Desert and future locations through the shared inventory', () => {
+    expect(Object.keys(locationMetadata).sort()).toEqual(locations.map((location) => location.slug).sort());
+    expect(locationMetadata).toHaveProperty('palm-desert');
+    for (const location of locations) {
+      expect(locationMetadata[location.slug].description).toBe(location.metaDescription);
+      expect(locationMetadata[location.slug].alternates?.canonical).toBe(`${SITE_URL}/locations/${location.slug}`);
+    }
   });
 
-  describe("serviceMetadata", () => {
-    const expectedSlugs = [
-      "pet-hair-debris",
-      "blooming-decompacting",
-      "disinfect-deodorize",
-      "poop-scooping",
-    ] as const;
-
-    it("has exactly 4 entries keyed by slug", () => {
-      expect(Object.keys(serviceMetadata)).toHaveLength(4);
-      for (const slug of expectedSlugs) {
-        expect(serviceMetadata).toHaveProperty(slug);
-      }
-    });
-
-    it.each(expectedSlugs)(
-      "serviceMetadata[%s] has canonical containing /services/%s",
-      (slug) => {
-        const meta = serviceMetadata[slug];
-        expect(meta.alternates?.canonical).toContain(`/services/${slug}`);
-      }
-    );
-
-    it.each(expectedSlugs)(
-      "serviceMetadata[%s] has title and description",
-      (slug) => {
-        const meta = serviceMetadata[slug];
-        expect(meta.title).toBeDefined();
-        expect(meta.description).toBeDefined();
-      }
-    );
+  it('covers all current articles and excludes retired redirect slugs', () => {
+    expect(Object.keys(blogMetadata).sort()).toEqual(Object.keys(blogPosts).sort());
+    expect(blogMetadata).toHaveProperty('artificial-turf-cleaning-palm-desert');
+    expect(blogMetadata).not.toHaveProperty('professional-turf-cleaning-huntington-beach');
+    expect(blogMetadata).not.toHaveProperty('removing-pet-odors-murrieta');
+    for (const post of Object.values(blogPosts)) {
+      expect(blogMetadata[post.slug].description).toBe(post.metaDescription);
+      expect(blogMetadata[post.slug].alternates?.canonical).toBe(`${SITE_URL}/blog/${post.slug}`);
+    }
   });
 
-  describe("locationMetadata", () => {
-    const expectedSlugs = [
-      "huntington-beach",
-      "murrieta",
-      "martinez",
-      "sacramento",
-    ] as const;
-
-    it("has exactly 4 entries keyed by slug", () => {
-      expect(Object.keys(locationMetadata)).toHaveLength(4);
-      for (const slug of expectedSlugs) {
-        expect(locationMetadata).toHaveProperty(slug);
-      }
-    });
-
-    it.each(expectedSlugs)(
-      "locationMetadata[%s] has canonical containing /locations/%s",
-      (slug) => {
-        const meta = locationMetadata[slug];
-        expect(meta.alternates?.canonical).toContain(`/locations/${slug}`);
-      }
-    );
-
-    it.each(expectedSlugs)(
-      "locationMetadata[%s] has title and description",
-      (slug) => {
-        const meta = locationMetadata[slug];
-        expect(meta.title).toBeDefined();
-        expect(meta.description).toBeDefined();
-      }
-    );
-  });
-
-  describe("blogIndexMetadata", () => {
-    it("has canonical for /blog", () => {
-      expect(blogIndexMetadata.alternates?.canonical).toBe(`${SITE_URL}/blog`);
-    });
-
-    it("has title and description properties", () => {
-      expect(blogIndexMetadata.title).toBeDefined();
-      expect(blogIndexMetadata.description).toBeDefined();
-    });
-  });
-
-  describe("blogMetadata", () => {
-    const expectedSlugs = [
-      "how-to-clean-artificial-turf",
-      "professional-turf-cleaning-huntington-beach",
-      "removing-pet-odors-murrieta",
-      "artificial-turf-maintenance-bay-area",
-      "sacramento-turf-cleaning-tips",
-      "health-benefits-turf-sanitization",
-      "how-often-clean-artificial-turf",
-      "chlorine-based-turf-cleaning",
-      "diy-vs-professional-turf-cleaning",
-      "artificial-turf-pets-clean-safe",
-      "why-artificial-turf-smells-fix",
-      "signs-turf-needs-professional-cleaning",
-    ] as const;
-
-    it("has exactly 12 entries", () => {
-      expect(Object.keys(blogMetadata)).toHaveLength(12);
-    });
-
-    it.each(expectedSlugs)(
-      "blogMetadata[%s] has canonical containing /blog/%s",
-      (slug) => {
-        const meta = blogMetadata[slug];
-        expect(meta).toBeDefined();
-        expect(meta.alternates?.canonical).toContain(`/blog/${slug}`);
-      }
-    );
-
-    it.each(expectedSlugs)(
-      "blogMetadata[%s] has title and description",
-      (slug) => {
-        const meta = blogMetadata[slug];
-        expect(meta.title).toBeDefined();
-        expect(meta.description).toBeDefined();
-      }
-    );
+  it('does not double the brand when adapting shared editorial titles', () => {
+    const metadata = [homeMetadata, servicesMetadata, locationsMetadata, blogIndexMetadata, ...Object.values(serviceMetadata), ...Object.values(locationMetadata)];
+    for (const entry of metadata) {
+      expect(entry.title).not.toContain(COMPANY_NAME);
+      expect(String(entry.openGraph?.title).split(COMPANY_NAME)).toHaveLength(2);
+    }
   });
 });

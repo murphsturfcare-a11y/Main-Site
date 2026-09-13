@@ -1,14 +1,15 @@
-'use client';
-
-import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { turfGalleryPhotos } from '@/data/gallery';
+import HeroMedia from '@/components/sections/HeroMedia';
+import { locations } from '@/data/locations';
+import { homeFaqs as faqs } from '@/data/home-faqs';
+import { JsonLd } from '@/components/seo/JsonLd';
+import { generateWebsiteSchema } from '@/lib/seo/schema';
 import {
-  Star,
   ChevronDown,
   MapPin,
   ArrowRight,
-  CheckCircle2,
   PawPrint,
   Leaf,
   ThumbsUp,
@@ -21,21 +22,21 @@ const services = [
     name: 'Pet Hair & Debris Removal',
     slug: 'pet-hair-debris',
     description:
-      'We remove pet hair, waste, leaves, branches, and run a magnet for metal objects while de-weeding edges and seams to leave your turf spotless.',
+      'We remove pet hair, waste, leaves, branches, and run a magnet for metal objects while de-weeding edges and seams as part of the agreed cleaning scope.',
     image: '/images/gallery/service-pet-hair-debris.jpeg',
   },
   {
     name: 'Blooming & De-Compacting',
     slug: 'blooming-decompacting',
     description:
-      'We bring matted, flattened turf back to life by fluffing blades upright so your artificial grass looks and feels like natural grass again.',
+      'We assess flattened fibers and compacted areas for suitable grooming. Results depend on the condition of the installed turf.',
     image: '/images/gallery/service-turf-blooming-v2.png',
   },
   {
     name: 'Disinfect & Deodorize',
     slug: 'disinfect-deodorize',
     description:
-      'Our professional-grade cleaning eliminates germs and bacteria on your turf without hazardous chemicals, leaving your yard fresh and safe.',
+      'We treat odor-prone turf and explain the product-specific precautions, drying time, and next steps before your family returns to the yard.',
     image: '/images/gallery/service-turf-disinfecting-v2.jpeg',
   },
   {
@@ -47,76 +48,9 @@ const services = [
   },
 ];
 
-const testimonials = [
-  {
-    quote:
-      "Our dogs destroyed our artificial turf smell-wise. Murphy's came out, did the deep cleaning treatment, and it smells like the day it was installed. The kids can play on it again worry-free.",
-    name: 'Jessica M.',
-    location: 'Murrieta',
-  },
-  {
-    quote:
-      "We tried everything to get the pet odor out of our turf. One visit from Murphy's and the difference was unbelievable. Monthly service now and our backyard is always fresh.",
-    name: 'David R.',
-    location: 'Huntington Beach',
-  },
-  {
-    quote:
-      "Professional, thorough, and our turf looks brand new. The blooming service brought our matted turf back to life. Highly recommend Murphy's Turf!",
-    name: 'Karen L.',
-    location: 'Martinez',
-  },
-];
 
-const locationButtons = [
-  { name: 'Huntington Beach / LA Area', slug: 'huntington-beach' },
-  { name: 'Murrieta / Inland Empire', slug: 'murrieta' },
-  { name: 'Martinez / Bay Area', slug: 'martinez' },
-  { name: 'Greater Sacramento', slug: 'sacramento' },
-];
 
-const faqs = [
-  {
-    question: 'How often should artificial turf be cleaned?',
-    answer:
-      'We recommend professional cleaning every 4-6 weeks for homes with pets. For turf without pets, a quarterly deep clean is usually sufficient. Regular maintenance keeps odors away and extends the life of your turf investment.',
-  },
-  {
-    question: 'Are your cleaning products safe for my pets and kids?',
-    answer:
-      'Absolutely. Our professional-grade cleaning solution is chlorine-based and contains no bleach, ammonia, or hazardous chemicals. It is specifically formulated to be safe for pets, children, and the environment while effectively eliminating germs and bacteria.',
-  },
-  {
-    question: 'What does your turf cleaning process include?',
-    answer:
-      'Our comprehensive process includes pet hair and debris removal, de-weeding edges and seams, running a magnet for metal objects, blooming and de-compacting matted fibers, and a full disinfect and deodorize treatment with our professional-grade cleaning solution. Every visit leaves your turf looking and smelling like new.',
-  },
-  {
-    question: 'Do you offer poop scooping services separately?',
-    answer:
-      'Yes! We offer standalone poop scooping and pet waste removal plans on weekly, bi-weekly, or custom schedules. It\u2019s a great way to keep your yard clean between full turf cleaning visits.',
-  },
-  {
-    question: 'How long does a cleaning take?',
-    answer:
-      'Most residential turf cleanings take between 45 minutes and 1.5 hours, depending on the size of your lawn and the services included. We work efficiently without cutting corners so you can get back to enjoying your yard.',
-  },
-  {
-    question: 'Do I need to be home during service?',
-    answer:
-      'No, you do not need to be home. As long as we have access to your yard and a water source, our team can complete the service while you\u2019re away. We\u2019ll send you a notification when the job is done.',
-  },
-  {
-    question: 'What areas do you serve?',
-    answer:
-      'We proudly serve communities across California including Huntington Beach and the LA area, Murrieta and the Inland Empire, Martinez and the Bay Area, and Sacramento. Contact us to check if we service your specific location.',
-  },
-  {
-    question: 'Can you fix matted or flattened turf?',
-    answer:
-      'Yes! Our blooming and de-compacting service is specifically designed to bring matted turf back to life. We fluff the blades upright so your artificial grass looks and feels like natural grass again. Results are immediate and dramatic.',
-  },
-];
+
 
 const processSteps = [
   {
@@ -127,7 +61,7 @@ const processSteps = [
   {
     image: '/images/gallery/process-schedule-estimate.png',
     title: 'Get Your Fast Online Quote',
-    description: 'Share your turf measurements or we pull them from Google Earth — no on-site visit needed',
+    description: 'Share measurements and photos so we can review the scope and advise whether a visit is needed',
   },
   {
     image: '/images/gallery/process-get-job-done.png',
@@ -136,45 +70,19 @@ const processSteps = [
   },
 ];
 
-const galleryImages = [
-  { src: '/images/gallery/gallery-01.png', alt: "Murphy's Turf cleaning project — before and after" },
-  { src: '/images/gallery/gallery-02.png', alt: "Murphy's Turf cleaning project — turf disinfecting" },
-  { src: '/images/gallery/gallery-12.jpeg', alt: "Murphy's Turf — backyard turf with curved patio edge" },
-  { src: '/images/gallery/gallery-13.jpeg', alt: "Murphy's Turf — side yard turf with rock border" },
-  { src: '/images/gallery/gallery-14.jpeg', alt: "Murphy's Turf — poolside turf with stepping stones" },
-  { src: '/images/gallery/gallery-15.jpeg', alt: "Murphy's Turf — backyard putting green by pool" },
-  { src: '/images/gallery/gallery-16.jpeg', alt: "Murphy's Turf — front yard turf with dog" },
-  { src: '/images/gallery/gallery-05.png', alt: "Murphy's Turf cleaning project — turf restoration" },
-];
+const galleryImages = turfGalleryPhotos;
 
 /* ===================== FAQ ACCORDION ITEM ===================== */
 
 function FAQItem({ question, answer }: { question: string; answer: string }) {
-  const [open, setOpen] = useState(false);
-
   return (
-    <div className="border border-gray-200 rounded-xl overflow-hidden bg-white transition-shadow hover:shadow-md">
-      <button
-        onClick={() => setOpen(!open)}
-        className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left font-heading font-semibold text-charcoal hover:text-forest transition-colors"
-        aria-expanded={open}
-      >
+    <details className="group border border-gray-200 rounded-xl bg-white open:shadow-sm">
+      <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-6 py-5 font-heading font-semibold text-charcoal hover:text-forest focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-forest [&::-webkit-details-marker]:hidden">
         <span className="text-base sm:text-lg">{question}</span>
-        <ChevronDown
-          className={`w-5 h-5 flex-shrink-0 text-sage transition-transform duration-300 ${
-            open ? 'rotate-180' : ''
-          }`}
-        />
-      </button>
-      <div
-        className="accordion-content"
-        style={{ maxHeight: open ? '500px' : '0px', opacity: open ? 1 : 0 }}
-      >
-        <p className="px-6 pb-5 text-charcoal-light font-body leading-relaxed">
-          {answer}
-        </p>
-      </div>
-    </div>
+        <ChevronDown aria-hidden="true" className="w-5 h-5 shrink-0 text-forest transition-transform group-open:rotate-180" />
+      </summary>
+      <p className="px-6 pb-5 text-charcoal-light font-body leading-relaxed">{answer}</p>
+    </details>
   );
 }
 
@@ -183,18 +91,25 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
 function LocationSelector({ dark }: { dark?: boolean }) {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-      {locationButtons.map((loc) => (
+      {locations.map((loc, index) => (
         <Link
           key={loc.slug}
           href={`/locations/${loc.slug}`}
-          className={`group flex items-center gap-3 px-5 py-4 rounded-xl font-heading font-semibold transition-all duration-200 hover:-translate-y-0.5 ${
+          className={`group flex items-center gap-3 px-5 py-4 rounded-xl font-heading font-semibold transition-all duration-200 hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sage-light ${index === locations.length - 1 && locations.length % 2 !== 0 ? 'sm:col-span-2' : ''} ${
             dark
               ? 'bg-white/10 border border-white/20 text-white hover:bg-white/20'
               : 'bg-white border border-gray-200 text-charcoal hover:border-sage/40 hover:shadow-lg'
           }`}
         >
           <MapPin className={`w-5 h-5 flex-shrink-0 ${dark ? 'text-sage-light' : 'text-sage'}`} />
-          <span className="text-sm sm:text-base">{loc.name}</span>
+          <span className="min-w-0">
+            <span className="block text-sm sm:text-base">{loc.name}</span>
+            {loc.slug === 'palm-desert' && (
+              <span className={`block mt-1 text-xs font-body font-normal leading-relaxed ${dark ? 'text-white/80' : 'text-charcoal-light'}`}>
+                Indian Wells, Bermuda Dunes, La Quinta, Indio &amp; Coachella
+              </span>
+            )}
+          </span>
           <ArrowRight className={`w-4 h-4 ml-auto transition-transform group-hover:translate-x-1 ${dark ? 'text-sage-light' : 'text-sage'}`} />
         </Link>
       ))}
@@ -209,16 +124,7 @@ export default function Home() {
     <>
       {/* ────────────────── 1. HERO SECTION ────────────────── */}
       <section className="relative overflow-hidden">
-        {/* Background video */}
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover z-0"
-        >
-          <source src="/images/gallery/hero-video.mp4" type="video/mp4" />
-        </video>
+        <HeroMedia />
         {/* Dark overlay */}
         <div className="absolute inset-0 z-[1] bg-gradient-to-br from-forest-dark/95 via-forest/85 to-forest-dark/90" />
 
@@ -230,11 +136,11 @@ export default function Home() {
                 Professional Artificial Turf Cleaning
               </span>
               <h1 className="font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl text-white leading-tight tracking-tight">
-                Your Turf,{' '}
-                <span className="text-sage-light">Like New.</span>
+                Clean Turf,{' '}
+                <span className="text-sage-light">Less Upkeep.</span>
               </h1>
               <p className="mt-5 text-lg sm:text-xl text-gray-200 font-body leading-relaxed max-w-xl">
-                Pet-safe. Professional-grade cleaning. Looks brand new.
+                Artificial turf cleaning, pet odor treatment, and maintenance for California homes and businesses.
               </p>
             </div>
 
@@ -253,7 +159,7 @@ export default function Home() {
       <section className="bg-white py-14 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
-            <span className="inline-block font-body font-semibold text-sage text-sm uppercase tracking-widest mb-3">
+            <span className="inline-block font-body font-semibold text-forest text-sm uppercase tracking-widest mb-3">
               What We Offer
             </span>
             <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-charcoal">
@@ -285,7 +191,7 @@ export default function Home() {
                   <p className="mt-2 font-body text-charcoal-light leading-relaxed text-sm flex-1">
                     {service.description}
                   </p>
-                  <span className="mt-3 inline-flex items-center gap-1 font-body font-semibold text-sage group-hover:text-sage-dark transition-colors text-sm">
+                  <span className="mt-3 inline-flex items-center gap-1 font-body font-semibold text-forest group-hover:text-forest-dark transition-colors text-sm">
                     Learn More
                     <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                   </span>
@@ -312,20 +218,20 @@ export default function Home() {
 
             {/* Content */}
             <div>
-              <span className="inline-block font-body font-semibold text-sage text-sm uppercase tracking-widest mb-3">
+              <span className="inline-block font-body font-semibold text-forest text-sm uppercase tracking-widest mb-3">
                 About Us
               </span>
               <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-charcoal">
                 Reliable Turf Cleaning &amp; Maintenance
               </h2>
               <p className="mt-5 font-body text-charcoal-light text-lg leading-relaxed">
-                30+ years in cleaning &amp; disinfecting, now applied to your lawn. Our trained technicians deliver consistent, satisfaction-guaranteed turf care across California.
+                We help homeowners and property managers address debris, pet odor, and matted turf. Your quote confirms the areas and services included, with care instructions suited to your installation.
               </p>
               <ul className="mt-6 space-y-3">
                 {[
-                  { icon: PawPrint, label: 'Pet Friendly' },
-                  { icon: Leaf, label: 'Eco Friendly' },
-                  { icon: ThumbsUp, label: 'Satisfaction Guaranteed' },
+                  { icon: PawPrint, label: 'Care for Pet Yards' },
+                  { icon: Leaf, label: 'Surface-Specific Care' },
+                  { icon: ThumbsUp, label: 'Clear Service Scope' },
                 ].map((item) => {
                   const Icon = item.icon;
                   return (
@@ -340,7 +246,7 @@ export default function Home() {
               </ul>
               <a
                 href="#get-quote"
-                className="mt-8 inline-flex items-center justify-center gap-2 bg-sage hover:bg-sage-dark text-white font-heading font-bold text-lg px-8 py-4 rounded-xl transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5"
+                className="mt-8 inline-flex items-center justify-center gap-2 bg-sage hover:bg-sage-light text-forest-dark font-heading font-bold text-lg px-8 py-4 rounded-xl transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5"
               >
                 Get Free Quote
                 <ArrowRight className="w-5 h-5" />
@@ -354,7 +260,7 @@ export default function Home() {
       <section className="bg-white py-14 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
-            <span className="inline-block font-body font-semibold text-sage text-sm uppercase tracking-widest mb-3">
+            <span className="inline-block font-body font-semibold text-forest text-sm uppercase tracking-widest mb-3">
               How It Works
             </span>
             <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-charcoal">
@@ -372,7 +278,7 @@ export default function Home() {
                     fill
                     className="object-contain"
                   />
-                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-sage text-white rounded-full flex items-center justify-center font-heading font-bold text-sm shadow-md">
+                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-sage text-forest-dark rounded-full flex items-center justify-center font-heading font-bold text-sm shadow-md">
                     {i + 1}
                   </div>
                 </div>
@@ -385,7 +291,7 @@ export default function Home() {
           <div className="mt-12 text-center">
             <a
               href="#get-quote"
-              className="inline-flex items-center justify-center gap-2 bg-sage hover:bg-sage-dark text-white font-heading font-bold text-lg px-8 py-4 rounded-xl transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5"
+              className="inline-flex items-center justify-center gap-2 bg-sage hover:bg-sage-light text-forest-dark font-heading font-bold text-lg px-8 py-4 rounded-xl transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5"
             >
               Get Free Quote
               <ArrowRight className="w-5 h-5" />
@@ -398,15 +304,15 @@ export default function Home() {
       <section className="bg-cream py-14 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
-            <span className="inline-block font-body font-semibold text-sage text-sm uppercase tracking-widest mb-3">
-              Real Results
+            <span className="inline-block font-body font-semibold text-forest text-sm uppercase tracking-widest mb-3">
+              Turf Gallery
             </span>
             <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-charcoal">
-              Our Work
+              Outdoor Turf Spaces
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {galleryImages.map((img) => (
               <div
                 key={img.src}
@@ -426,67 +332,7 @@ export default function Home() {
           <div className="mt-12 text-center">
             <a
               href="#get-quote"
-              className="inline-flex items-center justify-center gap-2 bg-sage hover:bg-sage-dark text-white font-heading font-bold text-lg px-8 py-4 rounded-xl transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5"
-            >
-              Get Your Free Quote
-              <ArrowRight className="w-5 h-5" />
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* ────────────────── 6. TESTIMONIALS ────────────────── */}
-      <section className="bg-white py-14 sm:py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
-            <span className="inline-block font-body font-semibold text-sage text-sm uppercase tracking-widest mb-3">
-              Customer Reviews
-            </span>
-            <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-charcoal">
-              What Our Customers Say
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-            {testimonials.map((t, i) => (
-              <div
-                key={i}
-                className="bg-cream/60 rounded-2xl p-7 border border-gray-100 hover:shadow-lg transition-shadow duration-300 flex flex-col"
-              >
-                <div className="flex gap-1 mb-4">
-                  {[...Array(5)].map((_, idx) => (
-                    <Star
-                      key={idx}
-                      className="w-5 h-5 fill-amber-400 text-amber-400"
-                    />
-                  ))}
-                </div>
-                <blockquote className="font-body text-charcoal-light leading-relaxed flex-1">
-                  &ldquo;{t.quote}&rdquo;
-                </blockquote>
-                <div className="mt-6 flex items-center gap-3">
-                  <div className="w-10 h-10 bg-forest/10 rounded-full flex items-center justify-center">
-                    <span className="font-heading font-bold text-forest text-sm">
-                      {t.name.charAt(0)}
-                    </span>
-                  </div>
-                  <div>
-                    <p className="font-heading font-semibold text-charcoal text-sm">
-                      {t.name}
-                    </p>
-                    <p className="font-body text-charcoal-light text-xs">
-                      {t.location}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-12 text-center">
-            <a
-              href="#get-quote"
-              className="inline-flex items-center justify-center gap-2 bg-sage hover:bg-sage-dark text-white font-heading font-bold text-lg px-8 py-4 rounded-xl transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5"
+              className="inline-flex items-center justify-center gap-2 bg-sage hover:bg-sage-light text-forest-dark font-heading font-bold text-lg px-8 py-4 rounded-xl transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5"
             >
               Get Your Free Quote
               <ArrowRight className="w-5 h-5" />
@@ -499,7 +345,7 @@ export default function Home() {
       <section className="bg-cream py-14 sm:py-20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 sm:mb-14">
-            <span className="inline-block font-body font-semibold text-sage text-sm uppercase tracking-widest mb-3">
+            <span className="inline-block font-body font-semibold text-forest text-sm uppercase tracking-widest mb-3">
               Got Questions?
             </span>
             <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-charcoal">
@@ -509,7 +355,7 @@ export default function Home() {
               Can&apos;t find your answer?{' '}
               <Link
                 href="/locations"
-                className="text-sage hover:text-sage-dark font-semibold underline underline-offset-2"
+                className="text-forest hover:text-forest-dark font-semibold underline underline-offset-2"
               >
                 Contact us directly
               </Link>.
@@ -523,6 +369,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <JsonLd schema={generateWebsiteSchema()} />
 
       {/* FAQPage structured data */}
       <script

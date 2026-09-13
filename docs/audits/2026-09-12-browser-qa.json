@@ -1,0 +1,149 @@
+{
+  "viewports": [
+    {
+      "width": 320,
+      "overflow": false,
+      "heroLinks": 5,
+      "balancedFinalRow": false,
+      "mobilePickers": "passed"
+    },
+    {
+      "width": 360,
+      "overflow": false,
+      "heroLinks": 5,
+      "balancedFinalRow": false,
+      "mobilePickers": "passed"
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "heroLinks": 5,
+      "balancedFinalRow": false,
+      "mobilePickers": "passed"
+    },
+    {
+      "width": 768,
+      "overflow": false,
+      "heroLinks": 5,
+      "balancedFinalRow": true,
+      "mobilePickers": "passed"
+    },
+    {
+      "width": 1440,
+      "overflow": false,
+      "heroLinks": 5,
+      "balancedFinalRow": true,
+      "mobilePickers": "not applicable"
+    }
+  ],
+  "routes": [
+    {
+      "path": "/locations/palm-desert",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "path": "/locations/palm-desert/turf-cleaning-in-indian-wells",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "path": "/locations/palm-desert/turf-cleaning-in-bermuda-dunes",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "path": "/locations/palm-desert/turf-cleaning-in-la-quinta",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "path": "/locations/palm-desert/turf-cleaning-in-indio",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "path": "/locations/palm-desert/turf-cleaning-in-coachella",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "path": "/commercial-turf-cleaning/palm-desert",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "path": "/commercial-turf-cleaning/palm-desert/commercial-turf-cleaning-in-indian-wells",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "path": "/commercial-turf-cleaning/palm-desert/commercial-turf-cleaning-in-bermuda-dunes",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "path": "/commercial-turf-cleaning/palm-desert/commercial-turf-cleaning-in-la-quinta",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "path": "/commercial-turf-cleaning/palm-desert/commercial-turf-cleaning-in-indio",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "path": "/commercial-turf-cleaning/palm-desert/commercial-turf-cleaning-in-coachella",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "path": "/blog/artificial-turf-cleaning-palm-desert",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "path": "/blog/pet-turf-odor-palm-desert",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "path": "/blog/desert-turf-dust-drainage-coachella-valley",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "path": "/blog/seasonal-home-commercial-turf-palm-desert",
+      "status": 200,
+      "h1": 1
+    }
+  ],
+  "leadSimulation": {
+    "emptyValidation": "passed",
+    "errorAndRetry": "passed",
+    "success": "passed",
+    "locationSlug": "palm-desert",
+    "locationCity": "Palm Desert",
+    "requestsIntercepted": 2,
+    "realSubmissions": 0
+  },
+  "errors": [],
+  "noJavaScript": {
+    "newPageVisible": true,
+    "nativeFaqWorks": true,
+    "legacyPages": [
+      {
+        "path": "/locations",
+        "contentVisible": true,
+        "submitDisabled": true,
+        "nativeAccordion": "not applicable"
+      },
+      {
+        "path": "/locations/murrieta",
+        "contentVisible": true,
+        "submitDisabled": true,
+        "nativeAccordion": "passed"
+      }
+    ]
+  }
+}

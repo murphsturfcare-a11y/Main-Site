@@ -1,3 +1,4 @@
+import { locations } from '@/data/locations';
 import {
   SITE_URL,
   COMPANY_NAME,
@@ -7,17 +8,37 @@ import {
   SOCIAL_LINKS,
 } from "./constants";
 
+export function generateServiceAreasSchema() {
+  return locations.map((location) => ({
+    "@type": "Place",
+    name: location.name,
+    url: `${SITE_URL}/locations/${location.slug}`,
+    containedInPlace: { "@type": "State", name: "California" },
+  }));
+}
+
+export function generateWebsiteSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${SITE_URL}/#website`,
+    name: COMPANY_NAME,
+    url: `${SITE_URL}/`,
+    publisher: { "@id": `${SITE_URL}/#localbusiness` },
+  };
+}
+
 export function generateOrganizationSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: COMPANY_NAME,
     url: SITE_URL,
-    logo: `${SITE_URL}/images/logo.png`,
+    logo: `${SITE_URL}/images/logo.avif`,
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "customer service",
-      areaServed: "US",
+      areaServed: generateServiceAreasSchema(),
       availableLanguage: "English",
     },
     address: {
@@ -26,10 +47,7 @@ export function generateOrganizationSchema() {
       addressRegion: COMPANY_ADDRESS.state,
       addressCountry: "US",
     },
-    areaServed: {
-      "@type": "State",
-      name: "California",
-    },
+    areaServed: generateServiceAreasSchema(),
     sameAs: [
       SOCIAL_LINKS.facebook,
       SOCIAL_LINKS.instagram,
@@ -47,7 +65,6 @@ export function generateLocalBusinessSchema() {
     description: COMPANY_DESCRIPTION,
     url: SITE_URL,
     email: COMPANY_EMAIL,
-    additionalType: "https://schema.org/ProfessionalService",
     knowsAbout: [
       "Artificial Turf Cleaning",
       "Synthetic Turf Sanitization",
@@ -63,26 +80,14 @@ export function generateLocalBusinessSchema() {
       addressRegion: COMPANY_ADDRESS.state,
       addressCountry: "US",
     },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: 33.5539,
-      longitude: -117.2139,
-    },
-    openingHoursSpecification: [
-      {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        opens: "07:00",
-        closes: "18:00",
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: "Saturday",
-        opens: "08:00",
-        closes: "16:00",
-      },
-    ],
-    priceRange: "$$",
+    // Coverage is distinct from a physical branch or invented coordinates.
+    areaServed: generateServiceAreasSchema(),
+    contactPoint: locations.filter((location) => location.phone).map((location) => ({
+      "@type": "ContactPoint",
+      telephone: location.phone,
+      contactType: "customer service",
+      areaServed: location.name,
+    })),
     image: `${SITE_URL}/images/og-image.png`,
     sameAs: [
       SOCIAL_LINKS.facebook,
@@ -106,18 +111,11 @@ export function generateServiceSchema(service: {
     url: `${SITE_URL}/services/${service.slug}`,
     provider: {
       "@type": "LocalBusiness",
+      "@id": `${SITE_URL}/#localbusiness`,
       name: COMPANY_NAME,
       url: SITE_URL,
     },
-    areaServed: {
-      "@type": "State",
-      name: "California",
-    },
-    offers: {
-      "@type": "Offer",
-      availability: "https://schema.org/InStock",
-      priceCurrency: "USD",
-    },
+    areaServed: generateServiceAreasSchema(),
   };
 }
 
@@ -129,30 +127,23 @@ export function generateLocationSchema(location: {
 }) {
   return {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    name: `${COMPANY_NAME} - ${location.name}`,
+    "@type": "Service",
+    "@id": `${SITE_URL}/locations/${location.slug}#service`,
+    name: `Artificial Turf Cleaning in ${location.name}`,
+    serviceType: "Artificial Turf Cleaning",
     description: location.description,
     url: `${SITE_URL}/locations/${location.slug}`,
-    ...(location.phone ? { telephone: location.phone } : {}),
-    additionalType: "https://schema.org/ProfessionalService",
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: location.name,
-      addressRegion: "CA",
-      addressCountry: "US",
-    },
-    parentOrganization: {
-      "@type": "Organization",
+    provider: {
+      "@type": "LocalBusiness",
+      "@id": `${SITE_URL}/#localbusiness`,
       name: COMPANY_NAME,
       url: SITE_URL,
+      ...(location.phone ? { telephone: location.phone } : {}),
     },
-    serviceArea: {
-      "@type": "City",
+    areaServed: {
+      "@type": "Place",
       name: location.name,
-      containedInPlace: {
-        "@type": "State",
-        name: "California",
-      },
+      containedInPlace: { "@type": "State", name: "California" },
     },
   };
 }
@@ -248,7 +239,7 @@ export function generateBlogPostSchema(post: {
       url: SITE_URL,
       logo: {
         "@type": "ImageObject",
-        url: `${SITE_URL}/images/logo.png`,
+        url: `${SITE_URL}/images/logo.avif`,
       },
     },
     image: post.image

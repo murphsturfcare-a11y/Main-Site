@@ -6,15 +6,15 @@ interface Badge {
 }
 
 const badges: Badge[] = [
-  { label: 'Licensed & Insured', icon: Shield },
-  { label: '5-Star Rated', icon: Star },
-  { label: '100% Satisfaction', icon: ThumbsUp },
-  { label: 'Eco-Friendly', icon: Leaf },
+  { label: 'Free Quotes', icon: Shield },
+  { label: 'Regional Contacts', icon: Star },
+  { label: 'Clear Service Scope', icon: ThumbsUp },
+  { label: 'Turf Care Guidance', icon: Leaf },
 ];
 
 export default function TrustBadges() {
   return (
-    <section aria-label="Trust badges" className="w-full py-6">
+    <section aria-label="Service features" className="w-full py-6">
       <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
         {badges.map(({ label, icon: Icon }) => (
           <div

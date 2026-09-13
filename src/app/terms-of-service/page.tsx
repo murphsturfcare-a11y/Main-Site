@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { services } from '@/data/services';
 
 export const metadata: Metadata = {
   title: 'Terms of Service',
@@ -37,7 +38,7 @@ export default function TermsOfServicePage() {
             Terms of Service
           </h1>
           <p className="text-sage-light font-body text-lg">
-            Last updated: January 1, 2026
+            Last updated: September 12, 2026
           </p>
         </div>
       </section>
@@ -75,7 +76,7 @@ export default function TermsOfServicePage() {
                   <li key={section.id}>
                     <a
                       href={`#${section.id}`}
-                      className="text-forest hover:text-sage font-body text-sm sm:text-base transition-colors underline underline-offset-2"
+                      className="text-forest hover:text-forest-dark font-body text-sm sm:text-base transition-colors underline underline-offset-2"
                     >
                       {section.title}
                     </a>
@@ -97,7 +98,7 @@ export default function TermsOfServicePage() {
                 you agree to comply with and be bound by these Terms of Service, our{' '}
                 <Link
                   href="/privacy-policy"
-                  className="text-forest hover:text-sage underline underline-offset-2 transition-colors"
+                  className="text-forest hover:text-forest-dark underline underline-offset-2 transition-colors"
                 >
                   Privacy Policy
                 </Link>
@@ -126,18 +127,11 @@ export default function TermsOfServicePage() {
               </h2>
               <p className="text-charcoal font-body text-base leading-relaxed mb-4">
                 Murphy&apos;s Turf LLC provides professional artificial turf cleaning services
-                throughout the State of California. Our
-                services include, but are not limited to:
+                in the California service areas listed on our website. Our
+                artificial turf services include:
               </p>
               <ul className="list-disc list-inside text-charcoal font-body text-base leading-relaxed mb-6 space-y-1 pl-4">
-                <li>Lawn cleaning and debris removal</li>
-                <li>Aeration services</li>
-                <li>Overseeding and reseeding</li>
-                <li>Fertilization programs</li>
-                <li>Pest and weed control treatments</li>
-                <li>Seasonal lawn maintenance and preparation</li>
-                <li>Turf cleaning for synthetic and natural grass surfaces</li>
-                <li>Custom lawn care programs tailored to your property</li>
+                {services.map((service) => <li key={service.slug}>{service.name}</li>)}
               </ul>
               <p className="text-charcoal font-body text-base leading-relaxed mb-4">
                 The specific services to be provided will be outlined in a written quote or service
@@ -377,8 +371,7 @@ export default function TermsOfServicePage() {
               </h3>
               <p className="text-charcoal font-body text-base leading-relaxed mb-6">
                 Specific services may carry additional warranties as outlined in your service
-                agreement. For example, seeding services may include a germination guarantee subject
-                to proper watering and care by the property owner. The terms and duration of any
+                agreement. The terms and duration of any
                 service-specific warranties will be clearly communicated at the time of service.
               </p>
 
@@ -527,13 +520,13 @@ export default function TermsOfServicePage() {
                 Please contact us directly by phone (find your{' '}
                 <Link
                   href="/locations"
-                  className="text-forest hover:text-sage underline underline-offset-2 transition-colors"
+                  className="text-forest hover:text-forest-dark underline underline-offset-2 transition-colors"
                 >
                   local office number
                 </Link>) or by email at{' '}
                 <a
                   href="mailto:info@murphysturfcare.com"
-                  className="text-forest hover:text-sage underline underline-offset-2 transition-colors"
+                  className="text-forest hover:text-forest-dark underline underline-offset-2 transition-colors"
                 >
                   info@murphysturfcare.com
                 </a>{' '}
@@ -613,7 +606,7 @@ export default function TermsOfServicePage() {
                     <strong>Email:</strong>{' '}
                     <a
                       href="mailto:info@murphysturfcare.com"
-                      className="text-forest hover:text-sage underline underline-offset-2 transition-colors"
+                      className="text-forest hover:text-forest-dark underline underline-offset-2 transition-colors"
                     >
                       info@murphysturfcare.com
                     </a>
@@ -622,7 +615,7 @@ export default function TermsOfServicePage() {
                     <strong>Phone:</strong>{' '}
                     <Link
                       href="/locations"
-                      className="text-forest hover:text-sage underline underline-offset-2 transition-colors"
+                      className="text-forest hover:text-forest-dark underline underline-offset-2 transition-colors"
                     >
                       Find your local office number
                     </Link>
@@ -640,13 +633,13 @@ export default function TermsOfServicePage() {
           <div className="mt-16 pt-8 border-t border-gray-200 flex flex-col sm:flex-row items-center justify-between gap-4">
             <Link
               href="/privacy-policy"
-              className="text-forest hover:text-sage font-body font-medium transition-colors underline underline-offset-2"
+              className="text-forest hover:text-forest-dark font-body font-medium transition-colors underline underline-offset-2"
             >
               View Privacy Policy
             </Link>
             <Link
               href="/locations"
-              className="bg-sage hover:bg-sage-dark text-white font-semibold px-6 py-2.5 rounded-lg transition-colors font-body shadow-sm hover:shadow-md"
+              className="bg-sage hover:bg-sage-light text-forest-dark font-semibold px-6 py-2.5 rounded-lg transition-colors font-body shadow-sm hover:shadow-md"
             >
               Contact Us
             </Link>

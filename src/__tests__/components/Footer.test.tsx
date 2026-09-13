@@ -1,12 +1,6 @@
 import { render, screen } from '@testing-library/react';
-import { describe, it, expect, vi } from 'vitest';
+import { describe, it, expect } from 'vitest';
 
-vi.mock('next/link', () => ({
-  default: ({ children, href, ...props }: any) => <a href={href} {...props}>{children}</a>,
-}));
-vi.mock('next/image', () => ({
-  default: (props: any) => <img {...props} />,
-}));
 vi.mock('@/components/forms/NewsletterForm', () => ({
   default: () => <div data-testid="newsletter-form">Newsletter Form</div>,
 }));
@@ -82,10 +76,10 @@ describe('Footer', () => {
     ).toBeInTheDocument();
   });
 
-  it('renders newsletter section heading', () => {
+  it('links to the turf care guides', () => {
     render(<Footer />);
     expect(
-      screen.getByText('Stay Updated with Turf Care Tips'),
+      screen.getByRole('link', { name: 'Read the Turf Care Guides' }),
     ).toBeInTheDocument();
   });
 

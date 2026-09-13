@@ -11,16 +11,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 /* ------------------------------------------------------------------ */
 
 export default function Header() {
-  const [scrolled, setScrolled] = useState(false);
   const [drawerOpen, setDrawerOpen] = useState(false);
-
-  /* Track scroll position */
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 50);
-    onScroll(); // initialise on mount
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
 
   /* Lock body scroll when drawer is open */
   useEffect(() => {
@@ -36,7 +27,7 @@ export default function Header() {
 
   const closeDrawer = useCallback(() => setDrawerOpen(false), []);
 
-  const linkClass = `font-body text-sm font-medium transition-colors duration-300 hover:text-sage ${
+  const linkClass = `font-body text-sm font-medium transition-colors duration-300 hover:text-forest ${
     'text-charcoal'
   }`;
 
@@ -93,7 +84,7 @@ export default function Header() {
         {/* ---- Desktop CTA ---- */}
         <Link
           href="/locations"
-          className="hidden lg:inline-flex bg-sage text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-forest transition-colors duration-200"
+          className="hidden lg:inline-flex bg-sage text-forest-dark px-5 py-2.5 rounded-lg font-semibold hover:bg-sage-light transition-colors duration-200"
         >
           Get Free Quote
         </Link>
@@ -215,7 +206,7 @@ export default function Header() {
                 <Link
                   href="/locations"
                   onClick={closeDrawer}
-                  className="mt-6 block text-center bg-sage text-white px-5 py-3 rounded-lg font-semibold hover:bg-forest transition-colors duration-200"
+                  className="mt-6 block text-center bg-sage text-forest-dark px-5 py-3 rounded-lg font-semibold hover:bg-sage-light transition-colors duration-200"
                 >
                   Get Free Quote
                 </Link>

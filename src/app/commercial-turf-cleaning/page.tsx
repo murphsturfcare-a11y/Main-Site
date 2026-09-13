@@ -15,10 +15,10 @@ import {
   FileText,
   type LucideIcon,
 } from 'lucide-react';
-import { AnimateOnScroll, StaggerContainer, StaggerItem } from '@/components/ui/AnimateOnScroll';
+import { StaggerContainer, StaggerItem } from '@/components/ui/AnimateOnScroll';
 import { generateCommercialMetadata } from '@/lib/seo/metadata';
-import { generateBreadcrumbSchema, generateFAQSchema } from '@/lib/seo/schema';
-import { SITE_URL, COMPANY_NAME } from '@/lib/seo/constants';
+import { generateBreadcrumbSchema, generateFAQSchema, generateServiceAreasSchema } from '@/lib/seo/schema';
+import { SITE_URL } from '@/lib/seo/constants';
 import {
   commercialOverview,
   commercialSegments,
@@ -48,16 +48,9 @@ export default function CommercialHubPage() {
     description: commercialOverview.descriptionParagraphs[0],
     url: PAGE_URL,
     provider: {
-      '@type': 'LocalBusiness',
-      name: COMPANY_NAME,
-      url: SITE_URL,
+      '@id': `${SITE_URL}/#localbusiness`,
     },
-    areaServed: { '@type': 'State', name: 'California' },
-    offers: {
-      '@type': 'Offer',
-      availability: 'https://schema.org/InStock',
-      priceCurrency: 'USD',
-    },
+    areaServed: generateServiceAreasSchema(),
   };
 
   const breadcrumbJsonLd = generateBreadcrumbSchema([
@@ -89,8 +82,7 @@ export default function CommercialHubPage() {
             <p className="text-lg sm:text-xl text-white/90 font-body leading-relaxed mb-8">
               {commercialOverview.tagline}{' '}
               Dog daycares, HOAs, schools, gyms, hotels &amp; sports
-              venues — we keep your turf presentable, sanitized, and odor-free with recurring,
-              pet-safe service backed by 30+ years of experience.
+              venues can request a scope suited to their surfaces, use, and operating hours.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
@@ -101,7 +93,7 @@ export default function CommercialHubPage() {
               </Link>
               <Link
                 href="/locations"
-                className="btn-hover inline-flex items-center justify-center gap-2 bg-sage text-white font-bold px-8 py-3.5 rounded-lg hover:bg-sage-dark transition-colors font-body shadow-md"
+                className="btn-hover inline-flex items-center justify-center gap-2 bg-sage text-forest-dark font-bold px-8 py-3.5 rounded-lg hover:bg-sage-light transition-colors font-body shadow-md"
               >
                 Get a Free Quote
               </Link>
@@ -215,7 +207,7 @@ export default function CommercialHubPage() {
                 <p className="text-charcoal-light font-body text-sm mb-3 flex-1">
                   Serving {region.subLocations.length}+ cities including {region.subLocations.slice(0, 3).map((s) => s.name).join(', ')}.
                 </p>
-                <span className="text-sage font-semibold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
+                <span className="text-forest font-semibold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
                   View Area <ArrowRight className="w-4 h-4" />
                 </span>
               </Link>

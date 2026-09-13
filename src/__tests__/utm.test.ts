@@ -10,6 +10,10 @@ beforeEach(() => {
   sessionStorage.clear();
 });
 
+afterEach(() => {
+  vi.restoreAllMocks();
+});
+
 describe("parseUTMFromURL", () => {
   it("returns null when no UTM params are present", () => {
     const params = new URLSearchParams("");
@@ -59,6 +63,11 @@ describe("parseUTMFromURL", () => {
 });
 
 describe("storeUTMParams", () => {
+  it("does not break a page when storage is blocked", () => {
+    vi.spyOn(Storage.prototype, "setItem").mockImplementation(() => { throw new DOMException("Blocked", "SecurityError"); });
+    expect(() => storeUTMParams({ source: "google", medium: "", campaign: "", term: "", content: "" })).not.toThrow();
+  });
+
   it("stores params in sessionStorage", () => {
     const utm: UTMParams = {
       source: "google",
@@ -77,6 +86,16 @@ describe("storeUTMParams", () => {
 });
 
 describe("getStoredUTMParams", () => {
+  it("returns null when storage is blocked", () => {
+    vi.spyOn(Storage.prototype, "getItem").mockImplementation(() => { throw new DOMException("Blocked", "SecurityError"); });
+    expect(getStoredUTMParams()).toBeNull();
+  });
+
+  it.each([[], null, { source: 123 }, { source: "google" }])("rejects an invalid stored attribution shape: %j", (value) => {
+    sessionStorage.setItem("murphys_turf_utm", JSON.stringify(value));
+    expect(getStoredUTMParams()).toBeNull();
+  });
+
   it("returns null when nothing is stored", () => {
     expect(getStoredUTMParams()).toBeNull();
   });

@@ -7,30 +7,20 @@ import {
   CheckCircle,
   Droplets,
   ShieldCheck,
-  PawPrint,
-  Building2,
-  GraduationCap,
-  Dumbbell,
-  type LucideIcon,
 } from 'lucide-react';
 import { notFound } from 'next/navigation';
 import LeadForm from '@/components/forms/LeadForm';
-import { generateCommercialLocationMetadata } from '@/lib/seo/metadata';
+import { regionalCare, cityCareContext } from '@/data/regional-care';
+import PalmDesertAreaPage from '@/components/sections/PalmDesertAreaPage';
+import { getPalmDesertArea, palmDesertPageMetadata } from '@/data/palm-desert';
+import { generateCommercialLocationMetadata, generatePageMetadata } from '@/lib/seo/metadata';
 import { generateBreadcrumbSchema, generateFAQSchema } from '@/lib/seo/schema';
-import { SITE_URL, COMPANY_NAME } from '@/lib/seo/constants';
+import { SITE_URL } from '@/lib/seo/constants';
 import {
-  commercialSegments,
   commercialOverview,
   commercialSubLocationParams,
   findCommercialSubLocation,
 } from '@/data/commercial';
-
-const iconMap: Record<string, LucideIcon> = {
-  PawPrint,
-  Building2,
-  GraduationCap,
-  Dumbbell,
-};
 
 export function generateStaticParams() {
   return commercialSubLocationParams();
@@ -45,6 +35,11 @@ export async function generateMetadata({
   const result = findCommercialSubLocation(location, subLocation);
   if (!result) return { title: 'Location Not Found' };
   const { region, sub } = result;
+  if (region.slug === 'palm-desert') {
+    const area = getPalmDesertArea(sub.slug.replace(/^commercial-turf-cleaning-in-/, ''))!;
+    const meta = palmDesertPageMetadata(area, true);
+    return generatePageMetadata(meta.title, meta.description, meta.path);
+  }
 
   return generateCommercialLocationMetadata({
     name: sub.name,
@@ -64,12 +59,12 @@ export default async function CommercialSubLocationPage({
   if (!result) notFound();
 
   const { region, sub } = result;
+  if (region.slug === 'palm-desert') {
+    return <PalmDesertAreaPage area={getPalmDesertArea(sub.slug.replace(/^commercial-turf-cleaning-in-/, ''))!} commercial />;
+  }
   const siblings = region.subLocations.filter((s) => s.slug !== sub.slug);
 
-  // Rotate the lead segment by city index so neighbouring city pages don't read identically.
-  const cityIndex = region.subLocations.findIndex((s) => s.slug === sub.slug);
-  const spotlight = commercialSegments[cityIndex % commercialSegments.length];
-  const SpotlightIcon = iconMap[spotlight.iconName] ?? Building2;
+  const careContext = cityCareContext(sub.name);
 
   const pageUrl = `${SITE_URL}/commercial-turf-cleaning/${region.slug}/${sub.slug}`;
 
@@ -80,7 +75,7 @@ export default async function CommercialSubLocationPage({
     name: `Commercial Artificial Turf Cleaning in ${sub.name}, CA`,
     description: `Recurring commercial artificial turf cleaning in ${sub.name}, CA for dog daycares, HOAs, schools, gyms, and hospitality venues.`,
     url: pageUrl,
-    provider: { '@type': 'LocalBusiness', name: COMPANY_NAME, url: SITE_URL, telephone: region.phone },
+    provider: { '@id': `${SITE_URL}/#localbusiness` },
     areaServed: { '@type': 'City', name: sub.name, containedInPlace: { '@type': 'State', name: 'California' } },
   };
 
@@ -120,7 +115,7 @@ export default async function CommercialSubLocationPage({
                 <span className="text-cream">in {sub.name}, CA</span>
               </h1>
               <p className="text-lg sm:text-xl text-white/80 font-body mb-8">
-                Recurring, pet-safe turf cleaning for {sub.name}{' '}businesses — daycares, HOAs, schools, gyms &amp; more.
+                Commercial turf care for {sub.name}{' '}businesses — daycares, HOAs, schools, gyms &amp; more.
               </p>
               <a
                 href={`tel:${region.phone.replace(/[^\d+]/g, '')}`}
@@ -143,32 +138,9 @@ export default async function CommercialSubLocationPage({
             Commercial Turf Cleaning for {sub.name} Businesses
           </h2>
           <div className="space-y-4 text-charcoal-light font-body leading-relaxed">
-            <p>
-              {COMPANY_NAME} provides commercial-grade artificial turf cleaning to businesses in{' '}
-              {sub.name}, California. Whether you run a dog daycare, manage an HOA, operate a
-              childcare center, or oversee a gym or hotel, we keep your turf sanitized, fresh, and
-              presentable with recurring service built around your hours.
-            </p>
-            <p>
-              Commercial turf in {sub.name} sees far more traffic and wear than a backyard lawn.
-              Our process penetrates past the surface into the infill — where bacteria and odor
-              actually live — using a chlorine-based solution that is safe for pets and children
-              once dry. With 30+ years of experience serving the {region.city} area, we understand
-              the local conditions {sub.name} businesses face. {region.climateNote}
-            </p>
-          </div>
-
-          {/* Segment spotlight (rotates per city) */}
-          <div className="bg-white rounded-2xl p-6 border border-gray-100 mt-8 flex gap-4">
-            <div className="w-12 h-12 rounded-full bg-sage/10 flex items-center justify-center flex-shrink-0">
-              <SpotlightIcon className="w-6 h-6 text-sage" />
-            </div>
-            <div>
-              <h3 className="font-heading font-bold text-charcoal mb-1">
-                {spotlight.name} in {sub.name}
-              </h3>
-              <p className="text-charcoal-light font-body text-sm leading-relaxed">{spotlight.blurb}</p>
-            </div>
+            <p>{regionalCare[region.slug].commercial}</p>
+            <p>For a {sub.name} property, provide the full address, approximate measurements by turf area, surface specifications, and the contact authorized to approve work. Describe pet use, recurring odor, debris, or matting separately so the quote identifies the right scope.</p>
+            {careContext && <div className="bg-white rounded-xl border border-sage/15 p-6"><h3 className="font-heading font-bold text-charcoal mb-3">{careContext.title}</h3><p>{careContext.text}</p></div>}
           </div>
 
           {/* Climate note */}
@@ -176,7 +148,7 @@ export default async function CommercialSubLocationPage({
             <div className="flex items-start gap-3">
               <Droplets className="w-5 h-5 text-sage flex-shrink-0 mt-0.5" />
               <div>
-                <h4 className="text-sm font-bold text-charcoal font-heading mb-1">Local Climate Considerations</h4>
+                <h3 className="text-sm font-bold text-charcoal font-heading mb-1">Local Climate Considerations</h3>
                 <p className="text-charcoal-light font-body text-sm leading-relaxed">{region.climateNote}</p>
               </div>
             </div>
@@ -199,7 +171,7 @@ export default async function CommercialSubLocationPage({
             ))}
           </div>
           <div className="flex items-center justify-center gap-2 mt-8 text-charcoal-light font-body text-sm">
-            <ShieldCheck className="w-5 h-5 text-sage" /> Bonded &amp; insured · pet- and child-safe · recurring plans available
+            <ShieldCheck className="w-5 h-5 text-sage" /> Confirm surface requirements, access, and the agreed service scope
           </div>
         </div>
       </section>
@@ -222,7 +194,7 @@ export default async function CommercialSubLocationPage({
             </a>
             <a
               href="#quote-form"
-              className="inline-flex items-center justify-center gap-2 bg-sage text-white font-bold text-lg px-8 py-4 rounded-xl hover:bg-sage/90 transition-colors font-body shadow-lg"
+              className="inline-flex items-center justify-center gap-2 bg-sage text-forest-dark font-bold text-lg px-8 py-4 rounded-xl hover:bg-sage-light transition-colors font-body shadow-lg"
             >
               Get Free Quote <ArrowRight className="w-5 h-5" />
             </a>
@@ -280,7 +252,7 @@ export default async function CommercialSubLocationPage({
           <div className="text-center mt-8">
             <Link
               href={`/locations/${region.slug}/turf-cleaning-in-${sub.slug.replace('commercial-turf-cleaning-in-', '')}`}
-              className="inline-flex items-center gap-2 text-sage font-semibold font-body text-sm hover:text-forest transition-colors"
+              className="inline-flex items-center gap-2 text-forest font-semibold font-body text-sm hover:text-forest-dark transition-colors"
             >
               Looking for residential turf cleaning in {sub.name}? <ArrowRight className="w-4 h-4" />
             </Link>

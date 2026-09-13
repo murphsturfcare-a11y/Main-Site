@@ -2,90 +2,44 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { describe, it, expect } from 'vitest';
 import FAQ from '@/components/sections/FAQ';
-
-const defaultQuestions = [
-  'How much does artificial turf cleaning cost?',
-  'How often should I have my turf cleaned?',
-  'Do you offer free estimates?',
-  'Are your cleaning products safe for pets and children?',
-  'What areas do you serve?',
-  "What if I'm not satisfied with the service?",
-];
+import { homeFaqs } from '@/data/home-faqs';
 
 describe('FAQ', () => {
-  it('renders section heading', () => {
+  it('renders the heading and every shared question and answer', () => {
     render(<FAQ />);
-    expect(
-      screen.getByRole('heading', { name: /frequently asked questions/i })
-    ).toBeInTheDocument();
-  });
-
-  it('renders all 6 FAQ questions', () => {
-    render(<FAQ />);
-    const buttons = screen.getAllByRole('button');
-    expect(buttons).toHaveLength(6);
-    for (const question of defaultQuestions) {
-      expect(screen.getByText(question)).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /frequently asked questions/i })).toBeInTheDocument();
+    for (const item of homeFaqs) {
+      expect(screen.getByText(item.question).closest('summary')).not.toBeNull();
+      expect(screen.getByText(item.answer)).toBeInTheDocument();
     }
   });
 
-  it('all items start collapsed', () => {
-    render(<FAQ />);
-    const buttons = screen.getAllByRole('button');
-    for (const button of buttons) {
-      expect(button).toHaveAttribute('aria-expanded', 'false');
-    }
-  });
-
-  it('clicking a question expands it', async () => {
+  it('starts collapsed and opens and closes through native disclosure behavior', async () => {
     const user = userEvent.setup();
-    render(<FAQ />);
-    const firstButton = screen.getByRole('button', {
-      name: /how much does artificial turf cleaning cost/i,
-    });
-
-    await user.click(firstButton);
-
-    expect(firstButton).toHaveAttribute('aria-expanded', 'true');
+    const { container } = render(<FAQ />);
+    const items = container.querySelectorAll('details');
+    for (const item of items) expect(item.open).toBe(false);
+    const question = screen.getByText(homeFaqs[0].question);
+    await user.click(question);
+    expect(items[0].open).toBe(true);
+    await user.click(question);
+    expect(items[0].open).toBe(false);
   });
 
-  it('clicking an expanded question collapses it', async () => {
-    const user = userEvent.setup();
-    render(<FAQ />);
-    const firstButton = screen.getByRole('button', {
-      name: /how much does artificial turf cleaning cost/i,
-    });
-
-    await user.click(firstButton);
-    expect(firstButton).toHaveAttribute('aria-expanded', 'true');
-
-    await user.click(firstButton);
-    expect(firstButton).toHaveAttribute('aria-expanded', 'false');
+  it('groups disclosures per instance without coupling separate FAQ sections', () => {
+    const { container } = render(<><FAQ /><FAQ /></>);
+    const sections = container.querySelectorAll('section');
+    const names = [...sections].map((section) => [...section.querySelectorAll('details')].map((item) => item.getAttribute('name')));
+    expect(new Set(names[0]).size).toBe(1);
+    expect(new Set(names[1]).size).toBe(1);
+    expect(names[0][0]).not.toBe(names[1][0]);
   });
 
-  it('only one item is open at a time (accordion behavior)', async () => {
-    const user = userEvent.setup();
-    render(<FAQ />);
-    const buttons = screen.getAllByRole('button');
-
-    await user.click(buttons[0]);
-    expect(buttons[0]).toHaveAttribute('aria-expanded', 'true');
-
-    await user.click(buttons[2]);
-    expect(buttons[0]).toHaveAttribute('aria-expanded', 'false');
-    expect(buttons[2]).toHaveAttribute('aria-expanded', 'true');
-  });
-
-  it('accepts custom items prop', () => {
-    const customItems = [
-      { question: 'Custom question one?', answer: 'Custom answer one.' },
-      { question: 'Custom question two?', answer: 'Custom answer two.' },
-    ];
-    render(<FAQ items={customItems} />);
-
-    const buttons = screen.getAllByRole('button');
-    expect(buttons).toHaveLength(2);
-    expect(screen.getByText('Custom question one?')).toBeInTheDocument();
-    expect(screen.getByText('Custom question two?')).toBeInTheDocument();
+  it('renders the supplied local questions and answers', () => {
+    const items = [{ question: 'Which community is covered?', answer: 'Palm Desert and the listed nearby cities.' }];
+    const { container } = render(<FAQ items={items} />);
+    expect(container.querySelectorAll('details')).toHaveLength(1);
+    expect(screen.getByText(items[0].question)).toBeInTheDocument();
+    expect(screen.getByText(items[0].answer)).toBeInTheDocument();
   });
 });

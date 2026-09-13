@@ -17,9 +17,9 @@ const serviceSlugs = [
 ];
 
 const serviceDescriptions = [
-  'Thorough removal of pet hair, fur, and debris from your artificial turf to keep it clean and safe for your family and pets.',
+  'Thorough removal of pet hair, fur, and debris from your artificial turf as part of a defined surface-cleaning scope.',
   "Restore your turf's natural look and feel with our professional blooming and de-compacting service that revives flattened fibers.",
-  'Eliminate bacteria, odors, and harmful pathogens with our eco-friendly disinfecting and deodorizing treatment.',
+  'Discuss pet odor treatment, turf compatibility, and product-specific cleaning and return-to-use instructions.',
   'Regular pet waste cleanup and removal to maintain a hygienic outdoor space for your family.',
 ];
 

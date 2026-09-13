@@ -1,9 +1,8 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import { describe, it, expect, vi } from 'vitest';
+import { describe, it, expect } from 'vitest';
 
-vi.mock('next/link', () => ({
-  default: ({ children, href, ...props }: any) => <a href={href} {...props}>{children}</a>,
-}));
+
+import { locations } from '@/data/locations';
 
 import MobileStickyQuote from '@/components/ui/MobileStickyQuote';
 
@@ -12,11 +11,11 @@ describe('MobileStickyQuote', () => {
     render(<MobileStickyQuote />);
     fireEvent.click(screen.getByRole('button', { name: /call now/i }));
 
-    expect(screen.getByText('Call Your Local Office')).toBeInTheDocument();
+    expect(screen.getByText('Call Your Regional Team')).toBeInTheDocument();
     const telLinks = screen
       .getAllByRole('link')
       .filter((link) => link.getAttribute('href')?.startsWith('tel:'));
-    expect(telLinks).toHaveLength(4);
+    expect(telLinks).toHaveLength(locations.length);
     const hrefs = telLinks.map((link) => link.getAttribute('href'));
     expect(hrefs).toContain('tel:9513313300');
     expect(hrefs).toContain('tel:9253380048');
@@ -28,7 +27,7 @@ describe('MobileStickyQuote', () => {
     fireEvent.click(screen.getByRole('button', { name: /get free quote/i }));
 
     expect(screen.getByText('Select Your Area')).toBeInTheDocument();
-    for (const slug of ['huntington-beach', 'murrieta', 'martinez', 'sacramento']) {
+    for (const { slug } of locations) {
       const links = screen
         .getAllByRole('link')
         .filter((link) => link.getAttribute('href') === `/locations/${slug}#quote-form`);

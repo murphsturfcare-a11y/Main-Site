@@ -68,7 +68,7 @@ export default function PrivacyPolicyPage() {
                   <li key={section.id}>
                     <a
                       href={`#${section.id}`}
-                      className="text-forest hover:text-sage font-body text-sm sm:text-base transition-colors underline underline-offset-2"
+                      className="text-forest hover:text-forest-dark font-body text-sm sm:text-base transition-colors underline underline-offset-2"
                     >
                       {section.title}
                     </a>
@@ -351,7 +351,7 @@ export default function PrivacyPolicyPage() {
                   href="https://www.allaboutcookies.org"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-forest hover:text-sage underline underline-offset-2 transition-colors"
+                  className="text-forest hover:text-forest-dark underline underline-offset-2 transition-colors"
                 >
                   www.allaboutcookies.org
                 </a>
@@ -395,7 +395,7 @@ export default function PrivacyPolicyPage() {
                 information without your consent, please contact us at{' '}
                 <a
                   href="mailto:info@murphysturfcare.com"
-                  className="text-forest hover:text-sage underline underline-offset-2 transition-colors"
+                  className="text-forest hover:text-forest-dark underline underline-offset-2 transition-colors"
                 >
                   info@murphysturfcare.com
                 </a>{' '}
@@ -442,7 +442,7 @@ export default function PrivacyPolicyPage() {
                     <strong>Email:</strong>{' '}
                     <a
                       href="mailto:info@murphysturfcare.com"
-                      className="text-forest hover:text-sage underline underline-offset-2 transition-colors"
+                      className="text-forest hover:text-forest-dark underline underline-offset-2 transition-colors"
                     >
                       info@murphysturfcare.com
                     </a>
@@ -451,7 +451,7 @@ export default function PrivacyPolicyPage() {
                     <strong>Phone:</strong>{' '}
                     <Link
                       href="/locations"
-                      className="text-forest hover:text-sage underline underline-offset-2 transition-colors"
+                      className="text-forest hover:text-forest-dark underline underline-offset-2 transition-colors"
                     >
                       Find your local office number
                     </Link>
@@ -465,13 +465,13 @@ export default function PrivacyPolicyPage() {
           <div className="mt-16 pt-8 border-t border-gray-200 flex flex-col sm:flex-row items-center justify-between gap-4">
             <Link
               href="/terms-of-service"
-              className="text-forest hover:text-sage font-body font-medium transition-colors underline underline-offset-2"
+              className="text-forest hover:text-forest-dark font-body font-medium transition-colors underline underline-offset-2"
             >
               View Terms of Service
             </Link>
             <Link
               href="/locations"
-              className="bg-sage hover:bg-sage-dark text-white font-semibold px-6 py-2.5 rounded-lg transition-colors font-body shadow-sm hover:shadow-md"
+              className="bg-sage hover:bg-sage-light text-forest-dark font-semibold px-6 py-2.5 rounded-lg transition-colors font-body shadow-sm hover:shadow-md"
             >
               Contact Us
             </Link>

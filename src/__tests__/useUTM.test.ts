@@ -31,12 +31,14 @@ describe("useUTM", () => {
     const searchParams = new URLSearchParams(
       "utm_source=google&utm_medium=cpc&utm_campaign=spring"
     );
-    mockUseSearchParams.mockReturnValue(searchParams as any);
+    mockUseSearchParams.mockReturnValue(searchParams as ReturnType<typeof useSearchParams>);
 
     const utmData = {
-      utm_source: "google",
-      utm_medium: "cpc",
-      utm_campaign: "spring",
+      source: "google",
+      medium: "cpc",
+      campaign: "spring",
+      term: "",
+      content: "",
     };
     mockParseUTMFromURL.mockReturnValue(utmData);
 
@@ -53,13 +55,15 @@ describe("useUTM", () => {
 
   it("falls back to stored UTM params when URL has none", async () => {
     const searchParams = new URLSearchParams("");
-    mockUseSearchParams.mockReturnValue(searchParams as any);
+    mockUseSearchParams.mockReturnValue(searchParams as ReturnType<typeof useSearchParams>);
     mockParseUTMFromURL.mockReturnValue(null);
 
     const storedData = {
-      utm_source: "newsletter",
-      utm_medium: "email",
-      utm_campaign: "fall",
+      source: "newsletter",
+      medium: "email",
+      campaign: "fall",
+      term: "",
+      content: "",
     };
     mockGetStoredUTMParams.mockReturnValue(storedData);
 
@@ -76,7 +80,7 @@ describe("useUTM", () => {
 
   it("returns hasUTM false when no UTM params exist anywhere", async () => {
     const searchParams = new URLSearchParams("");
-    mockUseSearchParams.mockReturnValue(searchParams as any);
+    mockUseSearchParams.mockReturnValue(searchParams as ReturnType<typeof useSearchParams>);
     mockParseUTMFromURL.mockReturnValue(null);
     mockGetStoredUTMParams.mockReturnValue(null);
 
@@ -91,9 +95,9 @@ describe("useUTM", () => {
 
   it("returns hasUTM true when utmParams is not null", async () => {
     const searchParams = new URLSearchParams("utm_source=facebook");
-    mockUseSearchParams.mockReturnValue(searchParams as any);
+    mockUseSearchParams.mockReturnValue(searchParams as ReturnType<typeof useSearchParams>);
 
-    const utmData = { utm_source: "facebook" };
+    const utmData = { source: "facebook", medium: "", campaign: "", term: "", content: "" };
     mockParseUTMFromURL.mockReturnValue(utmData);
 
     const { result } = renderHook(() => useUTM());

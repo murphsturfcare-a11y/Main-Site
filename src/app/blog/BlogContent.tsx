@@ -11,12 +11,12 @@ import {
   User,
   ChevronRight,
 } from 'lucide-react';
-import type { BlogPost } from './page';
+import type { BlogSummary } from '@/data/blog';
 
 /* ----------------------- TYPES ----------------------- */
 
 interface BlogContentProps {
-  posts: BlogPost[];
+  posts: BlogSummary[];
   categories: string[];
   categoryColors: Record<string, { bg: string; text: string }>;
   categoryCounts: Record<string, number>;
@@ -99,6 +99,7 @@ export default function BlogContent({
               <button
                 key={category}
                 onClick={() => handleCategoryChange(category)}
+                aria-pressed={activeCategory === category}
                 className={`flex-shrink-0 px-5 py-2.5 rounded-full font-body font-semibold text-sm transition-all duration-200 ${
                   activeCategory === category
                     ? 'bg-forest text-white shadow-md'
@@ -118,6 +119,7 @@ export default function BlogContent({
           <div className="flex flex-col lg:flex-row gap-10 lg:gap-12">
             {/* -- LEFT COLUMN: Post Grid -- */}
             <div className="flex-1 min-w-0">
+              <h2 className="sr-only">Turf care articles</h2>
               {/* Results count */}
               <div className="mb-6">
                 <p className="font-body text-charcoal-light text-sm">
@@ -153,6 +155,7 @@ export default function BlogContent({
                       {/* Featured image placeholder */}
                       <Link
                         href={`/blog/${post.slug}`}
+                        aria-label={`Read ${post.title}`}
                         className="block relative"
                       >
                         <div
@@ -218,7 +221,7 @@ export default function BlogContent({
                         {/* Read More */}
                         <Link
                           href={`/blog/${post.slug}`}
-                          className="mt-4 inline-flex items-center gap-1.5 font-body font-semibold text-sage hover:text-sage-dark text-sm transition-colors group/link"
+                          className="mt-4 inline-flex items-center gap-1.5 font-body font-semibold text-forest hover:text-forest-dark text-sm transition-colors group/link"
                         >
                           Read More
                           <ArrowRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1" />
@@ -245,7 +248,7 @@ export default function BlogContent({
                       setSearchQuery('');
                       setCurrentPage(1);
                     }}
-                    className="mt-4 inline-flex items-center gap-2 font-body font-semibold text-sage hover:text-sage-dark transition-colors"
+                    className="mt-4 inline-flex items-center gap-2 font-body font-semibold text-forest hover:text-forest-dark transition-colors"
                   >
                     Clear all filters
                     <ArrowRight className="w-4 h-4" />
@@ -306,7 +309,7 @@ export default function BlogContent({
             </div>
 
             {/* -- RIGHT COLUMN: Sidebar (desktop only) -- */}
-            <aside className="w-full lg:w-80 xl:w-96 flex-shrink-0 space-y-8 hidden lg:block">
+            <div className="w-full lg:w-80 xl:w-96 flex-shrink-0 space-y-8 hidden lg:block">
               {/* Search */}
               <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
                 <h4 className="font-heading font-bold text-charcoal text-base mb-4">
@@ -362,6 +365,7 @@ export default function BlogContent({
                     <button
                       key={category}
                       onClick={() => handleCategoryChange(category)}
+                aria-pressed={activeCategory === category}
                       className={`w-full flex items-center justify-between px-4 py-2.5 rounded-xl text-sm font-body transition-all duration-200 ${
                         activeCategory === category
                           ? 'bg-forest/10 text-forest font-semibold'
@@ -405,7 +409,7 @@ export default function BlogContent({
                   </p>
                   <Link
                     href="/locations"
-                    className="inline-flex items-center gap-2 bg-sage hover:bg-sage-dark text-white font-body font-semibold text-sm px-5 py-2.5 rounded-xl transition-all duration-200 shadow-md hover:shadow-lg"
+                    className="inline-flex items-center gap-2 bg-sage hover:bg-sage-light text-forest-dark font-body font-semibold text-sm px-5 py-2.5 rounded-xl transition-all duration-200 shadow-md hover:shadow-lg"
                   >
                     Contact Us
                     <ArrowRight className="w-4 h-4" />
@@ -421,7 +425,7 @@ export default function BlogContent({
                   </div>
                 </div>
               </div>
-            </aside>
+            </div>
           </div>
 
           {/* -- MOBILE SIDEBAR CONTENT -- */}
@@ -457,7 +461,7 @@ export default function BlogContent({
                 <div className="flex flex-col sm:flex-row items-center gap-3">
                   <Link
                     href="/locations"
-                    className="inline-flex items-center gap-2 bg-sage hover:bg-sage-dark text-white font-body font-semibold text-sm px-5 py-2.5 rounded-xl transition-all duration-200 shadow-md hover:shadow-lg"
+                    className="inline-flex items-center gap-2 bg-sage hover:bg-sage-light text-forest-dark font-body font-semibold text-sm px-5 py-2.5 rounded-xl transition-all duration-200 shadow-md hover:shadow-lg"
                   >
                     Contact Us
                     <ArrowRight className="w-4 h-4" />

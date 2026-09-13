@@ -1,5 +1,7 @@
 'use client';
 
+import Link from 'next/link';
+
 import { useState, type FormEvent } from 'react';
 
 export default function NewsletterForm() {
@@ -21,9 +23,9 @@ export default function NewsletterForm() {
     return (
       <p className="text-sage font-body text-sm">
         Thanks! Visit your{' '}
-        <a href="/locations" className="underline hover:text-white transition-colors">
+        <Link href="/locations" className="underline hover:text-white transition-colors">
           local office page
-        </a>{' '}
+        </Link>{' '}
         to get started with a free quote.
       </p>
     );

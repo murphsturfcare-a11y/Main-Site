@@ -10,8 +10,8 @@ const REQUIRED_STRING_FIELDS = [
 ] as const;
 
 describe('testimonials data', () => {
-  it('contains exactly 18 testimonials', () => {
-    expect(testimonials).toHaveLength(18);
+  it('has no published reviews without source provenance', () => {
+    expect(testimonials).toEqual([]);
   });
 
   it('each testimonial has all required fields with non-empty string values', () => {

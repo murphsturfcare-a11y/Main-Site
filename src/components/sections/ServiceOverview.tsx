@@ -15,7 +15,7 @@ const services: ServiceData[] = [
     name: 'Pet Hair & Debris Removal',
     slug: 'pet-hair-debris',
     description:
-      'Thorough removal of pet hair, fur, and debris from your artificial turf to keep it clean and safe for your family and pets.',
+      'Thorough removal of pet hair, fur, and debris from your artificial turf as part of a defined surface-cleaning scope.',
   },
   {
     icon: Flower2,
@@ -29,7 +29,7 @@ const services: ServiceData[] = [
     name: 'Disinfect & Deodorize',
     slug: 'disinfect-deodorize',
     description:
-      'Eliminate bacteria, odors, and harmful pathogens with our eco-friendly disinfecting and deodorizing treatment.',
+      'Discuss pet odor treatment, turf compatibility, and product-specific cleaning and return-to-use instructions.',
   },
   {
     icon: Trash2,

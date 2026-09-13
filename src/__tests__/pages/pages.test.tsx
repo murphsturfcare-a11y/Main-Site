@@ -13,10 +13,11 @@ vi.mock('next/navigation', () => ({
 // 1. Home Page
 // ─────────────────────────────────────────────────────────────
 describe('Home Page', () => {
-  it('renders without crashing and displays "Murphy" text', async () => {
+  it('renders the main heading and Palm Desert service-area link', async () => {
     const HomePage = (await import('@/app/page')).default;
     render(<HomePage />);
-    expect(screen.getAllByText(/Murphy/i).length).toBeGreaterThan(0);
+    expect(screen.getByRole('heading', { level: 1 })).toBeInTheDocument();
+    expect(screen.getAllByRole('link', { name: /Palm Desert/i })[0]).toHaveAttribute('href', '/locations/palm-desert');
   });
 });
 
@@ -35,9 +36,11 @@ describe('Services Page', () => {
 // 4. Services [slug] Page
 // ─────────────────────────────────────────────────────────────
 describe('Services [slug] Page', () => {
-  // TODO: This page uses `async function` with `params: Promise<{ slug: string }>` and calls `notFound()`.
-  // Async server components cannot be rendered directly in vitest. Skipping for now.
-  it.todo('renders a valid service detail page');
+  it('renders a valid service detail page', async () => {
+    const Page = (await import('@/app/services/[slug]/page')).default;
+    render(await Page({ params: Promise.resolve({ slug: 'disinfect-deodorize' }) }));
+    expect(screen.getByRole('heading', { level: 1, name: /Disinfect.*Deodorize/ })).toBeInTheDocument();
+  });
 });
 
 // ─────────────────────────────────────────────────────────────
@@ -55,9 +58,11 @@ describe('Locations Page', () => {
 // 6. Locations [slug] Page
 // ─────────────────────────────────────────────────────────────
 describe('Locations [slug] Page', () => {
-  // TODO: This page uses `async function` with `params: Promise<{ slug: string }>` and calls `notFound()`.
-  // Async server components cannot be rendered directly in vitest. Skipping for now.
-  it.todo('renders a valid location detail page');
+  it('renders a valid location detail page', async () => {
+    const Page = (await import('@/app/locations/[slug]/page')).default;
+    render(await Page({ params: Promise.resolve({ slug: 'palm-desert' }) }));
+    expect(screen.getByRole('heading', { level: 1, name: /Palm Desert/ })).toBeInTheDocument();
+  });
 });
 
 // ─────────────────────────────────────────────────────────────
@@ -76,9 +81,11 @@ describe('Blog Page', () => {
 // 8. Blog [slug] Page
 // ─────────────────────────────────────────────────────────────
 describe('Blog [slug] Page', () => {
-  // TODO: This page uses `async function` with `params: Promise<{ slug: string }>` and calls `notFound()`.
-  // Async server components cannot be rendered directly in vitest. Skipping for now.
-  it.todo('renders a valid blog post page');
+  it('renders a valid blog post page', async () => {
+    const Page = (await import('@/app/blog/[slug]/page')).default;
+    render(await Page({ params: Promise.resolve({ slug: 'artificial-turf-cleaning-palm-desert' }) }));
+    expect(screen.getByRole('heading', { level: 1, name: /Palm Desert/ })).toBeInTheDocument();
+  });
 });
 
 // ─────────────────────────────────────────────────────────────

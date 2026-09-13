@@ -1,10 +1,7 @@
 import { render, screen } from '@testing-library/react';
-import { describe, it, expect, vi } from 'vitest';
+import { describe, it, expect } from 'vitest';
 import LocationCard from '@/components/cards/LocationCard';
 
-vi.mock('next/link', () => ({
-  default: ({ children, href, ...props }: any) => <a href={href} {...props}>{children}</a>,
-}));
 
 describe('LocationCard', () => {
   const defaultProps = {
@@ -42,7 +39,7 @@ describe('LocationCard', () => {
     const getQuote = screen.getByRole('link', { name: /Get a Quote/ });
     expect(getQuote).toHaveAttribute('href', '/locations/dublin#quote-form');
     expect(getQuote.className).toContain('bg-sage');
-    expect(getQuote.className).toContain('text-white');
+    expect(getQuote.className).toContain('text-forest-dark');
   });
 
   it('different slugs generate correct hrefs', () => {

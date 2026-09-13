@@ -1,4 +1,5 @@
 import * as gtag from "./gtag";
+import { readEffectiveConsent } from './consent';
 
 function pushToDataLayer(event: string, data: Record<string, unknown>): void {
   if (typeof window === "undefined") return;
@@ -7,11 +8,10 @@ function pushToDataLayer(event: string, data: Record<string, unknown>): void {
 }
 
 export function trackLeadConversion(serviceType: string, location?: string): void {
+  if (readEffectiveConsent() !== 'accepted') return;
   gtag.event("generate_lead", {
     service_type: serviceType,
     location: location ?? "",
-    value: 1,
-    currency: "USD",
   });
 
   pushToDataLayer("lead_conversion", {
