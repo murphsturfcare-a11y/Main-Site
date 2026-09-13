@@ -62,7 +62,7 @@ function toSubLocationSlug(name: string): string {
 // Parent location data with sub-locations
 // ---------------------------------------------------------------------------
 
-const parentLocations: Record<string, ParentLocation> = Object.fromEntries(locations.filter((loc) => loc.slug !== 'palm-desert').map((loc) => [loc.slug, { city: loc.neighborhoods[0], slug: loc.slug, state: loc.state, phone: loc.phone, email: 'info@murphysturf.com', formId: '', climateNote: regionalCare[loc.slug].climate, serviceAreaDescription: loc.serviceAreaDescription, subLocations: loc.neighborhoods.filter((name) => slugify(name) !== loc.slug).map((name) => ({ name, slug: toSubLocationSlug(name) })) }]));
+const parentLocations: Record<string, ParentLocation> = Object.fromEntries(locations.filter((loc) => loc.slug !== 'palm-desert').map((loc) => [loc.slug, { city: loc.neighborhoods[0], slug: loc.slug, state: loc.state, phone: loc.phone, email: 'murphsturfcare@gmail.com', formId: '', climateNote: regionalCare[loc.slug].climate, serviceAreaDescription: loc.serviceAreaDescription, subLocations: loc.neighborhoods.filter((name) => slugify(name) !== loc.slug).map((name) => ({ name, slug: toSubLocationSlug(name) })) }]));
 
 // ---------------------------------------------------------------------------
 // Services data (shared with parent page)

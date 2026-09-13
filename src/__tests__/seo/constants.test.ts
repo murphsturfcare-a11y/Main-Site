@@ -34,8 +34,8 @@ describe("SEO constants", () => {
     expect(COMPANY_DESCRIPTION).toContain("Palm Desert");
   });
 
-  it("COMPANY_EMAIL is info@murphysturf.com", () => {
-    expect(COMPANY_EMAIL).toBe("info@murphysturf.com");
+  it("COMPANY_EMAIL is murphsturfcare@gmail.com", () => {
+    expect(COMPANY_EMAIL).toBe("murphsturfcare@gmail.com");
   });
 
   it("COMPANY_ADDRESS has correct city, state, and full fields", () => {

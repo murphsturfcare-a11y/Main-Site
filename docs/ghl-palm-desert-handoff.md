@@ -2,6 +2,8 @@
 
 The user authorized adding Palm Desert and asked to pass GHL account work to Claude. The Codex GHL connector returned HTTP 401 `Invalid JWT`; no account changes or real leads were sent from this task.
 
+The user confirmed the public business email as **murphsturfcare@gmail.com**. The website contact email has been updated; verify workflow recipients against the approved account configuration.
+
 ## Account and tag
 
 1. Open the existing Murphy's Turf GHL sub-account used by the website's deployed `GHL_LOCATION_ID`. Verify the business identity and match the four existing region tags before writing. Do not create a new sub-account or infer an office address from the map pin.

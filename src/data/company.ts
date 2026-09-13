@@ -4,7 +4,7 @@ export const company: Company = {
   "name": "Murphy's Turf",
   "tagline": "When you care about clean turf, call Murphy's Turf",
   "phone": "",
-  "email": "info@murphysturf.com",
+  "email": "murphsturfcare@gmail.com",
   "address": {
     "street": "",
     "city": "Murrieta",

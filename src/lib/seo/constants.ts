@@ -7,7 +7,7 @@ export const COMPANY_TAGLINE = "When you care about clean turf, call Murphy's Tu
 export const COMPANY_DESCRIPTION =
   "Murphy's Turf provides artificial turf cleaning, debris removal, grooming, pet odor treatment, and maintenance. Serving Huntington Beach, Murrieta, Martinez, Sacramento, Palm Desert, and surrounding service areas.";
 export const COMPANY_PHONE = "";
-export const COMPANY_EMAIL = "info@murphysturf.com";
+export const COMPANY_EMAIL = "murphsturfcare@gmail.com";
 
 export const COMPANY_ADDRESS = {
   city: "Murrieta",
