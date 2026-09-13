@@ -112,6 +112,15 @@ describe("generateLocalBusinessSchema", () => {
     expect(schema.areaServed.some((area) => area.name.includes("Palm Desert"))).toBe(true);
   });
 
+  it("publishes each region's confirmed phone number as a contact point", () => {
+    const schema = generateLocalBusinessSchema();
+    const phoneByArea = Object.fromEntries(schema.contactPoint.map((point) => [point.areaServed, point.telephone]));
+    const nameOf = (slug: string) => locations.find((location) => location.slug === slug)?.name ?? slug;
+    expect(phoneByArea[nameOf("palm-desert")]).toBe("925-588-6546");
+    expect(phoneByArea[nameOf("huntington-beach")]).toBe("951-331-3300");
+    expect(phoneByArea[nameOf("murrieta")]).toBe("951-331-3300");
+  });
+
   it("does not invent a price tier for quote-based services", () => {
     const schema = generateLocalBusinessSchema();
     expect(schema).not.toHaveProperty("priceRange");
