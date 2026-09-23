@@ -3,7 +3,7 @@ import LocationCard from '@/components/cards/LocationCard';
 
 const locations = [
   {
-    city: 'Huntington Beach / LA Area',
+    city: 'Orange County / LA Area',
     description:
       'Professional artificial turf cleaning serving Huntington Beach, Los Angeles, and the surrounding Southern California coast.',
     slug: 'huntington-beach',

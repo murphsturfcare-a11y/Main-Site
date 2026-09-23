@@ -36,7 +36,7 @@ describe('Footer', () => {
     expect(screen.getByText('Service Areas')).toBeInTheDocument();
 
     const locationLinks = [
-      { label: 'Huntington Beach / LA Area', href: '/locations/huntington-beach' },
+      { label: 'Orange County / LA Area', href: '/locations/huntington-beach' },
       { label: 'Murrieta / Inland Empire', href: '/locations/murrieta' },
       { label: 'Martinez / Bay Area', href: '/locations/martinez' },
       { label: 'Greater Sacramento', href: '/locations/sacramento' },

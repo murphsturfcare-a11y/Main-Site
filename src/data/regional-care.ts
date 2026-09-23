@@ -17,7 +17,7 @@ export interface RegionalCare {
 
 export const regionalCare: Record<string, RegionalCare> = {
   'huntington-beach': {
-    intro: 'The Huntington Beach service area covers the coastal corridor and nearby inland communities. A beach-adjacent lawn can receive tracked sand, while a shaded courtyard or an inland pet yard may present a different problem. Describe what is happening at your property so the quote follows the actual surface conditions rather than assuming every Orange County lawn needs the same treatment.',
+    intro: 'The Orange County / LA service area covers the coastal corridor and nearby inland communities, including Huntington Beach. A beach-adjacent lawn can receive tracked sand, while a shaded courtyard or an inland pet yard may present a different problem. Describe what is happening at your property so the quote follows the actual surface conditions rather than assuming every Orange County lawn needs the same treatment.',
     climate: 'Compare exposed turf with shaded areas and note whether sand, leaf litter, or persistent dampness is present. Plan cleaning around the condition of the installation and its manufacturer guidance.',
     challenges: [
       { title: 'Tracked sand and landscape grit', description: 'For properties where beach visits or adjoining landscape beds bring grit onto the lawn, identify the entry path and the affected edges. Loose sand should be distinguished from specified infill before removal. Include a close-up and a wider yard photo so a debris-cleaning request can be scoped without assuming the whole lawn needs infill replacement.' },

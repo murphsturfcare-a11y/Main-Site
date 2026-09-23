@@ -3,10 +3,10 @@ import type { Location } from '../types';
 export const locations: Location[] = [
   {
     "slug": "huntington-beach",
-    "name": "Huntington Beach / LA Area",
+    "name": "Orange County / LA Area",
     "state": "CA",
-    "description": "Artificial turf cleaning in Huntington Beach / LA Area. Request debris removal, grooming, pet odor treatment, or waste pickup based on your property's condition and use. Share the address, approximate turf size, and access details for a quote.",
-    "serviceAreaDescription": "Murphy's Turf provides professional artificial turf cleaning throughout the Huntington Beach and greater Los Angeles coastal area, including Newport Beach, Costa Mesa, Long Beach, Seal Beach, Irvine, Fountain Valley, Laguna Beach, Dana Point, San Clemente, Anaheim, and surrounding communities.",
+    "description": "Artificial turf cleaning in the Orange County / LA Area, including Huntington Beach. Request debris removal, grooming, pet odor treatment, or waste pickup based on your property's condition and use. Share the address, approximate turf size, and access details for a quote.",
+    "serviceAreaDescription": "Murphy's Turf provides professional artificial turf cleaning throughout Orange County and the greater Los Angeles coastal area, including Huntington Beach, Newport Beach, Costa Mesa, Long Beach, Seal Beach, Irvine, Fountain Valley, Laguna Beach, Dana Point, San Clemente, Anaheim, and surrounding communities.",
     "neighborhoods": [
       "Huntington Beach",
       "Newport Beach",
@@ -24,8 +24,8 @@ export const locations: Location[] = [
     ],
     "phone": "951-331-3300",
     "address": "Huntington Beach, CA service area",
-    "metaTitle": "Artificial Turf Cleaning in Huntington Beach & LA Area | Murphy's Turf",
-    "metaDescription": "Turf cleaning in Huntington Beach / LA Area: debris removal, grooming, odor treatment and pet waste pickup. Call 951-331-3300 for a free quote."
+    "metaTitle": "Artificial Turf Cleaning in Orange County & LA Area | Murphy's Turf",
+    "metaDescription": "Turf cleaning across Orange County / LA Area, including Huntington Beach: debris removal, grooming, odor treatment and pet waste pickup. Call 951-331-3300 for a free quote."
   },
   {
     "slug": "murrieta",

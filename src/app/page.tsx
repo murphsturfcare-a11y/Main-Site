@@ -104,11 +104,6 @@ function LocationSelector({ dark }: { dark?: boolean }) {
           <MapPin className={`w-5 h-5 flex-shrink-0 ${dark ? 'text-sage-light' : 'text-sage'}`} />
           <span className="min-w-0">
             <span className="block text-sm sm:text-base">{loc.name}</span>
-            {loc.slug === 'palm-desert' && (
-              <span className={`block mt-1 text-xs font-body font-normal leading-relaxed ${dark ? 'text-white/80' : 'text-charcoal-light'}`}>
-                Indian Wells, Bermuda Dunes, La Quinta, Indio &amp; Coachella
-              </span>
-            )}
           </span>
           <ArrowRight className={`w-4 h-4 ml-auto transition-transform group-hover:translate-x-1 ${dark ? 'text-sage-light' : 'text-sage'}`} />
         </Link>

@@ -174,7 +174,7 @@ export interface CommercialSubLocation {
 
 export interface CommercialRegion {
   slug: string;
-  region: string; // e.g. "Huntington Beach / LA Area"
+  region: string; // e.g. "Orange County / LA Area"
   city: string; // primary city, e.g. "Huntington Beach"
   state: string;
   phone: string;

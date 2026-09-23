@@ -22,7 +22,7 @@ describe('LocationsPreview', () => {
   it('renders all 4 location city names', () => {
     render(<LocationsPreview />);
     expect(
-      screen.getByText('Huntington Beach / LA Area'),
+      screen.getByText('Orange County / LA Area'),
     ).toBeInTheDocument();
     expect(
       screen.getByText('Murrieta / Inland Empire'),
