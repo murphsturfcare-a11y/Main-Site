@@ -25,7 +25,7 @@ export const homeFaqs = [
   },
   {
     "question": "What areas do you serve?",
-    "answer": "We serve Huntington Beach and the LA coastal area, Murrieta and the Inland Empire, Martinez and the East Bay, Greater Sacramento, and the Palm Desert area. Desert coverage includes Indian Wells, Bermuda Dunes, La Quinta, Indio, Coachella, and neighborhoods within our service boundary. Share your address to confirm coverage."
+    "answer": "We serve the Orange County and LA coastal area, Murrieta and the Inland Empire, Martinez and the East Bay, Greater Sacramento, and Palm Desert with nearby desert cities. Share your address to confirm coverage."
   },
   {
     "question": "Can you fix matted or flattened turf?",

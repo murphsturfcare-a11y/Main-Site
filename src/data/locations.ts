@@ -118,7 +118,7 @@ export const locations: Location[] = [
     "name": "Palm Desert & Nearby Cities",
     "state": "CA",
     "description": "Artificial turf cleaning for Palm Desert, Indian Wells, Bermuda Dunes, La Quinta, Indio, and Coachella. We help homeowners and property managers address pet odor, windblown debris, and flattened turf, with service planning for gated communities and seasonal homes.",
-    "serviceAreaDescription": "Serving Palm Desert, Indian Wells, Bermuda Dunes, La Quinta, Indio, Coachella, and neighborhoods within this service area, including Sun City Palm Desert / Desert Palms. Send your property address to confirm coverage near the outer boundary.",
+    "serviceAreaDescription": "Murphy's Turf provides professional artificial turf cleaning in Palm Desert, Indian Wells, Bermuda Dunes, La Quinta, Indio, Coachella, and nearby desert communities, including Sun City Palm Desert / Desert Palms.",
     "neighborhoods": [
       "Palm Desert",
       "Indian Wells",
@@ -130,7 +130,7 @@ export const locations: Location[] = [
     "phone": "925-588-6546",
     "address": "Palm Desert, CA service area",
     "metaTitle": "Artificial Turf Cleaning in Palm Desert, CA | Murphy's Turf",
-    "metaDescription": "Turf cleaning in Palm Desert, Indian Wells, Bermuda Dunes, La Quinta, Indio & Coachella. Pet odor, debris removal and turf care. Request a free quote."
+    "metaDescription": "Turf cleaning in Palm Desert, Indian Wells, La Quinta, Indio & Coachella: debris removal, grooming, odor treatment and pet waste pickup. Call 925-588-6546 for a free quote."
   }
 ];
 

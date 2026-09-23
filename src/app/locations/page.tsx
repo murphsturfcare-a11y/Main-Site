@@ -18,7 +18,7 @@ const regionHighlights: Record<string, string> = {
   murrieta: 'Inland Empire',
   martinez: 'East Bay',
   sacramento: 'Central Valley',
-  'palm-desert': 'Palm Desert & Nearby Cities',
+  'palm-desert': 'Desert Communities',
 };
 const locations = serviceLocations.map(location => ({
   ...location,

@@ -7,7 +7,7 @@ import { AnimateOnScroll, StaggerContainer, StaggerItem } from '@/components/ui/
 export const metadata: Metadata = {
   title: 'Artificial Turf Cleaning Services',
   description:
-    "Professional artificial turf cleaning and maintenance services across our California service areas, including Palm Desert. Pet hair removal, blooming, disinfecting, deodorizing, and poop scooping. Get a free quote today.",
+    "Professional artificial turf cleaning and maintenance services across our California service areas. Pet hair removal, blooming, disinfecting, deodorizing, and poop scooping. Get a free quote today.",
   alternates: {
     canonical: '/services',
   },

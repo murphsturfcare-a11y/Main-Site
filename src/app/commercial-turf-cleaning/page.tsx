@@ -200,7 +200,7 @@ export default function CommercialHubPage() {
               <Link
                 key={region.slug}
                 href={`/commercial-turf-cleaning/${region.slug}`}
-                className="group bg-cream rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col"
+                className="group bg-cream rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col last:odd:sm:col-span-2 last:odd:lg:col-span-1"
               >
                 <MapPin className="w-6 h-6 text-sage mb-3" />
                 <h3 className="font-heading font-bold text-charcoal text-lg mb-2">{region.region}</h3>
