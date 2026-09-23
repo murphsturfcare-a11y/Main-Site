@@ -16,6 +16,7 @@ import { notFound } from 'next/navigation';
 import { AnimateOnScroll, StaggerContainer, StaggerItem } from '@/components/ui/AnimateOnScroll';
 import FAQ from '@/components/sections/FAQ';
 import LeadForm from '@/components/forms/LeadForm';
+import WorkClip from '@/components/sections/WorkClip';
 import { services as sharedServices } from '@/data/services';
 import { homeFaqs } from '@/data/home-faqs';
 import { regionalCare } from '@/data/regional-care';
@@ -421,6 +422,14 @@ export default async function LocationPage({
           </AnimateOnScroll>
 
           <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <StaggerItem>
+              <WorkClip
+                src="/images/gallery/turf-grooming-clip.mp4"
+                poster="/images/gallery/turf-grooming-poster.webp"
+                label="Power brooming a residential artificial turf lawn"
+                className="aspect-[5/4]"
+              />
+            </StaggerItem>
             {galleryImages.map((img, idx) => (
               <StaggerItem key={idx}>
                 <div className="relative aspect-[5/4] rounded-xl overflow-hidden group">

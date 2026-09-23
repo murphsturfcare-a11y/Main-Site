@@ -46,3 +46,4 @@ supabase/.temp/
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+public/images/gallery/gallery-video-01.mov

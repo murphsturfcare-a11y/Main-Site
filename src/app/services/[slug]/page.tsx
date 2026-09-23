@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation';
 import { locations } from '@/data/locations';
 import { services } from '@/data/services';
 import BeforeAfterGallery from '@/components/sections/BeforeAfterGallery';
+import WorkClip from '@/components/sections/WorkClip';
 import { generateFAQSchema, generateBreadcrumbSchema } from '@/lib/seo/schema';
 import { Check, ArrowRight, MapPin, ChevronRight, type LucideIcon } from 'lucide-react';
 import { AnimateOnScroll, StaggerContainer, StaggerItem } from '@/components/ui/AnimateOnScroll';
@@ -275,6 +276,29 @@ export default async function ServiceDetailPage({
       {/* Before / After Gallery */}
       {/* ----------------------------------------------------------------- */}
       <BeforeAfterGallery />
+
+      {/* ----------------------------------------------------------------- */}
+      {/* Grooming clip (only where the footage shows the service itself) */}
+      {/* ----------------------------------------------------------------- */}
+      {service.slug === 'blooming-decompacting' && (
+        <section className="py-16 sm:py-20 bg-cream">
+          <AnimateOnScroll direction="up" className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl sm:text-3xl font-bold font-heading text-charcoal mb-4 text-center">
+              Grooming in progress
+            </h2>
+            <p className="text-charcoal-light font-body leading-relaxed mb-8 text-center max-w-2xl mx-auto">
+              A power broom lifting flattened fibers on an installed lawn. The method and
+              equipment should suit your turf and its care instructions.
+            </p>
+            <WorkClip
+              src="/images/gallery/turf-grooming-clip.mp4"
+              poster="/images/gallery/turf-grooming-poster.webp"
+              label="Power brooming a residential artificial turf lawn"
+              className="aspect-[9/16] max-w-xs mx-auto"
+            />
+          </AnimateOnScroll>
+        </section>
+      )}
 
       {/* ----------------------------------------------------------------- */}
       {/* Quote CTA (No Prices) */}
