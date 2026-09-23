@@ -87,7 +87,11 @@ describe('Palm Desert article pages', () => {
     const { container } = render(await BlogPostPage({ params: Promise.resolve({ slug: post.slug }) }));
     expect(screen.getByRole('heading', { level: 1, name: post.title })).toBeInTheDocument();
     const article = container.querySelector('article')!;
-    expect(article.textContent!.trim().split(/\s+/).length).toBeGreaterThan(700);
+    // The same editorial range as the other guides: long enough to answer the
+    // question, short enough to read. These four once ran past 900 words.
+    const wordCount = article.textContent!.trim().split(/\s+/).length;
+    expect(wordCount).toBeGreaterThan(450);
+    expect(wordCount).toBeLessThanOrEqual(700);
     expect(article.querySelector('a[href^="https://"]')).not.toBeNull();
     expect(article.querySelector('a[href="/locations/palm-desert"]')).not.toBeNull();
     expect(article.querySelector('p > strong')).not.toBeNull();
