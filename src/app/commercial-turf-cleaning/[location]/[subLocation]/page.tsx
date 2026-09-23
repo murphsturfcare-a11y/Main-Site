@@ -11,9 +11,7 @@ import {
 import { notFound } from 'next/navigation';
 import LeadForm from '@/components/forms/LeadForm';
 import { regionalCare, cityCareContext } from '@/data/regional-care';
-import PalmDesertAreaPage from '@/components/sections/PalmDesertAreaPage';
-import { getPalmDesertArea, palmDesertPageMetadata } from '@/data/palm-desert';
-import { generateCommercialLocationMetadata, generatePageMetadata } from '@/lib/seo/metadata';
+import { generateCommercialLocationMetadata } from '@/lib/seo/metadata';
 import { generateBreadcrumbSchema, generateFAQSchema } from '@/lib/seo/schema';
 import { SITE_URL } from '@/lib/seo/constants';
 import {
@@ -35,11 +33,6 @@ export async function generateMetadata({
   const result = findCommercialSubLocation(location, subLocation);
   if (!result) return { title: 'Location Not Found' };
   const { region, sub } = result;
-  if (region.slug === 'palm-desert') {
-    const area = getPalmDesertArea(sub.slug.replace(/^commercial-turf-cleaning-in-/, ''))!;
-    const meta = palmDesertPageMetadata(area, true);
-    return generatePageMetadata(meta.title, meta.description, meta.path);
-  }
 
   return generateCommercialLocationMetadata({
     name: sub.name,
@@ -59,9 +52,6 @@ export default async function CommercialSubLocationPage({
   if (!result) notFound();
 
   const { region, sub } = result;
-  if (region.slug === 'palm-desert') {
-    return <PalmDesertAreaPage area={getPalmDesertArea(sub.slug.replace(/^commercial-turf-cleaning-in-/, ''))!} commercial />;
-  }
   const siblings = region.subLocations.filter((s) => s.slug !== sub.slug);
 
   const careContext = cityCareContext(sub.name);

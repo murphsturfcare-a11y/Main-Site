@@ -21,7 +21,7 @@ describe('Published source alignment', () => {
     expect(doc.querySelector('img[src="/images/before-after.png"]')).toBeNull();
   });
 
-  it.each(locations.filter((location) => location.slug !== 'palm-desert').map((location) => [location.slug, location] as const))('%s publishes regional guidance without a fabricated branch or reviews', async (slug, location) => {
+  it.each(locations.map((location) => [location.slug, location] as const))('%s publishes regional guidance without a fabricated branch or reviews', async (slug, location) => {
     const doc = new DOMParser().parseFromString(renderToStaticMarkup(await LocationPage({ params: Promise.resolve({ slug }) })), 'text/html');
     const schemas = [...doc.querySelectorAll('script[type="application/ld+json"]')].map((script) => JSON.parse(script.textContent || '{}'));
     doc.querySelectorAll('script').forEach((script) => script.remove());
@@ -34,7 +34,7 @@ describe('Published source alignment', () => {
     expect(doc.querySelector(`a[href="tel:${location.phone.replace(/[^\d+]/g, '')}"]`)).not.toBeNull();
   });
 
-  it.each(locations.filter((location) => location.slug !== 'palm-desert').map((location) => location.slug))('%s commercial hub renders the FAQ content declared in its schema', async (location) => {
+  it.each(locations.map((location) => location.slug))('%s commercial hub renders the FAQ content declared in its schema', async (location) => {
     const html = renderToStaticMarkup(await CommercialRegionPage({ params: Promise.resolve({ location }) }));
     const doc = new DOMParser().parseFromString(html, 'text/html');
     const schemas = [...doc.querySelectorAll('script[type="application/ld+json"]')].map((script) => JSON.parse(script.textContent || '{}'));
@@ -48,7 +48,7 @@ describe('Published source alignment', () => {
   });
 
   it('has explicit care context for every retained legacy child route', () => {
-    for (const { slug, subLocation } of residentialLocationParams().filter((param) => param.slug !== 'palm-desert')) {
+    for (const { slug, subLocation } of residentialLocationParams()) {
       const location = locations.find((entry) => entry.slug === slug)!;
       const name = location.neighborhoods.find((entry) => `turf-cleaning-in-${entry.toLowerCase().replace(/[^a-z0-9]+/g, '-')}` === subLocation)!;
       expect(cityCareContext(name), `${name} needs a supported care context`).toBeDefined();

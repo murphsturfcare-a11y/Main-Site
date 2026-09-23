@@ -19,10 +19,7 @@ import LeadForm from '@/components/forms/LeadForm';
 import { services as sharedServices } from '@/data/services';
 import { homeFaqs } from '@/data/home-faqs';
 import { regionalCare } from '@/data/regional-care';
-import PalmDesertAreaPage from '@/components/sections/PalmDesertAreaPage';
 import { locations } from '@/data/locations';
-import { getPalmDesertArea, palmDesertPageMetadata } from '@/data/palm-desert';
-import { generatePageMetadata } from '@/lib/seo/metadata';
 
 // ---------------------------------------------------------------------------
 // Types
@@ -88,7 +85,7 @@ const locationFaqs = homeFaqs;
 // Location data
 // ---------------------------------------------------------------------------
 
-const locationData: Record<string, LocationData> = Object.fromEntries(locations.filter((loc) => loc.slug !== 'palm-desert').map((loc) => [loc.slug, { city: loc.neighborhoods[0], slug: loc.slug, state: loc.state, phone: loc.phone, email: 'murphsturfcare@gmail.com', neighborhoods: loc.neighborhoods, testimonials: [], metaTitle: loc.metaTitle, metaDescription: loc.metaDescription, serviceAreaDescription: loc.serviceAreaDescription, climateNote: regionalCare[loc.slug].climate, formId: '', mapQuery: encodeURIComponent(loc.neighborhoods[0] + ', CA'), localContentHeading: 'Planning turf care across ' + loc.name, localContentIntro: regionalCare[loc.slug].intro, localChallenges: regionalCare[loc.slug].challenges, localWhyUs: 'Send your property address, approximate turf size, photos, and access details. We will review the requested cleaning, grooming, or waste pickup and confirm the scope before work begins.' }]));
+const locationData: Record<string, LocationData> = Object.fromEntries(locations.map((loc) => [loc.slug, { city: loc.neighborhoods[0], slug: loc.slug, state: loc.state, phone: loc.phone, email: 'murphsturfcare@gmail.com', neighborhoods: loc.neighborhoods, testimonials: [], metaTitle: loc.metaTitle, metaDescription: loc.metaDescription, serviceAreaDescription: loc.serviceAreaDescription, climateNote: regionalCare[loc.slug].climate, formId: '', mapQuery: encodeURIComponent(loc.neighborhoods[0] + ', CA'), localContentHeading: 'Planning turf care across ' + loc.name, localContentIntro: regionalCare[loc.slug].intro, localChallenges: regionalCare[loc.slug].challenges, localWhyUs: 'Send your property address, approximate turf size, photos, and access details. We will review the requested cleaning, grooming, or waste pickup and confirm the scope before work begins.' }]));
 
 // ---------------------------------------------------------------------------
 // Static params & metadata
@@ -104,11 +101,6 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  if (slug === 'palm-desert') {
-    const area = getPalmDesertArea(slug)!;
-    const meta = palmDesertPageMetadata(area);
-    return generatePageMetadata(meta.title, meta.description, meta.path);
-  }
   const location = locationData[slug];
   if (!location) {
     return { title: 'Location Not Found' };
@@ -147,7 +139,6 @@ export default async function LocationPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  if (slug === 'palm-desert') return <PalmDesertAreaPage area={getPalmDesertArea(slug)!} />;
   const location = locationData[slug];
 
   if (!location) {

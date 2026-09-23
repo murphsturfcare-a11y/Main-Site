@@ -17,10 +17,7 @@ import LeadForm from '@/components/forms/LeadForm';
 import { services as sharedServices } from '@/data/services';
 import { homeFaqs } from '@/data/home-faqs';
 import { regionalCare, cityCareContext } from '@/data/regional-care';
-import PalmDesertAreaPage from '@/components/sections/PalmDesertAreaPage';
 import { locations, residentialLocationParams } from '@/data/locations';
-import { getPalmDesertArea, palmDesertPageMetadata } from '@/data/palm-desert';
-import { generatePageMetadata } from '@/lib/seo/metadata';
 
 // ---------------------------------------------------------------------------
 // Types
@@ -62,7 +59,7 @@ function toSubLocationSlug(name: string): string {
 // Parent location data with sub-locations
 // ---------------------------------------------------------------------------
 
-const parentLocations: Record<string, ParentLocation> = Object.fromEntries(locations.filter((loc) => loc.slug !== 'palm-desert').map((loc) => [loc.slug, { city: loc.neighborhoods[0], slug: loc.slug, state: loc.state, phone: loc.phone, email: 'murphsturfcare@gmail.com', formId: '', climateNote: regionalCare[loc.slug].climate, serviceAreaDescription: loc.serviceAreaDescription, subLocations: loc.neighborhoods.filter((name) => slugify(name) !== loc.slug).map((name) => ({ name, slug: toSubLocationSlug(name) })) }]));
+const parentLocations: Record<string, ParentLocation> = Object.fromEntries(locations.map((loc) => [loc.slug, { city: loc.neighborhoods[0], slug: loc.slug, state: loc.state, phone: loc.phone, email: 'murphsturfcare@gmail.com', formId: '', climateNote: regionalCare[loc.slug].climate, serviceAreaDescription: loc.serviceAreaDescription, subLocations: loc.neighborhoods.filter((name) => slugify(name) !== loc.slug).map((name) => ({ name, slug: toSubLocationSlug(name) })) }]));
 
 // ---------------------------------------------------------------------------
 // Services data (shared with parent page)
@@ -133,12 +130,6 @@ export async function generateMetadata({
   params: Promise<{ slug: string; subLocation: string }>;
 }): Promise<Metadata> {
   const { slug, subLocation } = await params;
-  if (slug === 'palm-desert') {
-    const area = getPalmDesertArea(subLocation.replace(/^turf-cleaning-in-/, ''));
-    if (!area || area.slug === 'palm-desert' || subLocation !== `turf-cleaning-in-${area.slug}`) return { title: 'Location Not Found' };
-    const meta = palmDesertPageMetadata(area);
-    return generatePageMetadata(meta.title, meta.description, meta.path);
-  }
   const result = findSubLocation(slug, subLocation);
   if (!result) {
     return { title: 'Location Not Found' };
@@ -182,11 +173,6 @@ export default async function SubLocationPage({
   params: Promise<{ slug: string; subLocation: string }>;
 }) {
   const { slug, subLocation } = await params;
-  if (slug === 'palm-desert') {
-    const area = getPalmDesertArea(subLocation.replace(/^turf-cleaning-in-/, ''));
-    if (!area || area.slug === 'palm-desert' || subLocation !== `turf-cleaning-in-${area.slug}`) notFound();
-    return <PalmDesertAreaPage area={area} />;
-  }
   const result = findSubLocation(slug, subLocation);
 
   if (!result) {

@@ -18,9 +18,9 @@ afterEach(() => vi.unstubAllGlobals());
 
 it.each(['residential', 'commercial'] as const)('accepts actual LeadForm routing props from every legacy %s child page', async (kind) => {
   const pages = kind === 'residential'
-    ? residentialLocationParams().filter((params) => params.slug !== 'palm-desert').map((params) => ({ region: params.slug, render: () => ResidentialCity({ params: Promise.resolve(params) }) }))
-    : commercialSubLocationParams().filter((params) => params.location !== 'palm-desert').map((params) => ({ region: params.location, render: () => CommercialCity({ params: Promise.resolve(params) }) }));
-  expect(pages).toHaveLength(56);
+    ? residentialLocationParams().map((params) => ({ region: params.slug, render: () => ResidentialCity({ params: Promise.resolve(params) }) }))
+    : commercialSubLocationParams().map((params) => ({ region: params.location, render: () => CommercialCity({ params: Promise.resolve(params) }) }));
+  expect(pages).toHaveLength(61);
   for (const page of pages) {
     observed.length = 0;
     renderToStaticMarkup(await page.render());

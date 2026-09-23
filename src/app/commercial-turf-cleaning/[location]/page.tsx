@@ -15,8 +15,6 @@ import {
 import { notFound } from 'next/navigation';
 import LeadForm from '@/components/forms/LeadForm';
 import FAQ from '@/components/sections/FAQ';
-import PalmDesertAreaPage from '@/components/sections/PalmDesertAreaPage';
-import { getPalmDesertArea, palmDesertPageMetadata } from '@/data/palm-desert';
 import { generatePageMetadata } from '@/lib/seo/metadata';
 import { generateBreadcrumbSchema, generateFAQSchema } from '@/lib/seo/schema';
 import { SITE_URL, COMPANY_NAME } from '@/lib/seo/constants';
@@ -46,10 +44,6 @@ export async function generateMetadata({
   const { location } = await params;
   const region = findCommercialRegion(location);
   if (!region) return { title: 'Area Not Found' };
-  if (region.slug === 'palm-desert') {
-    const meta = palmDesertPageMetadata(getPalmDesertArea(region.slug)!, true);
-    return generatePageMetadata(meta.title, meta.description, meta.path);
-  }
 
   const title = `Commercial Artificial Turf Cleaning in ${region.region}`;
   const description = `Commercial artificial turf cleaning across ${region.region}, CA — dog daycares, HOAs, schools, gyms & hospitality. Discuss access, surface care and maintenance. Call ${region.phone} for a free quote.`;
@@ -64,7 +58,6 @@ export default async function CommercialRegionPage({
   const { location } = await params;
   const region = findCommercialRegion(location);
   if (!region) notFound();
-  if (region.slug === 'palm-desert') return <PalmDesertAreaPage area={getPalmDesertArea(region.slug)!} commercial />;
 
   const pageUrl = `${SITE_URL}/commercial-turf-cleaning/${region.slug}`;
 
