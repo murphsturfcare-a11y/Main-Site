@@ -111,6 +111,8 @@ export interface Location {
   address: string;
   metaTitle: string;
   metaDescription: string;
+  mapEmbedUrl?: string;
+  googleReviewUrl?: string;
 }
 
 export interface Testimonial {

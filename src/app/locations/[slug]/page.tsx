@@ -48,6 +48,7 @@ interface LocationData {
   formId: string;
   mapQuery: string;
   mapEmbedUrl?: string;
+  googleReviewUrl?: string;
   localContentHeading: string;
   localContentIntro: string;
   localChallenges: { title: string; description: string }[];
@@ -86,7 +87,7 @@ const locationFaqs = homeFaqs;
 // Location data
 // ---------------------------------------------------------------------------
 
-const locationData: Record<string, LocationData> = Object.fromEntries(locations.map((loc) => [loc.slug, { city: loc.neighborhoods[0], slug: loc.slug, state: loc.state, phone: loc.phone, email: 'murphsturfcare@gmail.com', neighborhoods: loc.neighborhoods, testimonials: [], metaTitle: loc.metaTitle, metaDescription: loc.metaDescription, serviceAreaDescription: loc.serviceAreaDescription, climateNote: regionalCare[loc.slug].climate, formId: '', mapQuery: encodeURIComponent(loc.neighborhoods[0] + ', CA'), localContentHeading: 'Planning turf care across ' + loc.name, localContentIntro: regionalCare[loc.slug].intro, localChallenges: regionalCare[loc.slug].challenges, localWhyUs: 'Send your property address, approximate turf size, photos, and access details. We will review the requested cleaning, grooming, or waste pickup and confirm the scope before work begins.' }]));
+const locationData: Record<string, LocationData> = Object.fromEntries(locations.map((loc) => [loc.slug, { city: loc.neighborhoods[0], slug: loc.slug, state: loc.state, phone: loc.phone, email: 'murphsturfcare@gmail.com', neighborhoods: loc.neighborhoods, testimonials: [], metaTitle: loc.metaTitle, metaDescription: loc.metaDescription, serviceAreaDescription: loc.serviceAreaDescription, climateNote: regionalCare[loc.slug].climate, formId: '', mapQuery: encodeURIComponent(loc.neighborhoods[0] + ', CA'), mapEmbedUrl: loc.mapEmbedUrl, googleReviewUrl: loc.googleReviewUrl, localContentHeading: 'Planning turf care across ' + loc.name, localContentIntro: regionalCare[loc.slug].intro, localChallenges: regionalCare[loc.slug].challenges, localWhyUs: 'Send your property address, approximate turf size, photos, and access details. We will review the requested cleaning, grooming, or waste pickup and confirm the scope before work begins.' }]));
 
 // ---------------------------------------------------------------------------
 // Static params & metadata
@@ -550,6 +551,9 @@ export default async function LocationPage({
 
             {/* Google Map */}
             <AnimateOnScroll direction="fade" className="w-full">
+              {location.googleReviewUrl && (
+                <h3 className="text-xl font-bold text-charcoal font-heading mb-4">Murphy&apos;s Turf on Google</h3>
+              )}
               <iframe
                 src={location.mapEmbedUrl || `https://www.google.com/maps?q=${location.mapQuery}&output=embed`}
                 width="100%"
@@ -561,6 +565,17 @@ export default async function LocationPage({
                 title={`Murphy's Turf - ${location.city}`}
                 className="rounded-xl shadow-lg"
               />
+              {location.googleReviewUrl && (
+                <a
+                  href={location.googleReviewUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-5 inline-flex min-h-[44px] items-center justify-center gap-2 rounded-lg bg-forest px-6 py-3 font-body font-bold text-white hover:bg-forest-dark transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-forest"
+                >
+                  Leave a Google Review
+                  <ArrowRight className="w-4 h-4" aria-hidden="true" />
+                </a>
+              )}
             </AnimateOnScroll>
           </div>
         </div>

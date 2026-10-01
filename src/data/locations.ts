@@ -129,6 +129,8 @@ export const locations: Location[] = [
     ],
     "phone": "925-588-6546",
     "address": "Palm Desert, CA service area",
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106169.16993128459!2d-116.36373055!3d33.740334950000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4e33eead77a7ba6b%3A0x34d4caafc586f8a!2s!5e0!3m2!1sen!2sca!4v1790894569602!5m2!1sen!2sca",
+    "googleReviewUrl": "https://g.page/r/CYpvWPyqTE0DEBM/review",
     "metaTitle": "Artificial Turf Cleaning in Palm Desert, CA | Murphy's Turf",
     "metaDescription": "Turf cleaning in Palm Desert, Indian Wells, La Quinta, Indio & Coachella: debris removal, grooming, odor treatment and pet waste pickup. Call 925-588-6546 for a free quote."
   }
