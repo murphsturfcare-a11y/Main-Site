@@ -40,7 +40,10 @@ describe('Palm Desert uses the same templates as the other regions', () => {
     expect(text).toContain('Our Simple 3 Step Process');
     expect(text).toContain('Neighborhoods We Serve');
     expect(text).toContain('Local Climate');
-    expect(desert.querySelector('iframe[src*="google.com/maps"]')?.getAttribute('src')).toContain('Palm%20Desert');
+    expect(desert.querySelector('iframe[src*="google.com/maps"]')?.getAttribute('src')).toContain('0x4e33eead77a7ba6b%3A0x34d4caafc586f8a');
+    expect(desert.querySelector('a[href="https://g.page/r/CYpvWPyqTE0DEBM/review"]')?.textContent).toContain('Leave a Google Review');
+    expect(inland.querySelector('iframe[src*="google.com/maps"]')?.getAttribute('src')).toContain('Murrieta');
+    expect(inland.querySelector('a[href="https://g.page/r/CYpvWPyqTE0DEBM/review"]')).toBeNull();
     // Coverage that must survive the move to the shared template.
     expect(text).toContain('Sun City Palm Desert / Desert Palms');
   });
