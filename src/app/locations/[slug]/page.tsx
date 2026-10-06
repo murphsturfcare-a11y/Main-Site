@@ -145,7 +145,6 @@ export default async function LocationPage({
     notFound();
   }
   const galleryImages = locationGalleryPhotos(slug);
-  const galleryServiceArea = locations.find((region) => region.slug === slug)?.name ?? location.city;
 
   // FAQPage JSON-LD for rich results and AI citations
   const faqSchema = {
@@ -444,8 +443,7 @@ export default async function LocationPage({
                   />
                   {img.date && (
                     <div className="absolute bottom-3 left-3 right-3 rounded-md bg-forest/95 px-3 py-2 text-white font-body">
-                      <p className="text-sm font-semibold">Turf Cleaning</p>
-                      <p className="text-xs sm:text-sm">Serving {galleryServiceArea}</p>
+                      <p className="text-sm font-semibold">{img.caption ?? 'Turf Cleaning'}</p>
                       <time dateTime={img.date.dateTime} className="mt-1 block text-xs text-white/90">{img.date.label}</time>
                     </div>
                   )}
