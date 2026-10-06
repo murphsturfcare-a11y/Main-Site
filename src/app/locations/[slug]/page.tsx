@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import { turfGalleryPhotos } from '@/data/gallery';
+import { locationGalleryPhotos } from '@/data/gallery';
 import {
   Phone,
   ArrowRight,
@@ -79,8 +79,6 @@ const processSteps = [
   },
 ];
 
-const galleryImages = turfGalleryPhotos;
-
 const locationFaqs = homeFaqs;
 
 // ---------------------------------------------------------------------------
@@ -146,6 +144,7 @@ export default async function LocationPage({
   if (!location) {
     notFound();
   }
+  const galleryImages = locationGalleryPhotos(slug);
 
   // FAQPage JSON-LD for rich results and AI citations
   const faqSchema = {
@@ -431,16 +430,22 @@ export default async function LocationPage({
                 className="aspect-[5/4]"
               />
             </StaggerItem>
-            {galleryImages.map((img, idx) => (
-              <StaggerItem key={idx}>
+            {galleryImages.map((img) => (
+              <StaggerItem key={img.src}>
                 <div className="relative aspect-[5/4] rounded-xl overflow-hidden group">
                   <Image
                     src={img.src}
                     alt={img.alt}
                     fill
+                    sizes="(min-width: 1280px) 616px, (min-width: 640px) 50vw, 100vw"
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
                     loading="lazy"
                   />
+                  {img.date && (
+                    <time dateTime={img.date.dateTime} className="absolute bottom-3 left-3 rounded-md bg-forest/95 px-3 py-1.5 text-xs sm:text-sm font-body font-semibold text-white">
+                      {img.date.label}
+                    </time>
+                  )}
                 </div>
               </StaggerItem>
             ))}
