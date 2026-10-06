@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { turfGalleryPhotos } from '@/data/gallery';
+import { recentResidentialPhotos } from '@/data/gallery';
 import HeroMedia from '@/components/sections/HeroMedia';
 import { locations } from '@/data/locations';
 import { homeFaqs as faqs } from '@/data/home-faqs';
@@ -70,7 +70,7 @@ const processSteps = [
   },
 ];
 
-const galleryImages = turfGalleryPhotos;
+const galleryImages = recentResidentialPhotos;
 
 /* ===================== FAQ ACCORDION ITEM ===================== */
 
@@ -303,24 +303,32 @@ export default function Home() {
               Turf Gallery
             </span>
             <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-charcoal">
-              Outdoor Turf Spaces
+              Recent Turf Cleaning
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
             {galleryImages.map((img) => (
-              <div
+              <figure
                 key={img.src}
-                className="relative aspect-[5/4] rounded-xl overflow-hidden group"
+                className="relative aspect-[5/4] rounded-xl overflow-hidden group sm:col-span-2 sm:last:col-start-2"
               >
                 <Image
                   src={img.src}
                   alt={img.alt}
                   fill
+                  sizes="(min-width: 1280px) 616px, (min-width: 640px) 50vw, 100vw"
+                  loading="lazy"
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-forest-dark/0 group-hover:bg-forest-dark/20 transition-colors duration-300" />
-              </div>
+                {img.caption && img.date && (
+                  <figcaption className="absolute bottom-3 left-3 right-3 rounded-md bg-forest/95 px-3 py-2 text-white font-body">
+                    <p className="text-sm font-semibold">{img.caption}</p>
+                    <time dateTime={img.date.dateTime} className="mt-1 block text-xs text-white/90">{img.date.label}</time>
+                  </figcaption>
+                )}
+              </figure>
             ))}
           </div>
 
