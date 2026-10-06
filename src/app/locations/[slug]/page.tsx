@@ -145,6 +145,7 @@ export default async function LocationPage({
     notFound();
   }
   const galleryImages = locationGalleryPhotos(slug);
+  const galleryServiceArea = locations.find((region) => region.slug === slug)?.name ?? location.city;
 
   // FAQPage JSON-LD for rich results and AI citations
   const faqSchema = {
@@ -442,9 +443,11 @@ export default async function LocationPage({
                     loading="lazy"
                   />
                   {img.date && (
-                    <time dateTime={img.date.dateTime} className="absolute bottom-3 left-3 rounded-md bg-forest/95 px-3 py-1.5 text-xs sm:text-sm font-body font-semibold text-white">
-                      {img.date.label}
-                    </time>
+                    <div className="absolute bottom-3 left-3 right-3 rounded-md bg-forest/95 px-3 py-2 text-white font-body">
+                      <p className="text-sm font-semibold">Turf Cleaning</p>
+                      <p className="text-xs sm:text-sm">Serving {galleryServiceArea}</p>
+                      <time dateTime={img.date.dateTime} className="mt-1 block text-xs text-white/90">{img.date.label}</time>
+                    </div>
                   )}
                 </div>
               </StaggerItem>
