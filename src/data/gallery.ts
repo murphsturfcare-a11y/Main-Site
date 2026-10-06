@@ -12,9 +12,9 @@ export const turfGalleryPhotos: GalleryPhoto[] = [
 ];
 
 // User-supplied photographs and captions, paired in the supplied order and
-// approved for both the Murrieta and OC / LA galleries.
+// shared by the homepage, Murrieta, and OC / LA galleries.
 const october2026 = { dateTime: '2026-10', label: 'October 2026' };
-const recentResidentialPhotos: GalleryPhoto[] = [
+export const recentResidentialPhotos: GalleryPhoto[] = [
   { src: '/images/gallery/residential-turf-yard-01.webp', alt: 'Artificial turf backyard beside a raised planter, hot tub, and covered patio', caption: 'Turf Cleaning - Redondo Beach, CA 90277', date: october2026 },
   { src: '/images/gallery/residential-turf-yard-02.webp', alt: 'Wide artificial turf lawn with grooming lines, a raised planter, and white fencing', caption: 'Turf Cleaning - Temecula, CA', date: october2026 },
   { src: '/images/gallery/residential-turf-yard-03.webp', alt: 'Artificial turf lawn beside an olive tree, concrete patio, and pool', caption: 'Turf Cleaning - Murrieta, CA', date: october2026 },
