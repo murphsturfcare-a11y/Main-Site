@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { recentResidentialPhotos } from '@/data/gallery';
+import { homepageGalleryPhotos } from '@/data/gallery';
 import HeroMedia from '@/components/sections/HeroMedia';
 import { locations } from '@/data/locations';
 import { homeFaqs as faqs } from '@/data/home-faqs';
@@ -70,7 +70,7 @@ const processSteps = [
   },
 ];
 
-const galleryImages = recentResidentialPhotos;
+const galleryImages = homepageGalleryPhotos;
 
 /* ===================== FAQ ACCORDION ITEM ===================== */
 
@@ -311,7 +311,7 @@ export default function Home() {
             {galleryImages.map((img) => (
               <figure
                 key={img.src}
-                className="relative aspect-[5/4] rounded-xl overflow-hidden group sm:col-span-2 sm:last:col-start-2"
+                className="relative aspect-[5/4] rounded-xl overflow-hidden group sm:col-span-2"
               >
                 <Image
                   src={img.src}
