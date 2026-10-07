@@ -421,7 +421,7 @@ export default async function LocationPage({
             </h2>
           </AnimateOnScroll>
 
-          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <StaggerContainer className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
             <StaggerItem>
               <WorkClip
                 src="/images/gallery/turf-grooming-clip.mp4"
@@ -437,14 +437,14 @@ export default async function LocationPage({
                     src={img.src}
                     alt={img.alt}
                     fill
-                    sizes="(min-width: 1280px) 616px, (min-width: 640px) 50vw, 100vw"
+                    sizes="(min-width: 1280px) 296px, (min-width: 1024px) 25vw, 50vw"
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
                     loading="lazy"
                   />
                   {img.date && (
-                    <div className="absolute bottom-3 left-3 right-3 rounded-md bg-forest/95 px-3 py-2 text-white font-body">
-                      <p className="text-sm font-semibold">{img.caption ?? 'Turf Cleaning'}</p>
-                      <time dateTime={img.date.dateTime} className="mt-1 block text-xs text-white/90">{img.date.label}</time>
+                    <div className="absolute bottom-2 left-2 right-2 sm:bottom-3 sm:left-3 sm:right-3 rounded-md bg-forest/95 px-2 py-1.5 sm:px-3 sm:py-2 text-white font-body">
+                      <p className="text-xs sm:text-sm font-semibold">{img.caption ?? 'Turf Cleaning'}</p>
+                      <time dateTime={img.date.dateTime} className="mt-1 block text-[10px] sm:text-xs text-white/90">{img.date.label}</time>
                     </div>
                   )}
                 </div>
