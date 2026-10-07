@@ -308,10 +308,10 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
-            {galleryImages.map((img) => (
+            {galleryImages.map((img, index) => (
               <figure
                 key={img.src}
-                className="relative aspect-[5/4] rounded-xl overflow-hidden group"
+                className={`relative aspect-[5/4] rounded-xl overflow-hidden group ${galleryImages.length % 4 === 2 && index === galleryImages.length - 2 ? 'lg:col-start-2' : ''}`}
               >
                 <Image
                   src={img.src}
