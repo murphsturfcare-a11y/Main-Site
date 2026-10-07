@@ -14,7 +14,7 @@ export const turfGalleryPhotos: GalleryPhoto[] = [
 // Photos 1–2 show one yard; photos 3–5 show another. Keep each yard's caption
 // consistent across its angles and across the homepage and regional galleries.
 const october2026 = { dateTime: '2026-10', label: 'October 2026' };
-const patioYardCaption = 'Turf Cleaning - Patio & Hot Tub Yard';
+const patioYardCaption = 'Turf Cleaning - Temecula, CA';
 const poolsideYardCaption = 'Turf Cleaning - Murrieta, CA';
 export const recentResidentialPhotos: GalleryPhoto[] = [
   { src: '/images/gallery/residential-turf-yard-01.webp', alt: 'Artificial turf backyard beside a raised planter, hot tub, and covered patio', caption: patioYardCaption, date: october2026 },
