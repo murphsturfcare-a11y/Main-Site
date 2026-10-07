@@ -24,7 +24,16 @@ export const recentResidentialPhotos: GalleryPhoto[] = [
   { src: '/images/gallery/residential-turf-yard-05.webp', alt: 'Artificial turf lawn bordered by hedges, an olive tree, and hillside fencing', caption: poolsideYardCaption, date: october2026 },
 ];
 
+export const palmDesertPhotos: GalleryPhoto[] = [
+  { src: '/images/gallery/palm-desert-turf-october-2026.webp', alt: 'Artificial turf surrounding a backyard pool and raised spa with palm trees in Palm Desert', caption: 'Palm Desert', date: october2026 },
+];
+
+export const homepageGalleryPhotos = [...recentResidentialPhotos, ...palmDesertPhotos];
+
 export function locationGalleryPhotos(slug: string) {
+  if (slug === 'palm-desert') {
+    return [...palmDesertPhotos, ...turfGalleryPhotos];
+  }
   return slug === 'murrieta' || slug === 'huntington-beach'
     ? [...recentResidentialPhotos, ...turfGalleryPhotos]
     : turfGalleryPhotos;
