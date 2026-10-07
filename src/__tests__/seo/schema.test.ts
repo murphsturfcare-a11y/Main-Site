@@ -116,7 +116,7 @@ describe("generateLocalBusinessSchema", () => {
     const schema = generateLocalBusinessSchema();
     const phoneByArea = Object.fromEntries(schema.contactPoint.map((point) => [point.areaServed, point.telephone]));
     const nameOf = (slug: string) => locations.find((location) => location.slug === slug)?.name ?? slug;
-    expect(phoneByArea[nameOf("palm-desert")]).toBe("925-588-6546");
+    expect(phoneByArea[nameOf("palm-desert")]).toBe("760-330-2256");
     expect(phoneByArea[nameOf("huntington-beach")]).toBe("951-331-3300");
     expect(phoneByArea[nameOf("murrieta")]).toBe("951-331-3300");
   });
@@ -197,7 +197,7 @@ describe("generateServiceSchema", () => {
 });
 
 describe("generateLocationSchema", () => {
-  const location = { name: "Palm Desert", slug: "palm-desert", description: "Desert turf cleaning.", phone: "925-588-6546" };
+  const location = { name: "Palm Desert", slug: "palm-desert", description: "Desert turf cleaning.", phone: "760-330-2256" };
 
   it("describes a service area rather than an unverified local branch", () => {
     const schema = generateLocationSchema(location);

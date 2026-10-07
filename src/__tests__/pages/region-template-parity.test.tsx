@@ -72,7 +72,7 @@ describe('Palm Desert uses the same templates as the other regions', () => {
       CommercialCity({ params: Promise.resolve({ location: 'palm-desert', subLocation: 'commercial-turf-cleaning-in-indian-wells' }) }),
     ]) {
       const doc = await markup(element);
-      expect(doc.querySelector('a[href="tel:9255886546"]')).not.toBeNull();
+      expect(doc.querySelector('a[href="tel:7603302256"]')).not.toBeNull();
       expect(doc.querySelector('a[href^="tel:"][href*="331"]')).toBeNull();
     }
   });
