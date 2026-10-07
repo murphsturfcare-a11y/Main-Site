@@ -307,25 +307,25 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
             {galleryImages.map((img) => (
               <figure
                 key={img.src}
-                className="relative aspect-[5/4] rounded-xl overflow-hidden group sm:col-span-2"
+                className="relative aspect-[5/4] rounded-xl overflow-hidden group"
               >
                 <Image
                   src={img.src}
                   alt={img.alt}
                   fill
-                  sizes="(min-width: 1280px) 616px, (min-width: 640px) 50vw, 100vw"
+                  sizes="(min-width: 1280px) 296px, (min-width: 1024px) 25vw, 50vw"
                   loading="lazy"
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-forest-dark/0 group-hover:bg-forest-dark/20 transition-colors duration-300" />
                 {img.caption && img.date && (
-                  <figcaption className="absolute bottom-3 left-3 right-3 rounded-md bg-forest/95 px-3 py-2 text-white font-body">
-                    <p className="text-sm font-semibold">{img.caption}</p>
-                    <time dateTime={img.date.dateTime} className="mt-1 block text-xs text-white/90">{img.date.label}</time>
+                  <figcaption className="absolute bottom-2 left-2 right-2 sm:bottom-3 sm:left-3 sm:right-3 rounded-md bg-forest/95 px-2 py-1.5 sm:px-3 sm:py-2 text-white font-body">
+                    <p className="text-xs sm:text-sm font-semibold">{img.caption}</p>
+                    <time dateTime={img.date.dateTime} className="mt-1 block text-[10px] sm:text-xs text-white/90">{img.date.label}</time>
                   </figcaption>
                 )}
               </figure>
