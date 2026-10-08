@@ -25,7 +25,7 @@ export const recentResidentialPhotos: GalleryPhoto[] = [
 ];
 
 export const palmDesertPhotos: GalleryPhoto[] = [
-  { src: '/images/gallery/palm-desert-turf-october-2026.webp', alt: 'Artificial turf surrounding a backyard pool and raised spa with palm trees in Palm Desert', caption: 'Palm Desert', date: october2026 },
+  { src: '/images/gallery/palm-desert-turf-october-2026.webp', alt: 'Artificial turf surrounding a backyard pool and raised spa with palm trees in Palm Desert', caption: 'Turf Cleaning - Palm Desert, CA', date: october2026 },
 ];
 
 export const homepageGalleryPhotos = [...recentResidentialPhotos, ...palmDesertPhotos];
