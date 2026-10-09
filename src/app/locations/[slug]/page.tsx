@@ -421,7 +421,7 @@ export default async function LocationPage({
             </h2>
           </AnimateOnScroll>
 
-          <StaggerContainer className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+          <StaggerContainer className="grid grid-cols-2 lg:grid-cols-4 gap-x-3 gap-y-6 sm:gap-x-4 lg:gap-4">
             <StaggerItem>
               <WorkClip
                 src="/images/gallery/turf-grooming-clip.mp4"
@@ -433,21 +433,23 @@ export default async function LocationPage({
             {galleryImages.map((img) => (
               <StaggerItem key={img.src}>
                 <figure className="relative rounded-xl overflow-hidden group">
-                  <div className="relative aspect-[5/4] overflow-hidden">
+                  <div className="relative aspect-[5/4] overflow-hidden rounded-xl">
                     <Image
                       src={img.src}
                       alt={img.alt}
                       fill
                       sizes="(min-width: 1280px) 296px, (min-width: 1024px) 25vw, 50vw"
-                      className="object-cover group-hover:scale-110 transition-transform duration-500"
+                      className="object-cover"
                       loading="lazy"
                     />
                   </div>
                   {img.date && (
-                    <figcaption className="min-h-[104px] sm:min-h-[88px] lg:min-h-0 bg-forest/95 px-2 py-2 sm:px-3 text-white font-body lg:absolute lg:bottom-3 lg:left-3 lg:right-3 lg:rounded-md">
-                      <p className="text-xs sm:text-sm font-semibold">{img.caption ?? 'Turf Cleaning'}</p>
-                      {img.serviceZip && <p className="mt-1 text-[10px] sm:text-xs text-white/90">Serving ZIP {img.serviceZip}</p>}
-                      <time dateTime={img.date.dateTime} className="mt-1 block text-[10px] sm:text-xs text-white/90">{img.date.label}</time>
+                    <figcaption className="gallery-photo-caption px-1 pt-2.5 pb-1 text-charcoal font-body lg:absolute lg:inset-x-0 lg:bottom-0 lg:px-3 lg:pb-3 lg:pt-9 lg:text-white">
+                      <p className="text-xs sm:text-sm lg:text-[13px] leading-snug font-semibold">{img.caption ?? 'Turf Cleaning'}</p>
+                      <div className="mt-1.5 flex flex-wrap gap-x-3 gap-y-0.5 text-[10px] sm:text-[11px] lg:text-[10px] leading-relaxed text-charcoal/70 lg:text-white/90">
+                        {img.serviceZip && <p className="whitespace-nowrap">Serving ZIP {img.serviceZip}</p>}
+                        <time dateTime={img.date.dateTime} className="whitespace-nowrap">{img.date.label}</time>
+                      </div>
                     </figcaption>
                   )}
                 </figure>
