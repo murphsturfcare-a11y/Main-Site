@@ -311,20 +311,23 @@ export default function Home() {
             {galleryImages.map((img, index) => (
               <figure
                 key={img.src}
-                className={`relative aspect-[5/4] rounded-xl overflow-hidden group ${galleryImages.length % 4 === 2 && index === galleryImages.length - 2 ? 'lg:col-start-2' : ''}`}
+                className={`relative rounded-xl overflow-hidden group ${galleryImages.length % 4 === 2 && index === galleryImages.length - 2 ? 'lg:col-start-2' : ''}`}
               >
-                <Image
-                  src={img.src}
-                  alt={img.alt}
-                  fill
-                  sizes="(min-width: 1280px) 296px, (min-width: 1024px) 25vw, 50vw"
-                  loading="lazy"
-                  className="object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-forest-dark/0 group-hover:bg-forest-dark/20 transition-colors duration-300" />
+                <div className="relative aspect-[5/4] overflow-hidden">
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    fill
+                    sizes="(min-width: 1280px) 296px, (min-width: 1024px) 25vw, 50vw"
+                    loading="lazy"
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-forest-dark/0 group-hover:bg-forest-dark/20 transition-colors duration-300" />
+                </div>
                 {img.caption && img.date && (
-                  <figcaption className="absolute bottom-2 left-2 right-2 sm:bottom-3 sm:left-3 sm:right-3 rounded-md bg-forest/95 px-2 py-1.5 sm:px-3 sm:py-2 text-white font-body">
+                  <figcaption className="min-h-[104px] sm:min-h-[88px] lg:min-h-0 bg-forest/95 px-2 py-2 sm:px-3 text-white font-body lg:absolute lg:bottom-3 lg:left-3 lg:right-3 lg:rounded-md">
                     <p className="text-xs sm:text-sm font-semibold">{img.caption}</p>
+                    {img.serviceZip && <p className="mt-1 text-[10px] sm:text-xs text-white/90">Serving ZIP {img.serviceZip}</p>}
                     <time dateTime={img.date.dateTime} className="mt-1 block text-[10px] sm:text-xs text-white/90">{img.date.label}</time>
                   </figcaption>
                 )}
