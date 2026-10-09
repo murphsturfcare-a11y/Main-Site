@@ -432,22 +432,25 @@ export default async function LocationPage({
             </StaggerItem>
             {galleryImages.map((img) => (
               <StaggerItem key={img.src}>
-                <div className="relative aspect-[5/4] rounded-xl overflow-hidden group">
-                  <Image
-                    src={img.src}
-                    alt={img.alt}
-                    fill
-                    sizes="(min-width: 1280px) 296px, (min-width: 1024px) 25vw, 50vw"
-                    className="object-cover group-hover:scale-110 transition-transform duration-500"
-                    loading="lazy"
-                  />
+                <figure className="relative rounded-xl overflow-hidden group">
+                  <div className="relative aspect-[5/4] overflow-hidden">
+                    <Image
+                      src={img.src}
+                      alt={img.alt}
+                      fill
+                      sizes="(min-width: 1280px) 296px, (min-width: 1024px) 25vw, 50vw"
+                      className="object-cover group-hover:scale-110 transition-transform duration-500"
+                      loading="lazy"
+                    />
+                  </div>
                   {img.date && (
-                    <div className="absolute bottom-2 left-2 right-2 sm:bottom-3 sm:left-3 sm:right-3 rounded-md bg-forest/95 px-2 py-1.5 sm:px-3 sm:py-2 text-white font-body">
+                    <figcaption className="min-h-[104px] sm:min-h-[88px] lg:min-h-0 bg-forest/95 px-2 py-2 sm:px-3 text-white font-body lg:absolute lg:bottom-3 lg:left-3 lg:right-3 lg:rounded-md">
                       <p className="text-xs sm:text-sm font-semibold">{img.caption ?? 'Turf Cleaning'}</p>
+                      {img.serviceZip && <p className="mt-1 text-[10px] sm:text-xs text-white/90">Serving ZIP {img.serviceZip}</p>}
                       <time dateTime={img.date.dateTime} className="mt-1 block text-[10px] sm:text-xs text-white/90">{img.date.label}</time>
-                    </div>
+                    </figcaption>
                   )}
-                </div>
+                </figure>
               </StaggerItem>
             ))}
           </StaggerContainer>
