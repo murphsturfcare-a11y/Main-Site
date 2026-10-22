@@ -154,7 +154,7 @@ export default function Footer() {
             {' '}&middot;{' '}
             <a
               href="https://tothemaxmedia.com"
-              rel="noopener"
+              rel="nofollow noopener"
               className="text-gray-400 transition-colors hover:text-sage"
             >
               Built by To The Max Media
